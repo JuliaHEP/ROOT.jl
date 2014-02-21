@@ -33,6 +33,10 @@ function wrap_root_file(
 			const declname = symbol(strip(spelling(decl)))
 			wrapped = Any[]
 			if to_wrap(declname) && ( (isa(decl, cindex.CXXMethod)) || isa(decl, cindex.Constructor))
+
+				#check for public
+				Clang.cindex.getCXXAccessSpecifier(decl)==1 || continue
+
 				#declname in wrapped && continue
 			    id = (MethodCount[declname] = get(MethodCount, declname, 0) + 1)
 			    if symbol("$(declname)$(id)") in exclude
@@ -55,4 +59,5 @@ wrap_root_file("TDirectory.h", "TDirectory", "gen/tdirectory", [:Get, :Close, :T
 wrap_root_file("TFile.h", "TFile", "gen/tfile", [:TFile, :Close, :Get, :Write])
 wrap_root_file("TTree.h", "TTree", "gen/ttree", [:TTree, :Fill, :Branch, :GetEntries, :Write], [:Branch5])
 #wrap_root_file("TBranch.h", "TBranch", "gen/tbranch", [:TBranch, :Write])
-#wrap_root_file("TH1D.h", "TH1D", "gen/th1d", [:TH1D, :Fill, :Write])
+wrap_root_file("TH1D.h", "TH1D", "gen/th1d", [:TH1D])
+wrap_root_file("TH1.h", "TH1", "gen/th1", [:TH1, :Fill, :Write, :Integral, :GetEntries])
