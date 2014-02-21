@@ -22,7 +22,7 @@ macro root_object(name)
 	end)
 end
 
-root_cast{T <: ROOTObject, K <: ROOTObject}(o::T, to::Type{K}) = to(root_pointer(o))
+root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) = to(root_pointer(o))
 
 @root_object(TFile)
 @root_object(TDirectory)
@@ -31,11 +31,15 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(o::T, to::Type{K}) = to(root_pointer
 @root_object(TBranch)
 @root_object(TObject)
 @root_object(TTree)
+@root_object(TH1)
+@root_object(TH1D)
 
-typealias Option_t ASCIIString
+typealias Option_t Uint8
 typealias Int_t Int32
 typealias Long_t Int64
 typealias Long64_t Int64
+typealias Double_t Cdouble
+typealias Float_t Cfloat
 
 #replaces argument list expressions from ROOT->Julia
 #input:
@@ -67,7 +71,7 @@ function argument_replace(args::Expr)
 
 		#replace C-Uint8 with julia ASCIIString
 		jt = t
-		if eval(t) == Ptr{Uint8}
+		if (eval(t) == Ptr{Uint8})
 			jt = :(ASCIIString)
 		end
 		if eval(t) == Int32
@@ -105,8 +109,8 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc)
 
 	#create a function "stub"
 	ex = quote
-		function $jlfunc(x::$tgt,)
-			@assert(x.p != C_NULL)
+		function $jlfunc(__obj::$tgt,)
+			@assert(__obj.p != C_NULL)
 			ccall(
 				($cfname, $lib),
 				$(eval(ret)), (),
@@ -121,7 +125,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc)
 	append!(ex.args[2].args[2].args[4].args[3].args, [:(Ptr{Void})]) #object itself
 	append!(ex.args[2].args[2].args[4].args[3].args, aargs.args) #args
 	#splice C function argument values
-	append!(ex.args[2].args[2].args[4].args, [:(x.p)]) #object itself
+	append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
 	append!(ex.args[2].args[2].args[4].args, avals.args)
 	#println(ex)
 	eval(ex)
@@ -156,11 +160,31 @@ macro constructor(lib, cls, args, cfunc)
 	eval(ex)
 end
 
+include("../gen/th1.jl")
+include("../gen/th1d.jl")
+
 include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
 include("../gen/ttree.jl")
 include("../gen/tobject.jl")
 
-export TFile, TTree, TObject
-export Write, Close, Fill, Branch
+macro parent_func(func, src, dst)
+	eval(quote
+		$func(__obj::$src, args...) = $func(root_cast($dst, __obj), args...)
+	end)
+end
+
+@parent_func Fill TH1D TH1
+@parent_func Integral TH1D TH1
+@parent_func GetEntries TH1D TH1
+@parent_func Print TH1D TObject
+@parent_func Write TH1D TObject
+
+@parent_func Fill TTree TObject
+
+export TFile, TTree, TObject, TH1, TH1D
+export Write, Close, Fill, Branch, Print
+export Integral, GetEntries
+export root_cast
+
 end
