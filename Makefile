@@ -1,4 +1,5 @@
-all: gen/tdirectory.o gen/tfile.o gen/tobject.o gen/ttree.o
+all: gen/tdirectory.o gen/tfile.o gen/tobject.o gen/ttree.o gen/th1.o gen/th1d.o
+
 
 CFLAGS=`root-config --cflags --libs` -shared -fPIC
 
@@ -12,6 +13,12 @@ gen/tfile.o: gen/tfile.cc
 	c++ $(CFLAGS) $< -o $@
 
 gen/ttree.o: gen/ttree.cc
+	c++ $(CFLAGS) $< -o $@
+
+gen/th1.o: gen/th1.cc
+	c++ $(CFLAGS) $< -o $@
+
+gen/th1d.o: gen/th1d.cc
 	c++ $(CFLAGS) $< -o $@
 
 lib-osx:
