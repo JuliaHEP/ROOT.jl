@@ -14,5 +14,14 @@ gen/tfile.o: gen/tfile.cc
 gen/ttree.o: gen/ttree.cc
 	c++ $(CFLAGS) $< -o $@
 
-lib:
-	c++ $(CFLAGS) gen/*.o -o libroot.dylib
+lib-osx:
+	c++ `root-config --libs` -shared -fPIC gen/*.o -o libroot.dylib
+
+lib-linux:
+	c++ `root-config --libs` -shared -fPIC gen/*.o -o libroot.so
+
+.PHONY: clean
+
+clean:
+	rm -f gen/*.o
+	rm -f libroot.*

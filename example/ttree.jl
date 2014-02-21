@@ -1,16 +1,3 @@
-# ROOT-Clang
-
-Wraps ROOT (http://root.cern.ch) using Clang.jl.
-
-# Installation
-
-Make sure you have ROOT set up, then simply do (on OSX)
-
-> make;make lib
-
-# Usage
-
-~~~
 using ROOTClang
 
 #FIXME: currently, default args from Clang are not supported, so they have to be explicitly specified
@@ -21,7 +8,10 @@ ttree = TTree("my_tree", "My Tree", 99)
 
 #branch variable should be array
 x = Float64[0]
+
+#TTree::Branch function expects void*
 px = convert(Ptr{Void}, x)
+
 br = Branch(ttree, "x", px, "x/D", 99)
 
 for i=1:10000
@@ -31,4 +21,3 @@ end
 
 Write(tf, "", 1, 100)
 Close(tf, "")
-~~~
