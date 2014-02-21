@@ -1,4 +1,4 @@
-# ROOT-Clang
+# ROOT
 
 Wraps ROOT (http://root.cern.ch) using Clang.jl.
 
@@ -6,12 +6,24 @@ Wraps ROOT (http://root.cern.ch) using Clang.jl.
 
 Make sure you have ROOT set up, then simply do (on OSX)
 
-> make;make lib
+> make;make lib-osx
+
+or on linux
+
+> make;make lib-linux
+
+To regenerate the wrappers using Clang.jl, do
+
+> julia src/wrap_root.jl
+
+For this, a modified branch of Clang.jl is needed
+
+> https://github.com/jpata/Clang.jl/tree/jp/cpp_fixes
 
 # Usage
 
 ~~~
-using ROOTClang
+using ROOT
 
 #FIXME: currently, default args from Clang are not supported, so they have to be explicitly specified
 #ROOT relies quite heavily on them, so it would be nice to fix

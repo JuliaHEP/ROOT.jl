@@ -1,4 +1,4 @@
-using ROOTClang
+using ROOT
 
 #FIXME: currently, default args from Clang are not supported, so they have to be explicitly specified
 #ROOT relies quite heavily on them, so it would be nice to fix
