@@ -1,31 +1,20 @@
-all: gen/tdirectory.o gen/tfile.o gen/tobject.o gen/ttree.o gen/th1.o gen/th1d.o
+all: libs
 
+objs: gen/tdirectory.o gen/tfile.o gen/tobject.o gen/ttree.o gen/th1.o gen/th1d.o gen/tlist.o gen/tcollection.o gen/tobjarray.o gen/tseqcollection.o
 
-CFLAGS=`root-config --cflags --libs` -shared -fPIC
+CFLAGS=`root-config --cflags` -fPIC
+LDFLAGS=`root-config --libs` -shared -fPIC
 
-gen/tdirectory.o: gen/tdirectory.cc
-	c++ $(CFLAGS) $< -o $@
+%.o: %.cc
+	c++ $(CFLAGS) -c $< -o $@
 
-gen/tobject.o: gen/tobject.cc
-	c++ $(CFLAGS) $< -o $@
+lib-osx: objs
+	c++ $(LDFLAGS) gen/*.o -shared -fPIC -o libroot.dylib
 
-gen/tfile.o: gen/tfile.cc
-	c++ $(CFLAGS) $< -o $@
+lib-linux: objs
+	c++ $(LDFLAGS) -shared -fPIC gen/*.o -o libroot.so
 
-gen/ttree.o: gen/ttree.cc
-	c++ $(CFLAGS) $< -o $@
-
-gen/th1.o: gen/th1.cc
-	c++ $(CFLAGS) $< -o $@
-
-gen/th1d.o: gen/th1d.cc
-	c++ $(CFLAGS) $< -o $@
-
-lib-osx:
-	c++ `root-config --libs` -shared -fPIC gen/*.o -o libroot.dylib
-
-lib-linux:
-	c++ `root-config --libs` -shared -fPIC gen/*.o -o libroot.so
+libs: lib-osx lib-linux
 
 .PHONY: clean
 
