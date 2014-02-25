@@ -1,5 +1,7 @@
 module ROOT
 
+import Base.length, Base.getindex
+
 #abstract type that wraps a ROOT object through an opaque pointer
 #should implement root_pointer(ROOTObject)::Ptr{Void},
 #which returns pointer to ROOT object on heaps
@@ -22,15 +24,22 @@ macro root_object(name)
 	end)
 end
 
-root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) = to(root_pointer(o))
+root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
+	to(root_pointer(o))
+
+@root_object(TObject)
 
 @root_object(TFile)
 @root_object(TDirectory)
+
 @root_object(TCollection)
+@root_object(TSeqCollection)
+@root_object(TObjArray)
 @root_object(TList)
+
 @root_object(TBranch)
-@root_object(TObject)
 @root_object(TTree)
+
 @root_object(TH1)
 @root_object(TH1D)
 
@@ -74,6 +83,8 @@ function argument_replace(args::Expr)
 		if (eval(t) == Ptr{Uint8})
 			jt = :(ASCIIString)
 		end
+
+		#cast ROOT Int32 to Int64 in julia arguments
 		if eval(t) == Int32
 			jt = :(Int64)
 		end
@@ -98,18 +109,43 @@ function argument_replace(args::Expr)
 	return avals, aargs, jlargs
 end
 
+
+function splice_kwargs(jlargs::Expr, defs::Expr)
+	defs = eval(defs)
+	#println(join(defs, ", "))
+	for i=1:length(defs)
+		d = defs[i]
+		println(jlargs.args[i])
+		if eval(jlargs.args[i].args[2]) <: ASCIIString && typeof(d) <: Integer
+			d = ""
+		end
+
+		if d != nothing
+			jlargs.args[i] = Expr(:kw, jlargs.args[i], d)
+		end
+	end
+	return jlargs
+end
+
 #macro to make methods from 
 #@method libname Type ReturnType julia__function__name (c_arg1, ...) c__function__name
-macro method(lib, tgt, jlfunc, ret, args, cfunc)
-
+macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
+	#println("$lib $tgt $jlfunc $ret $args $cfunc $defs")
 	avals, aargs, jlargs = argument_replace(args)
+	
+	jlargs = splice_kwargs(jlargs, defs)
 
 	#C function name target_func
 	cfname = "$(tgt)_$(cfunc)"
 
+	r = eval(ret)
+	if r <: Ptr && typeof(r)==DataType && r.parameters[1] in map(eval, ROOT_OBJECTS)
+		ret = r.parameters[1]
+	end
+
 	#create a function "stub"
 	ex = quote
-		function $jlfunc(__obj::$tgt,)
+		function $jlfunc(__obj::$tgt)
 			@assert(__obj.p != C_NULL)
 			ccall(
 				($cfname, $lib),
@@ -127,16 +163,19 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc)
 	#splice C function argument values
 	append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
 	append!(ex.args[2].args[2].args[4].args, avals.args)
-	#println(ex)
+	
+	println(ex)
 	eval(ex)
 end
 
 #macro to make constructors from 
 #@constructor libname Type (c_arg1, ...) c__function__name
 # => :ccall( (c__function__name, libname), Ptr{Void}, (args...), argsvals...)
-macro constructor(lib, cls, args, cfunc)
+macro constructor(lib, cls, args, cfunc, defs)
 
 	avals, aargs, jlargs = argument_replace(args)
+
+	jlargs = splice_kwargs(jlargs, defs)
 
 	#C function name target_func
 	cfname = "$(cls)_$(cfunc)"
@@ -156,7 +195,7 @@ macro constructor(lib, cls, args, cfunc)
 	append!(ex.args[2].args[1].args, jlargs.args)
 	append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
 	append!(ex.args[2].args[2].args[2].args, avals.args)
-	#println(ex)
+	println(ex)
 	eval(ex)
 end
 
@@ -167,6 +206,9 @@ include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
 include("../gen/ttree.jl")
 include("../gen/tobject.jl")
+include("../gen/tcollection.jl")
+include("../gen/tseqcollection.jl")
+include("../gen/tlist.jl")
 
 macro parent_func(func, src, dst)
 	eval(quote
@@ -179,11 +221,24 @@ end
 @parent_func GetEntries TH1D TH1
 @parent_func Print TH1D TObject
 @parent_func Write TH1D TObject
-
 @parent_func Fill TTree TObject
 
-export TFile, TTree, TObject, TH1, TH1D
+@parent_func GetEntries TObjArray TCollection
+@parent_func At TObjArray TSeqCollection
+@parent_func At TObjArray TSeqCollection
+@parent_func At TList TSeqCollection
+
+Base.length(x::TCollection) = GetEntries(x)
+@parent_func Base.length TObjArray TCollection
+@parent_func Base.length TSeqCollection TCollection
+
+#ROOT is zero-based, Julia one-based
+Base.getindex(tc::TSeqCollection, n::Integer) = At(tc, n-1)
+@parent_func Base.getindex TObjArray TSeqCollection
+
+export TFile, TTree, TObject, TH1, TH1D, TBranch
 export Write, Close, Fill, Branch, Print
+export GetListOfBranches
 export Integral, GetEntries
 export root_cast
 
