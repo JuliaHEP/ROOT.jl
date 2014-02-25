@@ -1,3 +1,5 @@
-@method :libroot TObject Print None (option::Ptr{Option_t}, ) Print1
-@method :libroot TObject Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write1
-@method :libroot TObject Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write2
+@method :libroot TObject GetName Ptr{Uint8} () GetName1 ( )
+@method :libroot TObject GetTitle Ptr{Uint8} () GetTitle1 ( )
+@method :libroot TObject Print None (option::Ptr{Option_t}, ) Print1 ("",  )
+@method :libroot TObject Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write1 (0, 0, 0,  )
+@method :libroot TObject Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write2 (0, 0, 0,  )

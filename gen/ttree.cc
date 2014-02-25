@@ -37,6 +37,9 @@ Long64_t TTree_GetEntries1(TTree* __obj ) {
 Long64_t TTree_GetEntries2(TTree* __obj, char* selection) {
   return __obj->GetEntries(selection);
 }
+TObjArray* TTree_GetListOfBranches1(TTree* __obj ) {
+  return __obj->GetListOfBranches();
+}
 Int_t TTree_Write1(TTree* __obj, char* name, Int_t option, Int_t bufsize) {
   return __obj->Write(name, option, bufsize);
 }
