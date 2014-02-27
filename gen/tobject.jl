@@ -1,3 +1,4 @@
+@method :libroot TObject ClassName Ptr{Uint8} () ClassName1 ( )
 @method :libroot TObject GetName Ptr{Uint8} () GetName1 ( )
 @method :libroot TObject GetTitle Ptr{Uint8} () GetTitle1 ( )
 @method :libroot TObject Print None (option::Ptr{Option_t}, ) Print1 ("",  )
