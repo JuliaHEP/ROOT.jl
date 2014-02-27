@@ -42,8 +42,6 @@ function wrap_root_file(
 			    	println("excluding $(name(c))::$(declname)::$(id)")
 			    	continue
 			    end
-			    println(decl, " ", return_type(decl))
-
 			    Clang.wt.wrap(of, decl, id)
 			    Clang.wt.wrapjl(ofjl, ":libroot",decl, id)
 			end 
