@@ -233,7 +233,7 @@ end
 
 for f in [
 	:Fill, :Integral, :GetEntries, :Print, :Write,
-	:GetNbinsX, :GetBinContent, :GetBinError, :GetBinLowEdge
+	:GetNbinsX, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth
 	]
 	@eval @parent_func $f TH1D TH1
 end
