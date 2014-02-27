@@ -128,12 +128,24 @@ function splice_kwargs(jlargs::Expr, defs::Expr)
 	return jlargs
 end
 
+function define_lib(lib::Expr)
+	if !isdefined(eval(lib))
+		q = quote
+		const $(symbol(string(lib))) = joinpath(
+			dirname(Base.source_path()), "..",
+			$(string(lib))
+		)
+		end
+		eval(q)
+	end
+end
+
 #macro to make methods from 
 #@method libname Type ReturnType julia__function__name (c_arg1, ...) c__function__name
 macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
-	#println("$lib $tgt $jlfunc $ret $args $cfunc $defs")
+	define_lib(lib)
+
 	avals, aargs, jlargs = argument_replace(args)
-	
 	jlargs = splice_kwargs(jlargs, defs)
 
 	#C function name target_func
@@ -149,7 +161,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
 		function $jlfunc(__obj::$tgt)
 			@assert(__obj.p != C_NULL)
 			ccall(
-				($cfname, $lib),
+				($cfname, $(symbol(string(lib)))),
 				$(eval(ret)), (),
 			)
 		end
@@ -173,6 +185,7 @@ end
 #@constructor libname Type (c_arg1, ...) c__function__name
 # => :ccall( (c__function__name, libname), Ptr{Void}, (args...), argsvals...)
 macro constructor(lib, cls, args, cfunc, defs)
+	define_lib(lib)
 
 	avals, aargs, jlargs = argument_replace(args)
 
@@ -185,7 +198,7 @@ macro constructor(lib, cls, args, cfunc, defs)
 	ex = quote
 		function $cls()
 			ccall(
-				($cfname, $lib),
+				($cfname, $(symbol(string(lib)))),
 				$(eval(cls)), (),
 			)
 		end
@@ -218,11 +231,12 @@ macro parent_func(func, src, dst)
 	end)
 end
 
-@parent_func Fill TH1D TH1
-@parent_func Integral TH1D TH1
-@parent_func GetEntries TH1D TH1
-@parent_func Print TH1D TObject
-@parent_func Write TH1D TObject
+for f in [
+	:Fill, :Integral, :GetEntries, :Print, :Write,
+	:GetNbinsX, :GetBinContent, :GetBinError, :GetBinLowEdge
+	]
+	@eval @parent_func $f TH1D TH1
+end
 @parent_func Fill TTree TObject
 
 @parent_func GetListOfKeys TFile TDirectory
@@ -249,7 +263,7 @@ export Write, Close, Fill, Branch, Print
 export GetListOfBranches
 export GetListOfKeys
 export ReadObj, GetName, ClassName
-export Integral, GetEntries
+export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge
 export root_cast
 
 end
