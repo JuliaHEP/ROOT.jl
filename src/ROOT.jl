@@ -263,7 +263,7 @@ export Write, Close, Fill, Branch, Print
 export GetListOfBranches
 export GetListOfKeys
 export ReadObj, GetName, ClassName
-export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge
+export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
 export root_cast
 
 end
