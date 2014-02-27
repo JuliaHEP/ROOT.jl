@@ -13,8 +13,11 @@ Make sure you have ROOT set up, then simply do
 
 > make
 
+to create `libroot.{so/dylib}`.
+
 # Usage
 
+SHort examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap.
 
 ## TTrees
 Support tabular data storage.
