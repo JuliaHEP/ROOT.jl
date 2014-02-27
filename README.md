@@ -22,7 +22,9 @@ to create `libroot.{so/dylib}`.
 Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap.
 
 ## TTrees
-Support tabular data storage.
+
+These are the main workhorse of ROOT, which supports fast row-based and disk-backed data storage and computation.
+
 ~~~
 #file: example/ttree.jl
 #run as: julia example/ttree.jl
