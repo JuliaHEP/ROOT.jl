@@ -28,6 +28,9 @@ Double_t TH1_GetBinError2(TH1* __obj, Int_t binx, Int_t biny) {
 Double_t TH1_GetBinError3(TH1* __obj, Int_t binx, Int_t biny, Int_t binz) {
   return __obj->GetBinError(binx, biny, binz);
 }
+Double_t TH1_GetBinLowEdge1(TH1* __obj, Int_t bin) {
+  return __obj->GetBinLowEdge(bin);
+}
 Double_t TH1_GetEntries1(TH1* __obj ) {
   return __obj->GetEntries();
 }

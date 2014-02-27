@@ -7,6 +7,7 @@
 @method :libroot TH1 GetBinError Double_t (bin::Int_t, ) GetBinError1 (nothing,  )
 @method :libroot TH1 GetBinError Double_t (binx::Int_t, biny::Int_t, ) GetBinError2 (nothing, nothing,  )
 @method :libroot TH1 GetBinError Double_t (binx::Int_t, biny::Int_t, binz::Int_t, ) GetBinError3 (nothing, nothing, nothing,  )
+@method :libroot TH1 GetBinLowEdge Double_t (bin::Int_t, ) GetBinLowEdge1 (nothing,  )
 @method :libroot TH1 GetEntries Double_t () GetEntries1 ( )
 @method :libroot TH1 GetNbinsX Int_t () GetNbinsX1 ( )
 @method :libroot TH1 Integral Double_t (option::Ptr{Option_t}, ) Integral1 ("",  )

@@ -63,7 +63,7 @@ wrap_root_file("TTree.h", "TTree", "gen/ttree", [:TTree, :Fill, :Branch, :GetEnt
 wrap_root_file("TBranch.h", "TBranch", "gen/tbranch", [:TBranch, :Write])
 
 wrap_root_file("TH1D.h", "TH1D", "gen/th1d", [:TH1D])
-wrap_root_file("TH1.h", "TH1", "gen/th1", [:TH1, :Fill, :Write, :Integral, :GetEntries, :GetBinContent, :GetBinError, :GetNbinsX])
+wrap_root_file("TH1.h", "TH1", "gen/th1", [:TH1, :Fill, :Write, :Integral, :GetEntries, :GetBinContent, :GetBinError, :GetNbinsX, :GetBinLowEdge])
 
 wrap_root_file("TCollection.h", "TCollection", "gen/tcollection", [:TCollection, :GetEntries])
 wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At], [:TList2])	
