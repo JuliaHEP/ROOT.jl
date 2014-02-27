@@ -36,6 +36,7 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TSeqCollection)
 @root_object(TObjArray)
 @root_object(TList)
+@root_object(TKey)
 
 @root_object(TBranch)
 @root_object(TTree)
@@ -115,7 +116,7 @@ function splice_kwargs(jlargs::Expr, defs::Expr)
 	#println(join(defs, ", "))
 	for i=1:length(defs)
 		d = defs[i]
-		println(jlargs.args[i])
+		#println(jlargs.args[i])
 		if eval(jlargs.args[i].args[2]) <: ASCIIString && typeof(d) <: Integer
 			d = ""
 		end
@@ -164,7 +165,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
 	append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
 	append!(ex.args[2].args[2].args[4].args, avals.args)
 	
-	println(ex)
+	#println(ex)
 	eval(ex)
 end
 
@@ -195,7 +196,7 @@ macro constructor(lib, cls, args, cfunc, defs)
 	append!(ex.args[2].args[1].args, jlargs.args)
 	append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
 	append!(ex.args[2].args[2].args[2].args, avals.args)
-	println(ex)
+	#println(ex)
 	eval(ex)
 end
 
@@ -209,6 +210,7 @@ include("../gen/tobject.jl")
 include("../gen/tcollection.jl")
 include("../gen/tseqcollection.jl")
 include("../gen/tlist.jl")
+include("../gen/tkey.jl")
 
 macro parent_func(func, src, dst)
 	eval(quote
@@ -223,6 +225,8 @@ end
 @parent_func Write TH1D TObject
 @parent_func Fill TTree TObject
 
+@parent_func GetListOfKeys TFile TDirectory
+
 @parent_func GetEntries TObjArray TCollection
 @parent_func At TObjArray TSeqCollection
 @parent_func At TObjArray TSeqCollection
@@ -231,14 +235,20 @@ end
 Base.length(x::TCollection) = GetEntries(x)
 @parent_func Base.length TObjArray TCollection
 @parent_func Base.length TSeqCollection TCollection
+@parent_func Base.length TList TCollection
 
 #ROOT is zero-based, Julia one-based
 Base.getindex(tc::TSeqCollection, n::Integer) = At(tc, n-1)
 @parent_func Base.getindex TObjArray TSeqCollection
+@parent_func Base.getindex TList TSeqCollection
 
-export TFile, TTree, TObject, TH1, TH1D, TBranch
+ReadObj(x) = ReadObj(root_cast(TKey, x))
+
+export TFile, TTree, TObject, TH1, TH1D, TBranch, TKey
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches
+export GetListOfKeys
+export ReadObj, GetName, ClassName
 export Integral, GetEntries
 export root_cast
 
