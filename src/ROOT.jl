@@ -45,11 +45,15 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TH1D)
 
 typealias Option_t Uint8
-typealias Int_t Int32
-typealias Long_t Int64
-typealias Long64_t Int64
+typealias Int_t Cint
+typealias UInt_t Cuint
+typealias Long_t Clong
+typealias Long64_t Clong
 typealias Double_t Cdouble
 typealias Float_t Cfloat
+typealias Bool_t Bool
+const kFALSE = false
+const kTRUE = true
 
 #replaces argument list expressions from ROOT->Julia
 #input:
@@ -219,6 +223,7 @@ include("../gen/th1d.jl")
 include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
 include("../gen/ttree.jl")
+include("../gen/tbranch.jl")
 include("../gen/tobject.jl")
 include("../gen/tcollection.jl")
 include("../gen/tseqcollection.jl")
@@ -260,8 +265,10 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
 
 export TFile, TTree, TObject, TH1, TH1D, TBranch, TKey
 export Write, Close, Fill, Branch, Print
-export GetListOfBranches
-export GetListOfKeys
+export GetListOfBranches, GetEntry
+export GetListOfKeys, Get
+export SetAddress, GetBranch, GetClassName
+export AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
 export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
 export root_cast

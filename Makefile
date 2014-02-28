@@ -1,6 +1,6 @@
 all: libs
 
-objs: gen/tdirectory.o gen/tfile.o gen/tobject.o gen/ttree.o gen/th1.o gen/th1d.o gen/tlist.o gen/tcollection.o gen/tobjarray.o gen/tseqcollection.o gen/tkey.o
+objs: gen/tdirectory.o gen/tfile.o gen/tobject.o gen/ttree.o gen/th1.o gen/th1d.o gen/tlist.o gen/tcollection.o gen/tobjarray.o gen/tseqcollection.o gen/tkey.o gen/tbranch.o gen/tleaf.o
 
 CFLAGS=`root-config --cflags` -fPIC
 LDFLAGS=`root-config --libs` -shared -fPIC

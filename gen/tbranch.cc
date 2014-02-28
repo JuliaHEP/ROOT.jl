@@ -10,4 +10,13 @@ TBranch* TBranch_TBranch2(TTree* tree, char* name, void* address, char* leaflist
 TBranch* TBranch_TBranch3(TBranch* parent, char* name, void* address, char* leaflist, Int_t basketsize, Int_t compress) {
   return new TBranch(parent, name, address, leaflist, basketsize, compress);
 }
+const char* TBranch_GetClassName1(TBranch* __obj ) {
+  return __obj->GetClassName();
+}
+TObjArray* TBranch_GetListOfLeaves1(TBranch* __obj ) {
+  return __obj->GetListOfLeaves();
+}
+void TBranch_SetAddress1(TBranch* __obj, void* add) {
+  return __obj->SetAddress(add);
+}
 } //extern C
