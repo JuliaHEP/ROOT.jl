@@ -39,6 +39,7 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TKey)
 
 @root_object(TBranch)
+@root_object(TLeaf)
 @root_object(TTree)
 
 @root_object(TH1)
@@ -54,6 +55,17 @@ typealias Float_t Cfloat
 typealias Bool_t Bool
 const kFALSE = false
 const kTRUE = true
+
+const type_replacement = {
+	:Option_t	=>	:Uint8,
+	:Int_t		=>	:Cint,
+	:UInt_t 	=>	:Cuint,
+	:Long_t 	=> 	:Clong,
+	:Long64_t 	=> 	:Clong,
+	:Double_t 	=> 	:Cdouble,
+	:Float_t 	=> 	:Cfloat,
+	:Bool_t 	=> 	:Bool
+}
 
 #replaces argument list expressions from ROOT->Julia
 #input:
@@ -156,8 +168,13 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
 	cfname = "$(tgt)_$(cfunc)"
 
 	r = eval(ret)
+	#Replace C: Ptr{TObjets} => julia:: TObject
 	if r <: Ptr && typeof(r)==DataType && r.parameters[1] in map(eval, ROOT_OBJECTS)
 		ret = r.parameters[1]
+	end
+
+	if ret in keys(type_replacement)
+		ret = type_replacement[ret]
 	end
 
 	#create a function "stub"
@@ -217,18 +234,22 @@ macro constructor(lib, cls, args, cfunc, defs)
 	eval(ex)
 end
 
+include("../gen/tobject.jl")
+
+include("../gen/tcollection.jl")
+include("../gen/tseqcollection.jl")
+include("../gen/tlist.jl")
+include("../gen/tkey.jl")
+
 include("../gen/th1.jl")
 include("../gen/th1d.jl")
 
 include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
+
 include("../gen/ttree.jl")
 include("../gen/tbranch.jl")
-include("../gen/tobject.jl")
-include("../gen/tcollection.jl")
-include("../gen/tseqcollection.jl")
-include("../gen/tlist.jl")
-include("../gen/tkey.jl")
+include("../gen/tleaf.jl")
 
 macro parent_func(func, src, dst)
 	eval(quote
@@ -263,11 +284,14 @@ Base.getindex(tc::TSeqCollection, n::Integer) = At(tc, n-1)
 
 ReadObj(x) = ReadObj(root_cast(TKey, x))
 
-export TFile, TTree, TObject, TH1, TH1D, TBranch, TKey
+export TFile, TTree, TObject, TH1, TH1D, TBranch, TKey, TLeaf
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry
 export GetListOfKeys, Get
-export SetAddress, GetBranch, GetClassName
+
+export SetAddress, GetBranch, GetClassName, GetListOfLeaves
+export GetTypeName
+
 export AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
 export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth

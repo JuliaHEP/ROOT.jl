@@ -8,10 +8,10 @@ TTree* TTree_TTree2(char* name, char* title, Int_t splitlevel) {
   return new TTree(name, title, splitlevel);
 }
 void TTree_AddBranchToCache1(TTree* __obj, char* bname, Bool_t subbranches) {
-  return __obj->AddBranchToCache(bname, subbranches);
+  __obj->AddBranchToCache(bname, subbranches);
 }
 void TTree_AddBranchToCache2(TTree* __obj, TBranch* branch, Bool_t subbranches) {
-  return __obj->AddBranchToCache(branch, subbranches);
+  __obj->AddBranchToCache(branch, subbranches);
 }
 Int_t TTree_Branch1(TTree* __obj, TCollection* list, Int_t bufsize, Int_t splitlevel, char* name) {
   return __obj->Branch(list, bufsize, splitlevel, name);
@@ -35,7 +35,7 @@ TBranch* TTree_Branch8(TTree* __obj, char* name, char* classname, void* addobj, 
   return __obj->Branch(name, classname, addobj, bufsize, splitlevel);
 }
 void TTree_Draw1(TTree* __obj, Option_t* opt) {
-  return __obj->Draw(opt);
+  __obj->Draw(opt);
 }
 Long64_t TTree_Draw3(TTree* __obj, char* varexp, char* selection, Option_t* option, Long64_t nentries, Long64_t firstentry) {
   return __obj->Draw(varexp, selection, option, nentries, firstentry);
@@ -62,7 +62,7 @@ Double_t* TTree_GetV11(TTree* __obj ) {
   return __obj->GetV1();
 }
 void TTree_SetBranchStatus1(TTree* __obj, char* bname, Bool_t status, UInt_t* found) {
-  return __obj->SetBranchStatus(bname, status, found);
+  __obj->SetBranchStatus(bname, status, found);
 }
 Int_t TTree_Write1(TTree* __obj, char* name, Int_t option, Int_t bufsize) {
   return __obj->Write(name, option, bufsize);

@@ -1,13 +1,13 @@
 //c++ `root-config --cflags --libs` -shared -fPIC gen/tobject.cc -o gen/tobject
 #include <TObject.h>
 extern "C" {
-const char* TObject_ClassName1(TObject* __obj ) {
+char* TObject_ClassName1(TObject* __obj ) {
   return __obj->ClassName();
 }
-const char* TObject_GetName1(TObject* __obj ) {
+char* TObject_GetName1(TObject* __obj ) {
   return __obj->GetName();
 }
-const char* TObject_GetTitle1(TObject* __obj ) {
+char* TObject_GetTitle1(TObject* __obj ) {
   return __obj->GetTitle();
 }
 void TObject_Print1(TObject* __obj, Option_t* option) {
