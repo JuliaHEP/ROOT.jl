@@ -1,5 +1,6 @@
 module ROOT
 
+"ROOTSYS" in keys(ENV) || error("ROOTSYS not defined, call `source /path/to/root/thisroot.sh`")
 import Base.length, Base.getindex
 
 #abstract type that wraps a ROOT object through an opaque pointer
@@ -234,6 +235,7 @@ macro constructor(lib, cls, args, cfunc, defs)
 	eval(ex)
 end
 
+include("../gen/groot.jl")
 include("../gen/tobject.jl")
 
 include("../gen/tcollection.jl")
@@ -284,6 +286,12 @@ Base.getindex(tc::TSeqCollection, n::Integer) = At(tc, n-1)
 
 ReadObj(x) = ReadObj(root_cast(TKey, x))
 
+@linux_only begin
+    #for some reason, libRIO is not properly loaded on linux
+    const rio = joinpath(ENV["ROOTSYS"], "lib", "libRIO.so")
+    process_line(".L $rio")
+end
+
 export TFile, TTree, TObject, TH1, TH1D, TBranch, TKey, TLeaf
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry
@@ -296,5 +304,6 @@ export AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
 export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
 export root_cast
+export process_line
 
 end
