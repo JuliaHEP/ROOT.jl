@@ -62,7 +62,7 @@ wrap_root_file("TKey.h", "TKey", "gen/tkey", [:GetName, :ReadObj])
 wrap_root_file(
 	"TTree.h", "TTree", "gen/ttree",
 	[:TTree, :Fill, :Branch, :GetEntries, :Write, :GetListOfBranches, :GetEntry,
-	:AddBranchToCache, :SetBranchStatus, :GetV1, :Draw, :GetBranch],
+	:AddBranchToCache, :SetBranchStatus, :GetV1, :Draw, :GetBranch, :SetCacheSize],
 	[:Branch5]
 )
 wrap_root_file("TBranch.h", "TBranch", "gen/tbranch",

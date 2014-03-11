@@ -64,6 +64,9 @@ Double_t* TTree_GetV11(TTree* __obj ) {
 void TTree_SetBranchStatus1(TTree* __obj, char* bname, Bool_t status, UInt_t* found) {
   __obj->SetBranchStatus(bname, status, found);
 }
+void TTree_SetCacheSize1(TTree* __obj, Long64_t cachesize) {
+  __obj->SetCacheSize(cachesize);
+}
 Int_t TTree_Write1(TTree* __obj, char* name, Int_t option, Int_t bufsize) {
   return __obj->Write(name, option, bufsize);
 }

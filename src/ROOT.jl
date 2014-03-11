@@ -300,7 +300,7 @@ export GetListOfKeys, Get
 export SetAddress, GetBranch, GetClassName, GetListOfLeaves
 export GetTypeName
 
-export AddBranchToCache, SetBranchStatus, Draw, GetV1
+export SetCacheSize, AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
 export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
 export root_cast
