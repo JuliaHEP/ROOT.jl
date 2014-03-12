@@ -83,7 +83,10 @@ wrap_root_file(
 
 wrap_root_file(
 	"TH2.h", "TH2", "gen/th2",
-	[:TH2, :Fill]
+	[
+        :TH2, :Fill,
+        :GetEntries, :GetBinContent, :GetBinError, :GetNbinsX, :GetBinLowEdge, :GetBinWidth
+    ]
 )
 wrap_root_file("TH2D.h", "TH2D", "gen/th2d", [:TH2D])
 
