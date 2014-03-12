@@ -8,3 +8,11 @@ end
 
 Integral(hi)::Float64
 @test GetEntries(hi)==1000000
+
+bx = Float64[0.0, 1.0, 2.0]
+by = Float64[0.0, 1.0]
+
+hi2 = TH2D("my_hist2", "My Hist", 2, pointer(bx), 1, pointer(by))::TH2D
+hi2::TH2D
+Fill(hi2, 0.0, 0.0, 0.0)
+

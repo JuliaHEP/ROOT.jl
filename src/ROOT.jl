@@ -46,6 +46,9 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TH1)
 @root_object(TH1D)
 
+@root_object(TH2)
+@root_object(TH2D)
+
 typealias Option_t Uint8
 typealias Int_t Cint
 typealias UInt_t Cuint
@@ -226,6 +229,8 @@ macro constructor(lib, cls, args, cfunc, defs)
 			)
 		end
 	end
+    
+    #println(ex)
 
 	#Note, this is fragile. if the stub is changed, the argument indices will also
 	#splice julia function args
@@ -246,6 +251,9 @@ include("../gen/tkey.jl")
 include("../gen/th1.jl")
 include("../gen/th1d.jl")
 
+include("../gen/th2.jl")
+include("../gen/th2d.jl")
+
 include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
 
@@ -264,6 +272,7 @@ for f in [
 	:GetNbinsX, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth
 	]
 	@eval @parent_func $f TH1D TH1
+	@eval @parent_func $f TH2D TH2
 end
 @parent_func Fill TTree TObject
 
@@ -292,7 +301,7 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
     process_line(".L $rio")
 end
 
-export TFile, TTree, TObject, TH1, TH1D, TBranch, TKey, TLeaf
+export TFile, TTree, TObject, TH1, TH1D, TH2D, TH2, TBranch, TKey, TLeaf
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry
 export GetListOfKeys, Get
