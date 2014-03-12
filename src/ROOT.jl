@@ -146,7 +146,9 @@ function splice_kwargs(jlargs::Expr, defs::Expr)
 end
 
 function define_lib(lib::Expr)
-	if !isdefined(eval(lib))
+    lib = lib.args[1]
+
+    if !isdefined(lib)
 		q = quote
 		const $(symbol(string(lib))) = joinpath(
 			dirname(Base.source_path()), "..",
@@ -183,7 +185,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
 		function $jlfunc(__obj::$tgt)
 			@assert(__obj.p != C_NULL)
 			ccall(
-				($cfname, $(symbol(string(lib)))),
+				($cfname, libroot),
 				$(eval(ret)), (),
 			)
 		end
@@ -199,7 +201,6 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
 	append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
 	append!(ex.args[2].args[2].args[4].args, avals.args)
 	
-	#println(ex)
 	eval(ex)
 end
 
@@ -220,7 +221,7 @@ macro constructor(lib, cls, args, cfunc, defs)
 	ex = quote
 		function $cls()
 			ccall(
-				($cfname, $(symbol(string(lib)))),
+				($cfname, libroot),
 				$(eval(cls)), (),
 			)
 		end
@@ -231,7 +232,6 @@ macro constructor(lib, cls, args, cfunc, defs)
 	append!(ex.args[2].args[1].args, jlargs.args)
 	append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
 	append!(ex.args[2].args[2].args[2].args, avals.args)
-	#println(ex)
 	eval(ex)
 end
 
