@@ -25,6 +25,9 @@ macro root_object(name)
 	end)
 end
 
+macro subclass(child, parent)
+end
+
 root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 	to(root_pointer(o))
 
@@ -98,6 +101,8 @@ function argument_replace(args::Expr)
 		#name, type
 		n = a.args[1]
 		t = a.args[2]
+        #typeof(t) <: Symbol && println("replacing $n, $t::Symbol")
+        #typeof(t) <: Expr && println("replacing $n, $t::Expr, $(t.head) $(t.args) $(map(typeof, t.args))")
 
 		#replace C-Uint8 with julia ASCIIString
 		jt = t
@@ -116,11 +121,19 @@ function argument_replace(args::Expr)
 		jlarg = Expr(symbol("::"))
 		push!(jlarg.args, n)
 		push!(jlarg.args, jt)
-
-		if t in ROOT_OBJECTS
-			n = :(root_pointer($(n)))
-			t = :(Ptr{Void})
-		end
+        
+        if typeof(t) <: Symbol
+		    if t in ROOT_OBJECTS
+		    	n = :(root_pointer($(n)))
+		    	t = :(Ptr{Void})
+		    end
+        elseif typeof(t) <: Expr
+            #if t.head == :curly && t.args[1] == :Ptr
+		    #	n = :(root_pointer($(n)))
+		    #	t = :(Ptr{Void})
+            #end
+        end
+        #println("found replacement $n::$t")
 
 		push!(avals.args, n)
 		push!(aargs.args, t)
@@ -203,7 +216,9 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
 	#splice C function argument values
 	append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
 	append!(ex.args[2].args[2].args[4].args, avals.args)
-	
+    
+    #println(ex)
+
 	eval(ex)
 end
 
@@ -269,14 +284,35 @@ end
 
 for f in [
 	:Fill, :Integral, :GetEntries, :Print, :Write,
-	:GetNbinsX, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth
+	:GetNbinsX, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth,
+	:SetBinContent, :SetBinError
 	]
 	@eval @parent_func $f TH1D TH1
+end
+
+for f in [
+	:SetBinContent, :SetBinError
+	]
+	@eval @parent_func $f TH2D TH1
+end
+
+for f in [
+	:Fill, :Integral, :GetEntries, :Print, :Write,
+	:GetNbinsX, :GetNbinsY, :GetBinContent, :GetBinError,
+	]
 	@eval @parent_func $f TH2D TH2
 end
-@parent_func Fill TTree TObject
 
-@parent_func GetListOfKeys TFile TDirectory
+@parent_func Fill TTree TObject
+@parent_func SetDirectory TH1D TH1
+@parent_func SetDirectory TH2D TH1
+
+
+for f in [
+	:GetListOfKeys, :Cd, :mkdir
+	]
+	@eval @parent_func $f TFile TDirectory
+end
 
 @parent_func GetEntries TObjArray TCollection
 @parent_func At TObjArray TSeqCollection
@@ -301,17 +337,20 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
     process_line(".L $rio")
 end
 
-export TFile, TTree, TObject, TH1, TH1D, TH2D, TH2, TBranch, TKey, TLeaf
+export TFile, TTree, TObject, TH1, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry
 export GetListOfKeys, Get
+export Cd, mkdir
 
 export SetAddress, GetBranch, GetClassName, GetListOfLeaves
 export GetTypeName
 
 export SetCacheSize, AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
-export Integral, GetEntries, GetNbinsX, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
+export Integral, GetEntries, GetNbinsX, GetNbinsY, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
+export SetBinContent, SetBinError
+export SetDirectory
 export root_cast
 export process_line
 
