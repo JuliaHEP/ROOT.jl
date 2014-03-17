@@ -22,3 +22,7 @@
 @method :libroot TTree SetCacheSize None (cachesize::Long64_t, ) SetCacheSize1 (-,  )
 @method :libroot TTree Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write1 (0, 0, 0,  )
 @method :libroot TTree Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write2 (0, 0, 0,  )
+@subclass TTree TNamed
+@subclass TTree TAttLine
+@subclass TTree TAttFill
+@subclass TTree TAttMarker

@@ -4,13 +4,13 @@ extern "C" {
 TH1D* TH1D_TH1D1() {
   return new TH1D();
 }
-TH1D* TH1D_TH1D2(char* name, char* title, Int_t nbinsx, Double_t xlow, Double_t xup) {
+TH1D* TH1D_TH1D2(const char* name, const char* title,  Int_t nbinsx,  Double_t xlow,  Double_t xup) {
   return new TH1D(name, title, nbinsx, xlow, xup);
 }
-TH1D* TH1D_TH1D3(char* name, char* title, Int_t nbinsx, Float_t* xbins) {
+TH1D* TH1D_TH1D3(const char* name, const char* title,  Int_t nbinsx, const Float_t* xbins) {
   return new TH1D(name, title, nbinsx, xbins);
 }
-TH1D* TH1D_TH1D4(char* name, char* title, Int_t nbinsx, Double_t* xbins) {
+TH1D* TH1D_TH1D4(const char* name, const char* title,  Int_t nbinsx, const Double_t* xbins) {
   return new TH1D(name, title, nbinsx, xbins);
 }
 } //extern C

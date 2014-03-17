@@ -4,16 +4,16 @@ extern "C" {
 TFile* TFile_TFile1() {
   return new TFile();
 }
-TFile* TFile_TFile2(char* fname, Option_t* option, char* ftitle, Int_t compress) {
+TFile* TFile_TFile2(const char* fname,  Option_t* option, const char* ftitle,  Int_t compress) {
   return new TFile(fname, option, ftitle, compress);
 }
-void TFile_Close1(TFile* __obj, Option_t* option) {
+ void TFile_Close1(TFile* __obj,  Option_t* option) {
   __obj->Close(option);
 }
-Int_t TFile_Write1(TFile* __obj, char* name, Int_t opt, Int_t bufsiz) {
+ Int_t TFile_Write1(TFile* __obj, const char* name,  Int_t opt,  Int_t bufsiz) {
   return __obj->Write(name, opt, bufsiz);
 }
-Int_t TFile_Write2(TFile* __obj, char* name, Int_t opt, Int_t bufsiz) {
+ Int_t TFile_Write2(TFile* __obj, const char* name,  Int_t opt,  Int_t bufsiz) {
   return __obj->Write(name, opt, bufsiz);
 }
 } //extern C

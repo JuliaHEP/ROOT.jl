@@ -13,3 +13,14 @@
 @method :libroot TH1 GetNbinsX Int_t () GetNbinsX1 ( )
 @method :libroot TH1 Integral Double_t (option::Ptr{Option_t}, ) Integral1 ("",  )
 @method :libroot TH1 Integral Double_t (binx1::Int_t, binx2::Int_t, option::Ptr{Option_t}, ) Integral2 (nothing, nothing, "",  )
+@method :libroot TH1 SetBinContent None (bin::Int_t, content::Double_t, ) SetBinContent1 (nothing, nothing,  )
+@method :libroot TH1 SetBinContent None (binx::Int_t, biny::Int_t, content::Double_t, ) SetBinContent2 (nothing, nothing, nothing,  )
+@method :libroot TH1 SetBinContent None (binx::Int_t, biny::Int_t, binz::Int_t, content::Double_t, ) SetBinContent3 (nothing, nothing, nothing, nothing,  )
+@method :libroot TH1 SetBinError None (bin::Int_t, error::Double_t, ) SetBinError1 (nothing, nothing,  )
+@method :libroot TH1 SetBinError None (binx::Int_t, biny::Int_t, error::Double_t, ) SetBinError2 (nothing, nothing, nothing,  )
+@method :libroot TH1 SetBinError None (binx::Int_t, biny::Int_t, binz::Int_t, error::Double_t, ) SetBinError3 (nothing, nothing, nothing, nothing,  )
+@method :libroot TH1 SetDirectory None (dir::Ptr{TDirectory}, ) SetDirectory1 (nothing,  )
+@subclass TH1 TNamed
+@subclass TH1 TAttLine
+@subclass TH1 TAttFill
+@subclass TH1 TAttMarker
