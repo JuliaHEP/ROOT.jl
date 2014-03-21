@@ -4,10 +4,12 @@ Wraps ROOT (http://root.cern.ch) using Clang.jl in a semi-automatic way. Current
 
 * TTree, TBranch
 * TFile, TDirectory, TDirectoryFile
-* TH1D
+* TH1D, TH2D
 * TCollection, TList, TKey
 
-This wrapper is a very thin C layer on top of the ROOT C++ library and no runtime interpreter (e.g. CINT or Cling) is called. Therefore, this is theoretically the fastest possible wrapper one can use short of using C++ directly.
+This wrapper is a very thin C layer on top of the ROOT C++ library and no runtime interpreter (e.g. CINT or Cling) is called for the core functions. Therefore, this is theoretically the fastest possible wrapper one can use short of using C++ directly.
+
+One can access the full ROOT framework though the ``process_line(cmd::ASCIIString)`` wrapper.
 
 # Installation
 
@@ -19,11 +21,11 @@ to create `libroot.{so/dylib}`.
 
 # Usage
 
-Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap.
+Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap (using `new` in C++).
 
 ## TTrees
 
-These are the main workhorse of ROOT, which supports fast row-based and disk-backed data storage and computation.
+These are the main workhorse of ROOT, which supports fast row-based and disk-backed data storage.
 
 ~~~
 #file: example/ttree.jl
