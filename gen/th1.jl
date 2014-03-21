@@ -11,6 +11,7 @@
 @method :libroot TH1 GetBinWidth Double_t (bin::Int_t, ) GetBinWidth1 (nothing,  )
 @method :libroot TH1 GetEntries Double_t () GetEntries1 ( )
 @method :libroot TH1 GetNbinsX Int_t () GetNbinsX1 ( )
+@method :libroot TH1 GetNbinsY Int_t () GetNbinsY1 ( )
 @method :libroot TH1 Integral Double_t (option::Ptr{Option_t}, ) Integral1 ("",  )
 @method :libroot TH1 Integral Double_t (binx1::Int_t, binx2::Int_t, option::Ptr{Option_t}, ) Integral2 (nothing, nothing, "",  )
 @method :libroot TH1 SetBinContent None (bin::Int_t, content::Double_t, ) SetBinContent1 (nothing, nothing,  )

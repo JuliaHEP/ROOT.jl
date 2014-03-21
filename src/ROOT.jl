@@ -284,7 +284,7 @@ end
 
 for f in [
 	:Fill, :Integral, :GetEntries, :Print, :Write,
-	:GetNbinsX, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth,
+	:GetNbinsX, :GetNbinsY, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth,
 	:SetBinContent, :SetBinError
 	]
 	@eval @parent_func $f TH1D TH1
@@ -294,13 +294,6 @@ for f in [
 	:SetBinContent, :SetBinError
 	]
 	@eval @parent_func $f TH2D TH1
-end
-
-for f in [
-	:Fill, :Integral, :GetEntries, :Print, :Write,
-	:GetNbinsX, :GetNbinsY, :GetBinContent, :GetBinError,
-	]
-	@eval @parent_func $f TH2D TH2
 end
 
 @parent_func Fill TTree TObject

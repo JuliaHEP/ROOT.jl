@@ -40,6 +40,9 @@ extern "C" {
  Int_t TH1_GetNbinsX1(TH1* __obj ) {
   return __obj->GetNbinsX();
 }
+ Int_t TH1_GetNbinsY1(TH1* __obj ) {
+  return __obj->GetNbinsY();
+}
  Double_t TH1_Integral1(TH1* __obj,  Option_t* option) {
   return __obj->Integral(option);
 }

@@ -86,7 +86,7 @@ wrap_root_file(
 	"TH1.h", "TH1", "gen/th1",
 	[:TH1, :Fill, :Write,
 	:Integral,
-	:GetEntries, :GetBinContent, :GetBinError, :GetNbinsX, :GetBinLowEdge, :GetBinWidth,
+	:GetEntries, :GetBinContent, :GetBinError, :GetNbinsX, :GetNbinsY, :GetBinLowEdge, :GetBinWidth,
     :SetBinContent, :SetBinError,
     :SetDirectory
     ]
@@ -100,7 +100,11 @@ wrap_root_file(
         :SetBinContent, :SetBinError 
     ]
 )
-wrap_root_file("TH2D.h", "TH2D", "gen/th2d", [:TH2D])
+wrap_root_file("TH2D.h", "TH2D", "gen/th2d",
+    [
+    :TH2D,
+    :GetNbinsX, :GetNbinsY
+])
 wrap_root_file("TArrayD.h", "TArrayD", "gen/tarrayd", [:TArrayD, :GetAt, :SetAt])
 wrap_root_file("TArray.h", "TArray", "gen/tarray", Symbol[])
 
