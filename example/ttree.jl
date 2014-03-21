@@ -9,6 +9,7 @@ ttree = TTree("my_tree", "My Tree")
 #branch variable should be array with length 1
 x = Float64[0]
 px = convert(Ptr{Void}, x)
+println(methods(Branch))
 br = Branch(ttree, "x", px, "x/D")
 
 for i=1:10000

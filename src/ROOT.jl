@@ -15,15 +15,38 @@ const ROOT_OBJECTS = Symbol[]
 
 #define a ROOT TObject type, needed for correct dispatch
 macro root_object(name)
+
+    parent = symbol("$(name)A")
+
 	push!(ROOT_OBJECTS, name)
 	eval(quote
-		immutable $name <: ROOTObject
+		immutable $name <: $parent 
 			p::Ptr{Void}
 		end
 		#$name(p::Ptr{Void}) = $name(p)
 		root_pointer(x::$name) = x.p
 	end)
 end
+
+abstract TObjectA <: ROOTObject
+abstract TDirectoryA <: TObjectA
+abstract TFileA <: TDirectoryA
+
+abstract TKeyA <: TObjectA
+abstract TBranchA <: TObjectA
+abstract TLeafA <: TObjectA
+
+abstract TTreeA <: TObjectA
+
+abstract TCollectionA <: TObjectA
+abstract TSeqCollectionA <: TCollectionA
+abstract TObjArrayA <: TSeqCollectionA
+abstract TListA <: TObjArrayA
+
+abstract TH1A <: TObjectA
+abstract TH1DA <: TH1A
+abstract TH2A <: TH1A
+abstract TH2DA <: TH2A
 
 macro subclass(child, parent)
 end
@@ -52,26 +75,64 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TH2)
 @root_object(TH2D)
 
-typealias Option_t Uint8
-typealias Int_t Cint
-typealias UInt_t Cuint
-typealias Long_t Clong
-typealias Long64_t Clong
-typealias Double_t Cdouble
-typealias Float_t Cfloat
-typealias Bool_t Bool
+#typealias Option_t Uint8
+#typealias Int_t Cint
+#typealias UInt_t Cuint
+#typealias Long_t Clong
+#typealias Long64_t Clong
+#typealias Double_t Cdouble
+#typealias Float_t Cfloat
+#typealias Bool_t Bool
+
+abstract Option_t
+abstract Int_t
+abstract UInt_t
+abstract Long_t
+abstract Long64_t
+abstract Double_t
+abstract Float_t
+abstract Bool_t
+
 const kFALSE = false
 const kTRUE = true
 
 const type_replacement = {
-	:Option_t	=>	:Uint8,
-	:Int_t		=>	:Cint,
-	:UInt_t 	=>	:Cuint,
-	:Long_t 	=> 	:Clong,
-	:Long64_t 	=> 	:Clong,
-	:Double_t 	=> 	:Cdouble,
-	:Float_t 	=> 	:Cfloat,
-	:Bool_t 	=> 	:Bool
+	#:Option_t	        =>	:(Ptr{Uint8}),
+	#:(Ptr{None})    	=>	:ASCIIString,
+	:Int_t		        =>	:Int64,
+	:UInt_t 	        =>	:Uint64,
+	:Long_t 	        => 	:Int64,
+	:Long64_t 	        => 	:Int64,
+	:Double_t 	        => 	:Float64,
+	:Float_t 	        => 	:Float64,
+	:Bool_t 	        => 	:Bool,
+	:(Ptr{Option_t})	=>	:ASCIIString,
+	:(Ptr{Uint8})	    =>	:ASCIIString,
+	:(Ptr{Double_t})    => 	:(Ptr{Float64}),
+	:(Ptr{Float_t})     => 	:(Ptr{Float32}),
+
+    :TH2D               =>  :TH2DA,
+    :TH2                =>  :TH2A,
+    :TH1D               =>  :TH1DA,
+    :TH1                =>  :TH1A,
+    :TFile              =>  :TFileA,
+    :TDirectoryFile     =>  :TDirectoryFileA,
+    :TDirectory         =>  :TDirectoryA,
+}
+
+const ccall_type_replacement = {
+	:ASCIIString        =>	:(Ptr{Uint8}),
+	:(Ptr{Option_t})    =>	:(Ptr{Uint8}),
+	#:(Ptr{None})    	=>	:(Ptr{Uint8}),
+	:Int_t		        =>	:Cint,
+	:UInt_t 	        =>	:Cuint,
+	:Long_t 	        => 	:Clong,
+	:Long64_t 	        => 	:Clong,
+	:Double_t 	        => 	:Cdouble,
+	:Float_t 	        => 	:Cfloat,
+	:Bool_t 	        => 	:Bool,
+	:(Ptr{Double_t})    => 	:(Ptr{Float64}),
+	:(Ptr{Float_t})     => 	:(Ptr{Float32}),
 }
 
 #replaces argument list expressions from ROOT->Julia
@@ -96,28 +157,44 @@ function argument_replace(args::Expr)
 	for a in args.args
 
 		#must be typed argument
-		(isa(a, Expr) && a.head == symbol("::")) || error("$a")
+		(isa(a, Expr) && a.head == symbol("::")) || error("$a is not typed")
 
 		#name, type
 		n = a.args[1]
 		t = a.args[2]
-        #typeof(t) <: Symbol && println("replacing $n, $t::Symbol")
-        #typeof(t) <: Expr && println("replacing $n, $t::Expr, $(t.head) $(t.args) $(map(typeof, t.args))")
+		
+        jt = t
 
-		#replace C-Uint8 with julia ASCIIString
-		jt = t
-		if (eval(t) == Ptr{Uint8})
-			jt = :(ASCIIString)
-		end
+        ###
+        #conversions for julia-side function argument types
+        ###
+        if haskey(type_replacement, jt)
+            const jt_ = type_replacement[jt]
+            #println("replacing $jt with $jt_")
+            jt = jt_
+        end
+		
+        ##replace C-Uint8 with julia ASCIIString
+        ##x::Ptr{Uint8}(const char *) => x::ASCIIString
+		#if (eval(t) == Ptr{Uint8})
+		#	jt = :(ASCIIString)
+		#end
 
-		#cast ROOT Int32 to Int64 in julia arguments
-		if eval(t) == Int32
-			jt = :(Int64)
-		end
-		if eval(t) == ASCIIString
-			t = :(Ptr{Uint8})
-		end
+		##cast ROOT Int32 to Int64 in julia arguments
+		#if eval(t) == Int32 || eval(t) == Cint
+		#	jt = :(Int64)
+		#end
+        
+        ###
+        #conversions for ccall argument types
+        ###
 
+        #strings passed from julia are Ptr{Uint8} in ccall
+        if haskey(ccall_type_replacement, t)
+            t = ccall_type_replacement[t]
+        end
+
+        #put julia arguments back together
 		jlarg = Expr(symbol("::"))
 		push!(jlarg.args, n)
 		push!(jlarg.args, jt)
@@ -139,18 +216,20 @@ function argument_replace(args::Expr)
 		push!(aargs.args, t)
 
 		push!(jlargs.args, jlarg)
+        #println("$n $t $jlarg")
 	end
 	return avals, aargs, jlargs
 end
 
-
 function splice_kwargs(jlargs::Expr, defs::Expr)
-	defs = eval(defs)
-	#println(join(defs, ", "))
+    #default values	
+    defs = eval(defs)
+
 	for i=1:length(defs)
 		d = defs[i]
-		#println(jlargs.args[i])
-		if eval(jlargs.args[i].args[2]) <: ASCIIString && typeof(d) <: Integer
+        
+        #const char* x=0 ===> x::ASCIIString=""
+        if eval(jlargs.args[i].args[2]) <: ASCIIString && typeof(d) <: Integer
 			d = ""
 		end
 
@@ -187,10 +266,14 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
 	cfname = "$(tgt)_$(cfunc)"
 
 	r = eval(ret)
-	#Replace C: Ptr{TObjets} => julia:: TObject
+	#Replace return type Ptr{X<:TObject} (C) => X (julia)
 	if r <: Ptr && typeof(r)==DataType && r.parameters[1] in map(eval, ROOT_OBJECTS)
 		ret = r.parameters[1]
 	end
+    
+    if tgt in keys(type_replacement)
+        tgt = type_replacement[tgt]
+    end
 
 	if ret in keys(type_replacement)
 		ret = type_replacement[ret]
@@ -229,7 +312,6 @@ macro constructor(lib, cls, args, cfunc, defs)
 	define_lib(lib)
 
 	avals, aargs, jlargs = argument_replace(args)
-
 	jlargs = splice_kwargs(jlargs, defs)
 
 	#C function name target_func
@@ -245,13 +327,14 @@ macro constructor(lib, cls, args, cfunc, defs)
 		end
 	end
     
-    #println(ex)
 
-	#Note, this is fragile. if the stub is changed, the argument indices will also
-	#splice julia function args
+	# splice julia function args
+	# FIXME: this is fragile. if the stub is changed, the argument indices will
+    # also change
 	append!(ex.args[2].args[1].args, jlargs.args)
 	append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
 	append!(ex.args[2].args[2].args[2].args, avals.args)
+    #println(ex)
 	eval(ex)
 end
 
@@ -276,51 +359,51 @@ include("../gen/ttree.jl")
 include("../gen/tbranch.jl")
 include("../gen/tleaf.jl")
 
-macro parent_func(func, src, dst)
-	eval(quote
-		$func(__obj::$src, args...) = $func(root_cast($dst, __obj), args...)
-	end)
-end
-
-for f in [
-	:Fill, :Integral, :GetEntries, :Print, :Write,
-	:GetNbinsX, :GetNbinsY, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth,
-	:SetBinContent, :SetBinError
-	]
-	@eval @parent_func $f TH1D TH1
-end
-
-for f in [
-	:SetBinContent, :SetBinError
-	]
-	@eval @parent_func $f TH2D TH1
-end
-
-@parent_func Fill TTree TObject
-@parent_func SetDirectory TH1D TH1
-@parent_func SetDirectory TH2D TH1
-
-
-for f in [
-	:GetListOfKeys, :Cd, :mkdir
-	]
-	@eval @parent_func $f TFile TDirectory
-end
-
-@parent_func GetEntries TObjArray TCollection
-@parent_func At TObjArray TSeqCollection
-@parent_func At TObjArray TSeqCollection
-@parent_func At TList TSeqCollection
-
-Base.length(x::TCollection) = GetEntries(x)
-@parent_func Base.length TObjArray TCollection
-@parent_func Base.length TSeqCollection TCollection
-@parent_func Base.length TList TCollection
-
-#ROOT is zero-based, Julia one-based
-Base.getindex(tc::TSeqCollection, n::Integer) = At(tc, n-1)
-@parent_func Base.getindex TObjArray TSeqCollection
-@parent_func Base.getindex TList TSeqCollection
+#macro parent_func(func, src, dst)
+#	eval(quote
+#		$func(__obj::$src, args...) = $func(root_cast($dst, __obj), args...)
+#	end)
+#end
+#
+#for f in [
+#	:Fill, :Integral, :GetEntries, :Print, :Write,
+#	:GetNbinsX, :GetNbinsY, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth,
+#	:SetBinContent, :SetBinError
+#	]
+#	@eval @parent_func $f TH1D TH1
+#end
+#
+#for f in [
+#	:SetBinContent, :SetBinError
+#	]
+#	@eval @parent_func $f TH2D TH1
+#end
+#
+#@parent_func Fill TTree TObject
+#@parent_func SetDirectory TH1D TH1
+#@parent_func SetDirectory TH2D TH1
+#
+#
+#for f in [
+#	:GetListOfKeys, :Cd, :mkdir
+#	]
+#	@eval @parent_func $f TFile TDirectory
+#end
+#
+#@parent_func GetEntries TObjArray TCollection
+#@parent_func At TObjArray TSeqCollection
+#@parent_func At TObjArray TSeqCollection
+#@parent_func At TList TSeqCollection
+#
+#Base.length(x::TCollection) = GetEntries(x)
+#@parent_func Base.length TObjArray TCollection
+#@parent_func Base.length TSeqCollection TCollection
+#@parent_func Base.length TList TCollection
+#
+##ROOT is zero-based, Julia one-based
+#Base.getindex(tc::TSeqCollection, n::Integer) = At(tc, n-1)
+#@parent_func Base.getindex TObjArray TSeqCollection
+#@parent_func Base.getindex TList TSeqCollection
 
 ReadObj(x) = ReadObj(root_cast(TKey, x))
 
