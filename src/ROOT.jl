@@ -118,6 +118,12 @@ const type_replacement = {
     :TFile              =>  :TFileA,
     :TDirectoryFile     =>  :TDirectoryFileA,
     :TDirectory         =>  :TDirectoryA,
+
+    :TCollection 		=>	:TCollectionA,
+    :TSeqCollection		=>	:TSeqCollectionA,
+    :TList 				=>	:TListA,
+
+    :TObject 			=>  :TObjectA
 }
 
 const ccall_type_replacement = {
@@ -275,7 +281,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
         tgt = type_replacement[tgt]
     end
 
-	if ret in keys(type_replacement)
+	if ret in keys(type_replacement) && ret != :(Ptr{Uint8})
 		ret = type_replacement[ret]
 	end
 
@@ -395,15 +401,12 @@ include("../gen/tleaf.jl")
 #@parent_func At TObjArray TSeqCollection
 #@parent_func At TList TSeqCollection
 #
-#Base.length(x::TCollection) = GetEntries(x)
-#@parent_func Base.length TObjArray TCollection
-#@parent_func Base.length TSeqCollection TCollection
-#@parent_func Base.length TList TCollection
-#
+
+
+Base.length(x::TCollectionA) = GetEntries(x)
+
 ##ROOT is zero-based, Julia one-based
-#Base.getindex(tc::TSeqCollection, n::Integer) = At(tc, n-1)
-#@parent_func Base.getindex TObjArray TSeqCollection
-#@parent_func Base.getindex TList TSeqCollection
+Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, n-1)
 
 ReadObj(x) = ReadObj(root_cast(TKey, x))
 
@@ -427,6 +430,8 @@ export ReadObj, GetName, ClassName
 export Integral, GetEntries, GetNbinsX, GetNbinsY, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
 export SetBinContent, SetBinError
 export SetDirectory
+
+#"global" methods
 export root_cast
 export process_line
 
