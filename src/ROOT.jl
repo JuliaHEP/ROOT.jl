@@ -96,6 +96,7 @@ abstract Long64_t
 abstract Double_t
 abstract Float_t
 abstract Bool_t
+abstract Char_t
 
 const kFALSE = false
 const kTRUE = true
@@ -110,6 +111,7 @@ const type_replacement = {
 	:Double_t 	        => 	:Float64,
 	:Float_t 	        => 	:Float64,
 	:Bool_t 	        => 	:Bool,
+	:Char_t 			=>  :Char,
 	:(Ptr{Option_t})	=>	:ASCIIString,
 	:(Ptr{Uint8})	    =>	:ASCIIString,
 	:(Ptr{Double_t})    => 	:(Ptr{Cdouble}),
@@ -433,6 +435,7 @@ const SHORT_TYPEMAP = {
     Int64 => "L",
     Uint64 => "l",
     Uint8 => "C",
+    Char => "C",
     Bool => "O"
 }
 

@@ -62,7 +62,8 @@ wrap_root_file("TDirectory.h", "TDirectory", "gen/tdirectory",
     [:Get, :Close, :TDirectory, :GetListOfKeys, :Cd, :mkdir]
 )
 wrap_root_file("TFile.h", "TFile", "gen/tfile",
-    [:TFile, :Close, :Get, :Write]
+    [:TFile, :Close, :Get, :Write, :Open],
+    [:Open2]
 )
 wrap_root_file("TKey.h", "TKey", "gen/tkey", [:GetName, :ReadObj])
 
