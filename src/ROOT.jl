@@ -108,8 +108,9 @@ const type_replacement = {
 	:Bool_t 	        => 	:Bool,
 	:(Ptr{Option_t})	=>	:ASCIIString,
 	:(Ptr{Uint8})	    =>	:ASCIIString,
-	:(Ptr{Double_t})    => 	:(Ptr{Float64}),
-	:(Ptr{Float_t})     => 	:(Ptr{Float32}),
+	:(Ptr{Double_t})    => 	:(Ptr{Cdouble}),
+	:(Ptr{Float_t})     => 	:(Ptr{Cfloat}),
+	:(Ptr{UInt_t})      => 	:(Ptr{Cuint}),
 
     :TH2D               =>  :TH2DA,
     :TH2                =>  :TH2A,
@@ -123,7 +124,9 @@ const type_replacement = {
     :TSeqCollection		=>	:TSeqCollectionA,
     :TList 				=>	:TListA,
 
-    :TObject 			=>  :TObjectA
+    :TObject 			=>  :TObjectA,
+
+    :TTree 				=>  :TTreeA
 }
 
 const ccall_type_replacement = {
@@ -416,6 +419,17 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
     process_line(".L $rio")
 end
 
+#short type names used in ROOT's TBranch constructor for the leaflist
+const SHORT_TYPEMAP = {
+    Float32 => "F",
+    Float64 => "D",
+    Int32 => "I",
+    Int64 => "L",
+    Uint64 => "l",
+    Uint8 => "C",
+    Bool => "O"
+}
+
 export TFile, TTree, TObject, TH1, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry
@@ -434,5 +448,7 @@ export SetDirectory
 #"global" methods
 export root_cast
 export process_line
+
+export SHORT_TYPEMAP
 
 end
