@@ -28,6 +28,8 @@ macro root_object(name)
 	end)
 end
 
+const kBigNumber = 10^6
+
 abstract TObjectA <: ROOTObject
 abstract TDirectoryA <: TObjectA
 abstract TFileA <: TDirectoryA
@@ -37,6 +39,7 @@ abstract TBranchA <: TObjectA
 abstract TLeafA <: TObjectA
 
 abstract TTreeA <: TObjectA
+abstract TChainA <: TTreeA
 
 abstract TCollectionA <: TObjectA
 abstract TSeqCollectionA <: TCollectionA
@@ -68,6 +71,7 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TBranch)
 @root_object(TLeaf)
 @root_object(TTree)
+@root_object(TChain)
 
 @root_object(TH1)
 @root_object(TH1D)
@@ -126,7 +130,8 @@ const type_replacement = {
 
     :TObject 			=>  :TObjectA,
 
-    :TTree 				=>  :TTreeA
+    :TTree 				=>  :TTreeA,
+    :TChain				=>  :TChainA,
 }
 
 const ccall_type_replacement = {
@@ -365,6 +370,7 @@ include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
 
 include("../gen/ttree.jl")
+include("../gen/tchain.jl")
 include("../gen/tbranch.jl")
 include("../gen/tleaf.jl")
 

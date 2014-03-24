@@ -8,7 +8,7 @@ TFile* TFile_TFile2(const char* fname,  Option_t* option, const char* ftitle,  I
   return new TFile(fname, option, ftitle, compress);
 }
  void TFile_Close1(TFile* __obj,  Option_t* option) {
-  __obj->Close(option);
+  return __obj->Close(option);
 }
  Int_t TFile_Write1(TFile* __obj, const char* name,  Int_t opt,  Int_t bufsiz) {
   return __obj->Write(name, opt, bufsiz);

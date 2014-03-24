@@ -11,7 +11,7 @@ const char* TObject_GetTitle1(TObject* __obj ) {
   return __obj->GetTitle();
 }
  void TObject_Print1(TObject* __obj,  Option_t* option) {
-  __obj->Print(option);
+  return __obj->Print(option);
 }
  Int_t TObject_Write1(TObject* __obj, const char* name,  Int_t option,  Int_t bufsize) {
   return __obj->Write(name, option, bufsize);

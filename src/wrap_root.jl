@@ -73,6 +73,11 @@ wrap_root_file(
 	[:Branch5]
 )
 
+wrap_root_file(
+	"TChain.h", "TChain", "gen/tchain",
+	[:TChain, :AddFile]
+)
+
 wrap_root_file("TBranch.h", "TBranch", "gen/tbranch",
 	[:TBranch, :Write, :SetAddress, :GetClassName, :GetListOfLeaves]
 )

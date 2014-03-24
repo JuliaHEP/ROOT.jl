@@ -50,24 +50,24 @@ extern "C" {
   return __obj->Integral(binx1, binx2, option);
 }
  void TH1_SetBinContent1(TH1* __obj,  Int_t bin,  Double_t content) {
-  __obj->SetBinContent(bin, content);
+  return __obj->SetBinContent(bin, content);
 }
  void TH1_SetBinContent2(TH1* __obj,  Int_t binx,  Int_t biny,  Double_t content) {
-  __obj->SetBinContent(binx, biny, content);
+  return __obj->SetBinContent(binx, biny, content);
 }
  void TH1_SetBinContent3(TH1* __obj,  Int_t binx,  Int_t biny,  Int_t binz,  Double_t content) {
-  __obj->SetBinContent(binx, biny, binz, content);
+  return __obj->SetBinContent(binx, biny, binz, content);
 }
  void TH1_SetBinError1(TH1* __obj,  Int_t bin,  Double_t error) {
-  __obj->SetBinError(bin, error);
+  return __obj->SetBinError(bin, error);
 }
  void TH1_SetBinError2(TH1* __obj,  Int_t binx,  Int_t biny,  Double_t error) {
-  __obj->SetBinError(binx, biny, error);
+  return __obj->SetBinError(binx, biny, error);
 }
  void TH1_SetBinError3(TH1* __obj,  Int_t binx,  Int_t biny,  Int_t binz,  Double_t error) {
-  __obj->SetBinError(binx, biny, binz, error);
+  return __obj->SetBinError(binx, biny, binz, error);
 }
  void TH1_SetDirectory1(TH1* __obj,  TDirectory* dir) {
-  __obj->SetDirectory(dir);
+  return __obj->SetDirectory(dir);
 }
 } //extern C
