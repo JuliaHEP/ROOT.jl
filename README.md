@@ -2,7 +2,7 @@
 
 Wraps ROOT (http://root.cern.ch) using Clang.jl in a semi-automatic way. Currently supports a subset of the most commonly used ROOT classes and methods, among them
 
-* TTree, TBranch
+* TTree, TChain, TBranch
 * TFile, TDirectory, TDirectoryFile
 * TH1D, TH2D
 * TCollection, TList, TKey
@@ -25,7 +25,7 @@ Short examples are given under the `example` directory. In general, the use patt
 
 ## TTrees
 
-These are the main workhorse of ROOT, which supports fast row-based and disk-backed data storage.
+These are the main workhorse of ROOT, which support fast row-based and disk-backed data storage for simple data types.
 
 ~~~
 #file: example/ttree.jl
@@ -48,3 +48,5 @@ end
 Write(tf)
 Close(tf)
 ~~~
+
+Note: a saner interface to ROOT TTrees is available in http://github.com/jpata/ROOTDataFrames.jl
