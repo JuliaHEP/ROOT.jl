@@ -75,9 +75,11 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 
 @root_object(TH1)
 @root_object(TH1D)
+typealias TH1F TH1D
 
 @root_object(TH2)
 @root_object(TH2D)
+typealias TH2F TH2D
 
 #typealias Option_t Uint8
 #typealias Int_t Cint
@@ -439,7 +441,7 @@ const SHORT_TYPEMAP = {
     Bool => "O"
 }
 
-export TFile, TTree, TObject, TH1, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory
+export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry
 export GetListOfKeys, Get
