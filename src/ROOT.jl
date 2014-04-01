@@ -423,11 +423,13 @@ Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, n-1)
 
 ReadObj(x) = ReadObj(root_cast(TKey, x))
 
-@linux_only begin
-    #for some reason, libRIO is not properly loaded on linux
-    const rio = joinpath(ENV["ROOTSYS"], "lib", "libRIO.so")
-    process_line(".L $rio")
-end
+#might be needed in some cases
+#@linux_only begin
+#    #for some reason, libRIO is not properly loaded on linux
+#    const rio = joinpath(ENV["ROOTSYS"], "lib", "libRIO.so")
+#    process_line(".L $rio")
+#    process_line(".L $rio")
+#end
 
 #short type names used in ROOT's TBranch constructor for the leaflist
 const SHORT_TYPEMAP = {
