@@ -21,3 +21,4 @@ libs: lib-osx lib-linux
 clean:
 	rm -f gen/*.o
 	rm -f libroot.*
+	rm -f libroot
