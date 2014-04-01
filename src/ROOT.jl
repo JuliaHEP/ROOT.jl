@@ -241,7 +241,7 @@ end
 
 function splice_kwargs(jlargs::Expr, defs::Expr)
     #default values	
-    println("defs=$defs")
+    #println("defs=$defs")
     defs = eval(defs)
 	for i=1:length(defs)
 		d = defs[i]
@@ -255,10 +255,10 @@ function splice_kwargs(jlargs::Expr, defs::Expr)
 		if d != nothing
             try
                 convert(t, d)
-                println("d=$d::", typeof(d))
+                #println("d=$d::", typeof(d))
 			    jlargs.args[i] = Expr(:kw, jlargs.args[i], convert(t, d))
             catch err
-                println("could not cast: ", jlargs.args[i], " $err $t $d")
+                #println("could not cast: ", jlargs.args[i], " $err $t $d")
 			    jlargs.args[i] = Expr(:kw, jlargs.args[i], d)
             end
 		end
@@ -360,7 +360,7 @@ macro constructor(lib, cls, args, cfunc, defs)
 	append!(ex.args[2].args[1].args, jlargs.args)
 	append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
 	append!(ex.args[2].args[2].args[2].args, avals.args)
-    println(ex)
+    #println(ex)
 	eval(ex)
 end
 
