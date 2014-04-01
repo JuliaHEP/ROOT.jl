@@ -19,7 +19,7 @@
 @method :libroot TTree GetListOfBranches Ptr{TObjArray} () GetListOfBranches1 ( )
 @method :libroot TTree GetV1 Ptr{Double_t} () GetV11 ( )
 @method :libroot TTree SetBranchStatus None (bname::Ptr{Uint8}, status::Bool_t, found::Ptr{UInt_t}, ) SetBranchStatus1 (nothing, 1, 0,  )
-@method :libroot TTree SetCacheSize None (cachesize::Long64_t, ) SetCacheSize1 (-,  )
+@method :libroot TTree SetCacheSize None (cachesize::Long64_t, ) SetCacheSize1 (-1,  )
 @method :libroot TTree Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write1 (0, 0, 0,  )
 @method :libroot TTree Write Int_t (name::Ptr{Uint8}, option::Int_t, bufsize::Int_t, ) Write2 (0, 0, 0,  )
 @subclass TTree TNamed

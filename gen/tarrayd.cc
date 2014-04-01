@@ -14,6 +14,6 @@ TArrayD* TArrayD_TArrayD3( Int_t n, const Double_t* array) {
   return __obj->GetAt(i);
 }
  void TArrayD_SetAt1(TArrayD* __obj,  Double_t v,  Int_t i) {
-  __obj->SetAt(v, i);
+  return __obj->SetAt(v, i);
 }
 } //extern C
