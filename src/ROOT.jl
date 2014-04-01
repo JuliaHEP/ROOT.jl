@@ -106,12 +106,12 @@ const kTRUE = true
 const type_replacement = {
 	#:Option_t	        =>	:(Ptr{Uint8}),
 	#:(Ptr{None})    	=>	:ASCIIString,
-	:Int_t		        =>	:Int64,
-	:UInt_t 	        =>	:Uint64,
+	:Int_t		        =>	:Int32,
+	:UInt_t 	        =>	:Uint32,
 	:Long_t 	        => 	:Int64,
 	:Long64_t 	        => 	:Int64,
 	:Double_t 	        => 	:Float64,
-	:Float_t 	        => 	:Float64,
+	:Float_t 	        => 	:Float32,
 	:Bool_t 	        => 	:Bool,
 	:Char_t 			=>  :Char,
 	:(Ptr{Option_t})	=>	:ASCIIString,
@@ -241,18 +241,26 @@ end
 
 function splice_kwargs(jlargs::Expr, defs::Expr)
     #default values	
+    println("defs=$defs")
     defs = eval(defs)
-
 	for i=1:length(defs)
 		d = defs[i]
         
         #const char* x=0 ===> x::ASCIIString=""
-        if eval(jlargs.args[i].args[2]) <: ASCIIString && typeof(d) <: Integer
+        t = eval(jlargs.args[i].args[2])::Type
+        if t <: ASCIIString && typeof(d) <: Integer
 			d = ""
 		end
 
 		if d != nothing
-			jlargs.args[i] = Expr(:kw, jlargs.args[i], d)
+            try
+                convert(t, d)
+                println("d=$d::", typeof(d))
+			    jlargs.args[i] = Expr(:kw, jlargs.args[i], convert(t, d))
+            catch err
+                println("could not cast: ", jlargs.args[i], " $err $t $d")
+			    jlargs.args[i] = Expr(:kw, jlargs.args[i], d)
+            end
 		end
 	end
 	return jlargs
@@ -352,7 +360,7 @@ macro constructor(lib, cls, args, cfunc, defs)
 	append!(ex.args[2].args[1].args, jlargs.args)
 	append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
 	append!(ex.args[2].args[2].args[2].args, avals.args)
-    #println(ex)
+    println(ex)
 	eval(ex)
 end
 
