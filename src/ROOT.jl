@@ -427,7 +427,7 @@ include("../gen/tleaf.jl")
 Base.length(x::TCollectionA) = GetEntries(x)
 
 ##ROOT is zero-based, Julia one-based
-Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, n-1)
+Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, int32(n-1))
 
 ReadObj(x) = ReadObj(root_cast(TKey, x))
 
