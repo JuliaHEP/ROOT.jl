@@ -28,7 +28,7 @@ macro root_object(name)
 	end)
 end
 
-const kBigNumber = 10^6
+const kBigNumber = 10^8
 
 abstract TObjectA <: ROOTObject
 abstract TDirectoryA <: TObjectA
@@ -452,10 +452,13 @@ const SHORT_TYPEMAP = {
 }
 
 export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory
+export TFileA, TTreeA, TObjectA, TH1A, TH2A, TBranchA, TKeyA, TLeafA, TDirectoryA
+export TChain
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry
 export GetListOfKeys, Get
 export Cd, mkdir
+export AddFile
 
 export SetAddress, GetBranch, GetClassName, GetListOfLeaves
 export GetTypeName
