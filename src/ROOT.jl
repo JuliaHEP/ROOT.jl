@@ -31,6 +31,8 @@ end
 const kBigNumber = 10^8
 
 abstract TObjectA <: ROOTObject
+abstract TClassA <: TObjectA
+
 abstract TDirectoryA <: TObjectA
 abstract TFileA <: TDirectoryA
 
@@ -58,6 +60,8 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 	to(root_pointer(o))
 
 @root_object(TObject)
+
+@root_object(TClass)
 
 @root_object(TFile)
 @root_object(TDirectory)
@@ -106,12 +110,12 @@ const kTRUE = true
 const type_replacement = {
 	#:Option_t	        =>	:(Ptr{Uint8}),
 	#:(Ptr{None})    	=>	:ASCIIString,
-	:Int_t		        =>	:Int32,
-	:UInt_t 	        =>	:Uint32,
-	:Long_t 	        => 	:Int64,
-	:Long64_t 	        => 	:Int64,
-	:Double_t 	        => 	:Float64,
-	:Float_t 	        => 	:Float32,
+	:Int_t		        =>	:Cint,
+	:UInt_t 	        =>	:Cuint,
+	:Long_t 	        => 	:Clong,
+	:Long64_t 	        => 	:Clong,
+	:Double_t 	        => 	:Cdouble,
+	:Float_t 	        => 	:Cfloat,
 	:Bool_t 	        => 	:Bool,
 	:Char_t 			=>  :Char,
 	:(Ptr{Option_t})	=>	:ASCIIString,
@@ -451,11 +455,11 @@ const SHORT_TYPEMAP = {
     Bool => "O"
 }
 
-export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory
-export TFileA, TTreeA, TObjectA, TH1A, TH2A, TBranchA, TKeyA, TLeafA, TDirectoryA
+export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory, TClass
+export TFileA, TTreeA, TObjectA, TH1A, TH2A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA
 export TChain
 export Write, Close, Fill, Branch, Print
-export GetListOfBranches, GetEntry
+export GetListOfBranches, GetEntry, GetEvent, SetBranchAddress
 export GetListOfKeys, Get
 export Cd, mkdir
 export AddFile

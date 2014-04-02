@@ -55,11 +55,17 @@ TTree* TTree_TTree2(const char* name, const char* title,  Int_t splitlevel) {
  Int_t TTree_GetEntry1(TTree* __obj,  Long64_t entry,  Int_t getall) {
   return __obj->GetEntry(entry, getall);
 }
+ Int_t TTree_GetEvent1(TTree* __obj,  Long64_t entry,  Int_t getall) {
+  return __obj->GetEvent(entry, getall);
+}
  TObjArray* TTree_GetListOfBranches1(TTree* __obj ) {
   return __obj->GetListOfBranches();
 }
  Double_t* TTree_GetV11(TTree* __obj ) {
   return __obj->GetV1();
+}
+ Int_t TTree_SetBranchAddress1(TTree* __obj, const char* bname,  void* add,  TBranch** ptr) {
+  return __obj->SetBranchAddress(bname, add, ptr);
 }
  void TTree_SetBranchStatus1(TTree* __obj, const char* bname,  Bool_t status,  UInt_t* found) {
   return __obj->SetBranchStatus(bname, status, found);

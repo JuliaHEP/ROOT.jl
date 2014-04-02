@@ -1,6 +1,6 @@
 using Clang.cindex
 
-ROOTSYS="/Users/joosep/Documents/root/"
+ROOTSYS = ENV["ROOTSYS"]
 
 function wrap_root_file(
 	fname::ASCIIString, class::ASCIIString, ofname::ASCIIString,
@@ -8,7 +8,7 @@ function wrap_root_file(
 	exclude::Vector{Symbol}=Symbol[]
 	)
 	topcu = cindex.parse_header(
-		"$ROOTSYS/include/$fname";
+		"$ROOTSYS/include/root/$fname";
 		cplusplus = true,
 		args=["-I$ROOTSYS/include"]
 	)
@@ -69,9 +69,11 @@ wrap_root_file("TKey.h", "TKey", "gen/tkey", [:GetName, :ReadObj])
 
 wrap_root_file(
 	"TTree.h", "TTree", "gen/ttree",
-	[:TTree, :Fill, :Branch, :GetEntries, :Write, :GetListOfBranches, :GetEntry,
-	:AddBranchToCache, :SetBranchStatus, :GetV1, :Draw, :GetBranch, :SetCacheSize],
-	[:Branch5]
+	[:TTree, :Fill, :Branch, :GetEntries, :Write, :GetListOfBranches, :GetEntry, :GetEvent,
+	:AddBranchToCache, :SetBranchStatus, :GetV1, :Draw, :GetBranch, :SetCacheSize,
+    :SetBranchAddress, 
+    ],
+	[:Branch5, :SetBranchAddress2, :SetBranchAddress3]
 )
 
 wrap_root_file(
