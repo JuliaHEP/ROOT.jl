@@ -18,18 +18,21 @@ macro root_object(name)
 
     parent = symbol("$(name)A")
 
-	push!(ROOT_OBJECTS, name)
-	eval(quote
-		immutable $name <: $parent 
-			p::Ptr{Void}
-		end
-		#$name(p::Ptr{Void}) = $name(p)
-		root_pointer(x::$name) = x.p
-	end)
+    push!(ROOT_OBJECTS, name)
+    eval(quote
+        immutable $name <: $parent
+            p::Ptr{Void}
+        end
+        #$name(p::Ptr{Void}) = $name(p)
+        root_pointer(x::$name) = x.p
+    end)
 end
 
+#FIXME: this is somewhat arbitrary
 const kBigNumber = 10^8
 
+#hand-coded class hierarchy
+#FIXME: autogen these
 abstract TObjectA <: ROOTObject
 abstract TClassA <: TObjectA
 
@@ -53,12 +56,10 @@ abstract TH1DA <: TH1A
 abstract TH2A <: TH1A
 abstract TH2DA <: TH2A
 
-macro subclass(child, parent)
-end
-
 root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
-	to(root_pointer(o))
+    to(root_pointer(o))
 
+#FIXME: autogenerate
 @root_object(TObject)
 
 @root_object(TClass)
@@ -79,21 +80,15 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 
 @root_object(TH1)
 @root_object(TH1D)
+#FIXME: silent case of TH1F to TH1D, may not work on all systems
 typealias TH1F TH1D
 
 @root_object(TH2)
 @root_object(TH2D)
+#FIXME: silent case of TH2F to TH2D, may not work on all systems
 typealias TH2F TH2D
 
-#typealias Option_t Uint8
-#typealias Int_t Cint
-#typealias UInt_t Cuint
-#typealias Long_t Clong
-#typealias Long64_t Clong
-#typealias Double_t Cdouble
-#typealias Float_t Cfloat
-#typealias Bool_t Bool
-
+#these will be overridden using type_replacement
 abstract Option_t
 abstract Int_t
 abstract UInt_t
@@ -108,83 +103,83 @@ const kFALSE = false
 const kTRUE = true
 
 const type_replacement = {
-	#:Option_t	        =>	:(Ptr{Uint8}),
-	#:(Ptr{None})    	=>	:ASCIIString,
-	:Int_t		        =>	:Cint,
-	:UInt_t 	        =>	:Cuint,
-	:Long_t 	        => 	:Clong,
-	:Long64_t 	        => 	:Clong,
-	:Double_t 	        => 	:Cdouble,
-	:Float_t 	        => 	:Cfloat,
-	:Bool_t 	        => 	:Bool,
-	:Char_t 			=>  :Char,
-	:(Ptr{Option_t})	=>	:ASCIIString,
-	:(Ptr{Uint8})	    =>	:ASCIIString,
-	:(Ptr{Double_t})    => 	:(Ptr{Cdouble}),
-	:(Ptr{Float_t})     => 	:(Ptr{Cfloat}),
-	:(Ptr{UInt_t})      => 	:(Ptr{Cuint}),
+    #:Option_t                => :(Ptr{Uint8}),
+    #:(Ptr{None})             => :ASCIIString,
+    :Int_t                    => :Cint,
+    :UInt_t                   => :Cuint,
+    :Long_t                   => :Clong,
+    :Long64_t                 => :Clong,
+    :Double_t                 => :Cdouble,
+    :Float_t                  => :Cfloat,
+    :Bool_t                   => :Bool,
+    :Char_t                   => :Char,
+    :(Ptr{Option_t})          => :ASCIIString,
+    :(Ptr{Uint8})             => :ASCIIString,
+    :(Ptr{Double_t})          => :(Ptr{Cdouble}),
+    :(Ptr{Float_t})           => :(Ptr{Cfloat}),
+    :(Ptr{UInt_t})            => :(Ptr{Cuint}),
 
-    :TH2D               =>  :TH2DA,
-    :TH2                =>  :TH2A,
-    :TH1D               =>  :TH1DA,
-    :TH1                =>  :TH1A,
-    :TFile              =>  :TFileA,
-    :TDirectoryFile     =>  :TDirectoryFileA,
-    :TDirectory         =>  :TDirectoryA,
+    :TH2D                     => :TH2DA,
+    :TH2                      => :TH2A,
+    :TH1D                     => :TH1DA,
+    :TH1                      => :TH1A,
+    :TFile                    => :TFileA,
+    :TDirectoryFile           => :TDirectoryFileA,
+    :TDirectory               => :TDirectoryA,
 
-    :TCollection 		=>	:TCollectionA,
-    :TSeqCollection		=>	:TSeqCollectionA,
-    :TList 				=>	:TListA,
+    :TCollection              => :TCollectionA,
+    :TSeqCollection           => :TSeqCollectionA,
+    :TList                    => :TListA,
 
-    :TObject 			=>  :TObjectA,
+    :TObject                  => :TObjectA,
 
-    :TTree 				=>  :TTreeA,
-    :TChain				=>  :TChainA,
+    :TTree                    => :TTreeA,
+    :TChain                   => :TChainA,
 }
 
 const ccall_type_replacement = {
-	:ASCIIString        =>	:(Ptr{Uint8}),
-	:(Ptr{Option_t})    =>	:(Ptr{Uint8}),
-	#:(Ptr{None})    	=>	:(Ptr{Uint8}),
-	:Int_t		        =>	:Cint,
-	:UInt_t 	        =>	:Cuint,
-	:Long_t 	        => 	:Clong,
-	:Long64_t 	        => 	:Clong,
-	:Double_t 	        => 	:Cdouble,
-	:Float_t 	        => 	:Cfloat,
-	:Bool_t 	        => 	:Bool,
-	:(Ptr{Double_t})    => 	:(Ptr{Float64}),
-	:(Ptr{Float_t})     => 	:(Ptr{Float32}),
+    :ASCIIString        =>    :(Ptr{Uint8}),
+    :(Ptr{Option_t})    =>    :(Ptr{Uint8}),
+    #:(Ptr{None})       =>    :(Ptr{Uint8}),
+    :Int_t              =>    :Cint,
+    :UInt_t             =>    :Cuint,
+    :Long_t             =>    :Clong,
+    :Long64_t           =>    :Clong,
+    :Double_t           =>    :Cdouble,
+    :Float_t            =>    :Cfloat,
+    :Bool_t             =>    :Bool,
+    :(Ptr{Double_t})    =>    :(Ptr{Float64}),
+    :(Ptr{Float_t})     =>    :(Ptr{Float32}),
 }
 
 #replaces argument list expressions from ROOT->Julia
 #input:
-#	:(a1::Ptr{Uint8}, ...)
+#    :(a1::Ptr{Uint8}, ...)
 #outputs:
-#	:(a1, ...), => for ccall values
-#	:(Ptr{Uint8}, ...), => for ccall types
-#	:(a1::ASCIIString, ...), => for julia function arguments
+#    :(a1, ...), => for ccall values
+#    :(Ptr{Uint8}, ...), => for ccall types
+#    :(a1::ASCIIString, ...), => for julia function arguments
 function argument_replace(args::Expr)
 
-	#println(args.args)
+    #println(args.args)
 
-	#argument values
-	avals = Expr(:tuple)
-	#argument types
-	aargs = Expr(:tuple)
-	#value::Type with possible julia-side replacements
-	jlargs = Expr(:tuple)
+    #argument values
+    avals = Expr(:tuple)
+    #argument types
+    aargs = Expr(:tuple)
+    #value::Type with possible julia-side replacements
+    jlargs = Expr(:tuple)
 
-	#loop over argument list
-	for a in args.args
+    #loop over argument list
+    for a in args.args
 
-		#must be typed argument
-		(isa(a, Expr) && a.head == symbol("::")) || error("$a is not typed")
+        #must be typed argument
+        (isa(a, Expr) && a.head == symbol("::")) || error("$a is not typed")
 
-		#name, type
-		n = a.args[1]
-		t = a.args[2]
-		
+        #name, type
+        n = a.args[1]
+        t = a.args[2]
+
         jt = t
 
         ###
@@ -195,18 +190,18 @@ function argument_replace(args::Expr)
             #println("replacing $jt with $jt_")
             jt = jt_
         end
-		
+
         ##replace C-Uint8 with julia ASCIIString
         ##x::Ptr{Uint8}(const char *) => x::ASCIIString
-		#if (eval(t) == Ptr{Uint8})
-		#	jt = :(ASCIIString)
-		#end
+        #if (eval(t) == Ptr{Uint8})
+        #    jt = :(ASCIIString)
+        #end
 
-		##cast ROOT Int32 to Int64 in julia arguments
-		#if eval(t) == Int32 || eval(t) == Cint
-		#	jt = :(Int64)
-		#end
-        
+        ##cast ROOT Int32 to Int64 in julia arguments
+        #if eval(t) == Int32 || eval(t) == Cint
+        #    jt = :(Int64)
+        #end
+
         ###
         #conversions for ccall argument types
         ###
@@ -217,155 +212,160 @@ function argument_replace(args::Expr)
         end
 
         #put julia arguments back together
-		jlarg = Expr(symbol("::"))
-		push!(jlarg.args, n)
-		push!(jlarg.args, jt)
-        
+        jlarg = Expr(symbol("::"))
+        push!(jlarg.args, n)
+        push!(jlarg.args, jt)
+
         if typeof(t) <: Symbol
-		    if t in ROOT_OBJECTS
-		    	n = :(root_pointer($(n)))
-		    	t = :(Ptr{Void})
-		    end
+            if t in ROOT_OBJECTS
+                n = :(root_pointer($(n)))
+                t = :(Ptr{Void})
+            end
         elseif typeof(t) <: Expr
             #if t.head == :curly && t.args[1] == :Ptr
-		    #	n = :(root_pointer($(n)))
-		    #	t = :(Ptr{Void})
+            #    n = :(root_pointer($(n)))
+            #    t = :(Ptr{Void})
             #end
         end
         #println("found replacement $n::$t")
 
-		push!(avals.args, n)
-		push!(aargs.args, t)
+        push!(avals.args, n)
+        push!(aargs.args, t)
 
-		push!(jlargs.args, jlarg)
+        push!(jlargs.args, jlarg)
         #println("$n $t $jlarg")
-	end
-	return avals, aargs, jlargs
+    end
+    return avals, aargs, jlargs
 end
 
 function splice_kwargs(jlargs::Expr, defs::Expr)
-    #default values	
+    #default values
     #println("defs=$defs")
     defs = eval(defs)
-	for i=1:length(defs)
-		d = defs[i]
-        
+    for i=1:length(defs)
+        d = defs[i]
+
         #const char* x=0 ===> x::ASCIIString=""
         t = eval(jlargs.args[i].args[2])::Type
         if t <: ASCIIString && typeof(d) <: Integer
-			d = ""
-		end
+            d = ""
+        end
 
-		if d != nothing
+        if d != nothing
             try
                 convert(t, d)
                 #println("d=$d::", typeof(d))
-			    jlargs.args[i] = Expr(:kw, jlargs.args[i], convert(t, d))
+                jlargs.args[i] = Expr(:kw, jlargs.args[i], convert(t, d))
             catch err
                 #println("could not cast: ", jlargs.args[i], " $err $t $d")
-			    jlargs.args[i] = Expr(:kw, jlargs.args[i], d)
+                jlargs.args[i] = Expr(:kw, jlargs.args[i], d)
             end
-		end
-	end
-	return jlargs
+        end
+    end
+    return jlargs
 end
 
 function define_lib(lib::Expr)
     lib = lib.args[1]
 
     if !isdefined(lib)
-		q = quote
-		const $(symbol(string(lib))) = joinpath(
-			dirname(Base.source_path()), "..",
-			$(string(lib))
-		)
-		end
-		eval(q)
-	end
+        q = quote
+        const $(symbol(string(lib))) = joinpath(
+            dirname(Base.source_path()), "..",
+            $(string(lib))
+        )
+        end
+        eval(q)
+    end
 end
 
-#macro to make methods from 
+#macro to make methods from
 #@method libname Type ReturnType julia__function__name (c_arg1, ...) c__function__name
 macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
-	define_lib(lib)
+    define_lib(lib)
 
-	avals, aargs, jlargs = argument_replace(args)
-	jlargs = splice_kwargs(jlargs, defs)
+    avals, aargs, jlargs = argument_replace(args)
+    jlargs = splice_kwargs(jlargs, defs)
 
-	#C function name target_func
-	cfname = "$(tgt)_$(cfunc)"
+    #C function name target_func
+    cfname = "$(tgt)_$(cfunc)"
 
-	r = eval(ret)
-	#Replace return type Ptr{X<:TObject} (C) => X (julia)
-	if r <: Ptr && typeof(r)==DataType && r.parameters[1] in map(eval, ROOT_OBJECTS)
-		ret = r.parameters[1]
-	end
-    
+    r = eval(ret)
+    #Replace return type Ptr{X<:TObject} (C) => X (julia)
+    if r <: Ptr && typeof(r)==DataType && r.parameters[1] in map(eval, ROOT_OBJECTS)
+        ret = r.parameters[1]
+    end
+
     if tgt in keys(type_replacement)
         tgt = type_replacement[tgt]
     end
 
-	if ret in keys(type_replacement) && ret != :(Ptr{Uint8})
-		ret = type_replacement[ret]
-	end
+    if ret in keys(type_replacement) && ret != :(Ptr{Uint8})
+        ret = type_replacement[ret]
+    end
 
-	#create a function "stub"
-	ex = quote
-		function $jlfunc(__obj::$tgt)
-			@assert(__obj.p != C_NULL)
-			ccall(
-				($cfname, libroot),
-				$(eval(ret)), (),
-			)
-		end
-	end
+    #create a function "stub"
+    ex = quote
+        function $jlfunc(__obj::$tgt)
+            @assert(__obj.p != C_NULL)
+            ccall(
+                ($cfname, libroot),
+                $(eval(ret)), (),
+            )
+        end
+    end
 
-	#Note, this is fragile. if the stub is changed, the argument indices will also
-	#splice julia function args
-	append!(ex.args[2].args[1].args, jlargs.args)
-	#splice C function argument types
-	append!(ex.args[2].args[2].args[4].args[3].args, [:(Ptr{Void})]) #object itself
-	append!(ex.args[2].args[2].args[4].args[3].args, aargs.args) #args
-	#splice C function argument values
-	append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
-	append!(ex.args[2].args[2].args[4].args, avals.args)
-    
+    #Note, this is fragile. if the stub is changed, the argument indices will also
+    #splice julia function args
+    append!(ex.args[2].args[1].args, jlargs.args)
+    #splice C function argument types
+    append!(ex.args[2].args[2].args[4].args[3].args, [:(Ptr{Void})]) #object itself
+    append!(ex.args[2].args[2].args[4].args[3].args, aargs.args) #args
+    #splice C function argument values
+    append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
+    append!(ex.args[2].args[2].args[4].args, avals.args)
+
     #println(ex)
 
-	eval(ex)
+    eval(ex)
 end
 
-#macro to make constructors from 
+
+#currently a placeholder
+macro subclass(p1, p2)
+end
+
+#macro to make constructors from
 #@constructor libname Type (c_arg1, ...) c__function__name
 # => :ccall( (c__function__name, libname), Ptr{Void}, (args...), argsvals...)
 macro constructor(lib, cls, args, cfunc, defs)
-	define_lib(lib)
+    define_lib(lib)
 
-	avals, aargs, jlargs = argument_replace(args)
-	jlargs = splice_kwargs(jlargs, defs)
+    avals, aargs, jlargs = argument_replace(args)
+    jlargs = splice_kwargs(jlargs, defs)
 
-	#C function name target_func
-	cfname = "$(cls)_$(cfunc)"
+    #C function name target_func
+    cfname = "$(cls)_$(cfunc)"
 
-	#create a function "stub"
-	ex = quote
-		function $cls()
-			ccall(
-				($cfname, libroot),
-				$(eval(cls)), (),
-			)
-		end
-	end
-    
+    #create a function "stub"
+    ex = quote
+        function $cls()
+            ccall(
+                ($cfname, libroot),
+                $(eval(cls)), (),
+            )
+        end
+    end
 
-	# splice julia function args
-	# FIXME: this is fragile. if the stub is changed, the argument indices will
+
+    # splice julia function args
+    # FIXME: this is fragile. if the stub is changed, the argument indices will
     # also change
-	append!(ex.args[2].args[1].args, jlargs.args)
-	append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
-	append!(ex.args[2].args[2].args[2].args, avals.args)
+    append!(ex.args[2].args[1].args, jlargs.args)
+    append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
+    append!(ex.args[2].args[2].args[2].args, avals.args)
     #println(ex)
-	eval(ex)
+    eval(ex)
 end
 
 include("../gen/groot.jl")
@@ -390,44 +390,6 @@ include("../gen/tchain.jl")
 include("../gen/tbranch.jl")
 include("../gen/tleaf.jl")
 
-#macro parent_func(func, src, dst)
-#	eval(quote
-#		$func(__obj::$src, args...) = $func(root_cast($dst, __obj), args...)
-#	end)
-#end
-#
-#for f in [
-#	:Fill, :Integral, :GetEntries, :Print, :Write,
-#	:GetNbinsX, :GetNbinsY, :GetBinContent, :GetBinError, :GetBinLowEdge, :GetBinWidth,
-#	:SetBinContent, :SetBinError
-#	]
-#	@eval @parent_func $f TH1D TH1
-#end
-#
-#for f in [
-#	:SetBinContent, :SetBinError
-#	]
-#	@eval @parent_func $f TH2D TH1
-#end
-#
-#@parent_func Fill TTree TObject
-#@parent_func SetDirectory TH1D TH1
-#@parent_func SetDirectory TH2D TH1
-#
-#
-#for f in [
-#	:GetListOfKeys, :Cd, :mkdir
-#	]
-#	@eval @parent_func $f TFile TDirectory
-#end
-#
-#@parent_func GetEntries TObjArray TCollection
-#@parent_func At TObjArray TSeqCollection
-#@parent_func At TObjArray TSeqCollection
-#@parent_func At TList TSeqCollection
-#
-
-
 Base.length(x::TCollectionA) = GetEntries(x)
 
 ##ROOT is zero-based, Julia one-based
@@ -445,14 +407,14 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
 
 #short type names used in ROOT's TBranch constructor for the leaflist
 const SHORT_TYPEMAP = {
-    Float32 => "F",
-    Float64 => "D",
-    Int32 => "I",
-    Int64 => "L",
-    Uint64 => "l",
-    Uint8 => "C",
-    Char => "C",
-    Bool => "O"
+    Float32   => "F",
+    Float64   => "D",
+    Int32     => "I",
+    Int64     => "L",
+    Uint64    => "l",
+    Uint8     => "C",
+    Char      => "C",
+    Bool      => "O"
 }
 
 export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory, TClass
