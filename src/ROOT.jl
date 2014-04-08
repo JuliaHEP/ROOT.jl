@@ -420,6 +420,7 @@ const SHORT_TYPEMAP = {
 export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory, TClass
 export TFileA, TTreeA, TObjectA, TH1A, TH2A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA
 export TChain
+export Open
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry, GetEvent, SetBranchAddress
 export GetListOfKeys, Get
