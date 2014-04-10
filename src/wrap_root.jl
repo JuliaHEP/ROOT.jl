@@ -27,7 +27,7 @@ function wrap_root_file(
     for c in cls
         length(children(c)) == 0 && continue
         #println(name(c))
-        
+
         MethodCount = Dict{Symbol, Int}()
         for decl in children(c)
             const declname = symbol(strip(spelling(decl)))
@@ -44,7 +44,7 @@ function wrap_root_file(
                 end
                 Clang.wt.wrap(of, decl, id)
                 Clang.wt.wrapjl(ofjl, ":libroot", decl, id)
-            end 
+            end
         end
         for sup in Clang.wt.class_supers(c)
             println(ofjl, "@subclass $(spelling(c)) $(sup.text)")
@@ -71,7 +71,7 @@ wrap_root_file(
     "TTree.h", "TTree", "gen/ttree",
     [:TTree, :Fill, :Branch, :GetEntries, :Write, :GetListOfBranches, :GetEntry, :GetEvent,
     :AddBranchToCache, :SetBranchStatus, :GetV1, :Draw, :GetBranch, :SetCacheSize,
-    :SetBranchAddress, 
+    :SetBranchAddress,
     ],
     [:Branch5, :SetBranchAddress2, :SetBranchAddress3]
 )
@@ -94,7 +94,9 @@ wrap_root_file(
     "TH1.h", "TH1", "gen/th1",
     [:TH1, :Fill, :Write,
     :Integral,
-    :GetEntries, :GetBinContent, :GetBinError, :GetNbinsX, :GetNbinsY, :GetBinLowEdge, :GetBinWidth,
+    :GetEntries, :SetEntries,
+    :GetBinContent, :GetBinError, :GetNbinsX, :GetNbinsY,
+    :GetBinLowEdge, :GetBinWidth,
     :SetBinContent, :SetBinError,
     :SetDirectory
     ]
@@ -105,7 +107,7 @@ wrap_root_file(
     [
         :TH2, :Fill,
         :GetBinContent, :GetBinError, :GetNbinsX, :GetNbinsY, :GetBinLowEdge, :GetBinWidth,
-        :SetBinContent, :SetBinError 
+        :SetBinContent, :SetBinError
     ]
 )
 wrap_root_file("TH2D.h", "TH2D", "gen/th2d",
@@ -117,6 +119,8 @@ wrap_root_file("TArrayD.h", "TArrayD", "gen/tarrayd", [:TArrayD, :GetAt, :SetAt]
 wrap_root_file("TArray.h", "TArray", "gen/tarray", Symbol[])
 
 wrap_root_file("TCollection.h", "TCollection", "gen/tcollection", [:TCollection, :GetEntries])
-wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At], [:TList2])    
+wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At], [:TList2])
 wrap_root_file("TObjArray.h", "TObjArray", "gen/tobjarray", [:TObjArray])
 wrap_root_file("TSeqCollection.h", "TSeqCollection", "gen/tseqcollection", [:TSeqCollection, :At])
+
+wrap_root_file("TUnfold.h", "TUnfold", "gen/tunfold", [:TUnfold, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix])

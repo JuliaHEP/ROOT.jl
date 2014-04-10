@@ -21,6 +21,7 @@
 @method :libroot TH1 SetBinError None (binx::Int_t, biny::Int_t, error::Double_t, ) SetBinError2 (nothing, nothing, nothing,  )
 @method :libroot TH1 SetBinError None (binx::Int_t, biny::Int_t, binz::Int_t, error::Double_t, ) SetBinError3 (nothing, nothing, nothing, nothing,  )
 @method :libroot TH1 SetDirectory None (dir::Ptr{TDirectory}, ) SetDirectory1 (nothing,  )
+@method :libroot TH1 SetEntries None (n::Double_t, ) SetEntries1 (nothing,  )
 @subclass TH1 TNamed
 @subclass TH1 TAttLine
 @subclass TH1 TAttFill

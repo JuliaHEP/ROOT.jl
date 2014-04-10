@@ -70,4 +70,7 @@ extern "C" {
  void TH1_SetDirectory1(TH1* __obj,  TDirectory* dir) {
   return __obj->SetDirectory(dir);
 }
+ void TH1_SetEntries1(TH1* __obj,  Double_t n) {
+  return __obj->SetEntries(n);
+}
 } //extern C

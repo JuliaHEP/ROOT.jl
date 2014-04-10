@@ -417,6 +417,14 @@ const SHORT_TYPEMAP = {
     Bool      => "O"
 }
 
+classname(o) = ClassName(root_cast(TObject, o))|>bytestring;
+
+function to_root(h)
+    cn = classname(h)
+    T = eval(parse(cn))::Type
+    h = root_cast(T, h)::T
+end
+
 export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory, TClass
 export TFileA, TTreeA, TObjectA, TH1A, TH2A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA
 export TChain
@@ -432,7 +440,7 @@ export GetTypeName
 
 export SetCacheSize, AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
-export Integral, GetEntries, GetNbinsX, GetNbinsY, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
+export Integral, GetEntries, SetEntries, GetNbinsX, GetNbinsY, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
 export SetBinContent, SetBinError
 export SetDirectory
 
@@ -440,6 +448,9 @@ export SetDirectory
 export root_cast
 export process_line
 
+export classname, to_root
 export SHORT_TYPEMAP
+
+include("ROOTHistograms.jl")
 
 end
