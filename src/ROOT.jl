@@ -195,6 +195,12 @@ function argument_replace(args::Expr)
             jt = jt_
         end
 
+        if jt == :(Ptr{TList})
+            #println("TList pointer $jt, $n, $t")
+            jt = :(Ptr{Void})
+            t = :(Ptr{Void})
+        end
+
         ##replace C-Uint8 with julia ASCIIString
         ##x::Ptr{Uint8}(const char *) => x::ASCIIString
         #if (eval(t) == Ptr{Uint8})

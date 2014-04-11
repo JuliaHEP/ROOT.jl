@@ -148,7 +148,7 @@ function load_hists_from_file(fn)
     kl = GetListOfKeys(tf)
     @assert kl.p != C_NULL
 
-    key_iterator = TListIter(convert(Ptr{ROOT.TList}, kl.p))
+    key_iterator = TListIter(kl.p)
     #kl = GetListOfKeys(tf)
     #objs = GetList(tf)
 

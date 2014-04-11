@@ -46,4 +46,15 @@ end
 
 @test sum_entries == sum_entries2
 
+keylist = GetListOfKeys(tf)
+@test length(keylist) == 1
+iter = TListIter(keylist.p)
+
+x = TObject(Next(iter))
+@test x.p != C_NULL
+@test GetName(x)|>bytestring == "my_tree"
+classname(x) == "TTree"
+
+@test Next(iter) == C_NULL
+
 Close(tf)
