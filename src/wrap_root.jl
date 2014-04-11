@@ -59,13 +59,16 @@ mkpath("gen")
 wrap_root_file("TObject.h", "TObject", "gen/tobject", [:Print, :Write, :GetName, :GetTitle, :ClassName])
 
 wrap_root_file("TDirectory.h", "TDirectory", "gen/tdirectory",
-    [:Get, :Close, :TDirectory, :GetListOfKeys, :Cd, :mkdir]
+    [:Get, :Close, :TDirectory, :GetListOfKeys, :Cd, :mkdir,
+    :GetList
+    ]
 )
 wrap_root_file("TFile.h", "TFile", "gen/tfile",
     [:TFile, :Close, :Get, :Write, :Open],
     [:Open2]
 )
 wrap_root_file("TKey.h", "TKey", "gen/tkey", [:GetName, :ReadObj])
+wrap_root_file("TList.h", "TListIter", "gen/tlistiter", [:TListIter, :Next, :Reset])
 
 wrap_root_file(
     "TTree.h", "TTree", "gen/ttree",
@@ -119,7 +122,7 @@ wrap_root_file("TArrayD.h", "TArrayD", "gen/tarrayd", [:TArrayD, :GetAt, :SetAt]
 wrap_root_file("TArray.h", "TArray", "gen/tarray", Symbol[])
 
 wrap_root_file("TCollection.h", "TCollection", "gen/tcollection", [:TCollection, :GetEntries])
-wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At], [:TList2])
+wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At, :After], [:TList2])
 wrap_root_file("TObjArray.h", "TObjArray", "gen/tobjarray", [:TObjArray])
 wrap_root_file("TSeqCollection.h", "TSeqCollection", "gen/tseqcollection", [:TSeqCollection, :At])
 

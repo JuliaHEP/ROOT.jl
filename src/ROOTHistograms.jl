@@ -104,12 +104,12 @@ function get_hist_bins(h::TH1D)
     edges[1] = -Inf
     edges[nb+2] = edges[nb+1] + GetBinWidth(h, int32(nb))
     edges[nb+3] = Inf
-    if (abs(sum(conts) - Integral(h)) > 100000 * eps(Float64))
-        warn(
-            GetName(h)|>bytestring,
-            " integral mismatch: $(sum(conts)) != $(Integral(h))"
-        )
-    end
+    # if (abs(sum(conts) - Integral(h)) > 100000 * eps(Float64))
+    #     warn(
+    #         GetName(h)|>bytestring,
+    #         " integral mismatch: $(sum(conts)) != $(Integral(h))"
+    #     )
+    # end
     return conts, errs, entries, edges
 end
 
@@ -143,23 +143,33 @@ Base.size(o::TH2D) = (GetNbinsX(root_cast(TH1, o)), GetNbinsY(root_cast(TH1, o))
 
 function load_hists_from_file(fn)
     tf = TFile(fn)
-    tf.p != C_NULL || error("could not open file $fn")
+    @assert tf.p != C_NULL
+
     kl = GetListOfKeys(tf)
+    @assert kl.p != C_NULL
 
-    hd = Dict()
+    key_iterator = TListIter(convert(Ptr{ROOT.TList}, kl.p))
+    #kl = GetListOfKeys(tf)
+    #objs = GetList(tf)
+
+    objects = Array(Union(Histogram, NHistogram), length(kl))
+    ks = Array(ASCIIString, length(kl))
+
+    tic()
     for i=1:length(kl)
-        k = root_cast(TKey, kl[i])
-        n = GetName(k)|>bytestring
-        o = ReadObj(k) |> to_root
+        #(i % 10000 == 0) && (println("$(i)/$(length(kl)) ", toq());tic())
+        _k = Next(key_iterator)
+        @assert _k != C_NULL
+        const k = TKey(_k)
+        const n = GetName(k) |> bytestring
+        const o = ReadObj(k) |> to_root
+        objects[i] = from_root(o)
+        ks[i] = bytestring(GetName(k))
 
-        if isa(o, TH1D) || isa(o, TH2D)
-            hd[n] = from_root(o)
-        else
-            warn("unknown type: $(o)::$(classname(o))")
-        end
     end
+
     Close(tf)
-    return hd
+    return {k => v for (k, v) in zip(ks, objects)}
 end
 
 export to_root, get_hist_bins, load_hists_from_file, from_root

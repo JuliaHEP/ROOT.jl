@@ -51,6 +51,8 @@ abstract TSeqCollectionA <: TCollectionA
 abstract TObjArrayA <: TSeqCollectionA
 abstract TListA <: TObjArrayA
 
+abstract TListIterA <: TObjectA
+
 abstract TH1A <: TObjectA
 abstract TH1DA <: TH1A
 abstract TH2A <: TH1A
@@ -71,6 +73,7 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TSeqCollection)
 @root_object(TObjArray)
 @root_object(TList)
+@root_object(TListIter)
 @root_object(TKey)
 
 @root_object(TBranch)
@@ -101,6 +104,7 @@ abstract Char_t
 
 const kFALSE = false
 const kTRUE = true
+const kIterForward = true
 
 const type_replacement = {
     #:Option_t                => :(Ptr{Uint8}),
@@ -291,9 +295,18 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
     cfname = "$(tgt)_$(cfunc)"
 
     r = eval(ret)
+    wrapped_return = false
+    rettype = nothing
     #Replace return type Ptr{X<:TObject} (C) => X (julia)
     if r <: Ptr && typeof(r)==DataType && r.parameters[1] in map(eval, ROOT_OBJECTS)
-        ret = r.parameters[1]
+        if jlfunc == :Next
+            ret = :(Ptr{Void})
+        else
+            ret = r.parameters[1]
+        end
+        #wrapped_return = true
+        #rettype = r.parameters[1]
+        #ret = :(Ptr{Void})
     end
 
     if tgt in keys(type_replacement)
@@ -304,17 +317,36 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
         ret = type_replacement[ret]
     end
 
-    #create a function "stub"
-    ex = quote
-        function $jlfunc(__obj::$tgt)
-            @assert(__obj.p != C_NULL)
-            ccall(
-                ($cfname, libroot),
-                $(eval(ret)), (),
-            )
+    if !wrapped_return
+        #create a function "stub"
+        ex = quote
+            function $jlfunc(__obj::$tgt)
+                @assert(__obj.p != C_NULL)
+                ccall(
+                    ($cfname, libroot),
+                    $(eval(ret)), (),
+                )
+            end
         end
-    end
 
+        #println(ex)
+    end
+    # else
+    #     #create a function "stub"
+    #     ex = quote
+    #         function $jlfunc(__obj::$tgt)
+    #             @assert(__obj.p != C_NULL)
+    #             ccall(
+    #                 ($cfname, libroot),
+    #                 $(eval(ret)), (),
+    #             )|>$(rettype)
+    #         end
+    #     end
+    #
+    #     #println(ex)
+    # end
+
+    #println("args=", ex.args)
     #Note, this is fragile. if the stub is changed, the argument indices will also
     #splice julia function args
     append!(ex.args[2].args[1].args, jlargs.args)
@@ -326,7 +358,6 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
     append!(ex.args[2].args[2].args[4].args, avals.args)
 
     #println(ex)
-
     eval(ex)
 end
 
@@ -385,6 +416,8 @@ include("../gen/th2d.jl")
 include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
 
+include("../gen/tlistiter.jl")
+
 include("../gen/ttree.jl")
 include("../gen/tchain.jl")
 include("../gen/tbranch.jl")
@@ -431,7 +464,7 @@ export TChain
 export Open
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry, GetEvent, SetBranchAddress
-export GetListOfKeys, Get
+export GetListOfKeys, Get, GetList
 export Cd, mkdir
 export AddFile
 
@@ -450,6 +483,8 @@ export process_line
 
 export classname, to_root
 export SHORT_TYPEMAP
+
+export TListIter, Next, Reset
 
 include("ROOTHistograms.jl")
 

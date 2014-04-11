@@ -13,6 +13,9 @@ TDirectory* TDirectory_TDirectory2(const char* name, const char* title,  Option_
  TObject* TDirectory_Get1(TDirectory* __obj, const char* namecycle) {
   return __obj->Get(namecycle);
 }
+ TList* TDirectory_GetList1(TDirectory* __obj ) {
+  return __obj->GetList();
+}
  TList* TDirectory_GetListOfKeys1(TDirectory* __obj ) {
   return __obj->GetListOfKeys();
 }
