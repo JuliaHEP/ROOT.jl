@@ -141,7 +141,7 @@ end
 import Base.size
 Base.size(o::TH2D) = (GetNbinsX(root_cast(TH1, o)), GetNbinsY(root_cast(TH1, o)))
 
-function load_hists_from_file(fn)
+function load_hists_from_file(fn, hfilter=(name->true))
     tf = TFile(fn)
     @assert tf.p != C_NULL
 
@@ -151,9 +151,8 @@ function load_hists_from_file(fn)
     key_iterator = TListIter(kl.p)
     #kl = GetListOfKeys(tf)
     #objs = GetList(tf)
-
-    objects = Array(Union(Histogram, NHistogram), length(kl))
-    ks = Array(ASCIIString, length(kl))
+    
+    ret = Dict()
 
     tic()
     for i=1:length(kl)
@@ -162,14 +161,13 @@ function load_hists_from_file(fn)
         @assert _k != C_NULL
         const k = TKey(_k)
         const n = GetName(k) |> bytestring
+        hfilter(n) || continue
         const o = ReadObj(k) |> to_root
-        objects[i] = from_root(o)
-        ks[i] = bytestring(GetName(k))
-
+        ret[n] = from_root(o)
     end
 
     Close(tf)
-    return {k => v for (k, v) in zip(ks, objects)}
+    return ret
 end
 
 export to_root, get_hist_bins, load_hists_from_file, from_root
