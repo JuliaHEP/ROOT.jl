@@ -93,12 +93,13 @@ function get_hist_bins(h::TH1D)
         edges[n+1] = GetBinLowEdge(h, int32(n))
     end
     #
-    # entries = conts.^2 ./ errs.^2
-    # entries[isnan(entries)] = 0
-
-    entries = conts ./ sum(conts) .* GetEntries(h)
+    entries = conts.^2 ./ errs.^2
     entries[isnan(entries)] = 0
-    entries = round(entries)
+    entries[entries .== Inf] = 1
+
+    #entries = conts ./ sum(conts) .* GetEntries(h)
+    #entries[isnan(entries)] = 0
+    entries = int(round(entries))
 
 
     edges[1] = -Inf
@@ -170,5 +171,18 @@ function load_hists_from_file(fn, hfilter=(name->true))
     return ret
 end
 
-export to_root, get_hist_bins, load_hists_from_file, from_root
+function write_hists_to_file(hd::Associative, fn)
+    tf = TFile(convert(ASCIIString, fn), "RECREATE")
+    Cd(tf, "")
+    for (k, v) in hd
+        v::Union(Histogram, NHistogram)
+
+        println("$k N=$(sum(entries(v)))")
+        hi = to_root(v, string(k))
+    end
+    Write(tf)
+    Close(tf)
+end
+
+export to_root, get_hist_bins, load_hists_from_file, from_root, write_hists_to_file
 end
