@@ -58,6 +58,8 @@ abstract TH1DA <: TH1A
 abstract TH2A <: TH1A
 abstract TH2DA <: TH2A
 
+abstract TUnfoldA <: TObjectA
+
 root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
     to(root_pointer(o))
 
@@ -88,6 +90,8 @@ typealias TH1F TH1D
 
 @root_object(TH2)
 @root_object(TH2D)
+
+@root_object(TUnfold)
 #FIXME: silent case of TH2F to TH2D, may not work on all systems
 typealias TH2F TH2D
 
@@ -429,6 +433,8 @@ include("../gen/tchain.jl")
 include("../gen/tbranch.jl")
 include("../gen/tleaf.jl")
 
+include("../gen/tunfold.jl")
+
 Base.length(x::TCollectionA) = GetEntries(x)
 
 ##ROOT is zero-based, Julia one-based
@@ -480,6 +486,7 @@ export GetTypeName
 export SetCacheSize, AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
 export Integral, GetEntries, SetEntries, GetNbinsX, GetNbinsY, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
+export Chi2Test
 export SetBinContent, SetBinError
 export SetDirectory
 
