@@ -1,6 +1,9 @@
 //c++ `root-config --cflags --libs` -shared -fPIC gen/th1.cc -o gen/th1
 #include <TH1.h>
 extern "C" {
+ Double_t TH1_Chi2Test1(TH1* __obj, const TH1* h2,  Option_t* option,  Double_t* res) {
+  return __obj->Chi2Test(h2, option, res);
+}
  Int_t TH1_Fill1(TH1* __obj,  Double_t x) {
   return __obj->Fill(x);
 }
@@ -48,6 +51,9 @@ extern "C" {
 }
  Double_t TH1_Integral2(TH1* __obj,  Int_t binx1,  Int_t binx2,  Option_t* option) {
   return __obj->Integral(binx1, binx2, option);
+}
+ TH1* TH1_Rebin1(TH1* __obj,  Int_t ngroup, const char* newname, const Double_t* xbins) {
+  return __obj->Rebin(ngroup, newname, xbins);
 }
  void TH1_SetBinContent1(TH1* __obj,  Int_t bin,  Double_t content) {
   return __obj->SetBinContent(bin, content);

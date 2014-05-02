@@ -1,3 +1,4 @@
+@method :libroot TH1 Chi2Test Double_t (h2::Ptr{TH1}, option::Ptr{Option_t}, res::Ptr{Double_t}, ) Chi2Test1 (nothing, UU, 0,  )
 @method :libroot TH1 Fill Int_t (x::Double_t, ) Fill1 (nothing,  )
 @method :libroot TH1 Fill Int_t (x::Double_t, w::Double_t, ) Fill2 (nothing, nothing,  )
 @method :libroot TH1 Fill Int_t (name::Ptr{Uint8}, w::Double_t, ) Fill3 (nothing, nothing,  )
@@ -14,6 +15,7 @@
 @method :libroot TH1 GetNbinsY Int_t () GetNbinsY1 ( )
 @method :libroot TH1 Integral Double_t (option::Ptr{Option_t}, ) Integral1 ("",  )
 @method :libroot TH1 Integral Double_t (binx1::Int_t, binx2::Int_t, option::Ptr{Option_t}, ) Integral2 (nothing, nothing, "",  )
+@method :libroot TH1 Rebin Ptr{TH1} (ngroup::Int_t, newname::Ptr{Uint8}, xbins::Ptr{Double_t}, ) Rebin1 (2, "", 0,  )
 @method :libroot TH1 SetBinContent None (bin::Int_t, content::Double_t, ) SetBinContent1 (nothing, nothing,  )
 @method :libroot TH1 SetBinContent None (binx::Int_t, biny::Int_t, content::Double_t, ) SetBinContent2 (nothing, nothing, nothing,  )
 @method :libroot TH1 SetBinContent None (binx::Int_t, biny::Int_t, binz::Int_t, content::Double_t, ) SetBinContent3 (nothing, nothing, nothing, nothing,  )
