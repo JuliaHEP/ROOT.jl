@@ -32,7 +32,11 @@ function wrap_root_file(
         for decl in children(c)
             const declname = symbol(strip(spelling(decl)))
             wrapped = Any[]
-            if to_wrap(declname) && ( (isa(decl, cindex.CXXMethod)) || isa(decl, cindex.Constructor))
+            if to_wrap(declname) && (
+                isa(decl, cindex.CXXMethod) ||
+                isa(decl, cindex.Constructor) ||
+                isa(decl, cindex.EnumDecl)
+                )
 
                 #check for public
                 Clang.cindex.getCXXAccessSpecifier(decl)==1 || continue
@@ -101,7 +105,7 @@ wrap_root_file(
     :GetBinContent, :GetBinError, :GetNbinsX, :GetNbinsY,
     :GetBinLowEdge, :GetBinWidth,
     :SetBinContent, :SetBinError,
-    :SetDirectory
+    :SetDirectory, :Chi2Test
     ]
 )
 
@@ -126,4 +130,5 @@ wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At, :After], [:TList2]
 wrap_root_file("TObjArray.h", "TObjArray", "gen/tobjarray", [:TObjArray])
 wrap_root_file("TSeqCollection.h", "TSeqCollection", "gen/tseqcollection", [:TSeqCollection, :At])
 
-wrap_root_file("TUnfold.h", "TUnfold", "gen/tunfold", [:TUnfold, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix])
+wrap_root_file("TUnfold.h", "TUnfold", "gen/tunfold", [:TUnfold, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix, :EHistMap, :ERegMode, :EConstraint])
+wrap_root_file("TUnfoldSys.h", "TUnfoldSys", "gen/tunfoldsys", [:TUnfoldSys, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix])
