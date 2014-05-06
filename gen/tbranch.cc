@@ -17,6 +17,6 @@ const char* TBranch_GetClassName1(TBranch* __obj ) {
   return __obj->GetListOfLeaves();
 }
  void TBranch_SetAddress1(TBranch* __obj,  void* add) {
-  __obj->SetAddress(add);
+  return __obj->SetAddress(add);
 }
 } //extern C

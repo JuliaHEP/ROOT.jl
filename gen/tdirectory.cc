@@ -8,7 +8,7 @@ TDirectory* TDirectory_TDirectory2(const char* name, const char* title,  Option_
   return new TDirectory(name, title, option, motherDir);
 }
  void TDirectory_Close1(TDirectory* __obj,  Option_t* option) {
-  __obj->Close(option);
+  return __obj->Close(option);
 }
  TObject* TDirectory_Get1(TDirectory* __obj, const char* namecycle) {
   return __obj->Get(namecycle);

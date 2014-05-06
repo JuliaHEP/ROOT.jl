@@ -23,9 +23,9 @@ TUnfold* TUnfold_TUnfold1(const TH2* hist_A,  TUnfold::EHistMap histmap,  TUnfol
   return __obj->GetEmatrix(name, title, x0, x1);
 }
  void TUnfold_GetOutput2(TUnfold* __obj,  TH1* output, const Int_t* binMap) {
-  __obj->GetOutput(output, binMap);
+  return __obj->GetOutput(output, binMap);
 }
  void TUnfold_GetEmatrix2(TUnfold* __obj,  TH2* ematrix, const Int_t* binMap) {
-  __obj->GetEmatrix(ematrix, binMap);
+  return __obj->GetEmatrix(ematrix, binMap);
 }
 } //extern C

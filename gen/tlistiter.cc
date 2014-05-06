@@ -8,6 +8,6 @@ TListIter* TListIter_TListIter1(const TList* l,  Bool_t dir) {
   return __obj->Next();
 }
  void TListIter_Reset1(TListIter* __obj ) {
-  __obj->Reset();
+  return __obj->Reset();
 }
 } //extern C
