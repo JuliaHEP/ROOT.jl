@@ -1,4 +1,4 @@
-@method :libroot TH1 Chi2Test Double_t (h2::Ptr{TH1}, option::Ptr{Option_t}, res::Ptr{Double_t}, ) Chi2Test1 (nothing, UU, 0,  )
+@method :libroot TH1 Chi2Test Double_t (h2::Ptr{TH1}, option::Ptr{Option_t}, res::Ptr{Double_t}, ) Chi2Test1 (nothing, "UU", 0,  )
 @method :libroot TH1 Fill Int_t (x::Double_t, ) Fill1 (nothing,  )
 @method :libroot TH1 Fill Int_t (x::Double_t, w::Double_t, ) Fill2 (nothing, nothing,  )
 @method :libroot TH1 Fill Int_t (name::Ptr{Uint8}, w::Double_t, ) Fill3 (nothing, nothing,  )
