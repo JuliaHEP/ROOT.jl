@@ -59,6 +59,7 @@ abstract TH2A <: TH1A
 abstract TH2DA <: TH2A
 
 abstract TUnfoldA <: TObjectA
+abstract TUnfoldSysA <: TUnfoldA
 
 root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
     to(root_pointer(o))
@@ -92,6 +93,7 @@ typealias TH1F TH1D
 @root_object(TH2D)
 
 @root_object(TUnfold)
+@root_object(TUnfoldSys)
 #FIXME: silent case of TH2F to TH2D, may not work on all systems
 typealias TH2F TH2D
 
@@ -434,6 +436,7 @@ include("../gen/tbranch.jl")
 include("../gen/tleaf.jl")
 
 include("../gen/tunfold.jl")
+include("../gen/tunfoldsys.jl")
 
 Base.length(x::TCollectionA) = GetEntries(x)
 
