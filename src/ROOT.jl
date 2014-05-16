@@ -438,7 +438,14 @@ include("../gen/tleaf.jl")
 include("../gen/tunfold.jl")
 include("../gen/tunfoldsys.jl")
 
-Base.length(x::TCollectionA) = GetEntries(x)
+function Base.length(x::TCollectionA)
+    if x.p != C_NULL
+        return GetEntries(x)
+    else
+        warn("collection $x is invalid")
+        return 0
+    end
+end
 
 ##ROOT is zero-based, Julia one-based
 Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, int32(n-1))
