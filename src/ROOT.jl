@@ -456,8 +456,8 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
 #@linux_only begin
 #    #for some reason, libRIO is not properly loaded on linux
 #    const rio = joinpath(ENV["ROOTSYS"], "lib", "libRIO.so")
-#    process_line(".L $rio")
-#    process_line(".L $rio")
+#    gROOT.process_line(".L $rio")
+#    gROOT.process_line(".L $rio")
 #end
 
 #short type names used in ROOT's TBranch constructor for the leaflist
@@ -502,7 +502,7 @@ export SetDirectory
 
 #"global" methods
 export root_cast
-export process_line
+export gROOT
 
 export classname, to_root
 export SHORT_TYPEMAP
@@ -512,3 +512,5 @@ export TListIter, Next, Reset
 include("ROOTHistograms.jl")
 
 end
+
+ROOT.gROOT.set_batch(true)
