@@ -1,5 +1,7 @@
 module ROOT
 
+const LIBROOT = string(dirname(Base.source_path()), "/../libroot")
+
 "ROOTSYS" in keys(ENV) || error("ROOTSYS not defined, call `source /path/to/root/thisroot.sh`")
 import Base.length, Base.getindex
 
@@ -281,6 +283,7 @@ function splice_kwargs(jlargs::Expr, defs::Expr)
     return jlargs
 end
 
+#maps :libroot -> /full/path/to/libroot
 function define_lib(lib::Expr)
     lib = lib.args[1]
 
@@ -512,5 +515,3 @@ export TListIter, Next, Reset
 include("ROOTHistograms.jl")
 
 end
-
-ROOT.gROOT.set_batch(true)

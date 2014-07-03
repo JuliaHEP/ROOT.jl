@@ -47,7 +47,7 @@ function wrap_root_file(
                     continue
                 end
                 Clang.wt.wrap(of, decl, id)
-                Clang.wt.wrapjl(ofjl, ":libroot", decl, id)
+                Clang.wt.wrapjl(ofjl, "LIBROOT", decl, id)
             end
         end
         for sup in Clang.wt.class_supers(c)
