@@ -1,2 +1,2 @@
-@method :libroot TCollection GetEntries Int_t () GetEntries1 ( )
+@method LIBROOT TCollection GetEntries Int_t () GetEntries1 ( )
 @subclass TCollection TObject

@@ -1,7 +1,7 @@
 //c++ `root-config --cflags --libs` -shared -fPIC gen/tunfold.cc -o gen/tunfold
 #include <TUnfold.h>
 extern "C" {
-TUnfold* TUnfold_TUnfold1(const TH2* hist_A,  TUnfold::EHistMap histmap,  TUnfold::ERegMode regmode,  TUnfold::EConstraint constraint) {
+TUnfold* TUnfold_TUnfold1(const TH2* hist_A,  unsigned int histmap,  unsigned int regmode,  unsigned int constraint) {
   return new TUnfold(hist_A, histmap, regmode, constraint);
 }
  Double_t TUnfold_DoUnfold1(TUnfold* __obj,  Double_t tau, const TH1* hist_y,  Double_t scaleBias) {

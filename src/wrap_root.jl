@@ -106,7 +106,7 @@ wrap_root_file(
     :GetBinLowEdge, :GetBinWidth,
     :SetBinContent, :SetBinError,
     :SetDirectory, :Chi2Test,
-    :Rebin
+    :Rebin, :GetRandom
     ]
 )
 

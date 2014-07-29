@@ -1,6 +1,6 @@
-@constructor :libroot TListIter (l::Ptr{TList}, dir::Bool_t, ) TListIter1 (nothing, kIterForward,  )
-@method :libroot TListIter Next Ptr{TObject} () Next1 ( )
-@method :libroot TListIter Reset None () Reset1 ( )
+@constructor LIBROOT TListIter (l::Ptr{TList}, dir::Bool_t, ) TListIter1 (nothing, kIterForward,  )
+@method LIBROOT TListIter Next Ptr{TObject} () Next1 ( )
+@method LIBROOT TListIter Reset None () Reset1 ( )
 @subclass TListIter TIterator
 @subclass TListIter std
 @subclass TListIter iterator

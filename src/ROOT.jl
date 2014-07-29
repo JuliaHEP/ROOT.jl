@@ -299,6 +299,7 @@ function define_lib(lib::Expr)
         eval(q)
     end
 end
+define_lib(lib::Symbol) = lib
 
 #macro to make methods from
 #@method libname Type ReturnType julia__function__name (c_arg1, ...) c__function__name
@@ -340,7 +341,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
             function $jlfunc(__obj::$tgt)
                 @assert(__obj.p != C_NULL)
                 ccall(
-                    ($cfname, libroot),
+                    ($cfname, LIBROOT),
                     $(eval(ret)), (),
                 )
             end
@@ -399,7 +400,7 @@ macro constructor(lib, cls, args, cfunc, defs)
     ex = quote
         function $cls()
             ccall(
-                ($cfname, libroot),
+                ($cfname, LIBROOT),
                 $(eval(cls)), (),
             )
         end

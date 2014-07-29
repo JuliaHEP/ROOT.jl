@@ -1,2 +1,2 @@
-@method :libroot TLeaf GetTypeName Ptr{Uint8} () GetTypeName1 ( )
+@method LIBROOT TLeaf GetTypeName Ptr{Uint8} () GetTypeName1 ( )
 @subclass TLeaf TNamed
