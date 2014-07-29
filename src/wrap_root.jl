@@ -131,5 +131,10 @@ wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At, :After], [:TList2]
 wrap_root_file("TObjArray.h", "TObjArray", "gen/tobjarray", [:TObjArray])
 wrap_root_file("TSeqCollection.h", "TSeqCollection", "gen/tseqcollection", [:TSeqCollection, :At])
 
-wrap_root_file("TUnfold.h", "TUnfold", "gen/tunfold", [:TUnfold, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix, :EHistMap, :ERegMode, :EConstraint])
+wrap_root_file("TUnfold.h", "TUnfold", "gen/tunfold", [
+    :TUnfold, :DoUnfold, :SetInput,
+    :GetOutput, :GetBias, :GetEmatrix,
+    :EHistMap, :ERegMode, :EConstraint
+])
+
 wrap_root_file("TUnfoldSys.h", "TUnfoldSys", "gen/tunfoldsys", [:TUnfoldSys, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix])

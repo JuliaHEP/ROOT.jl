@@ -15,6 +15,8 @@ abstract ROOTObject
 #list of all T-objects that are replaced by Ptr{Void}
 const ROOT_OBJECTS = Symbol[]
 
+#is_null(x::TObject) = (x.p==C_NULL || IsZombie(x))
+is_null(x::ROOTObject) = x.p==C_NULL
 #define a ROOT TObject type, needed for correct dispatch
 macro root_object(name)
 
@@ -483,6 +485,17 @@ function to_root(h)
     h = root_cast(T, h)::T
 end
 
+function makedirs(tf::TFile, dirname; cd=true)
+    Cd(tf, "")
+    mkdir(tf, dirname)
+    d = root_cast(TDirectory, Get(tf, dirname))
+    if cd
+        Cd(tf, "")
+        Cd(tf, "/$dirname")
+    end
+    return d
+end
+
 export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory, TClass
 export TFileA, TTreeA, TObjectA, TH1A, TH2A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA
 export TChain
@@ -511,6 +524,7 @@ export classname, to_root
 export SHORT_TYPEMAP
 
 export TListIter, Next, Reset
+export is_null
 
 include("ROOTHistograms.jl")
 
