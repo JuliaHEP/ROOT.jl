@@ -26,18 +26,6 @@ function to_root(h::NHistogram, name="hist")
     return hi
 end
 
-
-# TH1D* hi = new TH1D(name, name, nbins-1, edges);
-# //0 - underflow, nbins - overflow
-# for (unsigned int i=0;i<=nbins;i++) {
-#     hi->SetBinContent(i, bins[i]);
-#     hi->SetBinError(i, errors[i]);
-#     if (labels!=0 && i>0 && i<nbins) {
-#         hi->GetXaxis()->SetBinLabel(i, labels[i-1]);
-#     }
-# }
-# hi->SetEntries(nentries);
-# return hi;
 function to_root(h::Histogram, name="hist")
     edges = copy(h.bin_edges)
 
@@ -54,12 +42,6 @@ function to_root(h::Histogram, name="hist")
     # Print(hi, "ALL")
     conts, errs, ents, edges = get_hist_bins(hi)
 
-    @assert(sum(conts) == sum(contents(h)))
-    # @assert sum(entries(h)) == GetEntries(hi) string("set entries entries ", sum(entries(h)), "!=", GetEntries(hi))
-    # if sum(ents) != GetEntries(hi)
-    #     warn("mismatch in loaded entries $(sum(ents)) != $(GetEntries(hi))")
-    # end
-
     if !all(conts .==  contents(h))
         warn("mismatch in contents: \n", hcat(conts, contents(h))|>string, "\n")
     end
@@ -75,14 +57,14 @@ function to_root(h::Histogram, name="hist")
     return hi
 end
 
-function get_hist_bins(h::TH1D)
+function get_hist_bins(h::Union(TH1D, TH1A, TH1); error_type=:contents)
     nb = int64(GetNbinsX(h))
     nb>0 || error("nbins = $nb")
 
     #+3 = underflow, overflow, superfluous extra bin
     conts = zeros(Float64, nb+3)
     errs = zeros(Float64, nb+3)
-    entries = zeros(Float64, nb+3)
+    ents = zeros(Float64, nb+3)
 
     #underflow low, overflow low, overflow high
     edges = zeros(Float64, nb+3)
@@ -92,31 +74,59 @@ function get_hist_bins(h::TH1D)
         #entries[n+1] = GetEntries(h) * conts[n+1]
         edges[n+1] = GetBinLowEdge(h, int32(n))
     end
-    #
-    entries = conts.^2 ./ errs.^2
-    entries[isnan(entries)] = 0
-    entries[entries .== Inf] = 1
 
-    #entries = conts ./ sum(conts) .* GetEntries(h)
-    #entries[isnan(entries)] = 0
-    entries = int(round(entries))
+    #this work for histograms for which the bin errors have been manually set
+    #to non-Poisson, GetEntries is meaningless
+    if error_type == :errors
+        ents = (conts ./ errs).^2
+        ents[isnan(ents)] = 0
+        ents[ents .== Inf] = 1
+        #println(hcat(conts, errs, ents, conts./sqrt(ents)))
+    end
 
+    #this works for Poisson bin errors
+    if error_type == :contents
+        ents = conts ./ sum(conts) .* GetEntries(h)
+        ents[isnan(ents)] = 0
+    end
+    #ents = int(round(ents))
 
     edges[1] = -Inf
     edges[nb+2] = edges[nb+1] + GetBinWidth(h, int32(nb))
     edges[nb+3] = Inf
+
+    if error_type != :errors
+        if GetEntries(h)>0
+            @assert abs(sum(ents) - GetEntries(h))/sum(ents)<0.0001 string("entries unequal ", sum(ents), "!=", GetEntries(h))
+        end
+    end
+    if Integral(h)>0
+        @assert abs(sum(conts) - Integral(h, int32(0), int32(nb+1)))/sum(conts)<0.0001 string("contents unequal ", sum(conts), "!=", Integral(h, int32(0), int32(nb+1)))
+    end
     # if (abs(sum(conts) - Integral(h)) > 100000 * eps(Float64))
     #     warn(
     #         GetName(h)|>bytestring,
     #         " integral mismatch: $(sum(conts)) != $(Integral(h))"
     #     )
     # end
-    return conts, errs, entries, edges
+    return conts, errs, ents, edges
+end
+
+function load_with_errors(f::TDirectoryA, k::ASCIIString; kwargs...)
+    th = root_cast(TH1, Get(f, k))
+    #println(th)
+    conts, errs, ents, edgs = get_hist_bins(th; kwargs...)
+    h = Histogram(ents, conts, edgs)
+    return h
 end
 
 function from_root(o::TH1A)
-    contents, errors, entries, edges = get_hist_bins(o)
-    return Histogram(entries, contents, edges)
+    conts, errs, ents, edgs = get_hist_bins(o)
+    h = Histogram(ents, conts, edgs)
+    # for i=1:nbins(h)
+    #     @assert abs(errors(h)[i] - errs[i])<0.0001 string("errors unequal $(hcat(errors(h), errs))")
+    # end
+    return h
 end
 
 function from_root(o::TH2A)
@@ -152,7 +162,7 @@ function load_hists_from_file(fn, hfilter=(name->true))
     key_iterator = TListIter(kl.p)
     #kl = GetListOfKeys(tf)
     #objs = GetList(tf)
-    
+
     ret = Dict()
 
     tic()
@@ -176,7 +186,6 @@ function write_hists_to_file(hd::Associative, fn)
     Cd(tf, "")
     for (k, v) in hd
         v::Union(Histogram, NHistogram)
-
         println("$k N=$(sum(entries(v)))")
         hi = to_root(v, string(k))
     end
@@ -185,4 +194,5 @@ function write_hists_to_file(hd::Associative, fn)
 end
 
 export to_root, get_hist_bins, load_hists_from_file, from_root, write_hists_to_file
+export load_with_errors
 end
