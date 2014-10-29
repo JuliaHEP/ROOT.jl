@@ -116,7 +116,7 @@ const kFALSE = false
 const kTRUE = true
 const kIterForward = true
 
-const type_replacement = {
+const type_replacement = Dict{Any,Any}(
     #:Option_t                => :(Ptr{Uint8}),
     #:(Ptr{None})             => :ASCIIString,
     :Int_t                    => :Cint,
@@ -149,9 +149,9 @@ const type_replacement = {
 
     :TTree                    => :TTreeA,
     :TChain                   => :TChainA,
-}
+)
 
-const ccall_type_replacement = {
+const ccall_type_replacement = Dict{Any,Any}(
     :ASCIIString        =>    :(Ptr{Uint8}),
     :(Ptr{Option_t})    =>    :(Ptr{Uint8}),
     #:(Ptr{None})       =>    :(Ptr{Uint8}),
@@ -164,7 +164,7 @@ const ccall_type_replacement = {
     :Bool_t             =>    :Bool,
     :(Ptr{Double_t})    =>    :(Ptr{Float64}),
     :(Ptr{Float_t})     =>    :(Ptr{Float32}),
-}
+)
 
 #replaces argument list expressions from ROOT->Julia
 #input:
@@ -467,7 +467,7 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
 #end
 
 #short type names used in ROOT's TBranch constructor for the leaflist
-const SHORT_TYPEMAP = {
+const SHORT_TYPEMAP = Dict{Any,Any}(
     Float32   => "F",
     Float64   => "D",
     Int32     => "I",
@@ -476,7 +476,7 @@ const SHORT_TYPEMAP = {
     Uint8     => "C",
     Char      => "C",
     Bool      => "O"
-}
+)
 
 classname(o) = ClassName(root_cast(TObject, o))|>bytestring;
 
