@@ -2,6 +2,7 @@ module ROOT
 
 const LIBROOT = string(dirname(Base.source_path()), "/../libroot")
 
+const DUMPEX = ("DUMPEX" in keys(ENV) && int(ENV["DUMPEX"])==1)
 "ROOTSYS" in keys(ENV) || error("ROOTSYS not defined, call `source /path/to/root/thisroot.sh`")
 import Base.length, Base.getindex
 
@@ -118,7 +119,7 @@ const kIterForward = true
 
 const type_replacement = Dict{Any,Any}(
     #:Option_t                => :(Ptr{Uint8}),
-    #:(Ptr{None})             => :ASCIIString,
+    :(Ptr{None})              => :(Ptr{Void}),
     :Int_t                    => :Cint,
     :UInt_t                   => :Cuint,
     :Long_t                   => :Clong,
@@ -126,7 +127,8 @@ const type_replacement = Dict{Any,Any}(
     :Double_t                 => :Cdouble,
     :Float_t                  => :Cfloat,
     :Bool_t                   => :Bool,
-    :Char_t                   => :Char,
+    :Char_t                   => :Cchar,
+    :UChar_t                  => :Cuchar,
     :(Ptr{Option_t})          => :ASCIIString,
     :(Ptr{Uint8})             => :ASCIIString,
     :(Ptr{Double_t})          => :(Ptr{Cdouble}),
@@ -149,12 +151,13 @@ const type_replacement = Dict{Any,Any}(
 
     :TTree                    => :TTreeA,
     :TChain                   => :TChainA,
+    :None                     => :Void
 )
 
 const ccall_type_replacement = Dict{Any,Any}(
     :ASCIIString        =>    :(Ptr{Uint8}),
     :(Ptr{Option_t})    =>    :(Ptr{Uint8}),
-    #:(Ptr{None})       =>    :(Ptr{Uint8}),
+    #:(Ptr{None})        =>    :(Ptr{Void}),
     :Int_t              =>    :Cint,
     :UInt_t             =>    :Cuint,
     :Long_t             =>    :Clong,
@@ -331,9 +334,11 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
         tgt = type_replacement[tgt]
     end
 
+    #println("ret $(typeof(ret)) $ret $r")
     if ret in keys(type_replacement) && ret != :(Ptr{Uint8})
         ret = type_replacement[ret]
     end
+    #println("ret replaced $ret")
 
     if !wrapped_return
         #create a function "stub"
@@ -346,26 +351,11 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
                 )
             end
         end
-
-        #println(ex)
     end
-    # else
-    #     #create a function "stub"
-    #     ex = quote
-    #         function $jlfunc(__obj::$tgt)
-    #             @assert(__obj.p != C_NULL)
-    #             ccall(
-    #                 ($cfname, libroot),
-    #                 $(eval(ret)), (),
-    #             )|>$(rettype)
-    #         end
-    #     end
-    #
-    #     #println(ex)
-    # end
 
     #println("args=", ex.args)
     #Note, this is fragile. if the stub is changed, the argument indices will also
+    
     #splice julia function args
     append!(ex.args[2].args[1].args, jlargs.args)
     #splice C function argument types
@@ -375,7 +365,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
     append!(ex.args[2].args[2].args[4].args, [:(__obj.p)]) #object itself
     append!(ex.args[2].args[2].args[4].args, avals.args)
 
-    #println(ex)
+    DUMPEX && println(ex)
     eval(ex)
 end
 
@@ -413,7 +403,7 @@ macro constructor(lib, cls, args, cfunc, defs)
     append!(ex.args[2].args[1].args, jlargs.args)
     append!(ex.args[2].args[2].args[2].args[3].args, aargs.args)
     append!(ex.args[2].args[2].args[2].args, avals.args)
-    #println(ex)
+    DUMPEX && println(ex)
     eval(ex)
 end
 
@@ -488,6 +478,7 @@ end
 
 import Base.mkpath
 function Base.mkpath(tf::TFile, dirname; cd=true)
+    assert(!is_null(tf)) 
     Cd(tf, "")
     is_null(Get(tf, dirname)) && mkdir(tf, dirname)
     d = root_cast(TDirectory, Get(tf, dirname))

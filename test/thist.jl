@@ -1,7 +1,7 @@
 using ROOT
 using Base.Test
 
-#println(methods(TH1D))
+println(methods(TH1D))
 hi = TH1D("my_hist", "My Hist", int32(10), -3.0, 3.0)
 @test bytestring(GetName(hi)) == "my_hist"
 @test GetNbinsX(hi) == int32(10)
