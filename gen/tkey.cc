@@ -4,4 +4,8 @@ extern "C" {
  TObject* TKey_ReadObj1(TKey* __obj ) {
   return __obj->ReadObj();
 }
+
+const char* TKey_GetClassName1(TKey* __obj ) {
+  return __obj->GetClassName();
+}
 } //extern C

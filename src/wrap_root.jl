@@ -71,7 +71,7 @@ wrap_root_file("TFile.h", "TFile", "gen/tfile",
     [:TFile, :Close, :Get, :Write, :Open],
     [:Open2]
 )
-wrap_root_file("TKey.h", "TKey", "gen/tkey", [:GetName, :ReadObj])
+wrap_root_file("TKey.h", "TKey", "gen/tkey", [:GetName, :ReadOb, :GetClassName])
 wrap_root_file("TList.h", "TListIter", "gen/tlistiter", [:TListIter, :Next, :Reset])
 
 wrap_root_file(
@@ -123,6 +123,21 @@ wrap_root_file("TH2D.h", "TH2D", "gen/th2d",
     :TH2D,
     :GetNbinsX, :GetNbinsY
 ])
+
+wrap_root_file(
+    "TH3.h", "TH3", "gen/th3",
+    [
+        :TH3, :Fill,
+        :GetBinContent, :GetBinError, :GetNbinsX, :GetNbinsY, :GetNbinsZ, :GetBinLowEdge, :GetBinWidth,
+        :SetBinContent, :SetBinError
+    ]
+)
+wrap_root_file("TH3D.h", "TH3D", "gen/th3d",
+    [
+    :TH3D,
+    :GetNbinsX, :GetNbinsY, :GetNbinsZ
+])
+
 wrap_root_file("TArrayD.h", "TArrayD", "gen/tarrayd", [:TArrayD, :GetAt, :SetAt])
 wrap_root_file("TArray.h", "TArray", "gen/tarray", Symbol[])
 
