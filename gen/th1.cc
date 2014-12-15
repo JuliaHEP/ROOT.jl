@@ -46,6 +46,9 @@ extern "C" {
  Int_t TH1_GetNbinsY1(TH1* __obj ) {
   return __obj->GetNbinsY();
 }
+ Int_t TH1_GetNbinsZ1(TH1* __obj ) {
+  return __obj->GetNbinsZ();
+}
  Double_t TH1_GetRandom1(TH1* __obj ) {
   return __obj->GetRandom();
 }

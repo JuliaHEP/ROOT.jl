@@ -60,8 +60,12 @@ abstract TListIterA <: TObjectA
 
 abstract TH1A <: TObjectA
 abstract TH1DA <: TH1A
+
 abstract TH2A <: TH1A
 abstract TH2DA <: TH2A
+
+abstract TH3A <: TH1A
+abstract TH3DA <: TH3A
 
 abstract TUnfoldA <: TObjectA
 abstract TUnfoldSysA <: TUnfoldA
@@ -97,10 +101,15 @@ typealias TH1F TH1D
 @root_object(TH2)
 @root_object(TH2D)
 
+@root_object(TH3)
+@root_object(TH3D)
+
 @root_object(TUnfold)
 @root_object(TUnfoldSys)
 #FIXME: silent case of TH2F to TH2D, may not work on all systems
 typealias TH2F TH2D
+
+typealias TH3F TH3D
 
 #these will be overridden using type_replacement
 abstract Option_t
@@ -137,6 +146,10 @@ const type_replacement = Dict{Any,Any}(
 
     :TH2D                     => :TH2DA,
     :TH2                      => :TH2A,
+    
+    :TH3D                     => :TH3DA,
+    :TH3                      => :TH3A,
+
     :TH1D                     => :TH1DA,
     :TH1                      => :TH1A,
     :TFile                    => :TFileA,
@@ -421,6 +434,9 @@ include("../gen/th1d.jl")
 include("../gen/th2.jl")
 include("../gen/th2d.jl")
 
+include("../gen/th3.jl")
+#include("../gen/th3d.jl")
+
 include("../gen/tdirectory.jl")
 include("../gen/tfile.jl")
 
@@ -489,14 +505,22 @@ function Base.mkpath(tf::TFile, dirname; cd=true)
     return d
 end
 
-export TFile, TTree, TObject, TH1, TH1F, TH2F, TH1D, TH2D, TH2, TBranch, TKey, TLeaf, TDirectory, TClass
-export TFileA, TTreeA, TObjectA, TH1A, TH2A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA
+export TFile, TTree, TObject, TH1, TH1F, TH2F, TH3F, TH1D, TH2D, TH2, TH3D, TBranch, TKey, TLeaf, TDirectory, TClass
+export TFileA, TTreeA, TObjectA, TH1A, TH2A, TH3A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA
 export TChain
 export Open
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry, GetEvent, SetBranchAddress
 export GetListOfKeys, Get, GetList
 export Cd, mkdir
+
+
+
+
+
+
+
+
 export AddFile
 
 export SetAddress, GetBranch, GetClassName, GetListOfLeaves
@@ -504,7 +528,7 @@ export GetTypeName
 
 export SetCacheSize, AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
-export Integral, GetEntries, SetEntries, GetNbinsX, GetNbinsY, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
+export Integral, GetEntries, SetEntries, GetNbinsX, GetNbinsY, GetNbinsZ, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
 export Chi2Test
 export SetBinContent, SetBinError
 export SetDirectory

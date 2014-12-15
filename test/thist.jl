@@ -1,7 +1,6 @@
 using ROOT
 using Base.Test
 
-println(methods(TH1D))
 hi = TH1D("my_hist", "My Hist", int32(10), -3.0, 3.0)
 @test bytestring(GetName(hi)) == "my_hist"
 @test GetNbinsX(hi) == int32(10)
@@ -18,7 +17,6 @@ Integral(hi)::Float64
 bx = Float64[0.0, 1.0, 2.0]
 by = Float64[0.0, 1.0]
 
-#println(methods(TH2D))
 hi2 = TH2D("my_hist2", "My Hist", int32(2), pointer(bx), int32(1), pointer(by))::TH2D
 @test bytestring(GetName(hi2))=="my_hist2"
 @test GetNbinsX(hi2) == 2

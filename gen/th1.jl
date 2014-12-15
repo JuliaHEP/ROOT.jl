@@ -13,6 +13,7 @@
 @method LIBROOT TH1 GetEntries Double_t () GetEntries1 ( )
 @method LIBROOT TH1 GetNbinsX Int_t () GetNbinsX1 ( )
 @method LIBROOT TH1 GetNbinsY Int_t () GetNbinsY1 ( )
+@method LIBROOT TH1 GetNbinsZ Int_t () GetNbinsZ1 ( )
 @method LIBROOT TH1 GetRandom Double_t () GetRandom1 ( )
 @method LIBROOT TH1 Integral Double_t (option::Ptr{Option_t}, ) Integral1 ("",  )
 @method LIBROOT TH1 Integral Double_t (binx1::Int_t, binx2::Int_t, option::Ptr{Option_t}, ) Integral2 (nothing, nothing, "",  )

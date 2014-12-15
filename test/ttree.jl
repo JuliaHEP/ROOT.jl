@@ -11,7 +11,6 @@ ttree = TTree("my_tree", "My Tree")
 #branch variable should be array with length 1
 x = Float64[0]
 px = convert(Ptr{Void}, pointer(x))
-println(methods(Branch))
 br = Branch(ttree, "x", px, "x/D")
 
 n = 100
@@ -36,7 +35,6 @@ ttree = root_cast(TTree, ttree)
 @test GetEntries(ttree) == n
 
 br = GetBranch(ttree, "x")
-println(methods(SetAddress))
 SetAddress(br, convert(Ptr{Void}, x))
 
 sum_entries2 = 0.0
