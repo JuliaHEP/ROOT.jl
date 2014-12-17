@@ -11,19 +11,22 @@ This wrapper is a very thin C layer on top of the ROOT C++ library and no runtim
 
 One can access the full ROOT framework though the ``process_line(cmd::ASCIIString)`` wrapper.
 
+See also https://github.com/jpata/ROOTDataFrames.jl for an interface between TTrees and DataFrames.
+
 # Installation
 
-Make sure you have ROOT set up, then simply do
-
-> make
-
-to create `libroot.{so/dylib}`.
+Make sure you have ROOT v5 set up, then simply do
+~~~
+Pkg.clone("https://github.com/jpata/ROOT.jl.git")
+Pkg.build("ROOT")
+Pkg.test("ROOT")
+~~~
 
 # Usage
 
 Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap (using `new` in C++).
 
-## TTrees
+## example TTrees
 
 These are the main workhorse of ROOT, which support fast row-based and disk-backed data storage for simple data types.
 
@@ -49,5 +52,6 @@ Write(tf)
 Close(tf)
 ~~~
 
-Note: a saner interface to ROOT TTrees is available in http://github.com/jpata/ROOTDataFrames.jl
+# Known issues
 
+1. ROOT.jl currently does not work with ROOT v6 due to ROOT6 using a built-in and patched LLVM
