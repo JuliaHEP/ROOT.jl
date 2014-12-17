@@ -473,7 +473,7 @@ ReadObj(x) = ReadObj(root_cast(TKey, x))
 #end
 
 #short type names used in ROOT's TBranch constructor for the leaflist
-const SHORT_TYPEMAP = Dict{Any,Any}(
+const SHORT_TYPEMAP = Dict{DataType, ASCIIString}(
     Float32   => "F",
     Float64   => "D",
     Int32     => "I",
