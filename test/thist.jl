@@ -5,10 +5,14 @@ hi = TH1D("my_hist", "My Hist", int32(10), -3.0, 3.0)
 @test bytestring(GetName(hi)) == "my_hist"
 @test GetNbinsX(hi) == int32(10)
 
+
 n=1000000
 for i=1:n
 	Fill(hi, randn())
 end
+
+@test_approx_eq_eps GetMean(hi) 0.0 0.1
+@test_approx_eq_eps GetRMS(hi) 1.0 0.1
 
 @test GetEntries(hi) == n
 
@@ -25,3 +29,4 @@ hi2 = TH2D("my_hist2", "My Hist", int32(2), pointer(bx), int32(1), pointer(by)):
 Fill(hi2, 0.0, 0.0, 0.5)
 @test GetEntries(hi2) == 1
 @test Integral(hi2) == 0.5
+

@@ -532,7 +532,7 @@ export Integral, GetEntries, SetEntries, GetNbinsX, GetNbinsY, GetNbinsZ, GetBin
 export Chi2Test
 export SetBinContent, SetBinError
 export SetDirectory
-export GetRMS
+export GetRMS, GetMean
 
 #"global" methods
 export root_cast
