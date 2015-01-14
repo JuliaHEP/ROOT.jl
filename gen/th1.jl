@@ -15,6 +15,8 @@
 @method LIBROOT TH1 GetNbinsY Int_t () GetNbinsY1 ( )
 @method LIBROOT TH1 GetNbinsZ Int_t () GetNbinsZ1 ( )
 @method LIBROOT TH1 GetRandom Double_t () GetRandom1 ( )
+@method LIBROOT TH1 GetSumw2 Ptr{TArrayD} () GetSumw2 ( )
+@method LIBROOT TH1 Sumw2 Void () Sumw2 ( )
 @method LIBROOT TH1 Integral Double_t (option::Ptr{Option_t}, ) Integral1 ("",  )
 @method LIBROOT TH1 Integral Double_t (binx1::Int_t, binx2::Int_t, option::Ptr{Option_t}, ) Integral2 (nothing, nothing, "",  )
 @method LIBROOT TH1 Rebin Ptr{TH1} (ngroup::Int_t, newname::Ptr{Uint8}, xbins::Ptr{Double_t}, ) Rebin1 (2, "", 0,  )

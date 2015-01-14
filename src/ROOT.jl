@@ -40,6 +40,8 @@ const kBigNumber = 10^8
 #FIXME: autogen these
 abstract TObjectA <: ROOTObject
 abstract TClassA <: TObjectA
+abstract TArrayA
+abstract TArrayDA <: TArrayA
 
 abstract TDirectoryA <: TObjectA
 abstract TFileA <: TDirectoryA
@@ -87,6 +89,8 @@ root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
 @root_object(TList)
 @root_object(TListIter)
 @root_object(TKey)
+@root_object(TArray)
+@root_object(TArrayD)
 
 @root_object(TBranch)
 @root_object(TLeaf)
@@ -427,6 +431,7 @@ include("../gen/tcollection.jl")
 include("../gen/tseqcollection.jl")
 include("../gen/tlist.jl")
 include("../gen/tkey.jl")
+include("../gen/tarrayd.jl")
 
 include("../gen/th1.jl")
 include("../gen/th1d.jl")
@@ -540,6 +545,9 @@ export gROOT
 
 export classname, to_root
 export SHORT_TYPEMAP
+
+export GetAt, SetAt, GetSize
+export Sumw2, GetSumw2
 
 export TListIter, Next, Reset
 export is_null

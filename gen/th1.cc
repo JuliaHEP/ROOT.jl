@@ -85,4 +85,10 @@ extern "C" {
  void TH1_SetEntries1(TH1* __obj,  Double_t n) {
   return __obj->SetEntries(n);
 }
+ void TH1_Sumw2(TH1* __obj) {
+  __obj->Sumw2();
+}
+ TArrayD* TH1_GetSumw2(TH1* __obj) {
+  return __obj->GetSumw2();
+}
 } //extern C
