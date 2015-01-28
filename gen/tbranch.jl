@@ -4,5 +4,6 @@
 @method LIBROOT TBranch GetClassName Ptr{Uint8} () GetClassName1 ( )
 @method LIBROOT TBranch GetListOfLeaves Ptr{TObjArray} () GetListOfLeaves1 ( )
 @method LIBROOT TBranch SetAddress None (add::Ptr{None}, ) SetAddress1 (nothing,  )
+@method LIBROOT TBranch GetEntry Int_t (entry::Long_t, ) GetEntry1 (nothing,  )
 @subclass TBranch TNamed
 @subclass TBranch TAttFill

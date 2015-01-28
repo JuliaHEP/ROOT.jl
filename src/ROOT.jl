@@ -29,7 +29,10 @@ macro root_object(name)
             p::Ptr{Void}
         end
         #$name(p::Ptr{Void}) = $name(p)
-        root_pointer(x::$name) = x.p
+        function root_pointer(x::$name)
+            assert(x.p != 0)
+            return x.p
+        end
     end)
 end
 
@@ -136,7 +139,7 @@ const type_replacement = Dict{Any,Any}(
     :Int_t                    => :Cint,
     :UInt_t                   => :Cuint,
     :Long_t                   => :Clong,
-    :Long64_t                 => :Clong,
+    :Long64_t                 => :Clonglong,
     :Double_t                 => :Cdouble,
     :Float_t                  => :Cfloat,
     :Bool_t                   => :Bool,
@@ -517,14 +520,8 @@ export Open
 export Write, Close, Fill, Branch, Print
 export GetListOfBranches, GetEntry, GetEvent, SetBranchAddress
 export GetListOfKeys, Get, GetList
+export GetTreeNumber
 export Cd, mkdir
-
-
-
-
-
-
-
 
 export AddFile
 
@@ -538,6 +535,7 @@ export Chi2Test
 export SetBinContent, SetBinError
 export SetDirectory
 export GetRMS, GetMean
+export LoadTree
 
 #"global" methods
 export root_cast
