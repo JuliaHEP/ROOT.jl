@@ -15,7 +15,7 @@ See also https://github.com/jpata/ROOTDataFrames.jl for an interface between TTr
 
 # Installation
 
-Make sure you have ROOT v5 set up, then simply do
+You need ROOT v5 and julia v0.4. After configuring ROOT using `thisroot.sh`, execute the following in a julia prompt
 ~~~
 Pkg.clone("https://github.com/jpata/ROOT.jl.git")
 Pkg.build("ROOT")
