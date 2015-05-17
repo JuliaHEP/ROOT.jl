@@ -20,8 +20,8 @@ libs: lib-osx lib-linux
 #link getopts and repl to a dynamic library
 #compile ui.cc, which dlopens the repl after initializing ROOT
 ui-osx:
-	c++ -w -c $(JULIA_HOME)/ui/getopt.c -O
-	ld -macosx_version_min 10.10 -dylib getopt.o $(JULIA_HOME)/ui/repl.o -L$(JULIA_HOME)/usr/lib/ -ljulia -lc -lcrt1.o -o librepl.dylib
+	c++ -w -c $(JULIA_HOME)/../../ui/getopt.c -O
+	ld -macosx_version_min 10.10 -dylib getopt.o $(JULIA_HOME)/../../ui/repl.o -L$(JULIA_HOME) -ljulia -lc -lcrt1.o -o librepl.dylib
 	c++ src/ui.cc `root-config --cflags --libs --ldflags` -o rjulia
 
 .PHONY: clean
