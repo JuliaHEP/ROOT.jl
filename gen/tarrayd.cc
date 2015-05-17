@@ -13,10 +13,7 @@ TArrayD* TArrayD_TArrayD3( Int_t n, const Double_t* array) {
  Double_t TArrayD_GetAt1(TArrayD* __obj,  Int_t i) {
   return __obj->GetAt(i);
 }
- Int_t TArrayD_GetSize(TArrayD* __obj) {
-  return __obj->GetSize();
-}
  void TArrayD_SetAt1(TArrayD* __obj,  Double_t v,  Int_t i) {
-  return __obj->SetAt(v, i);
+  __obj->SetAt(v, i);
 }
 } //extern C

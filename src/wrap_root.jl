@@ -8,9 +8,9 @@ function wrap_root_file(
     exclude::Vector{Symbol}=Symbol[]
     )
     topcu = cindex.parse_header(
-        "$ROOTSYS/include/root/$fname";
+        "$ROOTSYS/include/$fname";
         cplusplus = true,
-        args=["-I$ROOTSYS/include"]
+        args=["-I$ROOTSYS/include", "-I/usr//include/c++/4.2.1/"]
     )
 
     cls = cindex.search(topcu, class)
@@ -46,11 +46,11 @@ function wrap_root_file(
                     println("excluding $(name(c))::$(declname)::$(id)")
                     continue
                 end
-                Clang.wt.wrap(of, decl, id)
-                Clang.wt.wrapjl(ofjl, "LIBROOT", decl, id)
+                Clang.wrap_cpp.wrap(of, decl, id)
+                Clang.wrap_cpp.wrapjl(ofjl, "LIBROOT", decl, id)
             end
         end
-        for sup in Clang.wt.class_supers(c)
+        for sup in Clang.wrap_cpp.class_supers(c)
             println(ofjl, "@subclass $(spelling(c)) $(sup.text)")
         end
     end
@@ -146,10 +146,10 @@ wrap_root_file("TList.h", "TList", "gen/tlist", [:TList, :At, :After], [:TList2]
 wrap_root_file("TObjArray.h", "TObjArray", "gen/tobjarray", [:TObjArray])
 wrap_root_file("TSeqCollection.h", "TSeqCollection", "gen/tseqcollection", [:TSeqCollection, :At])
 
-wrap_root_file("TUnfold.h", "TUnfold", "gen/tunfold", [
-    :TUnfold, :DoUnfold, :SetInput,
-    :GetOutput, :GetBias, :GetEmatrix,
-    :EHistMap, :ERegMode, :EConstraint
-])
+#wrap_root_file("TUnfold.h", "TUnfold", "gen/tunfold", [
+#    :TUnfold, :DoUnfold, :SetInput,
+#    :GetOutput, :GetBias, :GetEmatrix,
+#    :EHistMap, :ERegMode, :EConstraint
+#])
 
-wrap_root_file("TUnfoldSys.h", "TUnfoldSys", "gen/tunfoldsys", [:TUnfoldSys, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix])
+#wrap_root_file("TUnfoldSys.h", "TUnfoldSys", "gen/tunfoldsys", [:TUnfoldSys, :DoUnfold, :SetInput, :GetOutput, :GetBias, :GetEmatrix])

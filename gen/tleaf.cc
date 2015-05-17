@@ -4,10 +4,10 @@ extern "C" {
 const char* TLeaf_GetTypeName1(TLeaf* __obj ) {
   return __obj->GetTypeName();
 }
-void* TLeaf_GetLeafCount1(TLeaf* __obj ) {
-  return __obj->GetLeafCount();
-}
-Int_t TLeaf_GetLenStatic1(TLeaf* __obj ) {
+int TLeaf_GetLenStatic1(TLeaf* __obj ) {
   return __obj->GetLenStatic();
+}
+TLeaf* TLeaf_GetLeafCount1(TLeaf* __obj ) {
+  return __obj->GetLeafCount();
 }
 } //extern C

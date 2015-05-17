@@ -5,8 +5,6 @@ hi = TH1D("my_hist", "My Hist", int32(10), -3.0, 3.0)
 @test bytestring(GetName(hi)) == "my_hist"
 @test GetNbinsX(hi) == int32(10)
 
-Sumw2(hi)
-
 n=1000000
 for i=1:n
 	Fill(hi, randn())

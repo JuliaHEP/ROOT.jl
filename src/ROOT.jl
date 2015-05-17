@@ -134,7 +134,7 @@ const kTRUE = true
 const kIterForward = true
 
 const type_replacement = Dict{Any,Any}(
-    #:Option_t                => :(Ptr{Uint8}),
+    #:Option_t                => :(Ptr{UInt8}),
     :(Ptr{None})              => :(Ptr{Void}),
     :Int_t                    => :Cint,
     :UInt_t                   => :Cuint,
@@ -146,7 +146,7 @@ const type_replacement = Dict{Any,Any}(
     :Char_t                   => :Cchar,
     :UChar_t                  => :Cuchar,
     :(Ptr{Option_t})          => :ASCIIString,
-    :(Ptr{Uint8})             => :ASCIIString,
+    :(Ptr{UInt8})             => :ASCIIString,
     :(Ptr{Double_t})          => :(Ptr{Cdouble}),
     :(Ptr{Float_t})           => :(Ptr{Cfloat}),
     :(Ptr{UInt_t})            => :(Ptr{Cuint}),
@@ -175,8 +175,8 @@ const type_replacement = Dict{Any,Any}(
 )
 
 const ccall_type_replacement = Dict{Any,Any}(
-    :ASCIIString        =>    :(Ptr{Uint8}),
-    :(Ptr{Option_t})    =>    :(Ptr{Uint8}),
+    :ASCIIString        =>    :(Ptr{UInt8}),
+    :(Ptr{Option_t})    =>    :(Ptr{UInt8}),
     #:(Ptr{None})        =>    :(Ptr{Void}),
     :Int_t              =>    :Cint,
     :UInt_t             =>    :Cuint,
@@ -191,10 +191,10 @@ const ccall_type_replacement = Dict{Any,Any}(
 
 #replaces argument list expressions from ROOT->Julia
 #input:
-#    :(a1::Ptr{Uint8}, ...)
+#    :(a1::Ptr{UInt8}, ...)
 #outputs:
 #    :(a1, ...), => for ccall values
-#    :(Ptr{Uint8}, ...), => for ccall types
+#    :(Ptr{UInt8}, ...), => for ccall types
 #    :(a1::ASCIIString, ...), => for julia function arguments
 function argument_replace(args::Expr)
 
@@ -222,6 +222,7 @@ function argument_replace(args::Expr)
         ###
         #conversions for julia-side function argument types
         ###
+        #println("jt = $jt")
         if haskey(type_replacement, jt)
             const jt_ = type_replacement[jt]
             #println("replacing $jt with $jt_")
@@ -234,22 +235,11 @@ function argument_replace(args::Expr)
             t = :(Ptr{Void})
         end
 
-        ##replace C-Uint8 with julia ASCIIString
-        ##x::Ptr{Uint8}(const char *) => x::ASCIIString
-        #if (eval(t) == Ptr{Uint8})
-        #    jt = :(ASCIIString)
-        #end
-
-        ##cast ROOT Int32 to Int64 in julia arguments
-        #if eval(t) == Int32 || eval(t) == Cint
-        #    jt = :(Int64)
-        #end
-
         ###
         #conversions for ccall argument types
         ###
 
-        #strings passed from julia are Ptr{Uint8} in ccall
+        #strings passed from julia are Ptr{UInt8} in ccall
         if haskey(ccall_type_replacement, t)
             t = ccall_type_replacement[t]
         end
@@ -355,7 +345,7 @@ macro method(lib, tgt, jlfunc, ret, args, cfunc, defs)
     end
 
     #println("ret $(typeof(ret)) $ret $r")
-    if ret in keys(type_replacement) && ret != :(Ptr{Uint8})
+    if ret in keys(type_replacement) && ret != :(Ptr{UInt8})
         ret = type_replacement[ret]
     end
     #println("ret replaced $ret")
@@ -468,7 +458,7 @@ function Base.length(x::TCollectionA)
 end
 
 ##ROOT is zero-based, Julia one-based
-Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, int32(n-1))
+Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, Int32(n-1))
 
 ReadObj(x) = ReadObj(root_cast(TKey, x))
 
@@ -486,8 +476,8 @@ const SHORT_TYPEMAP = Dict{DataType, ASCIIString}(
     Float64   => "D",
     Int32     => "I",
     Int64     => "L",
-    Uint64    => "l",
-    Uint8     => "C",
+    UInt64    => "l",
+    UInt8     => "C",
     Char      => "C",
     Bool      => "O"
 )

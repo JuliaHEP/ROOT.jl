@@ -46,9 +46,6 @@ extern "C" {
  Int_t TH1_GetNbinsY1(TH1* __obj ) {
   return __obj->GetNbinsY();
 }
- Int_t TH1_GetNbinsZ1(TH1* __obj ) {
-  return __obj->GetNbinsZ();
-}
  Double_t TH1_GetRandom1(TH1* __obj ) {
   return __obj->GetRandom();
 }
@@ -62,33 +59,27 @@ extern "C" {
   return __obj->Rebin(ngroup, newname, xbins);
 }
  void TH1_SetBinContent1(TH1* __obj,  Int_t bin,  Double_t content) {
-  return __obj->SetBinContent(bin, content);
+  __obj->SetBinContent(bin, content);
 }
  void TH1_SetBinContent2(TH1* __obj,  Int_t binx,  Int_t biny,  Double_t content) {
-  return __obj->SetBinContent(binx, biny, content);
+  __obj->SetBinContent(binx, biny, content);
 }
  void TH1_SetBinContent3(TH1* __obj,  Int_t binx,  Int_t biny,  Int_t binz,  Double_t content) {
-  return __obj->SetBinContent(binx, biny, binz, content);
+  __obj->SetBinContent(binx, biny, binz, content);
 }
  void TH1_SetBinError1(TH1* __obj,  Int_t bin,  Double_t error) {
-  return __obj->SetBinError(bin, error);
+  __obj->SetBinError(bin, error);
 }
  void TH1_SetBinError2(TH1* __obj,  Int_t binx,  Int_t biny,  Double_t error) {
-  return __obj->SetBinError(binx, biny, error);
+  __obj->SetBinError(binx, biny, error);
 }
  void TH1_SetBinError3(TH1* __obj,  Int_t binx,  Int_t biny,  Int_t binz,  Double_t error) {
-  return __obj->SetBinError(binx, biny, binz, error);
+  __obj->SetBinError(binx, biny, binz, error);
 }
  void TH1_SetDirectory1(TH1* __obj,  TDirectory* dir) {
-  return __obj->SetDirectory(dir);
+  __obj->SetDirectory(dir);
 }
  void TH1_SetEntries1(TH1* __obj,  Double_t n) {
-  return __obj->SetEntries(n);
-}
- void TH1_Sumw2(TH1* __obj) {
-  __obj->Sumw2();
-}
- TArrayD* TH1_GetSumw2(TH1* __obj) {
-  return __obj->GetSumw2();
+  __obj->SetEntries(n);
 }
 } //extern C

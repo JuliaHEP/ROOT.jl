@@ -4,6 +4,7 @@
 using ROOT
 using Base.Test
 
+println("creating file")
 tf = TFile("test.root", "RECREATE")
 ttree = TTree("my_tree", "My Tree")
 @test bytestring(GetName(ttree)) == "my_tree"
@@ -35,7 +36,8 @@ ttree = root_cast(TTree, ttree)
 @test GetEntries(ttree) == n
 
 br = GetBranch(ttree, "x")
-SetAddress(br, convert(Ptr{Void}, x))
+println(methods(SetAddress))
+SetAddress(br, convert(Ptr{Void}, px))
 
 sum_entries2 = 0.0
 for i=1:n
@@ -55,5 +57,6 @@ x = TObject(Next(iter))
 classname(x) == "TTree"
 
 @test Next(iter) == C_NULL
-
+println("closing file")
 Close(tf)
+#rm("test.root")
