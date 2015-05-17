@@ -424,6 +424,7 @@ include("../gen/tcollection.jl")
 include("../gen/tseqcollection.jl")
 include("../gen/tlist.jl")
 include("../gen/tkey.jl")
+include("../gen/tarray.jl")
 include("../gen/tarrayd.jl")
 
 include("../gen/th1.jl")

@@ -36,7 +36,6 @@ ttree = root_cast(TTree, ttree)
 @test GetEntries(ttree) == n
 
 br = GetBranch(ttree, "x")
-println(methods(SetAddress))
 SetAddress(br, convert(Ptr{Void}, px))
 
 sum_entries2 = 0.0

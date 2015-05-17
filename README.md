@@ -15,13 +15,14 @@ See also https://github.com/jpata/ROOTDataFrames.jl for an interface between TTr
 
 # Installation
 
-You need ROOT v5 and julia v0.4. After configuring ROOT using `thisroot.sh`, execute the following in a julia prompt
+You need ROOT v6 and julia v0.4. After configuring ROOT using `thisroot.sh` and pointing the `JULIA_HOME` environment variable to the julia directory, execute the following in a julia prompt
 ~~~
 Pkg.clone("https://github.com/jpata/ROOT.jl.git")
 Pkg.build("ROOT")
 Pkg.test("ROOT")
 ~~~
 
+This will create a new executable `rjulia` in the package directory. This must be used as the julia interpreter if you want to simultaneously use ROOT.
 # Usage
 
 Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap (using `new` in C++).
@@ -32,7 +33,7 @@ These are the main workhorse of ROOT, which support fast row-based and disk-back
 
 ~~~
 #file: example/ttree.jl
-#run as: julia example/ttree.jl
+#run as: rjulia example/ttree.jl
 using ROOT
 
 tf = TFile("test.root", "RECREATE")

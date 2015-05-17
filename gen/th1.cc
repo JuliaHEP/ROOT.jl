@@ -13,6 +13,15 @@ extern "C" {
  Int_t TH1_Fill3(TH1* __obj, const char* name,  Double_t w) {
   return __obj->Fill(name, w);
 }
+ Double_t TH1_GetMean1(TH1* __obj) {
+  return __obj->GetMean();
+}
+ Double_t TH1_GetRMS1(TH1* __obj) {
+  return __obj->GetRMS();
+}
+ TArrayD* TH1_GetSumw21(TH1* __obj) {
+  return __obj->GetSumw2();
+}
  Double_t TH1_GetBinContent1(TH1* __obj,  Int_t bin) {
   return __obj->GetBinContent(bin);
 }
