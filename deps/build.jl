@@ -3,9 +3,8 @@ using BinDeps
 
 function install_root()
     println("could not find a ROOT6 installation, trying to install...")
-    #@osx_only install_root_osx()
-    #@linux_only install_root_linux()
-    install_root_linux()
+    @osx_only install_root_osx()
+    @linux_only install_root_linux()
 end
 
 function install_root_osx()
@@ -44,6 +43,6 @@ cd(joinpath(dirname(Base.source_path()), ".."))
 haskey(ENV, "ROOTSYS") || install_root()
 
 haskey(ENV, "JULIA_HOME") ||
-    error("could not find environment variable JULIA_HOME, please point it to the julia install directory")
+    error("could not find environment variable JULIA_HOME, please point it to /path/to/julia/usr/lib")
 
 compile_libs()
