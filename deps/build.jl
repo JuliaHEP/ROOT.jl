@@ -30,11 +30,11 @@ function compile_libs()
 end
 
 function compile_libs_linux()
-    run(`make clean lib-linux`)
+    run(`make clean lib-linux ui-linux`)
 end
 
 function compile_libs_osx()
-    run(`make clean lib-osx`)
+    run(`make clean lib-osx ui-osx`)
 end
 
 #go to $JULIA_PACKAGES/ROOT

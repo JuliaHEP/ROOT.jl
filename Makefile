@@ -21,8 +21,13 @@ libs: lib-osx lib-linux
 #compile ui.cc, which dlopens the repl after initializing ROOT
 ui-osx:
 	c++ -w -c $(JULIA_HOME)/../../ui/getopt.c -O
-	ld -macosx_version_min 10.10 -dylib getopt.o $(JULIA_HOME)/../../ui/repl.o -L$(JULIA_HOME) -ljulia -lc -lcrt1.o -o librepl.dylib
+	ld -macosx_version_min 10.10 -dylib getopt.o $(JULIA_HOME)/../../ui/repl.o -L$(JULIA_HOME) -ljulia -lc -lcrt1.o -o librepl
 	c++ src/ui.cc `root-config --cflags --libs --ldflags` -o rjulia
+
+ui-linux:
+	c++ -w -c $(JULIA_HOME)/../../ui/getopt.c -O -fPIC
+	ld -fPIC -shared getopt.o $(JULIA_HOME)/../../ui/repl.o -L$(JULIA_HOME) -ljulia -o librepl
+	c++ src/ui.cc -fPIC `root-config --cflags --libs --ldflags` -o rjulia
 
 .PHONY: clean
 

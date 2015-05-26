@@ -1,7 +1,15 @@
 using ROOT
 using Base.Test
 
-r = rcpp(""".L ~/macro.cxx""")
+f = open("macro.cxx", "w")
+write(f, """
+double fx(int i, int j) {
+    return i*3.14 + j;
+}
+""")
+close(f)
+
+r = rcpp(""".L macro.cxx""")
 println("r1 ", r)
 @test r==0
 r = rcpp_raw("""
