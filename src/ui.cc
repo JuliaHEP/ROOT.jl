@@ -13,11 +13,12 @@ int main(int argc, char *argv[])
     gROOT->ProcessLine("std::cout << \"ROOT initialized\" << std::endl;");
 
     const std::string libjulia_path(getenv("JULIA_LIB"));
+    const std::string libjuliarepl_path(getenv("JULIAREPL_LIB"));
     
     //load julia
     void* handle_julia = dlopen (libjulia_path.c_str(), RTLD_NOW|RTLD_GLOBAL);
     //load repl
-    void* handle = dlopen ("librepl", RTLD_NOW|RTLD_GLOBAL);
+    void* handle = dlopen (libjuliarepl_path.c_str(), RTLD_NOW|RTLD_GLOBAL);
     if (!handle || !handle_julia) {
         fputs (dlerror(), stderr);
         std::cerr << "could not load library" << std::endl;
