@@ -55,6 +55,12 @@ extern "C" {
  Int_t TH1_GetNbinsY1(TH1* __obj ) {
   return __obj->GetNbinsY();
 }
+Int_t TH1_GetNbinsZ1(TH1* __obj ) {
+ return __obj->GetNbinsZ();
+}
+Float_t TH1_GetBinLowEdgeX1(TH1* __obj, Int_t bin) {
+ return __obj->GetXaxis()->GetBinLowEdge(bin);
+}
  Double_t TH1_GetRandom1(TH1* __obj ) {
   return __obj->GetRandom();
 }
@@ -91,4 +97,8 @@ extern "C" {
  void TH1_SetEntries1(TH1* __obj,  Double_t n) {
   __obj->SetEntries(n);
 }
+Double_t TH1_GetBinLowEdgeX(TH1* __obj, int n) {
+  return __obj->GetXaxis()->GetBinLowEdge(n);
+}
+
 } //extern C

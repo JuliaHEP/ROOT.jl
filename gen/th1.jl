@@ -16,6 +16,7 @@
 @method LIBROOT TH1 GetEntries Double_t () GetEntries1 ( )
 @method LIBROOT TH1 GetNbinsX Int_t () GetNbinsX1 ( )
 @method LIBROOT TH1 GetNbinsY Int_t () GetNbinsY1 ( )
+@method LIBROOT TH1 GetNbinsZ Int_t () GetNbinsZ1 ( )
 @method LIBROOT TH1 GetRandom Double_t () GetRandom1 ( )
 @method LIBROOT TH1 Integral Double_t (option::Ptr{Option_t}, ) Integral1 ("",  )
 @method LIBROOT TH1 Integral Double_t (binx1::Int_t, binx2::Int_t, option::Ptr{Option_t}, ) Integral2 (nothing, nothing, "",  )
@@ -28,6 +29,9 @@
 @method LIBROOT TH1 SetBinError Void (binx::Int_t, biny::Int_t, binz::Int_t, error::Double_t, ) SetBinError3 (nothing, nothing, nothing, nothing,  )
 @method LIBROOT TH1 SetDirectory Void (dir::Ptr{TDirectory}, ) SetDirectory1 (nothing,  )
 @method LIBROOT TH1 SetEntries Void (n::Double_t, ) SetEntries1 (nothing,  )
+
+@method LIBROOT TH1 GetBinLowEdgeX Double_t (n::Cint, ) GetBinLowEdgeX (nothing, )
+
 @subclass TH1 TNamed
 @subclass TH1 TAttLine
 @subclass TH1 TAttFill

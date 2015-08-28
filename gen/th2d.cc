@@ -19,4 +19,5 @@ TH2D* TH2D_TH2D5(const char* name, const char* title,  Int_t nbinsx, const Doubl
 TH2D* TH2D_TH2D6(const char* name, const char* title,  Int_t nbinsx, const Float_t* xbins,  Int_t nbinsy, const Float_t* ybins) {
   return new TH2D(name, title, nbinsx, xbins, nbinsy, ybins);
 }
+
 } //extern C

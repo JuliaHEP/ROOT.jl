@@ -25,4 +25,8 @@ extern "C" {
  Int_t TH3_Fill8(TH3* __obj,  Double_t x,  Double_t y, const char* namez,  Double_t w) {
   return __obj->Fill(x, y, namez, w);
 }
+
+Double_t TH3_GetBinLowEdgeZ(TH3* __obj, int n) {
+  return __obj->GetZaxis()->GetBinLowEdge(n);
+}
 } //extern C

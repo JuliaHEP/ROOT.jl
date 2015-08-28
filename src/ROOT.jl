@@ -20,7 +20,6 @@ const ROOT_OBJECTS = Symbol[]
 is_null(x::ROOTObject) = x.p==C_NULL
 #define a ROOT TObject type, needed for correct dispatch
 macro root_object(name)
-
     parent = symbol("$(name)A")
 
     push!(ROOT_OBJECTS, name)
@@ -69,14 +68,14 @@ abstract TH1DA <: TH1A
 abstract TH2A <: TH1A
 abstract TH2DA <: TH2A
 
-abstract TH3A <: TH1A
+abstract TH3A <: TH2A
 abstract TH3DA <: TH3A
 
 abstract TUnfoldA <: TObjectA
 abstract TUnfoldSysA <: TUnfoldA
 
-root_cast{T <: ROOTObject, K <: ROOTObject}(to::Type{K}, o::T) =
-    to(root_pointer(o))
+root_cast{T <: ROOTObject, K <: ROOTObject}(desttype::Type{K}, srcobj::T) =
+    desttype(root_pointer(srcobj))
 
 #FIXME: autogenerate
 @root_object(TObject)
@@ -461,7 +460,7 @@ end
 ##ROOT is zero-based, Julia one-based
 Base.getindex(tc::TSeqCollectionA, n::Integer) = At(tc, Int32(n-1))
 
-ReadObj(x) = ReadObj(root_cast(TKey, x))
+ReadObj(x::TKeyA) = ReadObj(root_cast(TKey, x))
 
 #might be needed in some cases
 #@linux_only begin
@@ -522,6 +521,7 @@ export GetTypeName
 export SetCacheSize, AddBranchToCache, SetBranchStatus, Draw, GetV1
 export ReadObj, GetName, ClassName
 export Integral, GetEntries, SetEntries, GetNbinsX, GetNbinsY, GetNbinsZ, GetBinContent, GetBinError, GetBinLowEdge, GetBinWidth
+export GetBinLowEdgeX, GetBinLowEdgeY, GetBinLowEdgeZ 
 export Chi2Test
 export SetBinContent, SetBinError
 export SetDirectory

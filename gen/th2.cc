@@ -16,4 +16,9 @@ extern "C" {
  Int_t TH2_Fill5(TH2* __obj, const char* namex, const char* namey,  Double_t w) {
   return __obj->Fill(namex, namey, w);
 }
+
+Double_t TH2_GetBinLowEdgeY(TH2* __obj, int n) {
+  return __obj->GetYaxis()->GetBinLowEdge(n);
+}
+
 } //extern C
