@@ -43,6 +43,6 @@ cd(joinpath(dirname(Base.source_path()), ".."))
 haskey(ENV, "ROOTSYS") || install_root()
 
 haskey(ENV, "MY_JULIA_HOME") ||
-    error("could not find environment variable JULIA_HOME, please point it to the directory where the julia binary resides: /path/to/julia/")
+    error("could not find environment variable MY_JULIA_HOME, please point it to the directory where the julia binary resides: /path/to/julia/")
 
 compile_libs()
