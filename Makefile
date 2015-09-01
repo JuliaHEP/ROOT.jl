@@ -22,7 +22,7 @@ ui-osx:
 
 ui-linux:
 	c++ -w -c $(MY_JULIA_HOME)/ui/getopt.c -O -fPIC
-	ld -fPIC -shared getopt.o $(MY_JULIA_HOME)/ui/repl.o -L$(MY_JULIA_HOME) -ljulia -o librepl
+	ld -fPIC -shared getopt.o $(MY_JULIA_HOME)/ui/repl.o -L$(MY_JULIA_HOME)/usr/lib -ljulia -o librepl
 	c++ src/ui.cc -fPIC `root-config --cflags --libs --ldflags` -o root-julia
 
 .PHONY: ui-osx ui-linux lib-osx lib-linux clean
