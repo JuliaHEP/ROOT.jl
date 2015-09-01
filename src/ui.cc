@@ -17,15 +17,22 @@ int main(int argc, char *argv[])
     
     //load julia
     void* handle_julia = dlopen (libjulia_path.c_str(), RTLD_NOW|RTLD_GLOBAL);
-    //load repl
-    void* handle = dlopen (libjuliarepl_path.c_str(), RTLD_NOW|RTLD_GLOBAL);
-    if (!handle || !handle_julia) {
+    if (!handle_julia) {
         fputs (dlerror(), stderr);
-        std::cerr << "could not load library" << std::endl;
+        std::cerr << std::endl;
+        std::cerr << "could not load library: " << libjulia_path << std::endl;
+        return 1;
+    }
+    //load repl
+    void* handle_repl = dlopen (libjuliarepl_path.c_str(), RTLD_NOW|RTLD_GLOBAL);
+    if (!handle_repl) {
+        fputs (dlerror(), stderr);
+        std::cerr << std::endl;
+        std::cerr << "could not load library: " << libjuliarepl_path << std::endl;
         return 1;
     }
     typedef int (*t_jl_main)(int, char**);
-    t_jl_main jl_main = (t_jl_main)dlsym(handle, "main");
+    t_jl_main jl_main = (t_jl_main)dlsym(handle_repl, "main");
     if (!jl_main) {
         fputs (dlerror(), stderr);
         std::cerr << "could not load jl_main" << std::endl;
