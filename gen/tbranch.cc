@@ -19,4 +19,7 @@ const char* TBranch_GetClassName1(TBranch* __obj ) {
  void TBranch_SetAddress1(TBranch* __obj,  void* add) {
   __obj->SetAddress(add);
 }
+ int TBranch_GetEntry1(TBranch* __obj, long entry) {
+  return __obj->GetEntry(entry);
+}
 } //extern C
