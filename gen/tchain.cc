@@ -13,5 +13,7 @@ TChain* TChain_TChain2(const char* name, const char* title) {
  Long_t TChain_LoadTree1(TChain* __obj, Long_t entry) {
   return __obj->LoadTree(entry);
 }
-
+ Long_t TChain_GetTreeNumber1(TChain* __obj) {
+  return __obj->GetTreeNumber();
+}
 } //extern C
