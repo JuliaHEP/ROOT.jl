@@ -6,29 +6,52 @@
 #include <iostream>
 #include <string>
 
+#ifdef _WIN32
+   //define something for Windows (32-bit and 64-bit, this part is common)
+   #ifdef _WIN64
+      //define something for Windows (64-bit only)
+   #endif
+#elif __APPLE__
+    #include "TargetConditionals.h"
+    #if TARGET_IPHONE_SIMULATOR
+         // iOS Simulator
+    #elif TARGET_OS_IPHONE
+        // iOS device
+    #elif TARGET_OS_MAC
+	#define LIBJULIA "libjulia.dylin"
+	#define LIBREPL "librepl.dylib"
+        // Other kinds of Mac OS
+    #else
+        // Unsupported platform
+    #endif
+#elif __linux
+	#define LIBJULIA "libjulia.so"
+	#define LIBREPL "librepl.so"
+#endif
+
 int main(int argc, char *argv[])
 {
     //dummy code to initialize codegen
     gROOT->ProcessLine("int __dummy__=1;");
     gROOT->ProcessLine("std::cout << \"ROOT initialized\" << std::endl;");
 
-    const std::string libjulia_path(getenv("JULIA_LIB"));
-    const std::string libjuliarepl_path(getenv("JULIAREPL_LIB"));
+    //const std::string libjulia_path(getenv("JULIA_LIB"));
+    //const std::string libjuliarepl_path(getenv("JULIAREPL_LIB"));
     
     //load julia
-    void* handle_julia = dlopen (libjulia_path.c_str(), RTLD_NOW|RTLD_GLOBAL);
+    void* handle_julia = dlopen (LIBJULIA, RTLD_NOW|RTLD_GLOBAL);
     if (!handle_julia) {
         fputs (dlerror(), stderr);
         std::cerr << std::endl;
-        std::cerr << "could not load library: " << libjulia_path << std::endl;
+        std::cerr << "could not load library: julia" << std::endl;
         return 1;
     }
     //load repl
-    void* handle_repl = dlopen (libjuliarepl_path.c_str(), RTLD_NOW|RTLD_GLOBAL);
+    void* handle_repl = dlopen (LIBREPL, RTLD_NOW|RTLD_GLOBAL);
     if (!handle_repl) {
         fputs (dlerror(), stderr);
         std::cerr << std::endl;
-        std::cerr << "could not load library: " << libjuliarepl_path << std::endl;
+        std::cerr << "could not load library: repl" << std::endl;
         return 1;
     }
     typedef int (*t_jl_main)(int, char**);
