@@ -18,7 +18,7 @@
     #elif TARGET_OS_IPHONE
         // iOS device
     #elif TARGET_OS_MAC
-	#define LIBJULIA "libjulia.dylin"
+	#define LIBJULIA "libjulia.dylib"
 	#define LIBREPL "librepl.dylib"
         // Other kinds of Mac OS
     #else
