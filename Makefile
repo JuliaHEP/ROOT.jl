@@ -27,6 +27,8 @@ ui-linux:
 
 .PHONY: ui-osx ui-linux lib-osx lib-linux clean
 
+perf: test/perf.cc
+	c++  `root-config --libs --cflags` test/perf.cc -o perf
 clean:
 	rm -f gen/*.o
 	rm -f libroot*
