@@ -1,33 +1,11 @@
 //#include <julia.h>
+#include "deps.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <dlfcn.h>
 #include "TROOT.h"
 #include <iostream>
 #include <string>
-
-#ifdef _WIN32
-   //define something for Windows (32-bit and 64-bit, this part is common)
-   #ifdef _WIN64
-      //define something for Windows (64-bit only)
-   #endif
-#elif __APPLE__
-    #include "TargetConditionals.h"
-    #if TARGET_IPHONE_SIMULATOR
-         // iOS Simulator
-    #elif TARGET_OS_IPHONE
-        // iOS device
-    #elif TARGET_OS_MAC
-	#define LIBJULIA "libjulia.dylib"
-	#define LIBREPL "librepl.dylib"
-        // Other kinds of Mac OS
-    #else
-        // Unsupported platform
-    #endif
-#elif __linux
-	#define LIBJULIA "libjulia.so"
-	#define LIBREPL "librepl.so"
-#endif
 
 int main(int argc, char *argv[])
 {

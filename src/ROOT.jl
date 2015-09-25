@@ -1,9 +1,18 @@
+__precompile__()
 module ROOT
 
-const LIBROOT = string(dirname(Base.source_path()), "/../libroot")
-
-const DUMPEX = ("DUMPEX" in keys(ENV) && int(ENV["DUMPEX"])==1)
+#Check if ROOT is set up
 "ROOTSYS" in keys(ENV) || error("ROOTSYS not defined, call `source /path/to/root/thisroot.sh`")
+
+#check for correct root version (root 6)
+rootversion = readall(`root-config --version`) |> strip
+startswith(rootversion, "6") || error("Need ROOT 6 or greater, but found $rootversion")
+    
+@linux_only const LIBROOT = string(dirname(Base.source_path()), "/../libroot.so")
+@osx_only const LIBROOT = string(dirname(Base.source_path()), "/../libroot.dylib")
+
+#should we print generated code for root function wrappers?
+const DUMPEX = ("DUMPEX" in keys(ENV) && int(ENV["DUMPEX"])==1)
 import Base.length, Base.getindex
 
 #abstract type that wraps a ROOT object through an opaque pointer

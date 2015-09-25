@@ -1,6 +1,15 @@
 using BinDeps
 @BinDeps.setup
 
+const LIBJULIA = first(Libdl.dllist()[find(x->contains(x, "libjulia"), Libdl.dllist())])
+const SUFFIX = split(LIBJULIA, '.')[end]
+const ROOTJL = Pkg.dir() * "/ROOT"
+
+depf = open("../src/deps.h", "w+")
+write(depf, "#define LIBJULIA \"$LIBJULIA\"\n")
+write(depf, "#define LIBREPL \"$ROOTJL/librepl.$SUFFIX\"\n")
+close(depf)
+
 function install_root()
     println("could not find a ROOT6 installation, trying to install...")
     @osx_only install_root_osx()
@@ -39,10 +48,11 @@ end
 
 #go to $JULIA_PACKAGES/ROOT
 cd(joinpath(dirname(Base.source_path()), ".."))
-
 haskey(ENV, "ROOTSYS") || install_root()
 
 haskey(ENV, "MY_JULIA_HOME") ||
     error("could not find environment variable MY_JULIA_HOME, please point it to the directory where the julia binary resides: /path/to/julia/")
 
+sysfile = readall(`find $(ENV["MY_JULIA_HOME"]) -name "sys.$SUFFIX"`)|>split|>first
 compile_libs()
+println("ROOT.jl compiled! to run, execute $ROOTJL/julia -H $ROOTJL -J $sysfile")
