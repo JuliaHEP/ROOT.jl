@@ -53,6 +53,11 @@ haskey(ENV, "ROOTSYS") || install_root()
 haskey(ENV, "MY_JULIA_HOME") ||
     error("could not find environment variable MY_JULIA_HOME, please point it to the directory where the julia binary resides: /path/to/julia/")
 
-sysfile = readall(`find $(ENV["MY_JULIA_HOME"]) -name "sys.$SUFFIX"`)|>split|>first
 compile_libs()
-println("ROOT.jl compiled! to run, execute $ROOTJL/julia -H $ROOTJL -J $sysfile")
+
+#Find julia system image file
+sysfile = readall(`find $(ENV["MY_JULIA_HOME"]) -name "sys.$SUFFIX"`)|>split|>first
+
+println("ROOT.jl compiled!")
+println("Add the following to your ~/.bashrc or ~/.bash_profile:")
+println("alias rjulia=\"$ROOTJL/julia -H $ROOTJL -J $sysfile\"")
