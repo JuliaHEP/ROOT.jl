@@ -16,10 +16,12 @@ JL_INSTALL_DIR = dir
 @show JL_INSTALL_DIR
 const incdir_uv = readall(`find $JL_INSTALL_DIR -name "uv.h"`)|>split|>first|>dirname
 const incdir_julia = readall(`find $JL_INSTALL_DIR -name "julia.h"`)|>split|>first|>dirname
+const incdir_support = readall(`find $JL_INSTALL_DIR -name "libsupport.h"`)|>split|>first|>dirname
 const libdir_julia = dirname(LIBJULIA)
 
 @show incdir_uv
 @show incdir_julia
+@show incdir_support
 @show libdir_julia
 
 depf = open("../src/deps.h", "w+")
@@ -58,17 +60,20 @@ function compile_libs()
 end
 
 function compile_libs_linux()
-    run(`make clean lib-linux ui-linux INCDIR_UV=$incdir_uv INCDIR_JULIA=$incdir_julia LIBDIR_JULIA=$libdir_julia`)
+    run(`make clean lib-linux ui-linux INCDIR_UV=$incdir_uv INCDIR_JULIA=$incdir_julia LIBDIR_JULIA=$libdir_julia INCDIR_SUPPORT=$incdir_support`)
 end
 
 function compile_libs_osx()
-    run(`make clean lib-osx ui-osx INCDIR_UV=$incdir_uv INCDIR_JULIA=$incdir_julia LIBDIR_JULIA=$libdir_julia`)
+    run(`make clean lib-osx ui-osx INCDIR_UV=$incdir_uv INCDIR_JULIA=$incdir_julia LIBDIR_JULIA=$libdir_julia INCDIR_SUPPORT=$incdir_support`)
 end
 
 #go to $JULIA_PACKAGES/ROOT
 cd(joinpath(dirname(Base.source_path()), ".."))
 haskey(ENV, "ROOTSYS") || install_root()
+const ROOTPATH = readall(`which root-config`)|>split|>first|>dirname
+@show ROOTPATH
 
+println("Compiling support libs")
 compile_libs()
 
 print_with_color(:green, STDOUT, "ROOT.jl compiled!\n")

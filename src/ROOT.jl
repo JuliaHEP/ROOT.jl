@@ -4,7 +4,7 @@ module ROOT
 
 #check that we have the correct julia executable
 if !(contains(JULIA_HOME, "ROOT"))
-    error("Cannot use ROOT.jl from this executable, call julia from '$(Pkg.dir())/ROOT.jl/julia'")
+    error("Cannot use ROOT.jl from this executable, call julia from '$(Pkg.dir())/ROOT/julia'")
 end
 
 #Check if ROOT is set up

@@ -12,7 +12,7 @@ lib-osx: objs
 lib-linux: objs
 	c++ $(LDFLAGS) gen/*.o -o libroot.so
 
-INCDIRS=-I$(INCDIR_UV) -I$(INCDIR_JULIA)
+INCDIRS=-I$(INCDIR_UV) -I$(INCDIR_JULIA) -I$(INCDIR_SUPPORT)
 LIBDIRS=-L$(LIBDIR_JULIA)
 #compile getopts to an object file
 #link getopts and repl to a dynamic library
@@ -22,7 +22,7 @@ ui-osx:
 	c++ src/ui.cc `root-config --cflags --libs --ldflags` -o julia
 
 ui-linux:
-	c++ -w src/getopt.c src/repl.c -L$(MY_JULIA_HOME)/lib/julia/ -I$(MY_JULIA_HOME)/include/julia/ -lc -ljulia -shared -o librepl.so
+	c++ -fPIC -w src/getopt.c src/repl.c $(LIBDIRS) $(INCDIRS) -lc -ljulia -shared -o librepl.so
 	c++ src/ui.cc -fPIC `root-config --cflags --libs --ldflags` -o julia
 
 .PHONY: ui-osx ui-linux lib-osx lib-linux clean
