@@ -5,10 +5,22 @@ const LIBJULIA = first(Libdl.dllist()[find(x->contains(x, "libjulia"), Libdl.dll
 const SUFFIX = split(LIBJULIA, '.')[end]
 const LIBSYS = first(Libdl.dllist()[find(x->contains(x, "sys.$SUFFIX"), Libdl.dllist())])
 const ROOTJL = Pkg.dir() * "/ROOT"
-const JL_INSTALL_DIR = dirname(LIBSYS) * "/../../../"
-ENV["MY_JULIA_HOME"] = JL_INSTALL_DIR
+JL_INSTALL_DIR = dirname(LIBSYS)
+
+dir = JL_INSTALL_DIR
+while !isfile("$dir/LICENSE.md")
+    dir = dirname(dir)
+end
+JL_INSTALL_DIR = dir
+
+@show JL_INSTALL_DIR
 const incdir_uv = readall(`find $JL_INSTALL_DIR -name "uv.h"`)|>split|>first|>dirname
-println(incdir_uv)
+const incdir_julia = readall(`find $JL_INSTALL_DIR -name "julia.h"`)|>split|>first|>dirname
+const libdir_julia = dirname(LIBJULIA)
+
+@show incdir_uv
+@show incdir_julia
+@show libdir_julia
 
 depf = open("../src/deps.h", "w+")
 write(depf, "#define LIBJULIA \"$LIBJULIA\"\n")
@@ -46,11 +58,11 @@ function compile_libs()
 end
 
 function compile_libs_linux()
-    run(`make clean lib-linux ui-linux`)
+    run(`make clean lib-linux ui-linux INCDIR_UV=$incdir_uv INCDIR_JULIA=$incdir_julia LIBDIR_JULIA=$libdir_julia`)
 end
 
 function compile_libs_osx()
-    run(`make clean lib-osx ui-osx`)
+    run(`make clean lib-osx ui-osx INCDIR_UV=$incdir_uv INCDIR_JULIA=$incdir_julia LIBDIR_JULIA=$libdir_julia`)
 end
 
 #go to $JULIA_PACKAGES/ROOT

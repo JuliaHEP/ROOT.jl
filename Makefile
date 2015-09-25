@@ -12,8 +12,8 @@ lib-osx: objs
 lib-linux: objs
 	c++ $(LDFLAGS) gen/*.o -o libroot.so
 
-INCDIRS=-I$(MY_JULIA_HOME)/include/julia/ -I$(MY_JULIA_HOME)/usr/include/ -I$(MY_JULIA_HOME)/src/ -I$(MY_JULIA_HOME)/src/support/ 
-LIBDIRS=-L$(MY_JULIA_HOME)/lib/julia/ -L$(MY_JULIA_HOME)/usr/lib/
+INCDIRS=-I$(INCDIR_UV) -I$(INCDIR_JULIA)
+LIBDIRS=-L$(LIBDIR_JULIA)
 #compile getopts to an object file
 #link getopts and repl to a dynamic library
 #compile ui.cc, which dlopens the repl after initializing ROOT

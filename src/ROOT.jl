@@ -1,11 +1,18 @@
-__precompile__()
+#__precompile__()
+
 module ROOT
 
+#check that we have the correct julia executable
+if !(contains(JULIA_HOME, "ROOT"))
+    error("Cannot use ROOT.jl from this executable, call julia from '$(Pkg.dir())/ROOT.jl/julia'")
+end
+
 #Check if ROOT is set up
-"ROOTSYS" in keys(ENV) || error("ROOTSYS not defined, call `source /path/to/root/thisroot.sh`")
+"ROOTSYS" in keys(ENV) ||
+    error("ROOTSYS not defined, call `source /path/to/root/thisroot.sh`")
 
 #check for correct root version (root 6)
-rootversion = readall(`root-config --version`) |> strip
+const rootversion = readall(`root-config --version`) |> strip
 startswith(rootversion, "6") || error("Need ROOT 6 or greater, but found $rootversion")
     
 @linux_only const LIBROOT = string(dirname(Base.source_path()), "/../libroot.so")
