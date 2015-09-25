@@ -6,12 +6,13 @@
 #include "TROOT.h"
 #include <iostream>
 #include <string>
+#include <cassert>
 
 int main(int argc, char *argv[])
 {
     //dummy code to initialize codegen
     gROOT->ProcessLine("int __dummy__=1;");
-    gROOT->ProcessLine("std::cout << \"ROOT initialized\" << std::endl;");
+    gROOT->ProcessLine("std::cout << \"ROOT: ROOT initialized\" << std::endl;");
 
     //const std::string libjulia_path(getenv("JULIA_LIB"));
     //const std::string libjuliarepl_path(getenv("JULIAREPL_LIB"));
@@ -39,6 +40,38 @@ int main(int argc, char *argv[])
         std::cerr << "could not load jl_main" << std::endl;
         return 1;
     }
-    gROOT->ProcessLine("std::cout << \"starting julia\" << std::endl;");
-    return jl_main(argc, argv);
+    gROOT->ProcessLine("std::cout << \"ROOT: starting julia\" << std::endl;");
+   
+    int nchar = 0;
+    for (int i=0; i<argc; i++) {
+        nchar += strlen(argv[i])+1;
+    }
+    nchar += strlen("-H")+1;
+    nchar += strlen(ROOTJL_HOME)+1;
+    nchar += strlen("-J")+1;
+    nchar += strlen(SYSIMG)+1;
+    
+    assert(nchar < 5000);
+    char newv[5000];
+    char **newvals = (char**)malloc((argc+4) * sizeof(char*));
+    char* idx = newv;
+    idx = strcpy(newv, argv[0]);
+    newvals[0] = idx;
+    int prevlen = strlen(argv[0])+1;
+
+    int ic = 1;
+    for (auto& v : {"-H", ROOTJL_HOME, "-J", SYSIMG}) {
+        idx = strcpy(idx + prevlen, v);
+        newvals[ic] = idx;
+        prevlen = strlen(v) + 1;
+        ic += 1;
+    }
+
+    for (int i=1; i<argc; i++) {
+        idx = strcpy(idx + prevlen, argv[i]);
+        prevlen = strlen(argv[i]) + 1;
+        newvals[ic] = idx;
+    }
+
+    return jl_main(argc+4, newvals);
 }

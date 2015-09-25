@@ -5,9 +5,14 @@ const LIBJULIA = first(Libdl.dllist()[find(x->contains(x, "libjulia"), Libdl.dll
 const SUFFIX = split(LIBJULIA, '.')[end]
 const ROOTJL = Pkg.dir() * "/ROOT"
 
+#Find julia system image file
+sysfile = readall(`find $(ENV["MY_JULIA_HOME"]) -name "sys.$SUFFIX"`)|>split|>first
+
 depf = open("../src/deps.h", "w+")
 write(depf, "#define LIBJULIA \"$LIBJULIA\"\n")
 write(depf, "#define LIBREPL \"$ROOTJL/librepl.$SUFFIX\"\n")
+write(depf, "#define ROOTJL_HOME \"$ROOTJL\"\n")
+write(depf, "#define SYSIMG \"$sysfile\"\n")
 close(depf)
 
 function install_root()
@@ -43,7 +48,7 @@ function compile_libs_linux()
 end
 
 function compile_libs_osx()
-    run(`make clean lib-osx ui-osx`)
+    run(`make ui-osx`)
 end
 
 #go to $JULIA_PACKAGES/ROOT
@@ -54,9 +59,6 @@ haskey(ENV, "MY_JULIA_HOME") ||
     error("could not find environment variable MY_JULIA_HOME, please point it to the directory where the julia binary resides: /path/to/julia/")
 
 compile_libs()
-
-#Find julia system image file
-sysfile = readall(`find $(ENV["MY_JULIA_HOME"]) -name "sys.$SUFFIX"`)|>split|>first
 
 println("ROOT.jl compiled!")
 println("Add the following to your ~/.bashrc or ~/.bash_profile:")
