@@ -32,7 +32,8 @@ Now run the ROOT-enabled julia interpreter using `/Users/joosep/.julia/v0.4/ROOT
 > h = TH1D("hist", "My Hist", Int32(10), 0.0, 100.0)
 ~~~
 
-This will create a new executable `julia` in the ROOT.jl package directory. This must be used as the julia interpreter if you want to simultaneously use ROOT.
+This will create a new executable `julia` in the `ROOT.jl` package directory. This **must** be used as the julia executable if you want to simultaneously use ROOT.
+
 # Usage
 
 Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap (using `new` in C++).
@@ -66,4 +67,5 @@ Close(tf)
 # Known issues
 
 1. ROOT.jl supports only ROOT 6
-2. When calling `using ROOT` from the standard julia REPL that comes with julia (without having recompiled as in this module), Cling crashes/segfaults: **always use rjulia with ROOT.jl**
+2. When calling `using ROOT` from the standard julia REPL that comes with julia (without having recompiled as in this module), Cling crashes/segfaults: **always use rjulia with ROOT.jl**.
+3. Only a limited set of classes are supported
