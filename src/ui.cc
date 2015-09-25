@@ -50,7 +50,8 @@ int main(int argc, char *argv[])
     nchar += strlen(ROOTJL_HOME)+1;
     nchar += strlen("-J")+1;
     nchar += strlen(SYSIMG)+1;
-    
+    std::cout << "argc=" << argc << std::endl;
+
     assert(nchar < 5000);
     char newv[5000];
     char **newvals = (char**)malloc((argc+4) * sizeof(char*));
@@ -70,8 +71,12 @@ int main(int argc, char *argv[])
     for (int i=1; i<argc; i++) {
         idx = strcpy(idx + prevlen, argv[i]);
         prevlen = strlen(argv[i]) + 1;
-        newvals[ic] = idx;
+        newvals[ic+i-1] = idx;
     }
+
+    for (int i=0; i<argc+4; i++) {
+        std::cout << newvals[i] << std::endl;
+    } 
 
     return jl_main(argc+4, newvals);
 }

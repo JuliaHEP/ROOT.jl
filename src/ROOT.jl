@@ -1,4 +1,3 @@
-__precompile__()
 module ROOT
 
 #Check if ROOT is set up
