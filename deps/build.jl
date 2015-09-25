@@ -59,6 +59,6 @@ haskey(ENV, "ROOTSYS") || install_root()
 
 compile_libs()
 
-println("ROOT.jl compiled!")
+print_with_color(:green, STDOUT, "ROOT.jl compiled!\n")
 println("Add the following to your ~/.bashrc or ~/.bash_profile:")
 println("alias rjulia=\"$ROOTJL/julia\"")
