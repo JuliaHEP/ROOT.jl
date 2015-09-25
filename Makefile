@@ -30,7 +30,7 @@ ui-linux:
 perf: test/perf.cc
 	c++  `root-config --libs --cflags` test/perf.cc -o perf
 clean:
-	rm -f gen/*.o
-	rm -f libroot*
-	rm -f librepl*
-	rm -f julia
+	rm -rf gen/*.o
+	rm -rf libroot*
+	rm -rf librepl*
+	rm -rf julia

@@ -3,16 +3,18 @@ using BinDeps
 
 const LIBJULIA = first(Libdl.dllist()[find(x->contains(x, "libjulia"), Libdl.dllist())])
 const SUFFIX = split(LIBJULIA, '.')[end]
+const LIBSYS = first(Libdl.dllist()[find(x->contains(x, "sys.$SUFFIX"), Libdl.dllist())])
 const ROOTJL = Pkg.dir() * "/ROOT"
-
-#Find julia system image file
-sysfile = readall(`find $(ENV["MY_JULIA_HOME"]) -name "sys.$SUFFIX"`)|>split|>first
+const JL_INSTALL_DIR = dirname(LIBSYS) * "/../../../"
+ENV["MY_JULIA_HOME"] = JL_INSTALL_DIR
+const incdir_uv = readall(`find $JL_INSTALL_DIR -name "uv.h"`)|>split|>first|>dirname
+println(incdir_uv)
 
 depf = open("../src/deps.h", "w+")
 write(depf, "#define LIBJULIA \"$LIBJULIA\"\n")
 write(depf, "#define LIBREPL \"$ROOTJL/librepl.$SUFFIX\"\n")
 write(depf, "#define ROOTJL_HOME \"$ROOTJL\"\n")
-write(depf, "#define SYSIMG \"$sysfile\"\n")
+write(depf, "#define SYSIMG \"$LIBSYS\"\n")
 close(depf)
 
 function install_root()
@@ -48,18 +50,15 @@ function compile_libs_linux()
 end
 
 function compile_libs_osx()
-    run(`make ui-osx`)
+    run(`make clean lib-osx ui-osx`)
 end
 
 #go to $JULIA_PACKAGES/ROOT
 cd(joinpath(dirname(Base.source_path()), ".."))
 haskey(ENV, "ROOTSYS") || install_root()
 
-haskey(ENV, "MY_JULIA_HOME") ||
-    error("could not find environment variable MY_JULIA_HOME, please point it to the directory where the julia binary resides: /path/to/julia/")
-
 compile_libs()
 
 println("ROOT.jl compiled!")
 println("Add the following to your ~/.bashrc or ~/.bash_profile:")
-println("alias rjulia=\"$ROOTJL/julia -H $ROOTJL -J $sysfile\"")
+println("alias rjulia=\"$ROOTJL/julia\"")
