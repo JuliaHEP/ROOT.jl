@@ -1,6 +1,6 @@
 # ROOT.jl
 
-Wraps ROOT (http://root.cern.ch) using Clang.jl in a semi-automatic way. Currently supports a subset of the most commonly used ROOT classes and methods, among them
+Wraps ROOT (http://root.cern.ch) using Clang.jl in a semi-automatic way. Currently supports a subset of the most commonly used ROOT classes and methods, among them:
 
 * TTree, TChain, TBranch
 * TFile, TDirectory, TDirectoryFile
@@ -12,17 +12,27 @@ This wrapper is a very thin C layer on top of the ROOT C++ library and no runtim
 One can access the full ROOT framework though the ``process_line(cmd::ASCIIString)`` wrapper.
 
 See also https://github.com/jpata/ROOTDataFrames.jl for an interface between TTrees and DataFrames.
+See also https://github.com/jpata/ROOTHistograms.jl for an interface between https://github.com/JuliaStats/StatsBase.jl histograms and julia histograms.
 
 # Installation
 
-You need ROOT v6 and julia v0.4. After configuring ROOT using `thisroot.sh` and pointing the `MY_JULIA_HOME` environment variable to the julia directory, execute the following in a julia prompt
+You need ROOT v6 and julia v0.4. After configuring ROOT using `thisroot.sh`, execute the following in a julia prompt
 ~~~
-Pkg.clone("https://github.com/jpata/ROOT.jl.git")
-Pkg.build("ROOT")
-Pkg.test("ROOT")
+> Pkg.clone("https://github.com/jpata/ROOT.jl.git")
+> Pkg.build("ROOT")
+ROOT.jl compiled!
+Add the following to your ~/.bashrc or ~/.bash_profile:
+alias rjulia="/Users/joosep/.julia/v0.4/ROOT/julia"
 ~~~
 
-This will create a new executable `rjulia` in the package directory. This must be used as the julia interpreter if you want to simultaneously use ROOT.
+Now run the ROOT-enabled julia interpreter using `/Users/joosep/.julia/v0.4/ROOT/julia`
+~~~
+> using ROOT
+> Pkg.test("ROOT")
+> h = TH1D("hist", "My Hist", Int32(10), 0.0, 100.0)
+~~~
+
+This will create a new executable `julia` in the ROOT.jl package directory. This must be used as the julia interpreter if you want to simultaneously use ROOT.
 # Usage
 
 Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap (using `new` in C++).
@@ -55,4 +65,5 @@ Close(tf)
 
 # Known issues
 
-1. ROOT.jl currently does not work with ROOT v6 due to ROOT6 using a built-in and patched LLVM
+1. ROOT.jl supports only ROOT 6
+2. When calling `using ROOT` from the standard julia REPL that comes with julia (without having recompiled as in this module), Cling crashes/segfaults: **always use rjulia with ROOT.jl**
