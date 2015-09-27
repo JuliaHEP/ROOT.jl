@@ -19,7 +19,7 @@ startswith(rootversion, "6") || error("Need ROOT 6 or greater, but found $rootve
 @osx_only const LIBROOT = string(dirname(Base.source_path()), "/../libroot.dylib")
 
 #should we print generated code for root function wrappers?
-const DUMPEX = ("DUMPEX" in keys(ENV) && int(ENV["DUMPEX"])==1)
+const DUMPEX = ("DUMPEX" in keys(ENV) && parse(Int, ENV["DUMPEX"])==1)
 import Base.length, Base.getindex
 
 #abstract type that wraps a ROOT object through an opaque pointer
@@ -46,7 +46,7 @@ macro root_object(name)
         #$name(p::Ptr{Void}) = $name(p)
         function root_pointer(x::$name)
             assert(x.p != 0)
-            return x.p
+            return convert(Ptr{$name}, x.p)
         end
     end)
 end
@@ -87,8 +87,9 @@ abstract TH2DA <: TH2A
 abstract TH3A <: TH2A
 abstract TH3DA <: TH3A
 
-abstract TUnfoldA <: TObjectA
-abstract TUnfoldSysA <: TUnfoldA
+#abstract TUnfoldA <: TObjectA
+#abstract TUnfoldSysA <: TUnfoldA
+abstract TSVDUnfoldA <: TObjectA
 
 root_cast{T <: ROOTObject, K <: ROOTObject}(desttype::Type{K}, srcobj::T) =
     desttype(root_pointer(srcobj))
@@ -126,8 +127,10 @@ typealias TH1F TH1D
 @root_object(TH3)
 @root_object(TH3D)
 
-@root_object(TUnfold)
-@root_object(TUnfoldSys)
+#@root_object(TUnfold)
+#@root_object(TUnfoldSys)
+@root_object(TSVDUnfold)
+
 #FIXME: silent case of TH2F to TH2D, may not work on all systems
 typealias TH2F TH2D
 
@@ -189,6 +192,10 @@ const type_replacement = Dict{Any,Any}(
     :None                     => :Void
 )
 
+const basetypes = Dict(
+    :Cint => :Integer,
+    :Cfloat => :Real,
+)
 const ccall_type_replacement = Dict{Any,Any}(
     :ASCIIString        =>    :(Ptr{UInt8}),
     :(Ptr{Option_t})    =>    :(Ptr{UInt8}),
@@ -231,8 +238,9 @@ function argument_replace(args::Expr)
         #name, type
         n = a.args[1]
         t = a.args[2]
-
-        jt = t
+        #Arguments for julia-side
+        jn = n #argument name
+        jt = t #argument type
 
         ###
         #conversions for julia-side function argument types
@@ -259,24 +267,36 @@ function argument_replace(args::Expr)
             t = ccall_type_replacement[t]
         end
 
-        #put julia arguments back together
-        jlarg = Expr(symbol("::"))
-        push!(jlarg.args, n)
-        push!(jlarg.args, jt)
-
+        #Replace data type
         if typeof(t) <: Symbol
             if t in ROOT_OBJECTS
                 n = :(root_pointer($(n)))
                 t = :(Ptr{Void})
             end
+        #Convert t::Ptr{TObj} => t::TObj (julia) and root_pointer(t) (ccall)
         elseif typeof(t) <: Expr
-            #if t.head == :curly && t.args[1] == :Ptr
-            #    n = :(root_pointer($(n)))
-            #    t = :(Ptr{Void})
-            #end
+            #Only do replacement for ROOT pointers
+            if t.head == :curly && t.args[1] == :Ptr && t.args[2] in [:TH1D, :TH2D, :TArrayD]
+                pointer_dtype = t.args[2]
+                jt = pointer_dtype
+                n = :(root_pointer($(n)))
+                t = t
+            end
+        end
+
+        if jt != :ASCIIString && haskey(basetypes, jt)
+            jt = basetypes[jt]
+            #convert to correct C type at runtime
+            n = :($t($n))
         end
         #println("found replacement $n::$t")
+        #put julia arguments back together
 
+        jlarg = Expr(symbol("::"))
+        push!(jlarg.args, jn)
+        push!(jlarg.args, jt)
+    
+        #ccall values
         push!(avals.args, n)
         push!(aargs.args, t)
 
@@ -461,8 +481,10 @@ include("../gen/tchain.jl")
 include("../gen/tbranch.jl")
 include("../gen/tleaf.jl")
 
-include("../gen/tunfold.jl")
-include("../gen/tunfoldsys.jl")
+include("../gen/tsvdunfold.jl")
+
+#include("../gen/tunfold.jl")
+#include("../gen/tunfoldsys.jl")
 
 function Base.length(x::TCollectionA)
     if x.p != C_NULL
@@ -519,8 +541,8 @@ function Base.mkpath(tf::TFile, dirname; cd=true)
     return d
 end
 
-export TFile, TTree, TObject, TH1, TH1F, TH2F, TH3F, TH1D, TH2D, TH2, TH3D, TBranch, TKey, TLeaf, TDirectory, TClass
-export TFileA, TTreeA, TObjectA, TH1A, TH2A, TH3A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA
+export TFile, TTree, TObject, TH1, TH1F, TH2F, TH3F, TH1D, TH2D, TH2, TH3D, TBranch, TKey, TLeaf, TDirectory, TClass, TSVDUnfold
+export TFileA, TTreeA, TObjectA, TH1A, TH2A, TH3A, TBranchA, TKeyA, TLeafA, TDirectoryA, TClassA, TSVDUnfoldA
 export TChain
 export Open
 export Write, Close, Fill, Branch, Print
@@ -549,6 +571,7 @@ export root_cast
 export gROOT
 
 export classname, to_root
+export root_pointer
 export SHORT_TYPEMAP
 
 export GetAt, SetAt, GetSize
@@ -557,6 +580,7 @@ export Sumw2, GetSumw2
 export TListIter, Next, Reset
 export is_null
 
+export SetNormalize, Unfold, GetUnfoldCovMatrix, GetKReg, GetD, GetSV, GetXtau, GetXinv, GetBCov, ComputeChiSquared
 include("cppmacro.jl")
 
 end

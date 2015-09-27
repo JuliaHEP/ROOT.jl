@@ -14,7 +14,7 @@ end
 println("my_hist entries=$(GetEntries(hi)) mean=$(GetMean(hi)) rms=$(GetRMS(hi))")
 
 @test_approx_eq_eps GetMean(hi) 0.0 0.1
-warn("Disabling RMS test!")
+#warn("Disabling RMS test!")
 #@test_approx_eq_eps GetRMS(hi) 1.0 0.1
 
 sw2 = ROOT.GetSumw2(hi)
@@ -39,4 +39,3 @@ hi2 = TH2D("my_hist2", "My Hist", Int32(2), pointer(bx), Int32(1), pointer(by)):
 Fill(hi2, 0.0, 0.0, 0.5)
 @test GetEntries(hi2) == 1
 @test Integral(hi2) == 0.5
-
