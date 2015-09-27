@@ -1,8 +1,10 @@
 # ROOT.jl: ROOT bindings for julia
 
 -----
+
 Here is guidebook for people familiar with ROOT starting from scratch with julia, demonstrating some of the capabilities:
 https://github.com/jpata/JuliaForPhysicists/blob/master/guide.ipynb
+
 -----
 
 Wraps ROOT (http://root.cern.ch) using Clang.jl in a semi-automatic way. Currently supports a subset of the most commonly used ROOT classes and methods, among them:
