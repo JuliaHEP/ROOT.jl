@@ -14,4 +14,4 @@ before_install:
   - sudo apt-get install libpcre3-dev julia -y
 script:
   - julia -e 'Pkg.init(); Pkg.clone(pwd()); Pkg.build("ROOT")'
-  - `julia -e 'Pkg.dir("ROOT")` -e 'Pkg.test("ROOT")'
+  - julia -e test/wrapper.jl
