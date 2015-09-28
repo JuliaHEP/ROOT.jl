@@ -1,4 +1,4 @@
-The ROOT-Clang.jl package is licensed under the Simplified "2-clause" BSD License:
+The ROOT.jl package is licensed under the Simplified "2-clause" BSD License:
 
 > Copyright (c) 2014: Joosep Pata.
 >
