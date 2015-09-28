@@ -2,8 +2,10 @@ using BinDeps
 @BinDeps.setup
 
 const LIBJULIA = first(Libdl.dllist()[find(x->contains(x, "libjulia"), Libdl.dllist())])
+println("libjulia in $LIBJULIA")
 const SUFFIX = split(LIBJULIA, '.')[end]
 const LIBSYS = first(Libdl.dllist()[find(x->contains(x, "sys.$SUFFIX"), Libdl.dllist())])
+println("sys.ji in $LIBSYS")
 const ROOTJL = Pkg.dir() * "/ROOT"
 JL_INSTALL_DIR = dirname(LIBSYS)
 
