@@ -5,7 +5,7 @@ notifications:
   email: false
 env:
   matrix: 
-    - JULIAVERSION="juliareleases" 
+    #- JULIAVERSION="juliareleases" 
     - JULIAVERSION="julianightlies" 
 before_install:
   - sudo add-apt-repository ppa:staticfloat/julia-deps -y
@@ -13,5 +13,5 @@ before_install:
   - sudo apt-get update -qq -y
   - sudo apt-get install libpcre3-dev julia -y
 script:
-  - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("ROOT-Clang"))`); Pkg.pin("ROOT-Clang"); Pkg.resolve()'
-  - julia -e 'using ROOT-Clang; @assert isdefined(:ROOT-Clang); @assert typeof(ROOT-Clang) === Module'
+  - julia -e 'Pkg.init(); Pkg.clone(pwd()); Pkg.build("ROOT")'
+  - `julia -e 'Pkg.dir("ROOT")` -e 'Pkg.test("ROOT")'
