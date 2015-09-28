@@ -9,7 +9,11 @@ JL_INSTALL_DIR = dirname(LIBSYS)
 
 dir = JL_INSTALL_DIR
 while !isfile("$dir/LICENSE.md")
+    println("looking for julia base dir in $dir")
     dir = dirname(dir)
+    if !contains(dir, "julia")
+        error("$dir seems no longer valid, could not find julia base dir")
+    end
 end
 JL_INSTALL_DIR = dir
 
