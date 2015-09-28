@@ -76,3 +76,4 @@ Close(tf)
 1. ROOT.jl supports only ROOT 6
 2. When calling `using ROOT` from the standard julia REPL that comes with julia (without having recompiled as in this module), Cling crashes/segfaults: **always use rjulia with ROOT.jl**.
 3. Only a limited set of classes are supported
+4. There is no mechanism to destroy ROOT-managed objects 
