@@ -520,6 +520,11 @@ const SHORT_TYPEMAP = Dict{DataType, ASCIIString}(
     Bool      => "O"
 )
 
+#Manually define a Ref-based setbranchaddress which works for vectors
+function SetBranchAddress{T <: Real}(__obj::TTreeA, bname::ASCIIString, add::Vector{T}, p::Ptr{Void}=C_NULL)
+    ccall(("TTree_SetBranchAddress1",LIBROOT), Int32, (Ptr{Void}, Ptr{UInt8}, Ref{T}, Ptr{Ptr{TBranch}}), __obj.p, bname, add, p)
+end
+
 classname(o) = ClassName(root_cast(TObject, o))|>bytestring;
 
 function to_root(h)
