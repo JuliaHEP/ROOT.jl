@@ -1,19 +1,12 @@
-language: cpp
-compiler:
-  - clang
+language: julia
+julia:
+  - nightly
+  - 0.4
+os:
+  - linux
+  - osx
 notifications:
   email: false
-env:
-  matrix: 
-    #- JULIAVERSION="juliareleases" 
-    - JULIAVERSION="julianightlies" 
-before_install:
-  - sudo add-apt-repository ppa:staticfloat/julia-deps -y
-  - sudo add-apt-repository ppa:staticfloat/${JULIAVERSION} -y
-  - sudo apt-get update -qq -y
-  - sudo apt-get install libpcre3-dev julia -y
 script:
-  - which julia
-  - julia -e "println(JULIA_HOME)"
-  - julia -e 'Pkg.init(); Pkg.clone("https://github.com/jpata/ROOT.jl.git"); Pkg.build("ROOT")'
-  - julia test/wrapper.jl
+  - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - julia --check-bounds=yes -e 'Pkg.clone(pwd()); Pkg.build("ROOT"); Pkg.test("ROOT")'
