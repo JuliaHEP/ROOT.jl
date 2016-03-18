@@ -28,7 +28,7 @@
 
 #include "uv.h"
 #define WHOLE_ARCHIVE
-#include "../src/julia.h"
+#include "julia.h"
 
 #ifdef __cplusplus
 extern "C" {
