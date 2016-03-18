@@ -45,7 +45,7 @@ end
 
 function install_root_osx()
     run(`brew install root6`)
-    error("downloaded ROOT, now re-run setup after calling `. \$(brew --prefix root6)/libexec/thisroot.sh`")
+    println("downloaded ROOT, now re-run setup after calling `. \$(brew --prefix root6)/libexec/thisroot.sh`")
 end
 
 function install_root_linux()
@@ -55,7 +55,7 @@ function install_root_linux()
         download("http://root.cern.ch/download/root_v6.02.08.Linux-slc6-x86_64-gcc4.9.tar.gz", "root.tgz")
         run(`tar xf root.tgz`)
     end
-    error("downloaded ROOT, now re-run setup after calling `source $dir/root/bin/thisroot.sh`")
+    println("downloaded ROOT, now re-run setup after calling `source $dir/root/bin/thisroot.sh`")
 end
 
 

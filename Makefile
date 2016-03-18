@@ -10,7 +10,7 @@ lib-osx: objs
 	c++ $(LDFLAGS) gen/*.o -o libroot.dylib
 
 lib-linux: objs
-	c++ $(LDFLAGS) gen/*.o -o libroot.so
+	c++ -Wl,--no-as-needed $(LDFLAGS) gen/*.o -o libroot.so
 
 INCDIRS=-I$(INCDIR_UV) -I$(INCDIR_JULIA) -I$(INCDIR_SUPPORT)
 LIBDIRS=-L$(LIBDIR_JULIA)
@@ -23,7 +23,7 @@ ui-osx:
 
 ui-linux:
 	c++ -fPIC -w src/getopt.c src/repl.c $(LIBDIRS) $(INCDIRS) -lc -ljulia -shared -o librepl.so
-	c++ src/ui.cc -fPIC `root-config --cflags --libs --ldflags` -o julia
+	c++ src/ui.cc -fPIC -Wl,--no-as-needed `root-config --cflags --libs --ldflags` -o julia
 
 .PHONY: ui-osx ui-linux lib-osx lib-linux clean
 
