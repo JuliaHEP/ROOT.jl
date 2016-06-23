@@ -7,7 +7,7 @@ using Base.Test
 println("creating file")
 tf = TFile("test.root", "RECREATE")
 ttree = TTree("my_tree", "My Tree")
-@test bytestring(GetName(ttree)) == "my_tree"
+@test unsafe_string(GetName(ttree)) == "my_tree"
 
 #branch variable should be array with length 1
 x = Float64[0]
@@ -29,7 +29,7 @@ Close(tf)
 
 tf = TFile("test.root")
 ttree = Get(tf, "my_tree")
-@test bytestring(ClassName(ttree)) == "TTree"
+@test unsafe_string(ClassName(ttree)) == "TTree"
 
 ttree = root_cast(TTree, ttree)
 
@@ -52,7 +52,7 @@ iter = TListIter(keylist.p)
 
 x = TObject(Next(iter))
 @test x.p != C_NULL
-@test GetName(x)|>bytestring == "my_tree"
+@test GetName(x)|>unsafe_string == "my_tree"
 classname(x) == "TTree"
 
 @test Next(iter) == C_NULL

@@ -1,7 +1,7 @@
 module gROOT
 import ..LIBROOT
 
-function process_line(s::ASCIIString)
+function process_line(s::String)
     ccall((:gROOT_ProcessLine, LIBROOT), Clong, (Ptr{UInt8}, ), s)
 end
 

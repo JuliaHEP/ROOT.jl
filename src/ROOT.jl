@@ -12,11 +12,11 @@ module ROOT
     error("ROOTSYS not defined, call `source /path/to/root/thisroot.sh`")
 
 #check for correct root version (root 6)
-const rootversion = readall(`root-config --version`) |> strip
+const rootversion = readstring(`root-config --version`) |> strip
 startswith(rootversion, "6") || error("Need ROOT 6 or greater, but found $rootversion")
     
-@linux_only const LIBROOT = string(dirname(Base.source_path()), "/../libroot.so")
-@osx_only const LIBROOT = string(dirname(Base.source_path()), "/../libroot.dylib")
+is_linux() && const LIBROOT = string(dirname(Base.source_path()), "/../libroot.so")
+is_apple() &&  const LIBROOT = string(dirname(Base.source_path()), "/../libroot.dylib")
 
 #should we print generated code for root function wrappers?
 const DUMPEX = ("DUMPEX" in keys(ENV) && parse(Int, ENV["DUMPEX"])==1)
@@ -36,7 +36,7 @@ const ROOT_OBJECTS = Symbol[]
 is_null(x::ROOTObject) = x.p==C_NULL
 #define a ROOT TObject type, needed for correct dispatch
 macro root_object(name)
-    parent = symbol("$(name)A")
+    parent = Symbol("$(name)A")
 
     push!(ROOT_OBJECTS, name)
     eval(quote
@@ -165,8 +165,8 @@ const type_replacement = Dict{Any,Any}(
     :Bool_t                   => :Bool,
     :Char_t                   => :Cchar,
     :UChar_t                  => :Cuchar,
-    :(Ptr{Option_t})          => :ASCIIString,
-    :(Ptr{UInt8})             => :ASCIIString,
+    :(Ptr{Option_t})          => :String,
+    :(Ptr{UInt8})             => :String,
     :(Ptr{Double_t})          => :(Ptr{Cdouble}),
     :(Ptr{Float_t})           => :(Ptr{Cfloat}),
     :(Ptr{UInt_t})            => :(Ptr{Cuint}),
@@ -199,7 +199,7 @@ const basetypes = Dict(
     :Cfloat => :Real,
 )
 const ccall_type_replacement = Dict{Any,Any}(
-    :ASCIIString        =>    :(Ptr{UInt8}),
+    :String        =>    :(Ptr{UInt8}),
     :(Ptr{Option_t})    =>    :(Ptr{UInt8}),
     #:(Ptr{None})        =>    :(Ptr{Void}),
     :Int_t              =>    :Cint,
@@ -219,7 +219,7 @@ const ccall_type_replacement = Dict{Any,Any}(
 #outputs:
 #    :(a1, ...), => for ccall values
 #    :(Ptr{UInt8}, ...), => for ccall types
-#    :(a1::ASCIIString, ...), => for julia function arguments
+#    :(a1::String, ...), => for julia function arguments
 function argument_replace(args::Expr)
 
     #println(args.args)
@@ -235,7 +235,7 @@ function argument_replace(args::Expr)
     for a in args.args
 
         #must be typed argument
-        (isa(a, Expr) && a.head == symbol("::")) || error("$a is not typed")
+        (isa(a, Expr) && a.head == Symbol("::")) || error("$a is not typed")
 
         #name, type
         n = a.args[1]
@@ -286,7 +286,7 @@ function argument_replace(args::Expr)
             end
         end
 
-        if jt != :ASCIIString && haskey(basetypes, jt)
+        if jt != :String && haskey(basetypes, jt)
             jt = basetypes[jt]
             #convert to correct C type at runtime
             n = :($t($n))
@@ -294,7 +294,7 @@ function argument_replace(args::Expr)
         #println("found replacement $n::$t")
         #put julia arguments back together
 
-        jlarg = Expr(symbol("::"))
+        jlarg = Expr(Symbol("::"))
         push!(jlarg.args, jn)
         push!(jlarg.args, jt)
     
@@ -315,9 +315,9 @@ function splice_kwargs(jlargs::Expr, defs::Expr)
     for i=1:length(defs)
         d = defs[i]
 
-        #const char* x=0 ===> x::ASCIIString=""
+        #const char* x=0 ===> x::String=""
         t = eval(jlargs.args[i].args[2])::Type
-        if t <: ASCIIString && typeof(d) <: Integer
+        if t <: String && typeof(d) <: Integer
             d = ""
         end
 
@@ -341,7 +341,7 @@ function define_lib(lib::Expr)
 
     if !isdefined(lib)
         q = quote
-        const $(symbol(string(lib))) = joinpath(
+        const $(Symbol(string(lib))) = joinpath(
             dirname(Base.source_path()), "..",
             $(string(lib))
         )
@@ -511,7 +511,7 @@ ReadObj(x::TKeyA) = ReadObj(root_cast(TKey, x))
 #end
 
 #short type names used in ROOT's TBranch constructor for the leaflist
-const SHORT_TYPEMAP = Dict{DataType, ASCIIString}(
+const SHORT_TYPEMAP = Dict{DataType, String}(
     Float32   => "F",
     Float64   => "D",
     Int32     => "I",
@@ -523,11 +523,11 @@ const SHORT_TYPEMAP = Dict{DataType, ASCIIString}(
 )
 
 #Manually define a Ref-based setbranchaddress which works for vectors
-function SetBranchAddress{T <: Real}(__obj::TTreeA, bname::ASCIIString, add::Vector{T}, p::Ptr{Void}=C_NULL)
+function SetBranchAddress{T <: Real}(__obj::TTreeA, bname::String, add::Vector{T}, p::Ptr{Void}=C_NULL)
     ccall(("TTree_SetBranchAddress1",LIBROOT), Int32, (Ptr{Void}, Ptr{UInt8}, Ref{T}, Ptr{Ptr{TBranch}}), __obj.p, bname, add, p)
 end
 
-classname(o) = ClassName(root_cast(TObject, o))|>bytestring;
+classname(o) = ClassName(root_cast(TObject, o))|>unsafe_string;
 
 function to_root(h)
     cn = classname(h)
