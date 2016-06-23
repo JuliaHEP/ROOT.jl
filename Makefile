@@ -12,19 +12,6 @@ lib-osx: objs
 lib-linux: objs
 	c++ -Wl,--no-as-needed $(LDFLAGS) gen/*.o -o libroot.so
 
-INCDIRS=-I$(INCDIR_UV) -I$(INCDIR_JULIA) -I$(INCDIR_SUPPORT)
-LIBDIRS=-L$(LIBDIR_JULIA)
-#compile getopts to an object file
-#link getopts and repl to a dynamic library
-#compile ui.cc, which dlopens the repl after initializing ROOT
-ui-osx:
-	c++ -w src/getopt.c src/repl.c $(LIBDIRS) $(INCDIRS) -lc -ljulia -shared -o librepl.dylib
-	c++ src/ui.cc `root-config --cflags --libs --ldflags` -o julia
-
-ui-linux:
-	c++ -fPIC -w src/getopt.c src/repl.c $(LIBDIRS) $(INCDIRS) -lc -ljulia -shared -o librepl.so
-	c++ src/ui.cc -fPIC -Wl,--no-as-needed `root-config --cflags --libs --ldflags` -o julia
-
 .PHONY: ui-osx ui-linux lib-osx lib-linux clean
 
 perf: test/perf.cc
@@ -32,5 +19,4 @@ perf: test/perf.cc
 clean:
 	rm -rf gen/*.o
 	rm -rf libroot*
-	rm -rf librepl*
 	rm -rf julia

@@ -2,10 +2,10 @@
 
 module ROOT
 
-#check that we have the correct julia executable
-if !(contains(JULIA_HOME, "ROOT"))
-    error("Cannot use ROOT.jl from this executable, call julia from '$(Pkg.dir())/ROOT/julia'")
-end
+##check that we have the correct julia executable
+#if !(contains(JULIA_HOME, "ROOT"))
+#    error("Cannot use ROOT.jl from this executable, call julia from '$(Pkg.dir())/ROOT/julia'")
+#end
 
 #Check if ROOT is set up
 "ROOTSYS" in keys(ENV) ||
