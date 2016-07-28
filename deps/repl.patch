@@ -1,0 +1,92 @@
+diff --git a/ui/Makefile b/ui/Makefile
+index 49c4dba..bda4ce4 100644
+--- a/ui/Makefile
++++ b/ui/Makefile
+@@ -35,8 +35,8 @@ ifeq ($(OS),WINNT)
+ JLDFLAGS += -municode
+ endif
+ 
+-default: release
+-all: release debug
++default: release rjulia
++all: release debug rjulia
+ release debug :  % : julia-%
+ 
+ $(BUILDDIR)/%.o: $(SRCDIR)/%.c $(HEADERS)
+@@ -60,6 +60,8 @@ endif
+ julia-release: $(build_bindir)/julia$(EXE)
+ julia-debug: $(build_bindir)/julia-debug$(EXE)
+ 
++rjulia: $(build_bindir)/rjulia$(EXE)
++
+ ifneq ($(USEMSVC), 1)
+ CXXLD := $(CXX)
+ else
+@@ -71,8 +73,12 @@ $(build_bindir)/julia$(EXE): $(OBJS)
+ $(build_bindir)/julia-debug$(EXE): $(DOBJS)
+ 	@$(call PRINT_LINK, $(CXXLD) $(CXXFLAGS) $(CXXLDFLAGS) $(LINK_FLAGS) $(DEBUGFLAGS) $^ -o $@ -L$(build_private_libdir) -L$(build_libdir) -L$(build_shlibdir) -ljulia-debug $(JLDFLAGS) $(CXXLDFLAGS))
+ 
++$(build_bindir)/rjulia$(EXE): $(SRCDIR)/root-ui.cc
++	@$(call PRINT_CC, $(CXX) $(CXXLDFLAGS) $(FLAGS) `root-config --cflags --libs --ldflags` $^ -o $@ -DLIBJULIA=\"libjulia.$(SHLIB_EXT)\" $(JLDFLAGS) $(CXXLDFLAGS) $(RPATH))
++
+ clean: | $(CLEAN_TARGETS)
+ 	rm -f *.o *.dbg.obj
+ 	rm -f $(build_bindir)/julia*
++	rm -f $(build_bindir)/rjulia*
+ 
+ .PHONY: clean release debug julia-release julia-debug
+diff --git a/ui/root-ui.cc b/ui/root-ui.cc
+new file mode 100644
+index 0000000..6f9c875
+--- /dev/null
++++ b/ui/root-ui.cc
+@@ -0,0 +1,49 @@
++#include <dlfcn.h>
++#include <stdio.h>
++#include <iostream>
++#include "../src/julia.h"
++#include "uv.h"
++#include "TROOT.h"
++
++void init_root();
++
++int main(int argc, char* argv[]) {
++  gROOT->ProcessLine("int __dummy__=1;");
++  gROOT->ProcessLine("std::cout << \"ROOT: ROOT initialized\" << std::endl;");
++
++  void* handle_julia = dlopen(LIBJULIA, RTLD_NOW | RTLD_GLOBAL);
++  if (!handle_julia) {
++    fputs(dlerror(), stderr);
++    std::cerr << std::endl;
++    std::cerr << "could not load library: " << LIBJULIA << std::endl;
++    return 1;
++  }
++  typedef int (*t_jl_init)(const char *);
++  typedef int (*t_jl_set_ARGS)(int, char**);
++  typedef int (*t_jl_eval_string)(const char*);
++  typedef int (*t_jl_atexit_hook)(int);
++  typedef int (*t_jl_load)(const char*);
++  typedef int (*t_jl_parse_opts)(int *argcp, char ***argvp);
++  t_jl_init jl_init = (t_jl_init)dlsym(handle_julia, "jl_init");
++  t_jl_set_ARGS jl_set_ARGS = (t_jl_set_ARGS)dlsym(handle_julia, "jl_set_ARGS");
++  t_jl_eval_string jl_eval_string = (t_jl_eval_string)dlsym(handle_julia, "jl_eval_string");
++  t_jl_atexit_hook jl_atexit_hook = (t_jl_atexit_hook)dlsym(handle_julia, "jl_atexit_hook");
++  t_jl_load jl_load = (t_jl_load)dlsym(handle_julia, "jl_load");
++  t_jl_parse_opts jl_parse_opts = (t_jl_parse_opts)dlsym(handle_julia, "jl_parse_opts");
++  
++  jl_init(NULL);
++  jl_parse_opts(&argc, (char***)&argv);
++  jl_set_ARGS(argc, argv);
++  int ret = 0;
++  
++  if (argc > 0) {
++      if (strcmp(argv[0], "-")) {
++          ret = jl_load(argv[0]);
++      }
++  } else {
++    jl_eval_string("Base._start()");
++  }
++
++  jl_atexit_hook(0);
++  return ret;
++}
