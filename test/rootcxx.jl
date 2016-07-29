@@ -1,25 +1,30 @@
-ENV["CXXJL_ROOTDIR"] = "/cvmfs/cms.cern.ch/slc6_amd64_gcc493/external/gcc/4.9.3/"
+using ROOT
 using Cxx
-println("done loading C++ compatibility")
-const ROOT_INCDIR = strip(readstring(`root-config --incdir`))
-const ROOT_LIBDIR = strip(readstring(`root-config --libdir`))
-addHeaderDir(ROOT_INCDIR, kind=C_System)
-for lib in ["Core", "RIO", "Hist"]
-    Libdl.dlopen("$ROOT_LIBDIR/lib$lib.so", Libdl.RTLD_GLOBAL)
-end
+using Base.Test
 
 cxx"""#include <TFile.h> """
 cxx"""#include <TH1D.h> """
 
-tf = @cxxnew TFile(pointer("asd.root"), pointer("RECREATE"))
-th = @cxxnew TH1D(pointer("h"), pointer("h"), 100, -1.0, 1.0)
+const npoints = 100000
 
-for i=1:100000
-    @cxx th->Fill(randn())
+function fill_hist(path)
+    tf = @cxxnew TFile(pointer(path), pointer("RECREATE"))
+    th = @cxxnew TH1D(pointer("h"), pointer("h"), 100, -1.0, 1.0)
+    
+    for i=1:npoints
+        @cxx th->Fill(randn())
+    end
+    @test @cxx(th->GetEntries()) == npoints 
+    println(typeof(th)) 
+    @cxx tf->Write()
+    @cxx tf->Close()
 end
 
-@cxx tf->Write()
-@cxx tf->Close()
+#function open_file(path)
+#    tf = @cxx TFile::Open(pointer(path))
+#    th = cast(@cxx(tf->Get(pointer("h"))), Cxx.CppPtr{Cxx.CppValue{Cxx.CxxQualType{Cxx.CppBaseType{:TH1D},(false,false,false)},N},(false,false,false)})
+#    @test @cxx(th->GetEntries()) == npoints 
+#end
 
-tf2 = @cxx TFile::Open(pointer("asd.root"))
-th2 = cast(@cxx(tf2->Get(pointer("h"))), typeof(th))
+@time fill_hist("test.root")
+#@time open_file("test.root")
