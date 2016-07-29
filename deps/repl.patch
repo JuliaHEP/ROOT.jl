@@ -1,5 +1,5 @@
 diff --git a/ui/Makefile b/ui/Makefile
-index 49c4dba..bda4ce4 100644
+index 49c4dba..6e29847 100644
 --- a/ui/Makefile
 +++ b/ui/Makefile
 @@ -35,8 +35,8 @@ ifeq ($(OS),WINNT)
@@ -27,20 +27,20 @@ index 49c4dba..bda4ce4 100644
  	@$(call PRINT_LINK, $(CXXLD) $(CXXFLAGS) $(CXXLDFLAGS) $(LINK_FLAGS) $(DEBUGFLAGS) $^ -o $@ -L$(build_private_libdir) -L$(build_libdir) -L$(build_shlibdir) -ljulia-debug $(JLDFLAGS) $(CXXLDFLAGS))
  
 +$(build_bindir)/rjulia$(EXE): $(SRCDIR)/root-ui.cc
-+	@$(call PRINT_CC, $(CXX) $(CXXLDFLAGS) $(FLAGS) `root-config --cflags --libs --ldflags` $^ -o $@ -DLIBJULIA=\"libjulia.$(SHLIB_EXT)\" $(JLDFLAGS) $(CXXLDFLAGS) $(RPATH))
++	@$(call PRINT_CC, $(CXX) $(CXXLDFLAGS) $(FLAGS) $^ -o $@ `root-config --cflags --libs --ldflags` -DLIBJULIA=\"libjulia.$(SHLIB_EXT)\" $(JLDFLAGS) $(CXXLDFLAGS) $(RPATH))
 +
  clean: | $(CLEAN_TARGETS)
  	rm -f *.o *.dbg.obj
  	rm -f $(build_bindir)/julia*
-+	rm -f $(build_bindir)/rjulia*
++	rm -rf $(build_bindir)/rjulia*
  
  .PHONY: clean release debug julia-release julia-debug
 diff --git a/ui/root-ui.cc b/ui/root-ui.cc
 new file mode 100644
-index 0000000..6f9c875
+index 0000000..626ae86
 --- /dev/null
 +++ b/ui/root-ui.cc
-@@ -0,0 +1,49 @@
+@@ -0,0 +1,48 @@
 +#include <dlfcn.h>
 +#include <stdio.h>
 +#include <iostream>
@@ -79,12 +79,11 @@ index 0000000..6f9c875
 +  jl_set_ARGS(argc, argv);
 +  int ret = 0;
 +  
++  jl_eval_string("Base._start()");
 +  if (argc > 0) {
 +      if (strcmp(argv[0], "-")) {
 +          ret = jl_load(argv[0]);
 +      }
-+  } else {
-+    jl_eval_string("Base._start()");
 +  }
 +
 +  jl_atexit_hook(0);
