@@ -1,5 +1,7 @@
 # ROOT.jl: ROOT bindings for julia
 
+NB: this library is currently being revised to take advantage of Cxx.jl and julia 0.5, don't expect it to be working
+
 -----
 
 Here is guidebook for people familiar with ROOT starting from scratch with julia, demonstrating some of the capabilities:
