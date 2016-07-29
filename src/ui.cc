@@ -32,9 +32,9 @@ int main(int argc, char* argv[]) {
   t_jl_parse_opts jl_parse_opts = (t_jl_parse_opts)dlsym(handle_julia, "jl_parse_opts");
   
   uv_setup_args(argc, argv);
-  jl_init(NULL);
   jl_parse_opts(&argc, (char***)&argv);
   jl_set_ARGS(argc, argv);
+  jl_init(NULL);
   int ret = 0;
   
   if (argc > 0) {
