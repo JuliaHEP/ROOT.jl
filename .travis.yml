@@ -20,8 +20,10 @@ install:
   - conda config --add channels http://conda.anaconda.org/NLeSC
   - conda config --set show_channel_urls yes
   - conda create -q -n testenv python=2.7 root=${ROOT}
+  - export CONDA_ENV_PATH=$HOME/miniconda/envs/testenv
+  - source activate testenv
 
 script:
-  - root-config --version
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
+  - bash ci/test.sh
   - julia --check-bounds=yes -e 'Pkg.clone(pwd()); Pkg.build("ROOT"); Pkg.test("ROOT")'
