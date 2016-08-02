@@ -24,7 +24,10 @@ install:
   - conda install -c msarahan libgcc # https://github.com/conda/conda-recipes/issues/558
   - conda config --add channels http://conda.anaconda.org/NLeSC
   - conda config --set show_channel_urls yes
-  - conda create -q -n testenv python=2.7 root=${ROOT} libgcc=4.8.5
+  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then conda install -c msarahan libgcc; fi
+  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then conda install -c msarahan libgcc; fi
+  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then conda create -q -n testenv python=2.7 root=${ROOT} libgcc=5.2.0; rm /home/travis/miniconda/envs/testenv/lib/libstdc++.so.6; rm /home/travis/miniconda/envs/testenv/lib/libstdc++.so; ln -s /home/travis/miniconda/envs/testenv/lib/libstdc++.so.6.0.21 /home/travis/miniconda/envs/testenv/lib/libstdc++.so.6; ln -s /home/travis/miniconda/envs/testenv/lib/libstdc++.so.6.0.21 /home/travis/miniconda/envs/testenv/lib/libstdc++.so; fi
+  - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then conda create -q -n testenv python=2.7 root=${ROOT}; fi
   - export CONDA_ENV_PATH=$HOME/miniconda/envs/testenv
   - source activate testenv
 
