@@ -16,7 +16,12 @@ if !isdir(bindir)
 end
 
 
-const JULIA_BASE_PATH = dirname(dirname(JULIA_HOME))
+JULIA_BASE_PATH = JULIA_HOME
+while !isfile(joinpath(JULIA_BASE_PATH, "LICENSE.md"))
+    JULIA_BASE_PATH = dirname(JULIA_BASE_PATH)
+end
+@show JULIA_BASE_PATH
+
 function find_file(basepath, file)
     ret = split(readstring(`find $basepath -name $file`))
     ret = sort(ret, by=x->length(x))

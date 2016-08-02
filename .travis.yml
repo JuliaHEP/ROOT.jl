@@ -21,9 +21,10 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a # Useful for debugging any issues with conda
+  - conda install -c msarahan libgcc # https://github.com/conda/conda-recipes/issues/558
   - conda config --add channels http://conda.anaconda.org/NLeSC
   - conda config --set show_channel_urls yes
-  - conda create -q -n testenv python=2.7 root=${ROOT}
+  - conda create -q -n testenv python=2.7 root=${ROOT} libgcc=4.8.5
   - export CONDA_ENV_PATH=$HOME/miniconda/envs/testenv
   - source activate testenv
 
