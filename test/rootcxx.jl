@@ -7,6 +7,10 @@ cxx"""#include <TH1D.h> """
 
 const npoints = 100000
 
+TFile() = @cxx TFile()
+
+ropen(path) = icxx""" TFile::Open($(pointer(path))); """
+
 function fill_hist(path)
     tf = @cxxnew TFile(pointer(path), pointer("RECREATE"))
     th = @cxxnew TH1D(pointer("h"), pointer("h"), 100, -1.0, 1.0)
@@ -20,11 +24,18 @@ function fill_hist(path)
     @cxx tf->Close()
 end
 
-#function open_file(path)
-#    tf = @cxx TFile::Open(pointer(path))
-#    th = cast(@cxx(tf->Get(pointer("h"))), Cxx.CppPtr{Cxx.CppValue{Cxx.CxxQualType{Cxx.CppBaseType{:TH1D},(false,false,false)},N},(false,false,false)})
-#    @test @cxx(th->GetEntries()) == npoints 
-#end
+function open_file(path)
+   tf = @cxx TFile::Open(pointer(path))
+   th = icxx""" static_cast<TH1D*>($tf->Get("h"));"""
+   @test @cxx(th->GetEntries()) == npoints 
+end
 
 @time fill_hist("test.root")
-#@time open_file("test.root")
+@time open_file("test.root")
+
+# 
+# tf = TFile()
+# 
+# println(tf, " ", typeof(tf))
+# tf2 = ropen("test.root")
+# println(tf2, " ", typeof(tf2))
