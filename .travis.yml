@@ -34,4 +34,5 @@ install:
 script:
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
   - bash ci/test.sh
+  - julia --check-bounds=yes -e 'Pkg.clone("https://github.com/jpata/Cxx.jl.git");Pkg.checkout("Cxx", "rtti");Pkg.build("Cxx")'
   - julia --check-bounds=yes -e 'Pkg.clone(pwd()); Pkg.build("ROOT"); Pkg.test("ROOT")'
