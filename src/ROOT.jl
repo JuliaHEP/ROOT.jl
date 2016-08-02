@@ -1,12 +1,18 @@
 module ROOT
 
-println("loading Cxx.jl")
+const ROOT_PKG_DIR = dirname(dirname(@__FILE__))
+if !contains(JULIA_HOME, ROOT_PKG_DIR)
+    exename = joinpath(ROOT_PKG_DIR, "deps/usr/bin/julia")
+    error("need to load the julia binary from $exename")
+end
+
+info("loading Cxx.jl")
 using Cxx
 
 const root_config = strip(readstring(`which root-config`))
 isfile(root_config) || error("could not find ROOT")
 
-println("loading root libraries from $(root_config)")
+info("loading root libraries from $(root_config)")
 const ROOT_INCDIR = strip(readstring(`$root_config --incdir`))
 const ROOT_LIBDIR = strip(readstring(`$root_config --libdir`))
 
