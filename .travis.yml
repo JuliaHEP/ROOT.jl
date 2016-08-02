@@ -1,14 +1,27 @@
 language: julia
 julia:
   - nightly
-  - 0.4
 os:
   - linux
   - osx
 env:
-  - ROOT=6-00-00
+  - ROOT=6.04
 notifications:
   email: false
+install:
+  - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then curl --silent http://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh -o miniconda.sh; fi
+  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then wget -nv http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda info -a # Useful for debugging any issues with conda
+  - conda config --add channels http://conda.anaconda.org/NLeSC
+  - conda config --set show_channel_urls yes
+  - conda create -q -n testenv python=2.7 root=${ROOT}
+
 script:
+  - root-config --version
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
   - julia --check-bounds=yes -e 'Pkg.clone(pwd()); Pkg.build("ROOT"); Pkg.test("ROOT")'
