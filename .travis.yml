@@ -8,6 +8,10 @@ env:
   - ROOT=6.04
 notifications:
   email: false
+
+#root install in travis stolen from https://github.com/rootpy/rootpy/blob/master/.travis.yml
+#uses conda to install root with the recipes of https://github.com/remenska/root-conda-recipes
+#
 install:
   - if [ "${TRAVIS_OS_NAME}" == "osx" ]; then curl --silent http://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh -o miniconda.sh; fi
   - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then wget -nv http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi

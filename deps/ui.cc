@@ -1,7 +1,7 @@
 #include <dlfcn.h>
 #include <stdio.h>
 #include <iostream>
-#include "../src/julia.h"
+#include "julia.h"
 #include "uv.h"
 #include "TROOT.h"
 
