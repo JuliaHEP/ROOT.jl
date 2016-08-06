@@ -1,9 +1,12 @@
 module ROOT
 
 const ROOT_PKG_DIR = dirname(dirname(@__FILE__))
+const EXENAME = joinpath(ROOT_PKG_DIR, "deps/usr/bin/julia")
+
+
+#launch the correct julia exe with the same args in case the wrong one was used
 if !contains(JULIA_HOME, ROOT_PKG_DIR)
-    exename = joinpath(ROOT_PKG_DIR, "deps/usr/bin/julia")
-    error("need to load the julia binary from $exename")
+    error("use the julia binary in $EXENAME") 
 end
 
 info("loading Cxx.jl")
@@ -32,6 +35,9 @@ for lib in [
     loadlib(lib)
 end
 
-export loadlib
+export loadlib, EXENAME, launch
+
+include("tfile.jl")
+include("thist.jl")
 
 end #module ROOT
