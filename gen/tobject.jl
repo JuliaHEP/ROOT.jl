@@ -1,6 +1,0 @@
-@method LIBROOT TObject ClassName Ptr{UInt8} () ClassName1 ( )
-@method LIBROOT TObject GetName Ptr{UInt8} () GetName1 ( )
-@method LIBROOT TObject GetTitle Ptr{UInt8} () GetTitle1 ( )
-@method LIBROOT TObject Print Void (option::Ptr{Option_t}, ) Print1 ("",  )
-@method LIBROOT TObject Write Int_t (name::Ptr{UInt8}, option::Int_t, bufsize::Int_t, ) Write1 (0, 0, 0,  )
-@method LIBROOT TObject Write Int_t (name::Ptr{UInt8}, option::Int_t, bufsize::Int_t, ) Write2 (0, 0, 0,  )
