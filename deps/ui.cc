@@ -8,7 +8,7 @@
 void init_root();
 
 int main(int argc, char* argv[]) {
-  gROOT->ProcessLine("int __dummy__=1;");
+  gROOT->ProcessLine("TThread::Initialize();");
   std::cerr << "INFO: ROOT initialized" << std::endl;
 
   void* handle_julia = dlopen(LIBJULIA, RTLD_NOW | RTLD_GLOBAL);

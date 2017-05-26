@@ -1,43 +1,54 @@
+__precompile__(false)
+
 module ROOT
 
-const ROOT_PKG_DIR = dirname(dirname(@__FILE__))
-const EXENAME = joinpath(ROOT_PKG_DIR, "deps/usr/bin/julia")
 
-
-#launch the correct julia exe with the same args in case the wrong one was used
-if !contains(JULIA_HOME, ROOT_PKG_DIR)
-    error("use the julia binary in $EXENAME") 
-end
-
-info("loading Cxx.jl")
 using Cxx
 
-const root_config = strip(readstring(`which root-config`))
-isfile(root_config) || error("could not find ROOT")
+const ROOT_PKG_DIR = dirname(dirname(@__FILE__))
 
-info("loading root libraries from $(root_config)")
-const ROOT_INCDIR = strip(readstring(`$root_config --incdir`))
-const ROOT_LIBDIR = strip(readstring(`$root_config --libdir`))
+const deps_jl = joinpath(ROOT_PKG_DIR, "deps", "deps.jl")
+if isfile(deps_jl)
+    include(deps_jl)
+else
+    error("ROOT is not properly installed. Run Pkg.build(\"ROOT\").")
+end
 
-addHeaderDir(ROOT_INCDIR, kind=C_System)
 
-function loadlib(lib)
-    libpath = "$ROOT_LIBDIR/lib$lib.so"
-    isfile(libpath) || error("could not find ROOT library $lib: $libpath")
+function load_rootlib(libname)
+    libpath = joinpath(ROOT_LIBDIR, "lib$libname.$SHEXT")
+    isfile(libpath) || error("could not find ROOT library $libname at \"$libpath\"")
     Libdl.dlopen(libpath, Libdl.RTLD_GLOBAL)
 end
 
-for lib in [
-    "Core", "RIO", "Net", "Hist", "Graf",
-    "Graf3d", "Gpad", "Tree", "Rint", "Postscript",
-    "Matrix", "Physics", "MathCore", "Thread", "MultiProc"
-    ]
-    loadlib(lib)
+addHeaderDir(ROOT_INCDIR, kind=C_System)
+
+
+load_rootlib.([
+    "Core", "Gpad", "Graf", "Graf3d", "Hist", "MathCore", "Matrix", "MultiProc", "Net",
+    "Physics", "Postscript", "Rint", "RIO", "Thread", "Tree"
+])
+
+
+cxxinclude("TROOT.h")
+cxxinclude("TThread.h")
+cxxinclude("TVirtualMutex.h")
+
+Base.lock(mutex::pcpp"TVirtualMutex") = @cxx mutex->Lock();
+Base.unlock(mutex::pcpp"TVirtualMutex") = @cxx mutex->UnLock();
+
+export gROOTMutex
+gROOTMutex() = icxx"gROOTMutex;"
+
+export gGlobalMutex
+gGlobalMutex() = icxx"gGlobalMutex;"
+
+
+if gROOTMutex() == C_NULL
+    warn("ROOT not pre-initialized, use the Julia binary \"$JULIA_EXE\"")
+    icxx"TThread::Initialize();"
 end
 
-export loadlib, EXENAME, launch
 
-include("tfile.jl")
-include("thist.jl")
 
-end #module ROOT
+end # module

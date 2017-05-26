@@ -9,7 +9,7 @@ end
     SHEXT="so"
 end
 
-bindir = joinpath(depsdir, "usr/bin")
+bindir = joinpath(depsdir, "usr", "bin")
 if !isdir(bindir)
     info("making $bindir")
     mkpath(bindir)
@@ -41,16 +41,32 @@ isfile(LIBJULIA_PATH) || error("Could not find libjulia at $LIBJULIA_PATH")
 @show INCDIR_SUPPORT_H
 @show LIBJULIA_PATH
 
-info("compiling exe")
+info("compiling ROOT-compatible julia executable")
 readstring(`make OS=$OS SHLIB_EXT=$SHEXT LIBJULIA_PATH=$LIBJULIA_PATH INCDIR_JULIA_H=$INCDIR_JULIA_H INCDIR_UV_H=$INCDIR_UV_H INCDIR_SUPPORT_H=$INCDIR_SUPPORT_H`) |> println
-
-info("symlinking libraries")
+ 
+info("symlinking JULIA libraries")
 libdir = joinpath(depsdir, "usr/lib")
 if !isdir(libdir)
-    symlink("$JULIA_HOME/../lib", libdir)
+    symlink(joinpath("$JULIA_HOME", "..", "lib"), libdir)
 end
 
 exepath = joinpath(bindir, "julia")
 isfile(exepath) || error("could not find final exe: $exepath, something went wrong in the compilation")
 
-println("ROOT-enabled julia now exists at $exepath")
+const ROOT_INCDIR = strip(readstring(`root-config --incdir`))
+const ROOT_LIBDIR = strip(readstring(`root-config --libdir`))
+
+depsfile_location = joinpath(splitdir(Base.source_path())[1],"deps.jl")
+
+open(depsfile_location, "w") do depsfile
+    print(depsfile,
+        """
+        const SHEXT = "$SHEXT"
+        const ROOT_INCDIR = "$ROOT_INCDIR"
+        const ROOT_LIBDIR = "$ROOT_LIBDIR"
+        const JULIA_EXE = "$exepath"
+        """
+    )
+end
+
+info("ROOT-enabled julia now exists at $exepath")

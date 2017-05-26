@@ -1,6 +1,7 @@
 The ROOT.jl package is licensed under the Simplified "2-clause" BSD License:
 
 > Copyright (c) 2014: Joosep Pata.
+> Copyright (c) 2017: Oliver Schulz.
 >
 > Redistribution and use in source and binary forms, with or without
 > modification, are permitted provided that the following conditions are

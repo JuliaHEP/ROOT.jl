@@ -1,79 +1,70 @@
 # ROOT.jl: ROOT bindings for julia
 
------
+Provides basic access to the [CERN ROOT Framework](https://root.cern.ch/)
+for the Julia language.
 
-Here is guidebook for people familiar with ROOT starting from scratch with julia, demonstrating some of the capabilities:
-https://github.com/jpata/JuliaForPhysicists/blob/master/guide.ipynb
 
------
+## Requirements
 
-Wraps ROOT (http://root.cern.ch) using Clang.jl in a semi-automatic way. Currently supports a subset of the most commonly used ROOT classes and methods, among them:
+* Julia v0.5
+* A [special branch of CXX.jl](https://github.com/oschulz/Cxx.jl/tree/julia0.5-root)
+  that allows for enabling C++ RTTI.
+* ROOT-6 (ROOT-5 may work, but is no longer recommended)
 
-* TTree, TChain, TBranch
-* TFile, TDirectory, TDirectoryFile
-* TH1D, TH2D
-* TCollection, TList, TKey
 
-This wrapper is a very thin C layer on top of the ROOT C++ library and no runtime interpreter (e.g. CINT or Cling) is called for the core functions. Therefore, this is theoretically the fastest possible wrapper one can use short of using C++ directly.
+## Usage
 
-One can access the full ROOT framework though the ``process_line(cmd::ASCIIString)`` wrapper.
+Enable RTTI for Cxx.jl:
 
-See also https://github.com/jpata/ROOTDataFrames.jl for an interface between TTrees and DataFrames.
-See also https://github.com/jpata/ROOTHistograms.jl for an interface between https://github.com/JuliaStats/StatsBase.jl histograms and julia histograms.
+```shell
+export JULIA_CXX_RTTI="1"
+```
 
-# Installation
+Install ROOT.jl:
 
-You need ROOT v6 and julia v0.4. After configuring ROOT using `thisroot.sh`, execute the following in a julia prompt
-~~~
-> Pkg.clone("https://github.com/jpata/ROOT.jl.git")
-> Pkg.build("ROOT")
-ROOT.jl compiled!
-Add the following to your ~/.bashrc or ~/.bash_profile:
-alias rjulia="/Users/joosep/.julia/v0.4/ROOT/julia"
-~~~
+```
+julia> Pkg.add("ROOT")
+```
 
-Now run the ROOT-enabled julia interpreter using `/Users/joosep/.julia/v0.4/ROOT/julia`
-~~~
-> using ROOT
-> Pkg.test("ROOT")
-> h = TH1D("hist", "My Hist", Int32(10), 0.0, 100.0)
-~~~
+ROOT.jl will install a special Julia executable that initializes ROOT
+before starting Julia. This avoids conflicts between Cling's LLVM instance
+and Julia's LLVM instance. The ROOT-compatible Julia binary resides at:
+`joinpath(Pkg.dir("ROOT"), "deps", "usr", "bin", "julia")`.
 
-This will create a new executable `julia` in the `ROOT.jl` package directory. This **must** be used as the julia executable if you want to simultaneously use ROOT.
+You can directly use the standard ROOT API via Cxx.jl:
 
-# Usage
+```julia
+using ROOT, Cxx
+cxxinclude("TCanvas.h")
+cxxinclude("TH1D.h")
 
-Short examples are given under the `example` directory. In general, the use pattern is very similar to PyROOT. One should keep in mind that every `TObject` in julia is a pointer to an object allocated on the heap (using `new` in C++).
-
-## example TTrees
-
-These are the main workhorse of ROOT, which support fast row-based and disk-backed data storage for simple data types.
-
-~~~
-#file: example/ttree.jl
-#run as: rjulia example/ttree.jl
-using ROOT
-
-tf = TFile("test.root", "RECREATE")
-ttree = TTree("my_tree", "My Tree")
-
-#branch variable should be array with length 1
-x = Float64[0.0]
-px = convert(Ptr{Void}, x)
-br = Branch(ttree, "x", px, "x/D")
-
-for i=1:10000
-    x[1] = randn()
-    Fill(ttree)
+canvas = icxx"new TCanvas();"
+hist = icxx"""new TH1D("hist", "Hist", 20, -4, 4);"""
+for i in 1:100000
+    @cxx hist->Fill(randn())
 end
+@cxx hist->Draw()
+@cxx canvas->SaveAs(pointer("myhist.png"))
+```
 
-Write(tf)
-Close(tf)
-~~~
+Julia API wrappers for specific ROOT functionalities are left to more
+specialized packages.
 
-# Known issues
 
-1. ROOT.jl supports only ROOT 6
-2. When calling `using ROOT` from the standard julia REPL that comes with julia (without having recompiled as in this module), Cling crashes/segfaults: **always use rjulia with ROOT.jl**.
-3. Only a limited set of classes are supported
-4. There is no mechanism to destroy ROOT-managed objects 
+## Thread-safety
+
+During startup, ROOT.jl will also enable basic thread-safety for ROOT
+(via `TThread::Initialize()`).
+
+It is possible to run certain ROOT operations in multi-threaded Julia code
+(e.g. TTree I/O, provided each thread uses a separate `TFile`/`TTree` resp.
+`TChain` instance.). However, certain operations (e.g. creating and deleting
+a `TChain`) are not thread-safe. Use
+
+```julia
+lock(gROOTMutex()) do
+    # ... non thread-safe code ...
+end
+```
+
+for non-thread-safe code blocks within multi-threaded code.
