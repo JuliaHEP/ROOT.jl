@@ -45,7 +45,7 @@ gGlobalMutex() = icxx"gGlobalMutex;"
 
 
 if gROOTMutex() == C_NULL
-    warn("ROOT not pre-initialized, use the Julia binary \"$JULIA_EXE\"")
+    warn("ROOT not pre-initialized, use the ROOT-compatible Julia executable \"$JULIA_EXE\"")
     icxx"TThread::Initialize();"
 end
 
