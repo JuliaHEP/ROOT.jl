@@ -7,8 +7,8 @@ for the Julia language.
 ## Requirements
 
 * Julia v0.5
-* A [special branch of CXX.jl](https://github.com/oschulz/Cxx.jl/tree/julia0.5-root)
-  that allows for enabling C++ RTTI.
+* The current master branch of [CXX.jl](https://github.com/Keno/Cxx.jl) (until
+  Cxx.jl v0.1.1 or so is released).
 * ROOT-6 (ROOT-5 may work, but is no longer recommended)
 
 
