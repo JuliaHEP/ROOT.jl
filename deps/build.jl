@@ -43,12 +43,6 @@ isfile(LIBJULIA_PATH) || error("Could not find libjulia at $LIBJULIA_PATH")
 
 info("compiling ROOT-compatible julia executable")
 readstring(`make OS=$OS SHLIB_EXT=$SHEXT LIBJULIA_PATH=$LIBJULIA_PATH INCDIR_JULIA_H=$INCDIR_JULIA_H INCDIR_UV_H=$INCDIR_UV_H INCDIR_SUPPORT_H=$INCDIR_SUPPORT_H`) |> println
- 
-info("symlinking JULIA libraries")
-libdir = joinpath(depsdir, "usr/lib")
-if !isdir(libdir)
-    symlink(joinpath("$JULIA_HOME", "..", "lib"), libdir)
-end
 
 exepath = joinpath(bindir, "julia")
 isfile(exepath) || error("could not find final exe: $exepath, something went wrong in the compilation")
