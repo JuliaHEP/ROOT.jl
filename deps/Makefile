@@ -4,10 +4,10 @@ builddir=$(SRCDIR)/usr/bin/
 # shared library runtime paths
 ifeq ($(OS), Darwin)
   CXX = c++
-  #RPATH := -Wl,-rpath,'$(LIBJULIA_PATH)'
+  RPATH := -Wl,-rpath,'$(ROOT_LIBDIR)' -Wl,-rpath,'$(JULIA_LIBDIR)'
 else
   CXX = c++
-  #RPATH := -Wl,-rpath,'$(LIB)' -Wl,-rpath-link,'$(JULIA_HOME)/usr/lib' -Wl,-z,origin
+  RPATH := -Wl,-rpath,'$(ROOT_LIBDIR)' -Wl,-rpath,'$(JULIA_LIBDIR)'
 endif
 
 override CFLAGS += $(JCFLAGS)
