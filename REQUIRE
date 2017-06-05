@@ -1,2 +1,2 @@
 julia 0.5
-# Cxx  # Don't require Cxx to support system-wide installation in LOAD_PATH
+Cxx
