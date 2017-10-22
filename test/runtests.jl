@@ -1,5 +1,5 @@
 using ROOT
-using Base.Test
+using Compat.Test
 
 using Cxx
 
