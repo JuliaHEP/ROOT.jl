@@ -16,9 +16,14 @@ end
 
 
 function load_rootlib(libname)
-    libpath = joinpath(ROOT_LIBDIR, "lib$libname.$SHEXT")
-    isfile(libpath) || error("could not find ROOT library $libname at \"$libpath\"")
-    Libdl.dlopen(libpath, Libdl.RTLD_GLOBAL)
+    for ext ∈ ["so", "dylib"]
+        libpath = joinpath(ROOT_LIBDIR, "lib$libname.$ext")
+        if isfile(libpath)
+            Libdl.dlopen(libpath, Libdl.RTLD_GLOBAL)
+            return
+        end
+    end
+    error("could not find ROOT library $libname at \"$libpath\"")
 end
 
 addHeaderDir(ROOT_INCDIR, kind=C_System)
