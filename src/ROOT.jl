@@ -16,7 +16,7 @@ end
 
 
 function load_rootlib(libname)
-    for ext ∈ ["so", "dylib"]
+    for ext in ("so", "dylib")
         libpath = joinpath(ROOT_LIBDIR, "lib$libname.$ext")
         if isfile(libpath)
             Libdl.dlopen(libpath, Libdl.RTLD_GLOBAL)
