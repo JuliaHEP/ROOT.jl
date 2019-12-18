@@ -1,22 +1,22 @@
 depsdir = dirname(@__FILE__)
 
-@static if is_apple()
+@static if Sys.isapple()
     OS="Darwin"
     SHEXT="dylib"
 end
-@static if is_linux()
+@static if Sys.islinux()
     OS="Linux"
     SHEXT="so"
 end
 
 bindir = joinpath(depsdir, "usr", "bin")
 if !isdir(bindir)
-    info("making $bindir")
+    @info "making $bindir"
     mkpath(bindir)
 end
 
 
-JULIA_BASE_PATH = JULIA_HOME
+JULIA_BASE_PATH = Sys.BINDIR
 while !isfile(joinpath(JULIA_BASE_PATH, "LICENSE.md"))
     JULIA_BASE_PATH = dirname(JULIA_BASE_PATH)
 end
@@ -48,7 +48,7 @@ const ROOT_LIBDIR = strip(readstring(`root-config --libdir`))
 @show ROOT_INCDIR
 @show ROOT_LIBDIR
 
-info("compiling ROOT-compatible julia executable")
+@info "compiling ROOT-compatible julia executable"
 readstring(`make OS=$OS SHLIB_EXT=$SHEXT ROOT_LIBDIR=$ROOT_LIBDIR JULIA_LIBDIR=$JULIA_LIBDIR LIBJULIA_PATH=$LIBJULIA_PATH INCDIR_JULIA_H=$INCDIR_JULIA_H INCDIR_UV_H=$INCDIR_UV_H INCDIR_SUPPORT_H=$INCDIR_SUPPORT_H`) |> println
 
 exepath = joinpath(bindir, "julia")
@@ -67,4 +67,4 @@ open(depsfile_location, "w") do depsfile
     )
 end
 
-info("ROOT-enabled julia now exists at $exepath")
+@info "ROOT-enabled julia now exists at $exepath"
