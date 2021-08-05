@@ -49,6 +49,18 @@ Julia API wrappers for specific ROOT functionalities are left to more
 specialized packages.
 
 
+## ROOT's graphical user interface
+
+If you want to use ROOT's GUI, run `rootgui()` to start a Julia timer that
+runs ROOT GUI loop. To open a `TBrowser`, for example, run
+
+```julia
+cxxinclude("TBrowser.h")
+rootgui()
+
+icxx"new TBrowser();"
+```
+
 ## Thread-safety
 
 During startup, ROOT.jl will also enable basic thread-safety for ROOT
