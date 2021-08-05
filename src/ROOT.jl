@@ -71,10 +71,6 @@ if gROOTMutex() == C_NULL
 end
 
 
-cxxinclude("TSystem.h")
-cxxinclude("TApplication.h")
-
-
 struct ROOT_GUI
     root_app
     root_timer
@@ -83,6 +79,9 @@ end
 
 _global_root_gui = nothing
 
+
+cxxinclude("TSystem.h")
+cxxinclude("TApplication.h")
 
 function ROOT_GUI()
     root_app = icxx"""

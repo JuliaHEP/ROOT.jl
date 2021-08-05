@@ -55,6 +55,8 @@ If you want to use ROOT's GUI, run `rootgui()` to start a Julia timer that
 runs ROOT GUI loop. To open a `TBrowser`, for example, run
 
 ```julia
+using ROOT, Cxx
+
 cxxinclude("TBrowser.h")
 rootgui()
 
