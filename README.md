@@ -3,13 +3,15 @@
 Provides basic access to the [CERN ROOT Framework](https://root.cern.ch/)
 for the Julia language.
 
+**Note:** This is work in progress, expect bugs and crashes.
+
 
 ## Requirements
 
-* Julia v0.5
-* The current master branch of [CXX.jl](https://github.com/Keno/Cxx.jl) (until
-  Cxx.jl v0.1.1 or so is released).
-* ROOT-6 (ROOT-5 may work, but is no longer recommended)
+* [Julia v1.3](https://julialang.org/downloads/oldreleases/).
+* [CXX.jl](https://github.com/Keno/Cxx.jl) - note that Cxx.jl currently
+  (v0.3.4) doesn't support Julia v1.4 or newer.
+* ROOT v6.24.02 or newer (`root-config` must be on your `$PATH`).
 
 
 ## Usage
@@ -23,13 +25,9 @@ export JULIA_CXX_RTTI="1"
 Install ROOT.jl:
 
 ```
-julia> Pkg.add("ROOT")
+julia> import Pkg;
+julia> Pkg.add(Pkg.PackageSpec(url="https://github.com/JuliaHEP/ROOT.jl.git"))
 ```
-
-ROOT.jl will install a special Julia executable that initializes ROOT
-before starting Julia. This avoids conflicts between Cling's LLVM instance
-and Julia's LLVM instance. The ROOT-compatible Julia binary resides at:
-`joinpath(Pkg.dir("ROOT"), "deps", "usr", "bin", "julia")`.
 
 You can directly use the standard ROOT API via Cxx.jl:
 
