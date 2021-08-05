@@ -1,9 +1,17 @@
+# This file is a part of ROOT.jl, licensed under the MIT License (MIT).
+
 __precompile__(false)
 
+"""
+    ROOT
+
+Basic Julia/C++ interface to the CERN ROOT system.
+"""
 module ROOT
 
 
 using Cxx
+using Libdl: Libdl
 
 const ROOT_PKG_DIR = dirname(dirname(@__FILE__))
 
@@ -42,6 +50,15 @@ cxxinclude("TVirtualMutex.h")
 Base.lock(mutex::pcpp"TVirtualMutex") = @cxx mutex->Lock();
 Base.unlock(mutex::pcpp"TVirtualMutex") = @cxx mutex->UnLock();
 
+function Base.lock(f, mutex::pcpp"TVirtualMutex")
+    lock(mutex)
+    try
+        f()
+    finally
+        unlock(mutex)
+    end
+end
+
 export gROOTMutex
 gROOTMutex() = icxx"gROOTMutex;"
 
@@ -50,7 +67,6 @@ gGlobalMutex() = icxx"gGlobalMutex;"
 
 
 if gROOTMutex() == C_NULL
-    warn("ROOT not pre-initialized, use the ROOT-compatible Julia executable \"$JULIA_EXE\"")
     icxx"TThread::Initialize();"
 end
 
