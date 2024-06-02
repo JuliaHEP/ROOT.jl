@@ -1,62 +1,29 @@
-using ROOT
-using Compat.Test
+using Test
+import Pkg
 
-using Cxx
+Base.ENV["JULIA_PROJECT"] = dirname(Pkg.project().path)
 
-
-cxxinclude("TFile.h")
-cxxinclude("TTree.h")
-cxxinclude("TChain.h")
-
-cxxinclude("TH1.h")
-cxxinclude("TH1D.h")
-
-
-@Base.Test.testset "Package ROOT" begin
-    mktempdir() do scratchdir
-
-        @testset "TTree and TChain" begin
-
-            cd(scratchdir) do
-                @test icxx"""
-                    TFile output_file("testdata.root", "recreate");
-                    auto tree = new TTree("data", "Data");
-                    Int_t x = 0;
-                    tree->Branch("x", &x);
-                    for (size_t i = 1; i <= 10; ++i) {
-                        x = 2 * i;
-                        tree->Fill();
-                    }
-                    output_file.Write();
-                    output_file.Close();
-                    true;
-                """
-
-                @test icxx"""
-                    TChain chain("data");
-                    chain.AddFile("testdata.root");
-                    Int_t x = 0;
-                    chain.SetBranchAddress("x", &x);
-                    auto n = chain.GetEntries();
-                    Int_t s = 0;
-                    for (size_t i = 0; i < n; ++i) {
-                        chain.GetEntry(i);
-                        s += x;
-                    }
-                    s;
-                """ == 110
-            end
+function test_nothrow(script)
+    @test begin
+        try
+            run(`$(Base.Sys.BINDIR)/julia $script`)
+            true
+        catch
+            false
         end
+    end
+end
 
-        @testset "TH1" begin
-            @test icxx"""
-                auto *hist = new TH1D("hist", "Hist", 10, 0, 10);
-                for (Int_t i = 0; i < 10; ++i) hist->Fill(i);
-                auto s = hist->Integral();
-                delete hist;
-                s;
-            """ ≈ 10
-        end
-
-    end # mktempdir
+@testset "Examples" begin
+    @testset "demo_ROOT" test_nothrow("../examples/demo_ROOT.jl")
+    @testset "demo_TGraph" test_nothrow("../examples/demo_TGraph.jl")
+    @testset "demo_fit_with_jl_func" test_nothrow("../examples/demo_fit_with_jl_func.jl")
+#    @testset "demo_fit_with_jl_func_2" test_nothrow("../examples/demo_fit_with_jl_func_2.jl") #does not work on MacOS
+    @testset "write_tree1" test_nothrow("../examples/TTree_examples/write_tree1.jl")
+    @testset "read_tree1" test_nothrow("../examples/TTree_examples/read_tree1.jl")
+    @testset "write_tree2" test_nothrow("../examples/TTree_examples/write_tree2.jl")
+    @testset "read_tree2" test_nothrow("../examples/TTree_examples/read_tree2.jl")
+    @testset "write_tree3" test_nothrow("../examples/TTree_examples/write_tree3.jl")
+    @testset "read_tree3" test_nothrow("../examples/TTree_examples/read_tree3.jl")
+    @testset "string_branch_example" test_nothrow("../examples/TTree_examples/string_branch_example.jl")
 end

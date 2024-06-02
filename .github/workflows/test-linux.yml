@@ -1,0 +1,36 @@
+#This file is kept almost identical to test-macos
+#We use two files in order to get two distinct badges for Linux and macOS.
+name: Linux
+on:
+  - push
+  - pull_request
+
+defaults:
+  run:
+    shell: bash
+ 
+jobs:
+  test:
+    name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - '1.10'
+          - 'nightly'
+        os:
+          - ubuntu-latest
+#          - macOS-latest
+        arch:
+          - x64
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: julia-actions/setup-julia@latest
+        with:
+          version: ${{ matrix.version }}
+          arch: ${{ matrix.arch }}
+      - uses: julia-actions/julia-buildpkg@latest
+      - uses: julia-actions/julia-runtest@latest

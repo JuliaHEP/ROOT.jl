@@ -1,123 +1,61 @@
-# This file is a part of ROOT.jl, licensed under the MIT License (MIT).
-
-__precompile__(false)
-
-"""
-    ROOT
-
-Basic Julia/C++ interface to the CERN ROOT system.
-"""
 module ROOT
 
+import Base.getindex
+import Base.setindex!
 
-using Cxx
-using Libdl: Libdl
+import Libdl
+import Pkg
+using CxxWrap
 
-const ROOT_PKG_DIR = dirname(dirname(@__FILE__))
+Sys.iswindows() && error("Windows platform detected. ROOT is supported on Linux and MacOS only.")
 
-const deps_jl = joinpath(ROOT_PKG_DIR, "deps", "deps.jl")
-if isfile(deps_jl)
-    include(deps_jl)
-else
-    error("ROOT is not properly installed. Run Pkg.build(\"ROOT\").")
+if !isfile("$(@__DIR__)/../deps/deps.jl")
+    error("File '$(@__DIR__)/../deps/deps.jl' missing. This can happen if the ROOT package was installed with the Pkg.develop() (or ] dev) command. Run 'import Pkg; Pkg.build(\"ROOT\", verbose=true)' (or ] build -v ROOT) to generate the missing file.")
 end
 
+include("$(@__DIR__)/../deps/deps.jl")
+include_dependency(libpath)
 
-function load_rootlib(libname)
-    for ext in ("so", "dylib")
-        libpath = joinpath(ROOT_LIBDIR, "lib$libname.$ext")
-        if isfile(libpath)
-            Libdl.dlopen(libpath, Libdl.RTLD_GLOBAL)
-            return
-        end
-    end
-    error("could not find ROOT library $libname at \"$libpath\"")
+if !isfile(libpath)
+    error("File '$libpath' missing. This can happen if the ROOT package was installed with the Pkg.develop() (or ] dev) command. Run 'import Pkg; Pkg.build(\"ROOT\", verbose=true)' (or ] build -v ROOT) to generate the missing file.")
 end
 
-addHeaderDir(ROOT_INCDIR, kind=C_System)
+@wrapmodule(()->libpath)
 
+include("iROOT.jl")
 
-load_rootlib.([
-    "Core", "Gpad", "Graf", "Graf3d", "Hist", "MathCore", "Matrix", "MultiProc", "Net",
-    "Physics", "Postscript", "Rint", "RIO", "Thread", "Tree"
-])
+TF1!kDefault = 0
 
+function __init__()
+    # Some required environment cleanup before loading the ROOT libraries
+    saved_path = ENV["PATH"]
+    saved_ld_library_path = get(ENV, "LD_LIBRARY_PATH", nothing)
+    saved_dyld_library_path = get(ENV, "DYLD_LIBRARY_PATH", nothing)
+    #   Prevent mix-up of root library version is another version than ours is in LD_LIBRARY_PATH:
+    isnothing(saved_ld_library_path) || (ENV["LD_LIBRARY_PATH"] = "")
+    isnothing(saved_dyld_library_path) || (ENV["DYLD_LIBRARY_PATH"] = "")
+    #   Workaroud to prevent a crash with root installed with Conda linker to
+    #   the c++ compiler called by cling to get the include directories and
+    #   missing in the PATH list. In the Conda install, compiler is same directory as ROOT
+    #   binaries, rootbindir
+    ENV["PATH"] *= ":" * rootbindir
 
-cxxinclude("TROOT.h")
-cxxinclude("TThread.h")
-cxxinclude("TVirtualMutex.h")
+    @initcxx
+    global gROOT = ROOT!GetROOT()
 
-Base.lock(mutex::pcpp"TVirtualMutex") = @cxx mutex->Lock();
-Base.unlock(mutex::pcpp"TVirtualMutex") = @cxx mutex->UnLock();
+    #Restore the environment:
+    ENV["PATH"] = saved_path
+    isnothing(saved_ld_library_path) || (ENV["LD_LIBRARY_PATH"] = saved_ld_library_path)
+    isnothing(saved_dyld_library_path) || (ENV["DYLD_LIBRARY_PATH"] = saved_dyld_library_path)
 
-function Base.lock(f, mutex::pcpp"TVirtualMutex")
-    lock(mutex)
-    try
-        f()
-    finally
-        unlock(mutex)
-    end
+    isinteractive() && _init_event_loop()
 end
 
-export gROOTMutex
-gROOTMutex() = icxx"gROOTMutex;"
+export gROOT, gSystem
+include("ROOT-export.jl")
+export SetAddress
 
-export gGlobalMutex
-gGlobalMutex() = icxx"gGlobalMutex;"
+include("ROOTex.jl")
+include("demo.jl")
 
-
-if gROOTMutex() == C_NULL
-    icxx"TThread::Initialize();"
-end
-
-
-struct ROOT_GUI
-    root_app
-    root_timer
-    julia_timer
-end
-
-_global_root_gui = nothing
-
-
-cxxinclude("TSystem.h")
-cxxinclude("TApplication.h")
-
-function ROOT_GUI()
-    root_app = icxx"""
-        TApplication *app = new TApplication("", 0, 0);
-        app->SetReturnFromRun(true);
-        app;
-    """
-    # Timer is necessary, else ROOT's event loop will usually block for a long
-    # time (why?). See also the source code of ROOT's TQRootApplication.
-    root_timer = icxx"""
-        TTimer *timer = new TTimer(20);
-        timer->Start(20, false);
-        timer;
-    """
-
-    julia_timer = Timer(timer::Timer -> root_gui_cycle(), 0, interval=0.1)
-    
-    ROOT_GUI(root_app, root_timer, julia_timer)
-end
-
-
-rootgui() = if isnothing(_global_root_gui)
-    global _global_root_gui = ROOT_GUI()
-    nothing
-end
-export rootgui
-
-
-function root_gui_cycle()
-    rootgui()
-    icxx"""
-        // gApplication->StartIdleing();
-        gSystem->InnerLoop();
-        // gApplication->StopIdleing();
-    """
-end
-
-
-end # module
+end #module

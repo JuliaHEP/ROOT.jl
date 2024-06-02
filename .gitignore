@@ -4,5 +4,15 @@
 *.jl.mem
 .ipynb_checkpoints
 .vscode
-Manifest.toml
 build.log
+Manifest.toml
+deps/build.log
+deps/deps.jl
+test/demo_ROOT.png
+test/demo_ROOT_out.root
+test/demo_TGraph.png
+test/demo_fit_with_jl_func.png
+test/demo_fit_with_jl_func_2.png
+test/test1.root
+test/test2.root
+test/test3.root
