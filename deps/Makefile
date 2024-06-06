@@ -40,7 +40,7 @@ LINK.o = $(CXX) $(LDFLAGS) $(TARGET_ARCH)
 
 .PHONY: all clean distclean run_demo run_demo2 check_root make_lib_from_objs
 
-PRODUCTS = $(BUILD_DIR)/libjlROOT2$(SO_SUFFIX)
+PRODUCTS = $(BUILD_DIR)/libjlROOT$(SO_SUFFIX)
 
 #Define WRAPPER_CXX
 #WRAPPER_CXX: = $(file < src/generated_cxx) Extra.cxx #does not work on MacOS
@@ -63,7 +63,7 @@ $(BUILD_DIR):
 	@mkdir -p $(BUILD_DIR)
 	@echo 'all:\n\n%:\n\t$$(MAKE) -C .. $$@\nclean:\n\t$$(MAKE) -C .. clean build\n' > $(BUILD_DIR)/Makefile
 
-$(BUILD_DIR)/ROOT2-generated.wit: ROOT2.wit $(BUILD_DIR)
+$(BUILD_DIR)/ROOT-generated.wit: ROOT.wit $(BUILD_DIR)
 	$(MAKE) check_root
 	$(shell echo "#\n# Warning: file generated automatically from $<\n#" > $@)
 	$(shell sed "s@%ROOT_INC_DIR%@$(ROOT_INC_DIR)@" $< >> $@ || rm $@)
@@ -81,26 +81,26 @@ run_demo2: all
 
 test: all
 	LD_LIBRARY_PATH=$(shell $(ROOT_CONFIG) --libdir) \
-JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. demo_ROOT2.jl
+JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. demo_ROOT.jl
 	cmp demo_ROOT.png demo_ROOT-ref.png
 	LD_LIBRARY_PATH=$(shell $(ROOT_CONFIG) --libdir) \
-JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. demo_TGraph.jl
+JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. demo_TGraph.jl
 	cmp demo_TGraph.png demo_TGraph-ref.png
 	LD_LIBRARY_PATH=$(shell $(ROOT_CONFIG) --libdir) \
-JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree1.jl \
-&& JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree1.jl
+JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree1.jl \
+&& JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree1.jl
 	LD_LIBRARY_PATH=$(shell $(ROOT_CONFIG) --libdir) \
-JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree2.jl \
-&& JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. -e 'import Pkg; Pkg.activate(;temp=true); Pkg.add("UnROOT"); include("TTree_examples/read_tree2.jl")'
+JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree2.jl \
+&& JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. -e 'import Pkg; Pkg.activate(;temp=true); Pkg.add("UnROOT"); include("TTree_examples/read_tree2.jl")'
 	LD_LIBRARY_PATH=$(shell $(ROOT_CONFIG) --libdir) \
-JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree3.jl \
-&& JULIA_LOAD_PATH=`pwd`/build/ROOT2/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree3.jl
+JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree3.jl \
+&& JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree3.jl
 
 $(BUILD_DIR)/%.o: src/%.cxx $(BUILD_DIR)
-	[ -d $(BUILD_DIR)/libROOT2/build ] || mkdir -p $(BUILD_DIR)/libROOT2/build
+	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
 	$(COMPILE.cc) $(CPPFLAGS) -o $@ $<
 
-$(BUILD_DIR)/libjlROOT2$(SO_SUFFIX): $(OBJS)
+$(BUILD_DIR)/libjlROOT$(SO_SUFFIX): $(OBJS)
 	$(MAKE) check_root
 	$(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
 

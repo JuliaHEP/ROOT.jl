@@ -11,7 +11,7 @@ function demo()
     
     h = TH1D("h", "Normal distribution", 100, -5, 5)
     FillRandom(h, "gaus")
-    c = ROOT2.TCanvas()
+    c = TCanvas()
     Fit(h, "gaus")
     c
 end

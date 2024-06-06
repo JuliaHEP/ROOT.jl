@@ -7,7 +7,7 @@ using Scratch
 const CXXWRAP_PREFIX = CxxWrap.prefix_path()
 const JL_SHARE = joinpath(Sys.BINDIR, Base.DATAROOTDIR, "julia")
 const JULIA = joinpath(Sys.BINDIR, "julia")
-const libname="libjlROOT2." * Libdl.dlext
+const libname="libjlROOT." * Libdl.dlext
 
 const conda_root_version = "6.30.04"
 const supported_root_versions = [ conda_root_version ]
