@@ -1,5 +1,6 @@
 using Test
 import Pkg
+import ROOT
 
 Base.ENV["JULIA_PROJECT"] = dirname(Pkg.project().path)
 
@@ -26,4 +27,12 @@ end
     @testset "write_tree3" test_nothrow("../examples/TTree_examples/write_tree3.jl")
     @testset "read_tree3" test_nothrow("../examples/TTree_examples/read_tree3.jl")
     @testset "string_branch_example" test_nothrow("../examples/TTree_examples/string_branch_example.jl")
+    @testset "ROOT.demo()" begin
+        @test try
+            ROOT.demo()
+            true
+        catch
+            false
+        end
+    end
 end

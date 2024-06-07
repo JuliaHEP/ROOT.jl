@@ -24,10 +24,13 @@ Linux and MacOS.
 
 ## Installation
 
+From Julia REPL, type `]` to enter in the package manager and type
+
 ```
-import Pkg
-Pkg.add("ROOT")
+add https://github.com/JuliaHEP/ROOT.jl
 ```
+
+Registration in the General repository is in progress. Once it will be done, `add ROOT` will be used.
 
 ⚠️  Installation can stay several minutes (ten of minutes on macOS) on the following message.
 
