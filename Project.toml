@@ -1,26 +1,26 @@
 name = "ROOT"
 uuid = "1706fdcc-8426-44f1-a283-5be479e9517c"
-version = "0.3.0"
 authors = ["Philippe Gras CEA/IRFU"]
+version = "0.3.0"
 
 [deps]
 Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"
+CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
+Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 Scratch = "6c6a2e73-6563-6170-7368-637461726353"
-Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
-UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
-CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
-
-[extras]
-UnROOT = "3cd96dde-e98d-4713-81e9-a4a1b0235ce9"
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 
 [compat]
-julia = "1.6"
 Conda = "1.10"
-Scratch = "1.2"
 CxxWrap = "0.14"
+Scratch = "1.2"
+julia = "1.6"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+UnROOT = "3cd96dde-e98d-4713-81e9-a4a1b0235ce9"
 
 [targets]
 test = ["Test", "UnROOT"]
