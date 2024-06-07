@@ -77,23 +77,23 @@ export GetTreeNumber, GetType, GetTypeName, GetUUID, GetUid, GetUniqueID, GetUpd
 export GetValue, GetValueLong64, GetValuePointer, GetVariable, GetVersion, GetVersionCode, GetVersionDate, GetVersionInt
 export GetVersionTime, GetVolumes, GetW, GetWebDisplay, GetWeight, GetWh, GetWindowHeight, GetWindowTopX, GetWindowTopY
 export GetWindowWidth, GetWorkingDirectory, GetWriteBasket, GetWw, GetX, GetXaxis, GetXbins, GetXmax, GetXmin, GetXsizeReal
-export GetXsizeUser, GetY, GetYaxis, GetYmax, GetYmin, GetYsizeReal, GetYsizeUser, GetZaxis, GetZipBytes, GetZmax, GetZmin, Getenv
-export GradientPar, HandleException, HandleIdleTimer, HandleInput, HandleTermInput, HandleTimer, HasInconsistentHash, HasMenuBar
-export Hash, Hide, HighlightConnect, Highlighted, HomeDirectory, HostName, Iconify, Idle, IgnoreInclude, IgnoreInterrupt
-export IgnoreSignal, Import, ImportAttributes, InControl, InPlaceClone, IncludeRange, IncrementPidOffset, IncrementProcessIDs
-export IncrementTotalBuffers, InheritsFrom, Init, InitArgs, InitExpo, InitGaus, InitPolynom, InitializeGraphics, InnerLoop, InputFiles
-export InsertPoint, InsertPointBefore, Inspect, Integral, IntegralAndError, IntegralError, IntegralFast, IntegralMultiple
-export IntegralOneDim, Interpolate, InvertBit, IsA, IsAbsoluteFileName, IsAlphanumeric, IsArchive, IsAutoDelete, IsBatch
-export IsBinOverflow, IsBinUnderflow, IsBinary, IsBuilt, IsChain, IsCmdThread, IsDestructed, IsDrawn, IsEditable, IsEqual, IsEscaped
-export IsEvalNormalized, IsExecutingMacro, IsFileInIncludePath, IsFolder, IsGrayscale, IsHighlight, IsInside, IsInterrupted, IsInvalid
-export IsLineProcessing, IsLinear, IsModified, IsOnHeap, IsOnTerminalBranch, IsOpen, IsPathLocal, IsProofServ, IsRange, IsRaw
-export IsRetained, IsRootFile, IsRunning, IsSortable, IsUnsigned, IsUpdated, IsValid, IsVariableBinSize, IsVectorized, IsWeb
-export IsWebDisplay, IsWebDisplayBatch, IsWritable, IsZombie, Keep, KeepCircular, KeyPressed, KolmogorovTest, LabelsDeflate
-export LabelsInflate, LabelsOption, Landau, LeastSquareFit, LeastSquareLinearFit, LineProcessed, Link, ListLibraries, ListSymbols
-export Load, LoadAllLibraries, LoadBaskets, LoadClass, LoadMacro, LoadTree, LoadTreeFriend, Lower, Macro, MakeClass
-export MakeCode, MakeDefCanvas, MakeDirectory, MakeFree, MakeProject, MakeProxy, MakeSelector, Map, Matches, MayNotUse, Mean
-export MemoryFull, Merge, Message, Moment, MoveOpaque, MovePoints, Multiply, MustClean, MustFlush, Next, NextTimeOut, NoLogOpt
-export NoLogoOpt, Notify, NotifyApplicationCreated, Now, Obsolete, OpaqueMoving, OpaqueResizing, Open, OpenConnection
+export GetXsizeUser, GetY, GetYaxis, GetYmax, GetYmin, GetYsizeReal, GetYsizeUser, GetZaxis, GetZipBytes, GetZmax, GetZmin, Get_
+export Getenv, GradientPar, HandleException, HandleIdleTimer, HandleInput, HandleTermInput, HandleTimer, HasInconsistentHash
+export HasMenuBar, Hash, Hide, HighlightConnect, Highlighted, HomeDirectory, HostName, Iconify, Idle, IgnoreInclude
+export IgnoreInterrupt, IgnoreSignal, Import, ImportAttributes, InControl, InPlaceClone, IncludeRange, IncrementPidOffset
+export IncrementProcessIDs, IncrementTotalBuffers, InheritsFrom, Init, InitArgs, InitExpo, InitGaus, InitPolynom, InitializeGraphics
+export InnerLoop, InputFiles, InsertPoint, InsertPointBefore, Inspect, Integral, IntegralAndError, IntegralError, IntegralFast
+export IntegralMultiple, IntegralOneDim, Interpolate, InvertBit, IsA, IsAbsoluteFileName, IsAlphanumeric, IsArchive, IsAutoDelete
+export IsBatch, IsBinOverflow, IsBinUnderflow, IsBinary, IsBuilt, IsChain, IsCmdThread, IsDestructed, IsDrawn, IsEditable
+export IsEqual, IsEscaped, IsEvalNormalized, IsExecutingMacro, IsFileInIncludePath, IsFolder, IsGrayscale, IsHighlight
+export IsInside, IsInterrupted, IsInvalid, IsLineProcessing, IsLinear, IsModified, IsOnHeap, IsOnTerminalBranch, IsOpen
+export IsPathLocal, IsProofServ, IsRange, IsRaw, IsRetained, IsRootFile, IsRunning, IsSortable, IsUnsigned, IsUpdated, IsValid
+export IsVariableBinSize, IsVectorized, IsWeb, IsWebDisplay, IsWebDisplayBatch, IsWritable, IsZombie, Keep, KeepCircular, KeyPressed
+export KolmogorovTest, LabelsDeflate, LabelsInflate, LabelsOption, Landau, LeastSquareFit, LeastSquareLinearFit, LineProcessed, Link
+export ListLibraries, ListSymbols, Load, LoadAllLibraries, LoadBaskets, LoadClass, LoadMacro, LoadTree, LoadTreeFriend, Lower, Macro
+export MakeClass, MakeCode, MakeDefCanvas, MakeDirectory, MakeFree, MakeProject, MakeProxy, MakeSelector, Map, Matches, MayNotUse
+export Mean, MemoryFull, Merge, Message, Moment, MoveOpaque, MovePoints, Multiply, MustClean, MustFlush, Next, NextTimeOut
+export NoLogOpt, NoLogoOpt, Notify, NotifyApplicationCreated, Now, Obsolete, OpaqueMoving, OpaqueResizing, Open, OpenConnection
 export OpenDirectory, OpenFile, OpenForumTopic, OpenGitHubIssue, OpenInBrowser, OpenPipe, OpenReferenceGuideFor, Openlog
 export OptimizeBaskets, OptimizeStorage, Paint, PaintGrapHist, PaintGraph, PaintStats, ParamsVec, Pick, Picked, Poisson, PoissonD, Pop
 export PrependPathName, Previous, Print, PrintCacheInfo, PrintCacheStats, PrintValue, Process, ProcessEvents, ProcessFile, ProcessLine

@@ -9,11 +9,13 @@ out_cxx_dir         = "ROOT/deps/src"
 
 include_dirs        = [ "/home/pgras/.julia/conda/3/include", "src" ]
 
-input               = [ "TROOT.h", "TBrowser.h", "TTree.h", "TBranchPtr.h", "TLeaf.h", "TBranch.h", "TSystem.h", "TCanvas.h", "TH1.h", "TH2.h", "TProfile.h", "TProfile2D.h","TRandom.h", "TAxis.h", "TApplication.h",  "TDirectory.h", "TDirectoryFile.h", "TFile.h", "TNamed.h", "TObject.h", "TGraph.h", "TF1.h", "TTreeReader.h", "TTreeReaderValue.h", "TTreeReaderArray.h", "Templates.h", "TEntryList.h", "TKey.h",  "TVectorT.h", "TVectorDfwd.h", "TVectorFfwd.h", "Extra.h"  ]
-#input               = [  "TTreeReader.h", "TTreeReaderValue.h", "TTreeReaderArray.h" ]
+input               = [ "TROOT.h", "TBrowser.h", "TTree.h", "TBranchPtr.h", "TLeaf.h", "TBranch.h", "TSystem.h", "TCanvas.h", "TH1.h", "TH2.h", "TProfile.h", "TProfile2D.h","TRandom.h", "TAxis.h", "TApplication.h",  "TDirectory.h", "TDirectoryFile.h", "TFile.h", "TNamed.h", "TObject.h", "TGraph.h", "TF1.h", "TTreeReader.h", "TTreeReaderValue.h", "TTreeReaderArray.h", "Templates.h", "TEntryList.h", "TKey.h",  "TVectorT.h", "TVectorDfwd.h", "TVectorFfwd.h", "Extra.h" ]
+
 extra_headers       = [ "TVectorT.h" ]
 
 veto_list           = "src/jlROOT-veto.h"
+
+julia_names         = [ "TDirectoryFile::Get -> Get_", "TDirectory::Get -> Get_" ]
 
 fields_and_variables = true
 

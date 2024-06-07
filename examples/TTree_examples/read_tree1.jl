@@ -1,16 +1,15 @@
 using ROOT
-const R = ROOT
 
 println("Reading back the file created with write_tree1.jl using TTree::GetEntry.\n")
 
-f = R.TFile!Open("test1.root")
+f = ROOT.TFile!Open("test1.root")
 f != C_NULL || error("File not found.")
 
-t = R.GetTTree(f[], "tree")
+t = Get(f, "tree")
 t != C_NULL ||  error("Tree not found!")
 
-a = fill(0)
-SetBranchAddress(t[], "a", a)
+a = Ref{Int32}(0)
+SetBranchAddress(t, "a", a)
 nevts = GetEntries(t)
 for i in 1:nevts
     GetEntry(t, i-1)

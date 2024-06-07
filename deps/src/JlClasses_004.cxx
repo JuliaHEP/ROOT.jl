@@ -494,7 +494,7 @@ struct JlTDirectoryFile: public Wrapper {
     DEBUG_MSG("Adding wrapper for TObject * TDirectoryFile::Get(const char *) (" __HERE__ ")");
     // signature to use in the veto list: TObject * TDirectoryFile::Get(const char *)
     // defined in /home/pgras/.julia/conda/3/include/TDirectoryFile.h:80:23
-    t.method("Get", static_cast<TObject * (TDirectoryFile::*)(const char *) >(&TDirectoryFile::Get));
+    t.method("Get_", static_cast<TObject * (TDirectoryFile::*)(const char *) >(&TDirectoryFile::Get));
 
     DEBUG_MSG("Adding wrapper for TDirectory * TDirectoryFile::GetDirectory(const char *, Bool_t, const char *) (" __HERE__ ")");
     // signature to use in the veto list: TDirectory * TDirectoryFile::GetDirectory(const char *, Bool_t, const char *)

@@ -3,7 +3,7 @@
 # demo_fit_with_jl_func.jl for an example of such a fit without this module.
 #
 
-export TF1W, TGraphW
+export TF1W, TGraphW, Get
 
 import Base.convert
 
@@ -11,7 +11,7 @@ import Base.convert
 function TGraph(x::AbstractVector{T}, y::AbstractVector{T}) where T
     TGraph(Base.length(x), 
            x isa AbstractRange ? collect(x) : x,
-            y isa AbstractRange ? collect(y) : y)
+           y isa AbstractRange ? collect(y) : y)
 end
 
 #----Global vector (GC) ---------------------------------------------------------------------------
@@ -45,6 +45,122 @@ function Fit(g::TGraph, tf1::TF1, option::String = "", goption::String = "", rxm
     Fit(g, CxxPtr(tf1), option, goption, rxmin, rxmax)
 end
 
+# helper function used by the Get methods
+function _GetHelper(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name; throwexcept = true)
+    obj = Get_(file, name)               # Get object from file (TObject*)
+    if obj == C_NULL
+        if throwexcept
+            fname = GetName(file)
+            throw(KeyError("No object with name $name found in file $fname"))
+        else
+            return (Nothing, C_NULL)
+        end
+    end
+
+    #Gets the type from the key, which works for any object including
+    #for class that does not derive from a TObject.
+    #Note: we used above Get_ to retrieve the object instead of ReadObj(key)
+    #because it handles cases, where the object is already in memory.
+    k = GetKey(file, TDirectory!DecodeNameCycle(name)...)
+    typename = GetClassName(k)
+    type = getproperty(ROOT, Symbol(typename))
+    (type, obj)
+end
+
+#---TFile extensions-------------------------------------------------------------------------------
+"""
+   `Get(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name)`
+
+    Retrieves an object from a `TFile`. If the object is not found, an `KeyError` exception is thrown.
+
+    Note that this function is type instable. Use instead `Get(file, name, type)` is type stability is required.
+
+    See also [`Get(file, name, type)`](@ref) and [`Get(file, name, default)`](@ref)
+"""
+function Get(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name)
+    (type, obj) = _GetHelper(file, name)
+    return CxxWrap.CxxPtr{type}(obj)[]  # Cast to the proper type
+end
+
+"""
+   `Get(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name, type)`
+
+    Retrieves an object of type `type` from a `TFile`. If the object is not found,
+    an `KeyError` exception is thrown. The object data type is specified to
+    ensure type stability and can be omitted if type stability is not required.
+
+    See also [`Get(file, name)`](@ref) and [`Get(file, name, default)`](@ref)
+"""
+function Get(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name, type)
+    (actualtype, obj) = _GetHelper(file, name)
+
+    if ! (actualtype <: type)
+        fname = GetName(file)
+        #throw(ArgumentError("Type of the object $name found in $fname, $actualtype, does not match with the type argument, $type."))
+        throw(TypeError(:get, "Type mismatch between retrieved object and provided type information.", type, actualtype))
+    end
+
+    return CxxWrap.CxxPtr{type}(obj)[]
+end
+
+"""
+   `Get(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name, type::DataType, default::T)`
+
+   Retrieves an object named `name` from a `TFile`. Returns `default` is the object is not found. The type of the object needs to be of the `type` specified in the 4th argument. If it is not, an `TypeError` exception is thrown.
+
+   The function type stability can be ensured by providing as `default` the value `nothing` or another value of type `type`.
+
+    See also [`Get(file, name)`](@ref) and [`Get(file, name)`](@ref)
+"""
+function Get(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name, type, default::T)::Union{type, T} where {T}
+    (actualtype, obj) = _GetHelper(file, name; throwexcept = false)
+    if obj == C_NULL
+        return default
+    elseif !(actualtype <: type)
+        fname = GetName(file)
+        #throw(ArgumentError("Type mismatch between the object $name found in $fname and the passed default value")
+        throw(TypeError(:get, "Type mismatch between retrieved object and default value", type, T))
+    else
+        return CxxWrap.CxxPtr{actualtype}(obj)[]
+    end
+end
+
+#See https://root.cern/doc/v632/TDirectory_8cxx.html#a942917eb21a84f137c08b7d4185f1b44
+const TDirectory!kMaxLen = 2056
+
+function TDirectory!DecodeNameCycle(name)
+    cycle = zeros(Int16)
+    basename_ = Base.Vector{Int8}(undef, ROOT.TDirectory!kMaxLen)
+    TDirectory!DecodeNameCycle(name, basename_, cycle, ROOT.TDirectory!kMaxLen)
+    GC.@preserve basename = unsafe_string(pointer(basename_))
+    (basename, cycle[])
+end
+
+"""
+   `getindex(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name)`
+
+   Retrieves an object named `name` from a `TFile`. It is usually called with the syntax file[name].
+   Throws an `KeyError` exception is the object is not found.
+
+    See also [`Get(file, name)`](@ref), [`Get(file, name)`](@ref)  and [`Get(file, name, type)`](@ref)
+"""
+Base.getindex(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name) = Get(file, name)
+
+"""
+   `getproperty(file::T, sym::Symbol)
+
+   Retrieves an object named `sym` (provided as a symbol) from a `TFile`. It is usually called with the syntax file.name.
+   Throws an `KeyError` exception is the object is not found.
+
+    See also [`getindex(file, name)`](), [`Get(file, name)`](@ref), [`Get(file, name)`](@ref)  and [`Get(file, name, type)`](@ref)
+"""
+function Base.getproperty(file::T, sym::Symbol) where {T<:Union{ROOT.TDirectoryFile, CxxPtr{<:ROOT.TDirectoryFile}}}
+    if sym ∈ fieldnames(T)
+        return getfield(file, sym)
+    else
+        return Get(file, String(sym)) 
+    end
+end
 
 # Wrapper for TF1 that holds references to julia objects
 struct TF1W <: TF1
