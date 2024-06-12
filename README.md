@@ -24,15 +24,21 @@ Linux and MacOS.
 
 ## Installation
 
-From Julia REPL, type `]` to enter in the package manager and type
+To install the latest release, type from the Julia REPL, type `]` to enter in the package manager and then,
 
 ```
-add https://github.com/JuliaHEP/ROOT.jl
+add ROOT
 ```
 
-Registration in the General repository is in progress. Once it will be done, `add ROOT` will be used.
+The developement version (github HEAD) can be installed using,
 
-⚠️  Installation can stay several minutes (ten of minutes on macOS) on the following message.
+```
+dev https://github.com/JuliaHEP/ROOT.jl
+build ROOT
+```
+
+⚠ Installation can stay several minutes (ten of minutes on macOS) on the following message.
+
 
 ```
 Building ROOT → `.../build.log`
@@ -40,6 +46,8 @@ Building ROOT → `.../build.log`
 ```
 
 This is due to the installation of ROOT and compilation of the wrapper library. **Be patient**. You can open the indicated `build.log` file to see the progress.
+
+💡 Sometimes the `build.jl` script is not launched by the package manager. It is for instance the case in the development mode (package added with the `dev` command). In case of the command `add ...` command fail, try first to run `build ROOT` from the package manager prompt before investigating further.
 
 ## ROOT version
 
