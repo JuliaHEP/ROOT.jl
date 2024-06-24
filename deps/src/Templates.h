@@ -90,27 +90,27 @@ template class TBranchPtr<std::vector<Float_t>>;
 template class TBranchPtr<std::vector<Double_t>>;
 
 
-FCN_TEMPLATE TBranchPtr<Char_t>   Branch(TTree&, const char* name, Char_t*   obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<UChar_t>  Branch(TTree&, const char* name, UChar_t*  obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<Short_t>  Branch(TTree&, const char* name, Short_t*  obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<UShort_t> Branch(TTree&, const char* name, UShort_t* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<Int_t>    Branch(TTree&, const char* name, Int_t*    obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<UInt_t>   Branch(TTree&, const char* name, UInt_t*   obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<Long_t>   Branch(TTree&, const char* name, Long_t*   obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<ULong_t>  Branch(TTree&, const char* name, ULong_t*  obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<Float_t>  Branch(TTree&, const char* name, Float_t*  obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<Double_t> Branch(TTree&, const char* name, Double_t* obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<Char_t>   Branch(TTree&, const char* name, Char_t&   obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<UChar_t>  Branch(TTree&, const char* name, UChar_t&  obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<Short_t>  Branch(TTree&, const char* name, Short_t&  obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<UShort_t> Branch(TTree&, const char* name, UShort_t& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<Int_t>    Branch(TTree&, const char* name, Int_t&    obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<UInt_t>   Branch(TTree&, const char* name, UInt_t&   obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<Long_t>   Branch(TTree&, const char* name, Long_t&   obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ULong_t>  Branch(TTree&, const char* name, ULong_t&  obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<Float_t>  Branch(TTree&, const char* name, Float_t&  obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<Double_t> Branch(TTree&, const char* name, Double_t& obj, Int_t bufsize, Int_t splitlevel);
 
-FCN_TEMPLATE TBranchPtr<std::vector<Char_t>>   Branch(TTree&, const char* name, std::vector<Char_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<UChar_t>>  Branch(TTree&, const char* name, std::vector<UChar_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<Short_t>>  Branch(TTree&, const char* name, std::vector<Short_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<UShort_t>> Branch(TTree&, const char* name, std::vector<UShort_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<Int_t>>    Branch(TTree&, const char* name, std::vector<Int_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<UInt_t>>   Branch(TTree&, const char* name, std::vector<UInt_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<Long_t>>   Branch(TTree&, const char* name, std::vector<Long_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<ULong_t>>  Branch(TTree&, const char* name, std::vector<ULong_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<Float_t>>  Branch(TTree&, const char* name, std::vector<Float_t>* obj, Int_t bufsize, Int_t splitlevel);
-FCN_TEMPLATE TBranchPtr<std::vector<Double_t>> Branch(TTree&, const char* name, std::vector<Double_t>* obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<Char_t>>   Branch(TTree&, const char* name, std::vector<Char_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<UChar_t>>  Branch(TTree&, const char* name, std::vector<UChar_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<Short_t>>  Branch(TTree&, const char* name, std::vector<Short_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<UShort_t>> Branch(TTree&, const char* name, std::vector<UShort_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<Int_t>>    Branch(TTree&, const char* name, std::vector<Int_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<UInt_t>>   Branch(TTree&, const char* name, std::vector<UInt_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<Long_t>>   Branch(TTree&, const char* name, std::vector<Long_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<ULong_t>>  Branch(TTree&, const char* name, std::vector<ULong_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<Float_t>>  Branch(TTree&, const char* name, std::vector<Float_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<std::vector<Double_t>> Branch(TTree&, const char* name, std::vector<Double_t>& obj, Int_t bufsize, Int_t splitlevel);
 
 FCN_TEMPLATE void SetAddress(TBranchPtr<Char_t>   obj, Char_t* add);
 FCN_TEMPLATE void SetAddress(TBranchPtr<UChar_t>  obj, UChar_t* add);
@@ -123,16 +123,16 @@ FCN_TEMPLATE void SetAddress(TBranchPtr<ULong_t>  obj, ULong_t* add);
 FCN_TEMPLATE void SetAddress(TBranchPtr<Float_t>  obj, Float_t* add);
 FCN_TEMPLATE void SetAddress(TBranchPtr<Double_t> obj, Double_t* add);
 
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<Char_t>>   obj, std::vector<Char_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<UChar_t>>  obj, std::vector<UChar_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<Short_t>>  obj, std::vector<Short_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<UShort_t>> obj, std::vector<UShort_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<Int_t>>    obj, std::vector<Int_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<UInt_t>>   obj, std::vector<UInt_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<Long_t>>   obj, std::vector<Long_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<ULong_t>>  obj, std::vector<ULong_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<Float_t>>  obj, std::vector<Float_t>* add);
-FCN_TEMPLATE void SetAddress(TBranchPtr<std::vector<Double_t>> obj, std::vector<Double_t>* add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Char_t>>   obj, std::vector<Char_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<UChar_t>>  obj, std::vector<UChar_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Short_t>>  obj, std::vector<Short_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<UShort_t>> obj, std::vector<UShort_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Int_t>>    obj, std::vector<Int_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<UInt_t>>   obj, std::vector<UInt_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Long_t>>   obj, std::vector<Long_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<ULong_t>>  obj, std::vector<ULong_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Float_t>>  obj, std::vector<Float_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Double_t>> obj, std::vector<Double_t>& add);
 
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, Char_t*   add);
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, UChar_t*  add);
@@ -145,16 +145,16 @@ FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ULong_t*  ad
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, Float_t*  add);
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, Double_t* add);
 
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Char_t>*   add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<UChar_t>*  add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Short_t>*  add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<UShort_t>* add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Int_t>*    add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<UInt_t>*   add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Long_t>*   add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<ULong_t>*  add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Float_t>*  add);
-FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Double_t>* add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Char_t>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<UChar_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Short_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<UShort_t>** add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Int_t>**    add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<UInt_t>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Long_t>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<ULong_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Float_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Double_t>** add);
 
 
 #endif //TEMPLATES_H not defined
