@@ -10,8 +10,8 @@ export ChangeLabelByValue, CheckObjectItem, CheckedHash, Chi2Test, Chi2TestX, Ch
 export ClassSaved, CleanCompiledMacros, Clear, ClearInputFiles, ClearPadSave, ClearUnderflowAndOverflow, Cleared, Clone
 export CloneObject, CloneTree, Close, CloseConnection, CloseFiles, ClosePipe, Closed, Closelog, Compare, CompileMacro
 export ComputeIntegral, ComputeRange, ConcatFileName, Constructor, Contains, Copy, CopyAddresses, CopyEntries, CopyFile, CopyTree, Cp
-export Create, CreateHistogram, CreateKey, Debug, Delete, DeleteAll, DeleteBaskets, DeleteBuffer, DeleteCanvasPainter
-export Derivative, Derivative2, Derivative3, Destructor, DirName, DirectoryAutoAdd, DisconnectWidget, DispatchOneEvent
+export Create, CreateAttributeMap, CreateHistogram, CreateKey, Debug, Delete, DeleteAll, DeleteBaskets, DeleteBuffer
+export DeleteCanvasPainter, Derivative, Derivative2, Derivative3, Destructor, DirName, DirectoryAutoAdd, DisconnectWidget, DispatchOneEvent
 export DistancetoPrimitive, Divide, Draw, DrawClass, DrawClone, DrawClonePad, DrawCopy, DrawDerivative, DrawF1, DrawGraph, DrawIntegral
 export DrawMap, DrawNormalized, DrawPanel, DropBaskets, DropBranchFromCache, DropBuffers, Dump, DynamicPathName, EditorBar
 export EmbedInto, EnableCache, EndOfProcessCleanups, Enter, EnterLeave, EnterRange, Eval, EvalPar, Exec, ExecPlugin, Execute
@@ -76,7 +76,7 @@ export GetUpdate, GetUserInfo, GetV1, GetV2, GetV3, GetV4, GetVal, GetValue, Get
 export GetVersion, GetVersionCode, GetVersionDate, GetVersionInt, GetVersionTime, GetVolumes, GetW, GetWebDisplay, GetWeight
 export GetWh, GetWindowHeight, GetWindowTopX, GetWindowTopY, GetWindowWidth, GetWorkingDirectory, GetWriteBasket, GetWw, GetX
 export GetXaxis, GetXbins, GetXmax, GetXmin, GetXsizeReal, GetXsizeUser, GetY, GetYaxis, GetYsizeReal, GetYsizeUser, GetZaxis
-export GetZipBytes, Getenv, GradientPar, HandleException, HandleIdleTimer, HandleInput, HandleTermInput, HandleTimer
+export GetZipBytes, Get_, Getenv, GradientPar, HandleException, HandleIdleTimer, HandleInput, HandleTermInput, HandleTimer
 export HasInconsistentHash, HasMenuBar, Hash, Hide, HighlightConnect, Highlighted, HomeDirectory, HostName, Iconify, Idle, IgnoreInclude
 export IgnoreInterrupt, IgnoreSignal, Import, ImportAttributes, InControl, InPlaceClone, IncludeRange, IncrementPidOffset
 export IncrementProcessIDs, IncrementTotalBuffers, InheritsFrom, Init, InitArgs, InitExpo, InitGaus, InitPolynom, InitializeGraphics
@@ -95,15 +95,15 @@ export NoLogOpt, NoLogoOpt, Notify, NotifyApplicationCreated, Now, Obsolete, Opa
 export OpenDirectory, OpenFile, OpenForumTopic, OpenGitHubIssue, OpenInBrowser, OpenPipe, OpenReferenceGuideFor, Openlog
 export OptimizeBaskets, OptimizeStorage, Paint, PaintGrapHist, PaintGraph, PaintStats, ParamsVec, Pick, Picked, Poisson, PoissonD, Pop
 export PrependPathName, Previous, Print, PrintCacheInfo, PrintCacheStats, PrintValue, Process, ProcessEvents, ProcessFile, ProcessLine
-export ProcessLineFast, ProcessLineSync, ProcessedEvent, Project, Purge, PutStats, QuitOpt, Raise, RaiseWindow, Rannor, ReOpen, Read
-export ReadAll, ReadBasket, ReadBasketExport, ReadBasketFast, ReadBasketSerialized, ReadBuffer, ReadBufferAsync, ReadBuffers
-export ReadFile, ReadFree, ReadKeyBuffer, ReadKeys, ReadObj, ReadObjWithBuffer, ReadObjectAny, ReadRandom, ReadStreamerInfo
-export ReadTObject, ReadingObject, Rebin, RebinAxis, RebinX, Rebuild, Recover, RecursiveRemove, RecvBuf, RecvRaw, RedirectOutput
-export Refresh, RefreshBrowsers, ReleaseParameter, RelocatePaths, Remove, RemoveCheckBox, RemoveClass, RemoveFileHandler
-export RemoveFriend, RemoveIdleTimer, RemoveOnExit, RemovePoint, RemoveSignalHandler, RemoveStdExceptionHandler, RemoveTimer, Rename
-export Reset, ResetAddress, ResetBit, ResetBranchAddress, ResetBranchAddresses, ResetDrawn, ResetErrno, ResetReadEntry
-export ResetSignal, ResetSignals, ResetStats, ResetTimer, ResetUpdated, Resize, ResizeOpaque, Restart, ReturnFromRun, ReturnPressed
-export Rndm, RndmArray, RotateTitle, Run, Save, SaveAs, SaveContext, SaveObjectAs, SaveSelf, SaveSource, Scale, Scan
+export ProcessLineFast, ProcessLineSync, ProcessedEvent, Project, Property, Purge, PutStats, QuitOpt, Raise, RaiseWindow, Rannor
+export ReOpen, Read, ReadAll, ReadBasket, ReadBasketExport, ReadBasketFast, ReadBasketSerialized, ReadBuffer, ReadBufferAsync
+export ReadBuffers, ReadFile, ReadFree, ReadKeyBuffer, ReadKeys, ReadObj, ReadObjWithBuffer, ReadObjectAny, ReadRandom
+export ReadStreamerInfo, ReadTObject, ReadingObject, Rebin, RebinAxis, RebinX, Rebuild, Recover, RecursiveRemove, RecvBuf, RecvRaw
+export RedirectOutput, Refresh, RefreshBrowsers, ReleaseParameter, RelocatePaths, Remove, RemoveCheckBox, RemoveClass
+export RemoveFileHandler, RemoveFriend, RemoveIdleTimer, RemoveOnExit, RemovePoint, RemoveSignalHandler, RemoveStdExceptionHandler
+export RemoveTimer, Rename, Reset, ResetAddress, ResetBit, ResetBranchAddress, ResetBranchAddresses, ResetDrawn, ResetErrno
+export ResetReadEntry, ResetSignal, ResetSignals, ResetStats, ResetTimer, ResetUpdated, Resize, ResizeOpaque, Restart, ReturnFromRun
+export ReturnPressed, Rndm, RndmArray, RotateTitle, Run, Save, SaveAs, SaveContext, SaveObjectAs, SaveSelf, SaveSource, Scale, Scan
 export ScanPaths, Seek, Select, Selected, SendBuf, SendRaw, SetAclicMode, SetAddress, SetAlias, SetAlphanumeric, SetApplication
 export SetAutoDelete, SetAutoFlush, SetAutoSave, SetAxisColor, SetAxisRange, SetBarOffset, SetBarWidth, SetBasketSize, SetBatch
 export SetBinContent, SetBinError, SetBinErrorOption, SetBinLabel, SetBins, SetBinsLength, SetBit, SetBranch, SetBranchAddress

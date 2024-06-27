@@ -18,8 +18,7 @@ end
 @testset verbose=true begin
     @testset verbose=true "TTree" begin
         include("test_ttree.jl")
-    end
-    
+    end   
     @testset verbose=true "Examples" begin
         include("test_examples.jl")
     end

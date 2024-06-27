@@ -59,6 +59,8 @@
     @test v1 == v_init[2, :]
 end
 
+nentries::Int = 0
+
 @testset "POD tree branch" begin
     t = ROOT.TTree("tree", "")
     i = fill(Int32(1))
@@ -114,5 +116,57 @@ end
         iref += 1
         jref += 2
     end
-end    
 
+    nentries = GetEntries(t)
+    
+    f = ROOT.TFile("ttree_test.root", "recreate")
+    Write(t)
+    Close(f)
+end
+
+@testset "Write, append and read TFile" begin
+    f = ROOT.TFile("ttree_test.root", "recreate")
+    t = ROOT.TTree("tree", "tree")
+    x = fill(Float32(π))
+    Branch(t, "x", x)
+    GC.@preserve x Fill(t)
+    Write(t)
+    Close(f)
+    
+    f = ROOT.TFile("ttree_test.root", "update")
+    h = ROOT.TH1F("h", "h", 100, -5., 5.)
+    SetDirectory(h, CxxPtr{ROOT.TDirectory}(C_NULL))
+    FillRandom(h, "gaus", 100)
+    Write(h)
+    Close(f)
+
+    f = ROOT.TFile("ttree_test.root")
+
+    tree = Get(f, "tree")
+    @test isa(tree, ROOT.TTree)
+    @test GetEntries(tree) == 1
+
+    tree = f.tree
+    @test isa(tree, ROOT.TTree)
+    @test GetEntries(tree) == 1
+
+    tree = f["tree"]
+    @test isa(tree, ROOT.TTree)
+    @test GetEntries(tree) == 1
+    
+    h = Get(f, "h")
+    @test isa(h, ROOT.TH1)
+    @test GetEntries(h) == 100
+
+    #type-stable Get versions:
+    h = Get(f, "h", ROOT.TH1)
+    @test isa(h, ROOT.TH1)
+    h = Get(f, "h", ROOT.TH1, nothing)
+    @test isa(h, ROOT.TH1)
+    @test_throws TypeError Get(f, "tree", ROOT.TH1)
+    @test_throws TypeError Get(f, "tree", ROOT.TH1, ROOT.TTree())
+    
+    @test_throws KeyError Get(f, "foo")
+    @test_throws KeyError f.foo
+    @test_throws KeyError f["foo"]    
+end

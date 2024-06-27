@@ -1,11 +1,10 @@
 using ROOT
-const R = ROOT
 using CxxWrap
 
 println("Creating a ROOT file with a TTree filled with std vectors.\n")
 
-f = R.TFile!Open("test3.root", "RECREATE")
-tree = R.TTree("tree", "tree")
+f = ROOT.TFile!Open("test3.root", "RECREATE")
+tree = ROOT.TTree("tree", "tree")
 
 Muon_pt = StdVector{Float32}()
 Muon_eta = StdVector{Float32}()
