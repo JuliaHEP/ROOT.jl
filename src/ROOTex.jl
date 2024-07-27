@@ -11,7 +11,7 @@ import Base.convert
 function TGraph(x::AbstractVector{T}, y::AbstractVector{T}) where T
     TGraph(Base.length(x), 
            x isa AbstractRange ? collect(x) : x,
-           y isa AbstractRange ? collect(y) : y)
+            y isa AbstractRange ? collect(y) : y)
 end
 
 #----Global vector (GC) ---------------------------------------------------------------------------
@@ -74,7 +74,7 @@ TGraphW(args...) = TGraphW(TGraph(args...))
 convert(::Type{TGraph}, x::TGraphW) = x
 convert(::Type{TF1}, x::TF1W) = x
 
-# cloures not supported on ARM architecture
+# closures not supported on ARM architecture
 #function TF1(func, fname::String, xmin::Number, xmax::Number, npar::Int, ndim::Int = 1,  addToGlobList = TF1!kDefault)
 #    wrap = (x, p) -> func(Base.unsafe_wrap(Vector{Float64}, x.cpp_object, ndim),
 #                          Base.unsafe_wrap(Vector{Float64}, p.cpp_object, npar))

@@ -1,0 +1,35 @@
+module_name         = "ROOT"
+uuid                = "1706fdcc-8426-44f1-a283-5be479e9517c"
+version             = "0.3.1-DEV"
+
+export_jl_fname     = "ROOT-export.jl"
+module_jl_fname     = "ROOT-generated.jl"
+lib_basename        = "$(@__DIR__)/../deps/libjlROOT"
+out_cxx_dir         = "ROOT/deps/src"
+
+include_dirs        = [ "/home/pgras/.julia/conda/3/include", "src" ]
+
+input               = [ "TROOT.h", "TBrowser.h", "TTree.h", "TBranchPtr.h", "TLeaf.h", "TBranch.h", "TSystem.h", "TCanvas.h", "TH1.h", "TH2.h", "TProfile.h", "TProfile2D.h","TRandom.h", "TAxis.h", "TApplication.h",  "TDirectory.h", "TDirectoryFile.h", "TFile.h", "TNamed.h", "TObject.h", "TGraph.h", "TF1.h", "TTreeReader.h", "TTreeReaderValue.h", "TTreeReaderArray.h", "Templates.h", "TEntryList.h", "TKey.h",  "TVectorT.h", "TVectorDfwd.h", "TVectorFfwd.h", "Extra.h"  ]
+#input               = [  "TTreeReader.h", "TTreeReaderValue.h", "TTreeReaderArray.h" ]
+extra_headers       = [ "TVectorT.h" ]
+
+veto_list           = "src/jlROOT-veto.h"
+
+fields_and_variables = true
+
+# Currently not working with CxxWrap 0.15+, use 0.14.x
+cxxwrap_version = "0.14"
+
+#auto_veto           = false
+
+vetoed_copy_ctor_classes = [ "TTreeReader", "RDataFrame" ]
+
+cxx-std             = "c++20"
+
+inheritances        = [ "TROOT:" ]
+
+export_blacklist    = [ "Integer", "Set", "Timer", "cd", "mkdir", "pwd", "begin", "end" ]
+
+n_classes_per_file  = 5
+
+vetoed_finalizer_classes = [ "TTree" ]
