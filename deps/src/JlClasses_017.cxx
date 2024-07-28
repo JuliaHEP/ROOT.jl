@@ -153,22 +153,22 @@ struct JlTProfile2D: public Wrapper {
     // signature to use in the veto list: Int_t TProfile2D::Fill(Double_t, const char *, Double_t, Double_t)
     // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:104:22
     t.method("Fill", static_cast<Int_t (TProfile2D::*)(Double_t, const char *, Double_t, Double_t) >(&TProfile2D::Fill));
-    t.method("Fill", [](TProfile2D& a, Double_t arg0, const char * arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2); });
-    t.method("Fill", [](TProfile2D* a, Double_t arg0, const char * arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2); });
+    t.method("Fill", [](TProfile2D& a, Double_t arg0, const char * arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2, 1.); });
+    t.method("Fill", [](TProfile2D* a, Double_t arg0, const char * arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2, 1.); });
 
     DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(const char *, Double_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TProfile2D::Fill(const char *, Double_t, Double_t, Double_t)
     // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:105:22
     t.method("Fill", static_cast<Int_t (TProfile2D::*)(const char *, Double_t, Double_t, Double_t) >(&TProfile2D::Fill));
-    t.method("Fill", [](TProfile2D& a, const char * arg0, Double_t arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2); });
-    t.method("Fill", [](TProfile2D* a, const char * arg0, Double_t arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2); });
+    t.method("Fill", [](TProfile2D& a, const char * arg0, Double_t arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2, 1.); });
+    t.method("Fill", [](TProfile2D* a, const char * arg0, Double_t arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2, 1.); });
 
     DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(const char *, const char *, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TProfile2D::Fill(const char *, const char *, Double_t, Double_t)
     // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:106:22
     t.method("Fill", static_cast<Int_t (TProfile2D::*)(const char *, const char *, Double_t, Double_t) >(&TProfile2D::Fill));
-    t.method("Fill", [](TProfile2D& a, const char * arg0, const char * arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2); });
-    t.method("Fill", [](TProfile2D* a, const char * arg0, const char * arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2); });
+    t.method("Fill", [](TProfile2D& a, const char * arg0, const char * arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2, 1.); });
+    t.method("Fill", [](TProfile2D* a, const char * arg0, const char * arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2, 1.); });
 
     DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(Double_t, Double_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TProfile2D::Fill(Double_t, Double_t, Double_t, Double_t)
