@@ -106,107 +106,124 @@ More examples can be found in the `examples` directory.
 
 ## Supported ROOT classes
 
-### Principal supported ROOT classes:
+### Classes, whose methods are bound
 
-  - `TSystem`
-  - `TROOT`
-  - `TTree`
-  - `TBranch`
+*See `input` list in [misc/ROOT.wit](misc/ROOT.wit)*
+
+  - `TSystem`, `TROOT`
+  - `TTree`,`TBranch`, `TLeaf`
+  - `TTreeReader`
   - `TCanvas`
-  - `TH1`
+  - `TH1`, `TH2`
+  - `TProfile`, `TProfile2D`
   - `TRandom`
   - `TAxis`
   - `TGraph`
-  - `TF1`
-  - `TApplication`
-  - `TFile`, `TDirectoryFile`
+  - `TF1`, `TFormula`
+  - `TFile`, `TDirectoryFile`, `TDirectory`
   - `TTreeReader`, `TTreeReaderValue`, `TTreeReaderArray`
   - `TVectorD`, `TVectorF`
   - `TObject`, `TNamed`
+  - `TEntryList`, `Key`
 
-### Complete list of suppported ROOT class and types
+### Complete list of bound ROOT types, including classes whose methods are not exposed to Julia
 
-   - CpuInfo_t
-   - FileStat_t
-   - Foption_t
-   - _IO_FILE
-   - MemInfo_t
-   - ProcInfo_t
-   - RedirectHandle_t
-   - ROOT::Internal::GetFunctorType
-   - ROOT::Internal::TF1Builder
-   - ROOT::Internal::TParBranchProcessingRAII
-   - ROOT::Internal::TStringView
-   - ROOT::Internal::TTreeReaderArrayBase
-   - ROOT::Internal::TTreeReaderValueBase
-   - ROOT::TIOFeatures
-   - SysInfo_t
-   - TApplication
-   - TApplicationImp
-   - TArrayC
-   - TArrayD
-   - TAxis
-   - TBranch
-   - TBranchPtr
-   - TBuffer
-   - TCanvas
-   - TClass
-   - TCollection
-   - TDataType
-   - TDatime
-   - TDictionary
-   - TDirectory
-   - TDirectoryFile
-   - TEntryList
-   - TF1
-   - TF1Parameters
-   - TF1::TF1FunctorPointer
-   - TFile
-   - TFileHandler
-   - TFileOpenHandle
-   - TFitResultPtr
-   - TFormula
-   - TGraph
-   - TH1
-   - TH1C
-   - TH1D
-   - TH1F
-   - TH1I
-   - TH1S
-   - TInetAddress
-   - TInterpreter
-   - TIterator
-   - TLeaf
-   - TList
-   - TMethodCall
-   - TNamed
-   - TObjArray
-   - TObject
-   - TObjLink
-   - TPad
-   - TProcessEventTimer
-   - TRandom
-   - TROOT
-   - TSeqCollection
-   - TSignalHandler
-   - TStdExceptionHandler
-   - TStreamerInfo
-   - TString
-   - TSystem
-   - TTime
-   - TTimer
-   - TTreeFriendLeafIter
-   - TTreeReader
-   - TTreeReaderArray
-   - TTreeReader::Iterator_t
-   - TTreeReaderValue
-   - TTree, TTree::TClusterIterator
-   - TUrl
-   - TVectorT
-   - TVirtualMutex
-   - TVirtualPad
-   - TVirtualTreePlayer
-   - UserGroup_t
+*See also [misc/jlROOT-report.txt](misc/jlROOT-report.txt).*
+
+- TObject
+- TBrowser
+- TObjArray
+- TTimer
+- TClass
+- TBuffer
+- TVectorT
+- TVectorT
+- TVectorT
+- TNamed
+- TString
+- TDirectory
+- TDirectory::TContext
+- TKey
+- TFile
+- TList
+- TUUID
+- TVirtualMutex
+- TROOT
+- TApplication
+- TInterpreter
+- std::type_info
+- TCollection
+- TSeqCollection
+- TDataType
+- TVirtualPad
+- TCanvas
+- TBrowserImp
+- TBranch
+- TTree
+- TLeaf
+- TClonesArray
+- ROOT::TIOFeatures
+- TTree::TClusterIterator
+- TStreamerInfo
+- TEntryList
+- TH1
+- TIterator
+- TVirtualTreePlayer
+- TTreeFriendLeafIter
+- TBranchPtr
+- TLeaf::GetValueHelper
+- FileStat_t
+- UserGroup_t
+- SysInfo_t
+- CpuInfo_t
+- MemInfo_t
+- ProcInfo_t
+- RedirectHandle_t
+- TProcessEventTimer
+- TSystem
+- TFileHandler
+- TSignalHandler
+- TStdExceptionHandler
+- TTime
+- _IO_FILE
+- TInetAddress
+- TPad
+- TObjLink
+- TAxis
+- TArrayD
+- Foption_t
+- TF1
+- TRandom
+- TFitResultPtr
+- TH1C
+- TH1S
+- TH1I
+- TH1F
+- TH1D
+- TH2
+- TProfile
+- TH2C
+- TH2S
+- TH2I
+- TH2F
+- TH2D
+- TProfile2D
+- TApplicationImp
+- TDirectoryFile
+- TDatime
+- TArrayC
+- TUrl
+- TFileOpenHandle
+- TGraph
+- TF1Parameters
+- TF1::TF1FunctorPointer
+- TFormula
+- TMethodCall
+- TTreeReaderValue
+- TTreeReader
+- TTreeReader::Iterator_t
+- TTreeReaderArray
+
 
 ## Missing a ROOT class?
 
