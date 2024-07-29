@@ -59,7 +59,7 @@
     @test v1 == v_init[2, :]
 end
 
-@testset "POD tree branch" begin
+@testset "POD tree branch 1" begin
     t = ROOT.TTree("tree", "")
     i = fill(Int32(1))
     j = Ref(Int32(2))
@@ -116,3 +116,63 @@ end
     end
 end    
 
+@testset "POD tree branch 2" begin
+    t2 = ROOT.TTree("tree2", "")
+
+    s0 = "From α to Ω"
+    nt = (i8 = fill(Int8(1) <<7), i16 = fill(Int16(1) <<15), i32 = fill(Int32(1) <<31), i64 = fill(Int64(1) <<63),
+          ui8 = fill(UInt8(1) <<7), ui16 = fill(UInt16(1) <<15), ui32 = fill(UInt32(1) <<31), ui64 = fill(UInt64(1) <<63),
+          b = fill(false),
+          f32 = fill(floatmax(Float32)), f64 = fill(floatmax(Float64)))
+
+    nt0 = deepcopy(nt)
+
+    @GC.preserve nt begin
+
+        # The method Branch(tree, branchname, dataarray) is not supported
+        # for c-string. We need to use Branch(branchname, address, leaflist).
+        #
+        # While the first returns a TBranchPtr, a wrapper that saves the need of
+        # type cast when calling Set(Branch)Adress function, the second returns
+        # a plain Ptr{TBranch}.
+        br_s = Branch(t2, "s", convert(Ptr{Nothing}, pointer(s0)), "s/C")
+        
+        Branch(t2, "i8", nt.i8)
+        Branch(t2, "i16", nt.i16)
+        Branch(t2, "i32", nt.i32)
+        Branch(t2, "i64", nt.i64)
+        Branch(t2, "ui8", nt.ui8)
+        Branch(t2, "ui16", nt.ui16)
+        Branch(t2, "ui32", nt.ui32)
+        Branch(t2, "ui64", nt.ui64)    
+        Branch(t2, "f32", nt.f32)
+        Branch(t2, "f64", nt.f64)
+
+        # Boolean is in the same situation as c-strings
+        Branch(t2, "b", convert(Ptr{Int8}, pointer(nt.b)), "b/O")
+        
+        #Store the values in the tree:
+        Fill(t2)
+
+        #Reset all values
+        for i in 1:lastindex(nt)
+            nt[i][] = zero(nt[i][])
+        end
+        
+        #read back values
+
+        # When reading a character string from a TTree, usually we don't know in
+        # advance the string length. In such case we need to retrieve the
+        # maximum length over the tree entries first. Let's test the procedure.
+        maxstringlen = GetLenStatic(GetLeaf(t2, "s"))
+        s = zeros(Int8, maxstringlen)
+        SetAddress(br_s, Ptr{Nothing}(pointer(s)))
+        
+        GetEntry(t2, 0)
+
+        #check the read back values
+        @test unsafe_string(pointer(s)) == s0
+        @test nt == nt0
+        
+    end
+end
