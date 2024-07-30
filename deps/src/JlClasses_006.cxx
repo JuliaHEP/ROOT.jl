@@ -7,19 +7,400 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
-  template<> struct IsMirroredType<std::type_info> : std::false_type { };
-  template<> struct DefaultConstructible<std::type_info> : std::false_type { };
+  template<> struct IsMirroredType<TApplication> : std::false_type { };
+  template<> struct DefaultConstructible<TApplication> : std::false_type { };
+template<> struct SuperType<TApplication> { typedef TObject type; };
 }
 
-// Class generating the wrapper for type std::type_info
-// signature to use in the veto file: std::type_info
-struct Jlstd_type_info: public Wrapper {
+// Class generating the wrapper for type TApplication
+// signature to use in the veto file: TApplication
+struct JlTApplication: public Wrapper {
 
-  Jlstd_type_info(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type std::type_info (" __HERE__ ")");
-    // defined in /usr/lib/gcc/x86_64-linux-gnu/12/../../../../include/c++/12/typeinfo:92:9
-    jlcxx::TypeWrapper<std::type_info>  t = jlModule.add_type<std::type_info>("std!type_info");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<std::type_info>>(new jlcxx::TypeWrapper<std::type_info>(jlModule, t));
+  JlTApplication(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TApplication (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:39:7
+    jlcxx::TypeWrapper<TApplication>  t = jlModule.add_type<TApplication>("TApplication",
+      jlcxx::julia_base_type<TObject>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TApplication>>(new jlcxx::TypeWrapper<TApplication>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+
+
+    DEBUG_MSG("Adding wrapper for void TApplication::TApplication(const char *, Int_t *, char **, void *, Int_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:101:4
+    t.constructor<const char *, Int_t *, char **>(/*finalize=*/true);
+    t.constructor<const char *, Int_t *, char **, void *>(/*finalize=*/true);
+    t.constructor<const char *, Int_t *, char **, void *, Int_t>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TApplication::InitializeGraphics(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::InitializeGraphics(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:105:20
+    t.method("InitializeGraphics", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::InitializeGraphics));
+    t.method("InitializeGraphics", [](TApplication& a)->void { a.InitializeGraphics(); });
+    t.method("InitializeGraphics", [](TApplication* a)->void { a->InitializeGraphics(); });
+
+    DEBUG_MSG("Adding wrapper for void TApplication::GetOptions(Int_t *, char **) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::GetOptions(Int_t *, char **)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:106:20
+    t.method("GetOptions", static_cast<void (TApplication::*)(Int_t *, char **) >(&TApplication::GetOptions));
+
+    DEBUG_MSG("Adding wrapper for TSignalHandler * TApplication::GetSignalHandler() (" __HERE__ ")");
+    // signature to use in the veto list: TSignalHandler * TApplication::GetSignalHandler()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:107:20
+    t.method("GetSignalHandler", static_cast<TSignalHandler * (TApplication::*)()  const>(&TApplication::GetSignalHandler));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::SetEchoMode(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::SetEchoMode(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:108:20
+    t.method("SetEchoMode", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::SetEchoMode));
+
+    DEBUG_MSG("Adding wrapper for TString TApplication::GetSetup() (" __HERE__ ")");
+    // signature to use in the veto list: TString TApplication::GetSetup()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:109:12
+    t.method("GetSetup", static_cast<TString (TApplication::*)() >(&TApplication::GetSetup));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::OpenForumTopic(const TString &) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::OpenForumTopic(const TString &)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:110:9
+    t.method("OpenForumTopic", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenForumTopic));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::OpenGitHubIssue(const TString &) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::OpenGitHubIssue(const TString &)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:111:9
+    t.method("OpenGitHubIssue", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenGitHubIssue));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::OpenInBrowser(const TString &) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::OpenInBrowser(const TString &)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:112:9
+    t.method("OpenInBrowser", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenInBrowser));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::OpenReferenceGuideFor(const TString &) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::OpenReferenceGuideFor(const TString &)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:113:9
+    t.method("OpenReferenceGuideFor", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenReferenceGuideFor));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::HandleException(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::HandleException(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:114:20
+    t.method("HandleException", static_cast<void (TApplication::*)(Int_t) >(&TApplication::HandleException));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::HandleIdleTimer() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::HandleIdleTimer()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:115:20
+    t.method("HandleIdleTimer", static_cast<void (TApplication::*)() >(&TApplication::HandleIdleTimer));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TApplication::HandleTermInput() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TApplication::HandleTermInput()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:116:20
+    t.method("HandleTermInput", static_cast<Bool_t (TApplication::*)() >(&TApplication::HandleTermInput));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Init() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Init()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:117:20
+    t.method("Init", static_cast<void (TApplication::*)() >(&TApplication::Init));
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TApplication::ProcessLine(const char *, Bool_t, Int_t *) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TApplication::ProcessLine(const char *, Bool_t, Int_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:118:22
+    t.method("ProcessLine", static_cast<Longptr_t (TApplication::*)(const char *, Bool_t, Int_t *) >(&TApplication::ProcessLine));
+    t.method("ProcessLine", [](TApplication& a, const char * arg0)->Longptr_t { return a.ProcessLine(arg0); });
+    t.method("ProcessLine", [](TApplication& a, const char * arg0, Bool_t arg1)->Longptr_t { return a.ProcessLine(arg0, arg1); });
+    t.method("ProcessLine", [](TApplication* a, const char * arg0)->Longptr_t { return a->ProcessLine(arg0); });
+    t.method("ProcessLine", [](TApplication* a, const char * arg0, Bool_t arg1)->Longptr_t { return a->ProcessLine(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TApplication::ProcessFile(const char *, Int_t *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TApplication::ProcessFile(const char *, Int_t *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:119:22
+    t.method("ProcessFile", static_cast<Longptr_t (TApplication::*)(const char *, Int_t *, Bool_t) >(&TApplication::ProcessFile));
+    t.method("ProcessFile", [](TApplication& a, const char * arg0)->Longptr_t { return a.ProcessFile(arg0); });
+    t.method("ProcessFile", [](TApplication& a, const char * arg0, Int_t * arg1)->Longptr_t { return a.ProcessFile(arg0, arg1); });
+    t.method("ProcessFile", [](TApplication* a, const char * arg0)->Longptr_t { return a->ProcessFile(arg0); });
+    t.method("ProcessFile", [](TApplication* a, const char * arg0, Int_t * arg1)->Longptr_t { return a->ProcessFile(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Run(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Run(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:120:20
+    t.method("Run", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::Run));
+    t.method("Run", [](TApplication& a)->void { a.Run(); });
+    t.method("Run", [](TApplication* a)->void { a->Run(); });
+
+    DEBUG_MSG("Adding wrapper for void TApplication::SetIdleTimer(UInt_t, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::SetIdleTimer(UInt_t, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:121:20
+    t.method("SetIdleTimer", static_cast<void (TApplication::*)(UInt_t, const char *) >(&TApplication::SetIdleTimer));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::RemoveIdleTimer() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::RemoveIdleTimer()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:122:20
+    t.method("RemoveIdleTimer", static_cast<void (TApplication::*)() >(&TApplication::RemoveIdleTimer));
+
+    DEBUG_MSG("Adding wrapper for const char * TApplication::GetIdleCommand() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TApplication::GetIdleCommand()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:123:20
+    t.method("GetIdleCommand", [](TApplication const& a) { return (std::string)a.GetIdleCommand(); });
+    t.method("GetIdleCommand", [](TApplication const* a) { return (std::string)a->GetIdleCommand(); });
+
+    DEBUG_MSG("Adding wrapper for void TApplication::StartIdleing() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::StartIdleing()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:124:20
+    t.method("StartIdleing", static_cast<void (TApplication::*)() >(&TApplication::StartIdleing));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::StopIdleing() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::StopIdleing()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:125:20
+    t.method("StopIdleing", static_cast<void (TApplication::*)() >(&TApplication::StopIdleing));
+
+    DEBUG_MSG("Adding wrapper for TApplication::EExitOnException TApplication::ExitOnException(TApplication::EExitOnException) (" __HERE__ ")");
+    // signature to use in the veto list: TApplication::EExitOnException TApplication::ExitOnException(TApplication::EExitOnException)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:126:21
+    t.method("ExitOnException", static_cast<TApplication::EExitOnException (TApplication::*)(TApplication::EExitOnException) >(&TApplication::ExitOnException));
+    t.method("ExitOnException", [](TApplication& a)->TApplication::EExitOnException { return a.ExitOnException(); });
+    t.method("ExitOnException", [](TApplication* a)->TApplication::EExitOnException { return a->ExitOnException(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TApplication::ApplicationName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TApplication::ApplicationName()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:128:24
+    t.method("ApplicationName", [](TApplication const& a) { return (std::string)a.ApplicationName(); });
+    t.method("ApplicationName", [](TApplication const* a) { return (std::string)a->ApplicationName(); });
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Show() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Show()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:129:20
+    t.method("Show", static_cast<void (TApplication::*)() >(&TApplication::Show));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Hide() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Hide()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:130:20
+    t.method("Hide", static_cast<void (TApplication::*)() >(&TApplication::Hide));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Iconify() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Iconify()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:131:20
+    t.method("Iconify", static_cast<void (TApplication::*)() >(&TApplication::Iconify));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Open() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Open()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:132:20
+    t.method("Open", static_cast<void (TApplication::*)() >(&TApplication::Open));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Raise() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Raise()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:133:20
+    t.method("Raise", static_cast<void (TApplication::*)() >(&TApplication::Raise));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Lower() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Lower()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:134:20
+    t.method("Lower", static_cast<void (TApplication::*)() >(&TApplication::Lower));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TApplication::IsCmdThread() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TApplication::IsCmdThread()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:135:20
+    t.method("IsCmdThread", static_cast<Bool_t (TApplication::*)() >(&TApplication::IsCmdThread));
+
+    DEBUG_MSG("Adding wrapper for TApplicationImp * TApplication::GetApplicationImp() (" __HERE__ ")");
+    // signature to use in the veto list: TApplicationImp * TApplication::GetApplicationImp()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:136:29
+    t.method("GetApplicationImp", static_cast<TApplicationImp * (TApplication::*)() >(&TApplication::GetApplicationImp));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::ls(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::ls(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:138:20
+    t.method("ls", static_cast<void (TApplication::*)(Option_t *)  const>(&TApplication::ls));
+    t.method("ls", [](TApplication const& a)->void { a.ls(); });
+    t.method("ls", [](TApplication const* a)->void { a->ls(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TApplication::Argc() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TApplication::Argc()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:140:20
+    t.method("Argc", static_cast<Int_t (TApplication::*)()  const>(&TApplication::Argc));
+
+    DEBUG_MSG("Adding wrapper for char ** TApplication::Argv() (" __HERE__ ")");
+    // signature to use in the veto list: char ** TApplication::Argv()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:141:20
+    t.method("Argv", static_cast<char ** (TApplication::*)()  const>(&TApplication::Argv));
+
+    DEBUG_MSG("Adding wrapper for char * TApplication::Argv(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: char * TApplication::Argv(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:142:20
+    t.method("Argv", static_cast<char * (TApplication::*)(Int_t)  const>(&TApplication::Argv));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TApplication::NoLogOpt() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TApplication::NoLogOpt()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:143:20
+    t.method("NoLogOpt", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::NoLogOpt));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TApplication::NoLogoOpt() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TApplication::NoLogoOpt()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:144:20
+    t.method("NoLogoOpt", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::NoLogoOpt));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TApplication::QuitOpt() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TApplication::QuitOpt()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:145:20
+    t.method("QuitOpt", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::QuitOpt));
+
+    DEBUG_MSG("Adding wrapper for TObjArray * TApplication::InputFiles() (" __HERE__ ")");
+    // signature to use in the veto list: TObjArray * TApplication::InputFiles()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:146:20
+    t.method("InputFiles", static_cast<TObjArray * (TApplication::*)()  const>(&TApplication::InputFiles));
+
+    DEBUG_MSG("Adding wrapper for const char * TApplication::WorkingDirectory() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TApplication::WorkingDirectory()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:147:20
+    t.method("WorkingDirectory", [](TApplication const& a) { return (std::string)a.WorkingDirectory(); });
+    t.method("WorkingDirectory", [](TApplication const* a) { return (std::string)a->WorkingDirectory(); });
+
+    DEBUG_MSG("Adding wrapper for void TApplication::ClearInputFiles() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::ClearInputFiles()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:148:20
+    t.method("ClearInputFiles", static_cast<void (TApplication::*)() >(&TApplication::ClearInputFiles));
+
+    DEBUG_MSG("Adding wrapper for TApplication * TApplication::GetAppRemote() (" __HERE__ ")");
+    // signature to use in the veto list: TApplication * TApplication::GetAppRemote()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:150:20
+    t.method("GetAppRemote", static_cast<TApplication * (TApplication::*)()  const>(&TApplication::GetAppRemote));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TApplication::IsRunning() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TApplication::IsRunning()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:152:20
+    t.method("IsRunning", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::IsRunning));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TApplication::ReturnFromRun() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TApplication::ReturnFromRun()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:153:20
+    t.method("ReturnFromRun", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::ReturnFromRun));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::SetReturnFromRun(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::SetReturnFromRun(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:154:20
+    t.method("SetReturnFromRun", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::SetReturnFromRun));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::LineProcessed(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::LineProcessed(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:156:20
+    t.method("LineProcessed", static_cast<void (TApplication::*)(const char *) >(&TApplication::LineProcessed));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Terminate(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Terminate(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:157:20
+    t.method("Terminate", static_cast<void (TApplication::*)(Int_t) >(&TApplication::Terminate));
+    t.method("Terminate", [](TApplication& a)->void { a.Terminate(); });
+    t.method("Terminate", [](TApplication* a)->void { a->Terminate(); });
+
+    DEBUG_MSG("Adding wrapper for void TApplication::KeyPressed(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::KeyPressed(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:158:20
+    t.method("KeyPressed", static_cast<void (TApplication::*)(Int_t) >(&TApplication::KeyPressed));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::ReturnPressed(char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::ReturnPressed(char *)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:159:20
+    t.method("ReturnPressed", static_cast<void (TApplication::*)(char *) >(&TApplication::ReturnPressed));
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TApplication::ExecuteFile(const char *, Int_t *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TApplication::ExecuteFile(const char *, Int_t *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:162:21
+    module_.method("TApplication!ExecuteFile", static_cast<Longptr_t (*)(const char *, Int_t *, Bool_t) >(&TApplication::ExecuteFile));
+    module_.method("TApplication!ExecuteFile", [](const char * arg0)->Longptr_t { return TApplication::ExecuteFile(arg0); });
+    module_.method("TApplication!ExecuteFile", [](const char * arg0, Int_t * arg1)->Longptr_t { return TApplication::ExecuteFile(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for TList * TApplication::GetApplications() (" __HERE__ ")");
+    // signature to use in the veto list: TList * TApplication::GetApplications()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:163:20
+    module_.method("TApplication!GetApplications", static_cast<TList * (*)() >(&TApplication::GetApplications));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::CreateApplication() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::CreateApplication()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:164:20
+    module_.method("TApplication!CreateApplication", static_cast<void (*)() >(&TApplication::CreateApplication));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::NeedGraphicsLibs() (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::NeedGraphicsLibs()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:165:20
+    module_.method("TApplication!NeedGraphicsLibs", static_cast<void (*)() >(&TApplication::NeedGraphicsLibs));
+
+    DEBUG_MSG("Adding wrapper for Version_t TApplication::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TApplication::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!Class_Version", static_cast<Version_t (*)() >(&TApplication::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TApplication::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TApplication::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    t.method("IsA", static_cast<TClass * (TApplication::*)()  const>(&TApplication::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    t.method("StreamerNVirtual", static_cast<void (TApplication::*)(TBuffer &) >(&TApplication::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TApplication::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TApplication::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!DeclFileName", []() { return (std::string)TApplication::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TApplication::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TApplication::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!ImplFileLine", static_cast<int (*)() >(&TApplication::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TApplication::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TApplication::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!ImplFileName", []() { return (std::string)TApplication::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TApplication::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TApplication::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!Class_Name", []() { return (std::string)TApplication::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TApplication::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TApplication::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!Dictionary", static_cast<TClass * (*)() >(&TApplication::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TApplication::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TApplication::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!Class", static_cast<TClass * (*)() >(&TApplication::Class));
+
+    DEBUG_MSG("Adding wrapper for void TApplication::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TApplication::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    t.method("Streamer", static_cast<void (TApplication::*)(TBuffer &) >(&TApplication::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TApplication::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TApplication::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    module_.method("TApplication!DeclFileLine", static_cast<int (*)() >(&TApplication::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TApplication>> type_;
+};
+std::shared_ptr<Wrapper> newJlTApplication(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTApplication(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TInterpreter> : std::false_type { };
+  template<> struct DefaultConstructible<TInterpreter> : std::false_type { };
+template<> struct SuperType<TInterpreter> { typedef TNamed type; };
+}
+
+// Class generating the wrapper for type TInterpreter
+// signature to use in the veto file: TInterpreter
+struct JlTInterpreter: public Wrapper {
+
+  JlTInterpreter(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TInterpreter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TInterpreter.h:60:7
+    jlcxx::TypeWrapper<TInterpreter>  t = jlModule.add_type<TInterpreter>("TInterpreter",
+      jlcxx::julia_base_type<TNamed>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TInterpreter>>(new jlcxx::TypeWrapper<TInterpreter>(jlModule, t));
   }
 
   void add_methods() const{
@@ -27,10 +408,10 @@ struct Jlstd_type_info: public Wrapper {
   }
 
 private:
-  std::unique_ptr<jlcxx::TypeWrapper<std::type_info>> type_;
+  std::unique_ptr<jlcxx::TypeWrapper<TInterpreter>> type_;
 };
-std::shared_ptr<Wrapper> newJlstd_type_info(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new Jlstd_type_info(module));
+std::shared_ptr<Wrapper> newJlTInterpreter(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTInterpreter(module));
 }
 
 namespace jlcxx {
@@ -118,752 +499,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTPad(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTPad(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TCanvas> : std::false_type { };
-  template<> struct DefaultConstructible<TCanvas> : std::false_type { };
-template<> struct SuperType<TCanvas> { typedef TPad type; };
-}
-
-// Class generating the wrapper for type TCanvas
-// signature to use in the veto file: TCanvas
-struct JlTCanvas: public Wrapper {
-
-  JlTCanvas(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TCanvas (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:23:7
-    jlcxx::TypeWrapper<TCanvas>  t = jlModule.add_type<TCanvas>("TCanvas",
-      jlcxx::julia_base_type<TPad>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TCanvas>>(new jlcxx::TypeWrapper<TCanvas>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::TCanvas(Bool_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:100:4
-    t.constructor<Bool_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::TCanvas(const char *, const char *, Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:101:4
-    t.constructor<const char *>(/*finalize=*/true);
-    t.constructor<const char *, const char *>(/*finalize=*/true);
-    t.constructor<const char *, const char *, Int_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::TCanvas(const char *, const char *, Int_t, Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:102:4
-    t.constructor<const char *, const char *, Int_t, Int_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::TCanvas(const char *, const char *, Int_t, Int_t, Int_t, Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:103:4
-    t.constructor<const char *, const char *, Int_t, Int_t, Int_t, Int_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::TCanvas(const char *, Int_t, Int_t, Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:105:4
-    t.constructor<const char *, Int_t, Int_t, Int_t>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Constructor() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Constructor()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:109:9
-    t.method("Constructor", static_cast<void (TCanvas::*)() >(&TCanvas::Constructor));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Constructor(const char *, const char *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Constructor(const char *, const char *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:110:9
-    t.method("Constructor", static_cast<void (TCanvas::*)(const char *, const char *, Int_t) >(&TCanvas::Constructor));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Constructor(const char *, const char *, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Constructor(const char *, const char *, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:111:9
-    t.method("Constructor", static_cast<void (TCanvas::*)(const char *, const char *, Int_t, Int_t) >(&TCanvas::Constructor));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Constructor(const char *, const char *, Int_t, Int_t, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Constructor(const char *, const char *, Int_t, Int_t, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:112:9
-    t.method("Constructor", static_cast<void (TCanvas::*)(const char *, const char *, Int_t, Int_t, Int_t, Int_t) >(&TCanvas::Constructor));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Destructor() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Destructor()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:114:9
-    t.method("Destructor", static_cast<void (TCanvas::*)() >(&TCanvas::Destructor));
-
-    DEBUG_MSG("Adding wrapper for TVirtualPad * TCanvas::cd(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: TVirtualPad * TCanvas::cd(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:116:22
-    t.method("cd", static_cast<TVirtualPad * (TCanvas::*)(Int_t) >(&TCanvas::cd));
-    t.method("cd", [](TCanvas& a)->TVirtualPad * { return a.cd(); });
-    t.method("cd", [](TCanvas* a)->TVirtualPad * { return a->cd(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Browse(TBrowser *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Browse(TBrowser *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:117:22
-    t.method("Browse", static_cast<void (TCanvas::*)(TBrowser *) >(&TCanvas::Browse));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Clear(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Clear(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:118:22
-    t.method("Clear", static_cast<void (TCanvas::*)(Option_t *) >(&TCanvas::Clear));
-    t.method("Clear", [](TCanvas& a)->void { a.Clear(); });
-    t.method("Clear", [](TCanvas* a)->void { a->Clear(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Close(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Close(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:119:22
-    t.method("Close", static_cast<void (TCanvas::*)(Option_t *) >(&TCanvas::Close));
-    t.method("Close", [](TCanvas& a)->void { a.Close(); });
-    t.method("Close", [](TCanvas* a)->void { a->Close(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Delete(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Delete(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:120:22
-    t.method("Delete", static_cast<void (TCanvas::*)(Option_t *) >(&TCanvas::Delete));
-    t.method("Delete", [](TCanvas& a)->void { a.Delete(); });
-    t.method("Delete", [](TCanvas* a)->void { a->Delete(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::DisconnectWidget() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::DisconnectWidget()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:121:22
-    t.method("DisconnectWidget", static_cast<void (TCanvas::*)() >(&TCanvas::DisconnectWidget));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Draw(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Draw(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:122:22
-    t.method("Draw", static_cast<void (TCanvas::*)(Option_t *) >(&TCanvas::Draw));
-    t.method("Draw", [](TCanvas& a)->void { a.Draw(); });
-    t.method("Draw", [](TCanvas* a)->void { a->Draw(); });
-
-    DEBUG_MSG("Adding wrapper for TObject * TCanvas::DrawClone(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: TObject * TCanvas::DrawClone(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:123:22
-    t.method("DrawClone", static_cast<TObject * (TCanvas::*)(Option_t *)  const>(&TCanvas::DrawClone));
-    t.method("DrawClone", [](TCanvas const& a)->TObject * { return a.DrawClone(); });
-    t.method("DrawClone", [](TCanvas const* a)->TObject * { return a->DrawClone(); });
-
-    DEBUG_MSG("Adding wrapper for TObject * TCanvas::DrawClonePad() (" __HERE__ ")");
-    // signature to use in the veto list: TObject * TCanvas::DrawClonePad()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:124:22
-    t.method("DrawClonePad", static_cast<TObject * (TCanvas::*)() >(&TCanvas::DrawClonePad));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::EditorBar() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::EditorBar()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:125:22
-    t.method("EditorBar", static_cast<void (TCanvas::*)() >(&TCanvas::EditorBar));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::EmbedInto(Int_t, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::EmbedInto(Int_t, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:126:22
-    t.method("EmbedInto", static_cast<void (TCanvas::*)(Int_t, Int_t, Int_t) >(&TCanvas::EmbedInto));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::EnterLeave(TPad *, TObject *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::EnterLeave(TPad *, TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:127:22
-    t.method("EnterLeave", static_cast<void (TCanvas::*)(TPad *, TObject *) >(&TCanvas::EnterLeave));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::FeedbackMode(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::FeedbackMode(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:128:22
-    t.method("FeedbackMode", static_cast<void (TCanvas::*)(Bool_t) >(&TCanvas::FeedbackMode));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Flush() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Flush()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:129:22
-    t.method("Flush", static_cast<void (TCanvas::*)() >(&TCanvas::Flush));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::UseCurrentStyle() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::UseCurrentStyle()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:130:22
-    t.method("UseCurrentStyle", static_cast<void (TCanvas::*)() >(&TCanvas::UseCurrentStyle));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ForceUpdate() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ForceUpdate()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:131:22
-    t.method("ForceUpdate", static_cast<void (TCanvas::*)() >(&TCanvas::ForceUpdate));
-
-    DEBUG_MSG("Adding wrapper for const char * TCanvas::GetDISPLAY() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TCanvas::GetDISPLAY()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:132:22
-    t.method("GetDISPLAY", [](TCanvas const& a) { return (std::string)a.GetDISPLAY(); });
-    t.method("GetDISPLAY", [](TCanvas const* a) { return (std::string)a->GetDISPLAY(); });
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetDoubleBuffer() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetDoubleBuffer()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:134:22
-    t.method("GetDoubleBuffer", static_cast<Int_t (TCanvas::*)()  const>(&TCanvas::GetDoubleBuffer));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetEvent() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetEvent()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:135:22
-    t.method("GetEvent", static_cast<Int_t (TCanvas::*)()  const>(&TCanvas::GetEvent));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetEventX() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetEventX()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:136:22
-    t.method("GetEventX", static_cast<Int_t (TCanvas::*)()  const>(&TCanvas::GetEventX));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetEventY() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetEventY()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:137:22
-    t.method("GetEventY", static_cast<Int_t (TCanvas::*)()  const>(&TCanvas::GetEventY));
-
-    DEBUG_MSG("Adding wrapper for Color_t TCanvas::GetHighLightColor() (" __HERE__ ")");
-    // signature to use in the veto list: Color_t TCanvas::GetHighLightColor()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:138:22
-    t.method("GetHighLightColor", static_cast<Color_t (TCanvas::*)()  const>(&TCanvas::GetHighLightColor));
-
-    DEBUG_MSG("Adding wrapper for TVirtualPad * TCanvas::GetPadSave() (" __HERE__ ")");
-    // signature to use in the veto list: TVirtualPad * TCanvas::GetPadSave()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:139:22
-    t.method("GetPadSave", static_cast<TVirtualPad * (TCanvas::*)()  const>(&TCanvas::GetPadSave));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ClearPadSave() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ClearPadSave()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:140:22
-    t.method("ClearPadSave", static_cast<void (TCanvas::*)() >(&TCanvas::ClearPadSave));
-
-    DEBUG_MSG("Adding wrapper for TObject * TCanvas::GetSelected() (" __HERE__ ")");
-    // signature to use in the veto list: TObject * TCanvas::GetSelected()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:141:22
-    t.method("GetSelected", static_cast<TObject * (TCanvas::*)()  const>(&TCanvas::GetSelected));
-
-    DEBUG_MSG("Adding wrapper for TObject * TCanvas::GetClickSelected() (" __HERE__ ")");
-    // signature to use in the veto list: TObject * TCanvas::GetClickSelected()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:142:22
-    t.method("GetClickSelected", static_cast<TObject * (TCanvas::*)()  const>(&TCanvas::GetClickSelected));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetSelectedX() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetSelectedX()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:143:22
-    t.method("GetSelectedX", static_cast<Int_t (TCanvas::*)()  const>(&TCanvas::GetSelectedX));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetSelectedY() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetSelectedY()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:144:22
-    t.method("GetSelectedY", static_cast<Int_t (TCanvas::*)()  const>(&TCanvas::GetSelectedY));
-
-    DEBUG_MSG("Adding wrapper for Option_t * TCanvas::GetSelectedOpt() (" __HERE__ ")");
-    // signature to use in the veto list: Option_t * TCanvas::GetSelectedOpt()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:145:22
-    t.method("GetSelectedOpt", static_cast<Option_t * (TCanvas::*)()  const>(&TCanvas::GetSelectedOpt));
-
-    DEBUG_MSG("Adding wrapper for TVirtualPad * TCanvas::GetSelectedPad() (" __HERE__ ")");
-    // signature to use in the veto list: TVirtualPad * TCanvas::GetSelectedPad()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:146:22
-    t.method("GetSelectedPad", static_cast<TVirtualPad * (TCanvas::*)()  const>(&TCanvas::GetSelectedPad));
-
-    DEBUG_MSG("Adding wrapper for TVirtualPad * TCanvas::GetClickSelectedPad() (" __HERE__ ")");
-    // signature to use in the veto list: TVirtualPad * TCanvas::GetClickSelectedPad()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:147:22
-    t.method("GetClickSelectedPad", static_cast<TVirtualPad * (TCanvas::*)()  const>(&TCanvas::GetClickSelectedPad));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::GetShowEventStatus() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::GetShowEventStatus()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:148:22
-    t.method("GetShowEventStatus", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::GetShowEventStatus));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::GetShowToolBar() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::GetShowToolBar()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:149:22
-    t.method("GetShowToolBar", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::GetShowToolBar));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::GetShowEditor() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::GetShowEditor()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:150:22
-    t.method("GetShowEditor", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::GetShowEditor));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::GetShowToolTips() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::GetShowToolTips()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:151:22
-    t.method("GetShowToolTips", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::GetShowToolTips));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::GetAutoExec() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::GetAutoExec()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:152:22
-    t.method("GetAutoExec", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::GetAutoExec));
-
-    DEBUG_MSG("Adding wrapper for Size_t TCanvas::GetXsizeUser() (" __HERE__ ")");
-    // signature to use in the veto list: Size_t TCanvas::GetXsizeUser()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:153:22
-    t.method("GetXsizeUser", static_cast<Size_t (TCanvas::*)()  const>(&TCanvas::GetXsizeUser));
-
-    DEBUG_MSG("Adding wrapper for Size_t TCanvas::GetYsizeUser() (" __HERE__ ")");
-    // signature to use in the veto list: Size_t TCanvas::GetYsizeUser()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:154:22
-    t.method("GetYsizeUser", static_cast<Size_t (TCanvas::*)()  const>(&TCanvas::GetYsizeUser));
-
-    DEBUG_MSG("Adding wrapper for Size_t TCanvas::GetXsizeReal() (" __HERE__ ")");
-    // signature to use in the veto list: Size_t TCanvas::GetXsizeReal()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:155:22
-    t.method("GetXsizeReal", static_cast<Size_t (TCanvas::*)()  const>(&TCanvas::GetXsizeReal));
-
-    DEBUG_MSG("Adding wrapper for Size_t TCanvas::GetYsizeReal() (" __HERE__ ")");
-    // signature to use in the veto list: Size_t TCanvas::GetYsizeReal()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:156:22
-    t.method("GetYsizeReal", static_cast<Size_t (TCanvas::*)()  const>(&TCanvas::GetYsizeReal));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetCanvasID() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetCanvasID()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:157:22
-    t.method("GetCanvasID", static_cast<Int_t (TCanvas::*)()  const>(&TCanvas::GetCanvasID));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetWindowTopX() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetWindowTopX()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:159:22
-    t.method("GetWindowTopX", static_cast<Int_t (TCanvas::*)() >(&TCanvas::GetWindowTopX));
-
-    DEBUG_MSG("Adding wrapper for Int_t TCanvas::GetWindowTopY() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TCanvas::GetWindowTopY()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:160:22
-    t.method("GetWindowTopY", static_cast<Int_t (TCanvas::*)() >(&TCanvas::GetWindowTopY));
-
-    DEBUG_MSG("Adding wrapper for UInt_t TCanvas::GetWindowWidth() (" __HERE__ ")");
-    // signature to use in the veto list: UInt_t TCanvas::GetWindowWidth()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:161:22
-    t.method("GetWindowWidth", static_cast<UInt_t (TCanvas::*)()  const>(&TCanvas::GetWindowWidth));
-
-    DEBUG_MSG("Adding wrapper for UInt_t TCanvas::GetWindowHeight() (" __HERE__ ")");
-    // signature to use in the veto list: UInt_t TCanvas::GetWindowHeight()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:162:22
-    t.method("GetWindowHeight", static_cast<UInt_t (TCanvas::*)()  const>(&TCanvas::GetWindowHeight));
-
-    DEBUG_MSG("Adding wrapper for UInt_t TCanvas::GetWw() (" __HERE__ ")");
-    // signature to use in the veto list: UInt_t TCanvas::GetWw()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:163:22
-    t.method("GetWw", static_cast<UInt_t (TCanvas::*)()  const>(&TCanvas::GetWw));
-
-    DEBUG_MSG("Adding wrapper for UInt_t TCanvas::GetWh() (" __HERE__ ")");
-    // signature to use in the veto list: UInt_t TCanvas::GetWh()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:164:22
-    t.method("GetWh", static_cast<UInt_t (TCanvas::*)()  const>(&TCanvas::GetWh));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::GetCanvasPar(Int_t &, Int_t &, UInt_t &, UInt_t &) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::GetCanvasPar(Int_t &, Int_t &, UInt_t &, UInt_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:165:22
-    t.method("GetCanvasPar", static_cast<void (TCanvas::*)(Int_t &, Int_t &, UInt_t &, UInt_t &) >(&TCanvas::GetCanvasPar));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::HandleInput(EEventType, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::HandleInput(EEventType, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:167:22
-    t.method("HandleInput", static_cast<void (TCanvas::*)(EEventType, Int_t, Int_t) >(&TCanvas::HandleInput));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::HasMenuBar() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::HasMenuBar()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:168:22
-    t.method("HasMenuBar", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::HasMenuBar));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::HighlightConnect(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::HighlightConnect(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:169:22
-    t.method("HighlightConnect", static_cast<void (TCanvas::*)(const char *) >(&TCanvas::HighlightConnect));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Iconify() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Iconify()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:170:22
-    t.method("Iconify", static_cast<void (TCanvas::*)() >(&TCanvas::Iconify));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::IsBatch() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::IsBatch()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:171:22
-    t.method("IsBatch", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::IsBatch));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::IsDrawn() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::IsDrawn()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:172:22
-    t.method("IsDrawn", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::IsDrawn));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::IsUpdated() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::IsUpdated()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:173:22
-    t.method("IsUpdated", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::IsUpdated));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::IsFolder() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::IsFolder()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:174:22
-    t.method("IsFolder", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::IsFolder));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::IsGrayscale() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::IsGrayscale()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:175:22
-    t.method("IsGrayscale", static_cast<Bool_t (TCanvas::*)() >(&TCanvas::IsGrayscale));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::IsRetained() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::IsRetained()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:176:22
-    t.method("IsRetained", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::IsRetained));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::IsWeb() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::IsWeb()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:177:22
-    t.method("IsWeb", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::IsWeb));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ls(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ls(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:178:22
-    t.method("ls", static_cast<void (TCanvas::*)(Option_t *)  const>(&TCanvas::ls));
-    t.method("ls", [](TCanvas const& a)->void { a.ls(); });
-    t.method("ls", [](TCanvas const* a)->void { a->ls(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::MoveOpaque(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::MoveOpaque(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:179:22
-    t.method("MoveOpaque", static_cast<void (TCanvas::*)(Int_t) >(&TCanvas::MoveOpaque));
-    t.method("MoveOpaque", [](TCanvas& a)->void { a.MoveOpaque(); });
-    t.method("MoveOpaque", [](TCanvas* a)->void { a->MoveOpaque(); });
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::OpaqueMoving() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::OpaqueMoving()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:180:22
-    t.method("OpaqueMoving", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::OpaqueMoving));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::OpaqueResizing() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::OpaqueResizing()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:181:22
-    t.method("OpaqueResizing", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::OpaqueResizing));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Paint(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Paint(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:182:22
-    t.method("Paint", static_cast<void (TCanvas::*)(Option_t *) >(&TCanvas::Paint));
-    t.method("Paint", [](TCanvas& a)->void { a.Paint(); });
-    t.method("Paint", [](TCanvas* a)->void { a->Paint(); });
-
-    DEBUG_MSG("Adding wrapper for TPad * TCanvas::Pick(Int_t, Int_t, TObjLink *&) (" __HERE__ ")");
-    // signature to use in the veto list: TPad * TCanvas::Pick(Int_t, Int_t, TObjLink *&)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:183:22
-    t.method("Pick", static_cast<TPad * (TCanvas::*)(Int_t, Int_t, TObjLink *&) >(&TCanvas::Pick));
-
-    DEBUG_MSG("Adding wrapper for TPad * TCanvas::Pick(Int_t, Int_t, TObject *) (" __HERE__ ")");
-    // signature to use in the veto list: TPad * TCanvas::Pick(Int_t, Int_t, TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:184:22
-    t.method("Pick", static_cast<TPad * (TCanvas::*)(Int_t, Int_t, TObject *) >(&TCanvas::Pick));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Picked(TPad *, TObject *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Picked(TPad *, TObject *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:185:22
-    t.method("Picked", static_cast<void (TCanvas::*)(TPad *, TObject *, Int_t) >(&TCanvas::Picked));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Highlighted(TVirtualPad *, TObject *, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Highlighted(TVirtualPad *, TObject *, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:186:22
-    t.method("Highlighted", static_cast<void (TCanvas::*)(TVirtualPad *, TObject *, Int_t, Int_t) >(&TCanvas::Highlighted));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ProcessedEvent(Int_t, Int_t, Int_t, TObject *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ProcessedEvent(Int_t, Int_t, Int_t, TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:187:22
-    t.method("ProcessedEvent", static_cast<void (TCanvas::*)(Int_t, Int_t, Int_t, TObject *) >(&TCanvas::ProcessedEvent));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Selected(TVirtualPad *, TObject *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Selected(TVirtualPad *, TObject *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:188:22
-    t.method("Selected", static_cast<void (TCanvas::*)(TVirtualPad *, TObject *, Int_t) >(&TCanvas::Selected));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Cleared(TVirtualPad *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Cleared(TVirtualPad *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:189:22
-    t.method("Cleared", static_cast<void (TCanvas::*)(TVirtualPad *) >(&TCanvas::Cleared));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Closed() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Closed()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:190:22
-    t.method("Closed", static_cast<void (TCanvas::*)() >(&TCanvas::Closed));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::RaiseWindow() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::RaiseWindow()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:191:22
-    t.method("RaiseWindow", static_cast<void (TCanvas::*)() >(&TCanvas::RaiseWindow));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ResetDrawn() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ResetDrawn()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:192:22
-    t.method("ResetDrawn", static_cast<void (TCanvas::*)() >(&TCanvas::ResetDrawn));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ResetUpdated() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ResetUpdated()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:193:22
-    t.method("ResetUpdated", static_cast<void (TCanvas::*)() >(&TCanvas::ResetUpdated));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Resize(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Resize(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:194:22
-    t.method("Resize", static_cast<void (TCanvas::*)(Option_t *) >(&TCanvas::Resize));
-    t.method("Resize", [](TCanvas& a)->void { a.Resize(); });
-    t.method("Resize", [](TCanvas* a)->void { a->Resize(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ResizeOpaque(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ResizeOpaque(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:195:22
-    t.method("ResizeOpaque", static_cast<void (TCanvas::*)(Int_t) >(&TCanvas::ResizeOpaque));
-    t.method("ResizeOpaque", [](TCanvas& a)->void { a.ResizeOpaque(); });
-    t.method("ResizeOpaque", [](TCanvas* a)->void { a->ResizeOpaque(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SaveSource(const char *, Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SaveSource(const char *, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:196:22
-    t.method("SaveSource", static_cast<void (TCanvas::*)(const char *, Option_t *) >(&TCanvas::SaveSource));
-    t.method("SaveSource", [](TCanvas& a)->void { a.SaveSource(); });
-    t.method("SaveSource", [](TCanvas& a, const char * arg0)->void { a.SaveSource(arg0); });
-    t.method("SaveSource", [](TCanvas* a)->void { a->SaveSource(); });
-    t.method("SaveSource", [](TCanvas* a, const char * arg0)->void { a->SaveSource(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetCursor(ECursor) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetCursor(ECursor)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:198:22
-    t.method("SetCursor", static_cast<void (TCanvas::*)(ECursor) >(&TCanvas::SetCursor));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetDoubleBuffer(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetDoubleBuffer(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:199:22
-    t.method("SetDoubleBuffer", static_cast<void (TCanvas::*)(Int_t) >(&TCanvas::SetDoubleBuffer));
-    t.method("SetDoubleBuffer", [](TCanvas& a)->void { a.SetDoubleBuffer(); });
-    t.method("SetDoubleBuffer", [](TCanvas* a)->void { a->SetDoubleBuffer(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetName(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetName(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:200:22
-    t.method("SetName", static_cast<void (TCanvas::*)(const char *) >(&TCanvas::SetName));
-    t.method("SetName", [](TCanvas& a)->void { a.SetName(); });
-    t.method("SetName", [](TCanvas* a)->void { a->SetName(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetFixedAspectRatio(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetFixedAspectRatio(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:201:22
-    t.method("SetFixedAspectRatio", static_cast<void (TCanvas::*)(Bool_t) >(&TCanvas::SetFixedAspectRatio));
-    t.method("SetFixedAspectRatio", [](TCanvas& a)->void { a.SetFixedAspectRatio(); });
-    t.method("SetFixedAspectRatio", [](TCanvas* a)->void { a->SetFixedAspectRatio(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetGrayscale(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetGrayscale(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:202:22
-    t.method("SetGrayscale", static_cast<void (TCanvas::*)(Bool_t) >(&TCanvas::SetGrayscale));
-    t.method("SetGrayscale", [](TCanvas& a)->void { a.SetGrayscale(); });
-    t.method("SetGrayscale", [](TCanvas* a)->void { a->SetGrayscale(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetWindowPosition(Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetWindowPosition(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:203:22
-    t.method("SetWindowPosition", static_cast<void (TCanvas::*)(Int_t, Int_t) >(&TCanvas::SetWindowPosition));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetWindowSize(UInt_t, UInt_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetWindowSize(UInt_t, UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:204:22
-    t.method("SetWindowSize", static_cast<void (TCanvas::*)(UInt_t, UInt_t) >(&TCanvas::SetWindowSize));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetCanvasSize(UInt_t, UInt_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetCanvasSize(UInt_t, UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:206:22
-    t.method("SetCanvasSize", static_cast<void (TCanvas::*)(UInt_t, UInt_t) >(&TCanvas::SetCanvasSize));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetHighLightColor(Color_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetHighLightColor(Color_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:207:22
-    t.method("SetHighLightColor", static_cast<void (TCanvas::*)(Color_t) >(&TCanvas::SetHighLightColor));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetSelected(TObject *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetSelected(TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:208:22
-    t.method("SetSelected", static_cast<void (TCanvas::*)(TObject *) >(&TCanvas::SetSelected));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetClickSelected(TObject *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetClickSelected(TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:209:22
-    t.method("SetClickSelected", static_cast<void (TCanvas::*)(TObject *) >(&TCanvas::SetClickSelected));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetSelectedPad(TPad *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetSelectedPad(TPad *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:210:22
-    t.method("SetSelectedPad", static_cast<void (TCanvas::*)(TPad *) >(&TCanvas::SetSelectedPad));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetClickSelectedPad(TPad *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetClickSelectedPad(TPad *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:211:22
-    t.method("SetClickSelectedPad", static_cast<void (TCanvas::*)(TPad *) >(&TCanvas::SetClickSelectedPad));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Show() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Show()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:212:22
-    t.method("Show", static_cast<void (TCanvas::*)() >(&TCanvas::Show));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Size(Float_t, Float_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Size(Float_t, Float_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:213:22
-    t.method("Size", static_cast<void (TCanvas::*)(Float_t, Float_t) >(&TCanvas::Size));
-    t.method("Size", [](TCanvas& a)->void { a.Size(); });
-    t.method("Size", [](TCanvas& a, Float_t arg0)->void { a.Size(arg0); });
-    t.method("Size", [](TCanvas* a)->void { a->Size(); });
-    t.method("Size", [](TCanvas* a, Float_t arg0)->void { a->Size(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetBatch(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetBatch(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:214:22
-    t.method("SetBatch", static_cast<void (TCanvas::*)(Bool_t) >(&TCanvas::SetBatch));
-    t.method("SetBatch", [](TCanvas& a)->void { a.SetBatch(); });
-    t.method("SetBatch", [](TCanvas* a)->void { a->SetBatch(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetFolder(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetFolder(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:215:22
-    module_.method("TCanvas!SetFolder", static_cast<void (*)(Bool_t) >(&TCanvas::SetFolder));
-    module_.method("TCanvas!SetFolder", []()->void { TCanvas::SetFolder(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetPadSave(TPad *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetPadSave(TPad *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:216:22
-    t.method("SetPadSave", static_cast<void (TCanvas::*)(TPad *) >(&TCanvas::SetPadSave));
-
-    DEBUG_MSG("Adding wrapper for bool TCanvas::SetRealAspectRatio(const Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: bool TCanvas::SetRealAspectRatio(const Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:217:22
-    t.method("SetRealAspectRatio", static_cast<bool (TCanvas::*)(const Int_t) >(&TCanvas::SetRealAspectRatio));
-    t.method("SetRealAspectRatio", [](TCanvas& a)->bool { return a.SetRealAspectRatio(); });
-    t.method("SetRealAspectRatio", [](TCanvas* a)->bool { return a->SetRealAspectRatio(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetRetained(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetRetained(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:218:22
-    t.method("SetRetained", static_cast<void (TCanvas::*)(Bool_t) >(&TCanvas::SetRetained));
-    t.method("SetRetained", [](TCanvas& a)->void { a.SetRetained(); });
-    t.method("SetRetained", [](TCanvas* a)->void { a->SetRetained(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetTitle(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetTitle(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:219:22
-    t.method("SetTitle", static_cast<void (TCanvas::*)(const char *) >(&TCanvas::SetTitle));
-    t.method("SetTitle", [](TCanvas& a)->void { a.SetTitle(); });
-    t.method("SetTitle", [](TCanvas* a)->void { a->SetTitle(); });
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ToggleEventStatus() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ToggleEventStatus()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:220:22
-    t.method("ToggleEventStatus", static_cast<void (TCanvas::*)() >(&TCanvas::ToggleEventStatus));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ToggleAutoExec() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ToggleAutoExec()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:221:22
-    t.method("ToggleAutoExec", static_cast<void (TCanvas::*)() >(&TCanvas::ToggleAutoExec));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ToggleToolBar() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ToggleToolBar()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:222:22
-    t.method("ToggleToolBar", static_cast<void (TCanvas::*)() >(&TCanvas::ToggleToolBar));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ToggleEditor() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ToggleEditor()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:223:22
-    t.method("ToggleEditor", static_cast<void (TCanvas::*)() >(&TCanvas::ToggleEditor));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::ToggleToolTips() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::ToggleToolTips()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:224:22
-    t.method("ToggleToolTips", static_cast<void (TCanvas::*)() >(&TCanvas::ToggleToolTips));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Update() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Update()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:225:22
-    t.method("Update", static_cast<void (TCanvas::*)() >(&TCanvas::Update));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::UpdateAsync() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::UpdateAsync()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:226:22
-    t.method("UpdateAsync", static_cast<void (TCanvas::*)() >(&TCanvas::UpdateAsync));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::UseGL() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::UseGL()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:228:24
-    t.method("UseGL", static_cast<Bool_t (TCanvas::*)()  const>(&TCanvas::UseGL));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::SetSupportGL(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::SetSupportGL(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:229:24
-    t.method("SetSupportGL", static_cast<void (TCanvas::*)(Bool_t) >(&TCanvas::SetSupportGL));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::DeleteCanvasPainter() (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::DeleteCanvasPainter()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:231:24
-    t.method("DeleteCanvasPainter", static_cast<void (TCanvas::*)() >(&TCanvas::DeleteCanvasPainter));
-
-    DEBUG_MSG("Adding wrapper for TCanvas * TCanvas::MakeDefCanvas() (" __HERE__ ")");
-    // signature to use in the veto list: TCanvas * TCanvas::MakeDefCanvas()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:233:22
-    module_.method("TCanvas!MakeDefCanvas", static_cast<TCanvas * (*)() >(&TCanvas::MakeDefCanvas));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::SupportAlpha() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::SupportAlpha()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:234:22
-    module_.method("TCanvas!SupportAlpha", static_cast<Bool_t (*)() >(&TCanvas::SupportAlpha));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TCanvas::SaveAll(const std::vector<TPad *> &, const char *, Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TCanvas::SaveAll(const std::vector<TPad *> &, const char *, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:236:22
-    module_.method("TCanvas!SaveAll", static_cast<Bool_t (*)(const std::vector<TPad *> &, const char *, Option_t *) >(&TCanvas::SaveAll));
-    module_.method("TCanvas!SaveAll", []()->Bool_t { return TCanvas::SaveAll(); });
-    module_.method("TCanvas!SaveAll", [](const std::vector<TPad *> & arg0)->Bool_t { return TCanvas::SaveAll(arg0); });
-    module_.method("TCanvas!SaveAll", [](const std::vector<TPad *> & arg0, const char * arg1)->Bool_t { return TCanvas::SaveAll(arg0, arg1); });
-
-    DEBUG_MSG("Adding wrapper for Version_t TCanvas::Class_Version() (" __HERE__ ")");
-    // signature to use in the veto list: Version_t TCanvas::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!Class_Version", static_cast<Version_t (*)() >(&TCanvas::Class_Version));
-
-    DEBUG_MSG("Adding wrapper for TClass * TCanvas::IsA() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TCanvas::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    t.method("IsA", static_cast<TClass * (TCanvas::*)()  const>(&TCanvas::IsA));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    t.method("StreamerNVirtual", static_cast<void (TCanvas::*)(TBuffer &) >(&TCanvas::StreamerNVirtual));
-
-    DEBUG_MSG("Adding wrapper for const char * TCanvas::DeclFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TCanvas::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!DeclFileName", []() { return (std::string)TCanvas::DeclFileName(); });
-
-    DEBUG_MSG("Adding wrapper for int TCanvas::ImplFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TCanvas::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!ImplFileLine", static_cast<int (*)() >(&TCanvas::ImplFileLine));
-
-    DEBUG_MSG("Adding wrapper for const char * TCanvas::ImplFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TCanvas::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!ImplFileName", []() { return (std::string)TCanvas::ImplFileName(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TCanvas::Class_Name() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TCanvas::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!Class_Name", []() { return (std::string)TCanvas::Class_Name(); });
-
-    DEBUG_MSG("Adding wrapper for TClass * TCanvas::Dictionary() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TCanvas::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!Dictionary", static_cast<TClass * (*)() >(&TCanvas::Dictionary));
-
-    DEBUG_MSG("Adding wrapper for TClass * TCanvas::Class() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TCanvas::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!Class", static_cast<TClass * (*)() >(&TCanvas::Class));
-
-    DEBUG_MSG("Adding wrapper for void TCanvas::Streamer(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TCanvas::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    t.method("Streamer", static_cast<void (TCanvas::*)(TBuffer &) >(&TCanvas::Streamer));
-
-    DEBUG_MSG("Adding wrapper for int TCanvas::DeclFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TCanvas::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:238:4
-    module_.method("TCanvas!DeclFileLine", static_cast<int (*)() >(&TCanvas::DeclFileLine));
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TCanvas>> type_;
-};
-std::shared_ptr<Wrapper> newJlTCanvas(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTCanvas(module));
 }

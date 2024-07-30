@@ -7,78 +7,221 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
-  template<> struct IsMirroredType<TInetAddress> : std::false_type { };
-  template<> struct DefaultConstructible<TInetAddress> : std::false_type { };
-template<> struct SuperType<TInetAddress> { typedef TObject type; };
+  template<> struct IsMirroredType<TTreeFriendLeafIter> : std::false_type { };
+  template<> struct DefaultConstructible<TTreeFriendLeafIter> : std::false_type { };
+template<> struct SuperType<TTreeFriendLeafIter> { typedef TIterator type; };
 }
 
-// Class generating the wrapper for type TInetAddress
-// signature to use in the veto file: TInetAddress
-struct JlTInetAddress: public Wrapper {
+// Class generating the wrapper for type TTreeFriendLeafIter
+// signature to use in the veto file: TTreeFriendLeafIter
+struct JlTTreeFriendLeafIter: public Wrapper {
 
-  JlTInetAddress(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TInetAddress (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TInetAddress.h:36:7
-    jlcxx::TypeWrapper<TInetAddress>  t = jlModule.add_type<TInetAddress>("TInetAddress",
+  JlTTreeFriendLeafIter(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TTreeFriendLeafIter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:670:7
+    jlcxx::TypeWrapper<TTreeFriendLeafIter>  t = jlModule.add_type<TTreeFriendLeafIter>("TTreeFriendLeafIter",
+      jlcxx::julia_base_type<TIterator>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TTreeFriendLeafIter>>(new jlcxx::TypeWrapper<TTreeFriendLeafIter>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+
+
+    DEBUG_MSG("Adding wrapper for void TTreeFriendLeafIter::TTreeFriendLeafIter(const TTree *, Bool_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:682:4
+    t.constructor<const TTree *>(/*finalize=*/true);
+    t.constructor<const TTree *, Bool_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TTreeFriendLeafIter::TTreeFriendLeafIter(const TTreeFriendLeafIter &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:683:4
+    t.constructor<const TTreeFriendLeafIter &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for TIterator & TTreeFriendLeafIter::operator=(const TIterator &) (" __HERE__ ")");
+    // signature to use in the veto list: TIterator & TTreeFriendLeafIter::operator=(const TIterator &)
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:685:15
+    t.method("assign", static_cast<TIterator & (TTreeFriendLeafIter::*)(const TIterator &) >(&TTreeFriendLeafIter::operator=));
+
+    DEBUG_MSG("Adding wrapper for TTreeFriendLeafIter & TTreeFriendLeafIter::operator=(const TTreeFriendLeafIter &) (" __HERE__ ")");
+    // signature to use in the veto list: TTreeFriendLeafIter & TTreeFriendLeafIter::operator=(const TTreeFriendLeafIter &)
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:686:25
+    t.method("assign", static_cast<TTreeFriendLeafIter & (TTreeFriendLeafIter::*)(const TTreeFriendLeafIter &) >(&TTreeFriendLeafIter::operator=));
+
+    DEBUG_MSG("Adding wrapper for const TCollection * TTreeFriendLeafIter::GetCollection() (" __HERE__ ")");
+    // signature to use in the veto list: const TCollection * TTreeFriendLeafIter::GetCollection()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:688:23
+    t.method("GetCollection", static_cast<const TCollection * (TTreeFriendLeafIter::*)()  const>(&TTreeFriendLeafIter::GetCollection));
+
+    DEBUG_MSG("Adding wrapper for Option_t * TTreeFriendLeafIter::GetOption() (" __HERE__ ")");
+    // signature to use in the veto list: Option_t * TTreeFriendLeafIter::GetOption()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:689:23
+    t.method("GetOption", static_cast<Option_t * (TTreeFriendLeafIter::*)()  const>(&TTreeFriendLeafIter::GetOption));
+
+    DEBUG_MSG("Adding wrapper for TObject * TTreeFriendLeafIter::Next() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TTreeFriendLeafIter::Next()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:690:23
+    t.method("Next", static_cast<TObject * (TTreeFriendLeafIter::*)() >(&TTreeFriendLeafIter::Next));
+
+    DEBUG_MSG("Adding wrapper for void TTreeFriendLeafIter::Reset() (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeFriendLeafIter::Reset()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:691:23
+    t.method("Reset", static_cast<void (TTreeFriendLeafIter::*)() >(&TTreeFriendLeafIter::Reset));
+    module_.set_override_module(jl_base_module);
+
+    DEBUG_MSG("Adding wrapper for Bool_t TTreeFriendLeafIter::operator!=(const TIterator &) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TTreeFriendLeafIter::operator!=(const TIterator &)
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:692:11
+    t.method("!=", static_cast<Bool_t (TTreeFriendLeafIter::*)(const TIterator &)  const>(&TTreeFriendLeafIter::operator!=));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TTreeFriendLeafIter::operator!=(const TTreeFriendLeafIter &) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TTreeFriendLeafIter::operator!=(const TTreeFriendLeafIter &)
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:696:11
+    t.method("!=", static_cast<Bool_t (TTreeFriendLeafIter::*)(const TTreeFriendLeafIter &)  const>(&TTreeFriendLeafIter::operator!=));
+
+    DEBUG_MSG("Adding wrapper for TObject * TTreeFriendLeafIter::operator*() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TTreeFriendLeafIter::operator*()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:700:13
+    t.method("getindex", static_cast<TObject * (TTreeFriendLeafIter::*)()  const>(&TTreeFriendLeafIter::operator*));
+
+    module_.unset_override_module();
+
+    DEBUG_MSG("Adding wrapper for Version_t TTreeFriendLeafIter::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TTreeFriendLeafIter::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!Class_Version", static_cast<Version_t (*)() >(&TTreeFriendLeafIter::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TTreeFriendLeafIter::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TTreeFriendLeafIter::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    t.method("IsA", static_cast<TClass * (TTreeFriendLeafIter::*)()  const>(&TTreeFriendLeafIter::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TTreeFriendLeafIter::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeFriendLeafIter::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    t.method("StreamerNVirtual", static_cast<void (TTreeFriendLeafIter::*)(TBuffer &) >(&TTreeFriendLeafIter::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TTreeFriendLeafIter::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TTreeFriendLeafIter::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!DeclFileName", []() { return (std::string)TTreeFriendLeafIter::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TTreeFriendLeafIter::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TTreeFriendLeafIter::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!ImplFileLine", static_cast<int (*)() >(&TTreeFriendLeafIter::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TTreeFriendLeafIter::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TTreeFriendLeafIter::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!ImplFileName", []() { return (std::string)TTreeFriendLeafIter::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TTreeFriendLeafIter::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TTreeFriendLeafIter::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!Class_Name", []() { return (std::string)TTreeFriendLeafIter::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TTreeFriendLeafIter::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TTreeFriendLeafIter::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!Dictionary", static_cast<TClass * (*)() >(&TTreeFriendLeafIter::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TTreeFriendLeafIter::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TTreeFriendLeafIter::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!Class", static_cast<TClass * (*)() >(&TTreeFriendLeafIter::Class));
+
+    DEBUG_MSG("Adding wrapper for void TTreeFriendLeafIter::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeFriendLeafIter::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    t.method("Streamer", static_cast<void (TTreeFriendLeafIter::*)(TBuffer &) >(&TTreeFriendLeafIter::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TTreeFriendLeafIter::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TTreeFriendLeafIter::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:704:4
+    module_.method("TTreeFriendLeafIter!DeclFileLine", static_cast<int (*)() >(&TTreeFriendLeafIter::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TTreeFriendLeafIter>> type_;
+};
+std::shared_ptr<Wrapper> newJlTTreeFriendLeafIter(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTTreeFriendLeafIter(module));
+}
+
+namespace jlcxx {
+
+  template<typename T>
+  struct BuildParameterList<TBranchPtr<T>>
+  {
+    typedef ParameterList<T> type;
+  };
+
+  template<typename T> struct IsMirroredType<TBranchPtr<T>> : std::false_type { };
+  template<typename T> struct DefaultConstructible<TBranchPtr<T>> : std::false_type { };
+}
+
+// Class generating the wrapper for type TBranchPtr
+// signature to use in the veto file: TBranchPtr
+struct JlTBranchPtr: public Wrapper {
+
+  JlTBranchPtr(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TBranchPtr (" __HERE__ ")");
+    // defined in src/TBranchPtr.h:13:7
+    jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>  t =  jlModule.add_type<jlcxx::Parametric<jlcxx::TypeVar<1>>>("TBranchPtr");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>>(new jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>(jlModule, t));
+    auto t93_decl_methods = [this]<typename T> (jlcxx::TypeWrapper<TBranchPtr<T>> wrapped){
+      auto module_ = this->module_;
+      typedef TBranchPtr<T> WrappedType;
+
+
+      DEBUG_MSG("Adding wrapper for void TBranchPtr::TBranchPtr<T>(TBranch *) (" __HERE__ ")");
+      // defined in src/TBranchPtr.h:17:3
+      wrapped.template constructor<TBranch *>(/*finalize=*/true);
+
+      DEBUG_MSG("Adding wrapper for TBranch * TBranchPtr::operator->() (" __HERE__ ")");
+      // signature to use in the veto list: TBranch * TBranchPtr::operator->()
+      // defined in src/TBranchPtr.h:19:12
+      wrapped.method("arrow", static_cast<TBranch * (WrappedType::*)()  const>(&WrappedType::operator->));
+      module_.set_override_module(jl_base_module);
+
+      DEBUG_MSG("Adding wrapper for TBranch & TBranchPtr::operator*() (" __HERE__ ")");
+      // signature to use in the veto list: TBranch & TBranchPtr::operator*()
+      // defined in src/TBranchPtr.h:20:12
+      wrapped.method("getindex", static_cast<TBranch & (WrappedType::*)()  const>(&WrappedType::operator*));
+
+      module_.unset_override_module();
+    };
+    t.apply<TBranchPtr<std::vector<double>>, TBranchPtr<std::vector<float>>, TBranchPtr<std::vector<unsigned long>>, TBranchPtr<std::vector<long>>, TBranchPtr<std::vector<unsigned int>>, TBranchPtr<std::vector<int>>, TBranchPtr<std::vector<unsigned short>>, TBranchPtr<std::vector<short>>, TBranchPtr<std::vector<unsigned char>>, TBranchPtr<std::vector<char>>, TBranchPtr<double>, TBranchPtr<float>, TBranchPtr<unsigned long>, TBranchPtr<long>, TBranchPtr<unsigned int>, TBranchPtr<int>, TBranchPtr<unsigned short>, TBranchPtr<short>, TBranchPtr<unsigned char>, TBranchPtr<char>>(t93_decl_methods);
+  }
+
+  void add_methods() const{
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>> type_;
+};
+std::shared_ptr<Wrapper> newJlTBranchPtr(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTBranchPtr(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TTreeReader> : std::false_type { };
+  template<> struct DefaultConstructible<TTreeReader> : std::false_type { };
+  template<> struct CopyConstructible<TTreeReader> : std::false_type { };
+template<> struct SuperType<TTreeReader> { typedef TObject type; };
+}
+
+// Class generating the wrapper for type TTreeReader
+// signature to use in the veto file: TTreeReader
+struct JlTTreeReader: public Wrapper {
+
+  JlTTreeReader(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TTreeReader (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:44:7
+    jlcxx::TypeWrapper<TTreeReader>  t = jlModule.add_type<TTreeReader>("TTreeReader",
       jlcxx::julia_base_type<TObject>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TInetAddress>>(new jlcxx::TypeWrapper<TInetAddress>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TInetAddress>> type_;
-};
-std::shared_ptr<Wrapper> newJlTInetAddress(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTInetAddress(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TObjLink> : std::false_type { };
-  template<> struct DefaultConstructible<TObjLink> : std::false_type { };
-}
-
-// Class generating the wrapper for type TObjLink
-// signature to use in the veto file: TObjLink
-struct JlTObjLink: public Wrapper {
-
-  JlTObjLink(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TObjLink (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TList.h:121:7
-    jlcxx::TypeWrapper<TObjLink>  t = jlModule.add_type<TObjLink>("TObjLink");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TObjLink>>(new jlcxx::TypeWrapper<TObjLink>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TObjLink>> type_;
-};
-std::shared_ptr<Wrapper> newJlTObjLink(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTObjLink(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TAxis> : std::false_type { };
-  template<> struct DefaultConstructible<TAxis> : std::false_type { };
-template<> struct SuperType<TAxis> { typedef TNamed type; };
-}
-
-// Class generating the wrapper for type TAxis
-// signature to use in the veto file: TAxis
-struct JlTAxis: public Wrapper {
-
-  JlTAxis(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TAxis (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:31:7
-    jlcxx::TypeWrapper<TAxis>  t = jlModule.add_type<TAxis>("TAxis",
-      jlcxx::julia_base_type<TNamed>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TAxis>>(new jlcxx::TypeWrapper<TAxis>(jlModule, t));
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TTreeReader>>(new jlcxx::TypeWrapper<TTreeReader>(jlModule, t));
   }
 
   void add_methods() const{
@@ -86,577 +229,244 @@ struct JlTAxis: public Wrapper {
     t.template constructor<>(/*finalize=*/true);
 
 
-    DEBUG_MSG("Adding wrapper for void TAxis::TAxis(Int_t, Double_t, Double_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:80:4
-    t.constructor<Int_t, Double_t, Double_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TAxis::TAxis(Int_t, const Double_t *) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:81:4
-    t.constructor<Int_t, const Double_t *>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TAxis::TAxis(const TAxis &) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:82:4
-    t.constructor<const TAxis &>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding wrapper for TAxis & TAxis::operator=(const TAxis &) (" __HERE__ ")");
-    // signature to use in the veto list: TAxis & TAxis::operator=(const TAxis &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:84:11
-    t.method("assign", static_cast<TAxis & (TAxis::*)(const TAxis &) >(&TAxis::operator=));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::CanExtend() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::CanExtend()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:86:15
-    t.method("CanExtend", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::CanExtend));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::CanBeAlphanumeric() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::CanBeAlphanumeric()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:87:15
-    t.method("CanBeAlphanumeric", static_cast<Bool_t (TAxis::*)() >(&TAxis::CanBeAlphanumeric));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::IsAlphanumeric() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::IsAlphanumeric()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:88:15
-    t.method("IsAlphanumeric", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::IsAlphanumeric));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetAlphanumeric(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetAlphanumeric(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:89:15
-    t.method("SetAlphanumeric", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::SetAlphanumeric));
-    t.method("SetAlphanumeric", [](TAxis& a)->void { a.SetAlphanumeric(); });
-    t.method("SetAlphanumeric", [](TAxis* a)->void { a->SetAlphanumeric(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetCanExtend(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetCanExtend(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:90:15
-    t.method("SetCanExtend", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::SetCanExtend));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetNoAlphanumeric(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetNoAlphanumeric(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:91:15
-    t.method("SetNoAlphanumeric", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::SetNoAlphanumeric));
-    t.method("SetNoAlphanumeric", [](TAxis& a)->void { a.SetNoAlphanumeric(); });
-    t.method("SetNoAlphanumeric", [](TAxis* a)->void { a->SetNoAlphanumeric(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::CenterLabels(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::CenterLabels(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:98:23
-    t.method("CenterLabels", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::CenterLabels));
-    t.method("CenterLabels", [](TAxis& a)->void { a.CenterLabels(); });
-    t.method("CenterLabels", [](TAxis* a)->void { a->CenterLabels(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::CenterTitle(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::CenterTitle(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:99:23
-    t.method("CenterTitle", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::CenterTitle));
-    t.method("CenterTitle", [](TAxis& a)->void { a.CenterTitle(); });
-    t.method("CenterTitle", [](TAxis* a)->void { a->CenterTitle(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::ChooseTimeFormat(Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::ChooseTimeFormat(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:100:23
-    t.method("ChooseTimeFormat", [](TAxis& a) { return (std::string)a.ChooseTimeFormat(); });
-    t.method("ChooseTimeFormat", [](TAxis& a, Double_t arg0) { return (std::string)a.ChooseTimeFormat(arg0); });
-    t.method("ChooseTimeFormat", [](TAxis* a) { return (std::string)a->ChooseTimeFormat(); });
-    t.method("ChooseTimeFormat", [](TAxis* a, Double_t arg0) { return (std::string)a->ChooseTimeFormat(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::Copy(TObject &) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::Copy(TObject &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:101:15
-    t.method("Copy", static_cast<void (TAxis::*)(TObject &)  const>(&TAxis::Copy));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::Delete(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::Delete(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:102:15
-    t.method("Delete", static_cast<void (TAxis::*)(Option_t *) >(&TAxis::Delete));
-    t.method("Delete", [](TAxis& a)->void { a.Delete(); });
-    t.method("Delete", [](TAxis* a)->void { a->Delete(); });
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::DistancetoPrimitive(Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::DistancetoPrimitive(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:103:15
-    t.method("DistancetoPrimitive", static_cast<Int_t (TAxis::*)(Int_t, Int_t) >(&TAxis::DistancetoPrimitive));
-
-    DEBUG_MSG("Adding wrapper for TObject * TAxis::DrawClone(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: TObject * TAxis::DrawClone(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:104:15
-    t.method("DrawClone", static_cast<TObject * (TAxis::*)(Option_t *)  const>(&TAxis::DrawClone));
-    t.method("DrawClone", [](TAxis const& a)->TObject * { return a.DrawClone(); });
-    t.method("DrawClone", [](TAxis const* a)->TObject * { return a->DrawClone(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::ExecuteEvent(Int_t, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::ExecuteEvent(Int_t, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:105:15
-    t.method("ExecuteEvent", static_cast<void (TAxis::*)(Int_t, Int_t, Int_t) >(&TAxis::ExecuteEvent));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::FindBin(Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::FindBin(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:106:23
-    t.method("FindBin", static_cast<Int_t (TAxis::*)(Double_t) >(&TAxis::FindBin));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::FindBin(Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::FindBin(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:107:23
-    t.method("FindBin", static_cast<Int_t (TAxis::*)(Double_t)  const>(&TAxis::FindBin));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::FindBin(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::FindBin(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:108:23
-    t.method("FindBin", static_cast<Int_t (TAxis::*)(const char *) >(&TAxis::FindBin));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::FindFixBin(Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::FindFixBin(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:109:23
-    t.method("FindFixBin", static_cast<Int_t (TAxis::*)(Double_t)  const>(&TAxis::FindFixBin));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::FindFixBin(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::FindFixBin(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:110:23
-    t.method("FindFixBin", static_cast<Int_t (TAxis::*)(const char *)  const>(&TAxis::FindFixBin));
-
-    DEBUG_MSG("Adding wrapper for Double_t TAxis::GetBinCenter(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TAxis::GetBinCenter(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:111:23
-    t.method("GetBinCenter", static_cast<Double_t (TAxis::*)(Int_t)  const>(&TAxis::GetBinCenter));
-
-    DEBUG_MSG("Adding wrapper for Double_t TAxis::GetBinCenterLog(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TAxis::GetBinCenterLog(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:112:23
-    t.method("GetBinCenterLog", static_cast<Double_t (TAxis::*)(Int_t)  const>(&TAxis::GetBinCenterLog));
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::GetBinLabel(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::GetBinLabel(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:113:23
-    t.method("GetBinLabel", [](TAxis const& a, Int_t arg0) { return (std::string)a.GetBinLabel(arg0); });
-    t.method("GetBinLabel", [](TAxis const* a, Int_t arg0) { return (std::string)a->GetBinLabel(arg0); });
-
-    DEBUG_MSG("Adding wrapper for Double_t TAxis::GetBinLowEdge(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TAxis::GetBinLowEdge(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:114:23
-    t.method("GetBinLowEdge", static_cast<Double_t (TAxis::*)(Int_t)  const>(&TAxis::GetBinLowEdge));
-
-    DEBUG_MSG("Adding wrapper for Double_t TAxis::GetBinUpEdge(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TAxis::GetBinUpEdge(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:115:23
-    t.method("GetBinUpEdge", static_cast<Double_t (TAxis::*)(Int_t)  const>(&TAxis::GetBinUpEdge));
-
-    DEBUG_MSG("Adding wrapper for Double_t TAxis::GetBinWidth(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TAxis::GetBinWidth(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:116:23
-    t.method("GetBinWidth", static_cast<Double_t (TAxis::*)(Int_t)  const>(&TAxis::GetBinWidth));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::GetCenter(Double_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::GetCenter(Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:117:23
-    t.method("GetCenter", static_cast<void (TAxis::*)(Double_t *)  const>(&TAxis::GetCenter));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::GetCenterLabels() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::GetCenterLabels()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:118:23
-    t.method("GetCenterLabels", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::GetCenterLabels));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::GetCenterTitle() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::GetCenterTitle()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:119:23
-    t.method("GetCenterTitle", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::GetCenterTitle));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::GetDecimals() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::GetDecimals()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:120:23
-    t.method("GetDecimals", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::GetDecimals));
-
-    DEBUG_MSG("Adding wrapper for TList * TAxis::GetModifiedLabels() (" __HERE__ ")");
-    // signature to use in the veto list: TList * TAxis::GetModifiedLabels()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:122:23
-    t.method("GetModifiedLabels", static_cast<TList * (TAxis::*)()  const>(&TAxis::GetModifiedLabels));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::GetLowEdge(Double_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::GetLowEdge(Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:123:23
-    t.method("GetLowEdge", static_cast<void (TAxis::*)(Double_t *)  const>(&TAxis::GetLowEdge));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::GetMoreLogLabels() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::GetMoreLogLabels()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:124:23
-    t.method("GetMoreLogLabels", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::GetMoreLogLabels));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::GetNbins() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::GetNbins()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:125:23
-    t.method("GetNbins", static_cast<Int_t (TAxis::*)()  const>(&TAxis::GetNbins));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::GetNlabels() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::GetNlabels()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:126:23
-    t.method("GetNlabels", static_cast<Int_t (TAxis::*)()  const>(&TAxis::GetNlabels));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::GetNoExponent() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::GetNoExponent()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:127:23
-    t.method("GetNoExponent", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::GetNoExponent));
-
-    DEBUG_MSG("Adding wrapper for TObject * TAxis::GetParent() (" __HERE__ ")");
-    // signature to use in the veto list: TObject * TAxis::GetParent()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:128:23
-    t.method("GetParent", static_cast<TObject * (TAxis::*)()  const>(&TAxis::GetParent));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::GetRotateTitle() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::GetRotateTitle()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:129:23
-    t.method("GetRotateTitle", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::GetRotateTitle));
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::GetTicks() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::GetTicks()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:130:24
-    t.method("GetTicks", [](TAxis const& a) { return (std::string)a.GetTicks(); });
-    t.method("GetTicks", [](TAxis const* a) { return (std::string)a->GetTicks(); });
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::GetTimeDisplay() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::GetTimeDisplay()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:131:23
-    t.method("GetTimeDisplay", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::GetTimeDisplay));
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::GetTimeFormat() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::GetTimeFormat()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:132:24
-    t.method("GetTimeFormat", [](TAxis const& a) { return (std::string)a.GetTimeFormat(); });
-    t.method("GetTimeFormat", [](TAxis const* a) { return (std::string)a->GetTimeFormat(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::GetTimeFormatOnly() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::GetTimeFormatOnly()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:133:24
-    t.method("GetTimeFormatOnly", [](TAxis const& a) { return (std::string)a.GetTimeFormatOnly(); });
-    t.method("GetTimeFormatOnly", [](TAxis const* a) { return (std::string)a->GetTimeFormatOnly(); });
-
-    DEBUG_MSG("Adding wrapper for UInt_t TAxis::GetTimeOffset() (" __HERE__ ")");
-    // signature to use in the veto list: UInt_t TAxis::GetTimeOffset()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:134:24
-    t.method("GetTimeOffset", static_cast<UInt_t (TAxis::*)() >(&TAxis::GetTimeOffset));
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::GetTitle() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::GetTitle()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:135:23
-    t.method("GetTitle", [](TAxis const& a) { return (std::string)a.GetTitle(); });
-    t.method("GetTitle", [](TAxis const* a) { return (std::string)a->GetTitle(); });
-
-    DEBUG_MSG("Adding wrapper for const TArrayD * TAxis::GetXbins() (" __HERE__ ")");
-    // signature to use in the veto list: const TArrayD * TAxis::GetXbins()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:136:23
-    t.method("GetXbins", static_cast<const TArrayD * (TAxis::*)()  const>(&TAxis::GetXbins));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::GetFirst() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::GetFirst()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:137:23
-    t.method("GetFirst", static_cast<Int_t (TAxis::*)()  const>(&TAxis::GetFirst));
-
-    DEBUG_MSG("Adding wrapper for Int_t TAxis::GetLast() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TAxis::GetLast()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:138:23
-    t.method("GetLast", static_cast<Int_t (TAxis::*)()  const>(&TAxis::GetLast));
-
-    DEBUG_MSG("Adding wrapper for Double_t TAxis::GetXmin() (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TAxis::GetXmin()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:139:23
-    t.method("GetXmin", static_cast<Double_t (TAxis::*)()  const>(&TAxis::GetXmin));
-
-    DEBUG_MSG("Adding wrapper for Double_t TAxis::GetXmax() (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TAxis::GetXmax()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:140:23
-    t.method("GetXmax", static_cast<Double_t (TAxis::*)()  const>(&TAxis::GetXmax));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::ImportAttributes(const TAxis *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::ImportAttributes(const TAxis *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:141:23
-    t.method("ImportAttributes", static_cast<void (TAxis::*)(const TAxis *) >(&TAxis::ImportAttributes));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TAxis::IsVariableBinSize() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TAxis::IsVariableBinSize()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:142:23
-    t.method("IsVariableBinSize", static_cast<Bool_t (TAxis::*)()  const>(&TAxis::IsVariableBinSize));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::LabelsOption(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::LabelsOption(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:146:23
-    t.method("LabelsOption", static_cast<void (TAxis::*)(Option_t *) >(&TAxis::LabelsOption));
-    t.method("LabelsOption", [](TAxis& a)->void { a.LabelsOption(); });
-    t.method("LabelsOption", [](TAxis* a)->void { a->LabelsOption(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::RotateTitle(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::RotateTitle(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:147:23
-    t.method("RotateTitle", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::RotateTitle));
-    t.method("RotateTitle", [](TAxis& a)->void { a.RotateTitle(); });
-    t.method("RotateTitle", [](TAxis* a)->void { a->RotateTitle(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::Set(Int_t, Double_t, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::Set(Int_t, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:149:23
-    t.method("Set", static_cast<void (TAxis::*)(Int_t, Double_t, Double_t) >(&TAxis::Set));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::Set(Int_t, const Float_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::Set(Int_t, const Float_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:150:23
-    t.method("Set", static_cast<void (TAxis::*)(Int_t, const Float_t *) >(&TAxis::Set));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::Set(Int_t, const Double_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::Set(Int_t, const Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:151:23
-    t.method("Set", static_cast<void (TAxis::*)(Int_t, const Double_t *) >(&TAxis::Set));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetBinLabel(Int_t, const char *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetBinLabel(Int_t, const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:152:23
-    t.method("SetBinLabel", static_cast<void (TAxis::*)(Int_t, const char *) >(&TAxis::SetBinLabel));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetDecimals(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetDecimals(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:153:23
-    t.method("SetDecimals", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::SetDecimals));
-    t.method("SetDecimals", [](TAxis& a)->void { a.SetDecimals(); });
-    t.method("SetDecimals", [](TAxis* a)->void { a->SetDecimals(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetDefaults() (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetDefaults()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:154:23
-    t.method("SetDefaults", static_cast<void (TAxis::*)() >(&TAxis::SetDefaults));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetDrawOption(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetDrawOption(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:155:15
-    t.method("SetDrawOption", static_cast<void (TAxis::*)(Option_t *) >(&TAxis::SetDrawOption));
-    t.method("SetDrawOption", [](TAxis& a)->void { a.SetDrawOption(); });
-    t.method("SetDrawOption", [](TAxis* a)->void { a->SetDrawOption(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::ChangeLabel(Int_t, Double_t, Double_t, Int_t, Int_t, Int_t, const TString &) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::ChangeLabel(Int_t, Double_t, Double_t, Int_t, Int_t, Int_t, const TString &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:156:23
-    t.method("ChangeLabel", static_cast<void (TAxis::*)(Int_t, Double_t, Double_t, Int_t, Int_t, Int_t, const TString &) >(&TAxis::ChangeLabel));
-    t.method("ChangeLabel", [](TAxis& a)->void { a.ChangeLabel(); });
-    t.method("ChangeLabel", [](TAxis& a, Int_t arg0)->void { a.ChangeLabel(arg0); });
-    t.method("ChangeLabel", [](TAxis& a, Int_t arg0, Double_t arg1)->void { a.ChangeLabel(arg0, arg1); });
-    t.method("ChangeLabel", [](TAxis& a, Int_t arg0, Double_t arg1, Double_t arg2)->void { a.ChangeLabel(arg0, arg1, arg2); });
-    t.method("ChangeLabel", [](TAxis& a, Int_t arg0, Double_t arg1, Double_t arg2, Int_t arg3)->void { a.ChangeLabel(arg0, arg1, arg2, arg3); });
-    t.method("ChangeLabel", [](TAxis& a, Int_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4)->void { a.ChangeLabel(arg0, arg1, arg2, arg3, arg4); });
-    t.method("ChangeLabel", [](TAxis& a, Int_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4, Int_t arg5)->void { a.ChangeLabel(arg0, arg1, arg2, arg3, arg4, arg5); });
-    t.method("ChangeLabel", [](TAxis* a)->void { a->ChangeLabel(); });
-    t.method("ChangeLabel", [](TAxis* a, Int_t arg0)->void { a->ChangeLabel(arg0); });
-    t.method("ChangeLabel", [](TAxis* a, Int_t arg0, Double_t arg1)->void { a->ChangeLabel(arg0, arg1); });
-    t.method("ChangeLabel", [](TAxis* a, Int_t arg0, Double_t arg1, Double_t arg2)->void { a->ChangeLabel(arg0, arg1, arg2); });
-    t.method("ChangeLabel", [](TAxis* a, Int_t arg0, Double_t arg1, Double_t arg2, Int_t arg3)->void { a->ChangeLabel(arg0, arg1, arg2, arg3); });
-    t.method("ChangeLabel", [](TAxis* a, Int_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4)->void { a->ChangeLabel(arg0, arg1, arg2, arg3, arg4); });
-    t.method("ChangeLabel", [](TAxis* a, Int_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4, Int_t arg5)->void { a->ChangeLabel(arg0, arg1, arg2, arg3, arg4, arg5); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::ChangeLabelByValue(Double_t, Double_t, Double_t, Int_t, Int_t, Int_t, const TString &) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::ChangeLabelByValue(Double_t, Double_t, Double_t, Int_t, Int_t, Int_t, const TString &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:160:23
-    t.method("ChangeLabelByValue", static_cast<void (TAxis::*)(Double_t, Double_t, Double_t, Int_t, Int_t, Int_t, const TString &) >(&TAxis::ChangeLabelByValue));
-    t.method("ChangeLabelByValue", [](TAxis& a, Double_t arg0)->void { a.ChangeLabelByValue(arg0); });
-    t.method("ChangeLabelByValue", [](TAxis& a, Double_t arg0, Double_t arg1)->void { a.ChangeLabelByValue(arg0, arg1); });
-    t.method("ChangeLabelByValue", [](TAxis& a, Double_t arg0, Double_t arg1, Double_t arg2)->void { a.ChangeLabelByValue(arg0, arg1, arg2); });
-    t.method("ChangeLabelByValue", [](TAxis& a, Double_t arg0, Double_t arg1, Double_t arg2, Int_t arg3)->void { a.ChangeLabelByValue(arg0, arg1, arg2, arg3); });
-    t.method("ChangeLabelByValue", [](TAxis& a, Double_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4)->void { a.ChangeLabelByValue(arg0, arg1, arg2, arg3, arg4); });
-    t.method("ChangeLabelByValue", [](TAxis& a, Double_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4, Int_t arg5)->void { a.ChangeLabelByValue(arg0, arg1, arg2, arg3, arg4, arg5); });
-    t.method("ChangeLabelByValue", [](TAxis* a, Double_t arg0)->void { a->ChangeLabelByValue(arg0); });
-    t.method("ChangeLabelByValue", [](TAxis* a, Double_t arg0, Double_t arg1)->void { a->ChangeLabelByValue(arg0, arg1); });
-    t.method("ChangeLabelByValue", [](TAxis* a, Double_t arg0, Double_t arg1, Double_t arg2)->void { a->ChangeLabelByValue(arg0, arg1, arg2); });
-    t.method("ChangeLabelByValue", [](TAxis* a, Double_t arg0, Double_t arg1, Double_t arg2, Int_t arg3)->void { a->ChangeLabelByValue(arg0, arg1, arg2, arg3); });
-    t.method("ChangeLabelByValue", [](TAxis* a, Double_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4)->void { a->ChangeLabelByValue(arg0, arg1, arg2, arg3, arg4); });
-    t.method("ChangeLabelByValue", [](TAxis* a, Double_t arg0, Double_t arg1, Double_t arg2, Int_t arg3, Int_t arg4, Int_t arg5)->void { a->ChangeLabelByValue(arg0, arg1, arg2, arg3, arg4, arg5); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetLimits(Double_t, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetLimits(Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:164:23
-    t.method("SetLimits", static_cast<void (TAxis::*)(Double_t, Double_t) >(&TAxis::SetLimits));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetMoreLogLabels(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetMoreLogLabels(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:165:23
-    t.method("SetMoreLogLabels", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::SetMoreLogLabels));
-    t.method("SetMoreLogLabels", [](TAxis& a)->void { a.SetMoreLogLabels(); });
-    t.method("SetMoreLogLabels", [](TAxis* a)->void { a->SetMoreLogLabels(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetNoExponent(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetNoExponent(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:166:23
-    t.method("SetNoExponent", static_cast<void (TAxis::*)(Bool_t) >(&TAxis::SetNoExponent));
-    t.method("SetNoExponent", [](TAxis& a)->void { a.SetNoExponent(); });
-    t.method("SetNoExponent", [](TAxis* a)->void { a->SetNoExponent(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetParent(TObject *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetParent(TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:167:23
-    t.method("SetParent", static_cast<void (TAxis::*)(TObject *) >(&TAxis::SetParent));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetRange(Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetRange(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:168:23
-    t.method("SetRange", static_cast<void (TAxis::*)(Int_t, Int_t) >(&TAxis::SetRange));
-    t.method("SetRange", [](TAxis& a)->void { a.SetRange(); });
-    t.method("SetRange", [](TAxis& a, Int_t arg0)->void { a.SetRange(arg0); });
-    t.method("SetRange", [](TAxis* a)->void { a->SetRange(); });
-    t.method("SetRange", [](TAxis* a, Int_t arg0)->void { a->SetRange(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetRangeUser(Double_t, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetRangeUser(Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:169:23
-    t.method("SetRangeUser", static_cast<void (TAxis::*)(Double_t, Double_t) >(&TAxis::SetRangeUser));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetTicks(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetTicks(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:170:23
-    t.method("SetTicks", static_cast<void (TAxis::*)(Option_t *) >(&TAxis::SetTicks));
-    t.method("SetTicks", [](TAxis& a)->void { a.SetTicks(); });
-    t.method("SetTicks", [](TAxis* a)->void { a->SetTicks(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetTimeDisplay(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetTimeDisplay(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:171:23
-    t.method("SetTimeDisplay", static_cast<void (TAxis::*)(Int_t) >(&TAxis::SetTimeDisplay));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetTimeFormat(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetTimeFormat(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:172:23
-    t.method("SetTimeFormat", static_cast<void (TAxis::*)(const char *) >(&TAxis::SetTimeFormat));
-    t.method("SetTimeFormat", [](TAxis& a)->void { a.SetTimeFormat(); });
-    t.method("SetTimeFormat", [](TAxis* a)->void { a->SetTimeFormat(); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::SetTimeOffset(Double_t, Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::SetTimeOffset(Double_t, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:173:23
-    t.method("SetTimeOffset", static_cast<void (TAxis::*)(Double_t, Option_t *) >(&TAxis::SetTimeOffset));
-    t.method("SetTimeOffset", [](TAxis& a, Double_t arg0)->void { a.SetTimeOffset(arg0); });
-    t.method("SetTimeOffset", [](TAxis* a, Double_t arg0)->void { a->SetTimeOffset(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TAxis::UnZoom() (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::UnZoom()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:174:23
-    t.method("UnZoom", static_cast<void (TAxis::*)() >(&TAxis::UnZoom));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::ZoomOut(Double_t, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::ZoomOut(Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:175:23
-    t.method("ZoomOut", static_cast<void (TAxis::*)(Double_t, Double_t) >(&TAxis::ZoomOut));
-    t.method("ZoomOut", [](TAxis& a)->void { a.ZoomOut(); });
-    t.method("ZoomOut", [](TAxis& a, Double_t arg0)->void { a.ZoomOut(arg0); });
-    t.method("ZoomOut", [](TAxis* a)->void { a->ZoomOut(); });
-    t.method("ZoomOut", [](TAxis* a, Double_t arg0)->void { a->ZoomOut(arg0); });
-
-    DEBUG_MSG("Adding wrapper for Version_t TAxis::Class_Version() (" __HERE__ ")");
-    // signature to use in the veto list: Version_t TAxis::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!Class_Version", static_cast<Version_t (*)() >(&TAxis::Class_Version));
-
-    DEBUG_MSG("Adding wrapper for TClass * TAxis::IsA() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TAxis::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    t.method("IsA", static_cast<TClass * (TAxis::*)()  const>(&TAxis::IsA));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    t.method("StreamerNVirtual", static_cast<void (TAxis::*)(TBuffer &) >(&TAxis::StreamerNVirtual));
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::DeclFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!DeclFileName", []() { return (std::string)TAxis::DeclFileName(); });
-
-    DEBUG_MSG("Adding wrapper for int TAxis::ImplFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TAxis::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!ImplFileLine", static_cast<int (*)() >(&TAxis::ImplFileLine));
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::ImplFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!ImplFileName", []() { return (std::string)TAxis::ImplFileName(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TAxis::Class_Name() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TAxis::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!Class_Name", []() { return (std::string)TAxis::Class_Name(); });
-
-    DEBUG_MSG("Adding wrapper for TClass * TAxis::Dictionary() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TAxis::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!Dictionary", static_cast<TClass * (*)() >(&TAxis::Dictionary));
-
-    DEBUG_MSG("Adding wrapper for TClass * TAxis::Class() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TAxis::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!Class", static_cast<TClass * (*)() >(&TAxis::Class));
-
-    DEBUG_MSG("Adding wrapper for void TAxis::Streamer(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TAxis::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    t.method("Streamer", static_cast<void (TAxis::*)(TBuffer &) >(&TAxis::Streamer));
-
-    DEBUG_MSG("Adding wrapper for int TAxis::DeclFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TAxis::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TAxis.h:177:4
-    module_.method("TAxis!DeclFileLine", static_cast<int (*)() >(&TAxis::DeclFileLine));
+    DEBUG_MSG("Adding wrapper for void TTreeReader::TTreeReader(TTree *, TEntryList *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:165:4
+    t.constructor<TTree *>(/*finalize=*/true);
+    t.constructor<TTree *, TEntryList *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::TTreeReader(const char *, TDirectory *, TEntryList *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:166:4
+    t.constructor<const char *, TDirectory *>(/*finalize=*/true);
+    t.constructor<const char *, TDirectory *, TEntryList *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::TTreeReader(const char *, TEntryList *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:167:4
+    t.constructor<const char *>(/*finalize=*/true);
+    t.constructor<const char *, TEntryList *>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::SetTree(TTree *, TEntryList *) (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeReader::SetTree(TTree *, TEntryList *)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:171:9
+    t.method("SetTree", static_cast<void (TTreeReader::*)(TTree *, TEntryList *) >(&TTreeReader::SetTree));
+    t.method("SetTree", [](TTreeReader& a, TTree * arg0)->void { a.SetTree(arg0); });
+    t.method("SetTree", [](TTreeReader* a, TTree * arg0)->void { a->SetTree(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::SetTree(const char *, TEntryList *) (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeReader::SetTree(const char *, TEntryList *)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:172:9
+    t.method("SetTree", static_cast<void (TTreeReader::*)(const char *, TEntryList *) >(&TTreeReader::SetTree));
+    t.method("SetTree", [](TTreeReader& a, const char * arg0)->void { a.SetTree(arg0); });
+    t.method("SetTree", [](TTreeReader* a, const char * arg0)->void { a->SetTree(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::SetTree(const char *, TDirectory *, TEntryList *) (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeReader::SetTree(const char *, TDirectory *, TEntryList *)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:175:9
+    t.method("SetTree", static_cast<void (TTreeReader::*)(const char *, TDirectory *, TEntryList *) >(&TTreeReader::SetTree));
+    t.method("SetTree", [](TTreeReader& a, const char * arg0, TDirectory * arg1)->void { a.SetTree(arg0, arg1); });
+    t.method("SetTree", [](TTreeReader* a, const char * arg0, TDirectory * arg1)->void { a->SetTree(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TTreeReader::IsChain() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TTreeReader::IsChain()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:177:11
+    t.method("IsChain", static_cast<Bool_t (TTreeReader::*)()  const>(&TTreeReader::IsChain));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TTreeReader::IsInvalid() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TTreeReader::IsInvalid()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:179:11
+    t.method("IsInvalid", static_cast<Bool_t (TTreeReader::*)()  const>(&TTreeReader::IsInvalid));
+
+    DEBUG_MSG("Adding wrapper for TTree * TTreeReader::GetTree() (" __HERE__ ")");
+    // signature to use in the veto list: TTree * TTreeReader::GetTree()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:181:11
+    t.method("GetTree", static_cast<TTree * (TTreeReader::*)()  const>(&TTreeReader::GetTree));
+
+    DEBUG_MSG("Adding wrapper for TEntryList * TTreeReader::GetEntryList() (" __HERE__ ")");
+    // signature to use in the veto list: TEntryList * TTreeReader::GetEntryList()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:182:16
+    t.method("GetEntryList", static_cast<TEntryList * (TTreeReader::*)()  const>(&TTreeReader::GetEntryList));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TTreeReader::Next() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TTreeReader::Next()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:190:11
+    t.method("Next", static_cast<Bool_t (TTreeReader::*)() >(&TTreeReader::Next));
+
+    DEBUG_MSG("Adding wrapper for TTreeReader::EEntryStatus TTreeReader::SetEntry(Long64_t) (" __HERE__ ")");
+    // signature to use in the veto list: TTreeReader::EEntryStatus TTreeReader::SetEntry(Long64_t)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:199:17
+    t.method("SetEntry", static_cast<TTreeReader::EEntryStatus (TTreeReader::*)(Long64_t) >(&TTreeReader::SetEntry));
+
+    DEBUG_MSG("Adding wrapper for TTreeReader::EEntryStatus TTreeReader::SetLocalEntry(Long64_t) (" __HERE__ ")");
+    // signature to use in the veto list: TTreeReader::EEntryStatus TTreeReader::SetLocalEntry(Long64_t)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:209:17
+    t.method("SetLocalEntry", static_cast<TTreeReader::EEntryStatus (TTreeReader::*)(Long64_t) >(&TTreeReader::SetLocalEntry));
+
+    DEBUG_MSG("Adding wrapper for TTreeReader::EEntryStatus TTreeReader::SetEntriesRange(Long64_t, Long64_t) (" __HERE__ ")");
+    // signature to use in the veto list: TTreeReader::EEntryStatus TTreeReader::SetEntriesRange(Long64_t, Long64_t)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:211:17
+    t.method("SetEntriesRange", static_cast<TTreeReader::EEntryStatus (TTreeReader::*)(Long64_t, Long64_t) >(&TTreeReader::SetEntriesRange));
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::Restart() (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeReader::Restart()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:219:9
+    t.method("Restart", static_cast<void (TTreeReader::*)() >(&TTreeReader::Restart));
+
+    DEBUG_MSG("Adding wrapper for TTreeReader::EEntryStatus TTreeReader::GetEntryStatus() (" __HERE__ ")");
+    // signature to use in the veto list: TTreeReader::EEntryStatus TTreeReader::GetEntryStatus()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:223:17
+    t.method("GetEntryStatus", static_cast<TTreeReader::EEntryStatus (TTreeReader::*)()  const>(&TTreeReader::GetEntryStatus));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TTreeReader::GetEntries() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TTreeReader::GetEntries()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:225:13
+    t.method("GetEntries", static_cast<Long64_t (TTreeReader::*)()  const>(&TTreeReader::GetEntries));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TTreeReader::GetEntries(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TTreeReader::GetEntries(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:226:13
+    t.method("GetEntries", static_cast<Long64_t (TTreeReader::*)(Bool_t) >(&TTreeReader::GetEntries));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TTreeReader::GetCurrentEntry() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TTreeReader::GetCurrentEntry()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:235:13
+    t.method("GetCurrentEntry", static_cast<Long64_t (TTreeReader::*)()  const>(&TTreeReader::GetCurrentEntry));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TTreeReader::Notify() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TTreeReader::Notify()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:237:11
+    t.method("Notify", static_cast<Bool_t (TTreeReader::*)() >(&TTreeReader::Notify));
+
+    DEBUG_MSG("Adding wrapper for TTreeReader::Iterator_t TTreeReader::begin() (" __HERE__ ")");
+    // signature to use in the veto list: TTreeReader::Iterator_t TTreeReader::begin()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:240:15
+    t.method("begin", static_cast<TTreeReader::Iterator_t (TTreeReader::*)() >(&TTreeReader::begin));
+
+    DEBUG_MSG("Adding wrapper for TTreeReader::Iterator_t TTreeReader::end() (" __HERE__ ")");
+    // signature to use in the veto list: TTreeReader::Iterator_t TTreeReader::end()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:244:15
+    t.method("end", static_cast<TTreeReader::Iterator_t (TTreeReader::*)()  const>(&TTreeReader::end));
+
+    DEBUG_MSG("Adding wrapper for Version_t TTreeReader::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TTreeReader::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!Class_Version", static_cast<Version_t (*)() >(&TTreeReader::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TTreeReader::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TTreeReader::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    t.method("IsA", static_cast<TClass * (TTreeReader::*)()  const>(&TTreeReader::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeReader::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    t.method("StreamerNVirtual", static_cast<void (TTreeReader::*)(TBuffer &) >(&TTreeReader::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TTreeReader::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TTreeReader::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!DeclFileName", []() { return (std::string)TTreeReader::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TTreeReader::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TTreeReader::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!ImplFileLine", static_cast<int (*)() >(&TTreeReader::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TTreeReader::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TTreeReader::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!ImplFileName", []() { return (std::string)TTreeReader::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TTreeReader::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TTreeReader::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!Class_Name", []() { return (std::string)TTreeReader::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TTreeReader::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TTreeReader::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!Dictionary", static_cast<TClass * (*)() >(&TTreeReader::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TTreeReader::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TTreeReader::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!Class", static_cast<TClass * (*)() >(&TTreeReader::Class));
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TTreeReader::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    t.method("Streamer", static_cast<void (TTreeReader::*)(TBuffer &) >(&TTreeReader::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TTreeReader::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TTreeReader::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:314:4
+    module_.method("TTreeReader!DeclFileLine", static_cast<int (*)() >(&TTreeReader::DeclFileLine));
   }
 
 private:
-  std::unique_ptr<jlcxx::TypeWrapper<TAxis>> type_;
+  std::unique_ptr<jlcxx::TypeWrapper<TTreeReader>> type_;
 };
-std::shared_ptr<Wrapper> newJlTAxis(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTAxis(module));
+std::shared_ptr<Wrapper> newJlTTreeReader(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTTreeReader(module));
 }
 
 namespace jlcxx {
-  template<> struct IsMirroredType<TArrayD> : std::false_type { };
-  template<> struct DefaultConstructible<TArrayD> : std::false_type { };
+
+  template<typename T>
+  struct BuildParameterList<TTreeReaderValue<T>>
+  {
+    typedef ParameterList<T> type;
+  };
+
+  template<typename T> struct IsMirroredType<TTreeReaderValue<T>> : std::false_type { };
+  template<typename T> struct DefaultConstructible<TTreeReaderValue<T>> : std::false_type { };
 }
 
-// Class generating the wrapper for type TArrayD
-// signature to use in the veto file: TArrayD
-struct JlTArrayD: public Wrapper {
+// Class generating the wrapper for type TTreeReaderValue
+// signature to use in the veto file: TTreeReaderValue
+struct JlTTreeReaderValue: public Wrapper {
 
-  JlTArrayD(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TArrayD (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TArrayD.h:27:7
-    jlcxx::TypeWrapper<TArrayD>  t = jlModule.add_type<TArrayD>("TArrayD");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TArrayD>>(new jlcxx::TypeWrapper<TArrayD>(jlModule, t));
+  JlTTreeReaderValue(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TTreeReaderValue (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:146:30
+    jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>  t =  jlModule.add_type<jlcxx::Parametric<jlcxx::TypeVar<1>>>("TTreeReaderValue");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>>(new jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>(jlModule, t));
+    auto t100_decl_methods = [this]<typename T> (jlcxx::TypeWrapper<TTreeReaderValue<T>> wrapped){
+      auto module_ = this->module_;
+      typedef TTreeReaderValue<T> WrappedType;
+
+
+      DEBUG_MSG("Adding wrapper for void TTreeReaderValue::TTreeReaderValue<T>(TTreeReader &, const char *) (" __HERE__ ")");
+      // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:152:4
+      wrapped.template constructor<TTreeReader &, const char *>(/*finalize=*/true);
+
+      DEBUG_MSG("Adding wrapper for T * TTreeReaderValue::Get() (" __HERE__ ")");
+      // signature to use in the veto list: T * TTreeReaderValue::Get()
+      // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:161:7
+      wrapped.method("Get", static_cast<T * (WrappedType::*)() >(&WrappedType::Get));
+
+      DEBUG_MSG("Adding wrapper for T * TTreeReaderValue::operator->() (" __HERE__ ")");
+      // signature to use in the veto list: T * TTreeReaderValue::operator->()
+      // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:174:7
+      wrapped.method("arrow", static_cast<T * (WrappedType::*)() >(&WrappedType::operator->));
+      module_.set_override_module(jl_base_module);
+
+      DEBUG_MSG("Adding wrapper for T & TTreeReaderValue::operator*() (" __HERE__ ")");
+      // signature to use in the veto list: T & TTreeReaderValue::operator*()
+      // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:179:7
+      wrapped.method("getindex", static_cast<T & (WrappedType::*)() >(&WrappedType::operator*));
+
+      module_.unset_override_module();
+    };
+    t.apply<TTreeReaderValue<double>, TTreeReaderValue<float>, TTreeReaderValue<unsigned long>, TTreeReaderValue<long>, TTreeReaderValue<unsigned int>, TTreeReaderValue<int>, TTreeReaderValue<unsigned short>, TTreeReaderValue<short>, TTreeReaderValue<unsigned char>, TTreeReaderValue<char>>(t100_decl_methods);
   }
 
   void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
   }
 
 private:
-  std::unique_ptr<jlcxx::TypeWrapper<TArrayD>> type_;
+  std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>> type_;
 };
-std::shared_ptr<Wrapper> newJlTArrayD(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTArrayD(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<Foption_t> : std::false_type { };
-  template<> struct DefaultConstructible<Foption_t> : std::false_type { };
-}
-
-// Class generating the wrapper for type Foption_t
-// signature to use in the veto file: Foption_t
-struct JlFoption_t: public Wrapper {
-
-  JlFoption_t(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type Foption_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:24:8
-    jlcxx::TypeWrapper<Foption_t>  t = jlModule.add_type<Foption_t>("Foption_t");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<Foption_t>>(new jlcxx::TypeWrapper<Foption_t>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<Foption_t>> type_;
-};
-std::shared_ptr<Wrapper> newJlFoption_t(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlFoption_t(module));
+std::shared_ptr<Wrapper> newJlTTreeReaderValue(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTTreeReaderValue(module));
 }

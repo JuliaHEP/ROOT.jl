@@ -15,6 +15,31 @@ struct JlGlobal: public Wrapper {
   void add_methods() const{
     auto& t = module_;
 
+    DEBUG_MSG("Adding wrapper for TClass * ROOT::CreateClass(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TClass * ROOT::CreateClass(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/Rtypes.h:120:19
+    t.method("ROOT!CreateClass", static_cast<TClass * (*)(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t) >(&ROOT::CreateClass));
+
+    DEBUG_MSG("Adding wrapper for void ROOT::AddClass(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::AddClass(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/Rtypes.h:124:16
+    t.method("ROOT!AddClass", static_cast<void (*)(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t) >(&ROOT::AddClass));
+
+    DEBUG_MSG("Adding wrapper for void ROOT::RemoveClass(const char *, TClass *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::RemoveClass(const char *, TClass *)
+    // defined in /home/pgras/.julia/conda/3/include/Rtypes.h:126:16
+    t.method("ROOT!RemoveClass", static_cast<void (*)(const char *, TClass *) >(&ROOT::RemoveClass));
+
+    DEBUG_MSG("Adding wrapper for void ROOT::ResetClassVersion(TClass *, const char *, Short_t) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::ResetClassVersion(TClass *, const char *, Short_t)
+    // defined in /home/pgras/.julia/conda/3/include/Rtypes.h:127:16
+    t.method("ROOT!ResetClassVersion", static_cast<void (*)(TClass *, const char *, Short_t) >(&ROOT::ResetClassVersion));
+
+    DEBUG_MSG("Adding wrapper for TNamed * ROOT::RegisterClassTemplate(const char *, const char *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TNamed * ROOT::RegisterClassTemplate(const char *, const char *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/Rtypes.h:131:19
+    t.method("ROOT!RegisterClassTemplate", static_cast<TNamed * (*)(const char *, const char *, Int_t) >(&ROOT::RegisterClassTemplate));
+
     DEBUG_MSG("Adding wrapper for std::string cling::printValue(TObject *) (" __HERE__ ")");
     // signature to use in the veto list: std::string cling::printValue(TObject *)
     // defined in /home/pgras/.julia/conda/3/include/TObject.h:380:16
@@ -100,174 +125,6 @@ struct JlGlobal: public Wrapper {
     // signature to use in the veto list: Bool_t R_ISOFF(Int_t)
     // defined in /home/pgras/.julia/conda/3/include/TSystem.h:122:15
     t.method("R_ISOFF", static_cast<Bool_t (*)(Int_t) >(&R_ISOFF));
-
-    DEBUG_MSG("Adding wrapper for std::string cling::printValue(TH1 *) (" __HERE__ ")");
-    // signature to use in the veto list: std::string cling::printValue(TH1 *)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:449:15
-    t.method("cling!printValue", static_cast<std::string (*)(TH1 *) >(&cling::printValue));
-    module_.set_override_module(jl_base_module);
-
-    DEBUG_MSG("Adding wrapper for TH1C operator*(Double_t, const TH1C &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1C operator*(Double_t, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:485:6
-    t.method("*", static_cast<TH1C (*)(Double_t, const TH1C &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1C operator*(const TH1C &, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: TH1C operator*(const TH1C &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:487:6
-    t.method("*", static_cast<TH1C (*)(const TH1C &, Double_t) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1C operator+(const TH1C &, const TH1C &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1C operator+(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:488:6
-    t.method("+", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator+));
-
-    DEBUG_MSG("Adding wrapper for TH1C operator-(const TH1C &, const TH1C &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1C operator-(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:489:6
-    t.method("-", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator-));
-
-    DEBUG_MSG("Adding wrapper for TH1C operator*(const TH1C &, const TH1C &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1C operator*(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:490:6
-    t.method("*", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1C operator/(const TH1C &, const TH1C &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1C operator/(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:491:6
-    t.method("/", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator/));
-
-    DEBUG_MSG("Adding wrapper for TH1S operator*(Double_t, const TH1S &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1S operator*(Double_t, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:526:6
-    t.method("*", static_cast<TH1S (*)(Double_t, const TH1S &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1S operator*(const TH1S &, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: TH1S operator*(const TH1S &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:528:6
-    t.method("*", static_cast<TH1S (*)(const TH1S &, Double_t) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1S operator+(const TH1S &, const TH1S &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1S operator+(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:529:6
-    t.method("+", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator+));
-
-    DEBUG_MSG("Adding wrapper for TH1S operator-(const TH1S &, const TH1S &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1S operator-(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:530:6
-    t.method("-", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator-));
-
-    DEBUG_MSG("Adding wrapper for TH1S operator*(const TH1S &, const TH1S &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1S operator*(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:531:6
-    t.method("*", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1S operator/(const TH1S &, const TH1S &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1S operator/(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:532:6
-    t.method("/", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator/));
-
-    DEBUG_MSG("Adding wrapper for TH1I operator*(Double_t, const TH1I &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1I operator*(Double_t, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:567:6
-    t.method("*", static_cast<TH1I (*)(Double_t, const TH1I &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1I operator*(const TH1I &, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: TH1I operator*(const TH1I &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:569:6
-    t.method("*", static_cast<TH1I (*)(const TH1I &, Double_t) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1I operator+(const TH1I &, const TH1I &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1I operator+(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:570:6
-    t.method("+", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator+));
-
-    DEBUG_MSG("Adding wrapper for TH1I operator-(const TH1I &, const TH1I &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1I operator-(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:571:6
-    t.method("-", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator-));
-
-    DEBUG_MSG("Adding wrapper for TH1I operator*(const TH1I &, const TH1I &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1I operator*(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:572:6
-    t.method("*", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1I operator/(const TH1I &, const TH1I &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1I operator/(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:573:6
-    t.method("/", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator/));
-
-    DEBUG_MSG("Adding wrapper for TH1F operator*(Double_t, const TH1F &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1F operator*(Double_t, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:610:6
-    t.method("*", static_cast<TH1F (*)(Double_t, const TH1F &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1F operator*(const TH1F &, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: TH1F operator*(const TH1F &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:612:6
-    t.method("*", static_cast<TH1F (*)(const TH1F &, Double_t) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1F operator+(const TH1F &, const TH1F &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1F operator+(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:613:6
-    t.method("+", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator+));
-
-    DEBUG_MSG("Adding wrapper for TH1F operator-(const TH1F &, const TH1F &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1F operator-(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:614:6
-    t.method("-", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator-));
-
-    DEBUG_MSG("Adding wrapper for TH1F operator*(const TH1F &, const TH1F &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1F operator*(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:615:6
-    t.method("*", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1F operator/(const TH1F &, const TH1F &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1F operator/(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:616:6
-    t.method("/", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator/));
-
-    DEBUG_MSG("Adding wrapper for TH1D operator*(Double_t, const TH1D &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1D operator*(Double_t, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:653:6
-    t.method("*", static_cast<TH1D (*)(Double_t, const TH1D &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1D operator*(const TH1D &, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: TH1D operator*(const TH1D &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:655:6
-    t.method("*", static_cast<TH1D (*)(const TH1D &, Double_t) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1D operator+(const TH1D &, const TH1D &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1D operator+(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:656:6
-    t.method("+", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator+));
-
-    DEBUG_MSG("Adding wrapper for TH1D operator-(const TH1D &, const TH1D &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1D operator-(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:657:6
-    t.method("-", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator-));
-
-    DEBUG_MSG("Adding wrapper for TH1D operator*(const TH1D &, const TH1D &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1D operator*(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:658:6
-    t.method("*", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator*));
-
-    DEBUG_MSG("Adding wrapper for TH1D operator/(const TH1D &, const TH1D &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1D operator/(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:659:6
-    t.method("/", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator/));
-
-    module_.unset_override_module();
-
-    DEBUG_MSG("Adding wrapper for TH1 * R__H(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: TH1 * R__H(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:661:16
-    t.method("R__H", static_cast<TH1 * (*)(Int_t) >(&R__H));
-
-    DEBUG_MSG("Adding wrapper for TH1 * R__H(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: TH1 * R__H(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:662:16
-    t.method("R__H", static_cast<TH1 * (*)(const char *) >(&R__H));
 
     DEBUG_MSG("Adding wrapper for TTree * GetTTree(TDirectoryFile &, const char *) (" __HERE__ ")");
     // signature to use in the veto list: TTree * GetTTree(TDirectoryFile &, const char *)
@@ -589,34 +446,354 @@ struct JlGlobal: public Wrapper {
     // defined in src/Extra.h:4:6
     t.method("updateAllCanvas", static_cast<void (*)() >(&updateAllCanvas));
 
+    DEBUG_MSG("Adding wrapper for std::string cling::printValue(const TFitResultPtr *) (" __HERE__ ")");
+    // signature to use in the veto list: std::string cling::printValue(const TFitResultPtr *)
+    // defined in /home/pgras/.julia/conda/3/include/TFitResultPtr.h:64:16
+    t.method("cling!printValue", static_cast<std::string (*)(const TFitResultPtr *) >(&cling::printValue));
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::FitOptionsMake(ROOT::Fit::EFitObjectType, const char *, Foption_t &) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::FitOptionsMake(ROOT::Fit::EFitObjectType, const char *, Foption_t &)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:66:12
+    t.method("ROOT!Fit!FitOptionsMake", static_cast<void (*)(ROOT::Fit::EFitObjectType, const char *, Foption_t &) >(&ROOT::Fit::FitOptionsMake));
+
+    DEBUG_MSG("Adding wrapper for TFitResultPtr ROOT::Fit::FitObject(TH1 *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) (" __HERE__ ")");
+    // signature to use in the veto list: TFitResultPtr ROOT::Fit::FitObject(TH1 *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:71:21
+    t.method("ROOT!Fit!FitObject", static_cast<TFitResultPtr (*)(TH1 *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) >(&ROOT::Fit::FitObject));
+
+    DEBUG_MSG("Adding wrapper for TFitResultPtr ROOT::Fit::FitObject(TGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) (" __HERE__ ")");
+    // signature to use in the veto list: TFitResultPtr ROOT::Fit::FitObject(TGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:76:21
+    t.method("ROOT!Fit!FitObject", static_cast<TFitResultPtr (*)(TGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) >(&ROOT::Fit::FitObject));
+
+    DEBUG_MSG("Adding wrapper for TFitResultPtr ROOT::Fit::FitObject(TGraph2D *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) (" __HERE__ ")");
+    // signature to use in the veto list: TFitResultPtr ROOT::Fit::FitObject(TGraph2D *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:86:21
+    t.method("ROOT!Fit!FitObject", static_cast<TFitResultPtr (*)(TGraph2D *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) >(&ROOT::Fit::FitObject));
+
+    DEBUG_MSG("Adding wrapper for TFitResultPtr ROOT::Fit::FitObject(THnBase *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) (" __HERE__ ")");
+    // signature to use in the veto list: TFitResultPtr ROOT::Fit::FitObject(THnBase *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:91:21
+    t.method("ROOT!Fit!FitObject", static_cast<TFitResultPtr (*)(THnBase *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &) >(&ROOT::Fit::FitObject));
+
+    DEBUG_MSG("Adding wrapper for TFitResultPtr ROOT::Fit::UnBinFit(ROOT::Fit::UnBinData *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &) (" __HERE__ ")");
+    // signature to use in the veto list: TFitResultPtr ROOT::Fit::UnBinFit(ROOT::Fit::UnBinData *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:101:21
+    t.method("ROOT!Fit!UnBinFit", static_cast<TFitResultPtr (*)(ROOT::Fit::UnBinData *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &) >(&ROOT::Fit::UnBinFit));
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TH1 *, TF1 *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TH1 *, TF1 *)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:107:12
+    t.method("ROOT!Fit!FillData", static_cast<void (*)(ROOT::Fit::BinData &, const TH1 *, TF1 *) >(&ROOT::Fit::FillData));
+    t.method("ROOT!Fit!FillData", [](ROOT::Fit::BinData & arg0, const TH1 * arg1)->void { ROOT::Fit::FillData(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::FillData(ROOT::Fit::BinData &, const THnBase *, TF1 *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::FillData(ROOT::Fit::BinData &, const THnBase *, TF1 *)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:125:12
+    t.method("ROOT!Fit!FillData", static_cast<void (*)(ROOT::Fit::BinData &, const THnBase *, TF1 *) >(&ROOT::Fit::FillData));
+    t.method("ROOT!Fit!FillData", [](ROOT::Fit::BinData & arg0, const THnBase * arg1)->void { ROOT::Fit::FillData(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TGraph2D *, TF1 *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TGraph2D *, TF1 *)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:131:12
+    t.method("ROOT!Fit!FillData", static_cast<void (*)(ROOT::Fit::BinData &, const TGraph2D *, TF1 *) >(&ROOT::Fit::FillData));
+    t.method("ROOT!Fit!FillData", [](ROOT::Fit::BinData & arg0, const TGraph2D * arg1)->void { ROOT::Fit::FillData(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TGraph *, TF1 *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TGraph *, TF1 *)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:138:12
+    t.method("ROOT!Fit!FillData", static_cast<void (*)(ROOT::Fit::BinData &, const TGraph *, TF1 *) >(&ROOT::Fit::FillData));
+    t.method("ROOT!Fit!FillData", [](ROOT::Fit::BinData & arg0, const TGraph * arg1)->void { ROOT::Fit::FillData(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::InitExpo(const ROOT::Fit::BinData &, TF1 *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::InitExpo(const ROOT::Fit::BinData &, TF1 *)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:151:12
+    t.method("ROOT!Fit!InitExpo", static_cast<void (*)(const ROOT::Fit::BinData &, TF1 *) >(&ROOT::Fit::InitExpo));
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::InitGaus(const ROOT::Fit::BinData &, TF1 *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::InitGaus(const ROOT::Fit::BinData &, TF1 *)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:159:12
+    t.method("ROOT!Fit!InitGaus", static_cast<void (*)(const ROOT::Fit::BinData &, TF1 *) >(&ROOT::Fit::InitGaus));
+
+    DEBUG_MSG("Adding wrapper for void ROOT::Fit::Init2DGaus(const ROOT::Fit::BinData &, TF1 *) (" __HERE__ ")");
+    // signature to use in the veto list: void ROOT::Fit::Init2DGaus(const ROOT::Fit::BinData &, TF1 *)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:166:12
+    t.method("ROOT!Fit!Init2DGaus", static_cast<void (*)(const ROOT::Fit::BinData &, TF1 *) >(&ROOT::Fit::Init2DGaus));
+
+    DEBUG_MSG("Adding wrapper for bool ROOT::Fit::GetConfidenceIntervals(const TH1 *, const ROOT::Fit::FitResult &, TGraphErrors *, double) (" __HERE__ ")");
+    // signature to use in the veto list: bool ROOT::Fit::GetConfidenceIntervals(const TH1 *, const ROOT::Fit::FitResult &, TGraphErrors *, double)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:171:12
+    t.method("ROOT!Fit!GetConfidenceIntervals", static_cast<bool (*)(const TH1 *, const ROOT::Fit::FitResult &, TGraphErrors *, double) >(&ROOT::Fit::GetConfidenceIntervals));
+    t.method("ROOT!Fit!GetConfidenceIntervals", [](const TH1 * arg0, const ROOT::Fit::FitResult & arg1, TGraphErrors * arg2)->bool { return ROOT::Fit::GetConfidenceIntervals(arg0, arg1, arg2); });
+
+    DEBUG_MSG("Adding wrapper for double ROOT::Fit::Chisquare(const TH1 &, TF1 &, bool, ROOT::Fit::EChisquareType) (" __HERE__ ")");
+    // signature to use in the veto list: double ROOT::Fit::Chisquare(const TH1 &, TF1 &, bool, ROOT::Fit::EChisquareType)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:176:14
+    t.method("ROOT!Fit!Chisquare", static_cast<double (*)(const TH1 &, TF1 &, bool, ROOT::Fit::EChisquareType) >(&ROOT::Fit::Chisquare));
+
+    DEBUG_MSG("Adding wrapper for double ROOT::Fit::Chisquare(const TGraph &, TF1 &, bool) (" __HERE__ ")");
+    // signature to use in the veto list: double ROOT::Fit::Chisquare(const TGraph &, TF1 &, bool)
+    // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:181:14
+    t.method("ROOT!Fit!Chisquare", static_cast<double (*)(const TGraph &, TF1 &, bool) >(&ROOT::Fit::Chisquare));
+    module_.set_override_module(jl_base_module);
+
+    DEBUG_MSG("Adding wrapper for const TEfficiency operator+(const TEfficiency &, const TEfficiency &) (" __HERE__ ")");
+    // signature to use in the veto list: const TEfficiency operator+(const TEfficiency &, const TEfficiency &)
+    // defined in /home/pgras/.julia/conda/3/include/TEfficiency.h:196:19
+    t.method("+", static_cast<const TEfficiency (*)(const TEfficiency &, const TEfficiency &) >(&operator+));
+
+    module_.unset_override_module();
+
+    DEBUG_MSG("Adding wrapper for std::string cling::printValue(const TFitResult *) (" __HERE__ ")");
+    // signature to use in the veto list: std::string cling::printValue(const TFitResult *)
+    // defined in /home/pgras/.julia/conda/3/include/TFitResult.h:83:16
+    t.method("cling!printValue", static_cast<std::string (*)(const TFitResult *) >(&cling::printValue));
+
+    DEBUG_MSG("Adding wrapper for std::string cling::printValue(TH1 *) (" __HERE__ ")");
+    // signature to use in the veto list: std::string cling::printValue(TH1 *)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:449:15
+    t.method("cling!printValue", static_cast<std::string (*)(TH1 *) >(&cling::printValue));
+    module_.set_override_module(jl_base_module);
+
+    DEBUG_MSG("Adding wrapper for TH1C operator*(Double_t, const TH1C &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1C operator*(Double_t, const TH1C &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:485:6
+    t.method("*", static_cast<TH1C (*)(Double_t, const TH1C &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1C operator*(const TH1C &, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: TH1C operator*(const TH1C &, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:487:6
+    t.method("*", static_cast<TH1C (*)(const TH1C &, Double_t) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1C operator+(const TH1C &, const TH1C &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1C operator+(const TH1C &, const TH1C &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:488:6
+    t.method("+", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator+));
+
+    DEBUG_MSG("Adding wrapper for TH1C operator-(const TH1C &, const TH1C &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1C operator-(const TH1C &, const TH1C &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:489:6
+    t.method("-", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator-));
+
+    DEBUG_MSG("Adding wrapper for TH1C operator*(const TH1C &, const TH1C &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1C operator*(const TH1C &, const TH1C &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:490:6
+    t.method("*", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1C operator/(const TH1C &, const TH1C &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1C operator/(const TH1C &, const TH1C &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:491:6
+    t.method("/", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator/));
+
+    DEBUG_MSG("Adding wrapper for TH1S operator*(Double_t, const TH1S &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1S operator*(Double_t, const TH1S &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:526:6
+    t.method("*", static_cast<TH1S (*)(Double_t, const TH1S &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1S operator*(const TH1S &, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: TH1S operator*(const TH1S &, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:528:6
+    t.method("*", static_cast<TH1S (*)(const TH1S &, Double_t) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1S operator+(const TH1S &, const TH1S &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1S operator+(const TH1S &, const TH1S &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:529:6
+    t.method("+", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator+));
+
+    DEBUG_MSG("Adding wrapper for TH1S operator-(const TH1S &, const TH1S &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1S operator-(const TH1S &, const TH1S &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:530:6
+    t.method("-", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator-));
+
+    DEBUG_MSG("Adding wrapper for TH1S operator*(const TH1S &, const TH1S &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1S operator*(const TH1S &, const TH1S &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:531:6
+    t.method("*", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1S operator/(const TH1S &, const TH1S &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1S operator/(const TH1S &, const TH1S &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:532:6
+    t.method("/", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator/));
+
+    DEBUG_MSG("Adding wrapper for TH1I operator*(Double_t, const TH1I &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1I operator*(Double_t, const TH1I &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:567:6
+    t.method("*", static_cast<TH1I (*)(Double_t, const TH1I &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1I operator*(const TH1I &, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: TH1I operator*(const TH1I &, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:569:6
+    t.method("*", static_cast<TH1I (*)(const TH1I &, Double_t) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1I operator+(const TH1I &, const TH1I &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1I operator+(const TH1I &, const TH1I &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:570:6
+    t.method("+", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator+));
+
+    DEBUG_MSG("Adding wrapper for TH1I operator-(const TH1I &, const TH1I &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1I operator-(const TH1I &, const TH1I &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:571:6
+    t.method("-", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator-));
+
+    DEBUG_MSG("Adding wrapper for TH1I operator*(const TH1I &, const TH1I &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1I operator*(const TH1I &, const TH1I &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:572:6
+    t.method("*", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1I operator/(const TH1I &, const TH1I &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1I operator/(const TH1I &, const TH1I &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:573:6
+    t.method("/", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator/));
+
+    DEBUG_MSG("Adding wrapper for TH1F operator*(Double_t, const TH1F &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1F operator*(Double_t, const TH1F &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:610:6
+    t.method("*", static_cast<TH1F (*)(Double_t, const TH1F &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1F operator*(const TH1F &, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: TH1F operator*(const TH1F &, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:612:6
+    t.method("*", static_cast<TH1F (*)(const TH1F &, Double_t) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1F operator+(const TH1F &, const TH1F &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1F operator+(const TH1F &, const TH1F &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:613:6
+    t.method("+", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator+));
+
+    DEBUG_MSG("Adding wrapper for TH1F operator-(const TH1F &, const TH1F &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1F operator-(const TH1F &, const TH1F &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:614:6
+    t.method("-", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator-));
+
+    DEBUG_MSG("Adding wrapper for TH1F operator*(const TH1F &, const TH1F &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1F operator*(const TH1F &, const TH1F &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:615:6
+    t.method("*", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1F operator/(const TH1F &, const TH1F &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1F operator/(const TH1F &, const TH1F &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:616:6
+    t.method("/", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator/));
+
+    DEBUG_MSG("Adding wrapper for TH1D operator*(Double_t, const TH1D &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1D operator*(Double_t, const TH1D &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:653:6
+    t.method("*", static_cast<TH1D (*)(Double_t, const TH1D &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1D operator*(const TH1D &, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: TH1D operator*(const TH1D &, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:655:6
+    t.method("*", static_cast<TH1D (*)(const TH1D &, Double_t) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1D operator+(const TH1D &, const TH1D &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1D operator+(const TH1D &, const TH1D &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:656:6
+    t.method("+", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator+));
+
+    DEBUG_MSG("Adding wrapper for TH1D operator-(const TH1D &, const TH1D &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1D operator-(const TH1D &, const TH1D &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:657:6
+    t.method("-", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator-));
+
+    DEBUG_MSG("Adding wrapper for TH1D operator*(const TH1D &, const TH1D &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1D operator*(const TH1D &, const TH1D &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:658:6
+    t.method("*", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1D operator/(const TH1D &, const TH1D &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1D operator/(const TH1D &, const TH1D &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:659:6
+    t.method("/", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator/));
+
+    module_.unset_override_module();
+
+    DEBUG_MSG("Adding wrapper for TH1 * R__H(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TH1 * R__H(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:661:16
+    t.method("R__H", static_cast<TH1 * (*)(Int_t) >(&R__H));
+
+    DEBUG_MSG("Adding wrapper for TH1 * R__H(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TH1 * R__H(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:662:16
+    t.method("R__H", static_cast<TH1 * (*)(const char *) >(&R__H));
+    module_.set_override_module(jl_base_module);
+
+    DEBUG_MSG("Adding wrapper for bool ROOT::Geom::operator==(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: bool ROOT::Geom::operator==(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:157:13
+    t.method("==", static_cast<bool (*)(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator==));
+
+    DEBUG_MSG("Adding wrapper for bool ROOT::Geom::operator!=(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: bool ROOT::Geom::operator!=(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:164:13
+    t.method("!=", static_cast<bool (*)(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator!=));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator+(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator+(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:1
+    t.method("+", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator+));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator+(const ROOT::Geom::Vertex_t &, const double) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator+(const ROOT::Geom::Vertex_t &, const double)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:1
+    t.method("+", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const double) >(&ROOT::Geom::operator+));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator+(const double, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator+(const double, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:1
+    t.method("+", static_cast<ROOT::Geom::Vertex_t (*)(const double, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator+));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator-(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator-(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:27
+    t.method("-", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator-));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator-(const ROOT::Geom::Vertex_t &, const double) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator-(const ROOT::Geom::Vertex_t &, const double)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:27
+    t.method("-", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const double) >(&ROOT::Geom::operator-));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator-(const double, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator-(const double, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:27
+    t.method("-", static_cast<ROOT::Geom::Vertex_t (*)(const double, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator-));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator*(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator*(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:53
+    t.method("*", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator*));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator*(const ROOT::Geom::Vertex_t &, const double) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator*(const ROOT::Geom::Vertex_t &, const double)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:53
+    t.method("*", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const double) >(&ROOT::Geom::operator*));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator*(const double, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator*(const double, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:53
+    t.method("*", static_cast<ROOT::Geom::Vertex_t (*)(const double, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator*));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator/(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator/(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:79
+    t.method("/", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator/));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator/(const ROOT::Geom::Vertex_t &, const double) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator/(const ROOT::Geom::Vertex_t &, const double)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:79
+    t.method("/", static_cast<ROOT::Geom::Vertex_t (*)(const ROOT::Geom::Vertex_t &, const double) >(&ROOT::Geom::operator/));
+
+    DEBUG_MSG("Adding wrapper for ROOT::Geom::Vertex_t ROOT::Geom::operator/(const double, const ROOT::Geom::Vertex_t &) (" __HERE__ ")");
+    // signature to use in the veto list: ROOT::Geom::Vertex_t ROOT::Geom::operator/(const double, const ROOT::Geom::Vertex_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TGeoVector3.h:188:79
+    t.method("/", static_cast<ROOT::Geom::Vertex_t (*)(const double, const ROOT::Geom::Vertex_t &) >(&ROOT::Geom::operator/));
+
+    module_.unset_override_module();
+
     DEBUG_MSG("Adding gROOTMutex methods to provide access to the global variable gROOTMutex (" __HERE__ ")");
     // defined in /home/pgras/.julia/conda/3/include/TROOT.h:63:26
     t.method("gROOTMutex", []()-> TVirtualMutex * { return gROOTMutex; });
     t.method("gROOTMutex!", [](TVirtualMutex * val)-> TVirtualMutex * { return gROOTMutex = val; });
-
-    DEBUG_MSG("Adding kDoNotProcess methods to provide access to the global variable kDoNotProcess (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:56:13
-    t.method("kDoNotProcess", []()-> Int_t { return kDoNotProcess; });
-
-    DEBUG_MSG("Adding kIsClone methods to provide access to the global variable kIsClone (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:57:13
-    t.method("kIsClone", []()-> Int_t { return kIsClone; });
-
-    DEBUG_MSG("Adding kBranchObject methods to provide access to the global variable kBranchObject (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:58:13
-    t.method("kBranchObject", []()-> Int_t { return kBranchObject; });
-
-    DEBUG_MSG("Adding kBranchAny methods to provide access to the global variable kBranchAny (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:59:13
-    t.method("kBranchAny", []()-> Int_t { return kBranchAny; });
-
-    DEBUG_MSG("Adding kMapObject methods to provide access to the global variable kMapObject (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:60:13
-    t.method("kMapObject", []()-> Int_t { return kMapObject; });
-
-    DEBUG_MSG("Adding TTree!kMaxEntries methods to provide access to the global variable TTree::kMaxEntries (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TTree.h:229:30
-    module_.method("TTree!kMaxEntries", []()-> Long64_t { return TTree::kMaxEntries; });
 
     DEBUG_MSG("Adding gRootDir methods to provide access to the global variable gRootDir (" __HERE__ ")");
     // defined in /home/pgras/.julia/conda/3/include/TSystem.h:241:24
@@ -645,15 +822,1385 @@ struct JlGlobal: public Wrapper {
     t.method("gXDisplay", []()-> TFileHandler * { return gXDisplay; });
     t.method("gXDisplay!", [](TFileHandler * val)-> TFileHandler * { return gXDisplay = val; });
 
+    DEBUG_MSG("Adding gApplication methods to provide access to the global variable gApplication (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:170:25
+    t.method("gApplication", []()-> TApplication * { return gApplication; });
+    t.method("gApplication!", [](TApplication * val)-> TApplication * { return gApplication = val; });
+
+    DEBUG_MSG("Adding kDoNotProcess methods to provide access to the global variable kDoNotProcess (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:56:13
+    t.method("kDoNotProcess", []()-> Int_t { return kDoNotProcess; });
+
+    DEBUG_MSG("Adding kIsClone methods to provide access to the global variable kIsClone (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:57:13
+    t.method("kIsClone", []()-> Int_t { return kIsClone; });
+
+    DEBUG_MSG("Adding kBranchObject methods to provide access to the global variable kBranchObject (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:58:13
+    t.method("kBranchObject", []()-> Int_t { return kBranchObject; });
+
+    DEBUG_MSG("Adding kBranchAny methods to provide access to the global variable kBranchAny (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:59:13
+    t.method("kBranchAny", []()-> Int_t { return kBranchAny; });
+
+    DEBUG_MSG("Adding kMapObject methods to provide access to the global variable kMapObject (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:60:13
+    t.method("kMapObject", []()-> Int_t { return kMapObject; });
+
+    DEBUG_MSG("Adding TTree!kMaxEntries methods to provide access to the global variable TTree::kMaxEntries (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTree.h:229:30
+    module_.method("TTree!kMaxEntries", []()-> Long64_t { return TTree::kMaxEntries; });
+
     DEBUG_MSG("Adding gRandom methods to provide access to the global variable gRandom (" __HERE__ ")");
     // defined in /home/pgras/.julia/conda/3/include/TRandom.h:62:20
     t.method("gRandom", []()-> TRandom * { return gRandom; });
     t.method("gRandom!", [](TRandom * val)-> TRandom * { return gRandom = val; });
 
-    DEBUG_MSG("Adding gApplication methods to provide access to the global variable gApplication (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:170:25
-    t.method("gApplication", []()-> TApplication * { return gApplication; });
-    t.method("gApplication!", [](TApplication * val)-> TApplication * { return gApplication = val; });
+    DEBUG_MSG("Adding TGeant4Unit!pi methods to provide access to the global variable TGeant4Unit::pi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:67:25
+    module_.method("TGeant4Unit!pi", []()-> double { return TGeant4Unit::pi; });
+
+    DEBUG_MSG("Adding TGeant4Unit!twopi methods to provide access to the global variable TGeant4Unit::twopi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:68:25
+    module_.method("TGeant4Unit!twopi", []()-> double { return TGeant4Unit::twopi; });
+
+    DEBUG_MSG("Adding TGeant4Unit!halfpi methods to provide access to the global variable TGeant4Unit::halfpi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:69:25
+    module_.method("TGeant4Unit!halfpi", []()-> double { return TGeant4Unit::halfpi; });
+
+    DEBUG_MSG("Adding TGeant4Unit!pi2 methods to provide access to the global variable TGeant4Unit::pi2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:70:25
+    module_.method("TGeant4Unit!pi2", []()-> double { return TGeant4Unit::pi2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!millimeter methods to provide access to the global variable TGeant4Unit::millimeter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:75:25
+    module_.method("TGeant4Unit!millimeter", []()-> double { return TGeant4Unit::millimeter; });
+
+    DEBUG_MSG("Adding TGeant4Unit!millimeter2 methods to provide access to the global variable TGeant4Unit::millimeter2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:76:25
+    module_.method("TGeant4Unit!millimeter2", []()-> double { return TGeant4Unit::millimeter2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!millimeter3 methods to provide access to the global variable TGeant4Unit::millimeter3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:77:25
+    module_.method("TGeant4Unit!millimeter3", []()-> double { return TGeant4Unit::millimeter3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!centimeter methods to provide access to the global variable TGeant4Unit::centimeter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:79:25
+    module_.method("TGeant4Unit!centimeter", []()-> double { return TGeant4Unit::centimeter; });
+
+    DEBUG_MSG("Adding TGeant4Unit!centimeter2 methods to provide access to the global variable TGeant4Unit::centimeter2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:80:25
+    module_.method("TGeant4Unit!centimeter2", []()-> double { return TGeant4Unit::centimeter2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!centimeter3 methods to provide access to the global variable TGeant4Unit::centimeter3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:81:25
+    module_.method("TGeant4Unit!centimeter3", []()-> double { return TGeant4Unit::centimeter3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!meter methods to provide access to the global variable TGeant4Unit::meter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:83:25
+    module_.method("TGeant4Unit!meter", []()-> double { return TGeant4Unit::meter; });
+
+    DEBUG_MSG("Adding TGeant4Unit!meter2 methods to provide access to the global variable TGeant4Unit::meter2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:84:25
+    module_.method("TGeant4Unit!meter2", []()-> double { return TGeant4Unit::meter2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!meter3 methods to provide access to the global variable TGeant4Unit::meter3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:85:25
+    module_.method("TGeant4Unit!meter3", []()-> double { return TGeant4Unit::meter3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilometer methods to provide access to the global variable TGeant4Unit::kilometer (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:87:25
+    module_.method("TGeant4Unit!kilometer", []()-> double { return TGeant4Unit::kilometer; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilometer2 methods to provide access to the global variable TGeant4Unit::kilometer2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:88:25
+    module_.method("TGeant4Unit!kilometer2", []()-> double { return TGeant4Unit::kilometer2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilometer3 methods to provide access to the global variable TGeant4Unit::kilometer3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:89:25
+    module_.method("TGeant4Unit!kilometer3", []()-> double { return TGeant4Unit::kilometer3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!parsec methods to provide access to the global variable TGeant4Unit::parsec (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:91:25
+    module_.method("TGeant4Unit!parsec", []()-> double { return TGeant4Unit::parsec; });
+
+    DEBUG_MSG("Adding TGeant4Unit!micrometer methods to provide access to the global variable TGeant4Unit::micrometer (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:93:25
+    module_.method("TGeant4Unit!micrometer", []()-> double { return TGeant4Unit::micrometer; });
+
+    DEBUG_MSG("Adding TGeant4Unit!nanometer methods to provide access to the global variable TGeant4Unit::nanometer (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:94:25
+    module_.method("TGeant4Unit!nanometer", []()-> double { return TGeant4Unit::nanometer; });
+
+    DEBUG_MSG("Adding TGeant4Unit!angstrom methods to provide access to the global variable TGeant4Unit::angstrom (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:95:25
+    module_.method("TGeant4Unit!angstrom", []()-> double { return TGeant4Unit::angstrom; });
+
+    DEBUG_MSG("Adding TGeant4Unit!fermi methods to provide access to the global variable TGeant4Unit::fermi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:96:25
+    module_.method("TGeant4Unit!fermi", []()-> double { return TGeant4Unit::fermi; });
+
+    DEBUG_MSG("Adding TGeant4Unit!barn methods to provide access to the global variable TGeant4Unit::barn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:98:25
+    module_.method("TGeant4Unit!barn", []()-> double { return TGeant4Unit::barn; });
+
+    DEBUG_MSG("Adding TGeant4Unit!millibarn methods to provide access to the global variable TGeant4Unit::millibarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:99:25
+    module_.method("TGeant4Unit!millibarn", []()-> double { return TGeant4Unit::millibarn; });
+
+    DEBUG_MSG("Adding TGeant4Unit!microbarn methods to provide access to the global variable TGeant4Unit::microbarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:100:25
+    module_.method("TGeant4Unit!microbarn", []()-> double { return TGeant4Unit::microbarn; });
+
+    DEBUG_MSG("Adding TGeant4Unit!nanobarn methods to provide access to the global variable TGeant4Unit::nanobarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:101:25
+    module_.method("TGeant4Unit!nanobarn", []()-> double { return TGeant4Unit::nanobarn; });
+
+    DEBUG_MSG("Adding TGeant4Unit!picobarn methods to provide access to the global variable TGeant4Unit::picobarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:102:25
+    module_.method("TGeant4Unit!picobarn", []()-> double { return TGeant4Unit::picobarn; });
+
+    DEBUG_MSG("Adding TGeant4Unit!nm methods to provide access to the global variable TGeant4Unit::nm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:105:25
+    module_.method("TGeant4Unit!nm", []()-> double { return TGeant4Unit::nm; });
+
+    DEBUG_MSG("Adding TGeant4Unit!um methods to provide access to the global variable TGeant4Unit::um (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:106:25
+    module_.method("TGeant4Unit!um", []()-> double { return TGeant4Unit::um; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mm methods to provide access to the global variable TGeant4Unit::mm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:108:25
+    module_.method("TGeant4Unit!mm", []()-> double { return TGeant4Unit::mm; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mm2 methods to provide access to the global variable TGeant4Unit::mm2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:109:25
+    module_.method("TGeant4Unit!mm2", []()-> double { return TGeant4Unit::mm2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mm3 methods to provide access to the global variable TGeant4Unit::mm3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:110:25
+    module_.method("TGeant4Unit!mm3", []()-> double { return TGeant4Unit::mm3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!cm methods to provide access to the global variable TGeant4Unit::cm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:112:25
+    module_.method("TGeant4Unit!cm", []()-> double { return TGeant4Unit::cm; });
+
+    DEBUG_MSG("Adding TGeant4Unit!cm2 methods to provide access to the global variable TGeant4Unit::cm2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:113:25
+    module_.method("TGeant4Unit!cm2", []()-> double { return TGeant4Unit::cm2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!cm3 methods to provide access to the global variable TGeant4Unit::cm3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:114:25
+    module_.method("TGeant4Unit!cm3", []()-> double { return TGeant4Unit::cm3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!liter methods to provide access to the global variable TGeant4Unit::liter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:116:25
+    module_.method("TGeant4Unit!liter", []()-> double { return TGeant4Unit::liter; });
+
+    DEBUG_MSG("Adding TGeant4Unit!L methods to provide access to the global variable TGeant4Unit::L (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:117:25
+    module_.method("TGeant4Unit!L", []()-> double { return TGeant4Unit::L; });
+
+    DEBUG_MSG("Adding TGeant4Unit!dL methods to provide access to the global variable TGeant4Unit::dL (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:118:25
+    module_.method("TGeant4Unit!dL", []()-> double { return TGeant4Unit::dL; });
+
+    DEBUG_MSG("Adding TGeant4Unit!cL methods to provide access to the global variable TGeant4Unit::cL (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:119:25
+    module_.method("TGeant4Unit!cL", []()-> double { return TGeant4Unit::cL; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mL methods to provide access to the global variable TGeant4Unit::mL (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:120:25
+    module_.method("TGeant4Unit!mL", []()-> double { return TGeant4Unit::mL; });
+
+    DEBUG_MSG("Adding TGeant4Unit!m methods to provide access to the global variable TGeant4Unit::m (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:122:25
+    module_.method("TGeant4Unit!m", []()-> double { return TGeant4Unit::m; });
+
+    DEBUG_MSG("Adding TGeant4Unit!m2 methods to provide access to the global variable TGeant4Unit::m2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:123:25
+    module_.method("TGeant4Unit!m2", []()-> double { return TGeant4Unit::m2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!m3 methods to provide access to the global variable TGeant4Unit::m3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:124:25
+    module_.method("TGeant4Unit!m3", []()-> double { return TGeant4Unit::m3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!km methods to provide access to the global variable TGeant4Unit::km (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:126:25
+    module_.method("TGeant4Unit!km", []()-> double { return TGeant4Unit::km; });
+
+    DEBUG_MSG("Adding TGeant4Unit!km2 methods to provide access to the global variable TGeant4Unit::km2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:127:25
+    module_.method("TGeant4Unit!km2", []()-> double { return TGeant4Unit::km2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!km3 methods to provide access to the global variable TGeant4Unit::km3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:128:25
+    module_.method("TGeant4Unit!km3", []()-> double { return TGeant4Unit::km3; });
+
+    DEBUG_MSG("Adding TGeant4Unit!pc methods to provide access to the global variable TGeant4Unit::pc (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:130:25
+    module_.method("TGeant4Unit!pc", []()-> double { return TGeant4Unit::pc; });
+
+    DEBUG_MSG("Adding TGeant4Unit!degree methods to provide access to the global variable TGeant4Unit::degree (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:135:25
+    module_.method("TGeant4Unit!degree", []()-> double { return TGeant4Unit::degree; });
+
+    DEBUG_MSG("Adding TGeant4Unit!radian methods to provide access to the global variable TGeant4Unit::radian (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:136:25
+    module_.method("TGeant4Unit!radian", []()-> double { return TGeant4Unit::radian; });
+
+    DEBUG_MSG("Adding TGeant4Unit!milliradian methods to provide access to the global variable TGeant4Unit::milliradian (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:137:25
+    module_.method("TGeant4Unit!milliradian", []()-> double { return TGeant4Unit::milliradian; });
+
+    DEBUG_MSG("Adding TGeant4Unit!steradian methods to provide access to the global variable TGeant4Unit::steradian (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:139:25
+    module_.method("TGeant4Unit!steradian", []()-> double { return TGeant4Unit::steradian; });
+
+    DEBUG_MSG("Adding TGeant4Unit!rad methods to provide access to the global variable TGeant4Unit::rad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:142:25
+    module_.method("TGeant4Unit!rad", []()-> double { return TGeant4Unit::rad; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mrad methods to provide access to the global variable TGeant4Unit::mrad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:143:25
+    module_.method("TGeant4Unit!mrad", []()-> double { return TGeant4Unit::mrad; });
+
+    DEBUG_MSG("Adding TGeant4Unit!sr methods to provide access to the global variable TGeant4Unit::sr (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:144:25
+    module_.method("TGeant4Unit!sr", []()-> double { return TGeant4Unit::sr; });
+
+    DEBUG_MSG("Adding TGeant4Unit!deg methods to provide access to the global variable TGeant4Unit::deg (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:145:25
+    module_.method("TGeant4Unit!deg", []()-> double { return TGeant4Unit::deg; });
+
+    DEBUG_MSG("Adding TGeant4Unit!nanosecond methods to provide access to the global variable TGeant4Unit::nanosecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:150:25
+    module_.method("TGeant4Unit!nanosecond", []()-> double { return TGeant4Unit::nanosecond; });
+
+    DEBUG_MSG("Adding TGeant4Unit!second methods to provide access to the global variable TGeant4Unit::second (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:151:25
+    module_.method("TGeant4Unit!second", []()-> double { return TGeant4Unit::second; });
+
+    DEBUG_MSG("Adding TGeant4Unit!millisecond methods to provide access to the global variable TGeant4Unit::millisecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:152:25
+    module_.method("TGeant4Unit!millisecond", []()-> double { return TGeant4Unit::millisecond; });
+
+    DEBUG_MSG("Adding TGeant4Unit!microsecond methods to provide access to the global variable TGeant4Unit::microsecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:153:25
+    module_.method("TGeant4Unit!microsecond", []()-> double { return TGeant4Unit::microsecond; });
+
+    DEBUG_MSG("Adding TGeant4Unit!picosecond methods to provide access to the global variable TGeant4Unit::picosecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:154:25
+    module_.method("TGeant4Unit!picosecond", []()-> double { return TGeant4Unit::picosecond; });
+
+    DEBUG_MSG("Adding TGeant4Unit!hertz methods to provide access to the global variable TGeant4Unit::hertz (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:156:25
+    module_.method("TGeant4Unit!hertz", []()-> double { return TGeant4Unit::hertz; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilohertz methods to provide access to the global variable TGeant4Unit::kilohertz (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:157:25
+    module_.method("TGeant4Unit!kilohertz", []()-> double { return TGeant4Unit::kilohertz; });
+
+    DEBUG_MSG("Adding TGeant4Unit!megahertz methods to provide access to the global variable TGeant4Unit::megahertz (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:158:25
+    module_.method("TGeant4Unit!megahertz", []()-> double { return TGeant4Unit::megahertz; });
+
+    DEBUG_MSG("Adding TGeant4Unit!ns methods to provide access to the global variable TGeant4Unit::ns (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:161:25
+    module_.method("TGeant4Unit!ns", []()-> double { return TGeant4Unit::ns; });
+
+    DEBUG_MSG("Adding TGeant4Unit!s methods to provide access to the global variable TGeant4Unit::s (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:162:25
+    module_.method("TGeant4Unit!s", []()-> double { return TGeant4Unit::s; });
+
+    DEBUG_MSG("Adding TGeant4Unit!ms methods to provide access to the global variable TGeant4Unit::ms (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:163:25
+    module_.method("TGeant4Unit!ms", []()-> double { return TGeant4Unit::ms; });
+
+    DEBUG_MSG("Adding TGeant4Unit!us methods to provide access to the global variable TGeant4Unit::us (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:164:25
+    module_.method("TGeant4Unit!us", []()-> double { return TGeant4Unit::us; });
+
+    DEBUG_MSG("Adding TGeant4Unit!ps methods to provide access to the global variable TGeant4Unit::ps (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:165:25
+    module_.method("TGeant4Unit!ps", []()-> double { return TGeant4Unit::ps; });
+
+    DEBUG_MSG("Adding TGeant4Unit!eplus methods to provide access to the global variable TGeant4Unit::eplus (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:170:25
+    module_.method("TGeant4Unit!eplus", []()-> double { return TGeant4Unit::eplus; });
+
+    DEBUG_MSG("Adding TGeant4Unit!e_SI methods to provide access to the global variable TGeant4Unit::e_SI (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:171:25
+    module_.method("TGeant4Unit!e_SI", []()-> double { return TGeant4Unit::e_SI; });
+
+    DEBUG_MSG("Adding TGeant4Unit!coulomb methods to provide access to the global variable TGeant4Unit::coulomb (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:172:25
+    module_.method("TGeant4Unit!coulomb", []()-> double { return TGeant4Unit::coulomb; });
+
+    DEBUG_MSG("Adding TGeant4Unit!megaelectronvolt methods to provide access to the global variable TGeant4Unit::megaelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:177:25
+    module_.method("TGeant4Unit!megaelectronvolt", []()-> double { return TGeant4Unit::megaelectronvolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!electronvolt methods to provide access to the global variable TGeant4Unit::electronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:178:25
+    module_.method("TGeant4Unit!electronvolt", []()-> double { return TGeant4Unit::electronvolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kiloelectronvolt methods to provide access to the global variable TGeant4Unit::kiloelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:179:25
+    module_.method("TGeant4Unit!kiloelectronvolt", []()-> double { return TGeant4Unit::kiloelectronvolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!gigaelectronvolt methods to provide access to the global variable TGeant4Unit::gigaelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:180:25
+    module_.method("TGeant4Unit!gigaelectronvolt", []()-> double { return TGeant4Unit::gigaelectronvolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!teraelectronvolt methods to provide access to the global variable TGeant4Unit::teraelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:181:25
+    module_.method("TGeant4Unit!teraelectronvolt", []()-> double { return TGeant4Unit::teraelectronvolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!petaelectronvolt methods to provide access to the global variable TGeant4Unit::petaelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:182:25
+    module_.method("TGeant4Unit!petaelectronvolt", []()-> double { return TGeant4Unit::petaelectronvolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!joule methods to provide access to the global variable TGeant4Unit::joule (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:184:25
+    module_.method("TGeant4Unit!joule", []()-> double { return TGeant4Unit::joule; });
+
+    DEBUG_MSG("Adding TGeant4Unit!MeV methods to provide access to the global variable TGeant4Unit::MeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:187:25
+    module_.method("TGeant4Unit!MeV", []()-> double { return TGeant4Unit::MeV; });
+
+    DEBUG_MSG("Adding TGeant4Unit!eV methods to provide access to the global variable TGeant4Unit::eV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:188:25
+    module_.method("TGeant4Unit!eV", []()-> double { return TGeant4Unit::eV; });
+
+    DEBUG_MSG("Adding TGeant4Unit!keV methods to provide access to the global variable TGeant4Unit::keV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:189:25
+    module_.method("TGeant4Unit!keV", []()-> double { return TGeant4Unit::keV; });
+
+    DEBUG_MSG("Adding TGeant4Unit!GeV methods to provide access to the global variable TGeant4Unit::GeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:190:25
+    module_.method("TGeant4Unit!GeV", []()-> double { return TGeant4Unit::GeV; });
+
+    DEBUG_MSG("Adding TGeant4Unit!TeV methods to provide access to the global variable TGeant4Unit::TeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:191:25
+    module_.method("TGeant4Unit!TeV", []()-> double { return TGeant4Unit::TeV; });
+
+    DEBUG_MSG("Adding TGeant4Unit!PeV methods to provide access to the global variable TGeant4Unit::PeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:192:25
+    module_.method("TGeant4Unit!PeV", []()-> double { return TGeant4Unit::PeV; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilogram methods to provide access to the global variable TGeant4Unit::kilogram (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:197:25
+    module_.method("TGeant4Unit!kilogram", []()-> double { return TGeant4Unit::kilogram; });
+
+    DEBUG_MSG("Adding TGeant4Unit!gram methods to provide access to the global variable TGeant4Unit::gram (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:198:25
+    module_.method("TGeant4Unit!gram", []()-> double { return TGeant4Unit::gram; });
+
+    DEBUG_MSG("Adding TGeant4Unit!milligram methods to provide access to the global variable TGeant4Unit::milligram (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:199:25
+    module_.method("TGeant4Unit!milligram", []()-> double { return TGeant4Unit::milligram; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kg methods to provide access to the global variable TGeant4Unit::kg (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:202:25
+    module_.method("TGeant4Unit!kg", []()-> double { return TGeant4Unit::kg; });
+
+    DEBUG_MSG("Adding TGeant4Unit!g methods to provide access to the global variable TGeant4Unit::g (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:203:25
+    module_.method("TGeant4Unit!g", []()-> double { return TGeant4Unit::g; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mg methods to provide access to the global variable TGeant4Unit::mg (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:204:25
+    module_.method("TGeant4Unit!mg", []()-> double { return TGeant4Unit::mg; });
+
+    DEBUG_MSG("Adding TGeant4Unit!watt methods to provide access to the global variable TGeant4Unit::watt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:209:25
+    module_.method("TGeant4Unit!watt", []()-> double { return TGeant4Unit::watt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!newton methods to provide access to the global variable TGeant4Unit::newton (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:214:25
+    module_.method("TGeant4Unit!newton", []()-> double { return TGeant4Unit::newton; });
+
+    DEBUG_MSG("Adding TGeant4Unit!hep_pascal methods to provide access to the global variable TGeant4Unit::hep_pascal (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:220:25
+    module_.method("TGeant4Unit!hep_pascal", []()-> double { return TGeant4Unit::hep_pascal; });
+
+    DEBUG_MSG("Adding TGeant4Unit!bar methods to provide access to the global variable TGeant4Unit::bar (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:221:25
+    module_.method("TGeant4Unit!bar", []()-> double { return TGeant4Unit::bar; });
+
+    DEBUG_MSG("Adding TGeant4Unit!atmosphere methods to provide access to the global variable TGeant4Unit::atmosphere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:222:25
+    module_.method("TGeant4Unit!atmosphere", []()-> double { return TGeant4Unit::atmosphere; });
+
+    DEBUG_MSG("Adding TGeant4Unit!ampere methods to provide access to the global variable TGeant4Unit::ampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:227:25
+    module_.method("TGeant4Unit!ampere", []()-> double { return TGeant4Unit::ampere; });
+
+    DEBUG_MSG("Adding TGeant4Unit!milliampere methods to provide access to the global variable TGeant4Unit::milliampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:228:25
+    module_.method("TGeant4Unit!milliampere", []()-> double { return TGeant4Unit::milliampere; });
+
+    DEBUG_MSG("Adding TGeant4Unit!microampere methods to provide access to the global variable TGeant4Unit::microampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:229:25
+    module_.method("TGeant4Unit!microampere", []()-> double { return TGeant4Unit::microampere; });
+
+    DEBUG_MSG("Adding TGeant4Unit!nanoampere methods to provide access to the global variable TGeant4Unit::nanoampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:230:25
+    module_.method("TGeant4Unit!nanoampere", []()-> double { return TGeant4Unit::nanoampere; });
+
+    DEBUG_MSG("Adding TGeant4Unit!megavolt methods to provide access to the global variable TGeant4Unit::megavolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:235:25
+    module_.method("TGeant4Unit!megavolt", []()-> double { return TGeant4Unit::megavolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilovolt methods to provide access to the global variable TGeant4Unit::kilovolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:236:25
+    module_.method("TGeant4Unit!kilovolt", []()-> double { return TGeant4Unit::kilovolt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!volt methods to provide access to the global variable TGeant4Unit::volt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:237:25
+    module_.method("TGeant4Unit!volt", []()-> double { return TGeant4Unit::volt; });
+
+    DEBUG_MSG("Adding TGeant4Unit!ohm methods to provide access to the global variable TGeant4Unit::ohm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:242:25
+    module_.method("TGeant4Unit!ohm", []()-> double { return TGeant4Unit::ohm; });
+
+    DEBUG_MSG("Adding TGeant4Unit!farad methods to provide access to the global variable TGeant4Unit::farad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:247:25
+    module_.method("TGeant4Unit!farad", []()-> double { return TGeant4Unit::farad; });
+
+    DEBUG_MSG("Adding TGeant4Unit!millifarad methods to provide access to the global variable TGeant4Unit::millifarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:248:25
+    module_.method("TGeant4Unit!millifarad", []()-> double { return TGeant4Unit::millifarad; });
+
+    DEBUG_MSG("Adding TGeant4Unit!microfarad methods to provide access to the global variable TGeant4Unit::microfarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:249:25
+    module_.method("TGeant4Unit!microfarad", []()-> double { return TGeant4Unit::microfarad; });
+
+    DEBUG_MSG("Adding TGeant4Unit!nanofarad methods to provide access to the global variable TGeant4Unit::nanofarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:250:25
+    module_.method("TGeant4Unit!nanofarad", []()-> double { return TGeant4Unit::nanofarad; });
+
+    DEBUG_MSG("Adding TGeant4Unit!picofarad methods to provide access to the global variable TGeant4Unit::picofarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:251:25
+    module_.method("TGeant4Unit!picofarad", []()-> double { return TGeant4Unit::picofarad; });
+
+    DEBUG_MSG("Adding TGeant4Unit!weber methods to provide access to the global variable TGeant4Unit::weber (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:256:25
+    module_.method("TGeant4Unit!weber", []()-> double { return TGeant4Unit::weber; });
+
+    DEBUG_MSG("Adding TGeant4Unit!tesla methods to provide access to the global variable TGeant4Unit::tesla (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:261:25
+    module_.method("TGeant4Unit!tesla", []()-> double { return TGeant4Unit::tesla; });
+
+    DEBUG_MSG("Adding TGeant4Unit!gauss methods to provide access to the global variable TGeant4Unit::gauss (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:263:25
+    module_.method("TGeant4Unit!gauss", []()-> double { return TGeant4Unit::gauss; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilogauss methods to provide access to the global variable TGeant4Unit::kilogauss (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:264:25
+    module_.method("TGeant4Unit!kilogauss", []()-> double { return TGeant4Unit::kilogauss; });
+
+    DEBUG_MSG("Adding TGeant4Unit!henry methods to provide access to the global variable TGeant4Unit::henry (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:269:25
+    module_.method("TGeant4Unit!henry", []()-> double { return TGeant4Unit::henry; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kelvin methods to provide access to the global variable TGeant4Unit::kelvin (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:274:25
+    module_.method("TGeant4Unit!kelvin", []()-> double { return TGeant4Unit::kelvin; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mole methods to provide access to the global variable TGeant4Unit::mole (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:279:25
+    module_.method("TGeant4Unit!mole", []()-> double { return TGeant4Unit::mole; });
+
+    DEBUG_MSG("Adding TGeant4Unit!becquerel methods to provide access to the global variable TGeant4Unit::becquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:284:25
+    module_.method("TGeant4Unit!becquerel", []()-> double { return TGeant4Unit::becquerel; });
+
+    DEBUG_MSG("Adding TGeant4Unit!curie methods to provide access to the global variable TGeant4Unit::curie (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:285:25
+    module_.method("TGeant4Unit!curie", []()-> double { return TGeant4Unit::curie; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilobecquerel methods to provide access to the global variable TGeant4Unit::kilobecquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:286:25
+    module_.method("TGeant4Unit!kilobecquerel", []()-> double { return TGeant4Unit::kilobecquerel; });
+
+    DEBUG_MSG("Adding TGeant4Unit!megabecquerel methods to provide access to the global variable TGeant4Unit::megabecquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:287:25
+    module_.method("TGeant4Unit!megabecquerel", []()-> double { return TGeant4Unit::megabecquerel; });
+
+    DEBUG_MSG("Adding TGeant4Unit!gigabecquerel methods to provide access to the global variable TGeant4Unit::gigabecquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:288:25
+    module_.method("TGeant4Unit!gigabecquerel", []()-> double { return TGeant4Unit::gigabecquerel; });
+
+    DEBUG_MSG("Adding TGeant4Unit!millicurie methods to provide access to the global variable TGeant4Unit::millicurie (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:289:25
+    module_.method("TGeant4Unit!millicurie", []()-> double { return TGeant4Unit::millicurie; });
+
+    DEBUG_MSG("Adding TGeant4Unit!microcurie methods to provide access to the global variable TGeant4Unit::microcurie (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:290:25
+    module_.method("TGeant4Unit!microcurie", []()-> double { return TGeant4Unit::microcurie; });
+
+    DEBUG_MSG("Adding TGeant4Unit!Bq methods to provide access to the global variable TGeant4Unit::Bq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:291:25
+    module_.method("TGeant4Unit!Bq", []()-> double { return TGeant4Unit::Bq; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kBq methods to provide access to the global variable TGeant4Unit::kBq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:292:25
+    module_.method("TGeant4Unit!kBq", []()-> double { return TGeant4Unit::kBq; });
+
+    DEBUG_MSG("Adding TGeant4Unit!MBq methods to provide access to the global variable TGeant4Unit::MBq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:293:25
+    module_.method("TGeant4Unit!MBq", []()-> double { return TGeant4Unit::MBq; });
+
+    DEBUG_MSG("Adding TGeant4Unit!GBq methods to provide access to the global variable TGeant4Unit::GBq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:294:25
+    module_.method("TGeant4Unit!GBq", []()-> double { return TGeant4Unit::GBq; });
+
+    DEBUG_MSG("Adding TGeant4Unit!Ci methods to provide access to the global variable TGeant4Unit::Ci (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:295:25
+    module_.method("TGeant4Unit!Ci", []()-> double { return TGeant4Unit::Ci; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mCi methods to provide access to the global variable TGeant4Unit::mCi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:296:25
+    module_.method("TGeant4Unit!mCi", []()-> double { return TGeant4Unit::mCi; });
+
+    DEBUG_MSG("Adding TGeant4Unit!uCi methods to provide access to the global variable TGeant4Unit::uCi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:297:25
+    module_.method("TGeant4Unit!uCi", []()-> double { return TGeant4Unit::uCi; });
+
+    DEBUG_MSG("Adding TGeant4Unit!gray methods to provide access to the global variable TGeant4Unit::gray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:302:25
+    module_.method("TGeant4Unit!gray", []()-> double { return TGeant4Unit::gray; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kilogray methods to provide access to the global variable TGeant4Unit::kilogray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:303:25
+    module_.method("TGeant4Unit!kilogray", []()-> double { return TGeant4Unit::kilogray; });
+
+    DEBUG_MSG("Adding TGeant4Unit!milligray methods to provide access to the global variable TGeant4Unit::milligray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:304:25
+    module_.method("TGeant4Unit!milligray", []()-> double { return TGeant4Unit::milligray; });
+
+    DEBUG_MSG("Adding TGeant4Unit!microgray methods to provide access to the global variable TGeant4Unit::microgray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:305:25
+    module_.method("TGeant4Unit!microgray", []()-> double { return TGeant4Unit::microgray; });
+
+    DEBUG_MSG("Adding TGeant4Unit!candela methods to provide access to the global variable TGeant4Unit::candela (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:310:25
+    module_.method("TGeant4Unit!candela", []()-> double { return TGeant4Unit::candela; });
+
+    DEBUG_MSG("Adding TGeant4Unit!lumen methods to provide access to the global variable TGeant4Unit::lumen (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:315:25
+    module_.method("TGeant4Unit!lumen", []()-> double { return TGeant4Unit::lumen; });
+
+    DEBUG_MSG("Adding TGeant4Unit!lux methods to provide access to the global variable TGeant4Unit::lux (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:320:25
+    module_.method("TGeant4Unit!lux", []()-> double { return TGeant4Unit::lux; });
+
+    DEBUG_MSG("Adding TGeant4Unit!perCent methods to provide access to the global variable TGeant4Unit::perCent (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:325:25
+    module_.method("TGeant4Unit!perCent", []()-> double { return TGeant4Unit::perCent; });
+
+    DEBUG_MSG("Adding TGeant4Unit!perThousand methods to provide access to the global variable TGeant4Unit::perThousand (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:326:25
+    module_.method("TGeant4Unit!perThousand", []()-> double { return TGeant4Unit::perThousand; });
+
+    DEBUG_MSG("Adding TGeant4Unit!perMillion methods to provide access to the global variable TGeant4Unit::perMillion (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4SystemOfUnits.h:327:25
+    module_.method("TGeant4Unit!perMillion", []()-> double { return TGeant4Unit::perMillion; });
+
+    DEBUG_MSG("Adding TGeant4Unit!Avogadro methods to provide access to the global variable TGeant4Unit::Avogadro (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:43:25
+    module_.method("TGeant4Unit!Avogadro", []()-> double { return TGeant4Unit::Avogadro; });
+
+    DEBUG_MSG("Adding TGeant4Unit!c_light methods to provide access to the global variable TGeant4Unit::c_light (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:49:25
+    module_.method("TGeant4Unit!c_light", []()-> double { return TGeant4Unit::c_light; });
+
+    DEBUG_MSG("Adding TGeant4Unit!c_squared methods to provide access to the global variable TGeant4Unit::c_squared (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:50:25
+    module_.method("TGeant4Unit!c_squared", []()-> double { return TGeant4Unit::c_squared; });
+
+    DEBUG_MSG("Adding TGeant4Unit!h_Planck methods to provide access to the global variable TGeant4Unit::h_Planck (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:57:25
+    module_.method("TGeant4Unit!h_Planck", []()-> double { return TGeant4Unit::h_Planck; });
+
+    DEBUG_MSG("Adding TGeant4Unit!hbar_Planck methods to provide access to the global variable TGeant4Unit::hbar_Planck (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:58:25
+    module_.method("TGeant4Unit!hbar_Planck", []()-> double { return TGeant4Unit::hbar_Planck; });
+
+    DEBUG_MSG("Adding TGeant4Unit!hbarc methods to provide access to the global variable TGeant4Unit::hbarc (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:59:25
+    module_.method("TGeant4Unit!hbarc", []()-> double { return TGeant4Unit::hbarc; });
+
+    DEBUG_MSG("Adding TGeant4Unit!hbarc_squared methods to provide access to the global variable TGeant4Unit::hbarc_squared (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:60:25
+    module_.method("TGeant4Unit!hbarc_squared", []()-> double { return TGeant4Unit::hbarc_squared; });
+
+    DEBUG_MSG("Adding TGeant4Unit!electron_charge methods to provide access to the global variable TGeant4Unit::electron_charge (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:65:25
+    module_.method("TGeant4Unit!electron_charge", []()-> double { return TGeant4Unit::electron_charge; });
+
+    DEBUG_MSG("Adding TGeant4Unit!e_squared methods to provide access to the global variable TGeant4Unit::e_squared (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:66:25
+    module_.method("TGeant4Unit!e_squared", []()-> double { return TGeant4Unit::e_squared; });
+
+    DEBUG_MSG("Adding TGeant4Unit!electron_mass_c2 methods to provide access to the global variable TGeant4Unit::electron_mass_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:73:25
+    module_.method("TGeant4Unit!electron_mass_c2", []()-> double { return TGeant4Unit::electron_mass_c2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!proton_mass_c2 methods to provide access to the global variable TGeant4Unit::proton_mass_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:74:25
+    module_.method("TGeant4Unit!proton_mass_c2", []()-> double { return TGeant4Unit::proton_mass_c2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!neutron_mass_c2 methods to provide access to the global variable TGeant4Unit::neutron_mass_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:75:25
+    module_.method("TGeant4Unit!neutron_mass_c2", []()-> double { return TGeant4Unit::neutron_mass_c2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!amu_c2 methods to provide access to the global variable TGeant4Unit::amu_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:76:25
+    module_.method("TGeant4Unit!amu_c2", []()-> double { return TGeant4Unit::amu_c2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!amu methods to provide access to the global variable TGeant4Unit::amu (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:77:25
+    module_.method("TGeant4Unit!amu", []()-> double { return TGeant4Unit::amu; });
+
+    DEBUG_MSG("Adding TGeant4Unit!mu0 methods to provide access to the global variable TGeant4Unit::mu0 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:83:25
+    module_.method("TGeant4Unit!mu0", []()-> double { return TGeant4Unit::mu0; });
+
+    DEBUG_MSG("Adding TGeant4Unit!epsilon0 methods to provide access to the global variable TGeant4Unit::epsilon0 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:84:25
+    module_.method("TGeant4Unit!epsilon0", []()-> double { return TGeant4Unit::epsilon0; });
+
+    DEBUG_MSG("Adding TGeant4Unit!elm_coupling methods to provide access to the global variable TGeant4Unit::elm_coupling (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:89:25
+    module_.method("TGeant4Unit!elm_coupling", []()-> double { return TGeant4Unit::elm_coupling; });
+
+    DEBUG_MSG("Adding TGeant4Unit!fine_structure_const methods to provide access to the global variable TGeant4Unit::fine_structure_const (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:90:25
+    module_.method("TGeant4Unit!fine_structure_const", []()-> double { return TGeant4Unit::fine_structure_const; });
+
+    DEBUG_MSG("Adding TGeant4Unit!classic_electr_radius methods to provide access to the global variable TGeant4Unit::classic_electr_radius (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:91:25
+    module_.method("TGeant4Unit!classic_electr_radius", []()-> double { return TGeant4Unit::classic_electr_radius; });
+
+    DEBUG_MSG("Adding TGeant4Unit!electron_Compton_length methods to provide access to the global variable TGeant4Unit::electron_Compton_length (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:92:25
+    module_.method("TGeant4Unit!electron_Compton_length", []()-> double { return TGeant4Unit::electron_Compton_length; });
+
+    DEBUG_MSG("Adding TGeant4Unit!Bohr_radius methods to provide access to the global variable TGeant4Unit::Bohr_radius (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:93:25
+    module_.method("TGeant4Unit!Bohr_radius", []()-> double { return TGeant4Unit::Bohr_radius; });
+
+    DEBUG_MSG("Adding TGeant4Unit!alpha_rcl2 methods to provide access to the global variable TGeant4Unit::alpha_rcl2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:95:25
+    module_.method("TGeant4Unit!alpha_rcl2", []()-> double { return TGeant4Unit::alpha_rcl2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!twopi_mc2_rcl2 methods to provide access to the global variable TGeant4Unit::twopi_mc2_rcl2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:97:25
+    module_.method("TGeant4Unit!twopi_mc2_rcl2", []()-> double { return TGeant4Unit::twopi_mc2_rcl2; });
+
+    DEBUG_MSG("Adding TGeant4Unit!k_Boltzmann methods to provide access to the global variable TGeant4Unit::k_Boltzmann (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:101:25
+    module_.method("TGeant4Unit!k_Boltzmann", []()-> double { return TGeant4Unit::k_Boltzmann; });
+
+    DEBUG_MSG("Adding TGeant4Unit!STP_Temperature methods to provide access to the global variable TGeant4Unit::STP_Temperature (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:106:25
+    module_.method("TGeant4Unit!STP_Temperature", []()-> double { return TGeant4Unit::STP_Temperature; });
+
+    DEBUG_MSG("Adding TGeant4Unit!STP_Pressure methods to provide access to the global variable TGeant4Unit::STP_Pressure (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:107:25
+    module_.method("TGeant4Unit!STP_Pressure", []()-> double { return TGeant4Unit::STP_Pressure; });
+
+    DEBUG_MSG("Adding TGeant4Unit!kGasThreshold methods to provide access to the global variable TGeant4Unit::kGasThreshold (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:108:25
+    module_.method("TGeant4Unit!kGasThreshold", []()-> double { return TGeant4Unit::kGasThreshold; });
+
+    DEBUG_MSG("Adding TGeant4Unit!universe_mean_density methods to provide access to the global variable TGeant4Unit::universe_mean_density (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeant4PhysicalConstants.h:113:25
+    module_.method("TGeant4Unit!universe_mean_density", []()-> double { return TGeant4Unit::universe_mean_density; });
+
+    DEBUG_MSG("Adding gGeoIdentity methods to provide access to the global variable gGeoIdentity (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoMatrix.h:537:25
+    t.method("gGeoIdentity", []()-> TGeoIdentity * { return gGeoIdentity; });
+    t.method("gGeoIdentity!", [](TGeoIdentity * val)-> TGeoIdentity * { return gGeoIdentity = val; });
+
+    DEBUG_MSG("Adding STP_temperature methods to provide access to the global variable STP_temperature (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoMaterial.h:31:23
+    module_.method("STP_temperature", []()-> Double_t { return STP_temperature; });
+
+    DEBUG_MSG("Adding STP_pressure methods to provide access to the global variable STP_pressure (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoMaterial.h:32:23
+    module_.method("STP_pressure", []()-> Double_t { return STP_pressure; });
+
+    DEBUG_MSG("Adding gGeoManager methods to provide access to the global variable gGeoManager (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoManager.h:608:24
+    t.method("gGeoManager", []()-> TGeoManager * { return gGeoManager; });
+    t.method("gGeoManager!", [](TGeoManager * val)-> TGeoManager * { return gGeoManager = val; });
+
+    DEBUG_MSG("Adding TGeoUnit!pi methods to provide access to the global variable TGeoUnit::pi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:71:25
+    module_.method("TGeoUnit!pi", []()-> double { return TGeoUnit::pi; });
+
+    DEBUG_MSG("Adding TGeoUnit!twopi methods to provide access to the global variable TGeoUnit::twopi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:72:25
+    module_.method("TGeoUnit!twopi", []()-> double { return TGeoUnit::twopi; });
+
+    DEBUG_MSG("Adding TGeoUnit!halfpi methods to provide access to the global variable TGeoUnit::halfpi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:73:25
+    module_.method("TGeoUnit!halfpi", []()-> double { return TGeoUnit::halfpi; });
+
+    DEBUG_MSG("Adding TGeoUnit!pi2 methods to provide access to the global variable TGeoUnit::pi2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:74:25
+    module_.method("TGeoUnit!pi2", []()-> double { return TGeoUnit::pi2; });
+
+    DEBUG_MSG("Adding TGeoUnit!millimeter methods to provide access to the global variable TGeoUnit::millimeter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:79:25
+    module_.method("TGeoUnit!millimeter", []()-> double { return TGeoUnit::millimeter; });
+
+    DEBUG_MSG("Adding TGeoUnit!millimeter2 methods to provide access to the global variable TGeoUnit::millimeter2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:80:25
+    module_.method("TGeoUnit!millimeter2", []()-> double { return TGeoUnit::millimeter2; });
+
+    DEBUG_MSG("Adding TGeoUnit!millimeter3 methods to provide access to the global variable TGeoUnit::millimeter3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:81:25
+    module_.method("TGeoUnit!millimeter3", []()-> double { return TGeoUnit::millimeter3; });
+
+    DEBUG_MSG("Adding TGeoUnit!centimeter methods to provide access to the global variable TGeoUnit::centimeter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:83:25
+    module_.method("TGeoUnit!centimeter", []()-> double { return TGeoUnit::centimeter; });
+
+    DEBUG_MSG("Adding TGeoUnit!centimeter2 methods to provide access to the global variable TGeoUnit::centimeter2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:84:25
+    module_.method("TGeoUnit!centimeter2", []()-> double { return TGeoUnit::centimeter2; });
+
+    DEBUG_MSG("Adding TGeoUnit!centimeter3 methods to provide access to the global variable TGeoUnit::centimeter3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:85:25
+    module_.method("TGeoUnit!centimeter3", []()-> double { return TGeoUnit::centimeter3; });
+
+    DEBUG_MSG("Adding TGeoUnit!meter methods to provide access to the global variable TGeoUnit::meter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:87:25
+    module_.method("TGeoUnit!meter", []()-> double { return TGeoUnit::meter; });
+
+    DEBUG_MSG("Adding TGeoUnit!meter2 methods to provide access to the global variable TGeoUnit::meter2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:88:25
+    module_.method("TGeoUnit!meter2", []()-> double { return TGeoUnit::meter2; });
+
+    DEBUG_MSG("Adding TGeoUnit!meter3 methods to provide access to the global variable TGeoUnit::meter3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:89:25
+    module_.method("TGeoUnit!meter3", []()-> double { return TGeoUnit::meter3; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilometer methods to provide access to the global variable TGeoUnit::kilometer (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:91:25
+    module_.method("TGeoUnit!kilometer", []()-> double { return TGeoUnit::kilometer; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilometer2 methods to provide access to the global variable TGeoUnit::kilometer2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:92:25
+    module_.method("TGeoUnit!kilometer2", []()-> double { return TGeoUnit::kilometer2; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilometer3 methods to provide access to the global variable TGeoUnit::kilometer3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:93:25
+    module_.method("TGeoUnit!kilometer3", []()-> double { return TGeoUnit::kilometer3; });
+
+    DEBUG_MSG("Adding TGeoUnit!parsec methods to provide access to the global variable TGeoUnit::parsec (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:95:25
+    module_.method("TGeoUnit!parsec", []()-> double { return TGeoUnit::parsec; });
+
+    DEBUG_MSG("Adding TGeoUnit!micrometer methods to provide access to the global variable TGeoUnit::micrometer (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:97:25
+    module_.method("TGeoUnit!micrometer", []()-> double { return TGeoUnit::micrometer; });
+
+    DEBUG_MSG("Adding TGeoUnit!nanometer methods to provide access to the global variable TGeoUnit::nanometer (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:98:25
+    module_.method("TGeoUnit!nanometer", []()-> double { return TGeoUnit::nanometer; });
+
+    DEBUG_MSG("Adding TGeoUnit!angstrom methods to provide access to the global variable TGeoUnit::angstrom (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:99:25
+    module_.method("TGeoUnit!angstrom", []()-> double { return TGeoUnit::angstrom; });
+
+    DEBUG_MSG("Adding TGeoUnit!fermi methods to provide access to the global variable TGeoUnit::fermi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:100:25
+    module_.method("TGeoUnit!fermi", []()-> double { return TGeoUnit::fermi; });
+
+    DEBUG_MSG("Adding TGeoUnit!barn methods to provide access to the global variable TGeoUnit::barn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:102:25
+    module_.method("TGeoUnit!barn", []()-> double { return TGeoUnit::barn; });
+
+    DEBUG_MSG("Adding TGeoUnit!millibarn methods to provide access to the global variable TGeoUnit::millibarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:103:25
+    module_.method("TGeoUnit!millibarn", []()-> double { return TGeoUnit::millibarn; });
+
+    DEBUG_MSG("Adding TGeoUnit!microbarn methods to provide access to the global variable TGeoUnit::microbarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:104:25
+    module_.method("TGeoUnit!microbarn", []()-> double { return TGeoUnit::microbarn; });
+
+    DEBUG_MSG("Adding TGeoUnit!nanobarn methods to provide access to the global variable TGeoUnit::nanobarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:105:25
+    module_.method("TGeoUnit!nanobarn", []()-> double { return TGeoUnit::nanobarn; });
+
+    DEBUG_MSG("Adding TGeoUnit!picobarn methods to provide access to the global variable TGeoUnit::picobarn (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:106:25
+    module_.method("TGeoUnit!picobarn", []()-> double { return TGeoUnit::picobarn; });
+
+    DEBUG_MSG("Adding TGeoUnit!nm methods to provide access to the global variable TGeoUnit::nm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:109:25
+    module_.method("TGeoUnit!nm", []()-> double { return TGeoUnit::nm; });
+
+    DEBUG_MSG("Adding TGeoUnit!um methods to provide access to the global variable TGeoUnit::um (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:110:25
+    module_.method("TGeoUnit!um", []()-> double { return TGeoUnit::um; });
+
+    DEBUG_MSG("Adding TGeoUnit!mm methods to provide access to the global variable TGeoUnit::mm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:112:25
+    module_.method("TGeoUnit!mm", []()-> double { return TGeoUnit::mm; });
+
+    DEBUG_MSG("Adding TGeoUnit!mm2 methods to provide access to the global variable TGeoUnit::mm2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:113:25
+    module_.method("TGeoUnit!mm2", []()-> double { return TGeoUnit::mm2; });
+
+    DEBUG_MSG("Adding TGeoUnit!mm3 methods to provide access to the global variable TGeoUnit::mm3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:114:25
+    module_.method("TGeoUnit!mm3", []()-> double { return TGeoUnit::mm3; });
+
+    DEBUG_MSG("Adding TGeoUnit!cm methods to provide access to the global variable TGeoUnit::cm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:116:25
+    module_.method("TGeoUnit!cm", []()-> double { return TGeoUnit::cm; });
+
+    DEBUG_MSG("Adding TGeoUnit!cm2 methods to provide access to the global variable TGeoUnit::cm2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:117:25
+    module_.method("TGeoUnit!cm2", []()-> double { return TGeoUnit::cm2; });
+
+    DEBUG_MSG("Adding TGeoUnit!cm3 methods to provide access to the global variable TGeoUnit::cm3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:118:25
+    module_.method("TGeoUnit!cm3", []()-> double { return TGeoUnit::cm3; });
+
+    DEBUG_MSG("Adding TGeoUnit!liter methods to provide access to the global variable TGeoUnit::liter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:120:25
+    module_.method("TGeoUnit!liter", []()-> double { return TGeoUnit::liter; });
+
+    DEBUG_MSG("Adding TGeoUnit!L methods to provide access to the global variable TGeoUnit::L (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:121:25
+    module_.method("TGeoUnit!L", []()-> double { return TGeoUnit::L; });
+
+    DEBUG_MSG("Adding TGeoUnit!dL methods to provide access to the global variable TGeoUnit::dL (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:122:25
+    module_.method("TGeoUnit!dL", []()-> double { return TGeoUnit::dL; });
+
+    DEBUG_MSG("Adding TGeoUnit!cL methods to provide access to the global variable TGeoUnit::cL (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:123:25
+    module_.method("TGeoUnit!cL", []()-> double { return TGeoUnit::cL; });
+
+    DEBUG_MSG("Adding TGeoUnit!mL methods to provide access to the global variable TGeoUnit::mL (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:124:25
+    module_.method("TGeoUnit!mL", []()-> double { return TGeoUnit::mL; });
+
+    DEBUG_MSG("Adding TGeoUnit!m methods to provide access to the global variable TGeoUnit::m (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:126:25
+    module_.method("TGeoUnit!m", []()-> double { return TGeoUnit::m; });
+
+    DEBUG_MSG("Adding TGeoUnit!m2 methods to provide access to the global variable TGeoUnit::m2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:127:25
+    module_.method("TGeoUnit!m2", []()-> double { return TGeoUnit::m2; });
+
+    DEBUG_MSG("Adding TGeoUnit!m3 methods to provide access to the global variable TGeoUnit::m3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:128:25
+    module_.method("TGeoUnit!m3", []()-> double { return TGeoUnit::m3; });
+
+    DEBUG_MSG("Adding TGeoUnit!km methods to provide access to the global variable TGeoUnit::km (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:130:25
+    module_.method("TGeoUnit!km", []()-> double { return TGeoUnit::km; });
+
+    DEBUG_MSG("Adding TGeoUnit!km2 methods to provide access to the global variable TGeoUnit::km2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:131:25
+    module_.method("TGeoUnit!km2", []()-> double { return TGeoUnit::km2; });
+
+    DEBUG_MSG("Adding TGeoUnit!km3 methods to provide access to the global variable TGeoUnit::km3 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:132:25
+    module_.method("TGeoUnit!km3", []()-> double { return TGeoUnit::km3; });
+
+    DEBUG_MSG("Adding TGeoUnit!pc methods to provide access to the global variable TGeoUnit::pc (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:134:25
+    module_.method("TGeoUnit!pc", []()-> double { return TGeoUnit::pc; });
+
+    DEBUG_MSG("Adding TGeoUnit!degree methods to provide access to the global variable TGeoUnit::degree (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:139:25
+    module_.method("TGeoUnit!degree", []()-> double { return TGeoUnit::degree; });
+
+    DEBUG_MSG("Adding TGeoUnit!radian methods to provide access to the global variable TGeoUnit::radian (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:140:25
+    module_.method("TGeoUnit!radian", []()-> double { return TGeoUnit::radian; });
+
+    DEBUG_MSG("Adding TGeoUnit!milliradian methods to provide access to the global variable TGeoUnit::milliradian (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:141:25
+    module_.method("TGeoUnit!milliradian", []()-> double { return TGeoUnit::milliradian; });
+
+    DEBUG_MSG("Adding TGeoUnit!steradian methods to provide access to the global variable TGeoUnit::steradian (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:143:25
+    module_.method("TGeoUnit!steradian", []()-> double { return TGeoUnit::steradian; });
+
+    DEBUG_MSG("Adding TGeoUnit!rad methods to provide access to the global variable TGeoUnit::rad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:146:25
+    module_.method("TGeoUnit!rad", []()-> double { return TGeoUnit::rad; });
+
+    DEBUG_MSG("Adding TGeoUnit!mrad methods to provide access to the global variable TGeoUnit::mrad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:147:25
+    module_.method("TGeoUnit!mrad", []()-> double { return TGeoUnit::mrad; });
+
+    DEBUG_MSG("Adding TGeoUnit!sr methods to provide access to the global variable TGeoUnit::sr (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:148:25
+    module_.method("TGeoUnit!sr", []()-> double { return TGeoUnit::sr; });
+
+    DEBUG_MSG("Adding TGeoUnit!deg methods to provide access to the global variable TGeoUnit::deg (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:149:25
+    module_.method("TGeoUnit!deg", []()-> double { return TGeoUnit::deg; });
+
+    DEBUG_MSG("Adding TGeoUnit!nanosecond methods to provide access to the global variable TGeoUnit::nanosecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:154:25
+    module_.method("TGeoUnit!nanosecond", []()-> double { return TGeoUnit::nanosecond; });
+
+    DEBUG_MSG("Adding TGeoUnit!second methods to provide access to the global variable TGeoUnit::second (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:155:25
+    module_.method("TGeoUnit!second", []()-> double { return TGeoUnit::second; });
+
+    DEBUG_MSG("Adding TGeoUnit!millisecond methods to provide access to the global variable TGeoUnit::millisecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:156:25
+    module_.method("TGeoUnit!millisecond", []()-> double { return TGeoUnit::millisecond; });
+
+    DEBUG_MSG("Adding TGeoUnit!microsecond methods to provide access to the global variable TGeoUnit::microsecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:157:25
+    module_.method("TGeoUnit!microsecond", []()-> double { return TGeoUnit::microsecond; });
+
+    DEBUG_MSG("Adding TGeoUnit!picosecond methods to provide access to the global variable TGeoUnit::picosecond (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:158:25
+    module_.method("TGeoUnit!picosecond", []()-> double { return TGeoUnit::picosecond; });
+
+    DEBUG_MSG("Adding TGeoUnit!hertz methods to provide access to the global variable TGeoUnit::hertz (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:160:25
+    module_.method("TGeoUnit!hertz", []()-> double { return TGeoUnit::hertz; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilohertz methods to provide access to the global variable TGeoUnit::kilohertz (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:161:25
+    module_.method("TGeoUnit!kilohertz", []()-> double { return TGeoUnit::kilohertz; });
+
+    DEBUG_MSG("Adding TGeoUnit!megahertz methods to provide access to the global variable TGeoUnit::megahertz (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:162:25
+    module_.method("TGeoUnit!megahertz", []()-> double { return TGeoUnit::megahertz; });
+
+    DEBUG_MSG("Adding TGeoUnit!ns methods to provide access to the global variable TGeoUnit::ns (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:165:25
+    module_.method("TGeoUnit!ns", []()-> double { return TGeoUnit::ns; });
+
+    DEBUG_MSG("Adding TGeoUnit!s methods to provide access to the global variable TGeoUnit::s (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:166:25
+    module_.method("TGeoUnit!s", []()-> double { return TGeoUnit::s; });
+
+    DEBUG_MSG("Adding TGeoUnit!ms methods to provide access to the global variable TGeoUnit::ms (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:167:25
+    module_.method("TGeoUnit!ms", []()-> double { return TGeoUnit::ms; });
+
+    DEBUG_MSG("Adding TGeoUnit!us methods to provide access to the global variable TGeoUnit::us (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:168:25
+    module_.method("TGeoUnit!us", []()-> double { return TGeoUnit::us; });
+
+    DEBUG_MSG("Adding TGeoUnit!ps methods to provide access to the global variable TGeoUnit::ps (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:169:25
+    module_.method("TGeoUnit!ps", []()-> double { return TGeoUnit::ps; });
+
+    DEBUG_MSG("Adding TGeoUnit!eplus methods to provide access to the global variable TGeoUnit::eplus (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:174:25
+    module_.method("TGeoUnit!eplus", []()-> double { return TGeoUnit::eplus; });
+
+    DEBUG_MSG("Adding TGeoUnit!e_SI methods to provide access to the global variable TGeoUnit::e_SI (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:175:25
+    module_.method("TGeoUnit!e_SI", []()-> double { return TGeoUnit::e_SI; });
+
+    DEBUG_MSG("Adding TGeoUnit!coulomb methods to provide access to the global variable TGeoUnit::coulomb (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:176:25
+    module_.method("TGeoUnit!coulomb", []()-> double { return TGeoUnit::coulomb; });
+
+    DEBUG_MSG("Adding TGeoUnit!megaelectronvolt methods to provide access to the global variable TGeoUnit::megaelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:181:25
+    module_.method("TGeoUnit!megaelectronvolt", []()-> double { return TGeoUnit::megaelectronvolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!electronvolt methods to provide access to the global variable TGeoUnit::electronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:182:25
+    module_.method("TGeoUnit!electronvolt", []()-> double { return TGeoUnit::electronvolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!kiloelectronvolt methods to provide access to the global variable TGeoUnit::kiloelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:183:25
+    module_.method("TGeoUnit!kiloelectronvolt", []()-> double { return TGeoUnit::kiloelectronvolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!gigaelectronvolt methods to provide access to the global variable TGeoUnit::gigaelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:184:25
+    module_.method("TGeoUnit!gigaelectronvolt", []()-> double { return TGeoUnit::gigaelectronvolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!teraelectronvolt methods to provide access to the global variable TGeoUnit::teraelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:185:25
+    module_.method("TGeoUnit!teraelectronvolt", []()-> double { return TGeoUnit::teraelectronvolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!petaelectronvolt methods to provide access to the global variable TGeoUnit::petaelectronvolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:186:25
+    module_.method("TGeoUnit!petaelectronvolt", []()-> double { return TGeoUnit::petaelectronvolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!joule methods to provide access to the global variable TGeoUnit::joule (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:188:25
+    module_.method("TGeoUnit!joule", []()-> double { return TGeoUnit::joule; });
+
+    DEBUG_MSG("Adding TGeoUnit!MeV methods to provide access to the global variable TGeoUnit::MeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:191:25
+    module_.method("TGeoUnit!MeV", []()-> double { return TGeoUnit::MeV; });
+
+    DEBUG_MSG("Adding TGeoUnit!eV methods to provide access to the global variable TGeoUnit::eV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:192:25
+    module_.method("TGeoUnit!eV", []()-> double { return TGeoUnit::eV; });
+
+    DEBUG_MSG("Adding TGeoUnit!keV methods to provide access to the global variable TGeoUnit::keV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:193:25
+    module_.method("TGeoUnit!keV", []()-> double { return TGeoUnit::keV; });
+
+    DEBUG_MSG("Adding TGeoUnit!GeV methods to provide access to the global variable TGeoUnit::GeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:194:25
+    module_.method("TGeoUnit!GeV", []()-> double { return TGeoUnit::GeV; });
+
+    DEBUG_MSG("Adding TGeoUnit!TeV methods to provide access to the global variable TGeoUnit::TeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:195:25
+    module_.method("TGeoUnit!TeV", []()-> double { return TGeoUnit::TeV; });
+
+    DEBUG_MSG("Adding TGeoUnit!PeV methods to provide access to the global variable TGeoUnit::PeV (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:196:25
+    module_.method("TGeoUnit!PeV", []()-> double { return TGeoUnit::PeV; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilogram methods to provide access to the global variable TGeoUnit::kilogram (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:201:25
+    module_.method("TGeoUnit!kilogram", []()-> double { return TGeoUnit::kilogram; });
+
+    DEBUG_MSG("Adding TGeoUnit!gram methods to provide access to the global variable TGeoUnit::gram (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:202:25
+    module_.method("TGeoUnit!gram", []()-> double { return TGeoUnit::gram; });
+
+    DEBUG_MSG("Adding TGeoUnit!milligram methods to provide access to the global variable TGeoUnit::milligram (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:203:25
+    module_.method("TGeoUnit!milligram", []()-> double { return TGeoUnit::milligram; });
+
+    DEBUG_MSG("Adding TGeoUnit!kg methods to provide access to the global variable TGeoUnit::kg (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:206:25
+    module_.method("TGeoUnit!kg", []()-> double { return TGeoUnit::kg; });
+
+    DEBUG_MSG("Adding TGeoUnit!g methods to provide access to the global variable TGeoUnit::g (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:207:25
+    module_.method("TGeoUnit!g", []()-> double { return TGeoUnit::g; });
+
+    DEBUG_MSG("Adding TGeoUnit!mg methods to provide access to the global variable TGeoUnit::mg (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:208:25
+    module_.method("TGeoUnit!mg", []()-> double { return TGeoUnit::mg; });
+
+    DEBUG_MSG("Adding TGeoUnit!watt methods to provide access to the global variable TGeoUnit::watt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:213:25
+    module_.method("TGeoUnit!watt", []()-> double { return TGeoUnit::watt; });
+
+    DEBUG_MSG("Adding TGeoUnit!newton methods to provide access to the global variable TGeoUnit::newton (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:218:25
+    module_.method("TGeoUnit!newton", []()-> double { return TGeoUnit::newton; });
+
+    DEBUG_MSG("Adding TGeoUnit!hep_pascal methods to provide access to the global variable TGeoUnit::hep_pascal (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:224:25
+    module_.method("TGeoUnit!hep_pascal", []()-> double { return TGeoUnit::hep_pascal; });
+
+    DEBUG_MSG("Adding TGeoUnit!bar methods to provide access to the global variable TGeoUnit::bar (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:225:25
+    module_.method("TGeoUnit!bar", []()-> double { return TGeoUnit::bar; });
+
+    DEBUG_MSG("Adding TGeoUnit!atmosphere methods to provide access to the global variable TGeoUnit::atmosphere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:226:25
+    module_.method("TGeoUnit!atmosphere", []()-> double { return TGeoUnit::atmosphere; });
+
+    DEBUG_MSG("Adding TGeoUnit!ampere methods to provide access to the global variable TGeoUnit::ampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:231:25
+    module_.method("TGeoUnit!ampere", []()-> double { return TGeoUnit::ampere; });
+
+    DEBUG_MSG("Adding TGeoUnit!milliampere methods to provide access to the global variable TGeoUnit::milliampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:232:25
+    module_.method("TGeoUnit!milliampere", []()-> double { return TGeoUnit::milliampere; });
+
+    DEBUG_MSG("Adding TGeoUnit!microampere methods to provide access to the global variable TGeoUnit::microampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:233:25
+    module_.method("TGeoUnit!microampere", []()-> double { return TGeoUnit::microampere; });
+
+    DEBUG_MSG("Adding TGeoUnit!nanoampere methods to provide access to the global variable TGeoUnit::nanoampere (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:234:25
+    module_.method("TGeoUnit!nanoampere", []()-> double { return TGeoUnit::nanoampere; });
+
+    DEBUG_MSG("Adding TGeoUnit!megavolt methods to provide access to the global variable TGeoUnit::megavolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:239:25
+    module_.method("TGeoUnit!megavolt", []()-> double { return TGeoUnit::megavolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilovolt methods to provide access to the global variable TGeoUnit::kilovolt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:240:25
+    module_.method("TGeoUnit!kilovolt", []()-> double { return TGeoUnit::kilovolt; });
+
+    DEBUG_MSG("Adding TGeoUnit!volt methods to provide access to the global variable TGeoUnit::volt (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:241:25
+    module_.method("TGeoUnit!volt", []()-> double { return TGeoUnit::volt; });
+
+    DEBUG_MSG("Adding TGeoUnit!ohm methods to provide access to the global variable TGeoUnit::ohm (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:246:25
+    module_.method("TGeoUnit!ohm", []()-> double { return TGeoUnit::ohm; });
+
+    DEBUG_MSG("Adding TGeoUnit!farad methods to provide access to the global variable TGeoUnit::farad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:251:25
+    module_.method("TGeoUnit!farad", []()-> double { return TGeoUnit::farad; });
+
+    DEBUG_MSG("Adding TGeoUnit!millifarad methods to provide access to the global variable TGeoUnit::millifarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:252:25
+    module_.method("TGeoUnit!millifarad", []()-> double { return TGeoUnit::millifarad; });
+
+    DEBUG_MSG("Adding TGeoUnit!microfarad methods to provide access to the global variable TGeoUnit::microfarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:253:25
+    module_.method("TGeoUnit!microfarad", []()-> double { return TGeoUnit::microfarad; });
+
+    DEBUG_MSG("Adding TGeoUnit!nanofarad methods to provide access to the global variable TGeoUnit::nanofarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:254:25
+    module_.method("TGeoUnit!nanofarad", []()-> double { return TGeoUnit::nanofarad; });
+
+    DEBUG_MSG("Adding TGeoUnit!picofarad methods to provide access to the global variable TGeoUnit::picofarad (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:255:25
+    module_.method("TGeoUnit!picofarad", []()-> double { return TGeoUnit::picofarad; });
+
+    DEBUG_MSG("Adding TGeoUnit!weber methods to provide access to the global variable TGeoUnit::weber (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:260:25
+    module_.method("TGeoUnit!weber", []()-> double { return TGeoUnit::weber; });
+
+    DEBUG_MSG("Adding TGeoUnit!tesla methods to provide access to the global variable TGeoUnit::tesla (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:265:25
+    module_.method("TGeoUnit!tesla", []()-> double { return TGeoUnit::tesla; });
+
+    DEBUG_MSG("Adding TGeoUnit!gauss methods to provide access to the global variable TGeoUnit::gauss (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:267:25
+    module_.method("TGeoUnit!gauss", []()-> double { return TGeoUnit::gauss; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilogauss methods to provide access to the global variable TGeoUnit::kilogauss (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:268:25
+    module_.method("TGeoUnit!kilogauss", []()-> double { return TGeoUnit::kilogauss; });
+
+    DEBUG_MSG("Adding TGeoUnit!henry methods to provide access to the global variable TGeoUnit::henry (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:273:25
+    module_.method("TGeoUnit!henry", []()-> double { return TGeoUnit::henry; });
+
+    DEBUG_MSG("Adding TGeoUnit!kelvin methods to provide access to the global variable TGeoUnit::kelvin (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:278:25
+    module_.method("TGeoUnit!kelvin", []()-> double { return TGeoUnit::kelvin; });
+
+    DEBUG_MSG("Adding TGeoUnit!mole methods to provide access to the global variable TGeoUnit::mole (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:283:25
+    module_.method("TGeoUnit!mole", []()-> double { return TGeoUnit::mole; });
+
+    DEBUG_MSG("Adding TGeoUnit!becquerel methods to provide access to the global variable TGeoUnit::becquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:288:25
+    module_.method("TGeoUnit!becquerel", []()-> double { return TGeoUnit::becquerel; });
+
+    DEBUG_MSG("Adding TGeoUnit!curie methods to provide access to the global variable TGeoUnit::curie (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:289:25
+    module_.method("TGeoUnit!curie", []()-> double { return TGeoUnit::curie; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilobecquerel methods to provide access to the global variable TGeoUnit::kilobecquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:290:25
+    module_.method("TGeoUnit!kilobecquerel", []()-> double { return TGeoUnit::kilobecquerel; });
+
+    DEBUG_MSG("Adding TGeoUnit!megabecquerel methods to provide access to the global variable TGeoUnit::megabecquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:291:25
+    module_.method("TGeoUnit!megabecquerel", []()-> double { return TGeoUnit::megabecquerel; });
+
+    DEBUG_MSG("Adding TGeoUnit!gigabecquerel methods to provide access to the global variable TGeoUnit::gigabecquerel (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:292:25
+    module_.method("TGeoUnit!gigabecquerel", []()-> double { return TGeoUnit::gigabecquerel; });
+
+    DEBUG_MSG("Adding TGeoUnit!millicurie methods to provide access to the global variable TGeoUnit::millicurie (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:293:25
+    module_.method("TGeoUnit!millicurie", []()-> double { return TGeoUnit::millicurie; });
+
+    DEBUG_MSG("Adding TGeoUnit!microcurie methods to provide access to the global variable TGeoUnit::microcurie (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:294:25
+    module_.method("TGeoUnit!microcurie", []()-> double { return TGeoUnit::microcurie; });
+
+    DEBUG_MSG("Adding TGeoUnit!Bq methods to provide access to the global variable TGeoUnit::Bq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:295:25
+    module_.method("TGeoUnit!Bq", []()-> double { return TGeoUnit::Bq; });
+
+    DEBUG_MSG("Adding TGeoUnit!kBq methods to provide access to the global variable TGeoUnit::kBq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:296:25
+    module_.method("TGeoUnit!kBq", []()-> double { return TGeoUnit::kBq; });
+
+    DEBUG_MSG("Adding TGeoUnit!MBq methods to provide access to the global variable TGeoUnit::MBq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:297:25
+    module_.method("TGeoUnit!MBq", []()-> double { return TGeoUnit::MBq; });
+
+    DEBUG_MSG("Adding TGeoUnit!GBq methods to provide access to the global variable TGeoUnit::GBq (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:298:25
+    module_.method("TGeoUnit!GBq", []()-> double { return TGeoUnit::GBq; });
+
+    DEBUG_MSG("Adding TGeoUnit!Ci methods to provide access to the global variable TGeoUnit::Ci (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:299:25
+    module_.method("TGeoUnit!Ci", []()-> double { return TGeoUnit::Ci; });
+
+    DEBUG_MSG("Adding TGeoUnit!mCi methods to provide access to the global variable TGeoUnit::mCi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:300:25
+    module_.method("TGeoUnit!mCi", []()-> double { return TGeoUnit::mCi; });
+
+    DEBUG_MSG("Adding TGeoUnit!uCi methods to provide access to the global variable TGeoUnit::uCi (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:301:25
+    module_.method("TGeoUnit!uCi", []()-> double { return TGeoUnit::uCi; });
+
+    DEBUG_MSG("Adding TGeoUnit!gray methods to provide access to the global variable TGeoUnit::gray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:306:25
+    module_.method("TGeoUnit!gray", []()-> double { return TGeoUnit::gray; });
+
+    DEBUG_MSG("Adding TGeoUnit!kilogray methods to provide access to the global variable TGeoUnit::kilogray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:307:25
+    module_.method("TGeoUnit!kilogray", []()-> double { return TGeoUnit::kilogray; });
+
+    DEBUG_MSG("Adding TGeoUnit!milligray methods to provide access to the global variable TGeoUnit::milligray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:308:25
+    module_.method("TGeoUnit!milligray", []()-> double { return TGeoUnit::milligray; });
+
+    DEBUG_MSG("Adding TGeoUnit!microgray methods to provide access to the global variable TGeoUnit::microgray (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:309:25
+    module_.method("TGeoUnit!microgray", []()-> double { return TGeoUnit::microgray; });
+
+    DEBUG_MSG("Adding TGeoUnit!candela methods to provide access to the global variable TGeoUnit::candela (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:314:25
+    module_.method("TGeoUnit!candela", []()-> double { return TGeoUnit::candela; });
+
+    DEBUG_MSG("Adding TGeoUnit!lumen methods to provide access to the global variable TGeoUnit::lumen (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:319:25
+    module_.method("TGeoUnit!lumen", []()-> double { return TGeoUnit::lumen; });
+
+    DEBUG_MSG("Adding TGeoUnit!lux methods to provide access to the global variable TGeoUnit::lux (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:324:25
+    module_.method("TGeoUnit!lux", []()-> double { return TGeoUnit::lux; });
+
+    DEBUG_MSG("Adding TGeoUnit!perCent methods to provide access to the global variable TGeoUnit::perCent (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:329:25
+    module_.method("TGeoUnit!perCent", []()-> double { return TGeoUnit::perCent; });
+
+    DEBUG_MSG("Adding TGeoUnit!perThousand methods to provide access to the global variable TGeoUnit::perThousand (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:330:25
+    module_.method("TGeoUnit!perThousand", []()-> double { return TGeoUnit::perThousand; });
+
+    DEBUG_MSG("Adding TGeoUnit!perMillion methods to provide access to the global variable TGeoUnit::perMillion (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoSystemOfUnits.h:331:25
+    module_.method("TGeoUnit!perMillion", []()-> double { return TGeoUnit::perMillion; });
+
+    DEBUG_MSG("Adding TGeoUnit!Avogadro methods to provide access to the global variable TGeoUnit::Avogadro (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:43:25
+    module_.method("TGeoUnit!Avogadro", []()-> double { return TGeoUnit::Avogadro; });
+
+    DEBUG_MSG("Adding TGeoUnit!c_light methods to provide access to the global variable TGeoUnit::c_light (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:49:25
+    module_.method("TGeoUnit!c_light", []()-> double { return TGeoUnit::c_light; });
+
+    DEBUG_MSG("Adding TGeoUnit!c_squared methods to provide access to the global variable TGeoUnit::c_squared (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:50:25
+    module_.method("TGeoUnit!c_squared", []()-> double { return TGeoUnit::c_squared; });
+
+    DEBUG_MSG("Adding TGeoUnit!h_Planck methods to provide access to the global variable TGeoUnit::h_Planck (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:57:25
+    module_.method("TGeoUnit!h_Planck", []()-> double { return TGeoUnit::h_Planck; });
+
+    DEBUG_MSG("Adding TGeoUnit!hbar_Planck methods to provide access to the global variable TGeoUnit::hbar_Planck (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:58:25
+    module_.method("TGeoUnit!hbar_Planck", []()-> double { return TGeoUnit::hbar_Planck; });
+
+    DEBUG_MSG("Adding TGeoUnit!hbarc methods to provide access to the global variable TGeoUnit::hbarc (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:59:25
+    module_.method("TGeoUnit!hbarc", []()-> double { return TGeoUnit::hbarc; });
+
+    DEBUG_MSG("Adding TGeoUnit!hbarc_squared methods to provide access to the global variable TGeoUnit::hbarc_squared (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:60:25
+    module_.method("TGeoUnit!hbarc_squared", []()-> double { return TGeoUnit::hbarc_squared; });
+
+    DEBUG_MSG("Adding TGeoUnit!electron_charge methods to provide access to the global variable TGeoUnit::electron_charge (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:65:25
+    module_.method("TGeoUnit!electron_charge", []()-> double { return TGeoUnit::electron_charge; });
+
+    DEBUG_MSG("Adding TGeoUnit!e_squared methods to provide access to the global variable TGeoUnit::e_squared (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:66:25
+    module_.method("TGeoUnit!e_squared", []()-> double { return TGeoUnit::e_squared; });
+
+    DEBUG_MSG("Adding TGeoUnit!electron_mass_c2 methods to provide access to the global variable TGeoUnit::electron_mass_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:73:25
+    module_.method("TGeoUnit!electron_mass_c2", []()-> double { return TGeoUnit::electron_mass_c2; });
+
+    DEBUG_MSG("Adding TGeoUnit!proton_mass_c2 methods to provide access to the global variable TGeoUnit::proton_mass_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:74:25
+    module_.method("TGeoUnit!proton_mass_c2", []()-> double { return TGeoUnit::proton_mass_c2; });
+
+    DEBUG_MSG("Adding TGeoUnit!neutron_mass_c2 methods to provide access to the global variable TGeoUnit::neutron_mass_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:75:25
+    module_.method("TGeoUnit!neutron_mass_c2", []()-> double { return TGeoUnit::neutron_mass_c2; });
+
+    DEBUG_MSG("Adding TGeoUnit!amu_c2 methods to provide access to the global variable TGeoUnit::amu_c2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:76:25
+    module_.method("TGeoUnit!amu_c2", []()-> double { return TGeoUnit::amu_c2; });
+
+    DEBUG_MSG("Adding TGeoUnit!amu methods to provide access to the global variable TGeoUnit::amu (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:77:25
+    module_.method("TGeoUnit!amu", []()-> double { return TGeoUnit::amu; });
+
+    DEBUG_MSG("Adding TGeoUnit!mu0 methods to provide access to the global variable TGeoUnit::mu0 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:83:25
+    module_.method("TGeoUnit!mu0", []()-> double { return TGeoUnit::mu0; });
+
+    DEBUG_MSG("Adding TGeoUnit!epsilon0 methods to provide access to the global variable TGeoUnit::epsilon0 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:84:25
+    module_.method("TGeoUnit!epsilon0", []()-> double { return TGeoUnit::epsilon0; });
+
+    DEBUG_MSG("Adding TGeoUnit!elm_coupling methods to provide access to the global variable TGeoUnit::elm_coupling (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:89:25
+    module_.method("TGeoUnit!elm_coupling", []()-> double { return TGeoUnit::elm_coupling; });
+
+    DEBUG_MSG("Adding TGeoUnit!fine_structure_const methods to provide access to the global variable TGeoUnit::fine_structure_const (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:90:25
+    module_.method("TGeoUnit!fine_structure_const", []()-> double { return TGeoUnit::fine_structure_const; });
+
+    DEBUG_MSG("Adding TGeoUnit!classic_electr_radius methods to provide access to the global variable TGeoUnit::classic_electr_radius (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:91:25
+    module_.method("TGeoUnit!classic_electr_radius", []()-> double { return TGeoUnit::classic_electr_radius; });
+
+    DEBUG_MSG("Adding TGeoUnit!electron_Compton_length methods to provide access to the global variable TGeoUnit::electron_Compton_length (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:92:25
+    module_.method("TGeoUnit!electron_Compton_length", []()-> double { return TGeoUnit::electron_Compton_length; });
+
+    DEBUG_MSG("Adding TGeoUnit!Bohr_radius methods to provide access to the global variable TGeoUnit::Bohr_radius (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:93:25
+    module_.method("TGeoUnit!Bohr_radius", []()-> double { return TGeoUnit::Bohr_radius; });
+
+    DEBUG_MSG("Adding TGeoUnit!alpha_rcl2 methods to provide access to the global variable TGeoUnit::alpha_rcl2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:95:25
+    module_.method("TGeoUnit!alpha_rcl2", []()-> double { return TGeoUnit::alpha_rcl2; });
+
+    DEBUG_MSG("Adding TGeoUnit!twopi_mc2_rcl2 methods to provide access to the global variable TGeoUnit::twopi_mc2_rcl2 (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:97:25
+    module_.method("TGeoUnit!twopi_mc2_rcl2", []()-> double { return TGeoUnit::twopi_mc2_rcl2; });
+
+    DEBUG_MSG("Adding TGeoUnit!k_Boltzmann methods to provide access to the global variable TGeoUnit::k_Boltzmann (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:101:25
+    module_.method("TGeoUnit!k_Boltzmann", []()-> double { return TGeoUnit::k_Boltzmann; });
+
+    DEBUG_MSG("Adding TGeoUnit!STP_Temperature methods to provide access to the global variable TGeoUnit::STP_Temperature (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:106:25
+    module_.method("TGeoUnit!STP_Temperature", []()-> double { return TGeoUnit::STP_Temperature; });
+
+    DEBUG_MSG("Adding TGeoUnit!STP_Pressure methods to provide access to the global variable TGeoUnit::STP_Pressure (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:107:25
+    module_.method("TGeoUnit!STP_Pressure", []()-> double { return TGeoUnit::STP_Pressure; });
+
+    DEBUG_MSG("Adding TGeoUnit!kGasThreshold methods to provide access to the global variable TGeoUnit::kGasThreshold (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:108:25
+    module_.method("TGeoUnit!kGasThreshold", []()-> double { return TGeoUnit::kGasThreshold; });
+
+    DEBUG_MSG("Adding TGeoUnit!universe_mean_density methods to provide access to the global variable TGeoUnit::universe_mean_density (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalConstants.h:113:25
+    module_.method("TGeoUnit!universe_mean_density", []()-> double { return TGeoUnit::universe_mean_density; });
   }
 };
 std::shared_ptr<Wrapper> newJlGlobal(jlcxx::Module& module){

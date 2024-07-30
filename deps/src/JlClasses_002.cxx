@@ -7,6 +7,363 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TBrowser> : std::false_type { };
+  template<> struct DefaultConstructible<TBrowser> : std::false_type { };
+template<> struct SuperType<TBrowser> { typedef TNamed type; };
+}
+
+// Class generating the wrapper for type TBrowser
+// signature to use in the veto file: TBrowser
+struct JlTBrowser: public Wrapper {
+
+  JlTBrowser(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TBrowser (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:37:7
+    jlcxx::TypeWrapper<TBrowser>  t = jlModule.add_type<TBrowser>("TBrowser",
+      jlcxx::julia_base_type<TNamed>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TBrowser>>(new jlcxx::TypeWrapper<TBrowser>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, const char *, TBrowserImp *, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:58:4
+    t.constructor<const char *>(/*finalize=*/true);
+    t.constructor<const char *, const char *>(/*finalize=*/true);
+    t.constructor<const char *, const char *, TBrowserImp *>(/*finalize=*/true);
+    t.constructor<const char *, const char *, TBrowserImp *, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, const char *, UInt_t, UInt_t, TBrowserImp *, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:59:4
+    t.constructor<const char *, const char *, UInt_t, UInt_t>(/*finalize=*/true);
+    t.constructor<const char *, const char *, UInt_t, UInt_t, TBrowserImp *>(/*finalize=*/true);
+    t.constructor<const char *, const char *, UInt_t, UInt_t, TBrowserImp *, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, const char *, Int_t, Int_t, UInt_t, UInt_t, TBrowserImp *, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:60:4
+    t.constructor<const char *, const char *, Int_t, Int_t, UInt_t, UInt_t>(/*finalize=*/true);
+    t.constructor<const char *, const char *, Int_t, Int_t, UInt_t, UInt_t, TBrowserImp *>(/*finalize=*/true);
+    t.constructor<const char *, const char *, Int_t, Int_t, UInt_t, UInt_t, TBrowserImp *, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, TObject *, const char *, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:62:4
+    t.constructor<const char *, TObject *>(/*finalize=*/true);
+    t.constructor<const char *, TObject *, const char *>(/*finalize=*/true);
+    t.constructor<const char *, TObject *, const char *, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, TObject *, const char *, UInt_t, UInt_t, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:63:4
+    t.constructor<const char *, TObject *, const char *, UInt_t, UInt_t>(/*finalize=*/true);
+    t.constructor<const char *, TObject *, const char *, UInt_t, UInt_t, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, TObject *, const char *, Int_t, Int_t, UInt_t, UInt_t, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:64:4
+    t.constructor<const char *, TObject *, const char *, Int_t, Int_t, UInt_t, UInt_t>(/*finalize=*/true);
+    t.constructor<const char *, TObject *, const char *, Int_t, Int_t, UInt_t, UInt_t, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, void *, TClass *, const char *, const char *, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:66:4
+    t.constructor<const char *, void *, TClass *>(/*finalize=*/true);
+    t.constructor<const char *, void *, TClass *, const char *>(/*finalize=*/true);
+    t.constructor<const char *, void *, TClass *, const char *, const char *>(/*finalize=*/true);
+    t.constructor<const char *, void *, TClass *, const char *, const char *, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, void *, TClass *, const char *, const char *, UInt_t, UInt_t, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:67:4
+    t.constructor<const char *, void *, TClass *, const char *, const char *, UInt_t, UInt_t>(/*finalize=*/true);
+    t.constructor<const char *, void *, TClass *, const char *, const char *, UInt_t, UInt_t, Option_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::TBrowser(const char *, void *, TClass *, const char *, const char *, Int_t, Int_t, UInt_t, UInt_t, Option_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:68:4
+    t.constructor<const char *, void *, TClass *, const char *, const char *, Int_t, Int_t, UInt_t, UInt_t>(/*finalize=*/true);
+    t.constructor<const char *, void *, TClass *, const char *, const char *, Int_t, Int_t, UInt_t, UInt_t, Option_t *>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Add(TObject *, const char *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Add(TObject *, const char *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:83:18
+    t.method("Add", static_cast<void (TBrowser::*)(TObject *, const char *, Int_t) >(&TBrowser::Add));
+    t.method("Add", [](TBrowser& a, TObject * arg0)->void { a.Add(arg0); });
+    t.method("Add", [](TBrowser& a, TObject * arg0, const char * arg1)->void { a.Add(arg0, arg1); });
+    t.method("Add", [](TBrowser* a, TObject * arg0)->void { a->Add(arg0); });
+    t.method("Add", [](TBrowser* a, TObject * arg0, const char * arg1)->void { a->Add(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Add(void *, TClass *, const char *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Add(void *, TClass *, const char *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:84:18
+    t.method("Add", static_cast<void (TBrowser::*)(void *, TClass *, const char *, Int_t) >(&TBrowser::Add));
+    t.method("Add", [](TBrowser& a, void * arg0, TClass * arg1)->void { a.Add(arg0, arg1); });
+    t.method("Add", [](TBrowser& a, void * arg0, TClass * arg1, const char * arg2)->void { a.Add(arg0, arg1, arg2); });
+    t.method("Add", [](TBrowser* a, void * arg0, TClass * arg1)->void { a->Add(arg0, arg1); });
+    t.method("Add", [](TBrowser* a, void * arg0, TClass * arg1, const char * arg2)->void { a->Add(arg0, arg1, arg2); });
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::AddCheckBox(TObject *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::AddCheckBox(TObject *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:86:18
+    t.method("AddCheckBox", static_cast<void (TBrowser::*)(TObject *, Bool_t) >(&TBrowser::AddCheckBox));
+    t.method("AddCheckBox", [](TBrowser& a, TObject * arg0)->void { a.AddCheckBox(arg0); });
+    t.method("AddCheckBox", [](TBrowser* a, TObject * arg0)->void { a->AddCheckBox(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::CheckObjectItem(TObject *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::CheckObjectItem(TObject *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:87:18
+    t.method("CheckObjectItem", static_cast<void (TBrowser::*)(TObject *, Bool_t) >(&TBrowser::CheckObjectItem));
+    t.method("CheckObjectItem", [](TBrowser& a, TObject * arg0)->void { a.CheckObjectItem(arg0); });
+    t.method("CheckObjectItem", [](TBrowser* a, TObject * arg0)->void { a->CheckObjectItem(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::RemoveCheckBox(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::RemoveCheckBox(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:88:18
+    t.method("RemoveCheckBox", static_cast<void (TBrowser::*)(TObject *) >(&TBrowser::RemoveCheckBox));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Create(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Create(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:90:18
+    t.method("Create", static_cast<void (TBrowser::*)(TObject *) >(&TBrowser::Create));
+    t.method("Create", [](TBrowser& a)->void { a.Create(); });
+    t.method("Create", [](TBrowser* a)->void { a->Create(); });
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Destructor() (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Destructor()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:91:18
+    t.method("Destructor", static_cast<void (TBrowser::*)() >(&TBrowser::Destructor));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::BrowseObject(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::BrowseObject(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:92:18
+    t.method("BrowseObject", static_cast<void (TBrowser::*)(TObject *) >(&TBrowser::BrowseObject));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::ExecuteDefaultAction(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::ExecuteDefaultAction(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:93:18
+    t.method("ExecuteDefaultAction", static_cast<void (TBrowser::*)(TObject *) >(&TBrowser::ExecuteDefaultAction));
+
+    DEBUG_MSG("Adding wrapper for TBrowserImp * TBrowser::GetBrowserImp() (" __HERE__ ")");
+    // signature to use in the veto list: TBrowserImp * TBrowser::GetBrowserImp()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:94:18
+    t.method("GetBrowserImp", static_cast<TBrowserImp * (TBrowser::*)()  const>(&TBrowser::GetBrowserImp));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::SetBrowserImp(TBrowserImp *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::SetBrowserImp(TBrowserImp *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:95:18
+    t.method("SetBrowserImp", static_cast<void (TBrowser::*)(TBrowserImp *) >(&TBrowser::SetBrowserImp));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TBrowser::GetRefreshFlag() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TBrowser::GetRefreshFlag()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:97:18
+    t.method("GetRefreshFlag", static_cast<Bool_t (TBrowser::*)()  const>(&TBrowser::GetRefreshFlag));
+
+    DEBUG_MSG("Adding wrapper for TObject * TBrowser::GetSelected() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TBrowser::GetSelected()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:98:18
+    t.method("GetSelected", static_cast<TObject * (TBrowser::*)()  const>(&TBrowser::GetSelected));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::SetRefreshFlag(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::SetRefreshFlag(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:99:18
+    t.method("SetRefreshFlag", static_cast<void (TBrowser::*)(Bool_t) >(&TBrowser::SetRefreshFlag));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Iconify() (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Iconify()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:100:18
+    t.method("Iconify", static_cast<void (TBrowser::*)() >(&TBrowser::Iconify));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::RecursiveRemove(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::RecursiveRemove(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:101:18
+    t.method("RecursiveRemove", static_cast<void (TBrowser::*)(TObject *) >(&TBrowser::RecursiveRemove));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Refresh() (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Refresh()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:102:18
+    t.method("Refresh", static_cast<void (TBrowser::*)() >(&TBrowser::Refresh));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::SetSelected(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::SetSelected(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:103:18
+    t.method("SetSelected", static_cast<void (TBrowser::*)(TObject *) >(&TBrowser::SetSelected));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Show() (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Show()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:104:18
+    t.method("Show", static_cast<void (TBrowser::*)() >(&TBrowser::Show));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::SetDrawOption(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::SetDrawOption(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:105:18
+    t.method("SetDrawOption", static_cast<void (TBrowser::*)(Option_t *) >(&TBrowser::SetDrawOption));
+    t.method("SetDrawOption", [](TBrowser& a)->void { a.SetDrawOption(); });
+    t.method("SetDrawOption", [](TBrowser* a)->void { a->SetDrawOption(); });
+
+    DEBUG_MSG("Adding wrapper for Option_t * TBrowser::GetDrawOption() (" __HERE__ ")");
+    // signature to use in the veto list: Option_t * TBrowser::GetDrawOption()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:106:18
+    t.method("GetDrawOption", static_cast<Option_t * (TBrowser::*)()  const>(&TBrowser::GetDrawOption));
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TBrowser::ExecPlugin(const char *, const char *, const char *, Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TBrowser::ExecPlugin(const char *, const char *, const char *, Int_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:108:18
+    t.method("ExecPlugin", static_cast<Longptr_t (TBrowser::*)(const char *, const char *, const char *, Int_t, Int_t) >(&TBrowser::ExecPlugin));
+    t.method("ExecPlugin", [](TBrowser& a)->Longptr_t { return a.ExecPlugin(); });
+    t.method("ExecPlugin", [](TBrowser& a, const char * arg0)->Longptr_t { return a.ExecPlugin(arg0); });
+    t.method("ExecPlugin", [](TBrowser& a, const char * arg0, const char * arg1)->Longptr_t { return a.ExecPlugin(arg0, arg1); });
+    t.method("ExecPlugin", [](TBrowser& a, const char * arg0, const char * arg1, const char * arg2)->Longptr_t { return a.ExecPlugin(arg0, arg1, arg2); });
+    t.method("ExecPlugin", [](TBrowser& a, const char * arg0, const char * arg1, const char * arg2, Int_t arg3)->Longptr_t { return a.ExecPlugin(arg0, arg1, arg2, arg3); });
+    t.method("ExecPlugin", [](TBrowser* a)->Longptr_t { return a->ExecPlugin(); });
+    t.method("ExecPlugin", [](TBrowser* a, const char * arg0)->Longptr_t { return a->ExecPlugin(arg0); });
+    t.method("ExecPlugin", [](TBrowser* a, const char * arg0, const char * arg1)->Longptr_t { return a->ExecPlugin(arg0, arg1); });
+    t.method("ExecPlugin", [](TBrowser* a, const char * arg0, const char * arg1, const char * arg2)->Longptr_t { return a->ExecPlugin(arg0, arg1, arg2); });
+    t.method("ExecPlugin", [](TBrowser* a, const char * arg0, const char * arg1, const char * arg2, Int_t arg3)->Longptr_t { return a->ExecPlugin(arg0, arg1, arg2, arg3); });
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::SetStatusText(const char *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::SetStatusText(const char *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:112:18
+    t.method("SetStatusText", static_cast<void (TBrowser::*)(const char *, Int_t) >(&TBrowser::SetStatusText));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::StartEmbedding(Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::StartEmbedding(Int_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:115:18
+    t.method("StartEmbedding", static_cast<void (TBrowser::*)(Int_t, Int_t) >(&TBrowser::StartEmbedding));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::StopEmbedding(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::StopEmbedding(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:118:18
+    t.method("StopEmbedding", static_cast<void (TBrowser::*)(const char *) >(&TBrowser::StopEmbedding));
+    t.method("StopEmbedding", [](TBrowser& a)->void { a.StopEmbedding(); });
+    t.method("StopEmbedding", [](TBrowser* a)->void { a->StopEmbedding(); });
+
+    DEBUG_MSG("Adding wrapper for Version_t TBrowser::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TBrowser::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!Class_Version", static_cast<Version_t (*)() >(&TBrowser::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TBrowser::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TBrowser::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    t.method("IsA", static_cast<TClass * (TBrowser::*)()  const>(&TBrowser::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    t.method("StreamerNVirtual", static_cast<void (TBrowser::*)(TBuffer &) >(&TBrowser::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TBrowser::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TBrowser::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!DeclFileName", []() { return (std::string)TBrowser::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TBrowser::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TBrowser::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!ImplFileLine", static_cast<int (*)() >(&TBrowser::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TBrowser::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TBrowser::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!ImplFileName", []() { return (std::string)TBrowser::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TBrowser::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TBrowser::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!Class_Name", []() { return (std::string)TBrowser::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TBrowser::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TBrowser::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!Dictionary", static_cast<TClass * (*)() >(&TBrowser::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TBrowser::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TBrowser::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!Class", static_cast<TClass * (*)() >(&TBrowser::Class));
+
+    DEBUG_MSG("Adding wrapper for void TBrowser::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TBrowser::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    t.method("Streamer", static_cast<void (TBrowser::*)(TBuffer &) >(&TBrowser::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TBrowser::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TBrowser::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:120:4
+    module_.method("TBrowser!DeclFileLine", static_cast<int (*)() >(&TBrowser::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TBrowser>> type_;
+};
+std::shared_ptr<Wrapper> newJlTBrowser(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTBrowser(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TCollection> : std::false_type { };
+  template<> struct DefaultConstructible<TCollection> : std::false_type { };
+template<> struct SuperType<TCollection> { typedef TObject type; };
+}
+
+// Class generating the wrapper for type TCollection
+// signature to use in the veto file: TCollection
+struct JlTCollection: public Wrapper {
+
+  JlTCollection(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TCollection (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TCollection.h:65:7
+    jlcxx::TypeWrapper<TCollection>  t = jlModule.add_type<TCollection>("TCollection",
+      jlcxx::julia_base_type<TObject>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TCollection>>(new jlcxx::TypeWrapper<TCollection>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TCollection>> type_;
+};
+std::shared_ptr<Wrapper> newJlTCollection(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTCollection(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TSeqCollection> : std::false_type { };
+  template<> struct DefaultConstructible<TSeqCollection> : std::false_type { };
+template<> struct SuperType<TSeqCollection> { typedef TCollection type; };
+}
+
+// Class generating the wrapper for type TSeqCollection
+// signature to use in the veto file: TSeqCollection
+struct JlTSeqCollection: public Wrapper {
+
+  JlTSeqCollection(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TSeqCollection (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TSeqCollection.h:28:7
+    jlcxx::TypeWrapper<TSeqCollection>  t = jlModule.add_type<TSeqCollection>("TSeqCollection",
+      jlcxx::julia_base_type<TCollection>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TSeqCollection>>(new jlcxx::TypeWrapper<TSeqCollection>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TSeqCollection>> type_;
+};
+std::shared_ptr<Wrapper> newJlTSeqCollection(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTSeqCollection(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TObjArray> : std::false_type { };
   template<> struct DefaultConstructible<TObjArray> : std::false_type { };
 template<> struct SuperType<TObjArray> { typedef TSeqCollection type; };
@@ -62,61 +419,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTTimer(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTTimer(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TClass> : std::false_type { };
-  template<> struct DefaultConstructible<TClass> : std::false_type { };
-}
-
-// Class generating the wrapper for type TClass
-// signature to use in the veto file: TClass
-struct JlTClass: public Wrapper {
-
-  JlTClass(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TClass (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TClass.h:81:7
-    jlcxx::TypeWrapper<TClass>  t = jlModule.add_type<TClass>("TClass");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TClass>>(new jlcxx::TypeWrapper<TClass>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TClass>> type_;
-};
-std::shared_ptr<Wrapper> newJlTClass(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTClass(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TBuffer> : std::false_type { };
-  template<> struct DefaultConstructible<TBuffer> : std::false_type { };
-template<> struct SuperType<TBuffer> { typedef TObject type; };
-}
-
-// Class generating the wrapper for type TBuffer
-// signature to use in the veto file: TBuffer
-struct JlTBuffer: public Wrapper {
-
-  JlTBuffer(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TBuffer (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBuffer.h:43:7
-    jlcxx::TypeWrapper<TBuffer>  t = jlModule.add_type<TBuffer>("TBuffer",
-      jlcxx::julia_base_type<TObject>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TBuffer>>(new jlcxx::TypeWrapper<TBuffer>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TBuffer>> type_;
-};
-std::shared_ptr<Wrapper> newJlTBuffer(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTBuffer(module));
 }

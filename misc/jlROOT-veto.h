@@ -10,10 +10,12 @@ void TROOT::TROOT(const char *, const char *, VoidFuncPtr_t *);
 // (complains a conversion method to a Julia type is missing).
 Func_t TSystem::DynFindSymbol(const char *, const char *);
 
-// Following method has a similar one, where parameters of the callback
+// Following methods have a similar ones, where parameters of the callback
 // function are declared as const. Only one signature of callback function
 // can be wrapped.
 void TF1::TF1(const char *, Double_t (*)(Double_t *, Double_t *), Double_t, Double_t, Int_t, Int_t, TF1::EAddToList);
+void TF2::TF2(const char *, Double_t (*)(Double_t *, Double_t *), Double_t, Double_t, Double_t, Double_t, Int_t, Int_t);
+void TF3::TF3(const char *, Double_t (*)(Double_t *, Double_t *), Double_t, Double_t, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t);
 
 /.*std::[io]stream.*/;
 
@@ -41,9 +43,32 @@ TBranch * TTree::Branch(const char *, Longptr_t, const char *, Int_t);
 //const char * TObjArrayIter::DeclFileName();
 ///.*TObject::.*/;
 
-/.*ROOT::Internal::.*/
+/.*ROOT::Internal::.*/;
+///.*ROOT::Experimental::Internal::.*/
+/.*ROOT::Experimental::.*/;
 
-std::atomic
+std::atomic;
+
+//Causing compilation issue because of pure virtual methods
+ROOT::Math::IBaseFunctionMultiDimTempl;
+
+//Causing compilation issue because of lack of WrapIt! support
+//for templated mother classes
+TMatrixTBase;
+
+//Causing a compilation issue
+TVirtualGeoConverter;
+
+////Causing a compilation issue
+//TVirtualMutex;
+
+TVirtualFitter::FCNFunc_t TVirtualFitter::GetFCN();
+
+//Issue at linkage. A priori outdated: see macro OLD in hist/hist/src/TFractionFitter.cxx.
+void TFractionFitFCN(Int_t &, Double_t *, Double_t &, Double_t *, Int_t);
 
 //Generates a build error
 TMatrixTBase
+
+//Generates a build error
+Vc_1::Vector

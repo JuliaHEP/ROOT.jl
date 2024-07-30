@@ -60,7 +60,7 @@ found_root_ok || exit(1)
 
 const buildpath = joinpath(scratch, "build")
 
-cmd=`make BUILD_DIR=$buildpath CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS)`
+cmd=`time make BUILD_DIR=$buildpath CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS)`
 @info "Build command: " * string(cmd)[2:end-1] * " executed in " * pwd() * " directory."
 
 #julia needs to be in the PATH for julia-config.jl, invoked by the Makefile, to run

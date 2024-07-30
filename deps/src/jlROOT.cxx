@@ -10,6 +10,9 @@
 #include "dbg_msg.h"
 #include "Wrapper.h"
 
+class JlTClass;
+class Jlstd_type_info;
+class JlTVirtualIsAProxy;
 class JlTObject;
 class JlTNamed;
 class JlTBrowser;
@@ -17,7 +20,6 @@ class JlTCollection;
 class JlTSeqCollection;
 class JlTObjArray;
 class JlTTimer;
-class JlTClass;
 class JlTBuffer;
 class JlTVectorT;
 class JlTString;
@@ -32,26 +34,11 @@ class JlTVirtualMutex;
 class JlTROOT;
 class JlTApplication;
 class JlTInterpreter;
-class Jlstd_type_info;
 class JlTDataType;
 class JlTVirtualPad;
 class JlTPad;
 class JlTCanvas;
 class JlTBrowserImp;
-class JlROOT_Experimental_Internal_TBulkBranchRead;
-class JlTBranch;
-class JlTTree;
-class JlTLeaf;
-class JlTClonesArray;
-class JlROOT_TIOFeatures;
-class JlTTree_TClusterIterator;
-class JlTStreamerInfo;
-class JlTEntryList;
-class JlTH1;
-class JlTIterator;
-class JlTVirtualTreePlayer;
-class JlTTreeFriendLeafIter;
-class JlTBranchPtr;
 class JlFileStat_t;
 class JlUserGroup_t;
 class JlSysInfo_t;
@@ -67,42 +54,249 @@ class JlTStdExceptionHandler;
 class JlTTime;
 class JlFILE;
 class JlTInetAddress;
+class JlTApplicationImp;
+class JlTBranch;
+class JlTTree;
+class JlTLeaf;
+class JlTClonesArray;
+class JlROOT_TIOFeatures;
+class JlTTree_TClusterIterator;
+class JlTStreamerInfo;
+class JlTEntryList;
+class JlTH1;
+class JlTIterator;
+class JlTVirtualTreePlayer;
+class JlTPrincipal;
+class JlTTreeFriendLeafIter;
+class JlTBranchPtr;
+class JlTTreeReader;
+class JlTTreeReaderValue;
+class JlTTreeReader_Iterator_t;
+class JlTTreeReaderArray;
 class JlTObjLink;
+class JlTRandom;
+class JlTDatime;
+class JlTArray;
+class JlTArrayC;
+class JlTUrl;
+class JlTFileOpenHandle;
+class JlFoption_t;
+class JlTFitResultPtr;
+class JlTFitResult;
+class JlTF1;
+class JlROOT_Math_MinimizerOptions;
+class JlROOT_Fit_DataRange;
+class JlTGraph;
+class JlTGraph2D;
+class JlTHnBase;
+class JlROOT_Fit_FitData;
+class JlROOT_Fit_UnBinData;
+class JlROOT_Fit_BinData;
+class JlROOT_Fit_FitResult;
+class JlTGraphErrors;
 class JlTAxis;
 class JlTArrayD;
-class JlFoption_t;
-class JlTF1;
-class JlTRandom;
-class JlTFitResultPtr;
+class JlTAxisModLab;
+class JlTVirtualFitter;
+class JlTMethodCall;
+class JlTBackCompFitter;
+class JlROOT_Fit_FitConfig;
+class JlTBinomialEfficiencyFitter;
+class JlROOT_Fit_Fitter;
+class JlTConfidenceLevel;
+class JlTEfficiency;
+class JlTGraphAsymmErrors;
+class JlTGraph2DAsymmErrors;
+class JlTH2;
+class JlTFormulaFunction;
+class JlTFormulaVariable;
+class JlTFormulaParamOrder;
+class JlTFormula;
+class JlTF1AbsComposition;
+class JlTF1Parameters;
+class JlTF1_TF1FunctorPointer;
+class JlTF2;
+class JlTF12;
+class JlTSpline;
+class JlTH1F;
+class JlTF1Convolution;
+class JlTF1NormSum;
+class JlTF3;
+class JlTMatrixTSym;
+class JlTFractionFitter;
+class JlTH2D;
+class JlTGraph2DErrors;
+class JlTGraphBentErrors;
+class JlTGraphDelaunay2D;
+class JlTGraphDelaunay;
+class JlTGraphMultiErrors;
+class JlTArrayF;
+class JlTAttFill;
+class JlTAttLine;
+class JlTGraphSmooth;
+class JlTGraphTime;
+class JlTVirtualHistPainter;
 class JlTH1C;
 class JlTH1S;
 class JlTH1I;
-class JlTH1F;
 class JlTH1D;
-class JlTH2;
+class JlTH1K;
 class JlTProfile;
 class JlTH2C;
 class JlTH2S;
 class JlTH2I;
 class JlTH2F;
-class JlTH2D;
+class JlTH2PolyBin;
+class JlTH2Poly;
+class JlTH3;
 class JlTProfile2D;
-class JlTApplicationImp;
-class JlTDatime;
-class JlTArrayC;
-class JlTUrl;
-class JlTFileOpenHandle;
-class JlTGraph;
-class JlTF1Parameters;
-class JlTF1_TF1FunctorPointer;
-class JlTFormula;
-class JlTMethodCall;
-class JlTTreeReader;
-class JlTTreeReaderValue;
-class JlTTreeReader_Iterator_t;
-class JlTTreeReaderArray;
+class JlTH3C;
+class JlTH3S;
+class JlTH3I;
+class JlTH3F;
+class JlTH3D;
+class JlTBinIterator;
+class JlTHistRange;
+class JlTHLimitsFinder;
+class JlTHnIter;
+class JlTHnChain;
+class JlTNDArray;
+class JlTHn;
+class JlTHnSparseArrayChunk;
+class JlTHnSparse;
+class JlTHStack;
+class JlTIter;
+class JlTKDE;
+class JlTKDE_TKernel;
+class JlTLimitDataSource;
+class JlTLimit;
+class JlTMultiDimFit;
+class JlTMatrixT;
+class JlTPolyMarker;
+class JlTProfile2PolyBin;
+class JlTProfile2Poly;
+class JlTProfile3D;
+class JlTScatter;
+class JlTSplinePoly;
+class JlTSplinePoly3;
+class JlTSplinePoly5;
+class JlTSpline3;
+class JlTSpline5;
+class JlTSVDUnfold;
+class JlTVirtualGraphPainter;
+class JlTVirtualPaveStats;
+class JlTGDMLMatrix;
+class JlTGeoShape;
+class JlTGeoMatrix;
+class JlTGeoVolume;
+class JlTGeoBBox;
+class JlTGeoArb8;
+class JlTGeoTrap;
+class JlTGeoGtra;
+class JlTGeoAtt;
+class JlTGeoBoolNode;
+class JlTGeoBoolNode_ThreadData_t;
+class JlTGeoUnion;
+class JlTGeoIntersection;
+class JlTGeoSubtraction;
+class JlTGeoHMatrix;
+class JlTGeoTranslation;
+class JlTGeoRotation;
+class JlTGeoScale;
+class JlTGeoCombiTrans;
+class JlTGeoGenTrans;
+class JlTGeoIdentity;
+class JlTGeoBranchArray;
+class JlTGeoNode;
+class JlTGeoNavigator;
+class JlcompareBAasc;
+class JlcompareBAdesc;
+class JlTGeoBuilder;
+class JlTGeoManager;
+class JlTGeoMaterial;
+class JlTGeoMedium;
+class JlTGeoVolumeAssembly;
+class JlTGeoVolumeMulti;
+class JlTGeoElement;
+class JlTGeoIsotope;
+class JlTGeoElementTable;
+class JlTGeoElementRN;
+class JlTGeoDecayChannel;
+class JlTGeoBatemanSol;
+class JlTGeoElemIter;
+class JlTGeoExtension;
+class JlTGeoMixture;
+class JlTGeoPatternFinder;
+class JlTGeoVoxelFinder;
+class JlTGeoVolumeAssembly_ThreadData_t;
+class JlTGeoPatternFinder_ThreadData_t;
+class JlTGeoPatternX;
+class JlTGeoPatternY;
+class JlTGeoPatternZ;
+class JlTGeoPatternParaX;
+class JlTGeoPatternParaY;
+class JlTGeoPatternParaZ;
+class JlTGeoPatternTrapZ;
+class JlTGeoPatternCylR;
+class JlTGeoPatternCylPhi;
+class JlTGeoPatternSphR;
+class JlTGeoPatternSphTheta;
+class JlTGeoPatternSphPhi;
+class JlTGeoPatternHoneycomb;
+class JlTGeoNodeMatrix;
+class JlTGeoNodeOffset;
+class JlTGeoIteratorPlugin;
+class JlTGeoIterator;
+class JlTGeoStateInfo;
+class JlTGeoPolygon;
+class JlTGeoCacheState;
+class JlTGeoNodeCache;
+class JlTGeoCompositeShape;
+class JlTGeoCone;
+class JlTGeoConeSeg;
+class JlTGeoTube;
+class JlTGeoTubeSeg;
+class JlTGeoCtub;
+class JlTGeoEltu;
+class JlTGeoRCExtension;
+class JlTVirtualMagField;
+class JlTGeoUniformMagField;
+class JlTGeoGlobalMagField;
+class JlTGeoHalfSpace;
+class JlTGeoHelix;
+class JlTGeoHype;
+class JlTGeoNavigatorArray;
+class JlTGeoRegion;
+class JlTVirtualGeoTrack;
+class JlTVirtualGeoPainter;
+class JlTGeoPNEntry;
+class JlTGeoPhysicalNode;
+class JlTGeoOpticalSurface;
+class JlTGeoSkinSurface;
+class JlTGeoBorderSurface;
+class JlTGeoParallelWorld;
+class JlTGeoParaboloid;
+class JlTGeoPara;
+class JlTGeoPcon;
+class JlTGeoPgon;
+class JlTGeoPgon_ThreadData_t;
+class JlTGeoRegionCut;
+class JlTGeoScaledShape;
+class JlTGeoShapeAssembly;
+class JlTGeoSphere;
+class JlROOT_Geom_Vertex_t;
+class JlTGeoFacet;
+class JlTGeoTessellated;
+class JlTGeoTorus;
+class JlTGeoTrd1;
+class JlTGeoTrd2;
+class JlTGeoXtru;
+class JlTGeoXtru_ThreadData_t;
 class JlGlobal;
 
+std::shared_ptr<Wrapper> newJlTClass(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlstd_type_info(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualIsAProxy(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTObject(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTNamed(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTBrowser(jlcxx::Module&);
@@ -110,7 +304,6 @@ std::shared_ptr<Wrapper> newJlTCollection(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTSeqCollection(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTObjArray(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTTimer(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTClass(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTBuffer(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTVectorT(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTString(jlcxx::Module&);
@@ -125,26 +318,11 @@ std::shared_ptr<Wrapper> newJlTVirtualMutex(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTROOT(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTApplication(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTInterpreter(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlstd_type_info(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTDataType(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTVirtualPad(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTPad(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTCanvas(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTBrowserImp(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlROOT_Experimental_Internal_TBulkBranchRead(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTBranch(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTTree(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTLeaf(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTClonesArray(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlROOT_TIOFeatures(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTTree_TClusterIterator(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTStreamerInfo(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTEntryList(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTH1(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTIterator(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTVirtualTreePlayer(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTTreeFriendLeafIter(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTBranchPtr(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlFileStat_t(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlUserGroup_t(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlSysInfo_t(jlcxx::Module&);
@@ -160,40 +338,244 @@ std::shared_ptr<Wrapper> newJlTStdExceptionHandler(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTTime(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlFILE(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTInetAddress(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTApplicationImp(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTBranch(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTTree(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTLeaf(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTClonesArray(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_TIOFeatures(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTTree_TClusterIterator(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTStreamerInfo(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTEntryList(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH1(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTIterator(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualTreePlayer(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTPrincipal(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTTreeFriendLeafIter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTBranchPtr(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTTreeReader(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTTreeReaderValue(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTTreeReader_Iterator_t(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTTreeReaderArray(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTObjLink(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTRandom(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTDatime(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTArray(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTArrayC(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTUrl(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFileOpenHandle(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlFoption_t(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFitResultPtr(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFitResult(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF1(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Math_MinimizerOptions(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Fit_DataRange(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraph(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraph2D(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHnBase(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Fit_FitData(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Fit_UnBinData(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Fit_BinData(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Fit_FitResult(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphErrors(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTAxis(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTArrayD(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlFoption_t(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTF1(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTRandom(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTFitResultPtr(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTAxisModLab(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualFitter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTMethodCall(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTBackCompFitter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Fit_FitConfig(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTBinomialEfficiencyFitter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Fit_Fitter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTConfidenceLevel(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTEfficiency(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphAsymmErrors(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraph2DAsymmErrors(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH2(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFormulaFunction(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFormulaVariable(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFormulaParamOrder(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFormula(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF1AbsComposition(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF1Parameters(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF1_TF1FunctorPointer(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF2(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF12(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTSpline(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH1F(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF1Convolution(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF1NormSum(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTF3(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTMatrixTSym(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTFractionFitter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH2D(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraph2DErrors(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphBentErrors(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphDelaunay2D(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphDelaunay(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphMultiErrors(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTArrayF(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTAttFill(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTAttLine(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphSmooth(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGraphTime(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualHistPainter(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1C(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1S(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1I(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTH1F(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1D(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTH2(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH1K(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTProfile(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2C(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2S(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2I(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2F(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTH2D(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH2PolyBin(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH2Poly(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH3(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTProfile2D(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTApplicationImp(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTDatime(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTArrayC(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTUrl(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTFileOpenHandle(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTGraph(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTF1Parameters(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTF1_TF1FunctorPointer(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTFormula(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTMethodCall(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTTreeReader(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTTreeReaderValue(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTTreeReader_Iterator_t(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTTreeReaderArray(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH3C(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH3S(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH3I(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH3F(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH3D(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTBinIterator(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHistRange(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHLimitsFinder(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHnIter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHnChain(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTNDArray(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHn(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHnSparseArrayChunk(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHnSparse(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTHStack(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTIter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTKDE(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTKDE_TKernel(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTLimitDataSource(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTLimit(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTMultiDimFit(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTMatrixT(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTPolyMarker(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTProfile2PolyBin(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTProfile2Poly(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTProfile3D(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTScatter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTSplinePoly(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTSplinePoly3(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTSplinePoly5(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTSpline3(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTSpline5(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTSVDUnfold(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualGraphPainter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualPaveStats(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGDMLMatrix(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoShape(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoMatrix(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoVolume(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoBBox(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoArb8(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTrap(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoGtra(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoAtt(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoBoolNode(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoBoolNode_ThreadData_t(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoUnion(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoIntersection(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoSubtraction(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoHMatrix(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTranslation(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoRotation(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoScale(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoCombiTrans(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoGenTrans(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoIdentity(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoBranchArray(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoNode(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoNavigator(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlcompareBAasc(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlcompareBAdesc(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoBuilder(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoManager(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoMaterial(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoMedium(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoVolumeAssembly(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoVolumeMulti(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoElement(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoIsotope(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoElementTable(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoElementRN(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoDecayChannel(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoBatemanSol(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoElemIter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoExtension(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoMixture(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternFinder(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoVoxelFinder(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoVolumeAssembly_ThreadData_t(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternFinder_ThreadData_t(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternX(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternY(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternZ(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternParaX(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternParaY(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternParaZ(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternTrapZ(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternCylR(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternCylPhi(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternSphR(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternSphTheta(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternSphPhi(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPatternHoneycomb(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoNodeMatrix(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoNodeOffset(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoIteratorPlugin(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoIterator(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoStateInfo(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPolygon(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoCacheState(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoNodeCache(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoCompositeShape(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoCone(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoConeSeg(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTube(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTubeSeg(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoCtub(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoEltu(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoRCExtension(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualMagField(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoUniformMagField(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoGlobalMagField(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoHalfSpace(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoHelix(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoHype(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoNavigatorArray(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoRegion(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualGeoTrack(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTVirtualGeoPainter(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPNEntry(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPhysicalNode(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoOpticalSurface(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoSkinSurface(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoBorderSurface(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoParallelWorld(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoParaboloid(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPara(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPcon(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPgon(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoPgon_ThreadData_t(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoRegionCut(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoScaledShape(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoShapeAssembly(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoSphere(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlROOT_Geom_Vertex_t(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoFacet(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTessellated(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTorus(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTrd1(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoTrd2(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoXtru(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTGeoXtru_ThreadData_t(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlGlobal(jlcxx::Module&);
 //method from libcxxwrap returning its version
 extern "C" JLCXX_API const char* cxxwrap_version_string();
@@ -231,6 +613,9 @@ JLCXX_MODULE define_julia_module(jlcxx::Module& jlModule){
 throw_if_version_incompatibility();
 
   std::vector<std::shared_ptr<Wrapper>> wrappers = {
+    std::shared_ptr<Wrapper>(newJlTClass(jlModule)),
+    std::shared_ptr<Wrapper>(newJlstd_type_info(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualIsAProxy(jlModule)),
     std::shared_ptr<Wrapper>(newJlTObject(jlModule)),
     std::shared_ptr<Wrapper>(newJlTNamed(jlModule)),
     std::shared_ptr<Wrapper>(newJlTBrowser(jlModule)),
@@ -238,7 +623,6 @@ throw_if_version_incompatibility();
     std::shared_ptr<Wrapper>(newJlTSeqCollection(jlModule)),
     std::shared_ptr<Wrapper>(newJlTObjArray(jlModule)),
     std::shared_ptr<Wrapper>(newJlTTimer(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTClass(jlModule)),
     std::shared_ptr<Wrapper>(newJlTBuffer(jlModule)),
     std::shared_ptr<Wrapper>(newJlTVectorT(jlModule)),
     std::shared_ptr<Wrapper>(newJlTString(jlModule)),
@@ -253,26 +637,11 @@ throw_if_version_incompatibility();
     std::shared_ptr<Wrapper>(newJlTROOT(jlModule)),
     std::shared_ptr<Wrapper>(newJlTApplication(jlModule)),
     std::shared_ptr<Wrapper>(newJlTInterpreter(jlModule)),
-    std::shared_ptr<Wrapper>(newJlstd_type_info(jlModule)),
     std::shared_ptr<Wrapper>(newJlTDataType(jlModule)),
     std::shared_ptr<Wrapper>(newJlTVirtualPad(jlModule)),
     std::shared_ptr<Wrapper>(newJlTPad(jlModule)),
     std::shared_ptr<Wrapper>(newJlTCanvas(jlModule)),
     std::shared_ptr<Wrapper>(newJlTBrowserImp(jlModule)),
-    std::shared_ptr<Wrapper>(newJlROOT_Experimental_Internal_TBulkBranchRead(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTBranch(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTTree(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTLeaf(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTClonesArray(jlModule)),
-    std::shared_ptr<Wrapper>(newJlROOT_TIOFeatures(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTTree_TClusterIterator(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTStreamerInfo(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTEntryList(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTH1(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTIterator(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTVirtualTreePlayer(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTTreeFriendLeafIter(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTBranchPtr(jlModule)),
     std::shared_ptr<Wrapper>(newJlFileStat_t(jlModule)),
     std::shared_ptr<Wrapper>(newJlUserGroup_t(jlModule)),
     std::shared_ptr<Wrapper>(newJlSysInfo_t(jlModule)),
@@ -288,42 +657,273 @@ throw_if_version_incompatibility();
     std::shared_ptr<Wrapper>(newJlTTime(jlModule)),
     std::shared_ptr<Wrapper>(newJlFILE(jlModule)),
     std::shared_ptr<Wrapper>(newJlTInetAddress(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTApplicationImp(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTBranch(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTTree(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTLeaf(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTClonesArray(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_TIOFeatures(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTTree_TClusterIterator(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTStreamerInfo(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTEntryList(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH1(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTIterator(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualTreePlayer(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTPrincipal(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTTreeFriendLeafIter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTBranchPtr(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTTreeReader(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTTreeReaderValue(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTTreeReader_Iterator_t(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTTreeReaderArray(jlModule)),
     std::shared_ptr<Wrapper>(newJlTObjLink(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTRandom(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTDatime(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTArray(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTArrayC(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTUrl(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFileOpenHandle(jlModule)),
+    std::shared_ptr<Wrapper>(newJlFoption_t(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFitResultPtr(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFitResult(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF1(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Math_MinimizerOptions(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Fit_DataRange(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraph(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraph2D(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHnBase(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Fit_FitData(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Fit_UnBinData(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Fit_BinData(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Fit_FitResult(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphErrors(jlModule)),
     std::shared_ptr<Wrapper>(newJlTAxis(jlModule)),
     std::shared_ptr<Wrapper>(newJlTArrayD(jlModule)),
-    std::shared_ptr<Wrapper>(newJlFoption_t(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTF1(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTRandom(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTFitResultPtr(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTAxisModLab(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualFitter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTMethodCall(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTBackCompFitter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Fit_FitConfig(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTBinomialEfficiencyFitter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Fit_Fitter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTConfidenceLevel(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTEfficiency(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphAsymmErrors(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraph2DAsymmErrors(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH2(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFormulaFunction(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFormulaVariable(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFormulaParamOrder(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFormula(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF1AbsComposition(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF1Parameters(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF1_TF1FunctorPointer(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF2(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF12(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTSpline(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH1F(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF1Convolution(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF1NormSum(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTF3(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTMatrixTSym(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTFractionFitter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH2D(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraph2DErrors(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphBentErrors(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphDelaunay2D(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphDelaunay(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphMultiErrors(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTArrayF(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTAttFill(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTAttLine(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphSmooth(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGraphTime(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualHistPainter(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1C(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1S(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1I(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTH1F(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1D(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTH2(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH1K(jlModule)),
     std::shared_ptr<Wrapper>(newJlTProfile(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2C(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2S(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2I(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2F(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTH2D(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH2PolyBin(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH2Poly(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH3(jlModule)),
     std::shared_ptr<Wrapper>(newJlTProfile2D(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTApplicationImp(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTDatime(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTArrayC(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTUrl(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTFileOpenHandle(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTGraph(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTF1Parameters(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTF1_TF1FunctorPointer(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTFormula(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTMethodCall(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTTreeReader(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTTreeReaderValue(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTTreeReader_Iterator_t(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTTreeReaderArray(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH3C(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH3S(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH3I(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH3F(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH3D(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTBinIterator(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHistRange(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHLimitsFinder(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHnIter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHnChain(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTNDArray(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHn(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHnSparseArrayChunk(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHnSparse(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTHStack(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTIter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTKDE(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTKDE_TKernel(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTLimitDataSource(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTLimit(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTMultiDimFit(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTMatrixT(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTPolyMarker(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTProfile2PolyBin(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTProfile2Poly(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTProfile3D(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTScatter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTSplinePoly(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTSplinePoly3(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTSplinePoly5(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTSpline3(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTSpline5(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTSVDUnfold(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualGraphPainter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualPaveStats(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGDMLMatrix(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoShape(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoMatrix(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoVolume(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoBBox(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoArb8(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTrap(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoGtra(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoAtt(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoBoolNode(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoBoolNode_ThreadData_t(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoUnion(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoIntersection(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoSubtraction(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoHMatrix(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTranslation(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoRotation(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoScale(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoCombiTrans(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoGenTrans(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoIdentity(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoBranchArray(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoNode(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoNavigator(jlModule)),
+    std::shared_ptr<Wrapper>(newJlcompareBAasc(jlModule)),
+    std::shared_ptr<Wrapper>(newJlcompareBAdesc(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoBuilder(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoManager(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoMaterial(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoMedium(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoVolumeAssembly(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoVolumeMulti(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoElement(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoIsotope(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoElementTable(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoElementRN(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoDecayChannel(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoBatemanSol(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoElemIter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoExtension(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoMixture(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternFinder(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoVoxelFinder(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoVolumeAssembly_ThreadData_t(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternFinder_ThreadData_t(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternX(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternY(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternZ(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternParaX(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternParaY(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternParaZ(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternTrapZ(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternCylR(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternCylPhi(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternSphR(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternSphTheta(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternSphPhi(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPatternHoneycomb(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoNodeMatrix(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoNodeOffset(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoIteratorPlugin(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoIterator(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoStateInfo(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPolygon(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoCacheState(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoNodeCache(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoCompositeShape(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoCone(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoConeSeg(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTube(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTubeSeg(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoCtub(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoEltu(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoRCExtension(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualMagField(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoUniformMagField(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoGlobalMagField(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoHalfSpace(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoHelix(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoHype(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoNavigatorArray(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoRegion(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualGeoTrack(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTVirtualGeoPainter(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPNEntry(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPhysicalNode(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoOpticalSurface(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoSkinSurface(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoBorderSurface(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoParallelWorld(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoParaboloid(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPara(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPcon(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPgon(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoPgon_ThreadData_t(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoRegionCut(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoScaledShape(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoShapeAssembly(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoSphere(jlModule)),
+    std::shared_ptr<Wrapper>(newJlROOT_Geom_Vertex_t(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoFacet(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTessellated(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTorus(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTrd1(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoTrd2(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoXtru(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTGeoXtru_ThreadData_t(jlModule)),
     std::shared_ptr<Wrapper>(newJlGlobal(jlModule))
   };
+
+  DEBUG_MSG("Adding wrapper for enum ESysConstants (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/Rtypes.h:58:6
+  jlModule.add_bits<ESysConstants>("ESysConstants", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("kMAXSIGNALS", kMAXSIGNALS);
+  jlModule.set_const("kMAXPATHLEN", kMAXPATHLEN);
+  jlModule.set_const("kBUFFERSIZE", kBUFFERSIZE);
+  jlModule.set_const("kItimerResolution", kItimerResolution);
+
+  DEBUG_MSG("Adding wrapper for enum EColor (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/Rtypes.h:65:6
+  jlModule.add_bits<EColor>("EColor", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("kWhite", kWhite);
+  jlModule.set_const("kBlack", kBlack);
+  jlModule.set_const("kGray", kGray);
+  jlModule.set_const("kRed", kRed);
+  jlModule.set_const("kGreen", kGreen);
+  jlModule.set_const("kBlue", kBlue);
+  jlModule.set_const("kYellow", kYellow);
+  jlModule.set_const("kMagenta", kMagenta);
+  jlModule.set_const("kCyan", kCyan);
+  jlModule.set_const("kOrange", kOrange);
+  jlModule.set_const("kSpring", kSpring);
+  jlModule.set_const("kTeal", kTeal);
+  jlModule.set_const("kAzure", kAzure);
+  jlModule.set_const("kViolet", kViolet);
+  jlModule.set_const("kPink", kPink);
 
   DEBUG_MSG("Adding wrapper for enum TObject::EStatusBits (" __HERE__ ")");
   // defined in /home/pgras/.julia/conda/3/include/TObject.h:61:9
@@ -371,80 +971,6 @@ throw_if_version_incompatibility();
   // defined in /home/pgras/.julia/conda/3/include/TBrowser.h:54:9
   jlModule.add_bits<TBrowser::EStatusBits>("TBrowser!EStatusBits", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TBrowser!kNoHidden", TBrowser::kNoHidden);
-
-  DEBUG_MSG("Adding wrapper for enum EDataType (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TDataType.h:28:6
-  jlModule.add_bits<EDataType>("EDataType", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("kChar_t", kChar_t);
-  jlModule.set_const("kUChar_t", kUChar_t);
-  jlModule.set_const("kShort_t", kShort_t);
-  jlModule.set_const("kUShort_t", kUShort_t);
-  jlModule.set_const("kInt_t", kInt_t);
-  jlModule.set_const("kUInt_t", kUInt_t);
-  jlModule.set_const("kLong_t", kLong_t);
-  jlModule.set_const("kULong_t", kULong_t);
-  jlModule.set_const("kFloat_t", kFloat_t);
-  jlModule.set_const("kDouble_t", kDouble_t);
-  jlModule.set_const("kDouble32_t", kDouble32_t);
-  jlModule.set_const("kchar", kchar);
-  jlModule.set_const("kBool_t", kBool_t);
-  jlModule.set_const("kLong64_t", kLong64_t);
-  jlModule.set_const("kULong64_t", kULong64_t);
-  jlModule.set_const("kOther_t", kOther_t);
-  jlModule.set_const("kNoType_t", kNoType_t);
-  jlModule.set_const("kFloat16_t", kFloat16_t);
-  jlModule.set_const("kCounter", kCounter);
-  jlModule.set_const("kCharStar", kCharStar);
-  jlModule.set_const("kBits", kBits);
-  jlModule.set_const("kVoid_t", kVoid_t);
-  jlModule.set_const("kDataTypeAliasUnsigned_t", kDataTypeAliasUnsigned_t);
-  jlModule.set_const("kDataTypeAliasSignedChar_t", kDataTypeAliasSignedChar_t);
-  jlModule.set_const("kNumDataTypes", kNumDataTypes);
-
-  DEBUG_MSG("Adding wrapper for enum TTree::ESetBranchAddressStatus (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TTree.h:232:9
-  jlModule.add_bits<TTree::ESetBranchAddressStatus>("TTree!ESetBranchAddressStatus", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TTree!kMissingBranch", TTree::kMissingBranch);
-  jlModule.set_const("TTree!kInternalError", TTree::kInternalError);
-  jlModule.set_const("TTree!kMissingCompiledCollectionProxy", TTree::kMissingCompiledCollectionProxy);
-  jlModule.set_const("TTree!kMismatch", TTree::kMismatch);
-  jlModule.set_const("TTree!kClassMismatch", TTree::kClassMismatch);
-  jlModule.set_const("TTree!kMatch", TTree::kMatch);
-  jlModule.set_const("TTree!kMatchConversion", TTree::kMatchConversion);
-  jlModule.set_const("TTree!kMatchConversionCollection", TTree::kMatchConversionCollection);
-  jlModule.set_const("TTree!kMakeClass", TTree::kMakeClass);
-  jlModule.set_const("TTree!kVoidPtr", TTree::kVoidPtr);
-  jlModule.set_const("TTree!kNoCheck", TTree::kNoCheck);
-  jlModule.set_const("TTree!kNeedEnableDecomposedObj", TTree::kNeedEnableDecomposedObj);
-  jlModule.set_const("TTree!kNeedDisableDecomposedObj", TTree::kNeedDisableDecomposedObj);
-  jlModule.set_const("TTree!kDecomposedObjMask", TTree::kDecomposedObjMask);
-
-  DEBUG_MSG("Adding wrapper for enum TTree::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TTree.h:250:9
-  jlModule.add_bits<TTree::EStatusBits>("TTree!EStatusBits", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TTree!kForceRead", TTree::kForceRead);
-  jlModule.set_const("TTree!kCircular", TTree::kCircular);
-  jlModule.set_const("TTree!kOnlyFlushAtCluster", TTree::kOnlyFlushAtCluster);
-  jlModule.set_const("TTree!kEntriesReshuffled", TTree::kEntriesReshuffled);
-
-  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TTree.h:265:4 (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TTree.h:265:4
-  jlModule.set_const("TTree!kSplitCollectionOfPointers", static_cast<int>(TTree::kSplitCollectionOfPointers));
-
-  DEBUG_MSG("Adding wrapper for enum TLeaf::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:94:9
-  jlModule.add_bits<TLeaf::EStatusBits>("TLeaf!EStatusBits", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TLeaf!kIndirectAddress", TLeaf::kIndirectAddress);
-  jlModule.set_const("TLeaf!kNewValue", TLeaf::kNewValue);
-
-  DEBUG_MSG("Adding wrapper for enum TLeaf::DeserializeType (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:99:15
-  jlModule.add_bits<TLeaf::DeserializeType>("TLeaf!DeserializeType", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TLeaf!DeserializeType!kInvalid", TLeaf::DeserializeType::kInvalid);
-  jlModule.set_const("TLeaf!DeserializeType!kExternal", TLeaf::DeserializeType::kExternal);
-  jlModule.set_const("TLeaf!DeserializeType!kDestructive", TLeaf::DeserializeType::kDestructive);
-  jlModule.set_const("TLeaf!DeserializeType!kInPlace", TLeaf::DeserializeType::kInPlace);
-  jlModule.set_const("TLeaf!DeserializeType!kZeroCopy", TLeaf::DeserializeType::kZeroCopy);
 
   DEBUG_MSG("Adding wrapper for enum EAccessMode (" __HERE__ ")");
   // defined in /home/pgras/.julia/conda/3/include/TSystem.h:43:6
@@ -578,6 +1104,144 @@ throw_if_version_incompatibility();
   jlModule.set_const("kSigUser1", kSigUser1);
   jlModule.set_const("kSigUser2", kSigUser2);
 
+  DEBUG_MSG("Adding wrapper for enum TApplication::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TApplication.h:43:9
+  jlModule.add_bits<TApplication::EStatusBits>("TApplication!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TApplication!kProcessRemotely", TApplication::kProcessRemotely);
+  jlModule.set_const("TApplication!kDefaultApplication", TApplication::kDefaultApplication);
+
+  DEBUG_MSG("Adding wrapper for enum TApplication::EFileBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TApplication.h:48:9
+  jlModule.add_bits<TApplication::EFileBits>("TApplication!EFileBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TApplication!kExpression", TApplication::kExpression);
+
+  DEBUG_MSG("Adding wrapper for enum TApplication::EExitOnException (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TApplication.h:51:9
+  jlModule.add_bits<TApplication::EExitOnException>("TApplication!EExitOnException", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TApplication!kDontExit", TApplication::kDontExit);
+  jlModule.set_const("TApplication!kExit", TApplication::kExit);
+  jlModule.set_const("TApplication!kAbort", TApplication::kAbort);
+
+  DEBUG_MSG("Adding wrapper for enum EDataType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TDataType.h:28:6
+  jlModule.add_bits<EDataType>("EDataType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("kChar_t", kChar_t);
+  jlModule.set_const("kUChar_t", kUChar_t);
+  jlModule.set_const("kShort_t", kShort_t);
+  jlModule.set_const("kUShort_t", kUShort_t);
+  jlModule.set_const("kInt_t", kInt_t);
+  jlModule.set_const("kUInt_t", kUInt_t);
+  jlModule.set_const("kLong_t", kLong_t);
+  jlModule.set_const("kULong_t", kULong_t);
+  jlModule.set_const("kFloat_t", kFloat_t);
+  jlModule.set_const("kDouble_t", kDouble_t);
+  jlModule.set_const("kDouble32_t", kDouble32_t);
+  jlModule.set_const("kchar", kchar);
+  jlModule.set_const("kBool_t", kBool_t);
+  jlModule.set_const("kLong64_t", kLong64_t);
+  jlModule.set_const("kULong64_t", kULong64_t);
+  jlModule.set_const("kOther_t", kOther_t);
+  jlModule.set_const("kNoType_t", kNoType_t);
+  jlModule.set_const("kFloat16_t", kFloat16_t);
+  jlModule.set_const("kCounter", kCounter);
+  jlModule.set_const("kCharStar", kCharStar);
+  jlModule.set_const("kBits", kBits);
+  jlModule.set_const("kVoid_t", kVoid_t);
+  jlModule.set_const("kDataTypeAliasUnsigned_t", kDataTypeAliasUnsigned_t);
+  jlModule.set_const("kDataTypeAliasSignedChar_t", kDataTypeAliasSignedChar_t);
+  jlModule.set_const("kNumDataTypes", kNumDataTypes);
+
+  DEBUG_MSG("Adding wrapper for enum TTree::ESetBranchAddressStatus (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TTree.h:232:9
+  jlModule.add_bits<TTree::ESetBranchAddressStatus>("TTree!ESetBranchAddressStatus", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TTree!kMissingBranch", TTree::kMissingBranch);
+  jlModule.set_const("TTree!kInternalError", TTree::kInternalError);
+  jlModule.set_const("TTree!kMissingCompiledCollectionProxy", TTree::kMissingCompiledCollectionProxy);
+  jlModule.set_const("TTree!kMismatch", TTree::kMismatch);
+  jlModule.set_const("TTree!kClassMismatch", TTree::kClassMismatch);
+  jlModule.set_const("TTree!kMatch", TTree::kMatch);
+  jlModule.set_const("TTree!kMatchConversion", TTree::kMatchConversion);
+  jlModule.set_const("TTree!kMatchConversionCollection", TTree::kMatchConversionCollection);
+  jlModule.set_const("TTree!kMakeClass", TTree::kMakeClass);
+  jlModule.set_const("TTree!kVoidPtr", TTree::kVoidPtr);
+  jlModule.set_const("TTree!kNoCheck", TTree::kNoCheck);
+  jlModule.set_const("TTree!kNeedEnableDecomposedObj", TTree::kNeedEnableDecomposedObj);
+  jlModule.set_const("TTree!kNeedDisableDecomposedObj", TTree::kNeedDisableDecomposedObj);
+  jlModule.set_const("TTree!kDecomposedObjMask", TTree::kDecomposedObjMask);
+
+  DEBUG_MSG("Adding wrapper for enum TTree::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TTree.h:250:9
+  jlModule.add_bits<TTree::EStatusBits>("TTree!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TTree!kForceRead", TTree::kForceRead);
+  jlModule.set_const("TTree!kCircular", TTree::kCircular);
+  jlModule.set_const("TTree!kOnlyFlushAtCluster", TTree::kOnlyFlushAtCluster);
+  jlModule.set_const("TTree!kEntriesReshuffled", TTree::kEntriesReshuffled);
+
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TTree.h:265:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TTree.h:265:4
+  jlModule.set_const("TTree!kSplitCollectionOfPointers", static_cast<int>(TTree::kSplitCollectionOfPointers));
+
+  DEBUG_MSG("Adding wrapper for enum TLeaf::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:94:9
+  jlModule.add_bits<TLeaf::EStatusBits>("TLeaf!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TLeaf!kIndirectAddress", TLeaf::kIndirectAddress);
+  jlModule.set_const("TLeaf!kNewValue", TLeaf::kNewValue);
+
+  DEBUG_MSG("Adding wrapper for enum TLeaf::DeserializeType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:99:15
+  jlModule.add_bits<TLeaf::DeserializeType>("TLeaf!DeserializeType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TLeaf!DeserializeType!kInvalid", TLeaf::DeserializeType::kInvalid);
+  jlModule.set_const("TLeaf!DeserializeType!kExternal", TLeaf::DeserializeType::kExternal);
+  jlModule.set_const("TLeaf!DeserializeType!kDestructive", TLeaf::DeserializeType::kDestructive);
+  jlModule.set_const("TLeaf!DeserializeType!kInPlace", TLeaf::DeserializeType::kInPlace);
+  jlModule.set_const("TLeaf!DeserializeType!kZeroCopy", TLeaf::DeserializeType::kZeroCopy);
+
+  DEBUG_MSG("Adding wrapper for enum ROOT::Internal::TTreeReaderValueBase::ESetupStatus (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:48:12
+  jlModule.add_bits<ROOT::Internal::TTreeReaderValueBase::ESetupStatus>("ROOT!Internal!TTreeReaderValueBase!ESetupStatus", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupNotSetup", ROOT::Internal::TTreeReaderValueBase::kSetupNotSetup);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupTreeDestructed", ROOT::Internal::TTreeReaderValueBase::kSetupTreeDestructed);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMakeClassModeMismatch", ROOT::Internal::TTreeReaderValueBase::kSetupMakeClassModeMismatch);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMissingCounterBranch", ROOT::Internal::TTreeReaderValueBase::kSetupMissingCounterBranch);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMissingBranch", ROOT::Internal::TTreeReaderValueBase::kSetupMissingBranch);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupInternalError", ROOT::Internal::TTreeReaderValueBase::kSetupInternalError);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMissingDictionary", ROOT::Internal::TTreeReaderValueBase::kSetupMissingDictionary);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMismatch", ROOT::Internal::TTreeReaderValueBase::kSetupMismatch);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupNotACollection", ROOT::Internal::TTreeReaderValueBase::kSetupNotACollection);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMatch", ROOT::Internal::TTreeReaderValueBase::kSetupMatch);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMatchBranch", ROOT::Internal::TTreeReaderValueBase::kSetupMatchBranch);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupNoCheck", ROOT::Internal::TTreeReaderValueBase::kSetupNoCheck);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMatchLeaf", ROOT::Internal::TTreeReaderValueBase::kSetupMatchLeaf);
+
+  DEBUG_MSG("Adding wrapper for enum ROOT::Internal::TTreeReaderValueBase::EReadStatus (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:67:12
+  jlModule.add_bits<ROOT::Internal::TTreeReaderValueBase::EReadStatus>("ROOT!Internal!TTreeReaderValueBase!EReadStatus", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kReadSuccess", ROOT::Internal::TTreeReaderValueBase::kReadSuccess);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kReadNothingYet", ROOT::Internal::TTreeReaderValueBase::kReadNothingYet);
+  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kReadError", ROOT::Internal::TTreeReaderValueBase::kReadError);
+
+  DEBUG_MSG("Adding wrapper for enum TTreeReader::EEntryStatus (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:131:9
+  jlModule.add_bits<TTreeReader::EEntryStatus>("TTreeReader!EEntryStatus", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TTreeReader!kEntryValid", TTreeReader::kEntryValid);
+  jlModule.set_const("TTreeReader!kEntryNotLoaded", TTreeReader::kEntryNotLoaded);
+  jlModule.set_const("TTreeReader!kEntryNoTree", TTreeReader::kEntryNoTree);
+  jlModule.set_const("TTreeReader!kEntryNotFound", TTreeReader::kEntryNotFound);
+  jlModule.set_const("TTreeReader!kEntryChainSetupError", TTreeReader::kEntryChainSetupError);
+  jlModule.set_const("TTreeReader!kEntryChainFileError", TTreeReader::kEntryChainFileError);
+  jlModule.set_const("TTreeReader!kEntryDictionaryError", TTreeReader::kEntryDictionaryError);
+  jlModule.set_const("TTreeReader!kEntryBeyondEnd", TTreeReader::kEntryBeyondEnd);
+  jlModule.set_const("TTreeReader!kEntryBadReader", TTreeReader::kEntryBadReader);
+  jlModule.set_const("TTreeReader!kEntryUnknownError", TTreeReader::kEntryUnknownError);
+
+  DEBUG_MSG("Adding wrapper for enum TTreeReader::ELoadTreeStatus (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:144:9
+  jlModule.add_bits<TTreeReader::ELoadTreeStatus>("TTreeReader!ELoadTreeStatus", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TTreeReader!kNoTree", TTreeReader::kNoTree);
+  jlModule.set_const("TTreeReader!kLoadTreeNone", TTreeReader::kLoadTreeNone);
+  jlModule.set_const("TTreeReader!kInternalLoadTree", TTreeReader::kInternalLoadTree);
+  jlModule.set_const("TTreeReader!kExternalLoadTree", TTreeReader::kExternalLoadTree);
+
   DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TCanvas.h:88:4 (" __HERE__ ")");
   // defined in /home/pgras/.julia/conda/3/include/TCanvas.h:88:4
   jlModule.set_const("TCanvas!kShowEventStatus", static_cast<int>(TCanvas::kShowEventStatus));
@@ -646,90 +1310,6 @@ throw_if_version_incompatibility();
   jlModule.set_const("kWatch", kWatch);
   jlModule.set_const("kNoDrop", kNoDrop);
 
-  DEBUG_MSG("Adding wrapper for enum TAxis::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TAxis.h:61:9
-  jlModule.add_bits<TAxis::EStatusBits>("TAxis!EStatusBits", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TAxis!kDecimals", TAxis::kDecimals);
-  jlModule.set_const("TAxis!kTickPlus", TAxis::kTickPlus);
-  jlModule.set_const("TAxis!kTickMinus", TAxis::kTickMinus);
-  jlModule.set_const("TAxis!kAxisRange", TAxis::kAxisRange);
-  jlModule.set_const("TAxis!kCenterTitle", TAxis::kCenterTitle);
-  jlModule.set_const("TAxis!kCenterLabels", TAxis::kCenterLabels);
-  jlModule.set_const("TAxis!kRotateTitle", TAxis::kRotateTitle);
-  jlModule.set_const("TAxis!kPalette", TAxis::kPalette);
-  jlModule.set_const("TAxis!kNoExponent", TAxis::kNoExponent);
-  jlModule.set_const("TAxis!kLabelsHori", TAxis::kLabelsHori);
-  jlModule.set_const("TAxis!kLabelsVert", TAxis::kLabelsVert);
-  jlModule.set_const("TAxis!kLabelsDown", TAxis::kLabelsDown);
-  jlModule.set_const("TAxis!kLabelsUp", TAxis::kLabelsUp);
-  jlModule.set_const("TAxis!kIsInteger", TAxis::kIsInteger);
-  jlModule.set_const("TAxis!kMoreLogLabels", TAxis::kMoreLogLabels);
-
-  DEBUG_MSG("Adding wrapper for enum TH1::EBinErrorOpt (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:63:10
-  jlModule.add_bits<TH1::EBinErrorOpt>("TH1!EBinErrorOpt", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TH1!kNormal", TH1::kNormal);
-  jlModule.set_const("TH1!kPoisson", TH1::kPoisson);
-  jlModule.set_const("TH1!kPoisson2", TH1::kPoisson2);
-
-  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:70:4 (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:70:4
-  jlModule.set_const("TH1!kNoAxis", static_cast<int>(TH1::kNoAxis));
-  jlModule.set_const("TH1!kXaxis", static_cast<int>(TH1::kXaxis));
-  jlModule.set_const("TH1!kYaxis", static_cast<int>(TH1::kYaxis));
-  jlModule.set_const("TH1!kZaxis", static_cast<int>(TH1::kZaxis));
-  jlModule.set_const("TH1!kAllAxes", static_cast<int>(TH1::kAllAxes));
-
-  DEBUG_MSG("Adding wrapper for enum TH1::EStatOverflows (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:79:10
-  jlModule.add_bits<TH1::EStatOverflows>("TH1!EStatOverflows", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TH1!kIgnore", TH1::kIgnore);
-  jlModule.set_const("TH1!kConsider", TH1::kConsider);
-  jlModule.set_const("TH1!kNeutral", TH1::kNeutral);
-
-  DEBUG_MSG("Adding wrapper for enum TH1::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:162:9
-  jlModule.add_bits<TH1::EStatusBits>("TH1!EStatusBits", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TH1!kNoStats", TH1::kNoStats);
-  jlModule.set_const("TH1!kUserContour", TH1::kUserContour);
-  jlModule.set_const("TH1!kLogX", TH1::kLogX);
-  jlModule.set_const("TH1!kIsZoomed", TH1::kIsZoomed);
-  jlModule.set_const("TH1!kNoTitle", TH1::kNoTitle);
-  jlModule.set_const("TH1!kIsAverage", TH1::kIsAverage);
-  jlModule.set_const("TH1!kIsNotW", TH1::kIsNotW);
-  jlModule.set_const("TH1!kAutoBinPTwo", TH1::kAutoBinPTwo);
-  jlModule.set_const("TH1!kIsHighlight", TH1::kIsHighlight);
-
-  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:181:4 (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:181:4
-  jlModule.set_const("TH1!kNstat", static_cast<int>(TH1::kNstat));
-
-  DEBUG_MSG("Adding wrapper for enum EErrorType (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TProfile.h:28:6
-  jlModule.add_bits<EErrorType>("EErrorType", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("kERRORMEAN", kERRORMEAN);
-  jlModule.set_const("kERRORSPREAD", kERRORSPREAD);
-  jlModule.set_const("kERRORSPREADI", kERRORSPREADI);
-  jlModule.set_const("kERRORSPREADG", kERRORSPREADG);
-
-  DEBUG_MSG("Adding wrapper for enum TApplication::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TApplication.h:43:9
-  jlModule.add_bits<TApplication::EStatusBits>("TApplication!EStatusBits", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TApplication!kProcessRemotely", TApplication::kProcessRemotely);
-  jlModule.set_const("TApplication!kDefaultApplication", TApplication::kDefaultApplication);
-
-  DEBUG_MSG("Adding wrapper for enum TApplication::EFileBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TApplication.h:48:9
-  jlModule.add_bits<TApplication::EFileBits>("TApplication!EFileBits", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TApplication!kExpression", TApplication::kExpression);
-
-  DEBUG_MSG("Adding wrapper for enum TApplication::EExitOnException (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TApplication.h:51:9
-  jlModule.add_bits<TApplication::EExitOnException>("TApplication!EExitOnException", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TApplication!kDontExit", TApplication::kDontExit);
-  jlModule.set_const("TApplication!kExit", TApplication::kExit);
-  jlModule.set_const("TApplication!kAbort", TApplication::kAbort);
-
   DEBUG_MSG("Adding wrapper for enum TDirectoryFile::EStatusBits (" __HERE__ ")");
   // defined in /home/pgras/.julia/conda/3/include/TDirectoryFile.h:58:9
   jlModule.add_bits<TDirectoryFile::EStatusBits>("TDirectoryFile!EStatusBits", jlcxx::julia_type("CppEnum"));
@@ -787,15 +1367,74 @@ throw_if_version_incompatibility();
   jlModule.set_const("TFile!kFile", TFile::kFile);
   jlModule.set_const("TFile!kMerge", TFile::kMerge);
 
-  DEBUG_MSG("Adding wrapper for enum TGraph::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TGraph.h:73:9
-  jlModule.add_bits<TGraph::EStatusBits>("TGraph!EStatusBits", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TGraph!kNoStats", TGraph::kNoStats);
-  jlModule.set_const("TGraph!kClipFrame", TGraph::kClipFrame);
-  jlModule.set_const("TGraph!kResetHisto", TGraph::kResetHisto);
-  jlModule.set_const("TGraph!kNotEditable", TGraph::kNotEditable);
-  jlModule.set_const("TGraph!kIsSortedX", TGraph::kIsSortedX);
-  jlModule.set_const("TGraph!kIsHighlight", TGraph::kIsHighlight);
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TEntryList.h:54:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:54:4
+  jlModule.set_const("TEntryList!kBlockSize", static_cast<int>(TEntryList::kBlockSize));
+
+  DEBUG_MSG("Adding wrapper for enum ROOT::EExecutionPolicy (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/ROOT/EExecutionPolicy.hxx:5:12
+  jlModule.add_bits<ROOT::EExecutionPolicy>("ROOT!EExecutionPolicy", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("ROOT!EExecutionPolicy!kSequential", ROOT::EExecutionPolicy::kSequential);
+  jlModule.set_const("ROOT!EExecutionPolicy!kMultiThread", ROOT::EExecutionPolicy::kMultiThread);
+  jlModule.set_const("ROOT!EExecutionPolicy!kMultiProcess", ROOT::EExecutionPolicy::kMultiProcess);
+
+  DEBUG_MSG("Adding wrapper for enum ROOT::Fit::EFitObjectType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:48:18
+  jlModule.add_bits<ROOT::Fit::EFitObjectType>("ROOT!Fit!EFitObjectType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("ROOT!Fit!EFitObjectType!kHistogram", ROOT::Fit::EFitObjectType::kHistogram);
+  jlModule.set_const("ROOT!Fit!EFitObjectType!kGraph", ROOT::Fit::EFitObjectType::kGraph);
+
+  DEBUG_MSG("Adding wrapper for enum ROOT::Fit::EChisquareType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/HFitInterface.h:53:18
+  jlModule.add_bits<ROOT::Fit::EChisquareType>("ROOT!Fit!EChisquareType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("ROOT!Fit!EChisquareType!kNeyman", ROOT::Fit::EChisquareType::kNeyman);
+  jlModule.set_const("ROOT!Fit!EChisquareType!kPLikeRatio", ROOT::Fit::EChisquareType::kPLikeRatio);
+  jlModule.set_const("ROOT!Fit!EChisquareType!kPearson", ROOT::Fit::EChisquareType::kPearson);
+
+  DEBUG_MSG("Adding wrapper for enum TAxis::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TAxis.h:61:9
+  jlModule.add_bits<TAxis::EStatusBits>("TAxis!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TAxis!kDecimals", TAxis::kDecimals);
+  jlModule.set_const("TAxis!kTickPlus", TAxis::kTickPlus);
+  jlModule.set_const("TAxis!kTickMinus", TAxis::kTickMinus);
+  jlModule.set_const("TAxis!kAxisRange", TAxis::kAxisRange);
+  jlModule.set_const("TAxis!kCenterTitle", TAxis::kCenterTitle);
+  jlModule.set_const("TAxis!kCenterLabels", TAxis::kCenterLabels);
+  jlModule.set_const("TAxis!kRotateTitle", TAxis::kRotateTitle);
+  jlModule.set_const("TAxis!kPalette", TAxis::kPalette);
+  jlModule.set_const("TAxis!kNoExponent", TAxis::kNoExponent);
+  jlModule.set_const("TAxis!kLabelsHori", TAxis::kLabelsHori);
+  jlModule.set_const("TAxis!kLabelsVert", TAxis::kLabelsVert);
+  jlModule.set_const("TAxis!kLabelsDown", TAxis::kLabelsDown);
+  jlModule.set_const("TAxis!kLabelsUp", TAxis::kLabelsUp);
+  jlModule.set_const("TAxis!kIsInteger", TAxis::kIsInteger);
+  jlModule.set_const("TAxis!kMoreLogLabels", TAxis::kMoreLogLabels);
+
+  DEBUG_MSG("Adding wrapper for enum TBackCompFitter::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:52:9
+  jlModule.add_bits<TBackCompFitter::EStatusBits>("TBackCompFitter!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TBackCompFitter!kCanDeleteLast", TBackCompFitter::kCanDeleteLast);
+
+  DEBUG_MSG("Adding wrapper for enum TEfficiency::EStatOption (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TEfficiency.h:33:9
+  jlModule.add_bits<TEfficiency::EStatOption>("TEfficiency!EStatOption", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TEfficiency!kFCP", TEfficiency::kFCP);
+  jlModule.set_const("TEfficiency!kFNormal", TEfficiency::kFNormal);
+  jlModule.set_const("TEfficiency!kFWilson", TEfficiency::kFWilson);
+  jlModule.set_const("TEfficiency!kFAC", TEfficiency::kFAC);
+  jlModule.set_const("TEfficiency!kFFC", TEfficiency::kFFC);
+  jlModule.set_const("TEfficiency!kBJeffrey", TEfficiency::kBJeffrey);
+  jlModule.set_const("TEfficiency!kBUniform", TEfficiency::kBUniform);
+  jlModule.set_const("TEfficiency!kBBayesian", TEfficiency::kBBayesian);
+  jlModule.set_const("TEfficiency!kMidP", TEfficiency::kMidP);
+
+  DEBUG_MSG("Adding wrapper for enum TFormula::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TFormula.h:178:9
+  jlModule.add_bits<TFormula::EStatusBits>("TFormula!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TFormula!kNotGlobal", TFormula::kNotGlobal);
+  jlModule.set_const("TFormula!kNormalized", TFormula::kNormalized);
+  jlModule.set_const("TFormula!kLinear", TFormula::kLinear);
+  jlModule.set_const("TFormula!kLambda", TFormula::kLambda);
 
   DEBUG_MSG("Adding wrapper for enum TF1::EAddToList (" __HERE__ ")");
   // defined in /home/pgras/.julia/conda/3/include/TF1.h:221:15
@@ -810,55 +1449,412 @@ throw_if_version_incompatibility();
   jlModule.set_const("TF1!kNotGlobal", TF1::kNotGlobal);
   jlModule.set_const("TF1!kNotDraw", TF1::kNotDraw);
 
-  DEBUG_MSG("Adding wrapper for enum ROOT::Internal::TTreeReaderValueBase::ESetupStatus (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:48:12
-  jlModule.add_bits<ROOT::Internal::TTreeReaderValueBase::ESetupStatus>("ROOT!Internal!TTreeReaderValueBase!ESetupStatus", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupNotSetup", ROOT::Internal::TTreeReaderValueBase::kSetupNotSetup);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupTreeDestructed", ROOT::Internal::TTreeReaderValueBase::kSetupTreeDestructed);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMakeClassModeMismatch", ROOT::Internal::TTreeReaderValueBase::kSetupMakeClassModeMismatch);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMissingCounterBranch", ROOT::Internal::TTreeReaderValueBase::kSetupMissingCounterBranch);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMissingBranch", ROOT::Internal::TTreeReaderValueBase::kSetupMissingBranch);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupInternalError", ROOT::Internal::TTreeReaderValueBase::kSetupInternalError);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMissingDictionary", ROOT::Internal::TTreeReaderValueBase::kSetupMissingDictionary);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMismatch", ROOT::Internal::TTreeReaderValueBase::kSetupMismatch);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupNotACollection", ROOT::Internal::TTreeReaderValueBase::kSetupNotACollection);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMatch", ROOT::Internal::TTreeReaderValueBase::kSetupMatch);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMatchBranch", ROOT::Internal::TTreeReaderValueBase::kSetupMatchBranch);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupNoCheck", ROOT::Internal::TTreeReaderValueBase::kSetupNoCheck);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kSetupMatchLeaf", ROOT::Internal::TTreeReaderValueBase::kSetupMatchLeaf);
+  DEBUG_MSG("Adding wrapper for enum TGraph::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGraph.h:73:9
+  jlModule.add_bits<TGraph::EStatusBits>("TGraph!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGraph!kNoStats", TGraph::kNoStats);
+  jlModule.set_const("TGraph!kClipFrame", TGraph::kClipFrame);
+  jlModule.set_const("TGraph!kResetHisto", TGraph::kResetHisto);
+  jlModule.set_const("TGraph!kNotEditable", TGraph::kNotEditable);
+  jlModule.set_const("TGraph!kIsSortedX", TGraph::kIsSortedX);
+  jlModule.set_const("TGraph!kIsHighlight", TGraph::kIsHighlight);
 
-  DEBUG_MSG("Adding wrapper for enum ROOT::Internal::TTreeReaderValueBase::EReadStatus (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TTreeReaderValue.h:67:12
-  jlModule.add_bits<ROOT::Internal::TTreeReaderValueBase::EReadStatus>("ROOT!Internal!TTreeReaderValueBase!EReadStatus", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kReadSuccess", ROOT::Internal::TTreeReaderValueBase::kReadSuccess);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kReadNothingYet", ROOT::Internal::TTreeReaderValueBase::kReadNothingYet);
-  jlModule.set_const("ROOT!Internal!TTreeReaderValueBase!kReadError", ROOT::Internal::TTreeReaderValueBase::kReadError);
+  DEBUG_MSG("Adding wrapper for enum TGraphMultiErrors::ESummationModes (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGraphMultiErrors.h:57:9
+  jlModule.add_bits<TGraphMultiErrors::ESummationModes>("TGraphMultiErrors!ESummationModes", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGraphMultiErrors!kOnlyFirst", TGraphMultiErrors::kOnlyFirst);
+  jlModule.set_const("TGraphMultiErrors!kSquareSum", TGraphMultiErrors::kSquareSum);
+  jlModule.set_const("TGraphMultiErrors!kAbsSum", TGraphMultiErrors::kAbsSum);
 
-  DEBUG_MSG("Adding wrapper for enum TTreeReader::EEntryStatus (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:131:9
-  jlModule.add_bits<TTreeReader::EEntryStatus>("TTreeReader!EEntryStatus", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TTreeReader!kEntryValid", TTreeReader::kEntryValid);
-  jlModule.set_const("TTreeReader!kEntryNotLoaded", TTreeReader::kEntryNotLoaded);
-  jlModule.set_const("TTreeReader!kEntryNoTree", TTreeReader::kEntryNoTree);
-  jlModule.set_const("TTreeReader!kEntryNotFound", TTreeReader::kEntryNotFound);
-  jlModule.set_const("TTreeReader!kEntryChainSetupError", TTreeReader::kEntryChainSetupError);
-  jlModule.set_const("TTreeReader!kEntryChainFileError", TTreeReader::kEntryChainFileError);
-  jlModule.set_const("TTreeReader!kEntryDictionaryError", TTreeReader::kEntryDictionaryError);
-  jlModule.set_const("TTreeReader!kEntryBeyondEnd", TTreeReader::kEntryBeyondEnd);
-  jlModule.set_const("TTreeReader!kEntryBadReader", TTreeReader::kEntryBadReader);
-  jlModule.set_const("TTreeReader!kEntryUnknownError", TTreeReader::kEntryUnknownError);
+  DEBUG_MSG("Adding wrapper for enum TH1::EBinErrorOpt (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:63:10
+  jlModule.add_bits<TH1::EBinErrorOpt>("TH1!EBinErrorOpt", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TH1!kNormal", TH1::kNormal);
+  jlModule.set_const("TH1!kPoisson", TH1::kPoisson);
+  jlModule.set_const("TH1!kPoisson2", TH1::kPoisson2);
 
-  DEBUG_MSG("Adding wrapper for enum TTreeReader::ELoadTreeStatus (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:144:9
-  jlModule.add_bits<TTreeReader::ELoadTreeStatus>("TTreeReader!ELoadTreeStatus", jlcxx::julia_type("CppEnum"));
-  jlModule.set_const("TTreeReader!kNoTree", TTreeReader::kNoTree);
-  jlModule.set_const("TTreeReader!kLoadTreeNone", TTreeReader::kLoadTreeNone);
-  jlModule.set_const("TTreeReader!kInternalLoadTree", TTreeReader::kInternalLoadTree);
-  jlModule.set_const("TTreeReader!kExternalLoadTree", TTreeReader::kExternalLoadTree);
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:70:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:70:4
+  jlModule.set_const("TH1!kNoAxis", static_cast<int>(TH1::kNoAxis));
+  jlModule.set_const("TH1!kXaxis", static_cast<int>(TH1::kXaxis));
+  jlModule.set_const("TH1!kYaxis", static_cast<int>(TH1::kYaxis));
+  jlModule.set_const("TH1!kZaxis", static_cast<int>(TH1::kZaxis));
+  jlModule.set_const("TH1!kAllAxes", static_cast<int>(TH1::kAllAxes));
 
-  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TEntryList.h:54:4 (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:54:4
-  jlModule.set_const("TEntryList!kBlockSize", static_cast<int>(TEntryList::kBlockSize));
+  DEBUG_MSG("Adding wrapper for enum TH1::EStatOverflows (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:79:10
+  jlModule.add_bits<TH1::EStatOverflows>("TH1!EStatOverflows", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TH1!kIgnore", TH1::kIgnore);
+  jlModule.set_const("TH1!kConsider", TH1::kConsider);
+  jlModule.set_const("TH1!kNeutral", TH1::kNeutral);
+
+  DEBUG_MSG("Adding wrapper for enum TH1::EStatusBits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:162:9
+  jlModule.add_bits<TH1::EStatusBits>("TH1!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TH1!kNoStats", TH1::kNoStats);
+  jlModule.set_const("TH1!kUserContour", TH1::kUserContour);
+  jlModule.set_const("TH1!kLogX", TH1::kLogX);
+  jlModule.set_const("TH1!kIsZoomed", TH1::kIsZoomed);
+  jlModule.set_const("TH1!kNoTitle", TH1::kNoTitle);
+  jlModule.set_const("TH1!kIsAverage", TH1::kIsAverage);
+  jlModule.set_const("TH1!kIsNotW", TH1::kIsNotW);
+  jlModule.set_const("TH1!kAutoBinPTwo", TH1::kAutoBinPTwo);
+  jlModule.set_const("TH1!kIsHighlight", TH1::kIsHighlight);
+
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:181:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:181:4
+  jlModule.set_const("TH1!kNstat", static_cast<int>(TH1::kNstat));
+
+  DEBUG_MSG("Adding wrapper for enum TBinIterator::ERangeType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/THistRange.h:70:9
+  jlModule.add_bits<TBinIterator::ERangeType>("TBinIterator!ERangeType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TBinIterator!kHistRange", TBinIterator::kHistRange);
+  jlModule.set_const("TBinIterator!kAxisBins", TBinIterator::kAxisBins);
+  jlModule.set_const("TBinIterator!kAllBins", TBinIterator::kAllBins);
+  jlModule.set_const("TBinIterator!kUnOfBins", TBinIterator::kUnOfBins);
+
+  DEBUG_MSG("Adding wrapper for enum TKDE::EKernelType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TKDE.h:42:9
+  jlModule.add_bits<TKDE::EKernelType>("TKDE!EKernelType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TKDE!kGaussian", TKDE::kGaussian);
+  jlModule.set_const("TKDE!kEpanechnikov", TKDE::kEpanechnikov);
+  jlModule.set_const("TKDE!kBiweight", TKDE::kBiweight);
+  jlModule.set_const("TKDE!kCosineArch", TKDE::kCosineArch);
+  jlModule.set_const("TKDE!kUserDefined", TKDE::kUserDefined);
+  jlModule.set_const("TKDE!kTotalKernels", TKDE::kTotalKernels);
+
+  DEBUG_MSG("Adding wrapper for enum TKDE::EIteration (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TKDE.h:52:9
+  jlModule.add_bits<TKDE::EIteration>("TKDE!EIteration", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TKDE!kAdaptive", TKDE::kAdaptive);
+  jlModule.set_const("TKDE!kFixed", TKDE::kFixed);
+
+  DEBUG_MSG("Adding wrapper for enum TKDE::EMirror (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TKDE.h:59:9
+  jlModule.add_bits<TKDE::EMirror>("TKDE!EMirror", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TKDE!kNoMirror", TKDE::kNoMirror);
+  jlModule.set_const("TKDE!kMirrorLeft", TKDE::kMirrorLeft);
+  jlModule.set_const("TKDE!kMirrorRight", TKDE::kMirrorRight);
+  jlModule.set_const("TKDE!kMirrorBoth", TKDE::kMirrorBoth);
+  jlModule.set_const("TKDE!kMirrorAsymLeft", TKDE::kMirrorAsymLeft);
+  jlModule.set_const("TKDE!kMirrorRightAsymLeft", TKDE::kMirrorRightAsymLeft);
+  jlModule.set_const("TKDE!kMirrorAsymRight", TKDE::kMirrorAsymRight);
+  jlModule.set_const("TKDE!kMirrorLeftAsymRight", TKDE::kMirrorLeftAsymRight);
+  jlModule.set_const("TKDE!kMirrorAsymBoth", TKDE::kMirrorAsymBoth);
+
+  DEBUG_MSG("Adding wrapper for enum TKDE::EBinning (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TKDE.h:73:9
+  jlModule.add_bits<TKDE::EBinning>("TKDE!EBinning", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TKDE!kUnbinned", TKDE::kUnbinned);
+  jlModule.set_const("TKDE!kRelaxedBinning", TKDE::kRelaxedBinning);
+  jlModule.set_const("TKDE!kForcedBinning", TKDE::kForcedBinning);
+
+  DEBUG_MSG("Adding wrapper for enum TMultiDimFit::EMDFPolyType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TMultiDimFit.h:18:9
+  jlModule.add_bits<TMultiDimFit::EMDFPolyType>("TMultiDimFit!EMDFPolyType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TMultiDimFit!kMonomials", TMultiDimFit::kMonomials);
+  jlModule.set_const("TMultiDimFit!kChebyshev", TMultiDimFit::kChebyshev);
+  jlModule.set_const("TMultiDimFit!kLegendre", TMultiDimFit::kLegendre);
+
+  DEBUG_MSG("Adding wrapper for enum EErrorType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TProfile.h:28:6
+  jlModule.add_bits<EErrorType>("EErrorType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("kERRORMEAN", kERRORMEAN);
+  jlModule.set_const("kERRORSPREAD", kERRORSPREAD);
+  jlModule.set_const("kERRORSPREADI", kERRORSPREADI);
+  jlModule.set_const("kERRORSPREADG", kERRORSPREADG);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoShape::EShapeType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoShape.h:30:9
+  jlModule.add_bits<TGeoShape::EShapeType>("TGeoShape!EShapeType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoShape!kBitMask32", TGeoShape::kBitMask32);
+  jlModule.set_const("TGeoShape!kGeoNoShape", TGeoShape::kGeoNoShape);
+  jlModule.set_const("TGeoShape!kGeoBad", TGeoShape::kGeoBad);
+  jlModule.set_const("TGeoShape!kGeoRSeg", TGeoShape::kGeoRSeg);
+  jlModule.set_const("TGeoShape!kGeoPhiSeg", TGeoShape::kGeoPhiSeg);
+  jlModule.set_const("TGeoShape!kGeoThetaSeg", TGeoShape::kGeoThetaSeg);
+  jlModule.set_const("TGeoShape!kGeoVisX", TGeoShape::kGeoVisX);
+  jlModule.set_const("TGeoShape!kGeoVisY", TGeoShape::kGeoVisY);
+  jlModule.set_const("TGeoShape!kGeoVisZ", TGeoShape::kGeoVisZ);
+  jlModule.set_const("TGeoShape!kGeoRunTimeShape", TGeoShape::kGeoRunTimeShape);
+  jlModule.set_const("TGeoShape!kGeoInvalidShape", TGeoShape::kGeoInvalidShape);
+  jlModule.set_const("TGeoShape!kGeoTorus", TGeoShape::kGeoTorus);
+  jlModule.set_const("TGeoShape!kGeoBox", TGeoShape::kGeoBox);
+  jlModule.set_const("TGeoShape!kGeoPara", TGeoShape::kGeoPara);
+  jlModule.set_const("TGeoShape!kGeoSph", TGeoShape::kGeoSph);
+  jlModule.set_const("TGeoShape!kGeoTube", TGeoShape::kGeoTube);
+  jlModule.set_const("TGeoShape!kGeoTubeSeg", TGeoShape::kGeoTubeSeg);
+  jlModule.set_const("TGeoShape!kGeoCone", TGeoShape::kGeoCone);
+  jlModule.set_const("TGeoShape!kGeoConeSeg", TGeoShape::kGeoConeSeg);
+  jlModule.set_const("TGeoShape!kGeoPcon", TGeoShape::kGeoPcon);
+  jlModule.set_const("TGeoShape!kGeoPgon", TGeoShape::kGeoPgon);
+  jlModule.set_const("TGeoShape!kGeoArb8", TGeoShape::kGeoArb8);
+  jlModule.set_const("TGeoShape!kGeoEltu", TGeoShape::kGeoEltu);
+  jlModule.set_const("TGeoShape!kGeoTrap", TGeoShape::kGeoTrap);
+  jlModule.set_const("TGeoShape!kGeoCtub", TGeoShape::kGeoCtub);
+  jlModule.set_const("TGeoShape!kGeoTrd1", TGeoShape::kGeoTrd1);
+  jlModule.set_const("TGeoShape!kGeoTrd2", TGeoShape::kGeoTrd2);
+  jlModule.set_const("TGeoShape!kGeoComb", TGeoShape::kGeoComb);
+  jlModule.set_const("TGeoShape!kGeoClosedShape", TGeoShape::kGeoClosedShape);
+  jlModule.set_const("TGeoShape!kGeoXtru", TGeoShape::kGeoXtru);
+  jlModule.set_const("TGeoShape!kGeoParaboloid", TGeoShape::kGeoParaboloid);
+  jlModule.set_const("TGeoShape!kGeoHalfSpace", TGeoShape::kGeoHalfSpace);
+  jlModule.set_const("TGeoShape!kGeoHype", TGeoShape::kGeoHype);
+  jlModule.set_const("TGeoShape!kGeoSavePrimitive", TGeoShape::kGeoSavePrimitive);
+
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TGeoAtt.h:19:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoAtt.h:19:4
+  jlModule.set_const("TGeoAtt!kBitMask", static_cast<int>(TGeoAtt::kBitMask));
+
+  DEBUG_MSG("Adding wrapper for enum TGeoAtt::EGeoVisibilityAtt (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoAtt.h:23:9
+  jlModule.add_bits<TGeoAtt::EGeoVisibilityAtt>("TGeoAtt!EGeoVisibilityAtt", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoAtt!kVisOverride", TGeoAtt::kVisOverride);
+  jlModule.set_const("TGeoAtt!kVisNone", TGeoAtt::kVisNone);
+  jlModule.set_const("TGeoAtt!kVisThis", TGeoAtt::kVisThis);
+  jlModule.set_const("TGeoAtt!kVisDaughters", TGeoAtt::kVisDaughters);
+  jlModule.set_const("TGeoAtt!kVisOneLevel", TGeoAtt::kVisOneLevel);
+  jlModule.set_const("TGeoAtt!kVisStreamed", TGeoAtt::kVisStreamed);
+  jlModule.set_const("TGeoAtt!kVisTouched", TGeoAtt::kVisTouched);
+  jlModule.set_const("TGeoAtt!kVisOnScreen", TGeoAtt::kVisOnScreen);
+  jlModule.set_const("TGeoAtt!kVisContainers", TGeoAtt::kVisContainers);
+  jlModule.set_const("TGeoAtt!kVisOnly", TGeoAtt::kVisOnly);
+  jlModule.set_const("TGeoAtt!kVisBranch", TGeoAtt::kVisBranch);
+  jlModule.set_const("TGeoAtt!kVisRaytrace", TGeoAtt::kVisRaytrace);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoAtt::EGeoActivityAtt (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoAtt.h:38:9
+  jlModule.add_bits<TGeoAtt::EGeoActivityAtt>("TGeoAtt!EGeoActivityAtt", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoAtt!kActOverride", TGeoAtt::kActOverride);
+  jlModule.set_const("TGeoAtt!kActNone", TGeoAtt::kActNone);
+  jlModule.set_const("TGeoAtt!kActThis", TGeoAtt::kActThis);
+  jlModule.set_const("TGeoAtt!kActDaughters", TGeoAtt::kActDaughters);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoAtt::EGeoOptimizationAtt (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoAtt.h:45:9
+  jlModule.add_bits<TGeoAtt::EGeoOptimizationAtt>("TGeoAtt!EGeoOptimizationAtt", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoAtt!kUseBoundingBox", TGeoAtt::kUseBoundingBox);
+  jlModule.set_const("TGeoAtt!kUseVoxels", TGeoAtt::kUseVoxels);
+  jlModule.set_const("TGeoAtt!kUseGsord", TGeoAtt::kUseGsord);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoAtt::EGeoSavePrimitiveAtt (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoAtt.h:50:9
+  jlModule.add_bits<TGeoAtt::EGeoSavePrimitiveAtt>("TGeoAtt!EGeoSavePrimitiveAtt", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoAtt!kSavePrimitiveAtt", TGeoAtt::kSavePrimitiveAtt);
+  jlModule.set_const("TGeoAtt!kSaveNodesAtt", TGeoAtt::kSaveNodesAtt);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoBoolNode::EGeoBoolType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoBoolNode.h:27:9
+  jlModule.add_bits<TGeoBoolNode::EGeoBoolType>("TGeoBoolNode!EGeoBoolType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoBoolNode!kGeoUnion", TGeoBoolNode::kGeoUnion);
+  jlModule.set_const("TGeoBoolNode!kGeoIntersection", TGeoBoolNode::kGeoIntersection);
+  jlModule.set_const("TGeoBoolNode!kGeoSubtraction", TGeoBoolNode::kGeoSubtraction);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoMatrix::EGeoTransfTypes (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoMatrix.h:40:9
+  jlModule.add_bits<TGeoMatrix::EGeoTransfTypes>("TGeoMatrix!EGeoTransfTypes", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoMatrix!kGeoIdentity", TGeoMatrix::kGeoIdentity);
+  jlModule.set_const("TGeoMatrix!kGeoShared", TGeoMatrix::kGeoShared);
+  jlModule.set_const("TGeoMatrix!kGeoTranslation", TGeoMatrix::kGeoTranslation);
+  jlModule.set_const("TGeoMatrix!kGeoRotation", TGeoMatrix::kGeoRotation);
+  jlModule.set_const("TGeoMatrix!kGeoScale", TGeoMatrix::kGeoScale);
+  jlModule.set_const("TGeoMatrix!kGeoReflection", TGeoMatrix::kGeoReflection);
+  jlModule.set_const("TGeoMatrix!kGeoRegistered", TGeoMatrix::kGeoRegistered);
+  jlModule.set_const("TGeoMatrix!kGeoSavePrimitive", TGeoMatrix::kGeoSavePrimitive);
+  jlModule.set_const("TGeoMatrix!kGeoMatrixOwned", TGeoMatrix::kGeoMatrixOwned);
+  jlModule.set_const("TGeoMatrix!kGeoCombiTrans", TGeoMatrix::kGeoCombiTrans);
+  jlModule.set_const("TGeoMatrix!kGeoGenTrans", TGeoMatrix::kGeoGenTrans);
+  jlModule.set_const("TGeoMatrix!kGeoMatrixBits", TGeoMatrix::kGeoMatrixBits);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoBranchArray::EGeoBATypes (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoBranchArray.h:34:9
+  jlModule.add_bits<TGeoBranchArray::EGeoBATypes>("TGeoBranchArray!EGeoBATypes", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoBranchArray!kBASelfAlloc", TGeoBranchArray::kBASelfAlloc);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoDecayChannel::ENuclearDecayMode (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoElement.h:216:9
+  jlModule.add_bits<TGeoDecayChannel::ENuclearDecayMode>("TGeoDecayChannel!ENuclearDecayMode", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoDecayChannel!kBitMask32", TGeoDecayChannel::kBitMask32);
+  jlModule.set_const("TGeoDecayChannel!k2BetaMinus", TGeoDecayChannel::k2BetaMinus);
+  jlModule.set_const("TGeoDecayChannel!kBetaMinus", TGeoDecayChannel::kBetaMinus);
+  jlModule.set_const("TGeoDecayChannel!kNeutronEm", TGeoDecayChannel::kNeutronEm);
+  jlModule.set_const("TGeoDecayChannel!kProtonEm", TGeoDecayChannel::kProtonEm);
+  jlModule.set_const("TGeoDecayChannel!kAlpha", TGeoDecayChannel::kAlpha);
+  jlModule.set_const("TGeoDecayChannel!kECF", TGeoDecayChannel::kECF);
+  jlModule.set_const("TGeoDecayChannel!kElecCapt", TGeoDecayChannel::kElecCapt);
+  jlModule.set_const("TGeoDecayChannel!kIsoTrans", TGeoDecayChannel::kIsoTrans);
+  jlModule.set_const("TGeoDecayChannel!kI", TGeoDecayChannel::kI);
+  jlModule.set_const("TGeoDecayChannel!kSpontFiss", TGeoDecayChannel::kSpontFiss);
+  jlModule.set_const("TGeoDecayChannel!k2P", TGeoDecayChannel::k2P);
+  jlModule.set_const("TGeoDecayChannel!k2N", TGeoDecayChannel::k2N);
+  jlModule.set_const("TGeoDecayChannel!k2A", TGeoDecayChannel::k2A);
+  jlModule.set_const("TGeoDecayChannel!kCarbon12", TGeoDecayChannel::kCarbon12);
+  jlModule.set_const("TGeoDecayChannel!kCarbon14", TGeoDecayChannel::kCarbon14);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoElementTable::EGeoETStatus (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoElement.h:424:9
+  jlModule.add_bits<TGeoElementTable::EGeoETStatus>("TGeoElementTable!EGeoETStatus", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoElementTable!kETDefaultElements", TGeoElementTable::kETDefaultElements);
+  jlModule.set_const("TGeoElementTable!kETRNElements", TGeoElementTable::kETRNElements);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoMaterial::EGeoMaterial (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoMaterial.h:36:9
+  jlModule.add_bits<TGeoMaterial::EGeoMaterial>("TGeoMaterial!EGeoMaterial", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoMaterial!kMatUsed", TGeoMaterial::kMatUsed);
+  jlModule.set_const("TGeoMaterial!kMatSavePrimitive", TGeoMaterial::kMatSavePrimitive);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoMaterial::EGeoMaterialState (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoMaterial.h:37:9
+  jlModule.add_bits<TGeoMaterial::EGeoMaterialState>("TGeoMaterial!EGeoMaterialState", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoMaterial!kMatStateUndefined", TGeoMaterial::kMatStateUndefined);
+  jlModule.set_const("TGeoMaterial!kMatStateSolid", TGeoMaterial::kMatStateSolid);
+  jlModule.set_const("TGeoMaterial!kMatStateLiquid", TGeoMaterial::kMatStateLiquid);
+  jlModule.set_const("TGeoMaterial!kMatStateGas", TGeoMaterial::kMatStateGas);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoMedium::EGeoMedium (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoMedium.h:25:9
+  jlModule.add_bits<TGeoMedium::EGeoMedium>("TGeoMedium!EGeoMedium", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoMedium!kMedSavePrimitive", TGeoMedium::kMedSavePrimitive);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoVolume::EGeoVolumeTypes (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoVolume.h:71:9
+  jlModule.add_bits<TGeoVolume::EGeoVolumeTypes>("TGeoVolume!EGeoVolumeTypes", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoVolume!kVolumeReplicated", TGeoVolume::kVolumeReplicated);
+  jlModule.set_const("TGeoVolume!kVolumeSelected", TGeoVolume::kVolumeSelected);
+  jlModule.set_const("TGeoVolume!kVolumeDiv", TGeoVolume::kVolumeDiv);
+  jlModule.set_const("TGeoVolume!kVolumeOverlap", TGeoVolume::kVolumeOverlap);
+  jlModule.set_const("TGeoVolume!kVolumeImportNodes", TGeoVolume::kVolumeImportNodes);
+  jlModule.set_const("TGeoVolume!kVolumeMulti", TGeoVolume::kVolumeMulti);
+  jlModule.set_const("TGeoVolume!kVoxelsXYZ", TGeoVolume::kVoxelsXYZ);
+  jlModule.set_const("TGeoVolume!kVoxelsCyl", TGeoVolume::kVoxelsCyl);
+  jlModule.set_const("TGeoVolume!kVolumeClone", TGeoVolume::kVolumeClone);
+  jlModule.set_const("TGeoVolume!kVolumeAdded", TGeoVolume::kVolumeAdded);
+  jlModule.set_const("TGeoVolume!kVolumeOC", TGeoVolume::kVolumeOC);
+
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TGeoNode.h:56:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoNode.h:56:4
+  jlModule.set_const("TGeoNode!kGeoNodeMatrix", static_cast<int>(TGeoNode::kGeoNodeMatrix));
+  jlModule.set_const("TGeoNode!kGeoNodeOffset", static_cast<int>(TGeoNode::kGeoNodeOffset));
+  jlModule.set_const("TGeoNode!kGeoNodeVC", static_cast<int>(TGeoNode::kGeoNodeVC));
+  jlModule.set_const("TGeoNode!kGeoNodeOverlap", static_cast<int>(TGeoNode::kGeoNodeOverlap));
+  jlModule.set_const("TGeoNode!kGeoNodeCloned", static_cast<int>(TGeoNode::kGeoNodeCloned));
+
+  DEBUG_MSG("Adding wrapper for enum TGeoHelix::EGeoHelixTypes (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoHelix.h:37:9
+  jlModule.add_bits<TGeoHelix::EGeoHelixTypes>("TGeoHelix!EGeoHelixTypes", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoHelix!kHelixNeedUpdate", TGeoHelix::kHelixNeedUpdate);
+  jlModule.set_const("TGeoHelix!kHelixStraight", TGeoHelix::kHelixStraight);
+  jlModule.set_const("TGeoHelix!kHelixCircle", TGeoHelix::kHelixCircle);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoManager::EDefaultUnits (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoManager.h:46:9
+  jlModule.add_bits<TGeoManager::EDefaultUnits>("TGeoManager!EDefaultUnits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoManager!kG4Units", TGeoManager::kG4Units);
+  jlModule.set_const("TGeoManager!kRootUnits", TGeoManager::kRootUnits);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoOpticalSurface::ESurfaceFinish (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoOpticalSurface.h:29:9
+  jlModule.add_bits<TGeoOpticalSurface::ESurfaceFinish>("TGeoOpticalSurface!ESurfaceFinish", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoOpticalSurface!kFpolished", TGeoOpticalSurface::kFpolished);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedfrontpainted", TGeoOpticalSurface::kFpolishedfrontpainted);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedbackpainted", TGeoOpticalSurface::kFpolishedbackpainted);
+  jlModule.set_const("TGeoOpticalSurface!kFground", TGeoOpticalSurface::kFground);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundfrontpainted", TGeoOpticalSurface::kFgroundfrontpainted);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundbackpainted", TGeoOpticalSurface::kFgroundbackpainted);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedlumirrorair", TGeoOpticalSurface::kFpolishedlumirrorair);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedlumirrorglue", TGeoOpticalSurface::kFpolishedlumirrorglue);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedair", TGeoOpticalSurface::kFpolishedair);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedteflonair", TGeoOpticalSurface::kFpolishedteflonair);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedtioair", TGeoOpticalSurface::kFpolishedtioair);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedtyvekair", TGeoOpticalSurface::kFpolishedtyvekair);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedvm2000air", TGeoOpticalSurface::kFpolishedvm2000air);
+  jlModule.set_const("TGeoOpticalSurface!kFpolishedvm2000glue", TGeoOpticalSurface::kFpolishedvm2000glue);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedlumirrorair", TGeoOpticalSurface::kFetchedlumirrorair);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedlumirrorglue", TGeoOpticalSurface::kFetchedlumirrorglue);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedair", TGeoOpticalSurface::kFetchedair);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedteflonair", TGeoOpticalSurface::kFetchedteflonair);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedtioair", TGeoOpticalSurface::kFetchedtioair);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedtyvekair", TGeoOpticalSurface::kFetchedtyvekair);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedvm2000air", TGeoOpticalSurface::kFetchedvm2000air);
+  jlModule.set_const("TGeoOpticalSurface!kFetchedvm2000glue", TGeoOpticalSurface::kFetchedvm2000glue);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundlumirrorair", TGeoOpticalSurface::kFgroundlumirrorair);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundlumirrorglue", TGeoOpticalSurface::kFgroundlumirrorglue);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundair", TGeoOpticalSurface::kFgroundair);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundteflonair", TGeoOpticalSurface::kFgroundteflonair);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundtioair", TGeoOpticalSurface::kFgroundtioair);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundtyvekair", TGeoOpticalSurface::kFgroundtyvekair);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundvm2000air", TGeoOpticalSurface::kFgroundvm2000air);
+  jlModule.set_const("TGeoOpticalSurface!kFgroundvm2000glue", TGeoOpticalSurface::kFgroundvm2000glue);
+  jlModule.set_const("TGeoOpticalSurface!kFRough_LUT", TGeoOpticalSurface::kFRough_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFRoughTeflon_LUT", TGeoOpticalSurface::kFRoughTeflon_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFRoughESR_LUT", TGeoOpticalSurface::kFRoughESR_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFRoughESRGrease_LUT", TGeoOpticalSurface::kFRoughESRGrease_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFPolished_LUT", TGeoOpticalSurface::kFPolished_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFPolishedTeflon_LUT", TGeoOpticalSurface::kFPolishedTeflon_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFPolishedESR_LUT", TGeoOpticalSurface::kFPolishedESR_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFPolishedESRGrease_LUT", TGeoOpticalSurface::kFPolishedESRGrease_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kFDetector_LUT", TGeoOpticalSurface::kFDetector_LUT);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoOpticalSurface::ESurfaceModel (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoOpticalSurface.h:77:9
+  jlModule.add_bits<TGeoOpticalSurface::ESurfaceModel>("TGeoOpticalSurface!ESurfaceModel", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoOpticalSurface!kMglisur", TGeoOpticalSurface::kMglisur);
+  jlModule.set_const("TGeoOpticalSurface!kMunified", TGeoOpticalSurface::kMunified);
+  jlModule.set_const("TGeoOpticalSurface!kMLUT", TGeoOpticalSurface::kMLUT);
+  jlModule.set_const("TGeoOpticalSurface!kMDAVIS", TGeoOpticalSurface::kMDAVIS);
+  jlModule.set_const("TGeoOpticalSurface!kMdichroic", TGeoOpticalSurface::kMdichroic);
+
+  DEBUG_MSG("Adding wrapper for enum TGeoOpticalSurface::ESurfaceType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoOpticalSurface.h:85:9
+  jlModule.add_bits<TGeoOpticalSurface::ESurfaceType>("TGeoOpticalSurface!ESurfaceType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoOpticalSurface!kTdielectric_metal", TGeoOpticalSurface::kTdielectric_metal);
+  jlModule.set_const("TGeoOpticalSurface!kTdielectric_dielectric", TGeoOpticalSurface::kTdielectric_dielectric);
+  jlModule.set_const("TGeoOpticalSurface!kTdielectric_LUT", TGeoOpticalSurface::kTdielectric_LUT);
+  jlModule.set_const("TGeoOpticalSurface!kTdielectric_LUTDAVIS", TGeoOpticalSurface::kTdielectric_LUTDAVIS);
+  jlModule.set_const("TGeoOpticalSurface!kTdielectric_dichroic", TGeoOpticalSurface::kTdielectric_dichroic);
+  jlModule.set_const("TGeoOpticalSurface!kTfirsov", TGeoOpticalSurface::kTfirsov);
+  jlModule.set_const("TGeoOpticalSurface!kTx_ray", TGeoOpticalSurface::kTx_ray);
+
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalNode.h:50:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoPhysicalNode.h:50:4
+  jlModule.set_const("TGeoPhysicalNode!kGeoPNodeFull", static_cast<int>(TGeoPhysicalNode::kGeoPNodeFull));
+  jlModule.set_const("TGeoPhysicalNode!kGeoPNodeVisible", static_cast<int>(TGeoPhysicalNode::kGeoPNodeVisible));
+  jlModule.set_const("TGeoPhysicalNode!kGeoPNodeVolAtt", static_cast<int>(TGeoPhysicalNode::kGeoPNodeVolAtt));
+  jlModule.set_const("TGeoPhysicalNode!kGeoPNodeAligned", static_cast<int>(TGeoPhysicalNode::kGeoPNodeAligned));
+
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TGeoPolygon.h:21:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoPolygon.h:21:4
+  jlModule.set_const("TGeoPolygon!kGeoConvex", static_cast<int>(TGeoPolygon::kGeoConvex));
+  jlModule.set_const("TGeoPolygon!kGeoFinishPolygon", static_cast<int>(TGeoPolygon::kGeoFinishPolygon));
+  jlModule.set_const("TGeoPolygon!kGeoACW", static_cast<int>(TGeoPolygon::kGeoACW));
+
+  DEBUG_MSG("Adding wrapper for enum TGeoVoxelFinder::EVoxelsType (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:22:9
+  jlModule.add_bits<TGeoVoxelFinder::EVoxelsType>("TGeoVoxelFinder!EVoxelsType", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TGeoVoxelFinder!kGeoInvalidVoxels", TGeoVoxelFinder::kGeoInvalidVoxels);
+  jlModule.set_const("TGeoVoxelFinder!kGeoRebuildVoxels", TGeoVoxelFinder::kGeoRebuildVoxels);
+
+  DEBUG_MSG("Adding wrapper for enum TVirtualGeoPainter::EGeoVisLevel (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TVirtualGeoPainter.h:38:9
+  jlModule.add_bits<TVirtualGeoPainter::EGeoVisLevel>("TVirtualGeoPainter!EGeoVisLevel", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TVirtualGeoPainter!kGeoVisLevel", TVirtualGeoPainter::kGeoVisLevel);
+
+  DEBUG_MSG("Adding wrapper for enum TVirtualGeoPainter::EGeoVisOption (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TVirtualGeoPainter.h:39:9
+  jlModule.add_bits<TVirtualGeoPainter::EGeoVisOption>("TVirtualGeoPainter!EGeoVisOption", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TVirtualGeoPainter!kGeoVisDefault", TVirtualGeoPainter::kGeoVisDefault);
+  jlModule.set_const("TVirtualGeoPainter!kGeoVisLeaves", TVirtualGeoPainter::kGeoVisLeaves);
+  jlModule.set_const("TVirtualGeoPainter!kGeoVisOnly", TVirtualGeoPainter::kGeoVisOnly);
+  jlModule.set_const("TVirtualGeoPainter!kGeoVisBranch", TVirtualGeoPainter::kGeoVisBranch);
+  jlModule.set_const("TVirtualGeoPainter!kGeoVisChanged", TVirtualGeoPainter::kGeoVisChanged);
+
+  DEBUG_MSG("Adding wrapper for enum TVirtualGeoPainter::EGeoBombOption (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TVirtualGeoPainter.h:46:9
+  jlModule.add_bits<TVirtualGeoPainter::EGeoBombOption>("TVirtualGeoPainter!EGeoBombOption", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TVirtualGeoPainter!kGeoNoBomb", TVirtualGeoPainter::kGeoNoBomb);
+  jlModule.set_const("TVirtualGeoPainter!kGeoBombXYZ", TVirtualGeoPainter::kGeoBombXYZ);
+  jlModule.set_const("TVirtualGeoPainter!kGeoBombCyl", TVirtualGeoPainter::kGeoBombCyl);
+  jlModule.set_const("TVirtualGeoPainter!kGeoBombSph", TVirtualGeoPainter::kGeoBombSph);
   for(const auto& w: wrappers) w->add_methods();
 
 }

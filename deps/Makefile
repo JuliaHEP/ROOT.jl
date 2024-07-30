@@ -7,7 +7,7 @@ BUILD_DIR = build
 ROOT_CONFIG = root-config
 UNAME=$(shell uname)
 
-ROOT_LIBS = $(shell $(ROOT_CONFIG) --libs)
+ROOT_LIBS = $(shell $(ROOT_CONFIG) --libs) -lGeom
 ROOT_INC_DIR = $(shell $(ROOT_CONFIG) --incdir)
 
 CPPFLAGS = -MMD -I. -I $(CXXWRAP_PREFIX)/include
