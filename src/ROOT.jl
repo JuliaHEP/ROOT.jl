@@ -57,8 +57,10 @@ include("ROOT-export.jl")
 #export global function(s) taking a class instance as first parameter
 #and missing from generated file ROOT-export.jl
 export SetAddress
+export move!
 
 include("def_args.jl")
+include("move.jl")
 
 include("ROOTex.jl")
 include("demo.jl")

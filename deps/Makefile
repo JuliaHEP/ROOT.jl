@@ -58,13 +58,13 @@ distclean:
 	-$(RM) -r build build.log
 	-$(RM) $(PRODUCTS)
 
+#$(BUILD_DIR):
+#	@[ -d $(BUILD_DIR) ] && mkdir -p $(BUILD_DIR)
+#	@echo 'all:\n\n%:\n\t$$(MAKE) -C .. $$@\nclean:\n\t$$(MAKE) -C .. clean build\n' > $(BUILD_DIR)/Makefile
 
-$(BUILD_DIR):
-	@mkdir -p $(BUILD_DIR)
-	@echo 'all:\n\n%:\n\t$$(MAKE) -C .. $$@\nclean:\n\t$$(MAKE) -C .. clean build\n' > $(BUILD_DIR)/Makefile
-
-$(BUILD_DIR)/ROOT-generated.wit: ROOT.wit $(BUILD_DIR)
+$(BUILD_DIR)/ROOT-generated.wit: ROOT.wit #$(BUILD_DIR)
 	$(MAKE) check_root
+	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
 	$(shell echo "#\n# Warning: file generated automatically from $<\n#" > $@)
 	$(shell sed "s@%ROOT_INC_DIR%@$(ROOT_INC_DIR)@" $< >> $@ || rm $@)
 
@@ -96,7 +96,7 @@ JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=..
 JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree3.jl \
 && JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree3.jl
 
-$(BUILD_DIR)/%.o: src/%.cxx $(BUILD_DIR)
+$(BUILD_DIR)/%.o: src/%.cxx #$(BUILD_DIR)
 	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
 	$(COMPILE.cc) $(CPPFLAGS) -o $@ $<
 
