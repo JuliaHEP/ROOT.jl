@@ -16,6 +16,7 @@ used_root_version = ""
 root_libdir = ""
 root_bindir = ""
 rootconfig = "root-config"
+cleanafterbuild=true
 
 const pkg_uuid = UUID(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["uuid"])
 const pkg_version = VersionNumber(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["version"])
@@ -70,7 +71,7 @@ libpath = joinpath(scratch, libname)
 try
     mv(joinpath(buildpath, libname), libpath, force=true) 
     splitpath(buildpath)[end-1] != "build" || error("Bug foud. buildpath must end with /build") #protection against deleted bad directory after introduciton of a bug
-    rm(buildpath, recursive=true, force=true)
+    cleanafterbuild && rm(buildpath, recursive=true, force=true)
 catch e
     @warn "Failed to clean-up directory after dependency build. " * string(e)
 end

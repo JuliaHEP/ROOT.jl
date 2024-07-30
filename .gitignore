@@ -2,6 +2,10 @@
 *.jl.cov
 *.jl.*.cov
 *.jl.mem
+*.root
+*.png
+.gdb_history
+trash
 .ipynb_checkpoints
 .vscode
 build.log
