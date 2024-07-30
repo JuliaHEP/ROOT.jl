@@ -1,6 +1,6 @@
 name = "ROOT"
 uuid = "1706fdcc-8426-44f1-a283-5be479e9517c"
-version = "0.3.1-DEV"
+version = "more-classes-0.1.0"
 authors = ["Philippe Gras CEA/IRFU"]
 
 [deps]
