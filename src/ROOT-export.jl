@@ -1,43 +1,44 @@
 
-export Abort, AbstractMethod, AcceptConnection, AccessPathName, Add, AddAllocationCount, AddBinContent
-export AddBranchToCache, AddCheckBox, AddClass, AddClone, AddDynamicPath, AddFileHandler, AddIncludePath, AddLastBasket, AddLinkedLibs
-export AddParameter, AddPoint, AddSignalHandler, AddStdExceptionHandler, AddSubList, AddTimer, AddToGlobalList, AddTotBytes
-export AddZipBytes, AndersonDarlingTest, AnnounceTcpService, AnnounceUdpService, AnnounceUnixService, Append, AppendKey, AppendPad
-export ApplicationName, Apply, Argc, Argv, At, AutoSave, BackFill, BaseName, Beep, Binomial, Branch, BranchOld, BranchRef, BreitWigner
-export Bronch, Browse, BrowseObject, BufferEmpty, Build, BuildIndex, BuildOptions, BuildStreamerInfo, CanBeAlphanumeric
-export CanExtend, CanExtendAllAxes, CanGenerateOffsetArray, CenterLabels, CenterTitle, CentralMoment, ChangeDirectory, ChangeFile
-export ChangeLabel, ChangeLabelByValue, CheckObjectItem, CheckedHash, Chi2Test, Chi2TestX, Chisquare, Chmod, ChooseTimeFormat
-export Circle, ClassName, ClassSaved, CleanCompiledMacros, Clear, ClearInputFiles, ClearPadSave, ClearUnderflowAndOverflow
-export Cleared, Clone, CloneObject, CloneTree, Close, CloseConnection, CloseFiles, ClosePipe, Closed, Closelog, Compare
-export CompileMacro, ComputeIntegral, ComputeRange, ConcatFileName, Constructor, Contains, Copy, CopyAddresses, CopyEntries
-export CopyFile, CopyTree, Cp, Create, CreateHistogram, CreateKey, Debug, Delete, DeleteAll, DeleteBaskets, DeleteBuffer
-export DeleteCanvasPainter, Derivative, Derivative2, Derivative3, Destructor, DirName, DirectoryAutoAdd, DisconnectWidget, DispatchOneEvent
-export DistancetoPrimitive, Divide, Draw, DrawClass, DrawClone, DrawClonePad, DrawCopy, DrawDerivative, DrawF1, DrawGraph, DrawIntegral
-export DrawMap, DrawNormalized, DrawPanel, DropBaskets, DropBranchFromCache, DropBuffers, Dump, DynamicPathName, EditorBar
-export EmbedInto, EnableCache, EndOfProcessCleanups, Enter, EnterLeave, EnterRange, Eval, EvalPar, Exec, ExecPlugin, Execute
-export ExecuteDefaultAction, ExecuteEvent, Exit, ExitLoop, ExitOnException, Exp, Expand, ExpandBasketArrays, ExpandPathName, Export
-export ExtendAxis, FFT, FeedbackMode, Fill, FillBasket, FillBuffer, FillN, FillRandom, FindBin, FindBranch, FindDynamicLibrary
-export FindFile, FindFirstBinAbove, FindFixBin, FindKey, FindKeyAny, FindLastBinAbove, FindLeaf, FindObject, FindObjectAny
-export FindObjectAnyFile, FindObjectClassName, FindObjectPathName, FindSTLClass, FindSpecialObject, Fit, FitPanel, FitSlicesX, FitSlicesY
-export FixParameter, Flush, FlushBaskets, FlushOneBasket, ForceStyle, ForceUpdate, FreeDirectory, FromPopUp, Gaus
-export GenerateOffsetArray, Get, GetAclicMode, GetAclicProperties, GetAddress, GetAlias, GetAllocationCount, GetAppRemote, GetApplication
-export GetApplicationImp, GetArchiveOffset, GetAsymmetry, GetAutoExec, GetAutoFlush, GetAutoSave, GetAxisColor, GetBarOffset, GetBarWidth
-export GetBasketBytes, GetBasketEntry, GetBasketSeek, GetBasketSize, GetBeepDefaults, GetBestBuffer, GetBin, GetBinCenter
-export GetBinCenterLog, GetBinContent, GetBinEffectiveEntries, GetBinEntries, GetBinError, GetBinErrorLow, GetBinErrorOption
-export GetBinErrorUp, GetBinLabel, GetBinLowEdge, GetBinSumw2, GetBinUpEdge, GetBinWidth, GetBinWithContent, GetBinWithContent2
-export GetBinXYZ, GetBranch, GetBranchStatus, GetBrowsables, GetBrowserImp, GetBuffer, GetBufferLength, GetBufferRef
-export GetBufferSize, GetBuildArch, GetBuildCompiler, GetBuildCompilerVersion, GetBuildCompilerVersionStr, GetBuildDir, GetBuildNode
-export GetBuiltDate, GetBuiltTime, GetBulkEntries, GetBulkRead, GetBytesRead, GetBytesReadExtra, GetBytesToPrefetch, GetBytesWritten
-export GetCacheSize, GetCanvasID, GetCanvasPar, GetCellContent, GetCellError, GetCenter, GetCenterLabels, GetCenterTitle
-export GetChainEntryNumber, GetChainOffset, GetChisquare, GetClass, GetClassIndex, GetClassName, GetClickSelected, GetClickSelectedPad
-export GetClipboard, GetClusterIterator, GetClusterPrefetch, GetCollection, GetCompress, GetCompressionAlgorithm
-export GetCompressionFactor, GetCompressionLevel, GetCompressionSettings, GetConfigFeatures, GetConfigOptions, GetContour, GetContourLevel
-export GetContourLevelPad, GetCorrelationFactor, GetCovariance, GetCpuInfo, GetCreationDate, GetCumulative, GetCurrentEntry
-export GetCurrentFile, GetCurrentList, GetCutClassName, GetCycle, GetDISPLAY, GetDatime, GetDebugMax, GetDebugMin, GetDecimals
-export GetDefCanvasName, GetDefaultEntryOffsetLen, GetDeserializeType, GetDimension, GetDirEntry, GetDirName, GetDirPtr, GetDirectory
-export GetDoubleBuffer, GetDrawOption, GetDynamicPath, GetEND, GetEX, GetEXhigh, GetEXhighd, GetEXlow, GetEXlowd, GetEY, GetEYhigh
-export GetEYhighd, GetEYlow, GetEYlowd, GetEditHistograms, GetEditable, GetEditorMode, GetEffectiveEntries, GetEffectiveGid
-export GetEffectiveUid, GetEndpointUrl, GetEntries, GetEntriesFast, GetEntriesFriend, GetEntriesSerialized, GetEntriesToProcess
+export Abort, AbstractMethod, AcceptConnection, AccessPathName, Add, AddAfter, AddAllocationCount, AddAt
+export AddAtAndExpand, AddAtFree, AddBefore, AddBinContent, AddBranchToCache, AddCheckBox, AddClass, AddClone, AddDynamicPath
+export AddFileHandler, AddFirst, AddIncludePath, AddLast, AddLastBasket, AddLinkedLibs, AddParameter, AddPoint, AddSignalHandler
+export AddStdExceptionHandler, AddSubList, AddTimer, AddToGlobalList, AddTotBytes, AddZipBytes, After, AndersonDarlingTest, AnnounceTcpService
+export AnnounceUdpService, AnnounceUnixService, Append, AppendKey, AppendPad, ApplicationName, Apply, Argc, Argv, At, AutoSave, BackFill
+export BaseName, Beep, Before, BinarySearch, Binomial, Branch, BranchOld, BranchRef, BreitWigner, Bronch, Browse, BrowseObject
+export BufferEmpty, Build, BuildIndex, BuildOptions, BuildStreamerInfo, CanBeAlphanumeric, CanExtend, CanExtendAllAxes
+export CanGenerateOffsetArray, CenterLabels, CenterTitle, CentralMoment, ChangeDirectory, ChangeFile, ChangeLabel, ChangeLabelByValue
+export CheckObjectItem, CheckedHash, Chi2Test, Chi2TestX, Chisquare, Chmod, ChooseTimeFormat, Circle, ClassName, ClassSaved
+export CleanCompiledMacros, Clear, ClearInputFiles, ClearPadSave, ClearUnderflowAndOverflow, Cleared, Clone, CloneObject, CloneTree, Close
+export CloseConnection, CloseFiles, ClosePipe, Closed, Closelog, Compare, CompileMacro, Compress, ComputeIntegral, ComputeRange
+export ConcatFileName, Constructor, Contains, Copy, CopyAddresses, CopyEntries, CopyFile, CopyTree, Cp, Create, CreateHistogram
+export CreateKey, Debug, Delete, DeleteAll, DeleteBaskets, DeleteBuffer, DeleteCanvasPainter, Derivative, Derivative2
+export Derivative3, Destructor, DirName, DirectoryAutoAdd, DisconnectWidget, DispatchOneEvent, DistancetoPrimitive, Divide, Draw
+export DrawClass, DrawClone, DrawClonePad, DrawCopy, DrawDerivative, DrawF1, DrawGraph, DrawIntegral, DrawMap, DrawNormalized
+export DrawPanel, DropBaskets, DropBranchFromCache, DropBuffers, Dump, DynamicPathName, EditorBar, EmbedInto, EnableCache
+export EndOfProcessCleanups, Enter, EnterLeave, EnterRange, Eval, EvalPar, Exec, ExecPlugin, Execute, ExecuteDefaultAction, ExecuteEvent
+export Exit, ExitLoop, ExitOnException, Exp, Expand, ExpandBasketArrays, ExpandPathName, Export, ExtendAxis, FFT
+export FeedbackMode, Fill, FillBasket, FillBuffer, FillN, FillRandom, FindBin, FindBranch, FindDynamicLibrary, FindFile
+export FindFirstBinAbove, FindFixBin, FindKey, FindKeyAny, FindLastBinAbove, FindLeaf, FindObject, FindObjectAny, FindObjectAnyFile
+export FindObjectClassName, FindObjectPathName, FindSTLClass, FindSpecialObject, First, Fit, FitPanel, FitSlicesX, FitSlicesY, FixParameter
+export Flush, FlushBaskets, FlushOneBasket, ForceStyle, ForceUpdate, FreeDirectory, FromPopUp, Gaus, GenerateOffsetArray, Get
+export GetAclicMode, GetAclicProperties, GetAddress, GetAlias, GetAllocationCount, GetAppRemote, GetApplication, GetApplicationImp
+export GetArchiveOffset, GetAsymmetry, GetAutoExec, GetAutoFlush, GetAutoSave, GetAxisColor, GetBarOffset, GetBarWidth, GetBasketBytes
+export GetBasketEntry, GetBasketSeek, GetBasketSize, GetBeepDefaults, GetBestBuffer, GetBin, GetBinCenter, GetBinCenterLog
+export GetBinContent, GetBinEffectiveEntries, GetBinEntries, GetBinError, GetBinErrorLow, GetBinErrorOption, GetBinErrorUp
+export GetBinLabel, GetBinLowEdge, GetBinSumw2, GetBinUpEdge, GetBinWidth, GetBinWithContent, GetBinWithContent2, GetBinXYZ
+export GetBranch, GetBranchStatus, GetBrowsables, GetBrowserImp, GetBuffer, GetBufferLength, GetBufferRef, GetBufferSize
+export GetBuildArch, GetBuildCompiler, GetBuildCompilerVersion, GetBuildCompilerVersionStr, GetBuildDir, GetBuildNode, GetBuiltDate
+export GetBuiltTime, GetBulkEntries, GetBulkRead, GetBytesRead, GetBytesReadExtra, GetBytesToPrefetch, GetBytesWritten, GetCacheSize
+export GetCanvasID, GetCanvasPar, GetCellContent, GetCellError, GetCenter, GetCenterLabels, GetCenterTitle, GetChainEntryNumber
+export GetChainOffset, GetChisquare, GetClass, GetClassIndex, GetClassName, GetClickSelected, GetClickSelectedPad, GetClipboard
+export GetClusterIterator, GetClusterPrefetch, GetCollection, GetCompress, GetCompressionAlgorithm, GetCompressionFactor
+export GetCompressionLevel, GetCompressionSettings, GetConfigFeatures, GetConfigOptions, GetContour, GetContourLevel, GetContourLevelPad
+export GetCorrelationFactor, GetCovariance, GetCpuInfo, GetCreationDate, GetCumulative, GetCurrentEntry, GetCurrentFile, GetCurrentList
+export GetCutClassName, GetCycle, GetDISPLAY, GetDatime, GetDebugMax, GetDebugMin, GetDecimals, GetDefCanvasName
+export GetDefaultEntryOffsetLen, GetDeserializeType, GetDimension, GetDirEntry, GetDirName, GetDirPtr, GetDirectory, GetDoubleBuffer
+export GetDrawOption, GetDynamicPath, GetEND, GetEX, GetEXhigh, GetEXhighd, GetEXlow, GetEXlowd, GetEY, GetEYhigh, GetEYhighd
+export GetEYlow, GetEYlowd, GetEditHistograms, GetEditable, GetEditorMode, GetEffectiveEntries, GetEffectiveGid, GetEffectiveUid
+export GetEndpointUrl, GetEntries, GetEntriesFast, GetEntriesFriend, GetEntriesSerialized, GetEntriesToProcess, GetEntriesUnsafe
 export GetEntry, GetEntryAndTree, GetEntryExport, GetEntryList, GetEntryNumber, GetEntryNumberWithBestIndex
 export GetEntryNumberWithIndex, GetEntryOffsetLen, GetEntryStatus, GetEntryWithIndex, GetErrno, GetError, GetErrorOption, GetErrorStr
 export GetErrorX, GetErrorXhigh, GetErrorXlow, GetErrorY, GetErrorYhigh, GetErrorYlow, GetEstimate, GetEvent, GetEventX
@@ -61,9 +62,9 @@ export GetMoreLogLabels, GetMother, GetMotherDir, GetN, GetNDF, GetNProcessIDs, 
 export GetNbranches, GetNbytes, GetNbytesFree, GetNbytesInfo, GetNbytesKeys, GetNcells, GetNclasses, GetNdata, GetNdim
 export GetNdivisions, GetNetOpt, GetNewUrl, GetNextEntry, GetNfree, GetNkeys, GetNlabels, GetNleaves, GetNoExponent, GetNormFactor
 export GetNotify, GetNpar, GetNpx, GetNtypes, GetNumber, GetNumberFitPoints, GetNumberFreeParameters, GetNumberOfBins, GetObjExt
-export GetObjectChecked, GetObjectInfo, GetObjectUnchecked, GetObjlen, GetOffset, GetOpt, GetOption, GetOptions, GetPacketSize
-export GetPadSave, GetParError, GetParErrors, GetParLimits, GetParName, GetParNumber, GetParameter, GetParameters, GetParent
-export GetPath, GetPathInfo, GetPathStatic, GetPeerName, GetPid, GetPlayer, GetPoint, GetPointX, GetPointY, GetProb
+export GetObjectChecked, GetObjectInfo, GetObjectRef, GetObjectUnchecked, GetObjlen, GetOffset, GetOpt, GetOption, GetOptions
+export GetPacketSize, GetPadSave, GetParError, GetParErrors, GetParLimits, GetParName, GetParNumber, GetParameter, GetParameters
+export GetParent, GetPath, GetPathInfo, GetPathStatic, GetPeerName, GetPid, GetPlayer, GetPoint, GetPointX, GetPointY, GetProb
 export GetProcInfo, GetQuantiles, GetRMS, GetRMSError, GetRandom, GetRandom2, GetRange, GetReadBasket, GetReadCalls, GetReadEntry
 export GetReadEvent, GetReapplyCut, GetRecordHeader, GetRefreshFlag, GetRelOffset, GetRotateTitle, GetRow, GetSave, GetScanField
 export GetSeed, GetSeekDir, GetSeekFree, GetSeekInfo, GetSeekKey, GetSeekKeys, GetSeekParent, GetSeekPdir, GetSelected
@@ -81,45 +82,46 @@ export GetXsizeUser, GetY, GetYaxis, GetYmax, GetYmin, GetYsizeReal, GetYsizeUse
 export Getenv, GradientPar, HandleException, HandleIdleTimer, HandleInput, HandleTermInput, HandleTimer, HasInconsistentHash
 export HasMenuBar, Hash, Hide, HighlightConnect, Highlighted, HomeDirectory, HostName, Iconify, Idle, IgnoreInclude
 export IgnoreInterrupt, IgnoreSignal, Import, ImportAttributes, InControl, InPlaceClone, IncludeRange, IncrementPidOffset
-export IncrementProcessIDs, IncrementTotalBuffers, InheritsFrom, Init, InitArgs, InitExpo, InitGaus, InitPolynom, InitializeGraphics
-export InnerLoop, InputFiles, InsertPoint, InsertPointBefore, Inspect, Integral, IntegralAndError, IntegralError, IntegralFast
-export IntegralMultiple, IntegralOneDim, Interpolate, InvertBit, IsA, IsAbsoluteFileName, IsAlphanumeric, IsArchive, IsAutoDelete
-export IsBatch, IsBinOverflow, IsBinUnderflow, IsBinary, IsBuilt, IsChain, IsCmdThread, IsDestructed, IsDrawn, IsEditable
-export IsEqual, IsEscaped, IsEvalNormalized, IsExecutingMacro, IsFileInIncludePath, IsFolder, IsGrayscale, IsHighlight
-export IsInside, IsInterrupted, IsInvalid, IsLineProcessing, IsLinear, IsModified, IsOnHeap, IsOnTerminalBranch, IsOpen
-export IsPathLocal, IsProofServ, IsRange, IsRaw, IsRetained, IsRootFile, IsRunning, IsSortable, IsUnsigned, IsUpdated, IsValid
-export IsVariableBinSize, IsVectorized, IsWeb, IsWebDisplay, IsWebDisplayBatch, IsWritable, IsZombie, Keep, KeepCircular, KeyPressed
-export KolmogorovTest, LabelsDeflate, LabelsInflate, LabelsOption, Landau, LeastSquareFit, LeastSquareLinearFit, LineProcessed, Link
-export ListLibraries, ListSymbols, Load, LoadAllLibraries, LoadBaskets, LoadClass, LoadMacro, LoadTree, LoadTreeFriend, Lower, Macro
-export MakeClass, MakeCode, MakeDefCanvas, MakeDirectory, MakeFree, MakeProject, MakeProxy, MakeSelector, Map, Matches, MayNotUse
-export Mean, MemoryFull, Merge, Message, Moment, MoveOpaque, MovePoints, Multiply, MustClean, MustFlush, Next, NextTimeOut
-export NoLogOpt, NoLogoOpt, Notify, NotifyApplicationCreated, Now, Obsolete, OpaqueMoving, OpaqueResizing, Open, OpenConnection
-export OpenDirectory, OpenFile, OpenForumTopic, OpenGitHubIssue, OpenInBrowser, OpenPipe, OpenReferenceGuideFor, Openlog
-export OptimizeBaskets, OptimizeStorage, Paint, PaintGrapHist, PaintGraph, PaintStats, ParamsVec, Pick, Picked, Poisson, PoissonD, Pop
-export PrependPathName, Previous, Print, PrintCacheInfo, PrintCacheStats, PrintValue, Process, ProcessEvents, ProcessFile, ProcessLine
-export ProcessLineFast, ProcessLineSync, ProcessedEvent, ProfileX, ProfileY, Project, ProjectionX, ProjectionXY, ProjectionY, Purge
-export PutStats, QuantilesX, QuantilesY, QuitOpt, Raise, RaiseWindow, Rannor, ReOpen, Read, ReadAll, ReadBasket
-export ReadBasketExport, ReadBasketFast, ReadBasketSerialized, ReadBuffer, ReadBufferAsync, ReadBuffers, ReadFile, ReadFree
-export ReadKeyBuffer, ReadKeys, ReadObj, ReadObjWithBuffer, ReadObjectAny, ReadRandom, ReadStreamerInfo, ReadTObject, ReadingObject
-export Rebin, Rebin2D, RebinAxis, RebinX, RebinY, Rebuild, Recover, RecursiveRemove, RecvBuf, RecvRaw, RedirectOutput
-export Refresh, RefreshBrowsers, ReleaseParameter, RelocatePaths, Remove, RemoveCheckBox, RemoveClass, RemoveFileHandler
-export RemoveFriend, RemoveIdleTimer, RemoveOnExit, RemovePoint, RemoveSignalHandler, RemoveStdExceptionHandler, RemoveTimer, Rename
-export Reset, ResetAddress, ResetBit, ResetBranchAddress, ResetBranchAddresses, ResetDrawn, ResetErrno, ResetReadEntry
-export ResetSignal, ResetSignals, ResetStats, ResetTimer, ResetUpdated, Resize, ResizeOpaque, Restart, ReturnFromRun, ReturnPressed
-export Rndm, RndmArray, RotateTitle, Run, Save, SaveAs, SaveContext, SaveObjectAs, SaveSelf, SaveSource, Scale, Scan
-export ScanPaths, Seek, Select, Selected, SendBuf, SendRaw, SetAclicMode, SetAddress, SetAlias, SetAlphanumeric, SetApplication
-export SetAutoDelete, SetAutoFlush, SetAutoSave, SetAxisColor, SetAxisRange, SetBarOffset, SetBarWidth, SetBasketSize, SetBatch
-export SetBinContent, SetBinEntries, SetBinError, SetBinErrorOption, SetBinLabel, SetBins, SetBinsLength, SetBit, SetBranch
-export SetBranchAddress, SetBranchStatus, SetBrowserImp, SetBuffer, SetBufferAddress, SetBufferSize, SetBuildDir, SetCacheEntryRange
-export SetCacheLearnEntries, SetCacheSize, SetCanExtend, SetCanvasSize, SetCellContent, SetCellError, SetChainOffset, SetChisquare
-export SetCircular, SetClickSelected, SetClickSelectedPad, SetClusterPrefetch, SetCompressionAlgorithm, SetCompressionLevel
-export SetCompressionSettings, SetContent, SetContour, SetContourLevel, SetCursor, SetCutClassName, SetDebug, SetDecimals, SetDefCanvasName
-export SetDefaultEntryOffsetLen, SetDefaults, SetDirectory, SetDisplay, SetDoubleBuffer, SetDrawOption, SetDynamicPath, SetEND, SetEchoMode
+export IncrementProcessIDs, IncrementTotalBuffers, IndexOf, InheritsFrom, Init, InitArgs, InitExpo, InitGaus, InitPolynom
+export InitializeGraphics, InnerLoop, InputFiles, InsertPoint, InsertPointBefore, Inspect, Integral, IntegralAndError, IntegralError
+export IntegralFast, IntegralMultiple, IntegralOneDim, Interpolate, InvertBit, IsA, IsAbsoluteFileName, IsAlphanumeric, IsArchive
+export IsAutoDelete, IsBatch, IsBinOverflow, IsBinUnderflow, IsBinary, IsBuilt, IsChain, IsCmdThread, IsDestructed, IsDrawn
+export IsEditable, IsEmpty, IsEqual, IsEscaped, IsEvalNormalized, IsExecutingMacro, IsFileInIncludePath, IsFolder, IsGrayscale
+export IsHighlight, IsInside, IsInterrupted, IsInvalid, IsLineProcessing, IsLinear, IsModified, IsOnHeap, IsOnTerminalBranch
+export IsOpen, IsPathLocal, IsProofServ, IsRange, IsRaw, IsRetained, IsRootFile, IsRunning, IsSortable, IsUnsigned, IsUpdated
+export IsValid, IsVariableBinSize, IsVectorized, IsWeb, IsWebDisplay, IsWebDisplayBatch, IsWritable, IsZombie, Keep
+export KeepCircular, KeyPressed, KolmogorovTest, LabelsDeflate, LabelsInflate, LabelsOption, Landau, Last, LeastSquareFit
+export LeastSquareLinearFit, LineProcessed, Link, ListLibraries, ListSymbols, Load, LoadAllLibraries, LoadBaskets, LoadClass, LoadMacro
+export LoadTree, LoadTreeFriend, Lower, LowerBound, Macro, MakeClass, MakeCode, MakeDefCanvas, MakeDirectory, MakeFree
+export MakeIterator, MakeProject, MakeProxy, MakeSelector, Map, Matches, MayNotUse, Mean, MemoryFull, Merge, Message, Moment
+export MoveOpaque, MovePoints, Multiply, MustClean, MustFlush, Next, NextTimeOut, NoLogOpt, NoLogoOpt, Notify
+export NotifyApplicationCreated, Now, Obsolete, OpaqueMoving, OpaqueResizing, Open, OpenConnection, OpenDirectory, OpenFile, OpenForumTopic
+export OpenGitHubIssue, OpenInBrowser, OpenPipe, OpenReferenceGuideFor, Openlog, OptimizeBaskets, OptimizeStorage, Paint, PaintGrapHist
+export PaintGraph, PaintStats, ParamsVec, Pick, Picked, Poisson, PoissonD, Pop, PrependPathName, Previous, Print, PrintCacheInfo
+export PrintCacheStats, PrintValue, Process, ProcessEvents, ProcessFile, ProcessLine, ProcessLineFast, ProcessLineSync, ProcessedEvent
+export ProfileX, ProfileY, Project, ProjectionX, ProjectionXY, ProjectionY, Purge, PutStats, QuantilesX, QuantilesY, QuitOpt
+export Raise, RaiseWindow, Randomize, Rannor, ReOpen, Read, ReadAll, ReadBasket, ReadBasketExport, ReadBasketFast
+export ReadBasketSerialized, ReadBuffer, ReadBufferAsync, ReadBuffers, ReadFile, ReadFree, ReadKeyBuffer, ReadKeys, ReadObj
+export ReadObjWithBuffer, ReadObjectAny, ReadRandom, ReadStreamerInfo, ReadTObject, ReadingObject, Rebin, Rebin2D, RebinAxis, RebinX
+export RebinY, Rebuild, Recover, RecursiveRemove, RecvBuf, RecvRaw, RedirectOutput, Refresh, RefreshBrowsers, ReleaseParameter
+export RelocatePaths, Remove, RemoveAt, RemoveCheckBox, RemoveClass, RemoveFileHandler, RemoveFriend, RemoveIdleTimer, RemoveOnExit
+export RemovePoint, RemoveRange, RemoveSignalHandler, RemoveStdExceptionHandler, RemoveTimer, Rename, Reset, ResetAddress, ResetBit
+export ResetBranchAddress, ResetBranchAddresses, ResetDrawn, ResetErrno, ResetReadEntry, ResetSignal, ResetSignals, ResetStats, ResetTimer
+export ResetUpdated, Resize, ResizeOpaque, Restart, ReturnFromRun, ReturnPressed, Rndm, RndmArray, RotateTitle, Run, Save, SaveAs
+export SaveContext, SaveObjectAs, SaveSelf, SaveSource, Scale, Scan, ScanPaths, Seek, Select, Selected, SendBuf, SendRaw
+export SetAclicMode, SetAddress, SetAlias, SetAlphanumeric, SetApplication, SetAutoDelete, SetAutoFlush, SetAutoSave, SetAxisColor
+export SetAxisRange, SetBarOffset, SetBarWidth, SetBasketSize, SetBatch, SetBinContent, SetBinEntries, SetBinError
+export SetBinErrorOption, SetBinLabel, SetBins, SetBinsLength, SetBit, SetBranch, SetBranchAddress, SetBranchStatus, SetBrowserImp
+export SetBuffer, SetBufferAddress, SetBufferSize, SetBuildDir, SetCacheEntryRange, SetCacheLearnEntries, SetCacheSize
+export SetCanExtend, SetCanvasSize, SetCellContent, SetCellError, SetChainOffset, SetChisquare, SetCircular, SetClickSelected
+export SetClickSelectedPad, SetClusterPrefetch, SetCompressionAlgorithm, SetCompressionLevel, SetCompressionSettings, SetContent
+export SetContour, SetContourLevel, SetCursor, SetCutClassName, SetDebug, SetDecimals, SetDefCanvasName, SetDefaultEntryOffsetLen
+export SetDefaults, SetDirectory, SetDisplay, SetDoubleBuffer, SetDrawOption, SetDynamicPath, SetEND, SetEchoMode
 export SetEditHistograms, SetEditable, SetEditorMode, SetEntries, SetEntriesRange, SetEntriesToProcess, SetEntry, SetEntryList
 export SetEntryOffsetLen, SetError, SetErrorOption, SetErrorStr, SetEscape, SetEstimate, SetExecutingMacro, SetFPEMask, SetFile
 export SetFileName, SetFileNumber, SetFirstEntry, SetFixedAspectRatio, SetFlagsDebug, SetFlagsOpt, SetFromPopUp, SetGrayscale
 export SetHighLightColor, SetHighlight, SetHistogram, SetIOFeatures, SetIdleTimer, SetImplicitMT, SetIncludePath, SetInterrupt
-export SetLabelColor, SetLabelFont, SetLabelOffset, SetLabelSize, SetLeafCount, SetLen, SetLimits, SetLineHasBeenProcessed
+export SetLabelColor, SetLabelFont, SetLabelOffset, SetLabelSize, SetLast, SetLeafCount, SetLen, SetLimits, SetLineHasBeenProcessed
 export SetLineIsProcessing, SetLinkdefSuffix, SetLinkedLibs, SetLocalEntry, SetMakeClass, SetMakeExe, SetMakeSharedLib, SetMaxEntryLoop
 export SetMaxVirtualSize, SetMaximum, SetMinimum, SetModified, SetMoreLogLabels, SetMother, SetMotherDir, SetMustClean, SetNDF, SetName
 export SetNameTitle, SetNdivisions, SetNoAlphanumeric, SetNoExponent, SetNormFactor, SetNormalized, SetNotify, SetNpx
@@ -135,16 +137,17 @@ export SetWritable, SetXTitle, SetYTitle, SetZTitle, Setenv, SetupAddresses, Sho
 export ShowStreamerInfo, Size, Sizeof, Sleep, Smooth, Sort, Sphere, SplitAclicMode, StackTrace, StartEmbedding, StartIdleing
 export StartViewer, StopCacheLearningPhase, StopEmbedding, StopIdleing, Streamer, StreamerNVirtual, Subtract, SumBuffer, Sumw2
 export SupportsBulkRead, Symlink, Syslog, TTree!kMaxEntries, TempDirectory, TempFileName, Terminate, TestBit, TestBits, Time
-export ToggleAutoExec, ToggleEditor, ToggleEventStatus, ToggleToolBar, ToggleToolTips, Umask, UnZoom, UnbinnedFit, Uniform
-export UnixPathName, Unlink, Unload, Unsetenv, Update, UpdateAddress, UpdateAsync, UpdateFile, UseCurrentStyle, UseGL, Utime
-export Variance, Which, WorkingDirectory, Write, WriteBuffer, WriteDirHeader, WriteFile, WriteFree, WriteHeader, WriteKeys
-export WriteObjectAny, WriteRandom, WriteStreamerInfo, WriteTObject, Zero, ZoomOut, arrow, assign, fBusSpeed, fBusSpeed!, fCpuSpeed
-export fCpuSpeed!, fCpuSys, fCpuSys!, fCpuType, fCpuType!, fCpuUser, fCpuUser!, fCpus, fCpus!, fDev, fDev!, fFile, fFile!, fGid
-export fGid!, fGroup, fGroup!, fIdle, fIdle!, fIno, fIno!, fIsLink, fIsLink!, fL2Cache, fL2Cache!, fLoad15m, fLoad15m!
-export fLoad1m, fLoad1m!, fLoad5m, fLoad5m!, fMemFree, fMemFree!, fMemResident, fMemResident!, fMemTotal, fMemTotal!, fMemUsed
-export fMemUsed!, fMemVirtual, fMemVirtual!, fMode, fMode!, fModel, fModel!, fMtime, fMtime!, fOS, fOS!, fPasswd, fPasswd!
-export fPhysRam, fPhysRam!, fReadOffSet, fReadOffSet!, fRealName, fRealName!, fShell, fShell!, fSize, fSize!, fStdErrDup
-export fStdErrDup!, fStdErrTty, fStdErrTty!, fStdOutDup, fStdOutDup!, fStdOutTty, fStdOutTty!, fSwapFree, fSwapFree!, fSwapTotal
-export fSwapTotal!, fSwapUsed, fSwapUsed!, fSys, fSys!, fTotal, fTotal!, fUid, fUid!, fUrl, fUrl!, fUser, fUser!, gApplication
-export gApplication!, gProgName, gProgPath, gROOTMutex, gROOTMutex!, gRandom, gRandom!, gRootDir, gSystem, gSystem!, gSystemMutex
-export gSystemMutex!, gXDisplay, gXDisplay!, kBranchAny, kBranchObject, kDoNotProcess, kIsClone, kMapObject, ls, paren, rmdir
+export ToggleAutoExec, ToggleEditor, ToggleEventStatus, ToggleToolBar, ToggleToolTips, Umask, UnZoom, UnbinnedFit, UncheckedAt
+export Uniform, UnixPathName, Unlink, Unload, Unsetenv, Update, UpdateAddress, UpdateAsync, UpdateFile, UseCurrentStyle, UseGL
+export Utime, Variance, Which, WorkingDirectory, Write, WriteBuffer, WriteDirHeader, WriteFile, WriteFree, WriteHeader
+export WriteKeys, WriteObjectAny, WriteRandom, WriteStreamerInfo, WriteTObject, Zero, ZoomOut, arrow, assign, fBusSpeed
+export fBusSpeed!, fCpuSpeed, fCpuSpeed!, fCpuSys, fCpuSys!, fCpuType, fCpuType!, fCpuUser, fCpuUser!, fCpus, fCpus!, fDev, fDev!
+export fFile, fFile!, fGid, fGid!, fGroup, fGroup!, fIdle, fIdle!, fIno, fIno!, fIsLink, fIsLink!, fL2Cache, fL2Cache!
+export fLoad15m, fLoad15m!, fLoad1m, fLoad1m!, fLoad5m, fLoad5m!, fMemFree, fMemFree!, fMemResident, fMemResident!, fMemTotal
+export fMemTotal!, fMemUsed, fMemUsed!, fMemVirtual, fMemVirtual!, fMode, fMode!, fModel, fModel!, fMtime, fMtime!, fOS, fOS!
+export fPasswd, fPasswd!, fPhysRam, fPhysRam!, fReadOffSet, fReadOffSet!, fRealName, fRealName!, fShell, fShell!, fSize, fSize!
+export fStdErrDup, fStdErrDup!, fStdErrTty, fStdErrTty!, fStdOutDup, fStdOutDup!, fStdOutTty, fStdOutTty!, fSwapFree, fSwapFree!
+export fSwapTotal, fSwapTotal!, fSwapUsed, fSwapUsed!, fSys, fSys!, fTotal, fTotal!, fUid, fUid!, fUrl, fUrl!, fUser, fUser!
+export gApplication, gApplication!, gProgName, gProgPath, gROOTMutex, gROOTMutex!, gRandom, gRandom!, gRootDir, gSystem, gSystem!
+export gSystemMutex, gSystemMutex!, gXDisplay, gXDisplay!, kBranchAny, kBranchObject, kDoNotProcess, kIsClone, kMapObject, ls, paren
+export rmdir

@@ -23,4 +23,8 @@ end
     @testset verbose=true "Examples" begin
         include("test_examples.jl")
     end
+
+    @testset verbose=true "TObjArray" begin
+        include("test_objarray.jl")
+    end
 end

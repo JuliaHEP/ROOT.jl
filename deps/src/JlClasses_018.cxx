@@ -7,6 +7,36 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TUrl> : std::false_type { };
+  template<> struct DefaultConstructible<TUrl> : std::false_type { };
+template<> struct SuperType<TUrl> { typedef TObject type; };
+}
+
+// Class generating the wrapper for type TUrl
+// signature to use in the veto file: TUrl
+struct JlTUrl: public Wrapper {
+
+  JlTUrl(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TUrl (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TUrl.h:33:7
+    jlcxx::TypeWrapper<TUrl>  t = jlModule.add_type<TUrl>("TUrl",
+      jlcxx::julia_base_type<TObject>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TUrl>>(new jlcxx::TypeWrapper<TUrl>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TUrl>> type_;
+};
+std::shared_ptr<Wrapper> newJlTUrl(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTUrl(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TFileOpenHandle> : std::false_type { };
   template<> struct DefaultConstructible<TFileOpenHandle> : std::false_type { };
 template<> struct SuperType<TFileOpenHandle> { typedef TNamed type; };
@@ -986,36 +1016,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTF1Parameters(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTF1Parameters(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TF1::TF1FunctorPointer> : std::false_type { };
-  template<> struct DefaultConstructible<TF1::TF1FunctorPointer> : std::false_type { };
-}
-
-// Class generating the wrapper for type TF1::TF1FunctorPointer
-// signature to use in the veto file: TF1::TF1FunctorPointer
-struct JlTF1_TF1FunctorPointer: public Wrapper {
-
-  JlTF1_TF1FunctorPointer(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TF1::TF1FunctorPointer (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TF1.h:228:11
-    jlcxx::TypeWrapper<TF1::TF1FunctorPointer>  t = jlModule.add_type<TF1::TF1FunctorPointer>("TF1!TF1FunctorPointer");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TF1::TF1FunctorPointer>>(new jlcxx::TypeWrapper<TF1::TF1FunctorPointer>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-
-    DEBUG_MSG("Adding wrapper for TF1::TF1FunctorPointer * TF1::TF1FunctorPointer::Clone() (" __HERE__ ")");
-    // signature to use in the veto list: TF1::TF1FunctorPointer * TF1::TF1FunctorPointer::Clone()
-    // defined in /home/pgras/.julia/conda/3/include/TF1.h:230:36
-    t.method("Clone", static_cast<TF1::TF1FunctorPointer * (TF1::TF1FunctorPointer::*)()  const>(&TF1::TF1FunctorPointer::Clone));
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TF1::TF1FunctorPointer>> type_;
-};
-std::shared_ptr<Wrapper> newJlTF1_TF1FunctorPointer(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTF1_TF1FunctorPointer(module));
 }

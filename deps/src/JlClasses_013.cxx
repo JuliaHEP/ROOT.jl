@@ -7,6 +7,34 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<FILE> : std::false_type { };
+  template<> struct DefaultConstructible<FILE> : std::false_type { };
+}
+
+// Class generating the wrapper for type FILE
+// signature to use in the veto file: FILE
+struct JlFILE: public Wrapper {
+
+  JlFILE(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type FILE (" __HERE__ ")");
+    // defined in /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:49:8
+    jlcxx::TypeWrapper<FILE>  t = jlModule.add_type<FILE>("FILE");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<FILE>>(new jlcxx::TypeWrapper<FILE>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<FILE>> type_;
+};
+std::shared_ptr<Wrapper> newJlFILE(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlFILE(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TInetAddress> : std::false_type { };
   template<> struct DefaultConstructible<TInetAddress> : std::false_type { };
 template<> struct SuperType<TInetAddress> { typedef TObject type; };
@@ -631,32 +659,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTArrayD(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTArrayD(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<Foption_t> : std::false_type { };
-  template<> struct DefaultConstructible<Foption_t> : std::false_type { };
-}
-
-// Class generating the wrapper for type Foption_t
-// signature to use in the veto file: Foption_t
-struct JlFoption_t: public Wrapper {
-
-  JlFoption_t(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type Foption_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:24:8
-    jlcxx::TypeWrapper<Foption_t>  t = jlModule.add_type<Foption_t>("Foption_t");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<Foption_t>>(new jlcxx::TypeWrapper<Foption_t>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<Foption_t>> type_;
-};
-std::shared_ptr<Wrapper> newJlFoption_t(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlFoption_t(module));
 }

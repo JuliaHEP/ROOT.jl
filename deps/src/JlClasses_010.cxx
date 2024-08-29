@@ -7,6 +7,62 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+
+  template<typename T>
+  struct BuildParameterList<TBranchPtr<T>>
+  {
+    typedef ParameterList<T> type;
+  };
+
+  template<typename T> struct IsMirroredType<TBranchPtr<T>> : std::false_type { };
+  template<typename T> struct DefaultConstructible<TBranchPtr<T>> : std::false_type { };
+}
+
+// Class generating the wrapper for type TBranchPtr
+// signature to use in the veto file: TBranchPtr
+struct JlTBranchPtr: public Wrapper {
+
+  JlTBranchPtr(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TBranchPtr (" __HERE__ ")");
+    // defined in src/TBranchPtr.h:13:7
+    jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>  t =  jlModule.add_type<jlcxx::Parametric<jlcxx::TypeVar<1>>>("TBranchPtr");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>>(new jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>(jlModule, t));
+    auto t55_decl_methods = [this]<typename T> (jlcxx::TypeWrapper<TBranchPtr<T>> wrapped){
+      auto module_ = this->module_;
+      typedef TBranchPtr<T> WrappedType;
+
+
+      DEBUG_MSG("Adding wrapper for void TBranchPtr::TBranchPtr<T>(TBranch *) (" __HERE__ ")");
+      // defined in src/TBranchPtr.h:17:3
+      wrapped.template constructor<TBranch *>(/*finalize=*/true);
+
+      DEBUG_MSG("Adding wrapper for TBranch * TBranchPtr::operator->() (" __HERE__ ")");
+      // signature to use in the veto list: TBranch * TBranchPtr::operator->()
+      // defined in src/TBranchPtr.h:19:12
+      wrapped.method("arrow", static_cast<TBranch * (WrappedType::*)()  const>(&WrappedType::operator->));
+      module_.set_override_module(jl_base_module);
+
+      DEBUG_MSG("Adding wrapper for TBranch & TBranchPtr::operator*() (" __HERE__ ")");
+      // signature to use in the veto list: TBranch & TBranchPtr::operator*()
+      // defined in src/TBranchPtr.h:20:12
+      wrapped.method("getindex", static_cast<TBranch & (WrappedType::*)()  const>(&WrappedType::operator*));
+
+      module_.unset_override_module();
+    };
+    t.apply<TBranchPtr<std::vector<double>>, TBranchPtr<std::vector<float>>, TBranchPtr<std::vector<unsigned long>>, TBranchPtr<std::vector<long>>, TBranchPtr<std::vector<unsigned int>>, TBranchPtr<std::vector<int>>, TBranchPtr<std::vector<unsigned short>>, TBranchPtr<std::vector<short>>, TBranchPtr<std::vector<unsigned char>>, TBranchPtr<std::vector<char>>, TBranchPtr<double>, TBranchPtr<float>, TBranchPtr<unsigned long>, TBranchPtr<long>, TBranchPtr<unsigned int>, TBranchPtr<int>, TBranchPtr<unsigned short>, TBranchPtr<short>, TBranchPtr<unsigned char>, TBranchPtr<char>>(t55_decl_methods);
+  }
+
+  void add_methods() const{
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>> type_;
+};
+std::shared_ptr<Wrapper> newJlTBranchPtr(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTBranchPtr(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<FileStat_t> : std::false_type { };
   template<> struct DefaultConstructible<FileStat_t> : std::false_type { };
 }
@@ -527,199 +583,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlSysInfo_t(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlSysInfo_t(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<CpuInfo_t> : std::false_type { };
-  template<> struct DefaultConstructible<CpuInfo_t> : std::false_type { };
-}
-
-// Class generating the wrapper for type CpuInfo_t
-// signature to use in the veto file: CpuInfo_t
-struct JlCpuInfo_t: public Wrapper {
-
-  JlCpuInfo_t(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type CpuInfo_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:165:8
-    jlcxx::TypeWrapper<CpuInfo_t>  t = jlModule.add_type<CpuInfo_t>("CpuInfo_t");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<CpuInfo_t>>(new jlcxx::TypeWrapper<CpuInfo_t>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding wrapper for Version_t CpuInfo_t::Class_Version() (" __HERE__ ")");
-    // signature to use in the veto list: Version_t CpuInfo_t::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!Class_Version", static_cast<Version_t (*)() >(&CpuInfo_t::Class_Version));
-
-    DEBUG_MSG("Adding wrapper for TClass * CpuInfo_t::IsA() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * CpuInfo_t::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    t.method("IsA", static_cast<TClass * (CpuInfo_t::*)()  const>(&CpuInfo_t::IsA));
-
-    DEBUG_MSG("Adding wrapper for void CpuInfo_t::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void CpuInfo_t::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    t.method("StreamerNVirtual", static_cast<void (CpuInfo_t::*)(TBuffer &) >(&CpuInfo_t::StreamerNVirtual));
-
-    DEBUG_MSG("Adding wrapper for const char * CpuInfo_t::DeclFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * CpuInfo_t::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!DeclFileName", []() { return (std::string)CpuInfo_t::DeclFileName(); });
-
-    DEBUG_MSG("Adding wrapper for int CpuInfo_t::ImplFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int CpuInfo_t::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!ImplFileLine", static_cast<int (*)() >(&CpuInfo_t::ImplFileLine));
-
-    DEBUG_MSG("Adding wrapper for const char * CpuInfo_t::ImplFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * CpuInfo_t::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!ImplFileName", []() { return (std::string)CpuInfo_t::ImplFileName(); });
-
-    DEBUG_MSG("Adding wrapper for const char * CpuInfo_t::Class_Name() (" __HERE__ ")");
-    // signature to use in the veto list: const char * CpuInfo_t::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!Class_Name", []() { return (std::string)CpuInfo_t::Class_Name(); });
-
-    DEBUG_MSG("Adding wrapper for TClass * CpuInfo_t::Dictionary() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * CpuInfo_t::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!Dictionary", static_cast<TClass * (*)() >(&CpuInfo_t::Dictionary));
-
-    DEBUG_MSG("Adding wrapper for TClass * CpuInfo_t::Class() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * CpuInfo_t::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!Class", static_cast<TClass * (*)() >(&CpuInfo_t::Class));
-
-    DEBUG_MSG("Adding wrapper for void CpuInfo_t::Streamer(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void CpuInfo_t::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    t.method("Streamer", static_cast<void (CpuInfo_t::*)(TBuffer &) >(&CpuInfo_t::Streamer));
-
-    DEBUG_MSG("Adding wrapper for int CpuInfo_t::DeclFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int CpuInfo_t::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:176:4
-    module_.method("CpuInfo_t!DeclFileLine", static_cast<int (*)() >(&CpuInfo_t::DeclFileLine));
-
-    DEBUG_MSG("Adding fLoad1m methods  to provide read access to the field fLoad1m (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:166:14
-    // signature to use in the veto list: CpuInfo_t::fLoad1m
-    t.method("fLoad1m", [](const CpuInfo_t& a) -> Float_t { return a.fLoad1m; });
-    t.method("fLoad1m", [](CpuInfo_t& a) -> Float_t { return a.fLoad1m; });
-    t.method("fLoad1m", [](const CpuInfo_t* a) -> Float_t { return a->fLoad1m; });
-    t.method("fLoad1m", [](CpuInfo_t* a) -> Float_t { return a->fLoad1m; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:166:14
-    // signature to use in the veto list: CpuInfo_t::fLoad1m
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fLoad1m! methods to provide write access to the field fLoad1m (" __HERE__ ")");
-    t.method("fLoad1m!", [](CpuInfo_t& a, Float_t val) -> Float_t { return a.fLoad1m = val; });
-
-    DEBUG_MSG("Adding fLoad1m! methods to provide write access to the field fLoad1m (" __HERE__ ")");
-    t.method("fLoad1m!", [](CpuInfo_t* a, Float_t val) -> Float_t { return a->fLoad1m = val; });
-
-    DEBUG_MSG("Adding fLoad5m methods  to provide read access to the field fLoad5m (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:167:14
-    // signature to use in the veto list: CpuInfo_t::fLoad5m
-    t.method("fLoad5m", [](const CpuInfo_t& a) -> Float_t { return a.fLoad5m; });
-    t.method("fLoad5m", [](CpuInfo_t& a) -> Float_t { return a.fLoad5m; });
-    t.method("fLoad5m", [](const CpuInfo_t* a) -> Float_t { return a->fLoad5m; });
-    t.method("fLoad5m", [](CpuInfo_t* a) -> Float_t { return a->fLoad5m; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:167:14
-    // signature to use in the veto list: CpuInfo_t::fLoad5m
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fLoad5m! methods to provide write access to the field fLoad5m (" __HERE__ ")");
-    t.method("fLoad5m!", [](CpuInfo_t& a, Float_t val) -> Float_t { return a.fLoad5m = val; });
-
-    DEBUG_MSG("Adding fLoad5m! methods to provide write access to the field fLoad5m (" __HERE__ ")");
-    t.method("fLoad5m!", [](CpuInfo_t* a, Float_t val) -> Float_t { return a->fLoad5m = val; });
-
-    DEBUG_MSG("Adding fLoad15m methods  to provide read access to the field fLoad15m (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:168:14
-    // signature to use in the veto list: CpuInfo_t::fLoad15m
-    t.method("fLoad15m", [](const CpuInfo_t& a) -> Float_t { return a.fLoad15m; });
-    t.method("fLoad15m", [](CpuInfo_t& a) -> Float_t { return a.fLoad15m; });
-    t.method("fLoad15m", [](const CpuInfo_t* a) -> Float_t { return a->fLoad15m; });
-    t.method("fLoad15m", [](CpuInfo_t* a) -> Float_t { return a->fLoad15m; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:168:14
-    // signature to use in the veto list: CpuInfo_t::fLoad15m
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fLoad15m! methods to provide write access to the field fLoad15m (" __HERE__ ")");
-    t.method("fLoad15m!", [](CpuInfo_t& a, Float_t val) -> Float_t { return a.fLoad15m = val; });
-
-    DEBUG_MSG("Adding fLoad15m! methods to provide write access to the field fLoad15m (" __HERE__ ")");
-    t.method("fLoad15m!", [](CpuInfo_t* a, Float_t val) -> Float_t { return a->fLoad15m = val; });
-
-    DEBUG_MSG("Adding fUser methods  to provide read access to the field fUser (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:169:14
-    // signature to use in the veto list: CpuInfo_t::fUser
-    t.method("fUser", [](const CpuInfo_t& a) -> Float_t { return a.fUser; });
-    t.method("fUser", [](CpuInfo_t& a) -> Float_t { return a.fUser; });
-    t.method("fUser", [](const CpuInfo_t* a) -> Float_t { return a->fUser; });
-    t.method("fUser", [](CpuInfo_t* a) -> Float_t { return a->fUser; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:169:14
-    // signature to use in the veto list: CpuInfo_t::fUser
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fUser! methods to provide write access to the field fUser (" __HERE__ ")");
-    t.method("fUser!", [](CpuInfo_t& a, Float_t val) -> Float_t { return a.fUser = val; });
-
-    DEBUG_MSG("Adding fUser! methods to provide write access to the field fUser (" __HERE__ ")");
-    t.method("fUser!", [](CpuInfo_t* a, Float_t val) -> Float_t { return a->fUser = val; });
-
-    DEBUG_MSG("Adding fSys methods  to provide read access to the field fSys (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:170:14
-    // signature to use in the veto list: CpuInfo_t::fSys
-    t.method("fSys", [](const CpuInfo_t& a) -> Float_t { return a.fSys; });
-    t.method("fSys", [](CpuInfo_t& a) -> Float_t { return a.fSys; });
-    t.method("fSys", [](const CpuInfo_t* a) -> Float_t { return a->fSys; });
-    t.method("fSys", [](CpuInfo_t* a) -> Float_t { return a->fSys; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:170:14
-    // signature to use in the veto list: CpuInfo_t::fSys
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fSys! methods to provide write access to the field fSys (" __HERE__ ")");
-    t.method("fSys!", [](CpuInfo_t& a, Float_t val) -> Float_t { return a.fSys = val; });
-
-    DEBUG_MSG("Adding fSys! methods to provide write access to the field fSys (" __HERE__ ")");
-    t.method("fSys!", [](CpuInfo_t* a, Float_t val) -> Float_t { return a->fSys = val; });
-
-    DEBUG_MSG("Adding fTotal methods  to provide read access to the field fTotal (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:171:14
-    // signature to use in the veto list: CpuInfo_t::fTotal
-    t.method("fTotal", [](const CpuInfo_t& a) -> Float_t { return a.fTotal; });
-    t.method("fTotal", [](CpuInfo_t& a) -> Float_t { return a.fTotal; });
-    t.method("fTotal", [](const CpuInfo_t* a) -> Float_t { return a->fTotal; });
-    t.method("fTotal", [](CpuInfo_t* a) -> Float_t { return a->fTotal; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:171:14
-    // signature to use in the veto list: CpuInfo_t::fTotal
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fTotal! methods to provide write access to the field fTotal (" __HERE__ ")");
-    t.method("fTotal!", [](CpuInfo_t& a, Float_t val) -> Float_t { return a.fTotal = val; });
-
-    DEBUG_MSG("Adding fTotal! methods to provide write access to the field fTotal (" __HERE__ ")");
-    t.method("fTotal!", [](CpuInfo_t* a, Float_t val) -> Float_t { return a->fTotal = val; });
-
-    DEBUG_MSG("Adding fIdle methods  to provide read access to the field fIdle (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:172:14
-    // signature to use in the veto list: CpuInfo_t::fIdle
-    t.method("fIdle", [](const CpuInfo_t& a) -> Float_t { return a.fIdle; });
-    t.method("fIdle", [](CpuInfo_t& a) -> Float_t { return a.fIdle; });
-    t.method("fIdle", [](const CpuInfo_t* a) -> Float_t { return a->fIdle; });
-    t.method("fIdle", [](CpuInfo_t* a) -> Float_t { return a->fIdle; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:172:14
-    // signature to use in the veto list: CpuInfo_t::fIdle
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fIdle! methods to provide write access to the field fIdle (" __HERE__ ")");
-    t.method("fIdle!", [](CpuInfo_t& a, Float_t val) -> Float_t { return a.fIdle = val; });
-
-    DEBUG_MSG("Adding fIdle! methods to provide write access to the field fIdle (" __HERE__ ")");
-    t.method("fIdle!", [](CpuInfo_t* a, Float_t val) -> Float_t { return a->fIdle = val; });
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<CpuInfo_t>> type_;
-};
-std::shared_ptr<Wrapper> newJlCpuInfo_t(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlCpuInfo_t(module));
 }

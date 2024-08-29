@@ -84,6 +84,9 @@ TVectorT
 TVectorT
 TNamed
 TString
+TIterator
+TObjArrayIter
+TCollection
 TDirectory
 TDirectory::TContext
 TKey
@@ -95,7 +98,6 @@ TROOT
 TApplication
 TInterpreter
 std::type_info
-TCollection
 TSeqCollection
 TDataType
 TVirtualPad
@@ -111,7 +113,6 @@ TTree::TClusterIterator
 TStreamerInfo
 TEntryList
 TH1
-TIterator
 TVirtualTreePlayer
 TTreeFriendLeafIter
 TBranchPtr
@@ -337,6 +338,81 @@ TClass * TBrowser::Dictionary()
 TClass * TBrowser::Class()
 void TBrowser::Streamer(TBuffer &)
 int TBrowser::DeclFileLine()
+void TObjArray::TObjArray(Int_t, Int_t)
+void TObjArray::TObjArray(const TObjArray &)
+TObjArray & TObjArray::operator=(const TObjArray &)
+void TObjArray::Clear(Option_t *)
+void TObjArray::Compress()
+void TObjArray::Delete(Option_t *)
+void TObjArray::Expand(Int_t)
+Int_t TObjArray::GetEntries()
+Int_t TObjArray::GetEntriesFast()
+Int_t TObjArray::GetEntriesUnsafe()
+Int_t TObjArray::GetLast()
+TObject ** TObjArray::GetObjectRef()
+TObject ** TObjArray::GetObjectRef(const TObject *)
+Bool_t TObjArray::IsEmpty()
+TIterator * TObjArray::MakeIterator(Bool_t)
+void TObjArray::Add(TObject *)
+void TObjArray::AddFirst(TObject *)
+void TObjArray::AddLast(TObject *)
+void TObjArray::AddAt(TObject *, Int_t)
+void TObjArray::AddAtAndExpand(TObject *, Int_t)
+Int_t TObjArray::AddAtFree(TObject *)
+void TObjArray::AddAfter(const TObject *, TObject *)
+void TObjArray::AddBefore(const TObject *, TObject *)
+TObject * TObjArray::FindObject(const char *)
+TObject * TObjArray::FindObject(const TObject *)
+TObject * TObjArray::RemoveAt(Int_t)
+TObject * TObjArray::Remove(TObject *)
+void TObjArray::RemoveRange(Int_t, Int_t)
+void TObjArray::RecursiveRemove(TObject *)
+TObject * TObjArray::At(Int_t)
+TObject * TObjArray::UncheckedAt(Int_t)
+TObject * TObjArray::Before(const TObject *)
+TObject * TObjArray::After(const TObject *)
+TObject * TObjArray::First()
+TObject * TObjArray::Last()
+TObject *& TObjArray::operator[](Int_t)
+TObject * TObjArray::operator[](Int_t)
+Int_t TObjArray::LowerBound()
+Int_t TObjArray::IndexOf(const TObject *)
+void TObjArray::SetLast(Int_t)
+void TObjArray::Randomize(Int_t)
+void TObjArray::Sort(Int_t)
+Int_t TObjArray::BinarySearch(TObject *, Int_t)
+Version_t TObjArray::Class_Version()
+TClass * TObjArray::IsA()
+void TObjArray::StreamerNVirtual(TBuffer &)
+const char * TObjArray::DeclFileName()
+int TObjArray::ImplFileLine()
+const char * TObjArray::ImplFileName()
+const char * TObjArray::Class_Name()
+TClass * TObjArray::Dictionary()
+TClass * TObjArray::Class()
+void TObjArray::Streamer(TBuffer &)
+int TObjArray::DeclFileLine()
+void TObjArrayIter::TObjArrayIter(const TObjArray *, Bool_t)
+void TObjArrayIter::TObjArrayIter(const TObjArrayIter &)
+TIterator & TObjArrayIter::operator=(const TIterator &)
+TObjArrayIter & TObjArrayIter::operator=(const TObjArrayIter &)
+const TCollection * TObjArrayIter::GetCollection()
+TObject * TObjArrayIter::Next()
+void TObjArrayIter::Reset()
+Bool_t TObjArrayIter::operator!=(const TIterator &)
+Bool_t TObjArrayIter::operator!=(const TObjArrayIter &)
+TObject * TObjArrayIter::operator*()
+Version_t TObjArrayIter::Class_Version()
+TClass * TObjArrayIter::IsA()
+void TObjArrayIter::StreamerNVirtual(TBuffer &)
+const char * TObjArrayIter::DeclFileName()
+int TObjArrayIter::ImplFileLine()
+const char * TObjArrayIter::ImplFileName()
+const char * TObjArrayIter::Class_Name()
+TClass * TObjArrayIter::Dictionary()
+TClass * TObjArrayIter::Class()
+void TObjArrayIter::Streamer(TBuffer &)
+int TObjArrayIter::DeclFileLine()
 void TDirectory::TDirectory(const char *, const char *, Option_t *, TDirectory *)
 void TDirectory::AddDirectory(Bool_t)
 Bool_t TDirectory::AddDirectoryStatus()

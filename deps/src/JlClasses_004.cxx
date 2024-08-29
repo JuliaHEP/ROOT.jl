@@ -7,6 +7,717 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TObjArrayIter> : std::false_type { };
+  template<> struct DefaultConstructible<TObjArrayIter> : std::false_type { };
+template<> struct SuperType<TObjArrayIter> { typedef TIterator type; };
+}
+
+// Class generating the wrapper for type TObjArrayIter
+// signature to use in the veto file: TObjArrayIter
+struct JlTObjArrayIter: public Wrapper {
+
+  JlTObjArrayIter(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TObjArrayIter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:117:7
+    jlcxx::TypeWrapper<TObjArrayIter>  t = jlModule.add_type<TObjArrayIter>("TObjArrayIter",
+      jlcxx::julia_base_type<TIterator>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TObjArrayIter>>(new jlcxx::TypeWrapper<TObjArrayIter>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+
+
+    DEBUG_MSG("Adding wrapper for void TObjArrayIter::TObjArrayIter(const TObjArray *, Bool_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:135:4
+    t.constructor<const TObjArray *>(/*finalize=*/true);
+    t.constructor<const TObjArray *, Bool_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TObjArrayIter::TObjArrayIter(const TObjArrayIter &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:136:4
+    t.constructor<const TObjArrayIter &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for TIterator & TObjArrayIter::operator=(const TIterator &) (" __HERE__ ")");
+    // signature to use in the veto list: TIterator & TObjArrayIter::operator=(const TIterator &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:138:19
+    t.method("assign", static_cast<TIterator & (TObjArrayIter::*)(const TIterator &) >(&TObjArrayIter::operator=));
+
+    DEBUG_MSG("Adding wrapper for TObjArrayIter & TObjArrayIter::operator=(const TObjArrayIter &) (" __HERE__ ")");
+    // signature to use in the veto list: TObjArrayIter & TObjArrayIter::operator=(const TObjArrayIter &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:139:19
+    t.method("assign", static_cast<TObjArrayIter & (TObjArrayIter::*)(const TObjArrayIter &) >(&TObjArrayIter::operator=));
+
+    DEBUG_MSG("Adding wrapper for const TCollection * TObjArrayIter::GetCollection() (" __HERE__ ")");
+    // signature to use in the veto list: const TCollection * TObjArrayIter::GetCollection()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:141:23
+    t.method("GetCollection", static_cast<const TCollection * (TObjArrayIter::*)()  const>(&TObjArrayIter::GetCollection));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArrayIter::Next() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArrayIter::Next()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:142:23
+    t.method("Next", static_cast<TObject * (TObjArrayIter::*)() >(&TObjArrayIter::Next));
+
+    DEBUG_MSG("Adding wrapper for void TObjArrayIter::Reset() (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArrayIter::Reset()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:143:23
+    t.method("Reset", static_cast<void (TObjArrayIter::*)() >(&TObjArrayIter::Reset));
+    module_.set_override_module(jl_base_module);
+
+    DEBUG_MSG("Adding wrapper for Bool_t TObjArrayIter::operator!=(const TIterator &) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TObjArrayIter::operator!=(const TIterator &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:144:23
+    t.method("!=", static_cast<Bool_t (TObjArrayIter::*)(const TIterator &)  const>(&TObjArrayIter::operator!=));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TObjArrayIter::operator!=(const TObjArrayIter &) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TObjArrayIter::operator!=(const TObjArrayIter &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:145:23
+    t.method("!=", static_cast<Bool_t (TObjArrayIter::*)(const TObjArrayIter &)  const>(&TObjArrayIter::operator!=));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArrayIter::operator*() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArrayIter::operator*()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:146:23
+    t.method("getindex", static_cast<TObject * (TObjArrayIter::*)()  const>(&TObjArrayIter::operator*));
+
+    module_.unset_override_module();
+
+    DEBUG_MSG("Adding wrapper for Version_t TObjArrayIter::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TObjArrayIter::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!Class_Version", static_cast<Version_t (*)() >(&TObjArrayIter::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TObjArrayIter::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TObjArrayIter::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    t.method("IsA", static_cast<TClass * (TObjArrayIter::*)()  const>(&TObjArrayIter::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TObjArrayIter::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArrayIter::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    t.method("StreamerNVirtual", static_cast<void (TObjArrayIter::*)(TBuffer &) >(&TObjArrayIter::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TObjArrayIter::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TObjArrayIter::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!DeclFileName", []() { return (std::string)TObjArrayIter::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TObjArrayIter::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TObjArrayIter::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!ImplFileLine", static_cast<int (*)() >(&TObjArrayIter::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TObjArrayIter::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TObjArrayIter::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!ImplFileName", []() { return (std::string)TObjArrayIter::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TObjArrayIter::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TObjArrayIter::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!Class_Name", []() { return (std::string)TObjArrayIter::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TObjArrayIter::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TObjArrayIter::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!Dictionary", static_cast<TClass * (*)() >(&TObjArrayIter::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TObjArrayIter::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TObjArrayIter::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!Class", static_cast<TClass * (*)() >(&TObjArrayIter::Class));
+
+    DEBUG_MSG("Adding wrapper for void TObjArrayIter::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArrayIter::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    t.method("Streamer", static_cast<void (TObjArrayIter::*)(TBuffer &) >(&TObjArrayIter::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TObjArrayIter::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TObjArrayIter::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:148:4
+    module_.method("TObjArrayIter!DeclFileLine", static_cast<int (*)() >(&TObjArrayIter::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TObjArrayIter>> type_;
+};
+std::shared_ptr<Wrapper> newJlTObjArrayIter(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTObjArrayIter(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TDirectory> : std::false_type { };
+  template<> struct DefaultConstructible<TDirectory> : std::false_type { };
+template<> struct SuperType<TDirectory> { typedef TNamed type; };
+}
+
+// Class generating the wrapper for type TDirectory
+// signature to use in the veto file: TDirectory
+struct JlTDirectory: public Wrapper {
+
+  JlTDirectory(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TDirectory (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:45:7
+    jlcxx::TypeWrapper<TDirectory>  t = jlModule.add_type<TDirectory>("TDirectory",
+      jlcxx::julia_base_type<TNamed>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TDirectory>>(new jlcxx::TypeWrapper<TDirectory>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::TDirectory(const char *, const char *, Option_t *, TDirectory *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:178:4
+    t.constructor<const char *, const char *>(/*finalize=*/true);
+    t.constructor<const char *, const char *, Option_t *>(/*finalize=*/true);
+    t.constructor<const char *, const char *, Option_t *, TDirectory *>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::AddDirectory(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::AddDirectory(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:180:24
+    module_.method("TDirectory!AddDirectory", static_cast<void (*)(Bool_t) >(&TDirectory::AddDirectory));
+    module_.method("TDirectory!AddDirectory", []()->void { TDirectory::AddDirectory(); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::AddDirectoryStatus() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::AddDirectoryStatus()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:181:24
+    module_.method("TDirectory!AddDirectoryStatus", static_cast<Bool_t (*)() >(&TDirectory::AddDirectoryStatus));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Append(TObject *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Append(TObject *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:182:24
+    t.method("Append", static_cast<void (TDirectory::*)(TObject *, Bool_t) >(&TDirectory::Append));
+    t.method("Append", [](TDirectory& a, TObject * arg0)->void { a.Append(arg0); });
+    t.method("Append", [](TDirectory* a, TObject * arg0)->void { a->Append(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Add(TObject *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Add(TObject *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:183:24
+    t.method("Add", static_cast<void (TDirectory::*)(TObject *, Bool_t) >(&TDirectory::Add));
+    t.method("Add", [](TDirectory& a, TObject * arg0)->void { a.Add(arg0); });
+    t.method("Add", [](TDirectory* a, TObject * arg0)->void { a->Add(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::AppendKey(TKey *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::AppendKey(TKey *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:184:24
+    t.method("AppendKey", static_cast<Int_t (TDirectory::*)(TKey *) >(&TDirectory::AppendKey));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Browse(TBrowser *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Browse(TBrowser *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:185:24
+    t.method("Browse", static_cast<void (TDirectory::*)(TBrowser *) >(&TDirectory::Browse));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Build(TFile *, TDirectory *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Build(TFile *, TDirectory *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:186:24
+    t.method("Build", static_cast<void (TDirectory::*)(TFile *, TDirectory *) >(&TDirectory::Build));
+    t.method("Build", [](TDirectory& a)->void { a.Build(); });
+    t.method("Build", [](TDirectory& a, TFile * arg0)->void { a.Build(arg0); });
+    t.method("Build", [](TDirectory* a)->void { a->Build(); });
+    t.method("Build", [](TDirectory* a, TFile * arg0)->void { a->Build(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Clear(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Clear(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:187:24
+    t.method("Clear", static_cast<void (TDirectory::*)(Option_t *) >(&TDirectory::Clear));
+    t.method("Clear", [](TDirectory& a)->void { a.Clear(); });
+    t.method("Clear", [](TDirectory* a)->void { a->Clear(); });
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::CloneObject(const TObject *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::CloneObject(const TObject *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:188:24
+    t.method("CloneObject", static_cast<TObject * (TDirectory::*)(const TObject *, Bool_t) >(&TDirectory::CloneObject));
+    t.method("CloneObject", [](TDirectory& a, const TObject * arg0)->TObject * { return a.CloneObject(arg0); });
+    t.method("CloneObject", [](TDirectory* a, const TObject * arg0)->TObject * { return a->CloneObject(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Close(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Close(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:189:24
+    t.method("Close", static_cast<void (TDirectory::*)(Option_t *) >(&TDirectory::Close));
+    t.method("Close", [](TDirectory& a)->void { a.Close(); });
+    t.method("Close", [](TDirectory* a)->void { a->Close(); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Copy(TObject &) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Copy(TObject &)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:191:24
+    t.method("Copy", static_cast<void (TDirectory::*)(TObject &)  const>(&TDirectory::Copy));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::cd() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::cd()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:192:24
+    t.method("cd", static_cast<Bool_t (TDirectory::*)() >(&TDirectory::cd));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::cd(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::cd(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:193:24
+    t.method("cd", static_cast<Bool_t (TDirectory::*)(const char *) >(&TDirectory::cd));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::DeleteAll(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::DeleteAll(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:194:24
+    t.method("DeleteAll", static_cast<void (TDirectory::*)(Option_t *) >(&TDirectory::DeleteAll));
+    t.method("DeleteAll", [](TDirectory& a)->void { a.DeleteAll(); });
+    t.method("DeleteAll", [](TDirectory* a)->void { a->DeleteAll(); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Delete(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Delete(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:195:24
+    t.method("Delete", static_cast<void (TDirectory::*)(const char *) >(&TDirectory::Delete));
+    t.method("Delete", [](TDirectory& a)->void { a.Delete(); });
+    t.method("Delete", [](TDirectory* a)->void { a->Delete(); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Draw(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Draw(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:196:24
+    t.method("Draw", static_cast<void (TDirectory::*)(Option_t *) >(&TDirectory::Draw));
+    t.method("Draw", [](TDirectory& a)->void { a.Draw(); });
+    t.method("Draw", [](TDirectory* a)->void { a->Draw(); });
+
+    DEBUG_MSG("Adding wrapper for TKey * TDirectory::FindKey(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TKey * TDirectory::FindKey(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:197:24
+    t.method("FindKey", static_cast<TKey * (TDirectory::*)(const char *)  const>(&TDirectory::FindKey));
+
+    DEBUG_MSG("Adding wrapper for TKey * TDirectory::FindKeyAny(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TKey * TDirectory::FindKeyAny(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:198:24
+    t.method("FindKeyAny", static_cast<TKey * (TDirectory::*)(const char *)  const>(&TDirectory::FindKeyAny));
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::FindObject(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::FindObject(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:199:24
+    t.method("FindObject", static_cast<TObject * (TDirectory::*)(const char *)  const>(&TDirectory::FindObject));
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::FindObject(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::FindObject(const TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:200:24
+    t.method("FindObject", static_cast<TObject * (TDirectory::*)(const TObject *)  const>(&TDirectory::FindObject));
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::FindObjectAny(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::FindObjectAny(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:201:24
+    t.method("FindObjectAny", static_cast<TObject * (TDirectory::*)(const char *)  const>(&TDirectory::FindObjectAny));
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::FindObjectAnyFile(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::FindObjectAnyFile(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:202:24
+    t.method("FindObjectAnyFile", static_cast<TObject * (TDirectory::*)(const char *)  const>(&TDirectory::FindObjectAnyFile));
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::Get(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::Get(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:203:24
+    t.method("Get_", static_cast<TObject * (TDirectory::*)(const char *) >(&TDirectory::Get));
+
+    DEBUG_MSG("Adding wrapper for TDirectory * TDirectory::GetDirectory(const char *, Bool_t, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TDirectory * TDirectory::GetDirectory(const char *, Bool_t, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:209:24
+    t.method("GetDirectory", static_cast<TDirectory * (TDirectory::*)(const char *, Bool_t, const char *) >(&TDirectory::GetDirectory));
+    t.method("GetDirectory", [](TDirectory& a, const char * arg0)->TDirectory * { return a.GetDirectory(arg0); });
+    t.method("GetDirectory", [](TDirectory& a, const char * arg0, Bool_t arg1)->TDirectory * { return a.GetDirectory(arg0, arg1); });
+    t.method("GetDirectory", [](TDirectory* a, const char * arg0)->TDirectory * { return a->GetDirectory(arg0); });
+    t.method("GetDirectory", [](TDirectory* a, const char * arg0, Bool_t arg1)->TDirectory * { return a->GetDirectory(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void * TDirectory::GetObjectChecked(const char *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void * TDirectory::GetObjectChecked(const char *, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:216:24
+    t.method("GetObjectChecked", static_cast<void * (TDirectory::*)(const char *, const char *) >(&TDirectory::GetObjectChecked));
+
+    DEBUG_MSG("Adding wrapper for void * TDirectory::GetObjectChecked(const char *, const TClass *) (" __HERE__ ")");
+    // signature to use in the veto list: void * TDirectory::GetObjectChecked(const char *, const TClass *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:217:24
+    t.method("GetObjectChecked", static_cast<void * (TDirectory::*)(const char *, const TClass *) >(&TDirectory::GetObjectChecked));
+
+    DEBUG_MSG("Adding wrapper for void * TDirectory::GetObjectUnchecked(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void * TDirectory::GetObjectUnchecked(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:218:24
+    t.method("GetObjectUnchecked", static_cast<void * (TDirectory::*)(const char *) >(&TDirectory::GetObjectUnchecked));
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::GetBufferSize() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::GetBufferSize()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:219:24
+    t.method("GetBufferSize", static_cast<Int_t (TDirectory::*)()  const>(&TDirectory::GetBufferSize));
+
+    DEBUG_MSG("Adding wrapper for TFile * TDirectory::GetFile() (" __HERE__ ")");
+    // signature to use in the veto list: TFile * TDirectory::GetFile()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:220:24
+    t.method("GetFile", static_cast<TFile * (TDirectory::*)()  const>(&TDirectory::GetFile));
+
+    DEBUG_MSG("Adding wrapper for TKey * TDirectory::GetKey(const char *, Short_t) (" __HERE__ ")");
+    // signature to use in the veto list: TKey * TDirectory::GetKey(const char *, Short_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:221:24
+    t.method("GetKey", static_cast<TKey * (TDirectory::*)(const char *, Short_t)  const>(&TDirectory::GetKey));
+    t.method("GetKey", [](TDirectory const& a, const char * arg0)->TKey * { return a.GetKey(arg0); });
+    t.method("GetKey", [](TDirectory const* a, const char * arg0)->TKey * { return a->GetKey(arg0); });
+
+    DEBUG_MSG("Adding wrapper for TList * TDirectory::GetList() (" __HERE__ ")");
+    // signature to use in the veto list: TList * TDirectory::GetList()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:222:24
+    t.method("GetList", static_cast<TList * (TDirectory::*)()  const>(&TDirectory::GetList));
+
+    DEBUG_MSG("Adding wrapper for TList * TDirectory::GetListOfKeys() (" __HERE__ ")");
+    // signature to use in the veto list: TList * TDirectory::GetListOfKeys()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:223:24
+    t.method("GetListOfKeys", static_cast<TList * (TDirectory::*)()  const>(&TDirectory::GetListOfKeys));
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::GetMother() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::GetMother()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:224:24
+    t.method("GetMother", static_cast<TObject * (TDirectory::*)()  const>(&TDirectory::GetMother));
+
+    DEBUG_MSG("Adding wrapper for TDirectory * TDirectory::GetMotherDir() (" __HERE__ ")");
+    // signature to use in the veto list: TDirectory * TDirectory::GetMotherDir()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:225:24
+    t.method("GetMotherDir", static_cast<TDirectory * (TDirectory::*)()  const>(&TDirectory::GetMotherDir));
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::GetNbytesKeys() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::GetNbytesKeys()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:226:24
+    t.method("GetNbytesKeys", static_cast<Int_t (TDirectory::*)()  const>(&TDirectory::GetNbytesKeys));
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::GetNkeys() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::GetNkeys()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:227:24
+    t.method("GetNkeys", static_cast<Int_t (TDirectory::*)()  const>(&TDirectory::GetNkeys));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TDirectory::GetSeekDir() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TDirectory::GetSeekDir()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:228:24
+    t.method("GetSeekDir", static_cast<Long64_t (TDirectory::*)()  const>(&TDirectory::GetSeekDir));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TDirectory::GetSeekParent() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TDirectory::GetSeekParent()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:229:24
+    t.method("GetSeekParent", static_cast<Long64_t (TDirectory::*)()  const>(&TDirectory::GetSeekParent));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TDirectory::GetSeekKeys() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TDirectory::GetSeekKeys()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:230:24
+    t.method("GetSeekKeys", static_cast<Long64_t (TDirectory::*)()  const>(&TDirectory::GetSeekKeys));
+
+    DEBUG_MSG("Adding wrapper for const char * TDirectory::GetPathStatic() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TDirectory::GetPathStatic()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:231:24
+    t.method("GetPathStatic", [](TDirectory const& a) { return (std::string)a.GetPathStatic(); });
+    t.method("GetPathStatic", [](TDirectory const* a) { return (std::string)a->GetPathStatic(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TDirectory::GetPath() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TDirectory::GetPath()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:232:24
+    t.method("GetPath", [](TDirectory const& a) { return (std::string)a.GetPath(); });
+    t.method("GetPath", [](TDirectory const* a) { return (std::string)a->GetPath(); });
+
+    DEBUG_MSG("Adding wrapper for TUUID TDirectory::GetUUID() (" __HERE__ ")");
+    // signature to use in the veto list: TUUID TDirectory::GetUUID()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:233:24
+    t.method("GetUUID", static_cast<TUUID (TDirectory::*)()  const>(&TDirectory::GetUUID));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::IsBuilt() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::IsBuilt()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:234:24
+    t.method("IsBuilt", static_cast<Bool_t (TDirectory::*)()  const>(&TDirectory::IsBuilt));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::IsFolder() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::IsFolder()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:235:24
+    t.method("IsFolder", static_cast<Bool_t (TDirectory::*)()  const>(&TDirectory::IsFolder));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::IsModified() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::IsModified()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:236:24
+    t.method("IsModified", static_cast<Bool_t (TDirectory::*)()  const>(&TDirectory::IsModified));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::IsWritable() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::IsWritable()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:237:24
+    t.method("IsWritable", static_cast<Bool_t (TDirectory::*)()  const>(&TDirectory::IsWritable));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::ls(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::ls(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:238:24
+    t.method("ls", static_cast<void (TDirectory::*)(Option_t *)  const>(&TDirectory::ls));
+    t.method("ls", [](TDirectory const& a)->void { a.ls(); });
+    t.method("ls", [](TDirectory const* a)->void { a->ls(); });
+
+    DEBUG_MSG("Adding wrapper for TDirectory * TDirectory::mkdir(const char *, const char *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TDirectory * TDirectory::mkdir(const char *, const char *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:239:24
+    t.method("mkdir", static_cast<TDirectory * (TDirectory::*)(const char *, const char *, Bool_t) >(&TDirectory::mkdir));
+    t.method("mkdir", [](TDirectory& a, const char * arg0)->TDirectory * { return a.mkdir(arg0); });
+    t.method("mkdir", [](TDirectory& a, const char * arg0, const char * arg1)->TDirectory * { return a.mkdir(arg0, arg1); });
+    t.method("mkdir", [](TDirectory* a, const char * arg0)->TDirectory * { return a->mkdir(arg0); });
+    t.method("mkdir", [](TDirectory* a, const char * arg0, const char * arg1)->TDirectory * { return a->mkdir(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for TFile * TDirectory::OpenFile(const char *, Option_t *, const char *, Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TFile * TDirectory::OpenFile(const char *, Option_t *, const char *, Int_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:240:24
+    t.method("OpenFile", static_cast<TFile * (TDirectory::*)(const char *, Option_t *, const char *, Int_t, Int_t) >(&TDirectory::OpenFile));
+    t.method("OpenFile", [](TDirectory& a, const char * arg0)->TFile * { return a.OpenFile(arg0); });
+    t.method("OpenFile", [](TDirectory& a, const char * arg0, Option_t * arg1)->TFile * { return a.OpenFile(arg0, arg1); });
+    t.method("OpenFile", [](TDirectory& a, const char * arg0, Option_t * arg1, const char * arg2)->TFile * { return a.OpenFile(arg0, arg1, arg2); });
+    t.method("OpenFile", [](TDirectory& a, const char * arg0, Option_t * arg1, const char * arg2, Int_t arg3)->TFile * { return a.OpenFile(arg0, arg1, arg2, arg3); });
+    t.method("OpenFile", [](TDirectory* a, const char * arg0)->TFile * { return a->OpenFile(arg0); });
+    t.method("OpenFile", [](TDirectory* a, const char * arg0, Option_t * arg1)->TFile * { return a->OpenFile(arg0, arg1); });
+    t.method("OpenFile", [](TDirectory* a, const char * arg0, Option_t * arg1, const char * arg2)->TFile * { return a->OpenFile(arg0, arg1, arg2); });
+    t.method("OpenFile", [](TDirectory* a, const char * arg0, Option_t * arg1, const char * arg2, Int_t arg3)->TFile * { return a->OpenFile(arg0, arg1, arg2, arg3); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Paint(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Paint(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:243:24
+    t.method("Paint", static_cast<void (TDirectory::*)(Option_t *) >(&TDirectory::Paint));
+    t.method("Paint", [](TDirectory& a)->void { a.Paint(); });
+    t.method("Paint", [](TDirectory* a)->void { a->Paint(); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Print(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Print(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:244:24
+    t.method("Print", static_cast<void (TDirectory::*)(Option_t *)  const>(&TDirectory::Print));
+    t.method("Print", [](TDirectory const& a)->void { a.Print(); });
+    t.method("Print", [](TDirectory const* a)->void { a->Print(); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Purge(Short_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Purge(Short_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:245:24
+    t.method("Purge", static_cast<void (TDirectory::*)(Short_t) >(&TDirectory::Purge));
+    t.method("Purge", [](TDirectory& a)->void { a.Purge(); });
+    t.method("Purge", [](TDirectory* a)->void { a->Purge(); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::pwd() (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::pwd()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:246:24
+    t.method("pwd", static_cast<void (TDirectory::*)()  const>(&TDirectory::pwd));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::ReadAll(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::ReadAll(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:247:24
+    t.method("ReadAll", static_cast<void (TDirectory::*)(Option_t *) >(&TDirectory::ReadAll));
+    t.method("ReadAll", [](TDirectory& a)->void { a.ReadAll(); });
+    t.method("ReadAll", [](TDirectory* a)->void { a->ReadAll(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::ReadKeys(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::ReadKeys(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:248:24
+    t.method("ReadKeys", static_cast<Int_t (TDirectory::*)(Bool_t) >(&TDirectory::ReadKeys));
+    t.method("ReadKeys", [](TDirectory& a)->Int_t { return a.ReadKeys(); });
+    t.method("ReadKeys", [](TDirectory* a)->Int_t { return a->ReadKeys(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::ReadTObject(TObject *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::ReadTObject(TObject *, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:249:24
+    t.method("ReadTObject", static_cast<Int_t (TDirectory::*)(TObject *, const char *) >(&TDirectory::ReadTObject));
+
+    DEBUG_MSG("Adding wrapper for TObject * TDirectory::Remove(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TDirectory::Remove(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:250:24
+    t.method("Remove", static_cast<TObject * (TDirectory::*)(TObject *) >(&TDirectory::Remove));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::RecursiveRemove(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::RecursiveRemove(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:251:24
+    t.method("RecursiveRemove", static_cast<void (TDirectory::*)(TObject *) >(&TDirectory::RecursiveRemove));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::rmdir(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::rmdir(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:252:24
+    t.method("rmdir", static_cast<void (TDirectory::*)(const char *) >(&TDirectory::rmdir));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Save() (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Save()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:253:24
+    t.method("Save", static_cast<void (TDirectory::*)() >(&TDirectory::Save));
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::SaveObjectAs(const TObject *, const char *, Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::SaveObjectAs(const TObject *, const char *, Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:254:24
+    t.method("SaveObjectAs", static_cast<Int_t (TDirectory::*)(const TObject *, const char *, Option_t *)  const>(&TDirectory::SaveObjectAs));
+    t.method("SaveObjectAs", [](TDirectory const& a, const TObject * arg0)->Int_t { return a.SaveObjectAs(arg0); });
+    t.method("SaveObjectAs", [](TDirectory const& a, const TObject * arg0, const char * arg1)->Int_t { return a.SaveObjectAs(arg0, arg1); });
+    t.method("SaveObjectAs", [](TDirectory const* a, const TObject * arg0)->Int_t { return a->SaveObjectAs(arg0); });
+    t.method("SaveObjectAs", [](TDirectory const* a, const TObject * arg0, const char * arg1)->Int_t { return a->SaveObjectAs(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SaveSelf(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SaveSelf(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:255:24
+    t.method("SaveSelf", static_cast<void (TDirectory::*)(Bool_t) >(&TDirectory::SaveSelf));
+    t.method("SaveSelf", [](TDirectory& a)->void { a.SaveSelf(); });
+    t.method("SaveSelf", [](TDirectory* a)->void { a->SaveSelf(); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SetBufferSize(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SetBufferSize(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:256:24
+    t.method("SetBufferSize", static_cast<void (TDirectory::*)(Int_t) >(&TDirectory::SetBufferSize));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SetModified() (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SetModified()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:257:24
+    t.method("SetModified", static_cast<void (TDirectory::*)() >(&TDirectory::SetModified));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SetMother(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SetMother(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:258:24
+    t.method("SetMother", static_cast<void (TDirectory::*)(TObject *) >(&TDirectory::SetMother));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SetName(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SetName(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:259:24
+    t.method("SetName", static_cast<void (TDirectory::*)(const char *) >(&TDirectory::SetName));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SetTRefAction(TObject *, TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SetTRefAction(TObject *, TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:260:24
+    t.method("SetTRefAction", static_cast<void (TDirectory::*)(TObject *, TObject *) >(&TDirectory::SetTRefAction));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SetSeekDir(Long64_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SetSeekDir(Long64_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:261:24
+    t.method("SetSeekDir", static_cast<void (TDirectory::*)(Long64_t) >(&TDirectory::SetSeekDir));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::SetWritable(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::SetWritable(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:262:24
+    t.method("SetWritable", static_cast<void (TDirectory::*)(Bool_t) >(&TDirectory::SetWritable));
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::Sizeof() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::Sizeof()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:263:24
+    t.method("Sizeof", static_cast<Int_t (TDirectory::*)()  const>(&TDirectory::Sizeof));
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::Write(const char *, Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::Write(const char *, Int_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:264:24
+    t.method("Write", static_cast<Int_t (TDirectory::*)(const char *, Int_t, Int_t) >(&TDirectory::Write));
+    t.method("Write", [](TDirectory& a)->Int_t { return a.Write(); });
+    t.method("Write", [](TDirectory& a, const char * arg0)->Int_t { return a.Write(arg0); });
+    t.method("Write", [](TDirectory& a, const char * arg0, Int_t arg1)->Int_t { return a.Write(arg0, arg1); });
+    t.method("Write", [](TDirectory* a)->Int_t { return a->Write(); });
+    t.method("Write", [](TDirectory* a, const char * arg0)->Int_t { return a->Write(arg0); });
+    t.method("Write", [](TDirectory* a, const char * arg0, Int_t arg1)->Int_t { return a->Write(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::Write(const char *, Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::Write(const char *, Int_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:265:24
+    t.method("Write", static_cast<Int_t (TDirectory::*)(const char *, Int_t, Int_t)  const>(&TDirectory::Write));
+    t.method("Write", [](TDirectory const& a)->Int_t { return a.Write(); });
+    t.method("Write", [](TDirectory const& a, const char * arg0)->Int_t { return a.Write(arg0); });
+    t.method("Write", [](TDirectory const& a, const char * arg0, Int_t arg1)->Int_t { return a.Write(arg0, arg1); });
+    t.method("Write", [](TDirectory const* a)->Int_t { return a->Write(); });
+    t.method("Write", [](TDirectory const* a, const char * arg0)->Int_t { return a->Write(arg0); });
+    t.method("Write", [](TDirectory const* a, const char * arg0, Int_t arg1)->Int_t { return a->Write(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::WriteTObject(const TObject *, const char *, Option_t *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::WriteTObject(const TObject *, const char *, Option_t *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:266:24
+    t.method("WriteTObject", static_cast<Int_t (TDirectory::*)(const TObject *, const char *, Option_t *, Int_t) >(&TDirectory::WriteTObject));
+    t.method("WriteTObject", [](TDirectory& a, const TObject * arg0)->Int_t { return a.WriteTObject(arg0); });
+    t.method("WriteTObject", [](TDirectory& a, const TObject * arg0, const char * arg1)->Int_t { return a.WriteTObject(arg0, arg1); });
+    t.method("WriteTObject", [](TDirectory& a, const TObject * arg0, const char * arg1, Option_t * arg2)->Int_t { return a.WriteTObject(arg0, arg1, arg2); });
+    t.method("WriteTObject", [](TDirectory* a, const TObject * arg0)->Int_t { return a->WriteTObject(arg0); });
+    t.method("WriteTObject", [](TDirectory* a, const TObject * arg0, const char * arg1)->Int_t { return a->WriteTObject(arg0, arg1); });
+    t.method("WriteTObject", [](TDirectory* a, const TObject * arg0, const char * arg1, Option_t * arg2)->Int_t { return a->WriteTObject(arg0, arg1, arg2); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::WriteObjectAny(const void *, const char *, const char *, Option_t *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::WriteObjectAny(const void *, const char *, const char *, Option_t *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:300:24
+    t.method("WriteObjectAny", static_cast<Int_t (TDirectory::*)(const void *, const char *, const char *, Option_t *, Int_t) >(&TDirectory::WriteObjectAny));
+    t.method("WriteObjectAny", [](TDirectory& a, const void * arg0, const char * arg1, const char * arg2)->Int_t { return a.WriteObjectAny(arg0, arg1, arg2); });
+    t.method("WriteObjectAny", [](TDirectory& a, const void * arg0, const char * arg1, const char * arg2, Option_t * arg3)->Int_t { return a.WriteObjectAny(arg0, arg1, arg2, arg3); });
+    t.method("WriteObjectAny", [](TDirectory* a, const void * arg0, const char * arg1, const char * arg2)->Int_t { return a->WriteObjectAny(arg0, arg1, arg2); });
+    t.method("WriteObjectAny", [](TDirectory* a, const void * arg0, const char * arg1, const char * arg2, Option_t * arg3)->Int_t { return a->WriteObjectAny(arg0, arg1, arg2, arg3); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TDirectory::WriteObjectAny(const void *, const TClass *, const char *, Option_t *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TDirectory::WriteObjectAny(const void *, const TClass *, const char *, Option_t *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:301:24
+    t.method("WriteObjectAny", static_cast<Int_t (TDirectory::*)(const void *, const TClass *, const char *, Option_t *, Int_t) >(&TDirectory::WriteObjectAny));
+    t.method("WriteObjectAny", [](TDirectory& a, const void * arg0, const TClass * arg1, const char * arg2)->Int_t { return a.WriteObjectAny(arg0, arg1, arg2); });
+    t.method("WriteObjectAny", [](TDirectory& a, const void * arg0, const TClass * arg1, const char * arg2, Option_t * arg3)->Int_t { return a.WriteObjectAny(arg0, arg1, arg2, arg3); });
+    t.method("WriteObjectAny", [](TDirectory* a, const void * arg0, const TClass * arg1, const char * arg2)->Int_t { return a->WriteObjectAny(arg0, arg1, arg2); });
+    t.method("WriteObjectAny", [](TDirectory* a, const void * arg0, const TClass * arg1, const char * arg2, Option_t * arg3)->Int_t { return a->WriteObjectAny(arg0, arg1, arg2, arg3); });
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::WriteDirHeader() (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::WriteDirHeader()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:302:24
+    t.method("WriteDirHeader", static_cast<void (TDirectory::*)() >(&TDirectory::WriteDirHeader));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::WriteKeys() (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::WriteKeys()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:303:24
+    t.method("WriteKeys", static_cast<void (TDirectory::*)() >(&TDirectory::WriteKeys));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TDirectory::Cd(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TDirectory::Cd(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:305:24
+    module_.method("TDirectory!Cd", static_cast<Bool_t (*)(const char *) >(&TDirectory::Cd));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::DecodeNameCycle(const char *, char *, Short_t &, const size_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::DecodeNameCycle(const char *, char *, Short_t &, const size_t)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:306:24
+    module_.method("TDirectory!DecodeNameCycle", static_cast<void (*)(const char *, char *, Short_t &, const size_t) >(&TDirectory::DecodeNameCycle));
+    module_.method("TDirectory!DecodeNameCycle", [](const char * arg0, char * arg1, Short_t & arg2)->void { TDirectory::DecodeNameCycle(arg0, arg1, arg2); });
+
+    DEBUG_MSG("Adding wrapper for Version_t TDirectory::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TDirectory::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!Class_Version", static_cast<Version_t (*)() >(&TDirectory::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TDirectory::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TDirectory::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    t.method("IsA", static_cast<TClass * (TDirectory::*)()  const>(&TDirectory::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    t.method("StreamerNVirtual", static_cast<void (TDirectory::*)(TBuffer &) >(&TDirectory::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TDirectory::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TDirectory::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!DeclFileName", []() { return (std::string)TDirectory::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TDirectory::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TDirectory::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!ImplFileLine", static_cast<int (*)() >(&TDirectory::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TDirectory::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TDirectory::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!ImplFileName", []() { return (std::string)TDirectory::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TDirectory::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TDirectory::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!Class_Name", []() { return (std::string)TDirectory::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TDirectory::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TDirectory::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!Dictionary", static_cast<TClass * (*)() >(&TDirectory::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TDirectory::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TDirectory::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!Class", static_cast<TClass * (*)() >(&TDirectory::Class));
+
+    DEBUG_MSG("Adding wrapper for void TDirectory::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TDirectory::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    t.method("Streamer", static_cast<void (TDirectory::*)(TBuffer &) >(&TDirectory::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TDirectory::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TDirectory::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TDirectory.h:308:4
+    module_.method("TDirectory!DeclFileLine", static_cast<int (*)() >(&TDirectory::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TDirectory>> type_;
+};
+std::shared_ptr<Wrapper> newJlTDirectory(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTDirectory(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TDirectory::TContext> : std::false_type { };
   template<> struct DefaultConstructible<TDirectory::TContext> : std::false_type { };
 }
@@ -822,747 +1533,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTDirectoryFile(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTDirectoryFile(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TFile> : std::false_type { };
-  template<> struct DefaultConstructible<TFile> : std::false_type { };
-template<> struct SuperType<TFile> { typedef TDirectoryFile type; };
-}
-
-// Class generating the wrapper for type TFile
-// signature to use in the veto file: TFile
-struct JlTFile: public Wrapper {
-
-  JlTFile(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TFile (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:53:7
-    jlcxx::TypeWrapper<TFile>  t = jlModule.add_type<TFile>("TFile",
-      jlcxx::julia_base_type<TDirectoryFile>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TFile>>(new jlcxx::TypeWrapper<TFile>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TFile::TFile(const char *, Option_t *, const char *, Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:198:4
-    t.constructor<const char *>(/*finalize=*/true);
-    t.constructor<const char *, Option_t *>(/*finalize=*/true);
-    t.constructor<const char *, Option_t *, const char *>(/*finalize=*/true);
-    t.constructor<const char *, Option_t *, const char *, Int_t>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding wrapper for void TFile::Close(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Close(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:201:24
-    t.method("Close", static_cast<void (TFile::*)(Option_t *) >(&TFile::Close));
-    t.method("Close", [](TFile& a)->void { a.Close(); });
-    t.method("Close", [](TFile* a)->void { a->Close(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::Copy(TObject &) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Copy(TObject &)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:202:24
-    t.method("Copy", static_cast<void (TFile::*)(TObject &)  const>(&TFile::Copy));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::Cp(const char *, Bool_t, UInt_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::Cp(const char *, Bool_t, UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:203:24
-    t.method("Cp", static_cast<Bool_t (TFile::*)(const char *, Bool_t, UInt_t) >(&TFile::Cp));
-    t.method("Cp", [](TFile& a, const char * arg0)->Bool_t { return a.Cp(arg0); });
-    t.method("Cp", [](TFile& a, const char * arg0, Bool_t arg1)->Bool_t { return a.Cp(arg0, arg1); });
-    t.method("Cp", [](TFile* a, const char * arg0)->Bool_t { return a->Cp(arg0); });
-    t.method("Cp", [](TFile* a, const char * arg0, Bool_t arg1)->Bool_t { return a->Cp(arg0, arg1); });
-
-    DEBUG_MSG("Adding wrapper for TKey * TFile::CreateKey(TDirectory *, const TObject *, const char *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: TKey * TFile::CreateKey(TDirectory *, const TObject *, const char *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:204:24
-    t.method("CreateKey", static_cast<TKey * (TFile::*)(TDirectory *, const TObject *, const char *, Int_t) >(&TFile::CreateKey));
-
-    DEBUG_MSG("Adding wrapper for TKey * TFile::CreateKey(TDirectory *, const void *, const TClass *, const char *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: TKey * TFile::CreateKey(TDirectory *, const void *, const TClass *, const char *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:205:24
-    t.method("CreateKey", static_cast<TKey * (TFile::*)(TDirectory *, const void *, const TClass *, const char *, Int_t) >(&TFile::CreateKey));
-
-    DEBUG_MSG("Adding wrapper for TFile *& TFile::CurrentFile() (" __HERE__ ")");
-    // signature to use in the veto list: TFile *& TFile::CurrentFile()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:207:24
-    module_.method("TFile!CurrentFile", static_cast<TFile *& (*)() >(&TFile::CurrentFile));
-
-    DEBUG_MSG("Adding wrapper for void TFile::Delete(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Delete(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:208:24
-    t.method("Delete", static_cast<void (TFile::*)(const char *) >(&TFile::Delete));
-    t.method("Delete", [](TFile& a)->void { a.Delete(); });
-    t.method("Delete", [](TFile* a)->void { a->Delete(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::Draw(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Draw(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:209:24
-    t.method("Draw", static_cast<void (TFile::*)(Option_t *) >(&TFile::Draw));
-    t.method("Draw", [](TFile& a)->void { a.Draw(); });
-    t.method("Draw", [](TFile* a)->void { a->Draw(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::DrawMap(const char *, Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::DrawMap(const char *, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:210:24
-    t.method("DrawMap", static_cast<void (TFile::*)(const char *, Option_t *) >(&TFile::DrawMap));
-    t.method("DrawMap", [](TFile& a)->void { a.DrawMap(); });
-    t.method("DrawMap", [](TFile& a, const char * arg0)->void { a.DrawMap(arg0); });
-    t.method("DrawMap", [](TFile* a)->void { a->DrawMap(); });
-    t.method("DrawMap", [](TFile* a, const char * arg0)->void { a->DrawMap(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::FillBuffer(char *&) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::FillBuffer(char *&)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:211:24
-    t.method("FillBuffer", static_cast<void (TFile::*)(char *&) >(&TFile::FillBuffer));
-
-    DEBUG_MSG("Adding wrapper for void TFile::Flush() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Flush()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:212:24
-    t.method("Flush", static_cast<void (TFile::*)() >(&TFile::Flush));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetArchiveOffset() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetArchiveOffset()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:214:24
-    t.method("GetArchiveOffset", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetArchiveOffset));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetBestBuffer() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetBestBuffer()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:215:24
-    t.method("GetBestBuffer", static_cast<Int_t (TFile::*)()  const>(&TFile::GetBestBuffer));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetBytesToPrefetch() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetBytesToPrefetch()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:216:24
-    t.method("GetBytesToPrefetch", static_cast<Int_t (TFile::*)()  const>(&TFile::GetBytesToPrefetch));
-
-    DEBUG_MSG("Adding wrapper for TArrayC * TFile::GetClassIndex() (" __HERE__ ")");
-    // signature to use in the veto list: TArrayC * TFile::GetClassIndex()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:219:24
-    t.method("GetClassIndex", static_cast<TArrayC * (TFile::*)()  const>(&TFile::GetClassIndex));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetCompressionAlgorithm() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetCompressionAlgorithm()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:220:24
-    t.method("GetCompressionAlgorithm", static_cast<Int_t (TFile::*)()  const>(&TFile::GetCompressionAlgorithm));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetCompressionLevel() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetCompressionLevel()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:221:24
-    t.method("GetCompressionLevel", static_cast<Int_t (TFile::*)()  const>(&TFile::GetCompressionLevel));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetCompressionSettings() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetCompressionSettings()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:222:24
-    t.method("GetCompressionSettings", static_cast<Int_t (TFile::*)()  const>(&TFile::GetCompressionSettings));
-
-    DEBUG_MSG("Adding wrapper for Float_t TFile::GetCompressionFactor() (" __HERE__ ")");
-    // signature to use in the veto list: Float_t TFile::GetCompressionFactor()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:223:24
-    t.method("GetCompressionFactor", static_cast<Float_t (TFile::*)() >(&TFile::GetCompressionFactor));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetEND() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetEND()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:224:24
-    t.method("GetEND", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetEND));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetErrno() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetErrno()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:225:24
-    t.method("GetErrno", static_cast<Int_t (TFile::*)()  const>(&TFile::GetErrno));
-
-    DEBUG_MSG("Adding wrapper for void TFile::ResetErrno() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::ResetErrno()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:226:24
-    t.method("ResetErrno", static_cast<void (TFile::*)()  const>(&TFile::ResetErrno));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetFd() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetFd()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:227:24
-    t.method("GetFd", static_cast<Int_t (TFile::*)()  const>(&TFile::GetFd));
-
-    DEBUG_MSG("Adding wrapper for const TUrl * TFile::GetEndpointUrl() (" __HERE__ ")");
-    // signature to use in the veto list: const TUrl * TFile::GetEndpointUrl()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:228:24
-    t.method("GetEndpointUrl", static_cast<const TUrl * (TFile::*)()  const>(&TFile::GetEndpointUrl));
-
-    DEBUG_MSG("Adding wrapper for TObjArray * TFile::GetListOfProcessIDs() (" __HERE__ ")");
-    // signature to use in the veto list: TObjArray * TFile::GetListOfProcessIDs()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:229:24
-    t.method("GetListOfProcessIDs", static_cast<TObjArray * (TFile::*)()  const>(&TFile::GetListOfProcessIDs));
-
-    DEBUG_MSG("Adding wrapper for TList * TFile::GetListOfFree() (" __HERE__ ")");
-    // signature to use in the veto list: TList * TFile::GetListOfFree()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:230:24
-    t.method("GetListOfFree", static_cast<TList * (TFile::*)()  const>(&TFile::GetListOfFree));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetNfree() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetNfree()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:231:24
-    t.method("GetNfree", static_cast<Int_t (TFile::*)()  const>(&TFile::GetNfree));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetNProcessIDs() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetNProcessIDs()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:232:24
-    t.method("GetNProcessIDs", static_cast<Int_t (TFile::*)()  const>(&TFile::GetNProcessIDs));
-
-    DEBUG_MSG("Adding wrapper for Option_t * TFile::GetOption() (" __HERE__ ")");
-    // signature to use in the veto list: Option_t * TFile::GetOption()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:233:24
-    t.method("GetOption", static_cast<Option_t * (TFile::*)()  const>(&TFile::GetOption));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetBytesRead() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetBytesRead()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:234:24
-    t.method("GetBytesRead", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetBytesRead));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetBytesReadExtra() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetBytesReadExtra()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:235:24
-    t.method("GetBytesReadExtra", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetBytesReadExtra));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetBytesWritten() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetBytesWritten()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:236:24
-    t.method("GetBytesWritten", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetBytesWritten));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetReadCalls() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetReadCalls()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:237:24
-    t.method("GetReadCalls", static_cast<Int_t (TFile::*)()  const>(&TFile::GetReadCalls));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetVersion() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetVersion()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:238:24
-    t.method("GetVersion", static_cast<Int_t (TFile::*)()  const>(&TFile::GetVersion));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetRecordHeader(char *, Long64_t, Int_t, Int_t &, Int_t &, Int_t &) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetRecordHeader(char *, Long64_t, Int_t, Int_t &, Int_t &, Int_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:239:24
-    t.method("GetRecordHeader", static_cast<Int_t (TFile::*)(char *, Long64_t, Int_t, Int_t &, Int_t &, Int_t &) >(&TFile::GetRecordHeader));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetNbytesInfo() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetNbytesInfo()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:241:24
-    t.method("GetNbytesInfo", static_cast<Int_t (TFile::*)()  const>(&TFile::GetNbytesInfo));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetNbytesFree() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetNbytesFree()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:242:24
-    t.method("GetNbytesFree", static_cast<Int_t (TFile::*)()  const>(&TFile::GetNbytesFree));
-
-    DEBUG_MSG("Adding wrapper for TString TFile::GetNewUrl() (" __HERE__ ")");
-    // signature to use in the veto list: TString TFile::GetNewUrl()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:243:24
-    t.method("GetNewUrl", static_cast<TString (TFile::*)() >(&TFile::GetNewUrl));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetRelOffset() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetRelOffset()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:244:24
-    t.method("GetRelOffset", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetRelOffset));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetSeekFree() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetSeekFree()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:245:24
-    t.method("GetSeekFree", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetSeekFree));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetSeekInfo() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetSeekInfo()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:246:24
-    t.method("GetSeekInfo", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetSeekInfo));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetSize() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetSize()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:247:24
-    t.method("GetSize", static_cast<Long64_t (TFile::*)()  const>(&TFile::GetSize));
-
-    DEBUG_MSG("Adding wrapper for TList * TFile::GetStreamerInfoList() (" __HERE__ ")");
-    // signature to use in the veto list: TList * TFile::GetStreamerInfoList()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:248:24
-    t.method("GetStreamerInfoList", static_cast<TList * (TFile::*)() >(&TFile::GetStreamerInfoList));
-
-    DEBUG_MSG("Adding wrapper for const TList * TFile::GetStreamerInfoCache() (" __HERE__ ")");
-    // signature to use in the veto list: const TList * TFile::GetStreamerInfoCache()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:249:24
-    t.method("GetStreamerInfoCache", static_cast<const TList * (TFile::*)() >(&TFile::GetStreamerInfoCache));
-
-    DEBUG_MSG("Adding wrapper for void TFile::IncrementProcessIDs() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::IncrementProcessIDs()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:250:24
-    t.method("IncrementProcessIDs", static_cast<void (TFile::*)() >(&TFile::IncrementProcessIDs));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::IsArchive() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::IsArchive()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:251:24
-    t.method("IsArchive", static_cast<Bool_t (TFile::*)()  const>(&TFile::IsArchive));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::IsBinary() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::IsBinary()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:252:24
-    t.method("IsBinary", static_cast<Bool_t (TFile::*)()  const>(&TFile::IsBinary));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::IsRaw() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::IsRaw()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:253:24
-    t.method("IsRaw", static_cast<Bool_t (TFile::*)()  const>(&TFile::IsRaw));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::IsOpen() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::IsOpen()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:254:24
-    t.method("IsOpen", static_cast<Bool_t (TFile::*)()  const>(&TFile::IsOpen));
-
-    DEBUG_MSG("Adding wrapper for void TFile::ls(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::ls(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:255:24
-    t.method("ls", static_cast<void (TFile::*)(Option_t *)  const>(&TFile::ls));
-    t.method("ls", [](TFile const& a)->void { a.ls(); });
-    t.method("ls", [](TFile const* a)->void { a->ls(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::MakeFree(Long64_t, Long64_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::MakeFree(Long64_t, Long64_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:256:24
-    t.method("MakeFree", static_cast<void (TFile::*)(Long64_t, Long64_t) >(&TFile::MakeFree));
-
-    DEBUG_MSG("Adding wrapper for void TFile::MakeProject(const char *, const char *, Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::MakeProject(const char *, const char *, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:257:24
-    t.method("MakeProject", static_cast<void (TFile::*)(const char *, const char *, Option_t *) >(&TFile::MakeProject));
-    t.method("MakeProject", [](TFile& a, const char * arg0)->void { a.MakeProject(arg0); });
-    t.method("MakeProject", [](TFile& a, const char * arg0, const char * arg1)->void { a.MakeProject(arg0, arg1); });
-    t.method("MakeProject", [](TFile* a, const char * arg0)->void { a->MakeProject(arg0); });
-    t.method("MakeProject", [](TFile* a, const char * arg0, const char * arg1)->void { a->MakeProject(arg0, arg1); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::Map(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Map(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:259:24
-    t.method("Map", static_cast<void (TFile::*)(Option_t *) >(&TFile::Map));
-
-    DEBUG_MSG("Adding wrapper for void TFile::Map() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Map()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:260:24
-    t.method("Map", static_cast<void (TFile::*)() >(&TFile::Map));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::Matches(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::Matches(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:261:24
-    t.method("Matches", static_cast<Bool_t (TFile::*)(const char *) >(&TFile::Matches));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::MustFlush() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::MustFlush()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:262:24
-    t.method("MustFlush", static_cast<Bool_t (TFile::*)()  const>(&TFile::MustFlush));
-
-    DEBUG_MSG("Adding wrapper for void TFile::Paint(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Paint(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:263:24
-    t.method("Paint", static_cast<void (TFile::*)(Option_t *) >(&TFile::Paint));
-    t.method("Paint", [](TFile& a)->void { a.Paint(); });
-    t.method("Paint", [](TFile* a)->void { a->Paint(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::Print(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Print(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:264:24
-    t.method("Print", static_cast<void (TFile::*)(Option_t *)  const>(&TFile::Print));
-    t.method("Print", [](TFile const& a)->void { a.Print(); });
-    t.method("Print", [](TFile const* a)->void { a->Print(); });
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::ReadBufferAsync(Long64_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::ReadBufferAsync(Long64_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:265:24
-    t.method("ReadBufferAsync", static_cast<Bool_t (TFile::*)(Long64_t, Int_t) >(&TFile::ReadBufferAsync));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::ReadBuffer(char *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::ReadBuffer(char *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:266:24
-    t.method("ReadBuffer", static_cast<Bool_t (TFile::*)(char *, Int_t) >(&TFile::ReadBuffer));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::ReadBuffer(char *, Long64_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::ReadBuffer(char *, Long64_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:267:24
-    t.method("ReadBuffer", static_cast<Bool_t (TFile::*)(char *, Long64_t, Int_t) >(&TFile::ReadBuffer));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::ReadBuffers(char *, Long64_t *, Int_t *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::ReadBuffers(char *, Long64_t *, Int_t *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:268:24
-    t.method("ReadBuffers", static_cast<Bool_t (TFile::*)(char *, Long64_t *, Int_t *, Int_t) >(&TFile::ReadBuffers));
-
-    DEBUG_MSG("Adding wrapper for void TFile::ReadFree() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::ReadFree()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:269:24
-    t.method("ReadFree", static_cast<void (TFile::*)() >(&TFile::ReadFree));
-
-    DEBUG_MSG("Adding wrapper for void TFile::ReadStreamerInfo() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::ReadStreamerInfo()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:271:24
-    t.method("ReadStreamerInfo", static_cast<void (TFile::*)() >(&TFile::ReadStreamerInfo));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::Recover() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::Recover()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:272:24
-    t.method("Recover", static_cast<Int_t (TFile::*)() >(&TFile::Recover));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::ReOpen(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::ReOpen(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:273:24
-    t.method("ReOpen", static_cast<Int_t (TFile::*)(Option_t *) >(&TFile::ReOpen));
-
-    DEBUG_MSG("Adding wrapper for void TFile::Seek(Long64_t, TFile::ERelativeTo) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Seek(Long64_t, TFile::ERelativeTo)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:274:24
-    t.method("Seek", static_cast<void (TFile::*)(Long64_t, TFile::ERelativeTo) >(&TFile::Seek));
-    t.method("Seek", [](TFile& a, Long64_t arg0)->void { a.Seek(arg0); });
-    t.method("Seek", [](TFile* a, Long64_t arg0)->void { a->Seek(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetCompressionAlgorithm(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetCompressionAlgorithm(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:277:24
-    t.method("SetCompressionAlgorithm", static_cast<void (TFile::*)(Int_t) >(&TFile::SetCompressionAlgorithm));
-    t.method("SetCompressionAlgorithm", [](TFile& a)->void { a.SetCompressionAlgorithm(); });
-    t.method("SetCompressionAlgorithm", [](TFile* a)->void { a->SetCompressionAlgorithm(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetCompressionLevel(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetCompressionLevel(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:278:24
-    t.method("SetCompressionLevel", static_cast<void (TFile::*)(Int_t) >(&TFile::SetCompressionLevel));
-    t.method("SetCompressionLevel", [](TFile& a)->void { a.SetCompressionLevel(); });
-    t.method("SetCompressionLevel", [](TFile* a)->void { a->SetCompressionLevel(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetCompressionSettings(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetCompressionSettings(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:279:24
-    t.method("SetCompressionSettings", static_cast<void (TFile::*)(Int_t) >(&TFile::SetCompressionSettings));
-    t.method("SetCompressionSettings", [](TFile& a)->void { a.SetCompressionSettings(); });
-    t.method("SetCompressionSettings", [](TFile* a)->void { a->SetCompressionSettings(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetEND(Long64_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetEND(Long64_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:280:24
-    t.method("SetEND", static_cast<void (TFile::*)(Long64_t) >(&TFile::SetEND));
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetOffset(Long64_t, TFile::ERelativeTo) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetOffset(Long64_t, TFile::ERelativeTo)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:281:24
-    t.method("SetOffset", static_cast<void (TFile::*)(Long64_t, TFile::ERelativeTo) >(&TFile::SetOffset));
-    t.method("SetOffset", [](TFile& a, Long64_t arg0)->void { a.SetOffset(arg0); });
-    t.method("SetOffset", [](TFile* a, Long64_t arg0)->void { a->SetOffset(arg0); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetOption(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetOption(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:282:24
-    t.method("SetOption", static_cast<void (TFile::*)(Option_t *) >(&TFile::SetOption));
-    t.method("SetOption", [](TFile& a)->void { a.SetOption(); });
-    t.method("SetOption", [](TFile* a)->void { a->SetOption(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetReadCalls(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetReadCalls(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:283:24
-    t.method("SetReadCalls", static_cast<void (TFile::*)(Int_t) >(&TFile::SetReadCalls));
-    t.method("SetReadCalls", [](TFile& a)->void { a.SetReadCalls(); });
-    t.method("SetReadCalls", [](TFile* a)->void { a->SetReadCalls(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::ShowStreamerInfo() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::ShowStreamerInfo()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:284:24
-    t.method("ShowStreamerInfo", static_cast<void (TFile::*)() >(&TFile::ShowStreamerInfo));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::Sizeof() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::Sizeof()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:285:24
-    t.method("Sizeof", static_cast<Int_t (TFile::*)()  const>(&TFile::Sizeof));
-
-    DEBUG_MSG("Adding wrapper for void TFile::SumBuffer(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SumBuffer(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:286:24
-    t.method("SumBuffer", static_cast<void (TFile::*)(Int_t) >(&TFile::SumBuffer));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::WriteBuffer(const char *, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::WriteBuffer(const char *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:287:24
-    t.method("WriteBuffer", static_cast<Bool_t (TFile::*)(const char *, Int_t) >(&TFile::WriteBuffer));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::Write(const char *, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::Write(const char *, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:288:24
-    t.method("Write", static_cast<Int_t (TFile::*)(const char *, Int_t, Int_t) >(&TFile::Write));
-    t.method("Write", [](TFile& a)->Int_t { return a.Write(); });
-    t.method("Write", [](TFile& a, const char * arg0)->Int_t { return a.Write(arg0); });
-    t.method("Write", [](TFile& a, const char * arg0, Int_t arg1)->Int_t { return a.Write(arg0, arg1); });
-    t.method("Write", [](TFile* a)->Int_t { return a->Write(); });
-    t.method("Write", [](TFile* a, const char * arg0)->Int_t { return a->Write(arg0); });
-    t.method("Write", [](TFile* a, const char * arg0, Int_t arg1)->Int_t { return a->Write(arg0, arg1); });
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::Write(const char *, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::Write(const char *, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:289:24
-    t.method("Write", static_cast<Int_t (TFile::*)(const char *, Int_t, Int_t)  const>(&TFile::Write));
-    t.method("Write", [](TFile const& a)->Int_t { return a.Write(); });
-    t.method("Write", [](TFile const& a, const char * arg0)->Int_t { return a.Write(arg0); });
-    t.method("Write", [](TFile const& a, const char * arg0, Int_t arg1)->Int_t { return a.Write(arg0, arg1); });
-    t.method("Write", [](TFile const* a)->Int_t { return a->Write(); });
-    t.method("Write", [](TFile const* a, const char * arg0)->Int_t { return a->Write(arg0); });
-    t.method("Write", [](TFile const* a, const char * arg0, Int_t arg1)->Int_t { return a->Write(arg0, arg1); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::WriteFree() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::WriteFree()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:290:24
-    t.method("WriteFree", static_cast<void (TFile::*)() >(&TFile::WriteFree));
-
-    DEBUG_MSG("Adding wrapper for void TFile::WriteHeader() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::WriteHeader()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:291:24
-    t.method("WriteHeader", static_cast<void (TFile::*)() >(&TFile::WriteHeader));
-
-    DEBUG_MSG("Adding wrapper for void TFile::WriteStreamerInfo() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::WriteStreamerInfo()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:293:24
-    t.method("WriteStreamerInfo", static_cast<void (TFile::*)() >(&TFile::WriteStreamerInfo));
-
-    DEBUG_MSG("Adding wrapper for TFileOpenHandle * TFile::AsyncOpen(const char *, Option_t *, const char *, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: TFileOpenHandle * TFile::AsyncOpen(const char *, Option_t *, const char *, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:296:24
-    module_.method("TFile!AsyncOpen", static_cast<TFileOpenHandle * (*)(const char *, Option_t *, const char *, Int_t, Int_t) >(&TFile::AsyncOpen));
-    module_.method("TFile!AsyncOpen", [](const char * arg0)->TFileOpenHandle * { return TFile::AsyncOpen(arg0); });
-    module_.method("TFile!AsyncOpen", [](const char * arg0, Option_t * arg1)->TFileOpenHandle * { return TFile::AsyncOpen(arg0, arg1); });
-    module_.method("TFile!AsyncOpen", [](const char * arg0, Option_t * arg1, const char * arg2)->TFileOpenHandle * { return TFile::AsyncOpen(arg0, arg1, arg2); });
-    module_.method("TFile!AsyncOpen", [](const char * arg0, Option_t * arg1, const char * arg2, Int_t arg3)->TFileOpenHandle * { return TFile::AsyncOpen(arg0, arg1, arg2, arg3); });
-
-    DEBUG_MSG("Adding wrapper for TFile * TFile::Open(const char *, Option_t *, const char *, Int_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: TFile * TFile::Open(const char *, Option_t *, const char *, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:299:24
-    module_.method("TFile!Open", static_cast<TFile * (*)(const char *, Option_t *, const char *, Int_t, Int_t) >(&TFile::Open));
-    module_.method("TFile!Open", [](const char * arg0)->TFile * { return TFile::Open(arg0); });
-    module_.method("TFile!Open", [](const char * arg0, Option_t * arg1)->TFile * { return TFile::Open(arg0, arg1); });
-    module_.method("TFile!Open", [](const char * arg0, Option_t * arg1, const char * arg2)->TFile * { return TFile::Open(arg0, arg1, arg2); });
-    module_.method("TFile!Open", [](const char * arg0, Option_t * arg1, const char * arg2, Int_t arg3)->TFile * { return TFile::Open(arg0, arg1, arg2, arg3); });
-
-    DEBUG_MSG("Adding wrapper for TFile * TFile::Open(TFileOpenHandle *) (" __HERE__ ")");
-    // signature to use in the veto list: TFile * TFile::Open(TFileOpenHandle *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:302:24
-    module_.method("TFile!Open", static_cast<TFile * (*)(TFileOpenHandle *) >(&TFile::Open));
-
-    DEBUG_MSG("Adding wrapper for TFile::EFileType TFile::GetType(const char *, Option_t *, TString *) (" __HERE__ ")");
-    // signature to use in the veto list: TFile::EFileType TFile::GetType(const char *, Option_t *, TString *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:304:24
-    module_.method("TFile!GetType", static_cast<TFile::EFileType (*)(const char *, Option_t *, TString *) >(&TFile::GetType));
-    module_.method("TFile!GetType", [](const char * arg0)->TFile::EFileType { return TFile::GetType(arg0); });
-    module_.method("TFile!GetType", [](const char * arg0, Option_t * arg1)->TFile::EFileType { return TFile::GetType(arg0, arg1); });
-
-    DEBUG_MSG("Adding wrapper for TFile::EAsyncOpenStatus TFile::GetAsyncOpenStatus(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: TFile::EAsyncOpenStatus TFile::GetAsyncOpenStatus(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:306:28
-    module_.method("TFile!GetAsyncOpenStatus", static_cast<TFile::EAsyncOpenStatus (*)(const char *) >(&TFile::GetAsyncOpenStatus));
-
-    DEBUG_MSG("Adding wrapper for TFile::EAsyncOpenStatus TFile::GetAsyncOpenStatus(TFileOpenHandle *) (" __HERE__ ")");
-    // signature to use in the veto list: TFile::EAsyncOpenStatus TFile::GetAsyncOpenStatus(TFileOpenHandle *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:307:28
-    module_.method("TFile!GetAsyncOpenStatus", static_cast<TFile::EAsyncOpenStatus (*)(TFileOpenHandle *) >(&TFile::GetAsyncOpenStatus));
-
-    DEBUG_MSG("Adding wrapper for const TUrl * TFile::GetEndpointUrl(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: const TUrl * TFile::GetEndpointUrl(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:308:24
-    module_.method("TFile!GetEndpointUrl", static_cast<const TUrl * (*)(const char *) >(&TFile::GetEndpointUrl));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetFileBytesRead() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetFileBytesRead()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:310:24
-    module_.method("TFile!GetFileBytesRead", static_cast<Long64_t (*)() >(&TFile::GetFileBytesRead));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetFileBytesWritten() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetFileBytesWritten()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:311:24
-    module_.method("TFile!GetFileBytesWritten", static_cast<Long64_t (*)() >(&TFile::GetFileBytesWritten));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetFileReadCalls() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetFileReadCalls()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:312:24
-    module_.method("TFile!GetFileReadCalls", static_cast<Int_t (*)() >(&TFile::GetFileReadCalls));
-
-    DEBUG_MSG("Adding wrapper for Int_t TFile::GetReadaheadSize() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TFile::GetReadaheadSize()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:313:24
-    module_.method("TFile!GetReadaheadSize", static_cast<Int_t (*)() >(&TFile::GetReadaheadSize));
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetFileBytesRead(Long64_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetFileBytesRead(Long64_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:315:24
-    module_.method("TFile!SetFileBytesRead", static_cast<void (*)(Long64_t) >(&TFile::SetFileBytesRead));
-    module_.method("TFile!SetFileBytesRead", []()->void { TFile::SetFileBytesRead(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetFileBytesWritten(Long64_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetFileBytesWritten(Long64_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:316:24
-    module_.method("TFile!SetFileBytesWritten", static_cast<void (*)(Long64_t) >(&TFile::SetFileBytesWritten));
-    module_.method("TFile!SetFileBytesWritten", []()->void { TFile::SetFileBytesWritten(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetFileReadCalls(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetFileReadCalls(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:317:24
-    module_.method("TFile!SetFileReadCalls", static_cast<void (*)(Int_t) >(&TFile::SetFileReadCalls));
-    module_.method("TFile!SetFileReadCalls", []()->void { TFile::SetFileReadCalls(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetReadaheadSize(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetReadaheadSize(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:318:24
-    module_.method("TFile!SetReadaheadSize", static_cast<void (*)(Int_t) >(&TFile::SetReadaheadSize));
-    module_.method("TFile!SetReadaheadSize", []()->void { TFile::SetReadaheadSize(); });
-
-    DEBUG_MSG("Adding wrapper for void TFile::SetReadStreamerInfo(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::SetReadStreamerInfo(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:319:24
-    module_.method("TFile!SetReadStreamerInfo", static_cast<void (*)(Bool_t) >(&TFile::SetReadStreamerInfo));
-    module_.method("TFile!SetReadStreamerInfo", []()->void { TFile::SetReadStreamerInfo(); });
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::GetReadStreamerInfo() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::GetReadStreamerInfo()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:320:24
-    module_.method("TFile!GetReadStreamerInfo", static_cast<Bool_t (*)() >(&TFile::GetReadStreamerInfo));
-
-    DEBUG_MSG("Adding wrapper for Long64_t TFile::GetFileCounter() (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TFile::GetFileCounter()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:322:24
-    module_.method("TFile!GetFileCounter", static_cast<Long64_t (*)() >(&TFile::GetFileCounter));
-
-    DEBUG_MSG("Adding wrapper for void TFile::IncrementFileCounter() (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::IncrementFileCounter()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:323:24
-    module_.method("TFile!IncrementFileCounter", static_cast<void (*)() >(&TFile::IncrementFileCounter));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::SetCacheFileDir(std::string_view, Bool_t, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::SetCacheFileDir(std::string_view, Bool_t, Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:328:24
-    module_.method("TFile!SetCacheFileDir", [](const char * arg0)->Bool_t { return TFile::SetCacheFileDir((std::string_view)arg0); });
-    module_.method("TFile!SetCacheFileDir", [](const char * arg0, Bool_t arg1)->Bool_t { return TFile::SetCacheFileDir((std::string_view)arg0, arg1); });
-    module_.method("TFile!SetCacheFileDir", [](const char * arg0, Bool_t arg1, Bool_t arg2)->Bool_t { return TFile::SetCacheFileDir((std::string_view)arg0, arg1, arg2); });
-
-    DEBUG_MSG("Adding wrapper for const char * TFile::GetCacheFileDir() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TFile::GetCacheFileDir()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:330:24
-    module_.method("TFile!GetCacheFileDir", []() { return (std::string)TFile::GetCacheFileDir(); });
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::ShrinkCacheFileDir(Long64_t, Long_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::ShrinkCacheFileDir(Long64_t, Long_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:331:24
-    module_.method("TFile!ShrinkCacheFileDir", static_cast<Bool_t (*)(Long64_t, Long_t) >(&TFile::ShrinkCacheFileDir));
-    module_.method("TFile!ShrinkCacheFileDir", [](Long64_t arg0)->Bool_t { return TFile::ShrinkCacheFileDir(arg0); });
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::Cp(const char *, const char *, Bool_t, UInt_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::Cp(const char *, const char *, Bool_t, UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:332:24
-    module_.method("TFile!Cp", static_cast<Bool_t (*)(const char *, const char *, Bool_t, UInt_t) >(&TFile::Cp));
-    module_.method("TFile!Cp", [](const char * arg0, const char * arg1)->Bool_t { return TFile::Cp(arg0, arg1); });
-    module_.method("TFile!Cp", [](const char * arg0, const char * arg1, Bool_t arg2)->Bool_t { return TFile::Cp(arg0, arg1, arg2); });
-
-    DEBUG_MSG("Adding wrapper for UInt_t TFile::SetOpenTimeout(UInt_t) (" __HERE__ ")");
-    // signature to use in the veto list: UInt_t TFile::SetOpenTimeout(UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:335:24
-    module_.method("TFile!SetOpenTimeout", static_cast<UInt_t (*)(UInt_t) >(&TFile::SetOpenTimeout));
-
-    DEBUG_MSG("Adding wrapper for UInt_t TFile::GetOpenTimeout() (" __HERE__ ")");
-    // signature to use in the veto list: UInt_t TFile::GetOpenTimeout()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:336:24
-    module_.method("TFile!GetOpenTimeout", static_cast<UInt_t (*)() >(&TFile::GetOpenTimeout));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::SetOnlyStaged(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::SetOnlyStaged(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:337:24
-    module_.method("TFile!SetOnlyStaged", static_cast<Bool_t (*)(Bool_t) >(&TFile::SetOnlyStaged));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TFile::GetOnlyStaged() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TFile::GetOnlyStaged()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:338:24
-    module_.method("TFile!GetOnlyStaged", static_cast<Bool_t (*)() >(&TFile::GetOnlyStaged));
-
-    DEBUG_MSG("Adding wrapper for Version_t TFile::Class_Version() (" __HERE__ ")");
-    // signature to use in the veto list: Version_t TFile::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!Class_Version", static_cast<Version_t (*)() >(&TFile::Class_Version));
-
-    DEBUG_MSG("Adding wrapper for TClass * TFile::IsA() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TFile::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    t.method("IsA", static_cast<TClass * (TFile::*)()  const>(&TFile::IsA));
-
-    DEBUG_MSG("Adding wrapper for void TFile::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    t.method("StreamerNVirtual", static_cast<void (TFile::*)(TBuffer &) >(&TFile::StreamerNVirtual));
-
-    DEBUG_MSG("Adding wrapper for const char * TFile::DeclFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TFile::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!DeclFileName", []() { return (std::string)TFile::DeclFileName(); });
-
-    DEBUG_MSG("Adding wrapper for int TFile::ImplFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TFile::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!ImplFileLine", static_cast<int (*)() >(&TFile::ImplFileLine));
-
-    DEBUG_MSG("Adding wrapper for const char * TFile::ImplFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TFile::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!ImplFileName", []() { return (std::string)TFile::ImplFileName(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TFile::Class_Name() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TFile::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!Class_Name", []() { return (std::string)TFile::Class_Name(); });
-
-    DEBUG_MSG("Adding wrapper for TClass * TFile::Dictionary() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TFile::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!Dictionary", static_cast<TClass * (*)() >(&TFile::Dictionary));
-
-    DEBUG_MSG("Adding wrapper for TClass * TFile::Class() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TFile::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!Class", static_cast<TClass * (*)() >(&TFile::Class));
-
-    DEBUG_MSG("Adding wrapper for void TFile::Streamer(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TFile::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    t.method("Streamer", static_cast<void (TFile::*)(TBuffer &) >(&TFile::Streamer));
-
-    DEBUG_MSG("Adding wrapper for int TFile::DeclFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TFile::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:340:4
-    module_.method("TFile!DeclFileLine", static_cast<int (*)() >(&TFile::DeclFileLine));
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TFile>> type_;
-};
-std::shared_ptr<Wrapper> newJlTFile(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTFile(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TList> : std::false_type { };
-  template<> struct DefaultConstructible<TList> : std::false_type { };
-template<> struct SuperType<TList> { typedef TSeqCollection type; };
-}
-
-// Class generating the wrapper for type TList
-// signature to use in the veto file: TList
-struct JlTList: public Wrapper {
-
-  JlTList(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TList (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TList.h:38:7
-    jlcxx::TypeWrapper<TList>  t = jlModule.add_type<TList>("TList",
-      jlcxx::julia_base_type<TSeqCollection>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TList>>(new jlcxx::TypeWrapper<TList>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TList>> type_;
-};
-std::shared_ptr<Wrapper> newJlTList(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTList(module));
 }

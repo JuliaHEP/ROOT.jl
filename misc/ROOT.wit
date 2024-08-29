@@ -9,7 +9,7 @@ out_cxx_dir         = "ROOT/deps/src"
 
 include_dirs        = [ "/home/pgras/.julia/conda/3/include", "src" ]
 
-input               = [ "TROOT.h", "TBrowser.h", "TTree.h", "TBranchPtr.h", "TLeaf.h", "TBranch.h", "TSystem.h", "TCanvas.h", "TH1.h", "TH2.h", "TProfile.h", "TProfile2D.h","TRandom.h", "TAxis.h", "TApplication.h",  "TDirectory.h", "TDirectoryFile.h", "TFile.h", "TNamed.h", "TObject.h", "TGraph.h", "TF1.h", "TTreeReader.h", "TTreeReaderValue.h", "TTreeReaderArray.h", "Templates.h", "TEntryList.h", "TKey.h",  "TVectorT.h", "TVectorDfwd.h", "TVectorFfwd.h", "Extra.h" ]
+input               = [ "TROOT.h", "TBrowser.h", "TTree.h", "TBranchPtr.h", "TLeaf.h", "TBranch.h", "TSystem.h", "TCanvas.h", "TH1.h", "TH2.h", "TProfile.h", "TProfile2D.h","TRandom.h", "TAxis.h", "TApplication.h",  "TDirectory.h", "TDirectoryFile.h", "TFile.h", "TNamed.h", "TObject.h", "TGraph.h", "TF1.h", "TTreeReader.h", "TTreeReaderValue.h", "TTreeReaderArray.h", "Templates.h", "TEntryList.h", "TKey.h",  "TVectorT.h", "TVectorDfwd.h", "TVectorFfwd.h", "Extra.h", "TObjArray.h" ]
 
 extra_headers       = [ "TVectorT.h" ]
 

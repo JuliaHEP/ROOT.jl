@@ -21,6 +21,8 @@ class JlTClass;
 class JlTBuffer;
 class JlTVectorT;
 class JlTString;
+class JlTIterator;
+class JlTObjArrayIter;
 class JlTDirectory;
 class JlTDirectory_TContext;
 class JlTKey;
@@ -48,7 +50,6 @@ class JlTTree_TClusterIterator;
 class JlTStreamerInfo;
 class JlTEntryList;
 class JlTH1;
-class JlTIterator;
 class JlTVirtualTreePlayer;
 class JlTTreeFriendLeafIter;
 class JlTBranchPtr;
@@ -114,6 +115,8 @@ std::shared_ptr<Wrapper> newJlTClass(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTBuffer(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTVectorT(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTString(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTIterator(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTObjArrayIter(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTDirectory(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTDirectory_TContext(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTKey(jlcxx::Module&);
@@ -141,7 +144,6 @@ std::shared_ptr<Wrapper> newJlTTree_TClusterIterator(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTStreamerInfo(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTEntryList(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1(jlcxx::Module&);
-std::shared_ptr<Wrapper> newJlTIterator(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTVirtualTreePlayer(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTTreeFriendLeafIter(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTBranchPtr(jlcxx::Module&);
@@ -242,6 +244,8 @@ throw_if_version_incompatibility();
     std::shared_ptr<Wrapper>(newJlTBuffer(jlModule)),
     std::shared_ptr<Wrapper>(newJlTVectorT(jlModule)),
     std::shared_ptr<Wrapper>(newJlTString(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTIterator(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTObjArrayIter(jlModule)),
     std::shared_ptr<Wrapper>(newJlTDirectory(jlModule)),
     std::shared_ptr<Wrapper>(newJlTDirectory_TContext(jlModule)),
     std::shared_ptr<Wrapper>(newJlTKey(jlModule)),
@@ -269,7 +273,6 @@ throw_if_version_incompatibility();
     std::shared_ptr<Wrapper>(newJlTStreamerInfo(jlModule)),
     std::shared_ptr<Wrapper>(newJlTEntryList(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1(jlModule)),
-    std::shared_ptr<Wrapper>(newJlTIterator(jlModule)),
     std::shared_ptr<Wrapper>(newJlTVirtualTreePlayer(jlModule)),
     std::shared_ptr<Wrapper>(newJlTTreeFriendLeafIter(jlModule)),
     std::shared_ptr<Wrapper>(newJlTBranchPtr(jlModule)),

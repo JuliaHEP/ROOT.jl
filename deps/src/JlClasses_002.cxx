@@ -27,6 +27,298 @@ struct JlTObjArray: public Wrapper {
   void add_methods() const{
     auto& t = *type_;
     t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::TObjArray(Int_t, Int_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:49:4
+    t.constructor<Int_t>(/*finalize=*/true);
+    t.constructor<Int_t, Int_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::TObjArray(const TObjArray &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:50:4
+    t.constructor<const TObjArray &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for TObjArray & TObjArray::operator=(const TObjArray &) (" __HERE__ ")");
+    // signature to use in the veto list: TObjArray & TObjArray::operator=(const TObjArray &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:52:15
+    t.method("assign", static_cast<TObjArray & (TObjArray::*)(const TObjArray &) >(&TObjArray::operator=));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Clear(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Clear(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:53:21
+    t.method("Clear", static_cast<void (TObjArray::*)(Option_t *) >(&TObjArray::Clear));
+    t.method("Clear", [](TObjArray& a)->void { a.Clear(); });
+    t.method("Clear", [](TObjArray* a)->void { a->Clear(); });
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Compress() (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Compress()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:54:21
+    t.method("Compress", static_cast<void (TObjArray::*)() >(&TObjArray::Compress));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Delete(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Delete(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:55:21
+    t.method("Delete", static_cast<void (TObjArray::*)(Option_t *) >(&TObjArray::Delete));
+    t.method("Delete", [](TObjArray& a)->void { a.Delete(); });
+    t.method("Delete", [](TObjArray* a)->void { a->Delete(); });
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Expand(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Expand(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:56:21
+    t.method("Expand", static_cast<void (TObjArray::*)(Int_t) >(&TObjArray::Expand));
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::GetEntries() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::GetEntries()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:57:21
+    t.method("GetEntries", static_cast<Int_t (TObjArray::*)()  const>(&TObjArray::GetEntries));
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::GetEntriesFast() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::GetEntriesFast()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:58:21
+    t.method("GetEntriesFast", static_cast<Int_t (TObjArray::*)()  const>(&TObjArray::GetEntriesFast));
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::GetEntriesUnsafe() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::GetEntriesUnsafe()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:61:21
+    t.method("GetEntriesUnsafe", static_cast<Int_t (TObjArray::*)()  const>(&TObjArray::GetEntriesUnsafe));
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::GetLast() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::GetLast()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:62:21
+    t.method("GetLast", static_cast<Int_t (TObjArray::*)()  const>(&TObjArray::GetLast));
+
+    DEBUG_MSG("Adding wrapper for TObject ** TObjArray::GetObjectRef() (" __HERE__ ")");
+    // signature to use in the veto list: TObject ** TObjArray::GetObjectRef()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:63:21
+    t.method("GetObjectRef", static_cast<TObject ** (TObjArray::*)()  const>(&TObjArray::GetObjectRef));
+
+    DEBUG_MSG("Adding wrapper for TObject ** TObjArray::GetObjectRef(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject ** TObjArray::GetObjectRef(const TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:64:21
+    t.method("GetObjectRef", static_cast<TObject ** (TObjArray::*)(const TObject *)  const>(&TObjArray::GetObjectRef));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TObjArray::IsEmpty() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TObjArray::IsEmpty()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:65:21
+    t.method("IsEmpty", static_cast<Bool_t (TObjArray::*)()  const>(&TObjArray::IsEmpty));
+
+    DEBUG_MSG("Adding wrapper for TIterator * TObjArray::MakeIterator(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TIterator * TObjArray::MakeIterator(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:66:21
+    t.method("MakeIterator", static_cast<TIterator * (TObjArray::*)(Bool_t)  const>(&TObjArray::MakeIterator));
+    t.method("MakeIterator", [](TObjArray const& a)->TIterator * { return a.MakeIterator(); });
+    t.method("MakeIterator", [](TObjArray const* a)->TIterator * { return a->MakeIterator(); });
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Add(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Add(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:68:21
+    t.method("Add", static_cast<void (TObjArray::*)(TObject *) >(&TObjArray::Add));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::AddFirst(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::AddFirst(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:69:21
+    t.method("AddFirst", static_cast<void (TObjArray::*)(TObject *) >(&TObjArray::AddFirst));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::AddLast(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::AddLast(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:70:21
+    t.method("AddLast", static_cast<void (TObjArray::*)(TObject *) >(&TObjArray::AddLast));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::AddAt(TObject *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::AddAt(TObject *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:71:21
+    t.method("AddAt", static_cast<void (TObjArray::*)(TObject *, Int_t) >(&TObjArray::AddAt));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::AddAtAndExpand(TObject *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::AddAtAndExpand(TObject *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:72:21
+    t.method("AddAtAndExpand", static_cast<void (TObjArray::*)(TObject *, Int_t) >(&TObjArray::AddAtAndExpand));
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::AddAtFree(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::AddAtFree(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:73:21
+    t.method("AddAtFree", static_cast<Int_t (TObjArray::*)(TObject *) >(&TObjArray::AddAtFree));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::AddAfter(const TObject *, TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::AddAfter(const TObject *, TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:74:21
+    t.method("AddAfter", static_cast<void (TObjArray::*)(const TObject *, TObject *) >(&TObjArray::AddAfter));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::AddBefore(const TObject *, TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::AddBefore(const TObject *, TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:75:21
+    t.method("AddBefore", static_cast<void (TObjArray::*)(const TObject *, TObject *) >(&TObjArray::AddBefore));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::FindObject(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::FindObject(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:76:21
+    t.method("FindObject", static_cast<TObject * (TObjArray::*)(const char *)  const>(&TObjArray::FindObject));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::FindObject(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::FindObject(const TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:77:21
+    t.method("FindObject", static_cast<TObject * (TObjArray::*)(const TObject *)  const>(&TObjArray::FindObject));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::RemoveAt(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::RemoveAt(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:78:21
+    t.method("RemoveAt", static_cast<TObject * (TObjArray::*)(Int_t) >(&TObjArray::RemoveAt));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::Remove(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::Remove(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:79:21
+    t.method("Remove", static_cast<TObject * (TObjArray::*)(TObject *) >(&TObjArray::Remove));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::RemoveRange(Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::RemoveRange(Int_t, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:80:21
+    t.method("RemoveRange", static_cast<void (TObjArray::*)(Int_t, Int_t) >(&TObjArray::RemoveRange));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::RecursiveRemove(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::RecursiveRemove(TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:81:21
+    t.method("RecursiveRemove", static_cast<void (TObjArray::*)(TObject *) >(&TObjArray::RecursiveRemove));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::At(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::At(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:83:21
+    t.method("At", static_cast<TObject * (TObjArray::*)(Int_t)  const>(&TObjArray::At));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::UncheckedAt(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::UncheckedAt(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:84:21
+    t.method("UncheckedAt", static_cast<TObject * (TObjArray::*)(Int_t)  const>(&TObjArray::UncheckedAt));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::Before(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::Before(const TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:85:21
+    t.method("Before", static_cast<TObject * (TObjArray::*)(const TObject *)  const>(&TObjArray::Before));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::After(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::After(const TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:86:21
+    t.method("After", static_cast<TObject * (TObjArray::*)(const TObject *)  const>(&TObjArray::After));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::First() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::First()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:87:21
+    t.method("First", static_cast<TObject * (TObjArray::*)()  const>(&TObjArray::First));
+
+    DEBUG_MSG("Adding wrapper for TObject * TObjArray::Last() (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TObjArray::Last()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:88:21
+    t.method("Last", static_cast<TObject * (TObjArray::*)()  const>(&TObjArray::Last));
+    module_.set_override_module(jl_base_module);
+
+
+    DEBUG_MSG("Adding setindex! method  to wrap TObject *& TObjArray::operator[](Int_t) (" __HERE__ ")");
+// defined in /home/pgras/.julia/conda/3/include/TObjArray.h:89:22
+    t.method("setindex!",
+      [](TObjArray& a, Int_t i, TObject * const & val){
+      return a[i] = val;
+    });
+
+    DEBUG_MSG("Adding getindex method to wrap TObject *& TObjArray::operator[](Int_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:89:22
+    t.method("getindex",
+      [](TObjArray& a, Int_t i){
+      return a[i];
+    });
+
+
+    module_.unset_override_module();
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::LowerBound() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::LowerBound()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:91:21
+    t.method("LowerBound", static_cast<Int_t (TObjArray::*)()  const>(&TObjArray::LowerBound));
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::IndexOf(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::IndexOf(const TObject *)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:92:21
+    t.method("IndexOf", static_cast<Int_t (TObjArray::*)(const TObject *)  const>(&TObjArray::IndexOf));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::SetLast(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::SetLast(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:93:21
+    t.method("SetLast", static_cast<void (TObjArray::*)(Int_t) >(&TObjArray::SetLast));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Randomize(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Randomize(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:95:21
+    t.method("Randomize", static_cast<void (TObjArray::*)(Int_t) >(&TObjArray::Randomize));
+    t.method("Randomize", [](TObjArray& a)->void { a.Randomize(); });
+    t.method("Randomize", [](TObjArray* a)->void { a->Randomize(); });
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Sort(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Sort(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:96:21
+    t.method("Sort", static_cast<void (TObjArray::*)(Int_t) >(&TObjArray::Sort));
+    t.method("Sort", [](TObjArray& a)->void { a.Sort(); });
+    t.method("Sort", [](TObjArray* a)->void { a->Sort(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TObjArray::BinarySearch(TObject *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TObjArray::BinarySearch(TObject *, Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:97:21
+    t.method("BinarySearch", static_cast<Int_t (TObjArray::*)(TObject *, Int_t) >(&TObjArray::BinarySearch));
+    t.method("BinarySearch", [](TObjArray& a, TObject * arg0)->Int_t { return a.BinarySearch(arg0); });
+    t.method("BinarySearch", [](TObjArray* a, TObject * arg0)->Int_t { return a->BinarySearch(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Version_t TObjArray::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TObjArray::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!Class_Version", static_cast<Version_t (*)() >(&TObjArray::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TObjArray::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TObjArray::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    t.method("IsA", static_cast<TClass * (TObjArray::*)()  const>(&TObjArray::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    t.method("StreamerNVirtual", static_cast<void (TObjArray::*)(TBuffer &) >(&TObjArray::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TObjArray::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TObjArray::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!DeclFileName", []() { return (std::string)TObjArray::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TObjArray::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TObjArray::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!ImplFileLine", static_cast<int (*)() >(&TObjArray::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TObjArray::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TObjArray::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!ImplFileName", []() { return (std::string)TObjArray::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TObjArray::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TObjArray::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!Class_Name", []() { return (std::string)TObjArray::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TObjArray::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TObjArray::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!Dictionary", static_cast<TClass * (*)() >(&TObjArray::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TObjArray::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TObjArray::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!Class", static_cast<TClass * (*)() >(&TObjArray::Class));
+
+    DEBUG_MSG("Adding wrapper for void TObjArray::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TObjArray::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    t.method("Streamer", static_cast<void (TObjArray::*)(TBuffer &) >(&TObjArray::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TObjArray::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TObjArray::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TObjArray.h:99:4
+    module_.method("TObjArray!DeclFileLine", static_cast<int (*)() >(&TObjArray::DeclFileLine));
   }
 
 private:

@@ -7,6 +7,368 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TStreamerInfo> : std::false_type { };
+  template<> struct DefaultConstructible<TStreamerInfo> : std::false_type { };
+}
+
+// Class generating the wrapper for type TStreamerInfo
+// signature to use in the veto file: TStreamerInfo
+struct JlTStreamerInfo: public Wrapper {
+
+  JlTStreamerInfo(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TStreamerInfo (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TStreamerInfo.h:39:7
+    jlcxx::TypeWrapper<TStreamerInfo>  t = jlModule.add_type<TStreamerInfo>("TStreamerInfo");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TStreamerInfo>>(new jlcxx::TypeWrapper<TStreamerInfo>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TStreamerInfo>> type_;
+};
+std::shared_ptr<Wrapper> newJlTStreamerInfo(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTStreamerInfo(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TEntryList> : std::false_type { };
+  template<> struct DefaultConstructible<TEntryList> : std::false_type { };
+template<> struct SuperType<TEntryList> { typedef TNamed type; };
+}
+
+// Class generating the wrapper for type TEntryList
+// signature to use in the veto file: TEntryList
+struct JlTEntryList: public Wrapper {
+
+  JlTEntryList(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TEntryList (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:25:7
+    jlcxx::TypeWrapper<TEntryList>  t = jlModule.add_type<TEntryList>("TEntryList",
+      jlcxx::julia_base_type<TNamed>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TEntryList>>(new jlcxx::TypeWrapper<TEntryList>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::TEntryList(const char *, const char *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:57:4
+    t.constructor<const char *, const char *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::TEntryList(const char *, const char *, const TTree *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:58:4
+    t.constructor<const char *, const char *, const TTree *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::TEntryList(const char *, const char *, const char *, const char *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:59:4
+    t.constructor<const char *, const char *, const char *, const char *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::TEntryList(const TTree *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:60:4
+    t.constructor<const TTree *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::TEntryList(const TEntryList &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:61:4
+    t.constructor<const TEntryList &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::Add(const TEntryList *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::Add(const TEntryList *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:64:24
+    t.method("Add", static_cast<void (TEntryList::*)(const TEntryList *) >(&TEntryList::Add));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::AddSubList(TEntryList *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::AddSubList(TEntryList *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:65:24
+    t.method("AddSubList", static_cast<void (TEntryList::*)(TEntryList *) >(&TEntryList::AddSubList));
+
+    DEBUG_MSG("Adding wrapper for Int_t TEntryList::Contains(Long64_t, TTree *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TEntryList::Contains(Long64_t, TTree *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:66:24
+    t.method("Contains", static_cast<Int_t (TEntryList::*)(Long64_t, TTree *) >(&TEntryList::Contains));
+    t.method("Contains", [](TEntryList& a, Long64_t arg0)->Int_t { return a.Contains(arg0); });
+    t.method("Contains", [](TEntryList* a, Long64_t arg0)->Int_t { return a->Contains(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::DirectoryAutoAdd(TDirectory *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::DirectoryAutoAdd(TDirectory *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:67:24
+    t.method("DirectoryAutoAdd", static_cast<void (TEntryList::*)(TDirectory *) >(&TEntryList::DirectoryAutoAdd));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TEntryList::Enter(Long64_t, TTree *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TEntryList::Enter(Long64_t, TTree *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:68:24
+    t.method("Enter", static_cast<Bool_t (TEntryList::*)(Long64_t, TTree *) >(&TEntryList::Enter));
+    t.method("Enter", [](TEntryList& a, Long64_t arg0)->Bool_t { return a.Enter(arg0); });
+    t.method("Enter", [](TEntryList* a, Long64_t arg0)->Bool_t { return a->Enter(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TEntryList::Enter(Long64_t, const char *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TEntryList::Enter(Long64_t, const char *, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:69:24
+    t.method("Enter", static_cast<Bool_t (TEntryList::*)(Long64_t, const char *, const char *) >(&TEntryList::Enter));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::EnterRange(Long64_t, Long64_t, TTree *, UInt_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::EnterRange(Long64_t, Long64_t, TTree *, UInt_t)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:70:24
+    t.method("EnterRange", static_cast<void (TEntryList::*)(Long64_t, Long64_t, TTree *, UInt_t) >(&TEntryList::EnterRange));
+    t.method("EnterRange", [](TEntryList& a, Long64_t arg0, Long64_t arg1)->void { a.EnterRange(arg0, arg1); });
+    t.method("EnterRange", [](TEntryList& a, Long64_t arg0, Long64_t arg1, TTree * arg2)->void { a.EnterRange(arg0, arg1, arg2); });
+    t.method("EnterRange", [](TEntryList* a, Long64_t arg0, Long64_t arg1)->void { a->EnterRange(arg0, arg1); });
+    t.method("EnterRange", [](TEntryList* a, Long64_t arg0, Long64_t arg1, TTree * arg2)->void { a->EnterRange(arg0, arg1, arg2); });
+
+    DEBUG_MSG("Adding wrapper for TEntryList * TEntryList::GetCurrentList() (" __HERE__ ")");
+    // signature to use in the veto list: TEntryList * TEntryList::GetCurrentList()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:71:24
+    t.method("GetCurrentList", static_cast<TEntryList * (TEntryList::*)()  const>(&TEntryList::GetCurrentList));
+
+    DEBUG_MSG("Adding wrapper for TEntryList * TEntryList::GetEntryList(const char *, const char *, Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: TEntryList * TEntryList::GetEntryList(const char *, const char *, Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:72:24
+    t.method("GetEntryList", static_cast<TEntryList * (TEntryList::*)(const char *, const char *, Option_t *) >(&TEntryList::GetEntryList));
+    t.method("GetEntryList", [](TEntryList& a, const char * arg0, const char * arg1)->TEntryList * { return a.GetEntryList(arg0, arg1); });
+    t.method("GetEntryList", [](TEntryList* a, const char * arg0, const char * arg1)->TEntryList * { return a->GetEntryList(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for Long64_t TEntryList::GetEntry(Long64_t) (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TEntryList::GetEntry(Long64_t)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:73:24
+    t.method("GetEntry", static_cast<Long64_t (TEntryList::*)(Long64_t) >(&TEntryList::GetEntry));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TEntryList::GetEntryAndTree(Long64_t, Int_t &) (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TEntryList::GetEntryAndTree(Long64_t, Int_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:74:24
+    t.method("GetEntryAndTree", static_cast<Long64_t (TEntryList::*)(Long64_t, Int_t &) >(&TEntryList::GetEntryAndTree));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TEntryList::GetEntriesToProcess() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TEntryList::GetEntriesToProcess()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:75:24
+    t.method("GetEntriesToProcess", static_cast<Long64_t (TEntryList::*)()  const>(&TEntryList::GetEntriesToProcess));
+
+    DEBUG_MSG("Adding wrapper for TList * TEntryList::GetLists() (" __HERE__ ")");
+    // signature to use in the veto list: TList * TEntryList::GetLists()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:76:24
+    t.method("GetLists", static_cast<TList * (TEntryList::*)()  const>(&TEntryList::GetLists));
+
+    DEBUG_MSG("Adding wrapper for TDirectory * TEntryList::GetDirectory() (" __HERE__ ")");
+    // signature to use in the veto list: TDirectory * TEntryList::GetDirectory()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:77:24
+    t.method("GetDirectory", static_cast<TDirectory * (TEntryList::*)()  const>(&TEntryList::GetDirectory));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TEntryList::GetN() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TEntryList::GetN()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:78:24
+    t.method("GetN", static_cast<Long64_t (TEntryList::*)()  const>(&TEntryList::GetN));
+
+    DEBUG_MSG("Adding wrapper for const char * TEntryList::GetTreeName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TEntryList::GetTreeName()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:79:24
+    t.method("GetTreeName", [](TEntryList const& a) { return (std::string)a.GetTreeName(); });
+    t.method("GetTreeName", [](TEntryList const* a) { return (std::string)a->GetTreeName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TEntryList::GetFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TEntryList::GetFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:80:24
+    t.method("GetFileName", [](TEntryList const& a) { return (std::string)a.GetFileName(); });
+    t.method("GetFileName", [](TEntryList const* a) { return (std::string)a->GetFileName(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TEntryList::GetTreeNumber() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TEntryList::GetTreeNumber()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:81:24
+    t.method("GetTreeNumber", static_cast<Int_t (TEntryList::*)()  const>(&TEntryList::GetTreeNumber));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TEntryList::GetReapplyCut() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TEntryList::GetReapplyCut()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:82:24
+    t.method("GetReapplyCut", static_cast<Bool_t (TEntryList::*)()  const>(&TEntryList::GetReapplyCut));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TEntryList::IsValid() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TEntryList::IsValid()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:84:11
+    t.method("IsValid", static_cast<Bool_t (TEntryList::*)()  const>(&TEntryList::IsValid));
+
+    DEBUG_MSG("Adding wrapper for Int_t TEntryList::Merge(TCollection *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TEntryList::Merge(TCollection *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:90:24
+    t.method("Merge", static_cast<Int_t (TEntryList::*)(TCollection *) >(&TEntryList::Merge));
+
+    DEBUG_MSG("Adding wrapper for Long64_t TEntryList::Next() (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TEntryList::Next()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:92:24
+    t.method("Next", static_cast<Long64_t (TEntryList::*)() >(&TEntryList::Next));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::OptimizeStorage() (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::OptimizeStorage()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:93:24
+    t.method("OptimizeStorage", static_cast<void (TEntryList::*)() >(&TEntryList::OptimizeStorage));
+
+    DEBUG_MSG("Adding wrapper for Int_t TEntryList::RelocatePaths(const char *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TEntryList::RelocatePaths(const char *, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:94:24
+    t.method("RelocatePaths", static_cast<Int_t (TEntryList::*)(const char *, const char *) >(&TEntryList::RelocatePaths));
+    t.method("RelocatePaths", [](TEntryList& a, const char * arg0)->Int_t { return a.RelocatePaths(arg0); });
+    t.method("RelocatePaths", [](TEntryList* a, const char * arg0)->Int_t { return a->RelocatePaths(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TEntryList::Remove(Long64_t, TTree *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TEntryList::Remove(Long64_t, TTree *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:95:24
+    t.method("Remove", static_cast<Bool_t (TEntryList::*)(Long64_t, TTree *) >(&TEntryList::Remove));
+    t.method("Remove", [](TEntryList& a, Long64_t arg0)->Bool_t { return a.Remove(arg0); });
+    t.method("Remove", [](TEntryList* a, Long64_t arg0)->Bool_t { return a->Remove(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::Reset() (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::Reset()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:96:24
+    t.method("Reset", static_cast<void (TEntryList::*)() >(&TEntryList::Reset));
+
+    DEBUG_MSG("Adding wrapper for Int_t TEntryList::ScanPaths(TList *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TEntryList::ScanPaths(TList *, Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:97:24
+    t.method("ScanPaths", static_cast<Int_t (TEntryList::*)(TList *, Bool_t) >(&TEntryList::ScanPaths));
+    t.method("ScanPaths", [](TEntryList& a, TList * arg0)->Int_t { return a.ScanPaths(arg0); });
+    t.method("ScanPaths", [](TEntryList* a, TList * arg0)->Int_t { return a->ScanPaths(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::Print(const Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::Print(const Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:99:24
+    t.method("Print", static_cast<void (TEntryList::*)(const Option_t *)  const>(&TEntryList::Print));
+    t.method("Print", [](TEntryList const& a)->void { a.Print(); });
+    t.method("Print", [](TEntryList const* a)->void { a->Print(); });
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetDirectory(TDirectory *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetDirectory(TDirectory *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:100:24
+    t.method("SetDirectory", static_cast<void (TEntryList::*)(TDirectory *) >(&TEntryList::SetDirectory));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetEntriesToProcess(Long64_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetEntriesToProcess(Long64_t)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:101:24
+    t.method("SetEntriesToProcess", static_cast<void (TEntryList::*)(Long64_t) >(&TEntryList::SetEntriesToProcess));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetShift(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetShift(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:102:24
+    t.method("SetShift", static_cast<void (TEntryList::*)(Bool_t) >(&TEntryList::SetShift));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetTree(const TTree *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetTree(const TTree *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:103:24
+    t.method("SetTree", static_cast<void (TEntryList::*)(const TTree *) >(&TEntryList::SetTree));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetTree(const char *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetTree(const char *, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:104:24
+    t.method("SetTree", static_cast<void (TEntryList::*)(const char *, const char *) >(&TEntryList::SetTree));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetTreeName(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetTreeName(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:105:24
+    t.method("SetTreeName", static_cast<void (TEntryList::*)(const char *) >(&TEntryList::SetTreeName));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetFileName(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetFileName(const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:106:24
+    t.method("SetFileName", static_cast<void (TEntryList::*)(const char *) >(&TEntryList::SetFileName));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetTreeNumber(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetTreeNumber(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:107:24
+    t.method("SetTreeNumber", static_cast<void (TEntryList::*)(Int_t) >(&TEntryList::SetTreeNumber));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::SetReapplyCut(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::SetReapplyCut(Bool_t)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:108:24
+    t.method("SetReapplyCut", static_cast<void (TEntryList::*)(Bool_t) >(&TEntryList::SetReapplyCut));
+    t.method("SetReapplyCut", [](TEntryList& a)->void { a.SetReapplyCut(); });
+    t.method("SetReapplyCut", [](TEntryList* a)->void { a->SetReapplyCut(); });
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::Subtract(const TEntryList *) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::Subtract(const TEntryList *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:109:24
+    t.method("Subtract", static_cast<void (TEntryList::*)(const TEntryList *) >(&TEntryList::Subtract));
+
+    DEBUG_MSG("Adding wrapper for Int_t TEntryList::Relocate(const char *, const char *, const char *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TEntryList::Relocate(const char *, const char *, const char *, const char *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:111:24
+    module_.method("TEntryList!Relocate", static_cast<Int_t (*)(const char *, const char *, const char *, const char *) >(&TEntryList::Relocate));
+    module_.method("TEntryList!Relocate", [](const char * arg0, const char * arg1)->Int_t { return TEntryList::Relocate(arg0, arg1); });
+    module_.method("TEntryList!Relocate", [](const char * arg0, const char * arg1, const char * arg2)->Int_t { return TEntryList::Relocate(arg0, arg1, arg2); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TEntryList::Scan(const char *, TList *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TEntryList::Scan(const char *, TList *)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:113:24
+    module_.method("TEntryList!Scan", static_cast<Int_t (*)(const char *, TList *) >(&TEntryList::Scan));
+
+    DEBUG_MSG("Adding wrapper for Version_t TEntryList::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TEntryList::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!Class_Version", static_cast<Version_t (*)() >(&TEntryList::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TEntryList::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TEntryList::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    t.method("IsA", static_cast<TClass * (TEntryList::*)()  const>(&TEntryList::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    t.method("StreamerNVirtual", static_cast<void (TEntryList::*)(TBuffer &) >(&TEntryList::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TEntryList::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TEntryList::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!DeclFileName", []() { return (std::string)TEntryList::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TEntryList::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TEntryList::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!ImplFileLine", static_cast<int (*)() >(&TEntryList::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TEntryList::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TEntryList::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!ImplFileName", []() { return (std::string)TEntryList::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TEntryList::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TEntryList::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!Class_Name", []() { return (std::string)TEntryList::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TEntryList::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TEntryList::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!Dictionary", static_cast<TClass * (*)() >(&TEntryList::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TEntryList::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TEntryList::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!Class", static_cast<TClass * (*)() >(&TEntryList::Class));
+
+    DEBUG_MSG("Adding wrapper for void TEntryList::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TEntryList::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    t.method("Streamer", static_cast<void (TEntryList::*)(TBuffer &) >(&TEntryList::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TEntryList::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TEntryList::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TEntryList.h:125:4
+    module_.method("TEntryList!DeclFileLine", static_cast<int (*)() >(&TEntryList::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TEntryList>> type_;
+};
+std::shared_ptr<Wrapper> newJlTEntryList(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTEntryList(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TH1> : std::false_type { };
   template<> struct DefaultConstructible<TH1> : std::false_type { };
 template<> struct SuperType<TH1> { typedef TNamed type; };
@@ -1503,33 +1865,6 @@ std::shared_ptr<Wrapper> newJlTH1(jlcxx::Module& module){
 }
 
 namespace jlcxx {
-  template<> struct IsMirroredType<TIterator> : std::false_type { };
-  template<> struct DefaultConstructible<TIterator> : std::false_type { };
-}
-
-// Class generating the wrapper for type TIterator
-// signature to use in the veto file: TIterator
-struct JlTIterator: public Wrapper {
-
-  JlTIterator(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TIterator (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TIterator.h:30:7
-    jlcxx::TypeWrapper<TIterator>  t = jlModule.add_type<TIterator>("TIterator");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TIterator>>(new jlcxx::TypeWrapper<TIterator>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TIterator>> type_;
-};
-std::shared_ptr<Wrapper> newJlTIterator(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTIterator(module));
-}
-
-namespace jlcxx {
   template<> struct IsMirroredType<TVirtualTreePlayer> : std::false_type { };
   template<> struct DefaultConstructible<TVirtualTreePlayer> : std::false_type { };
 template<> struct SuperType<TVirtualTreePlayer> { typedef TObject type; };
@@ -1699,60 +2034,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTTreeFriendLeafIter(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTTreeFriendLeafIter(module));
-}
-
-namespace jlcxx {
-
-  template<typename T>
-  struct BuildParameterList<TBranchPtr<T>>
-  {
-    typedef ParameterList<T> type;
-  };
-
-  template<typename T> struct IsMirroredType<TBranchPtr<T>> : std::false_type { };
-  template<typename T> struct DefaultConstructible<TBranchPtr<T>> : std::false_type { };
-}
-
-// Class generating the wrapper for type TBranchPtr
-// signature to use in the veto file: TBranchPtr
-struct JlTBranchPtr: public Wrapper {
-
-  JlTBranchPtr(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TBranchPtr (" __HERE__ ")");
-    // defined in src/TBranchPtr.h:13:7
-    jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>  t =  jlModule.add_type<jlcxx::Parametric<jlcxx::TypeVar<1>>>("TBranchPtr");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>>(new jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>(jlModule, t));
-    auto t54_decl_methods = [this]<typename T> (jlcxx::TypeWrapper<TBranchPtr<T>> wrapped){
-      auto module_ = this->module_;
-      typedef TBranchPtr<T> WrappedType;
-
-
-      DEBUG_MSG("Adding wrapper for void TBranchPtr::TBranchPtr<T>(TBranch *) (" __HERE__ ")");
-      // defined in src/TBranchPtr.h:17:3
-      wrapped.template constructor<TBranch *>(/*finalize=*/true);
-
-      DEBUG_MSG("Adding wrapper for TBranch * TBranchPtr::operator->() (" __HERE__ ")");
-      // signature to use in the veto list: TBranch * TBranchPtr::operator->()
-      // defined in src/TBranchPtr.h:19:12
-      wrapped.method("arrow", static_cast<TBranch * (WrappedType::*)()  const>(&WrappedType::operator->));
-      module_.set_override_module(jl_base_module);
-
-      DEBUG_MSG("Adding wrapper for TBranch & TBranchPtr::operator*() (" __HERE__ ")");
-      // signature to use in the veto list: TBranch & TBranchPtr::operator*()
-      // defined in src/TBranchPtr.h:20:12
-      wrapped.method("getindex", static_cast<TBranch & (WrappedType::*)()  const>(&WrappedType::operator*));
-
-      module_.unset_override_module();
-    };
-    t.apply<TBranchPtr<std::vector<double>>, TBranchPtr<std::vector<float>>, TBranchPtr<std::vector<unsigned long>>, TBranchPtr<std::vector<long>>, TBranchPtr<std::vector<unsigned int>>, TBranchPtr<std::vector<int>>, TBranchPtr<std::vector<unsigned short>>, TBranchPtr<std::vector<short>>, TBranchPtr<std::vector<unsigned char>>, TBranchPtr<std::vector<char>>, TBranchPtr<double>, TBranchPtr<float>, TBranchPtr<unsigned long>, TBranchPtr<long>, TBranchPtr<unsigned int>, TBranchPtr<int>, TBranchPtr<unsigned short>, TBranchPtr<short>, TBranchPtr<unsigned char>, TBranchPtr<char>>(t54_decl_methods);
-  }
-
-  void add_methods() const{
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>> type_;
-};
-std::shared_ptr<Wrapper> newJlTBranchPtr(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTBranchPtr(module));
 }

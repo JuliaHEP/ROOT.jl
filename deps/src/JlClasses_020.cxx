@@ -7,6 +7,62 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TTreeReader::Iterator_t> : std::false_type { };
+  template<> struct DefaultConstructible<TTreeReader::Iterator_t> : std::false_type { };
+}
+
+// Class generating the wrapper for type TTreeReader::Iterator_t
+// signature to use in the veto file: TTreeReader::Iterator_t
+struct JlTTreeReader_Iterator_t: public Wrapper {
+
+  JlTTreeReader_Iterator_t(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TTreeReader::Iterator_t (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:56:10
+    jlcxx::TypeWrapper<TTreeReader::Iterator_t>  t = jlModule.add_type<TTreeReader::Iterator_t>("TTreeReader!Iterator_t");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TTreeReader::Iterator_t>>(new jlcxx::TypeWrapper<TTreeReader::Iterator_t>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TTreeReader::Iterator_t::Iterator_t(TTreeReader &, Long64_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:77:7
+    t.constructor<TTreeReader &, Long64_t>(/*finalize=*/true);
+    module_.set_override_module(jl_base_module);
+
+    DEBUG_MSG("Adding wrapper for bool TTreeReader::Iterator_t::operator==(const TTreeReader::Iterator_t &) (" __HERE__ ")");
+    // signature to use in the veto list: bool TTreeReader::Iterator_t::operator==(const TTreeReader::Iterator_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:81:12
+    t.method("==", static_cast<bool (TTreeReader::Iterator_t::*)(const TTreeReader::Iterator_t &)  const>(&TTreeReader::Iterator_t::operator==));
+
+    DEBUG_MSG("Adding wrapper for bool TTreeReader::Iterator_t::operator!=(const TTreeReader::Iterator_t &) (" __HERE__ ")");
+    // signature to use in the veto list: bool TTreeReader::Iterator_t::operator!=(const TTreeReader::Iterator_t &)
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:88:12
+    t.method("!=", static_cast<bool (TTreeReader::Iterator_t::*)(const TTreeReader::Iterator_t &)  const>(&TTreeReader::Iterator_t::operator!=));
+
+    DEBUG_MSG("Adding wrapper for const Long64_t & TTreeReader::Iterator_t::operator*() (" __HERE__ ")");
+    // signature to use in the veto list: const Long64_t & TTreeReader::Iterator_t::operator*()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:113:23
+    t.method("getindex", static_cast<const Long64_t & (TTreeReader::Iterator_t::*)() >(&TTreeReader::Iterator_t::operator*));
+
+    DEBUG_MSG("Adding wrapper for const Long64_t & TTreeReader::Iterator_t::operator*() (" __HERE__ ")");
+    // signature to use in the veto list: const Long64_t & TTreeReader::Iterator_t::operator*()
+    // defined in /home/pgras/.julia/conda/3/include/TTreeReader.h:124:23
+    t.method("getindex", static_cast<const Long64_t & (TTreeReader::Iterator_t::*)()  const>(&TTreeReader::Iterator_t::operator*));
+
+    module_.unset_override_module();
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TTreeReader::Iterator_t>> type_;
+};
+std::shared_ptr<Wrapper> newJlTTreeReader_Iterator_t(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTTreeReader_Iterator_t(module));
+}
+
+namespace jlcxx {
 
   template<typename T>
   struct BuildParameterList<TTreeReaderArray<T>>
@@ -27,7 +83,7 @@ struct JlTTreeReaderArray: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTreeReaderArray.h:75:30
     jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>  t =  jlModule.add_type<jlcxx::Parametric<jlcxx::TypeVar<1>>>("TTreeReaderArray");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>>(new jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>(jlModule, t));
-    auto t151_decl_methods = [this]<typename T> (jlcxx::TypeWrapper<TTreeReaderArray<T>> wrapped){
+    auto t152_decl_methods = [this]<typename T> (jlcxx::TypeWrapper<TTreeReaderArray<T>> wrapped){
       auto module_ = this->module_;
       typedef TTreeReaderArray<T> WrappedType;
 
@@ -65,7 +121,7 @@ struct JlTTreeReaderArray: public Wrapper {
 
       module_.unset_override_module();
     };
-    t.apply<TTreeReaderArray<double>, TTreeReaderArray<float>, TTreeReaderArray<unsigned long>, TTreeReaderArray<long>, TTreeReaderArray<unsigned int>, TTreeReaderArray<int>, TTreeReaderArray<unsigned short>, TTreeReaderArray<short>, TTreeReaderArray<unsigned char>, TTreeReaderArray<char>>(t151_decl_methods);
+    t.apply<TTreeReaderArray<double>, TTreeReaderArray<float>, TTreeReaderArray<unsigned long>, TTreeReaderArray<long>, TTreeReaderArray<unsigned int>, TTreeReaderArray<int>, TTreeReaderArray<unsigned short>, TTreeReaderArray<short>, TTreeReaderArray<unsigned char>, TTreeReaderArray<char>>(t152_decl_methods);
   }
 
   void add_methods() const{

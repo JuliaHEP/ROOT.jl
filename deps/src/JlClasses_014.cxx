@@ -7,6 +7,34 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<Foption_t> : std::false_type { };
+  template<> struct DefaultConstructible<Foption_t> : std::false_type { };
+}
+
+// Class generating the wrapper for type Foption_t
+// signature to use in the veto file: Foption_t
+struct JlFoption_t: public Wrapper {
+
+  JlFoption_t(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type Foption_t (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/Foption.h:24:8
+    jlcxx::TypeWrapper<Foption_t>  t = jlModule.add_type<Foption_t>("Foption_t");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<Foption_t>>(new jlcxx::TypeWrapper<Foption_t>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<Foption_t>> type_;
+};
+std::shared_ptr<Wrapper> newJlFoption_t(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlFoption_t(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TF1> : std::false_type { };
   template<> struct DefaultConstructible<TF1> : std::false_type { };
 template<> struct SuperType<TF1> { typedef TNamed type; };
@@ -1327,143 +1355,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTH1C(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTH1C(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TH1S> : std::false_type { };
-  template<> struct DefaultConstructible<TH1S> : std::false_type { };
-template<> struct SuperType<TH1S> { typedef TH1 type; };
-}
-
-// Class generating the wrapper for type TH1S
-// signature to use in the veto file: TH1S
-struct JlTH1S: public Wrapper {
-
-  JlTH1S(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TH1S (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:495:7
-    jlcxx::TypeWrapper<TH1S>  t = jlModule.add_type<TH1S>("TH1S",
-      jlcxx::julia_base_type<TH1>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TH1S>>(new jlcxx::TypeWrapper<TH1S>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TH1S::TH1S(const char *, const char *, Int_t, Double_t, Double_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:499:4
-    t.constructor<const char *, const char *, Int_t, Double_t, Double_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TH1S::TH1S(const char *, const char *, Int_t, const Float_t *) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:500:4
-    t.constructor<const char *, const char *, Int_t, const Float_t *>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TH1S::TH1S(const char *, const char *, Int_t, const Double_t *) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:501:4
-    t.constructor<const char *, const char *, Int_t, const Double_t *>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TH1S::TH1S(const TH1S &) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:502:4
-    t.constructor<const TH1S &>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding wrapper for TH1S & TH1S::operator=(const TH1S &) (" __HERE__ ")");
-    // signature to use in the veto list: TH1S & TH1S::operator=(const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:503:10
-    t.method("assign", static_cast<TH1S & (TH1S::*)(const TH1S &) >(&TH1S::operator=));
-
-    DEBUG_MSG("Adding wrapper for void TH1S::AddBinContent(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TH1S::AddBinContent(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:506:13
-    t.method("AddBinContent", static_cast<void (TH1S::*)(Int_t) >(&TH1S::AddBinContent));
-
-    DEBUG_MSG("Adding wrapper for void TH1S::AddBinContent(Int_t, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TH1S::AddBinContent(Int_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:507:13
-    t.method("AddBinContent", static_cast<void (TH1S::*)(Int_t, Double_t) >(&TH1S::AddBinContent));
-
-    DEBUG_MSG("Adding wrapper for void TH1S::Copy(TObject &) (" __HERE__ ")");
-    // signature to use in the veto list: void TH1S::Copy(TObject &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:508:13
-    t.method("Copy", static_cast<void (TH1S::*)(TObject &)  const>(&TH1S::Copy));
-
-    DEBUG_MSG("Adding wrapper for void TH1S::Reset(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TH1S::Reset(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:509:13
-    t.method("Reset", static_cast<void (TH1S::*)(Option_t *) >(&TH1S::Reset));
-    t.method("Reset", [](TH1S& a)->void { a.Reset(); });
-    t.method("Reset", [](TH1S* a)->void { a->Reset(); });
-
-    DEBUG_MSG("Adding wrapper for void TH1S::SetBinsLength(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TH1S::SetBinsLength(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:510:13
-    t.method("SetBinsLength", static_cast<void (TH1S::*)(Int_t) >(&TH1S::SetBinsLength));
-    t.method("SetBinsLength", [](TH1S& a)->void { a.SetBinsLength(); });
-    t.method("SetBinsLength", [](TH1S* a)->void { a->SetBinsLength(); });
-
-    DEBUG_MSG("Adding wrapper for Version_t TH1S::Class_Version() (" __HERE__ ")");
-    // signature to use in the veto list: Version_t TH1S::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!Class_Version", static_cast<Version_t (*)() >(&TH1S::Class_Version));
-
-    DEBUG_MSG("Adding wrapper for TClass * TH1S::IsA() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TH1S::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    t.method("IsA", static_cast<TClass * (TH1S::*)()  const>(&TH1S::IsA));
-
-    DEBUG_MSG("Adding wrapper for void TH1S::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TH1S::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    t.method("StreamerNVirtual", static_cast<void (TH1S::*)(TBuffer &) >(&TH1S::StreamerNVirtual));
-
-    DEBUG_MSG("Adding wrapper for const char * TH1S::DeclFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TH1S::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!DeclFileName", []() { return (std::string)TH1S::DeclFileName(); });
-
-    DEBUG_MSG("Adding wrapper for int TH1S::ImplFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TH1S::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!ImplFileLine", static_cast<int (*)() >(&TH1S::ImplFileLine));
-
-    DEBUG_MSG("Adding wrapper for const char * TH1S::ImplFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TH1S::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!ImplFileName", []() { return (std::string)TH1S::ImplFileName(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TH1S::Class_Name() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TH1S::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!Class_Name", []() { return (std::string)TH1S::Class_Name(); });
-
-    DEBUG_MSG("Adding wrapper for TClass * TH1S::Dictionary() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TH1S::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!Dictionary", static_cast<TClass * (*)() >(&TH1S::Dictionary));
-
-    DEBUG_MSG("Adding wrapper for TClass * TH1S::Class() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TH1S::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!Class", static_cast<TClass * (*)() >(&TH1S::Class));
-
-    DEBUG_MSG("Adding wrapper for void TH1S::Streamer(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TH1S::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    t.method("Streamer", static_cast<void (TH1S::*)(TBuffer &) >(&TH1S::Streamer));
-
-    DEBUG_MSG("Adding wrapper for int TH1S::DeclFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TH1S::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:512:4
-    module_.method("TH1S!DeclFileLine", static_cast<int (*)() >(&TH1S::DeclFileLine));
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TH1S>> type_;
-};
-std::shared_ptr<Wrapper> newJlTH1S(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTH1S(module));
 }
