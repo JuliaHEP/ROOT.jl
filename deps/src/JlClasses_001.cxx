@@ -358,44 +358,54 @@ struct JlTObject: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TObject.h:186:13
     module_.method("TObject!delete[]", static_cast<void (*)(void *) >(&TObject::operator delete[]));
 
+    DEBUG_MSG("Adding wrapper for void TObject::operator delete(void *, size_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObject::operator delete(void *, size_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:189:13
+    module_.method("TObject!delete", static_cast<void (*)(void *, size_t) >(&TObject::operator delete));
+
+    DEBUG_MSG("Adding wrapper for void TObject::operator delete[](void *, size_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TObject::operator delete[](void *, size_t)
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:190:13
+    module_.method("TObject!delete[]", static_cast<void (*)(void *, size_t) >(&TObject::operator delete[]));
+
     DEBUG_MSG("Adding wrapper for void TObject::operator delete(void *, void *) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::operator delete(void *, void *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:193:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:192:13
     module_.method("TObject!delete", static_cast<void (*)(void *, void *) >(&TObject::operator delete));
 
     DEBUG_MSG("Adding wrapper for void TObject::operator delete[](void *, void *) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::operator delete[](void *, void *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:194:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:193:13
     module_.method("TObject!delete[]", static_cast<void (*)(void *, void *) >(&TObject::operator delete[]));
 
     DEBUG_MSG("Adding wrapper for void TObject::SetBit(UInt_t, Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::SetBit(UInt_t, Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:198:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:196:13
     t.method("SetBit", static_cast<void (TObject::*)(UInt_t, Bool_t) >(&TObject::SetBit));
 
     DEBUG_MSG("Adding wrapper for void TObject::SetBit(UInt_t) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::SetBit(UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:199:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:197:13
     t.method("SetBit", static_cast<void (TObject::*)(UInt_t) >(&TObject::SetBit));
 
     DEBUG_MSG("Adding wrapper for void TObject::ResetBit(UInt_t) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::ResetBit(UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:200:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:198:13
     t.method("ResetBit", static_cast<void (TObject::*)(UInt_t) >(&TObject::ResetBit));
 
     DEBUG_MSG("Adding wrapper for Bool_t TObject::TestBit(UInt_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TObject::TestBit(UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:201:28
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:199:28
     t.method("TestBit", static_cast<Bool_t (TObject::*)(UInt_t)  const>(&TObject::TestBit));
 
     DEBUG_MSG("Adding wrapper for Int_t TObject::TestBits(UInt_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TObject::TestBits(UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:202:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:200:13
     t.method("TestBits", static_cast<Int_t (TObject::*)(UInt_t)  const>(&TObject::TestBits));
 
     DEBUG_MSG("Adding wrapper for void TObject::InvertBit(UInt_t) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::InvertBit(UInt_t)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:203:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:201:13
     t.method("InvertBit", static_cast<void (TObject::*)(UInt_t) >(&TObject::InvertBit));
 
 
@@ -405,92 +415,92 @@ struct JlTObject: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for void TObject::AbstractMethod(const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::AbstractMethod(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:232:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:230:13
     t.method("AbstractMethod", static_cast<void (TObject::*)(const char *)  const>(&TObject::AbstractMethod));
 
     DEBUG_MSG("Adding wrapper for void TObject::MayNotUse(const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::MayNotUse(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:233:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:231:13
     t.method("MayNotUse", static_cast<void (TObject::*)(const char *)  const>(&TObject::MayNotUse));
 
     DEBUG_MSG("Adding wrapper for void TObject::Obsolete(const char *, const char *, const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::Obsolete(const char *, const char *, const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:234:13
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:232:13
     t.method("Obsolete", static_cast<void (TObject::*)(const char *, const char *, const char *)  const>(&TObject::Obsolete));
 
     DEBUG_MSG("Adding wrapper for Longptr_t TObject::GetDtorOnly() (" __HERE__ ")");
     // signature to use in the veto list: Longptr_t TObject::GetDtorOnly()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:237:21
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:235:21
     module_.method("TObject!GetDtorOnly", static_cast<Longptr_t (*)() >(&TObject::GetDtorOnly));
 
     DEBUG_MSG("Adding wrapper for void TObject::SetDtorOnly(void *) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::SetDtorOnly(void *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:238:21
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:236:21
     module_.method("TObject!SetDtorOnly", static_cast<void (*)(void *) >(&TObject::SetDtorOnly));
 
     DEBUG_MSG("Adding wrapper for Bool_t TObject::GetObjectStat() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TObject::GetObjectStat()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:239:21
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:237:21
     module_.method("TObject!GetObjectStat", static_cast<Bool_t (*)() >(&TObject::GetObjectStat));
 
     DEBUG_MSG("Adding wrapper for void TObject::SetObjectStat(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::SetObjectStat(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:240:21
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:238:21
     module_.method("TObject!SetObjectStat", static_cast<void (*)(Bool_t) >(&TObject::SetObjectStat));
 
     DEBUG_MSG("Adding wrapper for Version_t TObject::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TObject::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!Class_Version", static_cast<Version_t (*)() >(&TObject::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TObject::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TObject::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     t.method("IsA", static_cast<TClass * (TObject::*)()  const>(&TObject::IsA));
 
     DEBUG_MSG("Adding wrapper for void TObject::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     t.method("StreamerNVirtual", static_cast<void (TObject::*)(TBuffer &) >(&TObject::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TObject::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TObject::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!DeclFileName", []() { return (std::string)TObject::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TObject::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TObject::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!ImplFileLine", static_cast<int (*)() >(&TObject::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TObject::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TObject::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!ImplFileName", []() { return (std::string)TObject::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TObject::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TObject::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!Class_Name", []() { return (std::string)TObject::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TObject::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TObject::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!Dictionary", static_cast<TClass * (*)() >(&TObject::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TObject::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TObject::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!Class", static_cast<TClass * (*)() >(&TObject::Class));
 
     DEBUG_MSG("Adding wrapper for void TObject::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TObject::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     t.method("Streamer", static_cast<void (TObject::*)(TBuffer &) >(&TObject::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TObject::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TObject::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:245:4
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:243:4
     module_.method("TObject!DeclFileLine", static_cast<int (*)() >(&TObject::DeclFileLine));
   }
 

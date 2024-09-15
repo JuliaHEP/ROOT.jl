@@ -73,7 +73,7 @@ struct JlFileStat_t: public Wrapper {
 
   JlFileStat_t(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type FileStat_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:124:8
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:122:8
     jlcxx::TypeWrapper<FileStat_t>  t = jlModule.add_type<FileStat_t>("FileStat_t");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<FileStat_t>>(new jlcxx::TypeWrapper<FileStat_t>(jlModule, t));
   }
@@ -83,13 +83,13 @@ struct JlFileStat_t: public Wrapper {
     t.template constructor<>(/*finalize=*/true);
 
     DEBUG_MSG("Adding fDev methods  to provide read access to the field fDev (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:125:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:123:13
     // signature to use in the veto list: FileStat_t::fDev
     t.method("fDev", [](const FileStat_t& a) -> Long_t { return a.fDev; });
     t.method("fDev", [](FileStat_t& a) -> Long_t { return a.fDev; });
     t.method("fDev", [](const FileStat_t* a) -> Long_t { return a->fDev; });
     t.method("fDev", [](FileStat_t* a) -> Long_t { return a->fDev; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:125:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:123:13
     // signature to use in the veto list: FileStat_t::fDev
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fDev! methods to provide write access to the field fDev (" __HERE__ ")");
@@ -99,13 +99,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fDev!", [](FileStat_t* a, Long_t val) -> Long_t { return a->fDev = val; });
 
     DEBUG_MSG("Adding fIno methods  to provide read access to the field fIno (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:126:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:124:13
     // signature to use in the veto list: FileStat_t::fIno
     t.method("fIno", [](const FileStat_t& a) -> Long_t { return a.fIno; });
     t.method("fIno", [](FileStat_t& a) -> Long_t { return a.fIno; });
     t.method("fIno", [](const FileStat_t* a) -> Long_t { return a->fIno; });
     t.method("fIno", [](FileStat_t* a) -> Long_t { return a->fIno; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:126:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:124:13
     // signature to use in the veto list: FileStat_t::fIno
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fIno! methods to provide write access to the field fIno (" __HERE__ ")");
@@ -115,13 +115,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fIno!", [](FileStat_t* a, Long_t val) -> Long_t { return a->fIno = val; });
 
     DEBUG_MSG("Adding fMode methods  to provide read access to the field fMode (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:127:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:125:13
     // signature to use in the veto list: FileStat_t::fMode
     t.method("fMode", [](const FileStat_t& a) -> Int_t { return a.fMode; });
     t.method("fMode", [](FileStat_t& a) -> Int_t { return a.fMode; });
     t.method("fMode", [](const FileStat_t* a) -> Int_t { return a->fMode; });
     t.method("fMode", [](FileStat_t* a) -> Int_t { return a->fMode; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:127:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:125:13
     // signature to use in the veto list: FileStat_t::fMode
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fMode! methods to provide write access to the field fMode (" __HERE__ ")");
@@ -131,13 +131,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fMode!", [](FileStat_t* a, Int_t val) -> Int_t { return a->fMode = val; });
 
     DEBUG_MSG("Adding fUid methods  to provide read access to the field fUid (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:128:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:126:13
     // signature to use in the veto list: FileStat_t::fUid
     t.method("fUid", [](const FileStat_t& a) -> Int_t { return a.fUid; });
     t.method("fUid", [](FileStat_t& a) -> Int_t { return a.fUid; });
     t.method("fUid", [](const FileStat_t* a) -> Int_t { return a->fUid; });
     t.method("fUid", [](FileStat_t* a) -> Int_t { return a->fUid; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:128:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:126:13
     // signature to use in the veto list: FileStat_t::fUid
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fUid! methods to provide write access to the field fUid (" __HERE__ ")");
@@ -147,13 +147,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fUid!", [](FileStat_t* a, Int_t val) -> Int_t { return a->fUid = val; });
 
     DEBUG_MSG("Adding fGid methods  to provide read access to the field fGid (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:129:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:127:13
     // signature to use in the veto list: FileStat_t::fGid
     t.method("fGid", [](const FileStat_t& a) -> Int_t { return a.fGid; });
     t.method("fGid", [](FileStat_t& a) -> Int_t { return a.fGid; });
     t.method("fGid", [](const FileStat_t* a) -> Int_t { return a->fGid; });
     t.method("fGid", [](FileStat_t* a) -> Int_t { return a->fGid; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:129:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:127:13
     // signature to use in the veto list: FileStat_t::fGid
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fGid! methods to provide write access to the field fGid (" __HERE__ ")");
@@ -163,13 +163,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fGid!", [](FileStat_t* a, Int_t val) -> Int_t { return a->fGid = val; });
 
     DEBUG_MSG("Adding fSize methods  to provide read access to the field fSize (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:130:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:128:13
     // signature to use in the veto list: FileStat_t::fSize
     t.method("fSize", [](const FileStat_t& a) -> Long64_t { return a.fSize; });
     t.method("fSize", [](FileStat_t& a) -> Long64_t { return a.fSize; });
     t.method("fSize", [](const FileStat_t* a) -> Long64_t { return a->fSize; });
     t.method("fSize", [](FileStat_t* a) -> Long64_t { return a->fSize; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:130:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:128:13
     // signature to use in the veto list: FileStat_t::fSize
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fSize! methods to provide write access to the field fSize (" __HERE__ ")");
@@ -179,13 +179,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fSize!", [](FileStat_t* a, Long64_t val) -> Long64_t { return a->fSize = val; });
 
     DEBUG_MSG("Adding fMtime methods  to provide read access to the field fMtime (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:131:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:129:13
     // signature to use in the veto list: FileStat_t::fMtime
     t.method("fMtime", [](const FileStat_t& a) -> Long_t { return a.fMtime; });
     t.method("fMtime", [](FileStat_t& a) -> Long_t { return a.fMtime; });
     t.method("fMtime", [](const FileStat_t* a) -> Long_t { return a->fMtime; });
     t.method("fMtime", [](FileStat_t* a) -> Long_t { return a->fMtime; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:131:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:129:13
     // signature to use in the veto list: FileStat_t::fMtime
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fMtime! methods to provide write access to the field fMtime (" __HERE__ ")");
@@ -195,13 +195,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fMtime!", [](FileStat_t* a, Long_t val) -> Long_t { return a->fMtime = val; });
 
     DEBUG_MSG("Adding fIsLink methods  to provide read access to the field fIsLink (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:132:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:130:13
     // signature to use in the veto list: FileStat_t::fIsLink
     t.method("fIsLink", [](const FileStat_t& a) -> Bool_t { return a.fIsLink; });
     t.method("fIsLink", [](FileStat_t& a) -> Bool_t { return a.fIsLink; });
     t.method("fIsLink", [](const FileStat_t* a) -> Bool_t { return a->fIsLink; });
     t.method("fIsLink", [](FileStat_t* a) -> Bool_t { return a->fIsLink; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:132:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:130:13
     // signature to use in the veto list: FileStat_t::fIsLink
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fIsLink! methods to provide write access to the field fIsLink (" __HERE__ ")");
@@ -211,13 +211,13 @@ struct JlFileStat_t: public Wrapper {
     t.method("fIsLink!", [](FileStat_t* a, Bool_t val) -> Bool_t { return a->fIsLink = val; });
 
     DEBUG_MSG("Adding fUrl methods  to provide read access to the field fUrl (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:133:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:131:13
     // signature to use in the veto list: FileStat_t::fUrl
     t.method("fUrl", [](const FileStat_t& a) -> const TString& { return a.fUrl; });
     t.method("fUrl", [](FileStat_t& a) -> TString& { return a.fUrl; });
     t.method("fUrl", [](const FileStat_t* a) -> const TString& { return a->fUrl; });
     t.method("fUrl", [](FileStat_t* a) -> TString& { return a->fUrl; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:133:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:131:13
     // signature to use in the veto list: FileStat_t::fUrl
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fUrl! methods to provide write access to the field fUrl (" __HERE__ ")");
@@ -245,7 +245,7 @@ struct JlUserGroup_t: public Wrapper {
 
   JlUserGroup_t(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type UserGroup_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:138:8
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:136:8
     jlcxx::TypeWrapper<UserGroup_t>  t = jlModule.add_type<UserGroup_t>("UserGroup_t");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<UserGroup_t>>(new jlcxx::TypeWrapper<UserGroup_t>(jlModule, t));
   }
@@ -255,13 +255,13 @@ struct JlUserGroup_t: public Wrapper {
     t.template constructor<>(/*finalize=*/true);
 
     DEBUG_MSG("Adding fUid methods  to provide read access to the field fUid (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:139:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:137:13
     // signature to use in the veto list: UserGroup_t::fUid
     t.method("fUid", [](const UserGroup_t& a) -> Int_t { return a.fUid; });
     t.method("fUid", [](UserGroup_t& a) -> Int_t { return a.fUid; });
     t.method("fUid", [](const UserGroup_t* a) -> Int_t { return a->fUid; });
     t.method("fUid", [](UserGroup_t* a) -> Int_t { return a->fUid; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:139:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:137:13
     // signature to use in the veto list: UserGroup_t::fUid
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fUid! methods to provide write access to the field fUid (" __HERE__ ")");
@@ -271,13 +271,13 @@ struct JlUserGroup_t: public Wrapper {
     t.method("fUid!", [](UserGroup_t* a, Int_t val) -> Int_t { return a->fUid = val; });
 
     DEBUG_MSG("Adding fGid methods  to provide read access to the field fGid (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:140:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:138:13
     // signature to use in the veto list: UserGroup_t::fGid
     t.method("fGid", [](const UserGroup_t& a) -> Int_t { return a.fGid; });
     t.method("fGid", [](UserGroup_t& a) -> Int_t { return a.fGid; });
     t.method("fGid", [](const UserGroup_t* a) -> Int_t { return a->fGid; });
     t.method("fGid", [](UserGroup_t* a) -> Int_t { return a->fGid; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:140:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:138:13
     // signature to use in the veto list: UserGroup_t::fGid
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fGid! methods to provide write access to the field fGid (" __HERE__ ")");
@@ -287,13 +287,13 @@ struct JlUserGroup_t: public Wrapper {
     t.method("fGid!", [](UserGroup_t* a, Int_t val) -> Int_t { return a->fGid = val; });
 
     DEBUG_MSG("Adding fUser methods  to provide read access to the field fUser (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:141:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:139:13
     // signature to use in the veto list: UserGroup_t::fUser
     t.method("fUser", [](const UserGroup_t& a) -> const TString& { return a.fUser; });
     t.method("fUser", [](UserGroup_t& a) -> TString& { return a.fUser; });
     t.method("fUser", [](const UserGroup_t* a) -> const TString& { return a->fUser; });
     t.method("fUser", [](UserGroup_t* a) -> TString& { return a->fUser; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:141:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:139:13
     // signature to use in the veto list: UserGroup_t::fUser
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fUser! methods to provide write access to the field fUser (" __HERE__ ")");
@@ -303,13 +303,13 @@ struct JlUserGroup_t: public Wrapper {
     t.method("fUser!", [](UserGroup_t* a, const TString& val) -> TString& { return a->fUser = val; });
 
     DEBUG_MSG("Adding fGroup methods  to provide read access to the field fGroup (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:142:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:140:13
     // signature to use in the veto list: UserGroup_t::fGroup
     t.method("fGroup", [](const UserGroup_t& a) -> const TString& { return a.fGroup; });
     t.method("fGroup", [](UserGroup_t& a) -> TString& { return a.fGroup; });
     t.method("fGroup", [](const UserGroup_t* a) -> const TString& { return a->fGroup; });
     t.method("fGroup", [](UserGroup_t* a) -> TString& { return a->fGroup; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:142:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:140:13
     // signature to use in the veto list: UserGroup_t::fGroup
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fGroup! methods to provide write access to the field fGroup (" __HERE__ ")");
@@ -319,13 +319,13 @@ struct JlUserGroup_t: public Wrapper {
     t.method("fGroup!", [](UserGroup_t* a, const TString& val) -> TString& { return a->fGroup = val; });
 
     DEBUG_MSG("Adding fPasswd methods  to provide read access to the field fPasswd (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:143:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:141:13
     // signature to use in the veto list: UserGroup_t::fPasswd
     t.method("fPasswd", [](const UserGroup_t& a) -> const TString& { return a.fPasswd; });
     t.method("fPasswd", [](UserGroup_t& a) -> TString& { return a.fPasswd; });
     t.method("fPasswd", [](const UserGroup_t* a) -> const TString& { return a->fPasswd; });
     t.method("fPasswd", [](UserGroup_t* a) -> TString& { return a->fPasswd; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:143:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:141:13
     // signature to use in the veto list: UserGroup_t::fPasswd
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fPasswd! methods to provide write access to the field fPasswd (" __HERE__ ")");
@@ -335,13 +335,13 @@ struct JlUserGroup_t: public Wrapper {
     t.method("fPasswd!", [](UserGroup_t* a, const TString& val) -> TString& { return a->fPasswd = val; });
 
     DEBUG_MSG("Adding fRealName methods  to provide read access to the field fRealName (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:144:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:142:13
     // signature to use in the veto list: UserGroup_t::fRealName
     t.method("fRealName", [](const UserGroup_t& a) -> const TString& { return a.fRealName; });
     t.method("fRealName", [](UserGroup_t& a) -> TString& { return a.fRealName; });
     t.method("fRealName", [](const UserGroup_t* a) -> const TString& { return a->fRealName; });
     t.method("fRealName", [](UserGroup_t* a) -> TString& { return a->fRealName; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:144:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:142:13
     // signature to use in the veto list: UserGroup_t::fRealName
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fRealName! methods to provide write access to the field fRealName (" __HERE__ ")");
@@ -351,13 +351,13 @@ struct JlUserGroup_t: public Wrapper {
     t.method("fRealName!", [](UserGroup_t* a, const TString& val) -> TString& { return a->fRealName = val; });
 
     DEBUG_MSG("Adding fShell methods  to provide read access to the field fShell (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:145:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:143:13
     // signature to use in the veto list: UserGroup_t::fShell
     t.method("fShell", [](const UserGroup_t& a) -> const TString& { return a.fShell; });
     t.method("fShell", [](UserGroup_t& a) -> TString& { return a.fShell; });
     t.method("fShell", [](const UserGroup_t* a) -> const TString& { return a->fShell; });
     t.method("fShell", [](UserGroup_t* a) -> TString& { return a->fShell; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:145:13
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:143:13
     // signature to use in the veto list: UserGroup_t::fShell
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fShell! methods to provide write access to the field fShell (" __HERE__ ")");
@@ -385,7 +385,7 @@ struct JlSysInfo_t: public Wrapper {
 
   JlSysInfo_t(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type SysInfo_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:150:8
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:148:8
     jlcxx::TypeWrapper<SysInfo_t>  t = jlModule.add_type<SysInfo_t>("SysInfo_t");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<SysInfo_t>>(new jlcxx::TypeWrapper<SysInfo_t>(jlModule, t));
   }
@@ -396,67 +396,67 @@ struct JlSysInfo_t: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for Version_t SysInfo_t::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t SysInfo_t::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!Class_Version", static_cast<Version_t (*)() >(&SysInfo_t::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * SysInfo_t::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * SysInfo_t::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     t.method("IsA", static_cast<TClass * (SysInfo_t::*)()  const>(&SysInfo_t::IsA));
 
     DEBUG_MSG("Adding wrapper for void SysInfo_t::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void SysInfo_t::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     t.method("StreamerNVirtual", static_cast<void (SysInfo_t::*)(TBuffer &) >(&SysInfo_t::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * SysInfo_t::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * SysInfo_t::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!DeclFileName", []() { return (std::string)SysInfo_t::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int SysInfo_t::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int SysInfo_t::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!ImplFileLine", static_cast<int (*)() >(&SysInfo_t::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * SysInfo_t::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * SysInfo_t::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!ImplFileName", []() { return (std::string)SysInfo_t::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * SysInfo_t::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * SysInfo_t::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!Class_Name", []() { return (std::string)SysInfo_t::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * SysInfo_t::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * SysInfo_t::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!Dictionary", static_cast<TClass * (*)() >(&SysInfo_t::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * SysInfo_t::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * SysInfo_t::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!Class", static_cast<TClass * (*)() >(&SysInfo_t::Class));
 
     DEBUG_MSG("Adding wrapper for void SysInfo_t::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void SysInfo_t::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     t.method("Streamer", static_cast<void (SysInfo_t::*)(TBuffer &) >(&SysInfo_t::Streamer));
 
     DEBUG_MSG("Adding wrapper for int SysInfo_t::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int SysInfo_t::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:162:4
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:160:4
     module_.method("SysInfo_t!DeclFileLine", static_cast<int (*)() >(&SysInfo_t::DeclFileLine));
 
     DEBUG_MSG("Adding fOS methods  to provide read access to the field fOS (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:151:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:149:14
     // signature to use in the veto list: SysInfo_t::fOS
     t.method("fOS", [](const SysInfo_t& a) -> const TString& { return a.fOS; });
     t.method("fOS", [](SysInfo_t& a) -> TString& { return a.fOS; });
     t.method("fOS", [](const SysInfo_t* a) -> const TString& { return a->fOS; });
     t.method("fOS", [](SysInfo_t* a) -> TString& { return a->fOS; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:151:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:149:14
     // signature to use in the veto list: SysInfo_t::fOS
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fOS! methods to provide write access to the field fOS (" __HERE__ ")");
@@ -466,13 +466,13 @@ struct JlSysInfo_t: public Wrapper {
     t.method("fOS!", [](SysInfo_t* a, const TString& val) -> TString& { return a->fOS = val; });
 
     DEBUG_MSG("Adding fModel methods  to provide read access to the field fModel (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:152:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:150:14
     // signature to use in the veto list: SysInfo_t::fModel
     t.method("fModel", [](const SysInfo_t& a) -> const TString& { return a.fModel; });
     t.method("fModel", [](SysInfo_t& a) -> TString& { return a.fModel; });
     t.method("fModel", [](const SysInfo_t* a) -> const TString& { return a->fModel; });
     t.method("fModel", [](SysInfo_t* a) -> TString& { return a->fModel; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:152:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:150:14
     // signature to use in the veto list: SysInfo_t::fModel
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fModel! methods to provide write access to the field fModel (" __HERE__ ")");
@@ -482,13 +482,13 @@ struct JlSysInfo_t: public Wrapper {
     t.method("fModel!", [](SysInfo_t* a, const TString& val) -> TString& { return a->fModel = val; });
 
     DEBUG_MSG("Adding fCpuType methods  to provide read access to the field fCpuType (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:153:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:151:14
     // signature to use in the veto list: SysInfo_t::fCpuType
     t.method("fCpuType", [](const SysInfo_t& a) -> const TString& { return a.fCpuType; });
     t.method("fCpuType", [](SysInfo_t& a) -> TString& { return a.fCpuType; });
     t.method("fCpuType", [](const SysInfo_t* a) -> const TString& { return a->fCpuType; });
     t.method("fCpuType", [](SysInfo_t* a) -> TString& { return a->fCpuType; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:153:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:151:14
     // signature to use in the veto list: SysInfo_t::fCpuType
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fCpuType! methods to provide write access to the field fCpuType (" __HERE__ ")");
@@ -498,13 +498,13 @@ struct JlSysInfo_t: public Wrapper {
     t.method("fCpuType!", [](SysInfo_t* a, const TString& val) -> TString& { return a->fCpuType = val; });
 
     DEBUG_MSG("Adding fCpus methods  to provide read access to the field fCpus (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:154:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:152:14
     // signature to use in the veto list: SysInfo_t::fCpus
     t.method("fCpus", [](const SysInfo_t& a) -> Int_t { return a.fCpus; });
     t.method("fCpus", [](SysInfo_t& a) -> Int_t { return a.fCpus; });
     t.method("fCpus", [](const SysInfo_t* a) -> Int_t { return a->fCpus; });
     t.method("fCpus", [](SysInfo_t* a) -> Int_t { return a->fCpus; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:154:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:152:14
     // signature to use in the veto list: SysInfo_t::fCpus
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fCpus! methods to provide write access to the field fCpus (" __HERE__ ")");
@@ -514,13 +514,13 @@ struct JlSysInfo_t: public Wrapper {
     t.method("fCpus!", [](SysInfo_t* a, Int_t val) -> Int_t { return a->fCpus = val; });
 
     DEBUG_MSG("Adding fCpuSpeed methods  to provide read access to the field fCpuSpeed (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:155:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:153:14
     // signature to use in the veto list: SysInfo_t::fCpuSpeed
     t.method("fCpuSpeed", [](const SysInfo_t& a) -> Int_t { return a.fCpuSpeed; });
     t.method("fCpuSpeed", [](SysInfo_t& a) -> Int_t { return a.fCpuSpeed; });
     t.method("fCpuSpeed", [](const SysInfo_t* a) -> Int_t { return a->fCpuSpeed; });
     t.method("fCpuSpeed", [](SysInfo_t* a) -> Int_t { return a->fCpuSpeed; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:155:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:153:14
     // signature to use in the veto list: SysInfo_t::fCpuSpeed
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fCpuSpeed! methods to provide write access to the field fCpuSpeed (" __HERE__ ")");
@@ -530,13 +530,13 @@ struct JlSysInfo_t: public Wrapper {
     t.method("fCpuSpeed!", [](SysInfo_t* a, Int_t val) -> Int_t { return a->fCpuSpeed = val; });
 
     DEBUG_MSG("Adding fBusSpeed methods  to provide read access to the field fBusSpeed (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:156:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:154:14
     // signature to use in the veto list: SysInfo_t::fBusSpeed
     t.method("fBusSpeed", [](const SysInfo_t& a) -> Int_t { return a.fBusSpeed; });
     t.method("fBusSpeed", [](SysInfo_t& a) -> Int_t { return a.fBusSpeed; });
     t.method("fBusSpeed", [](const SysInfo_t* a) -> Int_t { return a->fBusSpeed; });
     t.method("fBusSpeed", [](SysInfo_t* a) -> Int_t { return a->fBusSpeed; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:156:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:154:14
     // signature to use in the veto list: SysInfo_t::fBusSpeed
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fBusSpeed! methods to provide write access to the field fBusSpeed (" __HERE__ ")");
@@ -546,13 +546,13 @@ struct JlSysInfo_t: public Wrapper {
     t.method("fBusSpeed!", [](SysInfo_t* a, Int_t val) -> Int_t { return a->fBusSpeed = val; });
 
     DEBUG_MSG("Adding fL2Cache methods  to provide read access to the field fL2Cache (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:157:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:155:14
     // signature to use in the veto list: SysInfo_t::fL2Cache
     t.method("fL2Cache", [](const SysInfo_t& a) -> Int_t { return a.fL2Cache; });
     t.method("fL2Cache", [](SysInfo_t& a) -> Int_t { return a.fL2Cache; });
     t.method("fL2Cache", [](const SysInfo_t* a) -> Int_t { return a->fL2Cache; });
     t.method("fL2Cache", [](SysInfo_t* a) -> Int_t { return a->fL2Cache; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:157:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:155:14
     // signature to use in the veto list: SysInfo_t::fL2Cache
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fL2Cache! methods to provide write access to the field fL2Cache (" __HERE__ ")");
@@ -562,13 +562,13 @@ struct JlSysInfo_t: public Wrapper {
     t.method("fL2Cache!", [](SysInfo_t* a, Int_t val) -> Int_t { return a->fL2Cache = val; });
 
     DEBUG_MSG("Adding fPhysRam methods  to provide read access to the field fPhysRam (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:158:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:156:14
     // signature to use in the veto list: SysInfo_t::fPhysRam
     t.method("fPhysRam", [](const SysInfo_t& a) -> Int_t { return a.fPhysRam; });
     t.method("fPhysRam", [](SysInfo_t& a) -> Int_t { return a.fPhysRam; });
     t.method("fPhysRam", [](const SysInfo_t* a) -> Int_t { return a->fPhysRam; });
     t.method("fPhysRam", [](SysInfo_t* a) -> Int_t { return a->fPhysRam; });
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:158:14
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:156:14
     // signature to use in the veto list: SysInfo_t::fPhysRam
     // with ! suffix to veto the setter only.
     DEBUG_MSG("Adding fPhysRam! methods to provide write access to the field fPhysRam (" __HERE__ ")");

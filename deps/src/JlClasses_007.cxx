@@ -846,10 +846,10 @@ struct JlROOT_Experimental_Internal_TBulkBranchRead: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:78:10
     t.method("GetEntriesSerialized", static_cast<Int_t (ROOT::Experimental::Internal::TBulkBranchRead::*)(Long64_t, TBuffer &, TBuffer *) >(&ROOT::Experimental::Internal::TBulkBranchRead::GetEntriesSerialized));
 
-    DEBUG_MSG("Adding wrapper for Bool_t ROOT::Experimental::Internal::TBulkBranchRead::SupportsBulkRead() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t ROOT::Experimental::Internal::TBulkBranchRead::SupportsBulkRead()
-    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:80:11
-    t.method("SupportsBulkRead", static_cast<Bool_t (ROOT::Experimental::Internal::TBulkBranchRead::*)()  const>(&ROOT::Experimental::Internal::TBulkBranchRead::SupportsBulkRead));
+    DEBUG_MSG("Adding wrapper for bool ROOT::Experimental::Internal::TBulkBranchRead::SupportsBulkRead() (" __HERE__ ")");
+    // signature to use in the veto list: bool ROOT::Experimental::Internal::TBulkBranchRead::SupportsBulkRead()
+    // defined in /home/pgras/.julia/conda/3/include/TBranch.h:80:9
+    t.method("SupportsBulkRead", static_cast<bool (ROOT::Experimental::Internal::TBulkBranchRead::*)()  const>(&ROOT::Experimental::Internal::TBulkBranchRead::SupportsBulkRead));
   }
 
 private:
@@ -1172,10 +1172,10 @@ struct JlTBranch: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:253:22
     t.method("GetRow", static_cast<Int_t (TBranch::*)(Int_t) >(&TBranch::GetRow));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TBranch::GetMakeClass() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TBranch::GetMakeClass()
+    DEBUG_MSG("Adding wrapper for bool TBranch::GetMakeClass() (" __HERE__ ")");
+    // signature to use in the veto list: bool TBranch::GetMakeClass()
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:254:22
-    t.method("GetMakeClass", static_cast<Bool_t (TBranch::*)()  const>(&TBranch::GetMakeClass));
+    t.method("GetMakeClass", static_cast<bool (TBranch::*)()  const>(&TBranch::GetMakeClass));
 
     DEBUG_MSG("Adding wrapper for TBranch * TBranch::GetMother() (" __HERE__ ")");
     // signature to use in the veto list: TBranch * TBranch::GetMother()
@@ -1192,15 +1192,15 @@ struct JlTBranch: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:257:22
     t.method("GetTransientBuffer", static_cast<TBuffer * (TBranch::*)(Int_t) >(&TBranch::GetTransientBuffer));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TBranch::IsAutoDelete() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TBranch::IsAutoDelete()
+    DEBUG_MSG("Adding wrapper for bool TBranch::IsAutoDelete() (" __HERE__ ")");
+    // signature to use in the veto list: bool TBranch::IsAutoDelete()
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:258:22
-    t.method("IsAutoDelete", static_cast<Bool_t (TBranch::*)()  const>(&TBranch::IsAutoDelete));
+    t.method("IsAutoDelete", static_cast<bool (TBranch::*)()  const>(&TBranch::IsAutoDelete));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TBranch::IsFolder() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TBranch::IsFolder()
+    DEBUG_MSG("Adding wrapper for bool TBranch::IsFolder() (" __HERE__ ")");
+    // signature to use in the veto list: bool TBranch::IsFolder()
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:259:22
-    t.method("IsFolder", static_cast<Bool_t (TBranch::*)()  const>(&TBranch::IsFolder));
+    t.method("IsFolder", static_cast<bool (TBranch::*)()  const>(&TBranch::IsFolder));
 
     DEBUG_MSG("Adding wrapper for void TBranch::KeepCircular(Long64_t) (" __HERE__ ")");
     // signature to use in the veto list: void TBranch::KeepCircular(Long64_t)
@@ -1261,10 +1261,10 @@ struct JlTBranch: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:271:22
     t.method("SetObject", static_cast<void (TBranch::*)(void *) >(&TBranch::SetObject));
 
-    DEBUG_MSG("Adding wrapper for void TBranch::SetAutoDelete(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TBranch::SetAutoDelete(Bool_t)
+    DEBUG_MSG("Adding wrapper for void TBranch::SetAutoDelete(bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TBranch::SetAutoDelete(bool)
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:272:22
-    t.method("SetAutoDelete", static_cast<void (TBranch::*)(Bool_t) >(&TBranch::SetAutoDelete));
+    t.method("SetAutoDelete", static_cast<void (TBranch::*)(bool) >(&TBranch::SetAutoDelete));
     t.method("SetAutoDelete", [](TBranch& a)->void { a.SetAutoDelete(); });
     t.method("SetAutoDelete", [](TBranch* a)->void { a->SetAutoDelete(); });
 
@@ -1304,10 +1304,10 @@ struct JlTBranch: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:278:22
     t.method("SetEntries", static_cast<void (TBranch::*)(Long64_t) >(&TBranch::SetEntries));
 
-    DEBUG_MSG("Adding wrapper for void TBranch::SetEntryOffsetLen(Int_t, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TBranch::SetEntryOffsetLen(Int_t, Bool_t)
+    DEBUG_MSG("Adding wrapper for void TBranch::SetEntryOffsetLen(Int_t, bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TBranch::SetEntryOffsetLen(Int_t, bool)
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:279:22
-    t.method("SetEntryOffsetLen", static_cast<void (TBranch::*)(Int_t, Bool_t) >(&TBranch::SetEntryOffsetLen));
+    t.method("SetEntryOffsetLen", static_cast<void (TBranch::*)(Int_t, bool) >(&TBranch::SetEntryOffsetLen));
     t.method("SetEntryOffsetLen", [](TBranch& a, Int_t arg0)->void { a.SetEntryOffsetLen(arg0); });
     t.method("SetEntryOffsetLen", [](TBranch* a, Int_t arg0)->void { a->SetEntryOffsetLen(arg0); });
 
@@ -1329,12 +1329,12 @@ struct JlTBranch: public Wrapper {
     t.method("SetFile", static_cast<void (TBranch::*)(const char *) >(&TBranch::SetFile));
 
 
-    DEBUG_MSG("Adding wrapper for Bool_t TBranch::SetMakeClass(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TBranch::SetMakeClass(Bool_t)
+    DEBUG_MSG("Adding wrapper for bool TBranch::SetMakeClass(bool) (" __HERE__ ")");
+    // signature to use in the veto list: bool TBranch::SetMakeClass(bool)
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:284:22
-    t.method("SetMakeClass", static_cast<Bool_t (TBranch::*)(Bool_t) >(&TBranch::SetMakeClass));
-    t.method("SetMakeClass", [](TBranch& a)->Bool_t { return a.SetMakeClass(); });
-    t.method("SetMakeClass", [](TBranch* a)->Bool_t { return a->SetMakeClass(); });
+    t.method("SetMakeClass", static_cast<bool (TBranch::*)(bool) >(&TBranch::SetMakeClass));
+    t.method("SetMakeClass", [](TBranch& a)->bool { return a.SetMakeClass(); });
+    t.method("SetMakeClass", [](TBranch* a)->bool { return a->SetMakeClass(); });
 
     DEBUG_MSG("Adding wrapper for void TBranch::SetOffset(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TBranch::SetOffset(Int_t)
@@ -1343,10 +1343,10 @@ struct JlTBranch: public Wrapper {
     t.method("SetOffset", [](TBranch& a)->void { a.SetOffset(); });
     t.method("SetOffset", [](TBranch* a)->void { a->SetOffset(); });
 
-    DEBUG_MSG("Adding wrapper for void TBranch::SetStatus(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TBranch::SetStatus(Bool_t)
+    DEBUG_MSG("Adding wrapper for void TBranch::SetStatus(bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TBranch::SetStatus(bool)
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:286:22
-    t.method("SetStatus", static_cast<void (TBranch::*)(Bool_t) >(&TBranch::SetStatus));
+    t.method("SetStatus", static_cast<void (TBranch::*)(bool) >(&TBranch::SetStatus));
     t.method("SetStatus", [](TBranch& a)->void { a.SetStatus(); });
     t.method("SetStatus", [](TBranch* a)->void { a->SetStatus(); });
 
@@ -1360,10 +1360,10 @@ struct JlTBranch: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:288:22
     t.method("SetupAddresses", static_cast<void (TBranch::*)() >(&TBranch::SetupAddresses));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TBranch::SupportsBulkRead() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TBranch::SupportsBulkRead()
+    DEBUG_MSG("Adding wrapper for bool TBranch::SupportsBulkRead() (" __HERE__ ")");
+    // signature to use in the veto list: bool TBranch::SupportsBulkRead()
     // defined in /home/pgras/.julia/conda/3/include/TBranch.h:289:22
-    t.method("SupportsBulkRead", static_cast<Bool_t (TBranch::*)()  const>(&TBranch::SupportsBulkRead));
+    t.method("SupportsBulkRead", static_cast<bool (TBranch::*)()  const>(&TBranch::SupportsBulkRead));
 
     DEBUG_MSG("Adding wrapper for void TBranch::UpdateAddress() (" __HERE__ ")");
     // signature to use in the veto list: void TBranch::UpdateAddress()

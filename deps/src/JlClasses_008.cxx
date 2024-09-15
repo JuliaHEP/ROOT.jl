@@ -35,31 +35,31 @@ struct JlTTree: public Wrapper {
     t.constructor<const char *, const char *, Int_t>(/*finalize=*/false);
     t.constructor<const char *, const char *, Int_t, TDirectory *>(/*finalize=*/false);
 
-    DEBUG_MSG("Adding wrapper for Int_t TTree::AddBranchToCache(const char *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TTree::AddBranchToCache(const char *, Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TTree::AddBranchToCache(const char *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TTree::AddBranchToCache(const char *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:321:28
-    t.method("AddBranchToCache", static_cast<Int_t (TTree::*)(const char *, Bool_t) >(&TTree::AddBranchToCache));
+    t.method("AddBranchToCache", static_cast<Int_t (TTree::*)(const char *, bool) >(&TTree::AddBranchToCache));
     t.method("AddBranchToCache", [](TTree& a, const char * arg0)->Int_t { return a.AddBranchToCache(arg0); });
     t.method("AddBranchToCache", [](TTree* a, const char * arg0)->Int_t { return a->AddBranchToCache(arg0); });
 
-    DEBUG_MSG("Adding wrapper for Int_t TTree::AddBranchToCache(TBranch *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TTree::AddBranchToCache(TBranch *, Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TTree::AddBranchToCache(TBranch *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TTree::AddBranchToCache(TBranch *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:322:28
-    t.method("AddBranchToCache", static_cast<Int_t (TTree::*)(TBranch *, Bool_t) >(&TTree::AddBranchToCache));
+    t.method("AddBranchToCache", static_cast<Int_t (TTree::*)(TBranch *, bool) >(&TTree::AddBranchToCache));
     t.method("AddBranchToCache", [](TTree& a, TBranch * arg0)->Int_t { return a.AddBranchToCache(arg0); });
     t.method("AddBranchToCache", [](TTree* a, TBranch * arg0)->Int_t { return a->AddBranchToCache(arg0); });
 
-    DEBUG_MSG("Adding wrapper for Int_t TTree::DropBranchFromCache(const char *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TTree::DropBranchFromCache(const char *, Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TTree::DropBranchFromCache(const char *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TTree::DropBranchFromCache(const char *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:323:28
-    t.method("DropBranchFromCache", static_cast<Int_t (TTree::*)(const char *, Bool_t) >(&TTree::DropBranchFromCache));
+    t.method("DropBranchFromCache", static_cast<Int_t (TTree::*)(const char *, bool) >(&TTree::DropBranchFromCache));
     t.method("DropBranchFromCache", [](TTree& a, const char * arg0)->Int_t { return a.DropBranchFromCache(arg0); });
     t.method("DropBranchFromCache", [](TTree* a, const char * arg0)->Int_t { return a->DropBranchFromCache(arg0); });
 
-    DEBUG_MSG("Adding wrapper for Int_t TTree::DropBranchFromCache(TBranch *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TTree::DropBranchFromCache(TBranch *, Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TTree::DropBranchFromCache(TBranch *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TTree::DropBranchFromCache(TBranch *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:324:28
-    t.method("DropBranchFromCache", static_cast<Int_t (TTree::*)(TBranch *, Bool_t) >(&TTree::DropBranchFromCache));
+    t.method("DropBranchFromCache", static_cast<Int_t (TTree::*)(TBranch *, bool) >(&TTree::DropBranchFromCache));
     t.method("DropBranchFromCache", [](TTree& a, TBranch * arg0)->Int_t { return a.DropBranchFromCache(arg0); });
     t.method("DropBranchFromCache", [](TTree* a, TBranch * arg0)->Int_t { return a->DropBranchFromCache(arg0); });
 
@@ -177,10 +177,10 @@ struct JlTTree: public Wrapper {
     t.method("BuildIndex", [](TTree& a, const char * arg0)->Int_t { return a.BuildIndex(arg0); });
     t.method("BuildIndex", [](TTree* a, const char * arg0)->Int_t { return a->BuildIndex(arg0); });
 
-    DEBUG_MSG("Adding wrapper for TStreamerInfo * TTree::BuildStreamerInfo(TClass *, void *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: TStreamerInfo * TTree::BuildStreamerInfo(TClass *, void *, Bool_t)
+    DEBUG_MSG("Adding wrapper for TStreamerInfo * TTree::BuildStreamerInfo(TClass *, void *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: TStreamerInfo * TTree::BuildStreamerInfo(TClass *, void *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:421:28
-    t.method("BuildStreamerInfo", static_cast<TStreamerInfo * (TTree::*)(TClass *, void *, Bool_t) >(&TTree::BuildStreamerInfo));
+    t.method("BuildStreamerInfo", static_cast<TStreamerInfo * (TTree::*)(TClass *, void *, bool) >(&TTree::BuildStreamerInfo));
     t.method("BuildStreamerInfo", [](TTree& a, TClass * arg0)->TStreamerInfo * { return a.BuildStreamerInfo(arg0); });
     t.method("BuildStreamerInfo", [](TTree& a, TClass * arg0, void * arg1)->TStreamerInfo * { return a.BuildStreamerInfo(arg0, arg1); });
     t.method("BuildStreamerInfo", [](TTree* a, TClass * arg0)->TStreamerInfo * { return a->BuildStreamerInfo(arg0); });
@@ -200,17 +200,17 @@ struct JlTTree: public Wrapper {
     t.method("CloneTree", [](TTree* a)->TTree * { return a->CloneTree(); });
     t.method("CloneTree", [](TTree* a, Long64_t arg0)->TTree * { return a->CloneTree(arg0); });
 
-    DEBUG_MSG("Adding wrapper for void TTree::CopyAddresses(TTree *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TTree::CopyAddresses(TTree *, Bool_t)
+    DEBUG_MSG("Adding wrapper for void TTree::CopyAddresses(TTree *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TTree::CopyAddresses(TTree *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:424:28
-    t.method("CopyAddresses", static_cast<void (TTree::*)(TTree *, Bool_t) >(&TTree::CopyAddresses));
+    t.method("CopyAddresses", static_cast<void (TTree::*)(TTree *, bool) >(&TTree::CopyAddresses));
     t.method("CopyAddresses", [](TTree& a, TTree * arg0)->void { a.CopyAddresses(arg0); });
     t.method("CopyAddresses", [](TTree* a, TTree * arg0)->void { a->CopyAddresses(arg0); });
 
-    DEBUG_MSG("Adding wrapper for Long64_t TTree::CopyEntries(TTree *, Long64_t, Option_t *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Long64_t TTree::CopyEntries(TTree *, Long64_t, Option_t *, Bool_t)
+    DEBUG_MSG("Adding wrapper for Long64_t TTree::CopyEntries(TTree *, Long64_t, Option_t *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Long64_t TTree::CopyEntries(TTree *, Long64_t, Option_t *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:425:28
-    t.method("CopyEntries", static_cast<Long64_t (TTree::*)(TTree *, Long64_t, Option_t *, Bool_t) >(&TTree::CopyEntries));
+    t.method("CopyEntries", static_cast<Long64_t (TTree::*)(TTree *, Long64_t, Option_t *, bool) >(&TTree::CopyEntries));
     t.method("CopyEntries", [](TTree& a, TTree * arg0)->Long64_t { return a.CopyEntries(arg0); });
     t.method("CopyEntries", [](TTree& a, TTree * arg0, Long64_t arg1)->Long64_t { return a.CopyEntries(arg0, arg1); });
     t.method("CopyEntries", [](TTree& a, TTree * arg0, Long64_t arg1, Option_t * arg2)->Long64_t { return a.CopyEntries(arg0, arg1, arg2); });
@@ -272,10 +272,10 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:435:28
     t.method("DropBuffers", static_cast<void (TTree::*)(Int_t) >(&TTree::DropBuffers));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::EnableCache() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::EnableCache()
+    DEBUG_MSG("Adding wrapper for bool TTree::EnableCache() (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::EnableCache()
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:436:28
-    t.method("EnableCache", static_cast<Bool_t (TTree::*)() >(&TTree::EnableCache));
+    t.method("EnableCache", static_cast<bool (TTree::*)() >(&TTree::EnableCache));
 
     DEBUG_MSG("Adding wrapper for Int_t TTree::Fill() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TTree::Fill()
@@ -307,10 +307,10 @@ struct JlTTree: public Wrapper {
     t.method("Fit", [](TTree* a, const char * arg0, const char * arg1, const char * arg2, Option_t * arg3, Option_t * arg4)->Int_t { return a->Fit(arg0, arg1, arg2, arg3, arg4); });
     t.method("Fit", [](TTree* a, const char * arg0, const char * arg1, const char * arg2, Option_t * arg3, Option_t * arg4, Long64_t arg5)->Int_t { return a->Fit(arg0, arg1, arg2, arg3, arg4, arg5); });
 
-    DEBUG_MSG("Adding wrapper for Int_t TTree::FlushBaskets(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TTree::FlushBaskets(Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TTree::FlushBaskets(bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TTree::FlushBaskets(bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:441:28
-    t.method("FlushBaskets", static_cast<Int_t (TTree::*)(Bool_t)  const>(&TTree::FlushBaskets));
+    t.method("FlushBaskets", static_cast<Int_t (TTree::*)(bool)  const>(&TTree::FlushBaskets));
     t.method("FlushBaskets", [](TTree const& a)->Int_t { return a.FlushBaskets(); });
     t.method("FlushBaskets", [](TTree const* a)->Int_t { return a->FlushBaskets(); });
 
@@ -340,10 +340,10 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:449:28
     t.method("GetBranch", static_cast<TBranch * (TTree::*)(const char *) >(&TTree::GetBranch));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::GetBranchStatus(const char *) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::GetBranchStatus(const char *)
+    DEBUG_MSG("Adding wrapper for bool TTree::GetBranchStatus(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::GetBranchStatus(const char *)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:451:28
-    t.method("GetBranchStatus", static_cast<Bool_t (TTree::*)(const char *)  const>(&TTree::GetBranchStatus));
+    t.method("GetBranchStatus", static_cast<bool (TTree::*)(const char *)  const>(&TTree::GetBranchStatus));
 
     DEBUG_MSG("Adding wrapper for Int_t TTree::GetBranchStyle() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TTree::GetBranchStyle()
@@ -370,10 +370,10 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:456:28
     t.method("GetChainOffset", static_cast<Long64_t (TTree::*)()  const>(&TTree::GetChainOffset));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::GetClusterPrefetch() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::GetClusterPrefetch()
+    DEBUG_MSG("Adding wrapper for bool TTree::GetClusterPrefetch() (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::GetClusterPrefetch()
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:457:28
-    t.method("GetClusterPrefetch", static_cast<Bool_t (TTree::*)()  const>(&TTree::GetClusterPrefetch));
+    t.method("GetClusterPrefetch", static_cast<bool (TTree::*)()  const>(&TTree::GetClusterPrefetch));
 
     DEBUG_MSG("Adding wrapper for TFile * TTree::GetCurrentFile() (" __HERE__ ")");
     // signature to use in the veto list: TFile * TTree::GetCurrentFile()
@@ -491,10 +491,10 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:479:28
     t.method("GetHistogram", static_cast<TH1 * (TTree::*)() >(&TTree::GetHistogram));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::GetImplicitMT() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::GetImplicitMT()
+    DEBUG_MSG("Adding wrapper for bool TTree::GetImplicitMT() (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::GetImplicitMT()
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:480:28
-    t.method("GetImplicitMT", static_cast<Bool_t (TTree::*)() >(&TTree::GetImplicitMT));
+    t.method("GetImplicitMT", static_cast<bool (TTree::*)() >(&TTree::GetImplicitMT));
 
     DEBUG_MSG("Adding wrapper for Int_t * TTree::GetIndex() (" __HERE__ ")");
     // signature to use in the veto list: Int_t * TTree::GetIndex()
@@ -511,10 +511,10 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:483:30
     t.method("GetIOFeatures", static_cast<ROOT::TIOFeatures (TTree::*)()  const>(&TTree::GetIOFeatures));
 
-    DEBUG_MSG("Adding wrapper for TIterator * TTree::GetIteratorOnAllLeaves(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: TIterator * TTree::GetIteratorOnAllLeaves(Bool_t)
+    DEBUG_MSG("Adding wrapper for TIterator * TTree::GetIteratorOnAllLeaves(bool) (" __HERE__ ")");
+    // signature to use in the veto list: TIterator * TTree::GetIteratorOnAllLeaves(bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:484:28
-    t.method("GetIteratorOnAllLeaves", static_cast<TIterator * (TTree::*)(Bool_t) >(&TTree::GetIteratorOnAllLeaves));
+    t.method("GetIteratorOnAllLeaves", static_cast<TIterator * (TTree::*)(bool) >(&TTree::GetIteratorOnAllLeaves));
     t.method("GetIteratorOnAllLeaves", [](TTree& a)->TIterator * { return a.GetIteratorOnAllLeaves(); });
     t.method("GetIteratorOnAllLeaves", [](TTree* a)->TIterator * { return a->GetIteratorOnAllLeaves(); });
 
@@ -708,17 +708,17 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:546:28
     t.method("IncrementTotalBuffers", static_cast<void (TTree::*)(Int_t) >(&TTree::IncrementTotalBuffers));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::IsFolder() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::IsFolder()
+    DEBUG_MSG("Adding wrapper for bool TTree::IsFolder() (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::IsFolder()
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:547:28
-    t.method("IsFolder", static_cast<Bool_t (TTree::*)()  const>(&TTree::IsFolder));
+    t.method("IsFolder", static_cast<bool (TTree::*)()  const>(&TTree::IsFolder));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::InPlaceClone(TDirectory *, const char *) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::InPlaceClone(TDirectory *, const char *)
+    DEBUG_MSG("Adding wrapper for bool TTree::InPlaceClone(TDirectory *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::InPlaceClone(TDirectory *, const char *)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:548:28
-    t.method("InPlaceClone", static_cast<Bool_t (TTree::*)(TDirectory *, const char *) >(&TTree::InPlaceClone));
-    t.method("InPlaceClone", [](TTree& a, TDirectory * arg0)->Bool_t { return a.InPlaceClone(arg0); });
-    t.method("InPlaceClone", [](TTree* a, TDirectory * arg0)->Bool_t { return a->InPlaceClone(arg0); });
+    t.method("InPlaceClone", static_cast<bool (TTree::*)(TDirectory *, const char *) >(&TTree::InPlaceClone));
+    t.method("InPlaceClone", [](TTree& a, TDirectory * arg0)->bool { return a.InPlaceClone(arg0); });
+    t.method("InPlaceClone", [](TTree* a, TDirectory * arg0)->bool { return a->InPlaceClone(arg0); });
 
     DEBUG_MSG("Adding wrapper for Int_t TTree::LoadBaskets(Long64_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TTree::LoadBaskets(Long64_t)
@@ -775,10 +775,10 @@ struct JlTTree: public Wrapper {
     t.method("MakeSelector", [](TTree* a)->Int_t { return a->MakeSelector(); });
     t.method("MakeSelector", [](TTree* a, const char * arg0)->Int_t { return a->MakeSelector(arg0); });
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::MemoryFull(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::MemoryFull(Int_t)
+    DEBUG_MSG("Adding wrapper for bool TTree::MemoryFull(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::MemoryFull(Int_t)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:556:28
-    t.method("MemoryFull", static_cast<Bool_t (TTree::*)(Int_t) >(&TTree::MemoryFull));
+    t.method("MemoryFull", static_cast<bool (TTree::*)(Int_t) >(&TTree::MemoryFull));
 
     DEBUG_MSG("Adding wrapper for Long64_t TTree::Merge(TCollection *, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: Long64_t TTree::Merge(TCollection *, Option_t *)
@@ -793,10 +793,10 @@ struct JlTTree: public Wrapper {
     module_.method("TTree!MergeTrees", static_cast<TTree * (*)(TList *, Option_t *) >(&TTree::MergeTrees));
     module_.method("TTree!MergeTrees", [](TList * arg0)->TTree * { return TTree::MergeTrees(arg0); });
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::Notify() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::Notify()
+    DEBUG_MSG("Adding wrapper for bool TTree::Notify() (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::Notify()
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:560:28
-    t.method("Notify", static_cast<Bool_t (TTree::*)() >(&TTree::Notify));
+    t.method("Notify", static_cast<bool (TTree::*)() >(&TTree::Notify));
 
     DEBUG_MSG("Adding wrapper for void TTree::OptimizeBaskets(ULong64_t, Float_t, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TTree::OptimizeBaskets(ULong64_t, Float_t, Option_t *)
@@ -903,10 +903,10 @@ struct JlTTree: public Wrapper {
     t.method("Scan", [](TTree* a, const char * arg0, const char * arg1, Option_t * arg2)->Long64_t { return a->Scan(arg0, arg1, arg2); });
     t.method("Scan", [](TTree* a, const char * arg0, const char * arg1, Option_t * arg2, Long64_t arg3)->Long64_t { return a->Scan(arg0, arg1, arg2, arg3); });
 
-    DEBUG_MSG("Adding wrapper for Bool_t TTree::SetAlias(const char *, const char *) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TTree::SetAlias(const char *, const char *)
+    DEBUG_MSG("Adding wrapper for bool TTree::SetAlias(const char *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: bool TTree::SetAlias(const char *, const char *)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:581:28
-    t.method("SetAlias", static_cast<Bool_t (TTree::*)(const char *, const char *) >(&TTree::SetAlias));
+    t.method("SetAlias", static_cast<bool (TTree::*)(const char *, const char *) >(&TTree::SetAlias));
 
     DEBUG_MSG("Adding wrapper for void TTree::SetAutoSave(Long64_t) (" __HERE__ ")");
     // signature to use in the veto list: void TTree::SetAutoSave(Long64_t)
@@ -936,24 +936,24 @@ struct JlTTree: public Wrapper {
     t.method("SetBranchAddress", [](TTree& a, const char * arg0, void * arg1)->Int_t { return a.SetBranchAddress(arg0, arg1); });
     t.method("SetBranchAddress", [](TTree* a, const char * arg0, void * arg1)->Int_t { return a->SetBranchAddress(arg0, arg1); });
 
-    DEBUG_MSG("Adding wrapper for Int_t TTree::SetBranchAddress(const char *, void *, TClass *, EDataType, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TTree::SetBranchAddress(const char *, void *, TClass *, EDataType, Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TTree::SetBranchAddress(const char *, void *, TClass *, EDataType, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TTree::SetBranchAddress(const char *, void *, TClass *, EDataType, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:586:28
-    t.method("SetBranchAddress", static_cast<Int_t (TTree::*)(const char *, void *, TClass *, EDataType, Bool_t) >(&TTree::SetBranchAddress));
+    t.method("SetBranchAddress", static_cast<Int_t (TTree::*)(const char *, void *, TClass *, EDataType, bool) >(&TTree::SetBranchAddress));
 
-    DEBUG_MSG("Adding wrapper for Int_t TTree::SetBranchAddress(const char *, void *, TBranch **, TClass *, EDataType, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TTree::SetBranchAddress(const char *, void *, TBranch **, TClass *, EDataType, Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TTree::SetBranchAddress(const char *, void *, TBranch **, TClass *, EDataType, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TTree::SetBranchAddress(const char *, void *, TBranch **, TClass *, EDataType, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:587:28
-    t.method("SetBranchAddress", static_cast<Int_t (TTree::*)(const char *, void *, TBranch **, TClass *, EDataType, Bool_t) >(&TTree::SetBranchAddress));
+    t.method("SetBranchAddress", static_cast<Int_t (TTree::*)(const char *, void *, TBranch **, TClass *, EDataType, bool) >(&TTree::SetBranchAddress));
 
-    DEBUG_MSG("Adding wrapper for void TTree::SetBranchStatus(const char *, Bool_t, UInt_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TTree::SetBranchStatus(const char *, Bool_t, UInt_t *)
+    DEBUG_MSG("Adding wrapper for void TTree::SetBranchStatus(const char *, bool, UInt_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TTree::SetBranchStatus(const char *, bool, UInt_t *)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:604:28
-    t.method("SetBranchStatus", static_cast<void (TTree::*)(const char *, Bool_t, UInt_t *) >(&TTree::SetBranchStatus));
+    t.method("SetBranchStatus", static_cast<void (TTree::*)(const char *, bool, UInt_t *) >(&TTree::SetBranchStatus));
     t.method("SetBranchStatus", [](TTree& a, const char * arg0)->void { a.SetBranchStatus(arg0); });
-    t.method("SetBranchStatus", [](TTree& a, const char * arg0, Bool_t arg1)->void { a.SetBranchStatus(arg0, arg1); });
+    t.method("SetBranchStatus", [](TTree& a, const char * arg0, bool arg1)->void { a.SetBranchStatus(arg0, arg1); });
     t.method("SetBranchStatus", [](TTree* a, const char * arg0)->void { a->SetBranchStatus(arg0); });
-    t.method("SetBranchStatus", [](TTree* a, const char * arg0, Bool_t arg1)->void { a->SetBranchStatus(arg0, arg1); });
+    t.method("SetBranchStatus", [](TTree* a, const char * arg0, bool arg1)->void { a->SetBranchStatus(arg0, arg1); });
 
     DEBUG_MSG("Adding wrapper for void TTree::SetBranchStyle(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TTree::SetBranchStyle(Int_t)
@@ -992,10 +992,10 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:610:28
     t.method("SetCircular", static_cast<void (TTree::*)(Long64_t) >(&TTree::SetCircular));
 
-    DEBUG_MSG("Adding wrapper for void TTree::SetClusterPrefetch(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TTree::SetClusterPrefetch(Bool_t)
+    DEBUG_MSG("Adding wrapper for void TTree::SetClusterPrefetch(bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TTree::SetClusterPrefetch(bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:611:28
-    t.method("SetClusterPrefetch", static_cast<void (TTree::*)(Bool_t) >(&TTree::SetClusterPrefetch));
+    t.method("SetClusterPrefetch", static_cast<void (TTree::*)(bool) >(&TTree::SetClusterPrefetch));
 
     DEBUG_MSG("Adding wrapper for void TTree::SetDebug(Int_t, Long64_t, Long64_t) (" __HERE__ ")");
     // signature to use in the veto list: void TTree::SetDebug(Int_t, Long64_t, Long64_t)
@@ -1008,10 +1008,10 @@ struct JlTTree: public Wrapper {
     t.method("SetDebug", [](TTree* a, Int_t arg0)->void { a->SetDebug(arg0); });
     t.method("SetDebug", [](TTree* a, Int_t arg0, Long64_t arg1)->void { a->SetDebug(arg0, arg1); });
 
-    DEBUG_MSG("Adding wrapper for void TTree::SetDefaultEntryOffsetLen(Int_t, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TTree::SetDefaultEntryOffsetLen(Int_t, Bool_t)
+    DEBUG_MSG("Adding wrapper for void TTree::SetDefaultEntryOffsetLen(Int_t, bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TTree::SetDefaultEntryOffsetLen(Int_t, bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:613:28
-    t.method("SetDefaultEntryOffsetLen", static_cast<void (TTree::*)(Int_t, Bool_t) >(&TTree::SetDefaultEntryOffsetLen));
+    t.method("SetDefaultEntryOffsetLen", static_cast<void (TTree::*)(Int_t, bool) >(&TTree::SetDefaultEntryOffsetLen));
     t.method("SetDefaultEntryOffsetLen", [](TTree& a, Int_t arg0)->void { a.SetDefaultEntryOffsetLen(arg0); });
     t.method("SetDefaultEntryOffsetLen", [](TTree* a, Int_t arg0)->void { a->SetDefaultEntryOffsetLen(arg0); });
 
@@ -1053,10 +1053,10 @@ struct JlTTree: public Wrapper {
     t.method("SetEntryList", [](TTree& a, TEntryList * arg0)->void { a.SetEntryList(arg0); });
     t.method("SetEntryList", [](TTree* a, TEntryList * arg0)->void { a->SetEntryList(arg0); });
 
-    DEBUG_MSG("Adding wrapper for void TTree::SetImplicitMT(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TTree::SetImplicitMT(Bool_t)
+    DEBUG_MSG("Adding wrapper for void TTree::SetImplicitMT(bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TTree::SetImplicitMT(bool)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:621:28
-    t.method("SetImplicitMT", static_cast<void (TTree::*)(Bool_t) >(&TTree::SetImplicitMT));
+    t.method("SetImplicitMT", static_cast<void (TTree::*)(bool) >(&TTree::SetImplicitMT));
 
     DEBUG_MSG("Adding wrapper for void TTree::SetMakeClass(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TTree::SetMakeClass(Int_t)
@@ -1098,14 +1098,14 @@ struct JlTTree: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:642:28
     t.method("SetObject", static_cast<void (TTree::*)(const char *, const char *) >(&TTree::SetObject));
 
-    DEBUG_MSG("Adding wrapper for void TTree::SetParallelUnzip(Bool_t, Float_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TTree::SetParallelUnzip(Bool_t, Float_t)
+    DEBUG_MSG("Adding wrapper for void TTree::SetParallelUnzip(bool, Float_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TTree::SetParallelUnzip(bool, Float_t)
     // defined in /home/pgras/.julia/conda/3/include/TTree.h:643:28
-    t.method("SetParallelUnzip", static_cast<void (TTree::*)(Bool_t, Float_t) >(&TTree::SetParallelUnzip));
+    t.method("SetParallelUnzip", static_cast<void (TTree::*)(bool, Float_t) >(&TTree::SetParallelUnzip));
     t.method("SetParallelUnzip", [](TTree& a)->void { a.SetParallelUnzip(); });
-    t.method("SetParallelUnzip", [](TTree& a, Bool_t arg0)->void { a.SetParallelUnzip(arg0); });
+    t.method("SetParallelUnzip", [](TTree& a, bool arg0)->void { a.SetParallelUnzip(arg0); });
     t.method("SetParallelUnzip", [](TTree* a)->void { a->SetParallelUnzip(); });
-    t.method("SetParallelUnzip", [](TTree* a, Bool_t arg0)->void { a->SetParallelUnzip(arg0); });
+    t.method("SetParallelUnzip", [](TTree* a, bool arg0)->void { a->SetParallelUnzip(arg0); });
 
     DEBUG_MSG("Adding wrapper for void TTree::SetScanField(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TTree::SetScanField(Int_t)
@@ -1296,10 +1296,10 @@ struct JlTLeaf: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:111:21
     t.method("Browse", static_cast<void (TLeaf::*)(TBrowser *) >(&TLeaf::Browse));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TLeaf::CanGenerateOffsetArray() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TLeaf::CanGenerateOffsetArray()
+    DEBUG_MSG("Adding wrapper for bool TLeaf::CanGenerateOffsetArray() (" __HERE__ ")");
+    // signature to use in the veto list: bool TLeaf::CanGenerateOffsetArray()
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:112:21
-    t.method("CanGenerateOffsetArray", static_cast<Bool_t (TLeaf::*)() >(&TLeaf::CanGenerateOffsetArray));
+    t.method("CanGenerateOffsetArray", static_cast<bool (TLeaf::*)() >(&TLeaf::CanGenerateOffsetArray));
 
     DEBUG_MSG("Adding wrapper for void TLeaf::Export(TClonesArray *, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TLeaf::Export(TClonesArray *, Int_t)
@@ -1402,30 +1402,30 @@ struct JlTLeaf: public Wrapper {
     t.method("GetValueLong64", [](TLeaf const& a)->Long64_t { return a.GetValueLong64(); });
     t.method("GetValueLong64", [](TLeaf const* a)->Long64_t { return a->GetValueLong64(); });
 
-    DEBUG_MSG("Adding wrapper for Bool_t TLeaf::IncludeRange(TLeaf *) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TLeaf::IncludeRange(TLeaf *)
+    DEBUG_MSG("Adding wrapper for bool TLeaf::IncludeRange(TLeaf *) (" __HERE__ ")");
+    // signature to use in the veto list: bool TLeaf::IncludeRange(TLeaf *)
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:146:21
-    t.method("IncludeRange", static_cast<Bool_t (TLeaf::*)(TLeaf *) >(&TLeaf::IncludeRange));
+    t.method("IncludeRange", static_cast<bool (TLeaf::*)(TLeaf *) >(&TLeaf::IncludeRange));
 
     DEBUG_MSG("Adding wrapper for void TLeaf::Import(TClonesArray *, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TLeaf::Import(TClonesArray *, Int_t)
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:147:21
     t.method("Import", static_cast<void (TLeaf::*)(TClonesArray *, Int_t) >(&TLeaf::Import));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TLeaf::IsOnTerminalBranch() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TLeaf::IsOnTerminalBranch()
+    DEBUG_MSG("Adding wrapper for bool TLeaf::IsOnTerminalBranch() (" __HERE__ ")");
+    // signature to use in the veto list: bool TLeaf::IsOnTerminalBranch()
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:148:21
-    t.method("IsOnTerminalBranch", static_cast<Bool_t (TLeaf::*)()  const>(&TLeaf::IsOnTerminalBranch));
+    t.method("IsOnTerminalBranch", static_cast<bool (TLeaf::*)()  const>(&TLeaf::IsOnTerminalBranch));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TLeaf::IsRange() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TLeaf::IsRange()
+    DEBUG_MSG("Adding wrapper for bool TLeaf::IsRange() (" __HERE__ ")");
+    // signature to use in the veto list: bool TLeaf::IsRange()
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:149:21
-    t.method("IsRange", static_cast<Bool_t (TLeaf::*)()  const>(&TLeaf::IsRange));
+    t.method("IsRange", static_cast<bool (TLeaf::*)()  const>(&TLeaf::IsRange));
 
-    DEBUG_MSG("Adding wrapper for Bool_t TLeaf::IsUnsigned() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TLeaf::IsUnsigned()
+    DEBUG_MSG("Adding wrapper for bool TLeaf::IsUnsigned() (" __HERE__ ")");
+    // signature to use in the veto list: bool TLeaf::IsUnsigned()
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:150:21
-    t.method("IsUnsigned", static_cast<Bool_t (TLeaf::*)()  const>(&TLeaf::IsUnsigned));
+    t.method("IsUnsigned", static_cast<bool (TLeaf::*)()  const>(&TLeaf::IsUnsigned));
 
     DEBUG_MSG("Adding wrapper for void TLeaf::PrintValue(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TLeaf::PrintValue(Int_t)
@@ -1454,10 +1454,10 @@ struct JlTLeaf: public Wrapper {
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:155:21
     t.method("ReadBasketSerialized", static_cast<bool (TLeaf::*)(TBuffer &, Long64_t) >(&TLeaf::ReadBasketSerialized));
 
-    DEBUG_MSG("Adding wrapper for Int_t TLeaf::ResetAddress(void *, Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TLeaf::ResetAddress(void *, Bool_t)
+    DEBUG_MSG("Adding wrapper for Int_t TLeaf::ResetAddress(void *, bool) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TLeaf::ResetAddress(void *, bool)
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:159:21
-    t.method("ResetAddress", static_cast<Int_t (TLeaf::*)(void *, Bool_t) >(&TLeaf::ResetAddress));
+    t.method("ResetAddress", static_cast<Int_t (TLeaf::*)(void *, bool) >(&TLeaf::ResetAddress));
     t.method("ResetAddress", [](TLeaf& a, void * arg0)->Int_t { return a.ResetAddress(arg0); });
     t.method("ResetAddress", [](TLeaf* a, void * arg0)->Int_t { return a->ResetAddress(arg0); });
 
@@ -1492,10 +1492,10 @@ struct JlTLeaf: public Wrapper {
     t.method("SetOffset", [](TLeaf& a)->void { a.SetOffset(); });
     t.method("SetOffset", [](TLeaf* a)->void { a->SetOffset(); });
 
-    DEBUG_MSG("Adding wrapper for void TLeaf::SetRange(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TLeaf::SetRange(Bool_t)
+    DEBUG_MSG("Adding wrapper for void TLeaf::SetRange(bool) (" __HERE__ ")");
+    // signature to use in the veto list: void TLeaf::SetRange(bool)
     // defined in /home/pgras/.julia/conda/3/include/TLeaf.h:165:21
-    t.method("SetRange", static_cast<void (TLeaf::*)(Bool_t) >(&TLeaf::SetRange));
+    t.method("SetRange", static_cast<void (TLeaf::*)(bool) >(&TLeaf::SetRange));
     t.method("SetRange", [](TLeaf& a)->void { a.SetRange(); });
     t.method("SetRange", [](TLeaf* a)->void { a->SetRange(); });
 

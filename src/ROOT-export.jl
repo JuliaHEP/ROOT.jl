@@ -33,8 +33,8 @@ export GetCanvasID, GetCanvasPar, GetCellContent, GetCellError, GetCenter, GetCe
 export GetChainOffset, GetChisquare, GetClass, GetClassIndex, GetClassName, GetClickSelected, GetClickSelectedPad, GetClipboard
 export GetClusterIterator, GetClusterPrefetch, GetCollection, GetCompress, GetCompressionAlgorithm, GetCompressionFactor
 export GetCompressionLevel, GetCompressionSettings, GetConfigFeatures, GetConfigOptions, GetContour, GetContourLevel, GetContourLevelPad
-export GetCorrelationFactor, GetCovariance, GetCpuInfo, GetCreationDate, GetCumulative, GetCurrentEntry, GetCurrentFile, GetCurrentList
-export GetCutClassName, GetCycle, GetDISPLAY, GetDatime, GetDebugMax, GetDebugMin, GetDecimals, GetDefCanvasName
+export GetCorrelationFactor, GetCovariance, GetCpuInfo, GetCreationDate, GetCryptoRandom, GetCumulative, GetCurrentEntry, GetCurrentFile
+export GetCurrentList, GetCutClassName, GetCycle, GetDISPLAY, GetDatime, GetDebugMax, GetDebugMin, GetDecimals, GetDefCanvasName
 export GetDefaultEntryOffsetLen, GetDeserializeType, GetDimension, GetDirEntry, GetDirName, GetDirPtr, GetDirectory, GetDoubleBuffer
 export GetDrawOption, GetDynamicPath, GetEND, GetEX, GetEXhigh, GetEXhighd, GetEXlow, GetEXlowd, GetEY, GetEYhigh, GetEYhighd
 export GetEYlow, GetEYlowd, GetEditHistograms, GetEditable, GetEditorMode, GetEffectiveEntries, GetEffectiveGid, GetEffectiveUid
@@ -106,17 +106,17 @@ export ReadObjWithBuffer, ReadObjectAny, ReadRandom, ReadStreamerInfo, ReadTObje
 export RebinY, Rebuild, Recover, RecursiveRemove, RecvBuf, RecvRaw, RedirectOutput, Refresh, RefreshBrowsers, ReleaseParameter
 export RelocatePaths, Remove, RemoveAt, RemoveCheckBox, RemoveClass, RemoveFileHandler, RemoveFriend, RemoveIdleTimer, RemoveOnExit
 export RemovePoint, RemoveRange, RemoveSignalHandler, RemoveStdExceptionHandler, RemoveTimer, Rename, Reset, ResetAddress, ResetBit
-export ResetBranchAddress, ResetBranchAddresses, ResetDrawn, ResetErrno, ResetReadEntry, ResetSignal, ResetSignals, ResetStats, ResetTimer
-export ResetUpdated, Resize, ResizeOpaque, Restart, ReturnFromRun, ReturnPressed, Rndm, RndmArray, RotateTitle, Run, Save, SaveAs
-export SaveContext, SaveObjectAs, SaveSelf, SaveSource, Scale, Scan, ScanPaths, Seek, Select, Selected, SendBuf, SendRaw
-export SetAclicMode, SetAddress, SetAlias, SetAlphanumeric, SetApplication, SetAutoDelete, SetAutoFlush, SetAutoSave, SetAxisColor
-export SetAxisRange, SetBarOffset, SetBarWidth, SetBasketSize, SetBatch, SetBinContent, SetBinEntries, SetBinError
-export SetBinErrorOption, SetBinLabel, SetBins, SetBinsLength, SetBit, SetBranch, SetBranchAddress, SetBranchStatus, SetBrowserImp
-export SetBuffer, SetBufferAddress, SetBufferSize, SetBuildDir, SetCacheEntryRange, SetCacheLearnEntries, SetCacheSize
-export SetCanExtend, SetCanvasSize, SetCellContent, SetCellError, SetChainOffset, SetChisquare, SetCircular, SetClickSelected
-export SetClickSelectedPad, SetClusterPrefetch, SetCompressionAlgorithm, SetCompressionLevel, SetCompressionSettings, SetContent
-export SetContour, SetContourLevel, SetCursor, SetCutClassName, SetDebug, SetDecimals, SetDefCanvasName, SetDefaultEntryOffsetLen
-export SetDefaults, SetDirectory, SetDisplay, SetDoubleBuffer, SetDrawOption, SetDynamicPath, SetEND, SetEchoMode
+export ResetBranchAddress, ResetBranchAddresses, ResetClassSaved, ResetDrawn, ResetErrno, ResetReadEntry, ResetSignal, ResetSignals
+export ResetStats, ResetTimer, ResetUpdated, Resize, ResizeOpaque, Restart, ReturnFromRun, ReturnPressed, Rndm, RndmArray
+export RotateTitle, Run, Save, SaveAs, SaveContext, SaveObjectAs, SaveSelf, SaveSource, Scale, Scan, ScanPaths, Seek, Select
+export Selected, SendBuf, SendRaw, SetAclicMode, SetAddress, SetAlias, SetAlphanumeric, SetApplication, SetAutoDelete
+export SetAutoFlush, SetAutoSave, SetAxisColor, SetAxisRange, SetBarOffset, SetBarWidth, SetBasketSize, SetBatch, SetBinContent
+export SetBinEntries, SetBinError, SetBinErrorOption, SetBinLabel, SetBins, SetBinsLength, SetBit, SetBranch, SetBranchAddress
+export SetBranchStatus, SetBrowserImp, SetBuffer, SetBufferAddress, SetBufferSize, SetBuildDir, SetCacheEntryRange
+export SetCacheLearnEntries, SetCacheSize, SetCanExtend, SetCanvasSize, SetCellContent, SetCellError, SetChainOffset, SetChisquare
+export SetCircular, SetClickSelected, SetClickSelectedPad, SetClusterPrefetch, SetCompressionAlgorithm, SetCompressionLevel
+export SetCompressionSettings, SetContent, SetContour, SetContourLevel, SetCursor, SetCutClassName, SetDebug, SetDecimals, SetDefCanvasName
+export SetDefaultEntryOffsetLen, SetDefaults, SetDirectory, SetDisplay, SetDoubleBuffer, SetDrawOption, SetDynamicPath, SetEND, SetEchoMode
 export SetEditHistograms, SetEditable, SetEditorMode, SetEntries, SetEntriesRange, SetEntriesToProcess, SetEntry, SetEntryList
 export SetEntryOffsetLen, SetError, SetErrorOption, SetErrorStr, SetEscape, SetEstimate, SetExecutingMacro, SetFPEMask, SetFile
 export SetFileName, SetFileNumber, SetFirstEntry, SetFixedAspectRatio, SetFlagsDebug, SetFlagsOpt, SetFromPopUp, SetGrayscale

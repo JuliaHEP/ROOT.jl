@@ -17,12 +17,12 @@ struct JlGlobal: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for std::string cling::printValue(TObject *) (" __HERE__ ")");
     // signature to use in the veto list: std::string cling::printValue(TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:380:16
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:378:16
     t.method("cling!printValue", static_cast<std::string (*)(TObject *) >(&cling::printValue));
 
     DEBUG_MSG("Adding wrapper for bool ROOT::Detail::HasBeenDeleted(const TObject *) (" __HERE__ ")");
     // signature to use in the veto list: bool ROOT::Detail::HasBeenDeleted(const TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TObject.h:404:23
+    // defined in /home/pgras/.julia/conda/3/include/TObject.h:402:23
     t.method("ROOT!Detail!HasBeenDeleted", static_cast<bool (*)(const TObject *) >(&ROOT::Detail::HasBeenDeleted));
 
     DEBUG_MSG("Adding wrapper for void ROOT::EnableThreadSafety() (" __HERE__ ")");
@@ -53,220 +53,250 @@ struct JlGlobal: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for TROOT * ROOT::GetROOT() (" __HERE__ ")");
     // signature to use in the veto list: TROOT * ROOT::GetROOT()
-    // defined in /home/pgras/.julia/conda/3/include/TROOT.h:377:11
+    // defined in /home/pgras/.julia/conda/3/include/TROOT.h:378:11
     t.method("ROOT!GetROOT", static_cast<TROOT * (*)() >(&ROOT::GetROOT));
 
     DEBUG_MSG("Adding wrapper for void ROOT::CallRecursiveRemoveIfNeeded(TObject &) (" __HERE__ ")");
     // signature to use in the veto list: void ROOT::CallRecursiveRemoveIfNeeded(TObject &)
-    // defined in /home/pgras/.julia/conda/3/include/TROOT.h:395:16
+    // defined in /home/pgras/.julia/conda/3/include/TROOT.h:396:16
     t.method("ROOT!CallRecursiveRemoveIfNeeded", static_cast<void (*)(TObject &) >(&ROOT::CallRecursiveRemoveIfNeeded));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISDIR(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISDIR(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:115:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:113:15
     t.method("R_ISDIR", static_cast<Bool_t (*)(Int_t) >(&R_ISDIR));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISCHR(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISCHR(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:116:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:114:15
     t.method("R_ISCHR", static_cast<Bool_t (*)(Int_t) >(&R_ISCHR));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISBLK(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISBLK(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:117:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:115:15
     t.method("R_ISBLK", static_cast<Bool_t (*)(Int_t) >(&R_ISBLK));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISREG(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISREG(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:118:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:116:15
     t.method("R_ISREG", static_cast<Bool_t (*)(Int_t) >(&R_ISREG));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISLNK(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISLNK(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:119:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:117:15
     t.method("R_ISLNK", static_cast<Bool_t (*)(Int_t) >(&R_ISLNK));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISFIFO(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISFIFO(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:120:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:118:15
     t.method("R_ISFIFO", static_cast<Bool_t (*)(Int_t) >(&R_ISFIFO));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISSOCK(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISSOCK(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:121:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:119:15
     t.method("R_ISSOCK", static_cast<Bool_t (*)(Int_t) >(&R_ISSOCK));
 
     DEBUG_MSG("Adding wrapper for Bool_t R_ISOFF(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t R_ISOFF(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:122:15
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:120:15
     t.method("R_ISOFF", static_cast<Bool_t (*)(Int_t) >(&R_ISOFF));
 
     DEBUG_MSG("Adding wrapper for std::string cling::printValue(TH1 *) (" __HERE__ ")");
     // signature to use in the veto list: std::string cling::printValue(TH1 *)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:449:15
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:452:15
     t.method("cling!printValue", static_cast<std::string (*)(TH1 *) >(&cling::printValue));
     module_.set_override_module(jl_base_module);
 
     DEBUG_MSG("Adding wrapper for TH1C operator*(Double_t, const TH1C &) (" __HERE__ ")");
     // signature to use in the veto list: TH1C operator*(Double_t, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:485:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:488:6
     t.method("*", static_cast<TH1C (*)(Double_t, const TH1C &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1C operator*(const TH1C &, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: TH1C operator*(const TH1C &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:487:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:490:6
     t.method("*", static_cast<TH1C (*)(const TH1C &, Double_t) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1C operator+(const TH1C &, const TH1C &) (" __HERE__ ")");
     // signature to use in the veto list: TH1C operator+(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:488:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:491:6
     t.method("+", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator+));
 
     DEBUG_MSG("Adding wrapper for TH1C operator-(const TH1C &, const TH1C &) (" __HERE__ ")");
     // signature to use in the veto list: TH1C operator-(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:489:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:492:6
     t.method("-", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator-));
 
     DEBUG_MSG("Adding wrapper for TH1C operator*(const TH1C &, const TH1C &) (" __HERE__ ")");
     // signature to use in the veto list: TH1C operator*(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:490:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:493:6
     t.method("*", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1C operator/(const TH1C &, const TH1C &) (" __HERE__ ")");
     // signature to use in the veto list: TH1C operator/(const TH1C &, const TH1C &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:491:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:494:6
     t.method("/", static_cast<TH1C (*)(const TH1C &, const TH1C &) >(&operator/));
 
     DEBUG_MSG("Adding wrapper for TH1S operator*(Double_t, const TH1S &) (" __HERE__ ")");
     // signature to use in the veto list: TH1S operator*(Double_t, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:526:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:529:6
     t.method("*", static_cast<TH1S (*)(Double_t, const TH1S &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1S operator*(const TH1S &, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: TH1S operator*(const TH1S &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:528:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:531:6
     t.method("*", static_cast<TH1S (*)(const TH1S &, Double_t) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1S operator+(const TH1S &, const TH1S &) (" __HERE__ ")");
     // signature to use in the veto list: TH1S operator+(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:529:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:532:6
     t.method("+", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator+));
 
     DEBUG_MSG("Adding wrapper for TH1S operator-(const TH1S &, const TH1S &) (" __HERE__ ")");
     // signature to use in the veto list: TH1S operator-(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:530:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:533:6
     t.method("-", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator-));
 
     DEBUG_MSG("Adding wrapper for TH1S operator*(const TH1S &, const TH1S &) (" __HERE__ ")");
     // signature to use in the veto list: TH1S operator*(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:531:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:534:6
     t.method("*", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1S operator/(const TH1S &, const TH1S &) (" __HERE__ ")");
     // signature to use in the veto list: TH1S operator/(const TH1S &, const TH1S &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:532:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:535:6
     t.method("/", static_cast<TH1S (*)(const TH1S &, const TH1S &) >(&operator/));
 
     DEBUG_MSG("Adding wrapper for TH1I operator*(Double_t, const TH1I &) (" __HERE__ ")");
     // signature to use in the veto list: TH1I operator*(Double_t, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:567:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:570:6
     t.method("*", static_cast<TH1I (*)(Double_t, const TH1I &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1I operator*(const TH1I &, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: TH1I operator*(const TH1I &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:569:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:572:6
     t.method("*", static_cast<TH1I (*)(const TH1I &, Double_t) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1I operator+(const TH1I &, const TH1I &) (" __HERE__ ")");
     // signature to use in the veto list: TH1I operator+(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:570:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:573:6
     t.method("+", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator+));
 
     DEBUG_MSG("Adding wrapper for TH1I operator-(const TH1I &, const TH1I &) (" __HERE__ ")");
     // signature to use in the veto list: TH1I operator-(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:571:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:574:6
     t.method("-", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator-));
 
     DEBUG_MSG("Adding wrapper for TH1I operator*(const TH1I &, const TH1I &) (" __HERE__ ")");
     // signature to use in the veto list: TH1I operator*(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:572:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:575:6
     t.method("*", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1I operator/(const TH1I &, const TH1I &) (" __HERE__ ")");
     // signature to use in the veto list: TH1I operator/(const TH1I &, const TH1I &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:573:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:576:6
     t.method("/", static_cast<TH1I (*)(const TH1I &, const TH1I &) >(&operator/));
+
+    DEBUG_MSG("Adding wrapper for TH1L operator*(Double_t, const TH1L &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1L operator*(Double_t, const TH1L &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:611:6
+    t.method("*", static_cast<TH1L (*)(Double_t, const TH1L &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1L operator*(const TH1L &, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: TH1L operator*(const TH1L &, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:613:6
+    t.method("*", static_cast<TH1L (*)(const TH1L &, Double_t) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1L operator+(const TH1L &, const TH1L &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1L operator+(const TH1L &, const TH1L &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:614:6
+    t.method("+", static_cast<TH1L (*)(const TH1L &, const TH1L &) >(&operator+));
+
+    DEBUG_MSG("Adding wrapper for TH1L operator-(const TH1L &, const TH1L &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1L operator-(const TH1L &, const TH1L &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:615:6
+    t.method("-", static_cast<TH1L (*)(const TH1L &, const TH1L &) >(&operator-));
+
+    DEBUG_MSG("Adding wrapper for TH1L operator*(const TH1L &, const TH1L &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1L operator*(const TH1L &, const TH1L &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:616:6
+    t.method("*", static_cast<TH1L (*)(const TH1L &, const TH1L &) >(&operator*));
+
+    DEBUG_MSG("Adding wrapper for TH1L operator/(const TH1L &, const TH1L &) (" __HERE__ ")");
+    // signature to use in the veto list: TH1L operator/(const TH1L &, const TH1L &)
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:617:6
+    t.method("/", static_cast<TH1L (*)(const TH1L &, const TH1L &) >(&operator/));
 
     DEBUG_MSG("Adding wrapper for TH1F operator*(Double_t, const TH1F &) (" __HERE__ ")");
     // signature to use in the veto list: TH1F operator*(Double_t, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:610:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:659:6
     t.method("*", static_cast<TH1F (*)(Double_t, const TH1F &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1F operator*(const TH1F &, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: TH1F operator*(const TH1F &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:612:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:661:6
     t.method("*", static_cast<TH1F (*)(const TH1F &, Double_t) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1F operator+(const TH1F &, const TH1F &) (" __HERE__ ")");
     // signature to use in the veto list: TH1F operator+(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:613:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:662:6
     t.method("+", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator+));
 
     DEBUG_MSG("Adding wrapper for TH1F operator-(const TH1F &, const TH1F &) (" __HERE__ ")");
     // signature to use in the veto list: TH1F operator-(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:614:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:663:6
     t.method("-", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator-));
 
     DEBUG_MSG("Adding wrapper for TH1F operator*(const TH1F &, const TH1F &) (" __HERE__ ")");
     // signature to use in the veto list: TH1F operator*(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:615:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:664:6
     t.method("*", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1F operator/(const TH1F &, const TH1F &) (" __HERE__ ")");
     // signature to use in the veto list: TH1F operator/(const TH1F &, const TH1F &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:616:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:665:6
     t.method("/", static_cast<TH1F (*)(const TH1F &, const TH1F &) >(&operator/));
 
     DEBUG_MSG("Adding wrapper for TH1D operator*(Double_t, const TH1D &) (" __HERE__ ")");
     // signature to use in the veto list: TH1D operator*(Double_t, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:653:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:706:6
     t.method("*", static_cast<TH1D (*)(Double_t, const TH1D &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1D operator*(const TH1D &, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: TH1D operator*(const TH1D &, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:655:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:708:6
     t.method("*", static_cast<TH1D (*)(const TH1D &, Double_t) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1D operator+(const TH1D &, const TH1D &) (" __HERE__ ")");
     // signature to use in the veto list: TH1D operator+(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:656:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:709:6
     t.method("+", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator+));
 
     DEBUG_MSG("Adding wrapper for TH1D operator-(const TH1D &, const TH1D &) (" __HERE__ ")");
     // signature to use in the veto list: TH1D operator-(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:657:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:710:6
     t.method("-", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator-));
 
     DEBUG_MSG("Adding wrapper for TH1D operator*(const TH1D &, const TH1D &) (" __HERE__ ")");
     // signature to use in the veto list: TH1D operator*(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:658:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:711:6
     t.method("*", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator*));
 
     DEBUG_MSG("Adding wrapper for TH1D operator/(const TH1D &, const TH1D &) (" __HERE__ ")");
     // signature to use in the veto list: TH1D operator/(const TH1D &, const TH1D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:659:6
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:712:6
     t.method("/", static_cast<TH1D (*)(const TH1D &, const TH1D &) >(&operator/));
 
     module_.unset_override_module();
 
     DEBUG_MSG("Adding wrapper for TH1 * R__H(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: TH1 * R__H(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:661:16
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:714:16
     t.method("R__H", static_cast<TH1 * (*)(Int_t) >(&R__H));
 
     DEBUG_MSG("Adding wrapper for TH1 * R__H(const char *) (" __HERE__ ")");
     // signature to use in the veto list: TH1 * R__H(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TH1.h:662:16
+    // defined in /home/pgras/.julia/conda/3/include/TH1.h:715:16
     t.method("R__H", static_cast<TH1 * (*)(const char *) >(&R__H));
 
     DEBUG_MSG("Adding wrapper for TTree * GetTTree(TDirectoryFile &, const char *) (" __HERE__ ")");
@@ -619,29 +649,29 @@ struct JlGlobal: public Wrapper {
     module_.method("TTree!kMaxEntries", []()-> Long64_t { return TTree::kMaxEntries; });
 
     DEBUG_MSG("Adding gRootDir methods to provide access to the global variable gRootDir (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:241:24
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:235:24
     t.method("gRootDir", []()-> const char * { return gRootDir; });
 
     DEBUG_MSG("Adding gProgName methods to provide access to the global variable gProgName (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:242:24
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:236:24
     t.method("gProgName", []()-> const char * { return gProgName; });
 
     DEBUG_MSG("Adding gProgPath methods to provide access to the global variable gProgPath (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:243:24
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:237:24
     t.method("gProgPath", []()-> const char * { return gProgPath; });
 
     DEBUG_MSG("Adding gSystemMutex methods to provide access to the global variable gSystemMutex (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:244:26
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:238:26
     t.method("gSystemMutex", []()-> TVirtualMutex * { return gSystemMutex; });
     t.method("gSystemMutex!", [](TVirtualMutex * val)-> TVirtualMutex * { return gSystemMutex = val; });
 
     DEBUG_MSG("Adding gSystem methods to provide access to the global variable gSystem (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:560:20
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:555:20
     t.method("gSystem", []()-> TSystem * { return gSystem; });
     t.method("gSystem!", [](TSystem * val)-> TSystem * { return gSystem = val; });
 
     DEBUG_MSG("Adding gXDisplay methods to provide access to the global variable gXDisplay (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:561:25
+    // defined in /home/pgras/.julia/conda/3/include/TSystem.h:556:25
     t.method("gXDisplay", []()-> TFileHandler * { return gXDisplay; });
     t.method("gXDisplay!", [](TFileHandler * val)-> TFileHandler * { return gXDisplay = val; });
 

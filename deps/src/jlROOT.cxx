@@ -78,6 +78,7 @@ class JlTFitResultPtr;
 class JlTH1C;
 class JlTH1S;
 class JlTH1I;
+class JlTH1L;
 class JlTH1F;
 class JlTH1D;
 class JlTH2;
@@ -85,6 +86,7 @@ class JlTProfile;
 class JlTH2C;
 class JlTH2S;
 class JlTH2I;
+class JlTH2L;
 class JlTH2F;
 class JlTH2D;
 class JlTProfile2D;
@@ -172,6 +174,7 @@ std::shared_ptr<Wrapper> newJlTFitResultPtr(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1C(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1S(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1I(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH1L(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1F(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH1D(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2(jlcxx::Module&);
@@ -179,6 +182,7 @@ std::shared_ptr<Wrapper> newJlTProfile(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2C(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2S(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2I(jlcxx::Module&);
+std::shared_ptr<Wrapper> newJlTH2L(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2F(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTH2D(jlcxx::Module&);
 std::shared_ptr<Wrapper> newJlTProfile2D(jlcxx::Module&);
@@ -301,6 +305,7 @@ throw_if_version_incompatibility();
     std::shared_ptr<Wrapper>(newJlTH1C(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1S(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1I(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH1L(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1F(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH1D(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2(jlModule)),
@@ -308,6 +313,7 @@ throw_if_version_incompatibility();
     std::shared_ptr<Wrapper>(newJlTH2C(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2S(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2I(jlModule)),
+    std::shared_ptr<Wrapper>(newJlTH2L(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2F(jlModule)),
     std::shared_ptr<Wrapper>(newJlTH2D(jlModule)),
     std::shared_ptr<Wrapper>(newJlTProfile2D(jlModule)),
@@ -359,7 +365,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("TObject!kWriteDelete", static_cast<int>(TObject::kWriteDelete));
 
   DEBUG_MSG("Adding wrapper for enum EObjBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TObject.h:368:6
+  // defined in /home/pgras/.julia/conda/3/include/TObject.h:366:6
   jlModule.add_bits<EObjBits>("EObjBits", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kCanDelete", kCanDelete);
   jlModule.set_const("kMustCleanup", kMustCleanup);
@@ -450,7 +456,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("TLeaf!DeserializeType!kZeroCopy", TLeaf::DeserializeType::kZeroCopy);
 
   DEBUG_MSG("Adding wrapper for enum EAccessMode (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:43:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:41:6
   jlModule.add_bits<EAccessMode>("EAccessMode", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kFileExists", kFileExists);
   jlModule.set_const("kExecutePermission", kExecutePermission);
@@ -458,13 +464,13 @@ throw_if_version_incompatibility();
   jlModule.set_const("kReadPermission", kReadPermission);
 
   DEBUG_MSG("Adding wrapper for enum ELogOption (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:50:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:48:6
   jlModule.add_bits<ELogOption>("ELogOption", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kLogPid", kLogPid);
   jlModule.set_const("kLogCons", kLogCons);
 
   DEBUG_MSG("Adding wrapper for enum ELogLevel (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:55:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:53:6
   jlModule.add_bits<ELogLevel>("ELogLevel", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kLogEmerg", kLogEmerg);
   jlModule.set_const("kLogAlert", kLogAlert);
@@ -476,7 +482,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("kLogDebug", kLogDebug);
 
   DEBUG_MSG("Adding wrapper for enum ELogFacility (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:66:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:64:6
   jlModule.add_bits<ELogFacility>("ELogFacility", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kLogLocal0", kLogLocal0);
   jlModule.set_const("kLogLocal1", kLogLocal1);
@@ -488,7 +494,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("kLogLocal7", kLogLocal7);
 
   DEBUG_MSG("Adding wrapper for enum EFpeMask (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:77:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:75:6
   jlModule.add_bits<EFpeMask>("EFpeMask", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kNoneMask", kNoneMask);
   jlModule.set_const("kInvalid", kInvalid);
@@ -500,7 +506,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("kAllMask", kAllMask);
 
   DEBUG_MSG("Adding wrapper for enum EFileModeMask (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:88:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:86:6
   jlModule.add_bits<EFileModeMask>("EFileModeMask", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kS_IFMT", kS_IFMT);
   jlModule.set_const("kS_IFSOCK", kS_IFSOCK);
@@ -528,7 +534,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("kS_IXOTH", kS_IXOTH);
 
   DEBUG_MSG("Adding wrapper for enum ESockOptions (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:215:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:213:6
   jlModule.add_bits<ESockOptions>("ESockOptions", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kSendBuffer", kSendBuffer);
   jlModule.set_const("kRecvBuffer", kRecvBuffer);
@@ -542,7 +548,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("kBytesToRead", kBytesToRead);
 
   DEBUG_MSG("Adding wrapper for enum ESendRecvOptions (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:228:6
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:226:6
   jlModule.add_bits<ESendRecvOptions>("ESendRecvOptions", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("kDefault", kDefault);
   jlModule.set_const("kOob", kOob);
@@ -550,14 +556,14 @@ throw_if_version_incompatibility();
   jlModule.set_const("kDontBlock", kDontBlock);
 
   DEBUG_MSG("Adding wrapper for enum TSystem::EAclicMode (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:269:9
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:263:9
   jlModule.add_bits<TSystem::EAclicMode>("TSystem!EAclicMode", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TSystem!kDefault", TSystem::kDefault);
   jlModule.set_const("TSystem!kDebug", TSystem::kDebug);
   jlModule.set_const("TSystem!kOpt", TSystem::kOpt);
 
   DEBUG_MSG("Adding wrapper for enum TSystem::EAclicProperties (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:270:9
+  // defined in /home/pgras/.julia/conda/3/include/TSystem.h:264:9
   jlModule.add_bits<TSystem::EAclicProperties>("TSystem!EAclicProperties", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TSystem!kFlatBuildDir", TSystem::kFlatBuildDir);
 
@@ -669,14 +675,14 @@ throw_if_version_incompatibility();
   jlModule.set_const("TAxis!kMoreLogLabels", TAxis::kMoreLogLabels);
 
   DEBUG_MSG("Adding wrapper for enum TH1::EBinErrorOpt (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:63:10
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:64:10
   jlModule.add_bits<TH1::EBinErrorOpt>("TH1!EBinErrorOpt", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TH1!kNormal", TH1::kNormal);
   jlModule.set_const("TH1!kPoisson", TH1::kPoisson);
   jlModule.set_const("TH1!kPoisson2", TH1::kPoisson2);
 
-  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:70:4 (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:70:4
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:71:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:71:4
   jlModule.set_const("TH1!kNoAxis", static_cast<int>(TH1::kNoAxis));
   jlModule.set_const("TH1!kXaxis", static_cast<int>(TH1::kXaxis));
   jlModule.set_const("TH1!kYaxis", static_cast<int>(TH1::kYaxis));
@@ -684,14 +690,14 @@ throw_if_version_incompatibility();
   jlModule.set_const("TH1!kAllAxes", static_cast<int>(TH1::kAllAxes));
 
   DEBUG_MSG("Adding wrapper for enum TH1::EStatOverflows (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:79:10
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:80:10
   jlModule.add_bits<TH1::EStatOverflows>("TH1!EStatOverflows", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TH1!kIgnore", TH1::kIgnore);
   jlModule.set_const("TH1!kConsider", TH1::kConsider);
   jlModule.set_const("TH1!kNeutral", TH1::kNeutral);
 
   DEBUG_MSG("Adding wrapper for enum TH1::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:162:9
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:164:9
   jlModule.add_bits<TH1::EStatusBits>("TH1!EStatusBits", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TH1!kNoStats", TH1::kNoStats);
   jlModule.set_const("TH1!kUserContour", TH1::kUserContour);
@@ -703,8 +709,8 @@ throw_if_version_incompatibility();
   jlModule.set_const("TH1!kAutoBinPTwo", TH1::kAutoBinPTwo);
   jlModule.set_const("TH1!kIsHighlight", TH1::kIsHighlight);
 
-  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:181:4 (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TH1.h:181:4
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TH1.h:183:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TH1.h:183:4
   jlModule.set_const("TH1!kNstat", static_cast<int>(TH1::kNstat));
 
   DEBUG_MSG("Adding wrapper for enum EErrorType (" __HERE__ ")");
@@ -761,6 +767,7 @@ throw_if_version_incompatibility();
   DEBUG_MSG("Adding wrapper for enum TFile::EStatusBits (" __HERE__ ")");
   // defined in /home/pgras/.julia/conda/3/include/TFile.h:183:9
   jlModule.add_bits<TFile::EStatusBits>("TFile!EStatusBits", jlcxx::julia_type("CppEnum"));
+  jlModule.set_const("TFile!k630forwardCompatibility", TFile::k630forwardCompatibility);
   jlModule.set_const("TFile!kRecovered", TFile::kRecovered);
   jlModule.set_const("TFile!kHasReferences", TFile::kHasReferences);
   jlModule.set_const("TFile!kDevNull", TFile::kDevNull);
@@ -770,18 +777,18 @@ throw_if_version_incompatibility();
   jlModule.set_const("TFile!kReproducible", TFile::kReproducible);
 
   DEBUG_MSG("Adding wrapper for enum TFile::ERelativeTo (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TFile.h:192:9
+  // defined in /home/pgras/.julia/conda/3/include/TFile.h:199:9
   jlModule.add_bits<TFile::ERelativeTo>("TFile!ERelativeTo", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TFile!kBeg", TFile::kBeg);
   jlModule.set_const("TFile!kCur", TFile::kCur);
   jlModule.set_const("TFile!kEnd", TFile::kEnd);
 
-  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TFile.h:193:4 (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TFile.h:193:4
+  DEBUG_MSG("Adding anonymous enum defined in /home/pgras/.julia/conda/3/include/TFile.h:200:4 (" __HERE__ ")");
+  // defined in /home/pgras/.julia/conda/3/include/TFile.h:200:4
   jlModule.set_const("TFile!kStartBigFile", static_cast<int>(TFile::kStartBigFile));
 
   DEBUG_MSG("Adding wrapper for enum TFile::EFileType (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TFile.h:195:9
+  // defined in /home/pgras/.julia/conda/3/include/TFile.h:202:9
   jlModule.add_bits<TFile::EFileType>("TFile!EFileType", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TFile!kDefault", TFile::kDefault);
   jlModule.set_const("TFile!kLocal", TFile::kLocal);
@@ -791,7 +798,7 @@ throw_if_version_incompatibility();
   jlModule.set_const("TFile!kMerge", TFile::kMerge);
 
   DEBUG_MSG("Adding wrapper for enum TGraph::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TGraph.h:73:9
+  // defined in /home/pgras/.julia/conda/3/include/TGraph.h:74:9
   jlModule.add_bits<TGraph::EStatusBits>("TGraph!EStatusBits", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TGraph!kNoStats", TGraph::kNoStats);
   jlModule.set_const("TGraph!kClipFrame", TGraph::kClipFrame);
@@ -801,14 +808,14 @@ throw_if_version_incompatibility();
   jlModule.set_const("TGraph!kIsHighlight", TGraph::kIsHighlight);
 
   DEBUG_MSG("Adding wrapper for enum TF1::EAddToList (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TF1.h:221:15
+  // defined in /home/pgras/.julia/conda/3/include/TF1.h:240:15
   jlModule.add_bits<TF1::EAddToList>("TF1!EAddToList", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TF1!EAddToList!kDefault", TF1::EAddToList::kDefault);
   jlModule.set_const("TF1!EAddToList!kAdd", TF1::EAddToList::kAdd);
   jlModule.set_const("TF1!EAddToList!kNo", TF1::EAddToList::kNo);
 
   DEBUG_MSG("Adding wrapper for enum TF1::EStatusBits (" __HERE__ ")");
-  // defined in /home/pgras/.julia/conda/3/include/TF1.h:325:9
+  // defined in /home/pgras/.julia/conda/3/include/TF1.h:344:9
   jlModule.add_bits<TF1::EStatusBits>("TF1!EStatusBits", jlcxx::julia_type("CppEnum"));
   jlModule.set_const("TF1!kNotGlobal", TF1::kNotGlobal);
   jlModule.set_const("TF1!kNotDraw", TF1::kNotDraw);

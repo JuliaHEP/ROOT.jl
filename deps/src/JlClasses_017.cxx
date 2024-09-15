@@ -7,6 +7,304 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TH2L> : std::false_type { };
+  template<> struct DefaultConstructible<TH2L> : std::false_type { };
+template<> struct SuperType<TH2L> { typedef TH2 type; };
+}
+
+// Class generating the wrapper for type TH2L
+// signature to use in the veto file: TH2L
+struct JlTH2L: public Wrapper {
+
+  JlTH2L(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TH2L (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:257:7
+    jlcxx::TypeWrapper<TH2L>  t = jlModule.add_type<TH2L>("TH2L",
+      jlcxx::julia_base_type<TH2>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TH2L>>(new jlcxx::TypeWrapper<TH2L>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2L::TH2L(const char *, const char *, Int_t, Double_t, Double_t, Int_t, Double_t, Double_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:261:4
+    t.constructor<const char *, const char *, Int_t, Double_t, Double_t, Int_t, Double_t, Double_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2L::TH2L(const char *, const char *, Int_t, const Double_t *, Int_t, Double_t, Double_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:263:4
+    t.constructor<const char *, const char *, Int_t, const Double_t *, Int_t, Double_t, Double_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2L::TH2L(const char *, const char *, Int_t, Double_t, Double_t, Int_t, const Double_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:265:4
+    t.constructor<const char *, const char *, Int_t, Double_t, Double_t, Int_t, const Double_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2L::TH2L(const char *, const char *, Int_t, const Double_t *, Int_t, const Double_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:267:4
+    t.constructor<const char *, const char *, Int_t, const Double_t *, Int_t, const Double_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2L::TH2L(const char *, const char *, Int_t, const Float_t *, Int_t, const Float_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:269:4
+    t.constructor<const char *, const char *, Int_t, const Float_t *, Int_t, const Float_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2L::TH2L(const TH2L &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:271:4
+    t.constructor<const TH2L &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TH2L::AddBinContent(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2L::AddBinContent(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:273:13
+    t.method("AddBinContent", static_cast<void (TH2L::*)(Int_t) >(&TH2L::AddBinContent));
+
+    DEBUG_MSG("Adding wrapper for void TH2L::AddBinContent(Int_t, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2L::AddBinContent(Int_t, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:274:13
+    t.method("AddBinContent", static_cast<void (TH2L::*)(Int_t, Double_t) >(&TH2L::AddBinContent));
+
+    DEBUG_MSG("Adding wrapper for void TH2L::Copy(TObject &) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2L::Copy(TObject &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:275:13
+    t.method("Copy", static_cast<void (TH2L::*)(TObject &)  const>(&TH2L::Copy));
+
+    DEBUG_MSG("Adding wrapper for void TH2L::Reset(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2L::Reset(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:276:13
+    t.method("Reset", static_cast<void (TH2L::*)(Option_t *) >(&TH2L::Reset));
+    t.method("Reset", [](TH2L& a)->void { a.Reset(); });
+    t.method("Reset", [](TH2L* a)->void { a->Reset(); });
+
+    DEBUG_MSG("Adding wrapper for void TH2L::SetBinsLength(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2L::SetBinsLength(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:277:13
+    t.method("SetBinsLength", static_cast<void (TH2L::*)(Int_t) >(&TH2L::SetBinsLength));
+    t.method("SetBinsLength", [](TH2L& a)->void { a.SetBinsLength(); });
+    t.method("SetBinsLength", [](TH2L* a)->void { a->SetBinsLength(); });
+
+    DEBUG_MSG("Adding wrapper for TH2L & TH2L::operator=(const TH2L &) (" __HERE__ ")");
+    // signature to use in the veto list: TH2L & TH2L::operator=(const TH2L &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:278:21
+    t.method("assign", static_cast<TH2L & (TH2L::*)(const TH2L &) >(&TH2L::operator=));
+
+    DEBUG_MSG("Adding wrapper for Version_t TH2L::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TH2L::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!Class_Version", static_cast<Version_t (*)() >(&TH2L::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TH2L::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TH2L::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    t.method("IsA", static_cast<TClass * (TH2L::*)()  const>(&TH2L::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TH2L::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2L::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    t.method("StreamerNVirtual", static_cast<void (TH2L::*)(TBuffer &) >(&TH2L::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TH2L::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TH2L::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!DeclFileName", []() { return (std::string)TH2L::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TH2L::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TH2L::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!ImplFileLine", static_cast<int (*)() >(&TH2L::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TH2L::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TH2L::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!ImplFileName", []() { return (std::string)TH2L::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TH2L::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TH2L::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!Class_Name", []() { return (std::string)TH2L::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TH2L::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TH2L::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!Dictionary", static_cast<TClass * (*)() >(&TH2L::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TH2L::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TH2L::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!Class", static_cast<TClass * (*)() >(&TH2L::Class));
+
+    DEBUG_MSG("Adding wrapper for void TH2L::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2L::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    t.method("Streamer", static_cast<void (TH2L::*)(TBuffer &) >(&TH2L::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TH2L::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TH2L::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:290:4
+    module_.method("TH2L!DeclFileLine", static_cast<int (*)() >(&TH2L::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TH2L>> type_;
+};
+std::shared_ptr<Wrapper> newJlTH2L(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTH2L(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TH2F> : std::false_type { };
+  template<> struct DefaultConstructible<TH2F> : std::false_type { };
+template<> struct SuperType<TH2F> { typedef TH2 type; };
+}
+
+// Class generating the wrapper for type TH2F
+// signature to use in the veto file: TH2F
+struct JlTH2F: public Wrapper {
+
+  JlTH2F(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TH2F (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:295:7
+    jlcxx::TypeWrapper<TH2F>  t = jlModule.add_type<TH2F>("TH2F",
+      jlcxx::julia_base_type<TH2>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TH2F>>(new jlcxx::TypeWrapper<TH2F>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2F::TH2F(const char *, const char *, Int_t, Double_t, Double_t, Int_t, Double_t, Double_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:299:4
+    t.constructor<const char *, const char *, Int_t, Double_t, Double_t, Int_t, Double_t, Double_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2F::TH2F(const char *, const char *, Int_t, const Double_t *, Int_t, Double_t, Double_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:301:4
+    t.constructor<const char *, const char *, Int_t, const Double_t *, Int_t, Double_t, Double_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2F::TH2F(const char *, const char *, Int_t, Double_t, Double_t, Int_t, const Double_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:303:4
+    t.constructor<const char *, const char *, Int_t, Double_t, Double_t, Int_t, const Double_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2F::TH2F(const char *, const char *, Int_t, const Double_t *, Int_t, const Double_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:305:4
+    t.constructor<const char *, const char *, Int_t, const Double_t *, Int_t, const Double_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2F::TH2F(const char *, const char *, Int_t, const Float_t *, Int_t, const Float_t *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:307:4
+    t.constructor<const char *, const char *, Int_t, const Float_t *, Int_t, const Float_t *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TH2F::TH2F(const TH2F &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:310:4
+    t.constructor<const TH2F &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TH2F::AddBinContent(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2F::AddBinContent(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:315:21
+    t.method("AddBinContent", static_cast<void (TH2F::*)(Int_t) >(&TH2F::AddBinContent));
+
+    DEBUG_MSG("Adding wrapper for void TH2F::AddBinContent(Int_t, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2F::AddBinContent(Int_t, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:319:21
+    t.method("AddBinContent", static_cast<void (TH2F::*)(Int_t, Double_t) >(&TH2F::AddBinContent));
+
+    DEBUG_MSG("Adding wrapper for void TH2F::Copy(TObject &) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2F::Copy(TObject &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:321:21
+    t.method("Copy", static_cast<void (TH2F::*)(TObject &)  const>(&TH2F::Copy));
+
+    DEBUG_MSG("Adding wrapper for void TH2F::Reset(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2F::Reset(Option_t *)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:322:21
+    t.method("Reset", static_cast<void (TH2F::*)(Option_t *) >(&TH2F::Reset));
+    t.method("Reset", [](TH2F& a)->void { a.Reset(); });
+    t.method("Reset", [](TH2F* a)->void { a->Reset(); });
+
+    DEBUG_MSG("Adding wrapper for void TH2F::SetBinsLength(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2F::SetBinsLength(Int_t)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:323:21
+    t.method("SetBinsLength", static_cast<void (TH2F::*)(Int_t) >(&TH2F::SetBinsLength));
+    t.method("SetBinsLength", [](TH2F& a)->void { a.SetBinsLength(); });
+    t.method("SetBinsLength", [](TH2F* a)->void { a->SetBinsLength(); });
+
+    DEBUG_MSG("Adding wrapper for TH2F & TH2F::operator=(const TH2F &) (" __HERE__ ")");
+    // signature to use in the veto list: TH2F & TH2F::operator=(const TH2F &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:325:21
+    t.method("assign", static_cast<TH2F & (TH2F::*)(const TH2F &) >(&TH2F::operator=));
+
+    DEBUG_MSG("Adding wrapper for Version_t TH2F::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TH2F::Class_Version()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!Class_Version", static_cast<Version_t (*)() >(&TH2F::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TH2F::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TH2F::IsA()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    t.method("IsA", static_cast<TClass * (TH2F::*)()  const>(&TH2F::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TH2F::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2F::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    t.method("StreamerNVirtual", static_cast<void (TH2F::*)(TBuffer &) >(&TH2F::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TH2F::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TH2F::DeclFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!DeclFileName", []() { return (std::string)TH2F::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TH2F::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TH2F::ImplFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!ImplFileLine", static_cast<int (*)() >(&TH2F::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TH2F::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TH2F::ImplFileName()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!ImplFileName", []() { return (std::string)TH2F::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TH2F::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TH2F::Class_Name()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!Class_Name", []() { return (std::string)TH2F::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TH2F::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TH2F::Dictionary()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!Dictionary", static_cast<TClass * (*)() >(&TH2F::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TH2F::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TH2F::Class()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!Class", static_cast<TClass * (*)() >(&TH2F::Class));
+
+    DEBUG_MSG("Adding wrapper for void TH2F::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TH2F::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    t.method("Streamer", static_cast<void (TH2F::*)(TBuffer &) >(&TH2F::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TH2F::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TH2F::DeclFileLine()
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:337:4
+    module_.method("TH2F!DeclFileLine", static_cast<int (*)() >(&TH2F::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TH2F>> type_;
+};
+std::shared_ptr<Wrapper> newJlTH2F(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTH2F(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TH2D> : std::false_type { };
   template<> struct DefaultConstructible<TH2D> : std::false_type { };
 template<> struct SuperType<TH2D> { typedef TH2 type; };
@@ -18,7 +316,7 @@ struct JlTH2D: public Wrapper {
 
   JlTH2D(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TH2D (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:301:7
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:343:7
     jlcxx::TypeWrapper<TH2D>  t = jlModule.add_type<TH2D>("TH2D",
       jlcxx::julia_base_type<TH2>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TH2D>>(new jlcxx::TypeWrapper<TH2D>(jlModule, t));
@@ -30,121 +328,121 @@ struct JlTH2D: public Wrapper {
 
 
     DEBUG_MSG("Adding wrapper for void TH2D::TH2D(const char *, const char *, Int_t, Double_t, Double_t, Int_t, Double_t, Double_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:305:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:347:4
     t.constructor<const char *, const char *, Int_t, Double_t, Double_t, Int_t, Double_t, Double_t>(/*finalize=*/true);
 
 
     DEBUG_MSG("Adding wrapper for void TH2D::TH2D(const char *, const char *, Int_t, const Double_t *, Int_t, Double_t, Double_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:307:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:349:4
     t.constructor<const char *, const char *, Int_t, const Double_t *, Int_t, Double_t, Double_t>(/*finalize=*/true);
 
 
     DEBUG_MSG("Adding wrapper for void TH2D::TH2D(const char *, const char *, Int_t, Double_t, Double_t, Int_t, const Double_t *) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:309:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:351:4
     t.constructor<const char *, const char *, Int_t, Double_t, Double_t, Int_t, const Double_t *>(/*finalize=*/true);
 
 
     DEBUG_MSG("Adding wrapper for void TH2D::TH2D(const char *, const char *, Int_t, const Double_t *, Int_t, const Double_t *) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:311:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:353:4
     t.constructor<const char *, const char *, Int_t, const Double_t *, Int_t, const Double_t *>(/*finalize=*/true);
 
 
     DEBUG_MSG("Adding wrapper for void TH2D::TH2D(const char *, const char *, Int_t, const Float_t *, Int_t, const Float_t *) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:313:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:355:4
     t.constructor<const char *, const char *, Int_t, const Float_t *, Int_t, const Float_t *>(/*finalize=*/true);
 
 
     DEBUG_MSG("Adding wrapper for void TH2D::TH2D(const TH2D &) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:316:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:358:4
     t.constructor<const TH2D &>(/*finalize=*/true);
 
     DEBUG_MSG("Adding wrapper for void TH2D::AddBinContent(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::AddBinContent(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:319:21
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:363:21
     t.method("AddBinContent", static_cast<void (TH2D::*)(Int_t) >(&TH2D::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH2D::AddBinContent(Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::AddBinContent(Int_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:320:21
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:366:21
     t.method("AddBinContent", static_cast<void (TH2D::*)(Int_t, Double_t) >(&TH2D::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH2D::Copy(TObject &) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::Copy(TObject &)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:322:21
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:368:21
     t.method("Copy", static_cast<void (TH2D::*)(TObject &)  const>(&TH2D::Copy));
 
     DEBUG_MSG("Adding wrapper for void TH2D::Reset(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::Reset(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:323:21
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:369:21
     t.method("Reset", static_cast<void (TH2D::*)(Option_t *) >(&TH2D::Reset));
     t.method("Reset", [](TH2D& a)->void { a.Reset(); });
     t.method("Reset", [](TH2D* a)->void { a->Reset(); });
 
     DEBUG_MSG("Adding wrapper for void TH2D::SetBinsLength(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::SetBinsLength(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:324:21
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:370:21
     t.method("SetBinsLength", static_cast<void (TH2D::*)(Int_t) >(&TH2D::SetBinsLength));
     t.method("SetBinsLength", [](TH2D& a)->void { a.SetBinsLength(); });
     t.method("SetBinsLength", [](TH2D* a)->void { a->SetBinsLength(); });
 
     DEBUG_MSG("Adding wrapper for TH2D & TH2D::operator=(const TH2D &) (" __HERE__ ")");
     // signature to use in the veto list: TH2D & TH2D::operator=(const TH2D &)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:326:21
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:372:21
     t.method("assign", static_cast<TH2D & (TH2D::*)(const TH2D &) >(&TH2D::operator=));
 
     DEBUG_MSG("Adding wrapper for Version_t TH2D::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TH2D::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!Class_Version", static_cast<Version_t (*)() >(&TH2D::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TH2D::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TH2D::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     t.method("IsA", static_cast<TClass * (TH2D::*)()  const>(&TH2D::IsA));
 
     DEBUG_MSG("Adding wrapper for void TH2D::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     t.method("StreamerNVirtual", static_cast<void (TH2D::*)(TBuffer &) >(&TH2D::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TH2D::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TH2D::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!DeclFileName", []() { return (std::string)TH2D::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TH2D::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TH2D::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!ImplFileLine", static_cast<int (*)() >(&TH2D::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TH2D::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TH2D::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!ImplFileName", []() { return (std::string)TH2D::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TH2D::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TH2D::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!Class_Name", []() { return (std::string)TH2D::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TH2D::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TH2D::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!Dictionary", static_cast<TClass * (*)() >(&TH2D::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TH2D::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TH2D::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!Class", static_cast<TClass * (*)() >(&TH2D::Class));
 
     DEBUG_MSG("Adding wrapper for void TH2D::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     t.method("Streamer", static_cast<void (TH2D::*)(TBuffer &) >(&TH2D::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TH2D::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TH2D::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TH2.h:338:4
+    // defined in /home/pgras/.julia/conda/3/include/TH2.h:384:4
     module_.method("TH2D!DeclFileLine", static_cast<int (*)() >(&TH2D::DeclFileLine));
   }
 
@@ -300,117 +598,126 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(Double_t, const char *, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TProfile2D::Fill(Double_t, const char *, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:104:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:106:22
     t.method("Fill", static_cast<Int_t (TProfile2D::*)(Double_t, const char *, Double_t, Double_t) >(&TProfile2D::Fill));
-    t.method("Fill", [](TProfile2D& a, Double_t arg0, const char * arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2, 1.); });
-    t.method("Fill", [](TProfile2D* a, Double_t arg0, const char * arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2, 1.); });
 
     DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(const char *, Double_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TProfile2D::Fill(const char *, Double_t, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:105:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:107:22
     t.method("Fill", static_cast<Int_t (TProfile2D::*)(const char *, Double_t, Double_t, Double_t) >(&TProfile2D::Fill));
-    t.method("Fill", [](TProfile2D& a, const char * arg0, Double_t arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2, 1.); });
-    t.method("Fill", [](TProfile2D* a, const char * arg0, Double_t arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2, 1.); });
 
     DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(const char *, const char *, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TProfile2D::Fill(const char *, const char *, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:106:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:108:22
     t.method("Fill", static_cast<Int_t (TProfile2D::*)(const char *, const char *, Double_t, Double_t) >(&TProfile2D::Fill));
-    t.method("Fill", [](TProfile2D& a, const char * arg0, const char * arg1, Double_t arg2)->Int_t { return a.Fill(arg0, arg1, arg2, 1.); });
-    t.method("Fill", [](TProfile2D* a, const char * arg0, const char * arg1, Double_t arg2)->Int_t { return a->Fill(arg0, arg1, arg2, 1.); });
 
     DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(Double_t, Double_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TProfile2D::Fill(Double_t, Double_t, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:107:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:109:22
     t.method("Fill", static_cast<Int_t (TProfile2D::*)(Double_t, Double_t, Double_t, Double_t) >(&TProfile2D::Fill));
+
+    DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(Double_t, const char *, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TProfile2D::Fill(Double_t, const char *, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:110:22
+    t.method("Fill", static_cast<Int_t (TProfile2D::*)(Double_t, const char *, Double_t) >(&TProfile2D::Fill));
+
+    DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(const char *, Double_t, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TProfile2D::Fill(const char *, Double_t, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:111:22
+    t.method("Fill", static_cast<Int_t (TProfile2D::*)(const char *, Double_t, Double_t) >(&TProfile2D::Fill));
+
+    DEBUG_MSG("Adding wrapper for Int_t TProfile2D::Fill(const char *, const char *, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TProfile2D::Fill(const char *, const char *, Double_t)
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:112:22
+    t.method("Fill", static_cast<Int_t (TProfile2D::*)(const char *, const char *, Double_t) >(&TProfile2D::Fill));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinContent(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinContent(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:108:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:113:14
     t.method("GetBinContent", static_cast<Double_t (TProfile2D::*)(Int_t)  const>(&TProfile2D::GetBinContent));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinContent(Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinContent(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:109:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:114:14
     t.method("GetBinContent", static_cast<Double_t (TProfile2D::*)(Int_t, Int_t)  const>(&TProfile2D::GetBinContent));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinContent(Int_t, Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinContent(Int_t, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:110:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:115:14
     t.method("GetBinContent", static_cast<Double_t (TProfile2D::*)(Int_t, Int_t, Int_t)  const>(&TProfile2D::GetBinContent));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinError(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinError(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:111:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:116:14
     t.method("GetBinError", static_cast<Double_t (TProfile2D::*)(Int_t)  const>(&TProfile2D::GetBinError));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinError(Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinError(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:112:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:117:14
     t.method("GetBinError", static_cast<Double_t (TProfile2D::*)(Int_t, Int_t)  const>(&TProfile2D::GetBinError));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinError(Int_t, Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinError(Int_t, Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:113:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:118:14
     t.method("GetBinError", static_cast<Double_t (TProfile2D::*)(Int_t, Int_t, Int_t)  const>(&TProfile2D::GetBinError));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinEntries(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinEntries(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:114:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:119:22
     t.method("GetBinEntries", static_cast<Double_t (TProfile2D::*)(Int_t)  const>(&TProfile2D::GetBinEntries));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetBinEffectiveEntries(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetBinEffectiveEntries(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:115:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:120:22
     t.method("GetBinEffectiveEntries", static_cast<Double_t (TProfile2D::*)(Int_t) >(&TProfile2D::GetBinEffectiveEntries));
 
     DEBUG_MSG("Adding wrapper for TArrayD * TProfile2D::GetBinSumw2() (" __HERE__ ")");
     // signature to use in the veto list: TArrayD * TProfile2D::GetBinSumw2()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:116:21
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:121:21
     t.method("GetBinSumw2", static_cast<TArrayD * (TProfile2D::*)() >(&TProfile2D::GetBinSumw2));
 
     DEBUG_MSG("Adding wrapper for const TArrayD * TProfile2D::GetBinSumw2() (" __HERE__ ")");
     // signature to use in the veto list: const TArrayD * TProfile2D::GetBinSumw2()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:117:27
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:122:27
     t.method("GetBinSumw2", static_cast<const TArrayD * (TProfile2D::*)()  const>(&TProfile2D::GetBinSumw2));
 
     DEBUG_MSG("Adding wrapper for Option_t * TProfile2D::GetErrorOption() (" __HERE__ ")");
     // signature to use in the veto list: Option_t * TProfile2D::GetErrorOption()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:118:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:123:22
     t.method("GetErrorOption", static_cast<Option_t * (TProfile2D::*)()  const>(&TProfile2D::GetErrorOption));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::GetStats(Double_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::GetStats(Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:119:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:124:14
     t.method("GetStats", static_cast<void (TProfile2D::*)(Double_t *)  const>(&TProfile2D::GetStats));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetZmin() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetZmin()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:120:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:125:22
     t.method("GetZmin", static_cast<Double_t (TProfile2D::*)()  const>(&TProfile2D::GetZmin));
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetZmax() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetZmax()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:121:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:126:22
     t.method("GetZmax", static_cast<Double_t (TProfile2D::*)()  const>(&TProfile2D::GetZmax));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::LabelsDeflate(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::LabelsDeflate(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:122:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:127:14
     t.method("LabelsDeflate", static_cast<void (TProfile2D::*)(Option_t *) >(&TProfile2D::LabelsDeflate));
     t.method("LabelsDeflate", [](TProfile2D& a)->void { a.LabelsDeflate(); });
     t.method("LabelsDeflate", [](TProfile2D* a)->void { a->LabelsDeflate(); });
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::LabelsInflate(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::LabelsInflate(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:123:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:128:14
     t.method("LabelsInflate", static_cast<void (TProfile2D::*)(Option_t *) >(&TProfile2D::LabelsInflate));
     t.method("LabelsInflate", [](TProfile2D& a)->void { a.LabelsInflate(); });
     t.method("LabelsInflate", [](TProfile2D* a)->void { a->LabelsInflate(); });
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::LabelsOption(Option_t *, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::LabelsOption(Option_t *, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:124:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:129:14
     t.method("LabelsOption", static_cast<void (TProfile2D::*)(Option_t *, Option_t *) >(&TProfile2D::LabelsOption));
     t.method("LabelsOption", [](TProfile2D& a)->void { a.LabelsOption(); });
     t.method("LabelsOption", [](TProfile2D& a, Option_t * arg0)->void { a.LabelsOption(arg0); });
@@ -419,24 +726,24 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for Long64_t TProfile2D::Merge(TCollection *) (" __HERE__ ")");
     // signature to use in the veto list: Long64_t TProfile2D::Merge(TCollection *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:125:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:130:14
     t.method("Merge", static_cast<Long64_t (TProfile2D::*)(TCollection *) >(&TProfile2D::Merge));
 
     DEBUG_MSG("Adding wrapper for Bool_t TProfile2D::Multiply(TF1 *, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TProfile2D::Multiply(TF1 *, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:126:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:131:14
     t.method("Multiply", static_cast<Bool_t (TProfile2D::*)(TF1 *, Double_t) >(&TProfile2D::Multiply));
     t.method("Multiply", [](TProfile2D& a, TF1 * arg0)->Bool_t { return a.Multiply(arg0); });
     t.method("Multiply", [](TProfile2D* a, TF1 * arg0)->Bool_t { return a->Multiply(arg0); });
 
     DEBUG_MSG("Adding wrapper for Bool_t TProfile2D::Multiply(const TH1 *) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TProfile2D::Multiply(const TH1 *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:127:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:132:14
     t.method("Multiply", static_cast<Bool_t (TProfile2D::*)(const TH1 *) >(&TProfile2D::Multiply));
 
     DEBUG_MSG("Adding wrapper for Bool_t TProfile2D::Multiply(const TH1 *, const TH1 *, Double_t, Double_t, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TProfile2D::Multiply(const TH1 *, const TH1 *, Double_t, Double_t, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:128:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:133:14
     t.method("Multiply", static_cast<Bool_t (TProfile2D::*)(const TH1 *, const TH1 *, Double_t, Double_t, Option_t *) >(&TProfile2D::Multiply));
     t.method("Multiply", [](TProfile2D& a, const TH1 * arg0, const TH1 * arg1)->Bool_t { return a.Multiply(arg0, arg1); });
     t.method("Multiply", [](TProfile2D& a, const TH1 * arg0, const TH1 * arg1, Double_t arg2)->Bool_t { return a.Multiply(arg0, arg1, arg2); });
@@ -447,7 +754,7 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for TH2D * TProfile2D::ProjectionXY(const char *, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: TH2D * TProfile2D::ProjectionXY(const char *, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:129:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:134:22
     t.method("ProjectionXY", static_cast<TH2D * (TProfile2D::*)(const char *, Option_t *)  const>(&TProfile2D::ProjectionXY));
     t.method("ProjectionXY", [](TProfile2D const& a)->TH2D * { return a.ProjectionXY(); });
     t.method("ProjectionXY", [](TProfile2D const& a, const char * arg0)->TH2D * { return a.ProjectionXY(arg0); });
@@ -456,7 +763,7 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for TProfile * TProfile2D::ProfileX(const char *, Int_t, Int_t, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: TProfile * TProfile2D::ProfileX(const char *, Int_t, Int_t, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:130:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:135:22
     t.method("ProfileX", static_cast<TProfile * (TProfile2D::*)(const char *, Int_t, Int_t, Option_t *)  const>(&TProfile2D::ProfileX));
     t.method("ProfileX", [](TProfile2D const& a)->TProfile * { return a.ProfileX(); });
     t.method("ProfileX", [](TProfile2D const& a, const char * arg0)->TProfile * { return a.ProfileX(arg0); });
@@ -469,7 +776,7 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for TProfile * TProfile2D::ProfileY(const char *, Int_t, Int_t, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: TProfile * TProfile2D::ProfileY(const char *, Int_t, Int_t, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:131:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:136:22
     t.method("ProfileY", static_cast<TProfile * (TProfile2D::*)(const char *, Int_t, Int_t, Option_t *)  const>(&TProfile2D::ProfileY));
     t.method("ProfileY", [](TProfile2D const& a)->TProfile * { return a.ProfileY(); });
     t.method("ProfileY", [](TProfile2D const& a, const char * arg0)->TProfile * { return a.ProfileY(arg0); });
@@ -482,19 +789,19 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::PutStats(Double_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::PutStats(Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:132:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:137:14
     t.method("PutStats", static_cast<void (TProfile2D::*)(Double_t *) >(&TProfile2D::PutStats));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::Reset(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::Reset(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:133:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:138:14
     t.method("Reset", static_cast<void (TProfile2D::*)(Option_t *) >(&TProfile2D::Reset));
     t.method("Reset", [](TProfile2D& a)->void { a.Reset(); });
     t.method("Reset", [](TProfile2D* a)->void { a->Reset(); });
 
     DEBUG_MSG("Adding wrapper for TProfile2D * TProfile2D::Rebin2D(Int_t, Int_t, const char *) (" __HERE__ ")");
     // signature to use in the veto list: TProfile2D * TProfile2D::Rebin2D(Int_t, Int_t, const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:134:16
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:139:16
     t.method("Rebin2D", static_cast<TProfile2D * (TProfile2D::*)(Int_t, Int_t, const char *) >(&TProfile2D::Rebin2D));
     t.method("Rebin2D", [](TProfile2D& a)->TProfile2D * { return a.Rebin2D(); });
     t.method("Rebin2D", [](TProfile2D& a, Int_t arg0)->TProfile2D * { return a.Rebin2D(arg0); });
@@ -505,7 +812,7 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for TProfile2D * TProfile2D::RebinX(Int_t, const char *) (" __HERE__ ")");
     // signature to use in the veto list: TProfile2D * TProfile2D::RebinX(Int_t, const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:135:16
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:140:16
     t.method("RebinX", static_cast<TProfile2D * (TProfile2D::*)(Int_t, const char *) >(&TProfile2D::RebinX));
     t.method("RebinX", [](TProfile2D& a)->TProfile2D * { return a.RebinX(); });
     t.method("RebinX", [](TProfile2D& a, Int_t arg0)->TProfile2D * { return a.RebinX(arg0); });
@@ -514,7 +821,7 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for TProfile2D * TProfile2D::RebinY(Int_t, const char *) (" __HERE__ ")");
     // signature to use in the veto list: TProfile2D * TProfile2D::RebinY(Int_t, const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:136:16
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:141:16
     t.method("RebinY", static_cast<TProfile2D * (TProfile2D::*)(Int_t, const char *) >(&TProfile2D::RebinY));
     t.method("RebinY", [](TProfile2D& a)->TProfile2D * { return a.RebinY(); });
     t.method("RebinY", [](TProfile2D& a, Int_t arg0)->TProfile2D * { return a.RebinY(arg0); });
@@ -523,7 +830,7 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::Scale(Double_t, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::Scale(Double_t, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:138:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:143:14
     t.method("Scale", static_cast<void (TProfile2D::*)(Double_t, Option_t *) >(&TProfile2D::Scale));
     t.method("Scale", [](TProfile2D& a)->void { a.Scale(); });
     t.method("Scale", [](TProfile2D& a, Double_t arg0)->void { a.Scale(arg0); });
@@ -532,105 +839,105 @@ struct JlTProfile2D: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::SetBinEntries(Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::SetBinEntries(Int_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:139:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:144:22
     t.method("SetBinEntries", static_cast<void (TProfile2D::*)(Int_t, Double_t) >(&TProfile2D::SetBinEntries));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::SetBins(Int_t, Double_t, Double_t, Int_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::SetBins(Int_t, Double_t, Double_t, Int_t, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:140:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:145:14
     t.method("SetBins", static_cast<void (TProfile2D::*)(Int_t, Double_t, Double_t, Int_t, Double_t, Double_t) >(&TProfile2D::SetBins));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::SetBins(Int_t, const Double_t *, Int_t, const Double_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::SetBins(Int_t, const Double_t *, Int_t, const Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:141:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:146:14
     t.method("SetBins", static_cast<void (TProfile2D::*)(Int_t, const Double_t *, Int_t, const Double_t *) >(&TProfile2D::SetBins));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::SetBinsLength(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::SetBinsLength(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:142:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:147:14
     t.method("SetBinsLength", static_cast<void (TProfile2D::*)(Int_t) >(&TProfile2D::SetBinsLength));
     t.method("SetBinsLength", [](TProfile2D& a)->void { a.SetBinsLength(); });
     t.method("SetBinsLength", [](TProfile2D* a)->void { a->SetBinsLength(); });
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::SetBuffer(Int_t, Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::SetBuffer(Int_t, Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:143:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:14
     t.method("SetBuffer", static_cast<void (TProfile2D::*)(Int_t, Option_t *) >(&TProfile2D::SetBuffer));
     t.method("SetBuffer", [](TProfile2D& a, Int_t arg0)->void { a.SetBuffer(arg0); });
     t.method("SetBuffer", [](TProfile2D* a, Int_t arg0)->void { a->SetBuffer(arg0); });
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::SetErrorOption(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::SetErrorOption(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:144:22
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:149:22
     t.method("SetErrorOption", static_cast<void (TProfile2D::*)(Option_t *) >(&TProfile2D::SetErrorOption));
     t.method("SetErrorOption", [](TProfile2D& a)->void { a.SetErrorOption(); });
     t.method("SetErrorOption", [](TProfile2D* a)->void { a->SetErrorOption(); });
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::Sumw2(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::Sumw2(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:145:14
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:150:14
     t.method("Sumw2", static_cast<void (TProfile2D::*)(Bool_t) >(&TProfile2D::Sumw2));
     t.method("Sumw2", [](TProfile2D& a)->void { a.Sumw2(); });
     t.method("Sumw2", [](TProfile2D* a)->void { a->Sumw2(); });
 
     DEBUG_MSG("Adding wrapper for Double_t TProfile2D::GetNumberOfBins() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TProfile2D::GetNumberOfBins()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:146:13
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:151:13
     t.method("GetNumberOfBins", static_cast<Double_t (TProfile2D::*)() >(&TProfile2D::GetNumberOfBins));
 
     DEBUG_MSG("Adding wrapper for Version_t TProfile2D::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TProfile2D::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!Class_Version", static_cast<Version_t (*)() >(&TProfile2D::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TProfile2D::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TProfile2D::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     t.method("IsA", static_cast<TClass * (TProfile2D::*)()  const>(&TProfile2D::IsA));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     t.method("StreamerNVirtual", static_cast<void (TProfile2D::*)(TBuffer &) >(&TProfile2D::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TProfile2D::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TProfile2D::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!DeclFileName", []() { return (std::string)TProfile2D::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TProfile2D::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TProfile2D::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!ImplFileLine", static_cast<int (*)() >(&TProfile2D::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TProfile2D::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TProfile2D::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!ImplFileName", []() { return (std::string)TProfile2D::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TProfile2D::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TProfile2D::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!Class_Name", []() { return (std::string)TProfile2D::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TProfile2D::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TProfile2D::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!Dictionary", static_cast<TClass * (*)() >(&TProfile2D::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TProfile2D::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TProfile2D::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!Class", static_cast<TClass * (*)() >(&TProfile2D::Class));
 
     DEBUG_MSG("Adding wrapper for void TProfile2D::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TProfile2D::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     t.method("Streamer", static_cast<void (TProfile2D::*)(TBuffer &) >(&TProfile2D::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TProfile2D::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TProfile2D::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:148:4
+    // defined in /home/pgras/.julia/conda/3/include/TProfile2D.h:153:4
     module_.method("TProfile2D!DeclFileLine", static_cast<int (*)() >(&TProfile2D::DeclFileLine));
   }
 
@@ -667,60 +974,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTApplicationImp(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTApplicationImp(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TDatime> : std::false_type { };
-  template<> struct DefaultConstructible<TDatime> : std::false_type { };
-}
-
-// Class generating the wrapper for type TDatime
-// signature to use in the veto file: TDatime
-struct JlTDatime: public Wrapper {
-
-  JlTDatime(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TDatime (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TDatime.h:37:7
-    jlcxx::TypeWrapper<TDatime>  t = jlModule.add_type<TDatime>("TDatime");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TDatime>>(new jlcxx::TypeWrapper<TDatime>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TDatime>> type_;
-};
-std::shared_ptr<Wrapper> newJlTDatime(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTDatime(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TArrayC> : std::false_type { };
-  template<> struct DefaultConstructible<TArrayC> : std::false_type { };
-}
-
-// Class generating the wrapper for type TArrayC
-// signature to use in the veto file: TArrayC
-struct JlTArrayC: public Wrapper {
-
-  JlTArrayC(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TArrayC (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TArrayC.h:27:7
-    jlcxx::TypeWrapper<TArrayC>  t = jlModule.add_type<TArrayC>("TArrayC");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TArrayC>>(new jlcxx::TypeWrapper<TArrayC>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TArrayC>> type_;
-};
-std::shared_ptr<Wrapper> newJlTArrayC(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTArrayC(module));
 }

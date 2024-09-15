@@ -21,7 +21,7 @@ public:
 };
 
 /** To be used in place of template<typename T> TBranch* TTree:Branch(const
- *  char* name, Char_t* obj, Int_t bufsize, Int_t splitlevel);
+ *  char* name, T* obj, Int_t bufsize, Int_t splitlevel);
  */
 template<typename T>
 TBranchPtr<T> Branch(TTree& tree, const char* name, T& obj, Int_t bufsize = 3200, Int_t splitlevel = 99){

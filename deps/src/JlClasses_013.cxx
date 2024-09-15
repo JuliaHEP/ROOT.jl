@@ -75,7 +75,7 @@ struct JlTObjLink: public Wrapper {
 
   JlTObjLink(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TObjLink (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TList.h:121:7
+    // defined in /home/pgras/.julia/conda/3/include/TList.h:123:7
     jlcxx::TypeWrapper<TObjLink>  t = jlModule.add_type<TObjLink>("TObjLink");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TObjLink>>(new jlcxx::TypeWrapper<TObjLink>(jlModule, t));
   }
