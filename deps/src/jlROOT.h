@@ -21,6 +21,7 @@
 #include "TFile.h"
 #include "TEntryList.h"
 #include "TKey.h"
+#include "TObjArray.h"
 #include "TVectorT.h"
 #include "TVectorDfwd.h"
 #include "TVectorFfwd.h"

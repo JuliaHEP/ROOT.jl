@@ -7,6 +7,34 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TDatime> : std::false_type { };
+  template<> struct DefaultConstructible<TDatime> : std::false_type { };
+}
+
+// Class generating the wrapper for type TDatime
+// signature to use in the veto file: TDatime
+struct JlTDatime: public Wrapper {
+
+  JlTDatime(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TDatime (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TDatime.h:37:7
+    jlcxx::TypeWrapper<TDatime>  t = jlModule.add_type<TDatime>("TDatime");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TDatime>>(new jlcxx::TypeWrapper<TDatime>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TDatime>> type_;
+};
+std::shared_ptr<Wrapper> newJlTDatime(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTDatime(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TArray> : std::false_type { };
   template<> struct DefaultConstructible<TArray> : std::false_type { };
 }
@@ -17,7 +45,7 @@ struct JlTArray: public Wrapper {
 
   JlTArray(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TArray (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TArray.h:31:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TArray.h:31:7
     jlcxx::TypeWrapper<TArray>  t = jlModule.add_type<TArray>("TArray");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TArray>>(new jlcxx::TypeWrapper<TArray>(jlModule, t));
   }
@@ -45,7 +73,7 @@ struct JlTArrayC: public Wrapper {
 
   JlTArrayC(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TArrayC (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TArrayC.h:27:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TArrayC.h:27:7
     jlcxx::TypeWrapper<TArrayC>  t = jlModule.add_type<TArrayC>("TArrayC",
       jlcxx::julia_base_type<TArray>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TArrayC>>(new jlcxx::TypeWrapper<TArrayC>(jlModule, t));
@@ -75,7 +103,7 @@ struct JlTUrl: public Wrapper {
 
   JlTUrl(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TUrl (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TUrl.h:33:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TUrl.h:33:7
     jlcxx::TypeWrapper<TUrl>  t = jlModule.add_type<TUrl>("TUrl",
       jlcxx::julia_base_type<TObject>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TUrl>>(new jlcxx::TypeWrapper<TUrl>(jlModule, t));
@@ -105,7 +133,7 @@ struct JlTFileOpenHandle: public Wrapper {
 
   JlTFileOpenHandle(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TFileOpenHandle (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:356:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TFile.h:354:7
     jlcxx::TypeWrapper<TFileOpenHandle>  t = jlModule.add_type<TFileOpenHandle>("TFileOpenHandle",
       jlcxx::julia_base_type<TNamed>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TFileOpenHandle>>(new jlcxx::TypeWrapper<TFileOpenHandle>(jlModule, t));
@@ -116,23 +144,23 @@ struct JlTFileOpenHandle: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for Bool_t TFileOpenHandle::Matches(const char *) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TFileOpenHandle::Matches(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:379:16
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TFile.h:377:16
     t.method("Matches", static_cast<Bool_t (TFileOpenHandle::*)(const char *) >(&TFileOpenHandle::Matches));
 
     DEBUG_MSG("Adding wrapper for const char * TFileOpenHandle::GetOpt() (" __HERE__ ")");
     // signature to use in the veto list: const char * TFileOpenHandle::GetOpt()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:381:16
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TFile.h:379:16
     t.method("GetOpt", [](TFileOpenHandle const& a) { return (std::string)a.GetOpt(); });
     t.method("GetOpt", [](TFileOpenHandle const* a) { return (std::string)a->GetOpt(); });
 
     DEBUG_MSG("Adding wrapper for Int_t TFileOpenHandle::GetCompress() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TFileOpenHandle::GetCompress()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:382:16
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TFile.h:380:16
     t.method("GetCompress", static_cast<Int_t (TFileOpenHandle::*)()  const>(&TFileOpenHandle::GetCompress));
 
     DEBUG_MSG("Adding wrapper for Int_t TFileOpenHandle::GetNetOpt() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TFileOpenHandle::GetNetOpt()
-    // defined in /home/pgras/.julia/conda/3/include/TFile.h:383:16
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TFile.h:381:16
     t.method("GetNetOpt", static_cast<Int_t (TFileOpenHandle::*)()  const>(&TFileOpenHandle::GetNetOpt));
   }
 
@@ -141,416 +169,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTFileOpenHandle(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTFileOpenHandle(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<Foption_t> : std::false_type { };
-  template<> struct DefaultConstructible<Foption_t> : std::false_type { };
-}
-
-// Class generating the wrapper for type Foption_t
-// signature to use in the veto file: Foption_t
-struct JlFoption_t: public Wrapper {
-
-  JlFoption_t(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type Foption_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:24:8
-    jlcxx::TypeWrapper<Foption_t>  t = jlModule.add_type<Foption_t>("Foption_t");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<Foption_t>>(new jlcxx::TypeWrapper<Foption_t>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding Quiet methods  to provide read access to the field Quiet (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:29:8
-    // signature to use in the veto list: Foption_t::Quiet
-    t.method("Quiet", [](const Foption_t& a) -> int { return a.Quiet; });
-    t.method("Quiet", [](Foption_t& a) -> int { return a.Quiet; });
-    t.method("Quiet", [](const Foption_t* a) -> int { return a->Quiet; });
-    t.method("Quiet", [](Foption_t* a) -> int { return a->Quiet; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:29:8
-    // signature to use in the veto list: Foption_t::Quiet
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Quiet! methods to provide write access to the field Quiet (" __HERE__ ")");
-    t.method("Quiet!", [](Foption_t& a, int val) -> int { return a.Quiet = val; });
-
-    DEBUG_MSG("Adding Quiet! methods to provide write access to the field Quiet (" __HERE__ ")");
-    t.method("Quiet!", [](Foption_t* a, int val) -> int { return a->Quiet = val; });
-
-    DEBUG_MSG("Adding Verbose methods  to provide read access to the field Verbose (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:30:8
-    // signature to use in the veto list: Foption_t::Verbose
-    t.method("Verbose", [](const Foption_t& a) -> int { return a.Verbose; });
-    t.method("Verbose", [](Foption_t& a) -> int { return a.Verbose; });
-    t.method("Verbose", [](const Foption_t* a) -> int { return a->Verbose; });
-    t.method("Verbose", [](Foption_t* a) -> int { return a->Verbose; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:30:8
-    // signature to use in the veto list: Foption_t::Verbose
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Verbose! methods to provide write access to the field Verbose (" __HERE__ ")");
-    t.method("Verbose!", [](Foption_t& a, int val) -> int { return a.Verbose = val; });
-
-    DEBUG_MSG("Adding Verbose! methods to provide write access to the field Verbose (" __HERE__ ")");
-    t.method("Verbose!", [](Foption_t* a, int val) -> int { return a->Verbose = val; });
-
-    DEBUG_MSG("Adding Bound methods  to provide read access to the field Bound (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:31:8
-    // signature to use in the veto list: Foption_t::Bound
-    t.method("Bound", [](const Foption_t& a) -> int { return a.Bound; });
-    t.method("Bound", [](Foption_t& a) -> int { return a.Bound; });
-    t.method("Bound", [](const Foption_t* a) -> int { return a->Bound; });
-    t.method("Bound", [](Foption_t* a) -> int { return a->Bound; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:31:8
-    // signature to use in the veto list: Foption_t::Bound
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Bound! methods to provide write access to the field Bound (" __HERE__ ")");
-    t.method("Bound!", [](Foption_t& a, int val) -> int { return a.Bound = val; });
-
-    DEBUG_MSG("Adding Bound! methods to provide write access to the field Bound (" __HERE__ ")");
-    t.method("Bound!", [](Foption_t* a, int val) -> int { return a->Bound = val; });
-
-    DEBUG_MSG("Adding Chi2 methods  to provide read access to the field Chi2 (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:32:8
-    // signature to use in the veto list: Foption_t::Chi2
-    t.method("Chi2", [](const Foption_t& a) -> int { return a.Chi2; });
-    t.method("Chi2", [](Foption_t& a) -> int { return a.Chi2; });
-    t.method("Chi2", [](const Foption_t* a) -> int { return a->Chi2; });
-    t.method("Chi2", [](Foption_t* a) -> int { return a->Chi2; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:32:8
-    // signature to use in the veto list: Foption_t::Chi2
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Chi2! methods to provide write access to the field Chi2 (" __HERE__ ")");
-    t.method("Chi2!", [](Foption_t& a, int val) -> int { return a.Chi2 = val; });
-
-    DEBUG_MSG("Adding Chi2! methods to provide write access to the field Chi2 (" __HERE__ ")");
-    t.method("Chi2!", [](Foption_t* a, int val) -> int { return a->Chi2 = val; });
-
-    DEBUG_MSG("Adding PChi2 methods  to provide read access to the field PChi2 (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:33:8
-    // signature to use in the veto list: Foption_t::PChi2
-    t.method("PChi2", [](const Foption_t& a) -> int { return a.PChi2; });
-    t.method("PChi2", [](Foption_t& a) -> int { return a.PChi2; });
-    t.method("PChi2", [](const Foption_t* a) -> int { return a->PChi2; });
-    t.method("PChi2", [](Foption_t* a) -> int { return a->PChi2; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:33:8
-    // signature to use in the veto list: Foption_t::PChi2
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding PChi2! methods to provide write access to the field PChi2 (" __HERE__ ")");
-    t.method("PChi2!", [](Foption_t& a, int val) -> int { return a.PChi2 = val; });
-
-    DEBUG_MSG("Adding PChi2! methods to provide write access to the field PChi2 (" __HERE__ ")");
-    t.method("PChi2!", [](Foption_t* a, int val) -> int { return a->PChi2 = val; });
-
-    DEBUG_MSG("Adding Like methods  to provide read access to the field Like (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:34:8
-    // signature to use in the veto list: Foption_t::Like
-    t.method("Like", [](const Foption_t& a) -> int { return a.Like; });
-    t.method("Like", [](Foption_t& a) -> int { return a.Like; });
-    t.method("Like", [](const Foption_t* a) -> int { return a->Like; });
-    t.method("Like", [](Foption_t* a) -> int { return a->Like; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:34:8
-    // signature to use in the veto list: Foption_t::Like
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Like! methods to provide write access to the field Like (" __HERE__ ")");
-    t.method("Like!", [](Foption_t& a, int val) -> int { return a.Like = val; });
-
-    DEBUG_MSG("Adding Like! methods to provide write access to the field Like (" __HERE__ ")");
-    t.method("Like!", [](Foption_t* a, int val) -> int { return a->Like = val; });
-
-    DEBUG_MSG("Adding User methods  to provide read access to the field User (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:35:8
-    // signature to use in the veto list: Foption_t::User
-    t.method("User", [](const Foption_t& a) -> int { return a.User; });
-    t.method("User", [](Foption_t& a) -> int { return a.User; });
-    t.method("User", [](const Foption_t* a) -> int { return a->User; });
-    t.method("User", [](Foption_t* a) -> int { return a->User; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:35:8
-    // signature to use in the veto list: Foption_t::User
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding User! methods to provide write access to the field User (" __HERE__ ")");
-    t.method("User!", [](Foption_t& a, int val) -> int { return a.User = val; });
-
-    DEBUG_MSG("Adding User! methods to provide write access to the field User (" __HERE__ ")");
-    t.method("User!", [](Foption_t* a, int val) -> int { return a->User = val; });
-
-    DEBUG_MSG("Adding W1 methods  to provide read access to the field W1 (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:36:8
-    // signature to use in the veto list: Foption_t::W1
-    t.method("W1", [](const Foption_t& a) -> int { return a.W1; });
-    t.method("W1", [](Foption_t& a) -> int { return a.W1; });
-    t.method("W1", [](const Foption_t* a) -> int { return a->W1; });
-    t.method("W1", [](Foption_t* a) -> int { return a->W1; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:36:8
-    // signature to use in the veto list: Foption_t::W1
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding W1! methods to provide write access to the field W1 (" __HERE__ ")");
-    t.method("W1!", [](Foption_t& a, int val) -> int { return a.W1 = val; });
-
-    DEBUG_MSG("Adding W1! methods to provide write access to the field W1 (" __HERE__ ")");
-    t.method("W1!", [](Foption_t* a, int val) -> int { return a->W1 = val; });
-
-    DEBUG_MSG("Adding Errors methods  to provide read access to the field Errors (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:37:8
-    // signature to use in the veto list: Foption_t::Errors
-    t.method("Errors", [](const Foption_t& a) -> int { return a.Errors; });
-    t.method("Errors", [](Foption_t& a) -> int { return a.Errors; });
-    t.method("Errors", [](const Foption_t* a) -> int { return a->Errors; });
-    t.method("Errors", [](Foption_t* a) -> int { return a->Errors; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:37:8
-    // signature to use in the veto list: Foption_t::Errors
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Errors! methods to provide write access to the field Errors (" __HERE__ ")");
-    t.method("Errors!", [](Foption_t& a, int val) -> int { return a.Errors = val; });
-
-    DEBUG_MSG("Adding Errors! methods to provide write access to the field Errors (" __HERE__ ")");
-    t.method("Errors!", [](Foption_t* a, int val) -> int { return a->Errors = val; });
-
-    DEBUG_MSG("Adding More methods  to provide read access to the field More (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:38:8
-    // signature to use in the veto list: Foption_t::More
-    t.method("More", [](const Foption_t& a) -> int { return a.More; });
-    t.method("More", [](Foption_t& a) -> int { return a.More; });
-    t.method("More", [](const Foption_t* a) -> int { return a->More; });
-    t.method("More", [](Foption_t* a) -> int { return a->More; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:38:8
-    // signature to use in the veto list: Foption_t::More
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding More! methods to provide write access to the field More (" __HERE__ ")");
-    t.method("More!", [](Foption_t& a, int val) -> int { return a.More = val; });
-
-    DEBUG_MSG("Adding More! methods to provide write access to the field More (" __HERE__ ")");
-    t.method("More!", [](Foption_t* a, int val) -> int { return a->More = val; });
-
-    DEBUG_MSG("Adding Range methods  to provide read access to the field Range (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:39:8
-    // signature to use in the veto list: Foption_t::Range
-    t.method("Range", [](const Foption_t& a) -> int { return a.Range; });
-    t.method("Range", [](Foption_t& a) -> int { return a.Range; });
-    t.method("Range", [](const Foption_t* a) -> int { return a->Range; });
-    t.method("Range", [](Foption_t* a) -> int { return a->Range; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:39:8
-    // signature to use in the veto list: Foption_t::Range
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Range! methods to provide write access to the field Range (" __HERE__ ")");
-    t.method("Range!", [](Foption_t& a, int val) -> int { return a.Range = val; });
-
-    DEBUG_MSG("Adding Range! methods to provide write access to the field Range (" __HERE__ ")");
-    t.method("Range!", [](Foption_t* a, int val) -> int { return a->Range = val; });
-
-    DEBUG_MSG("Adding Gradient methods  to provide read access to the field Gradient (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:40:8
-    // signature to use in the veto list: Foption_t::Gradient
-    t.method("Gradient", [](const Foption_t& a) -> int { return a.Gradient; });
-    t.method("Gradient", [](Foption_t& a) -> int { return a.Gradient; });
-    t.method("Gradient", [](const Foption_t* a) -> int { return a->Gradient; });
-    t.method("Gradient", [](Foption_t* a) -> int { return a->Gradient; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:40:8
-    // signature to use in the veto list: Foption_t::Gradient
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Gradient! methods to provide write access to the field Gradient (" __HERE__ ")");
-    t.method("Gradient!", [](Foption_t& a, int val) -> int { return a.Gradient = val; });
-
-    DEBUG_MSG("Adding Gradient! methods to provide write access to the field Gradient (" __HERE__ ")");
-    t.method("Gradient!", [](Foption_t* a, int val) -> int { return a->Gradient = val; });
-
-    DEBUG_MSG("Adding Nostore methods  to provide read access to the field Nostore (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:41:8
-    // signature to use in the veto list: Foption_t::Nostore
-    t.method("Nostore", [](const Foption_t& a) -> int { return a.Nostore; });
-    t.method("Nostore", [](Foption_t& a) -> int { return a.Nostore; });
-    t.method("Nostore", [](const Foption_t* a) -> int { return a->Nostore; });
-    t.method("Nostore", [](Foption_t* a) -> int { return a->Nostore; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:41:8
-    // signature to use in the veto list: Foption_t::Nostore
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Nostore! methods to provide write access to the field Nostore (" __HERE__ ")");
-    t.method("Nostore!", [](Foption_t& a, int val) -> int { return a.Nostore = val; });
-
-    DEBUG_MSG("Adding Nostore! methods to provide write access to the field Nostore (" __HERE__ ")");
-    t.method("Nostore!", [](Foption_t* a, int val) -> int { return a->Nostore = val; });
-
-    DEBUG_MSG("Adding Nograph methods  to provide read access to the field Nograph (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:42:8
-    // signature to use in the veto list: Foption_t::Nograph
-    t.method("Nograph", [](const Foption_t& a) -> int { return a.Nograph; });
-    t.method("Nograph", [](Foption_t& a) -> int { return a.Nograph; });
-    t.method("Nograph", [](const Foption_t* a) -> int { return a->Nograph; });
-    t.method("Nograph", [](Foption_t* a) -> int { return a->Nograph; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:42:8
-    // signature to use in the veto list: Foption_t::Nograph
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Nograph! methods to provide write access to the field Nograph (" __HERE__ ")");
-    t.method("Nograph!", [](Foption_t& a, int val) -> int { return a.Nograph = val; });
-
-    DEBUG_MSG("Adding Nograph! methods to provide write access to the field Nograph (" __HERE__ ")");
-    t.method("Nograph!", [](Foption_t* a, int val) -> int { return a->Nograph = val; });
-
-    DEBUG_MSG("Adding Plus methods  to provide read access to the field Plus (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:43:8
-    // signature to use in the veto list: Foption_t::Plus
-    t.method("Plus", [](const Foption_t& a) -> int { return a.Plus; });
-    t.method("Plus", [](Foption_t& a) -> int { return a.Plus; });
-    t.method("Plus", [](const Foption_t* a) -> int { return a->Plus; });
-    t.method("Plus", [](Foption_t* a) -> int { return a->Plus; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:43:8
-    // signature to use in the veto list: Foption_t::Plus
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Plus! methods to provide write access to the field Plus (" __HERE__ ")");
-    t.method("Plus!", [](Foption_t& a, int val) -> int { return a.Plus = val; });
-
-    DEBUG_MSG("Adding Plus! methods to provide write access to the field Plus (" __HERE__ ")");
-    t.method("Plus!", [](Foption_t* a, int val) -> int { return a->Plus = val; });
-
-    DEBUG_MSG("Adding Integral methods  to provide read access to the field Integral (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:44:8
-    // signature to use in the veto list: Foption_t::Integral
-    t.method("Integral", [](const Foption_t& a) -> int { return a.Integral; });
-    t.method("Integral", [](Foption_t& a) -> int { return a.Integral; });
-    t.method("Integral", [](const Foption_t* a) -> int { return a->Integral; });
-    t.method("Integral", [](Foption_t* a) -> int { return a->Integral; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:44:8
-    // signature to use in the veto list: Foption_t::Integral
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Integral! methods to provide write access to the field Integral (" __HERE__ ")");
-    t.method("Integral!", [](Foption_t& a, int val) -> int { return a.Integral = val; });
-
-    DEBUG_MSG("Adding Integral! methods to provide write access to the field Integral (" __HERE__ ")");
-    t.method("Integral!", [](Foption_t* a, int val) -> int { return a->Integral = val; });
-
-    DEBUG_MSG("Adding Nochisq methods  to provide read access to the field Nochisq (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:45:8
-    // signature to use in the veto list: Foption_t::Nochisq
-    t.method("Nochisq", [](const Foption_t& a) -> int { return a.Nochisq; });
-    t.method("Nochisq", [](Foption_t& a) -> int { return a.Nochisq; });
-    t.method("Nochisq", [](const Foption_t* a) -> int { return a->Nochisq; });
-    t.method("Nochisq", [](Foption_t* a) -> int { return a->Nochisq; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:45:8
-    // signature to use in the veto list: Foption_t::Nochisq
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Nochisq! methods to provide write access to the field Nochisq (" __HERE__ ")");
-    t.method("Nochisq!", [](Foption_t& a, int val) -> int { return a.Nochisq = val; });
-
-    DEBUG_MSG("Adding Nochisq! methods to provide write access to the field Nochisq (" __HERE__ ")");
-    t.method("Nochisq!", [](Foption_t* a, int val) -> int { return a->Nochisq = val; });
-
-    DEBUG_MSG("Adding Minuit methods  to provide read access to the field Minuit (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:46:8
-    // signature to use in the veto list: Foption_t::Minuit
-    t.method("Minuit", [](const Foption_t& a) -> int { return a.Minuit; });
-    t.method("Minuit", [](Foption_t& a) -> int { return a.Minuit; });
-    t.method("Minuit", [](const Foption_t* a) -> int { return a->Minuit; });
-    t.method("Minuit", [](Foption_t* a) -> int { return a->Minuit; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:46:8
-    // signature to use in the veto list: Foption_t::Minuit
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Minuit! methods to provide write access to the field Minuit (" __HERE__ ")");
-    t.method("Minuit!", [](Foption_t& a, int val) -> int { return a.Minuit = val; });
-
-    DEBUG_MSG("Adding Minuit! methods to provide write access to the field Minuit (" __HERE__ ")");
-    t.method("Minuit!", [](Foption_t* a, int val) -> int { return a->Minuit = val; });
-
-    DEBUG_MSG("Adding NoErrX methods  to provide read access to the field NoErrX (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:47:8
-    // signature to use in the veto list: Foption_t::NoErrX
-    t.method("NoErrX", [](const Foption_t& a) -> int { return a.NoErrX; });
-    t.method("NoErrX", [](Foption_t& a) -> int { return a.NoErrX; });
-    t.method("NoErrX", [](const Foption_t* a) -> int { return a->NoErrX; });
-    t.method("NoErrX", [](Foption_t* a) -> int { return a->NoErrX; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:47:8
-    // signature to use in the veto list: Foption_t::NoErrX
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding NoErrX! methods to provide write access to the field NoErrX (" __HERE__ ")");
-    t.method("NoErrX!", [](Foption_t& a, int val) -> int { return a.NoErrX = val; });
-
-    DEBUG_MSG("Adding NoErrX! methods to provide write access to the field NoErrX (" __HERE__ ")");
-    t.method("NoErrX!", [](Foption_t* a, int val) -> int { return a->NoErrX = val; });
-
-    DEBUG_MSG("Adding Robust methods  to provide read access to the field Robust (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:48:8
-    // signature to use in the veto list: Foption_t::Robust
-    t.method("Robust", [](const Foption_t& a) -> int { return a.Robust; });
-    t.method("Robust", [](Foption_t& a) -> int { return a.Robust; });
-    t.method("Robust", [](const Foption_t* a) -> int { return a->Robust; });
-    t.method("Robust", [](Foption_t* a) -> int { return a->Robust; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:48:8
-    // signature to use in the veto list: Foption_t::Robust
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding Robust! methods to provide write access to the field Robust (" __HERE__ ")");
-    t.method("Robust!", [](Foption_t& a, int val) -> int { return a.Robust = val; });
-
-    DEBUG_MSG("Adding Robust! methods to provide write access to the field Robust (" __HERE__ ")");
-    t.method("Robust!", [](Foption_t* a, int val) -> int { return a->Robust = val; });
-
-    DEBUG_MSG("Adding StoreResult methods  to provide read access to the field StoreResult (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:49:8
-    // signature to use in the veto list: Foption_t::StoreResult
-    t.method("StoreResult", [](const Foption_t& a) -> int { return a.StoreResult; });
-    t.method("StoreResult", [](Foption_t& a) -> int { return a.StoreResult; });
-    t.method("StoreResult", [](const Foption_t* a) -> int { return a->StoreResult; });
-    t.method("StoreResult", [](Foption_t* a) -> int { return a->StoreResult; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:49:8
-    // signature to use in the veto list: Foption_t::StoreResult
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding StoreResult! methods to provide write access to the field StoreResult (" __HERE__ ")");
-    t.method("StoreResult!", [](Foption_t& a, int val) -> int { return a.StoreResult = val; });
-
-    DEBUG_MSG("Adding StoreResult! methods to provide write access to the field StoreResult (" __HERE__ ")");
-    t.method("StoreResult!", [](Foption_t* a, int val) -> int { return a->StoreResult = val; });
-
-    DEBUG_MSG("Adding BinVolume methods  to provide read access to the field BinVolume (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:50:8
-    // signature to use in the veto list: Foption_t::BinVolume
-    t.method("BinVolume", [](const Foption_t& a) -> int { return a.BinVolume; });
-    t.method("BinVolume", [](Foption_t& a) -> int { return a.BinVolume; });
-    t.method("BinVolume", [](const Foption_t* a) -> int { return a->BinVolume; });
-    t.method("BinVolume", [](Foption_t* a) -> int { return a->BinVolume; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:50:8
-    // signature to use in the veto list: Foption_t::BinVolume
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding BinVolume! methods to provide write access to the field BinVolume (" __HERE__ ")");
-    t.method("BinVolume!", [](Foption_t& a, int val) -> int { return a.BinVolume = val; });
-
-    DEBUG_MSG("Adding BinVolume! methods to provide write access to the field BinVolume (" __HERE__ ")");
-    t.method("BinVolume!", [](Foption_t* a, int val) -> int { return a->BinVolume = val; });
-
-    DEBUG_MSG("Adding hRobust methods  to provide read access to the field hRobust (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:51:11
-    // signature to use in the veto list: Foption_t::hRobust
-    t.method("hRobust", [](const Foption_t& a) -> double { return a.hRobust; });
-    t.method("hRobust", [](Foption_t& a) -> double { return a.hRobust; });
-    t.method("hRobust", [](const Foption_t* a) -> double { return a->hRobust; });
-    t.method("hRobust", [](Foption_t* a) -> double { return a->hRobust; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:51:11
-    // signature to use in the veto list: Foption_t::hRobust
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding hRobust! methods to provide write access to the field hRobust (" __HERE__ ")");
-    t.method("hRobust!", [](Foption_t& a, double val) -> double { return a.hRobust = val; });
-
-    DEBUG_MSG("Adding hRobust! methods to provide write access to the field hRobust (" __HERE__ ")");
-    t.method("hRobust!", [](Foption_t* a, double val) -> double { return a->hRobust = val; });
-
-    DEBUG_MSG("Adding ExecPolicy methods  to provide read access to the field ExecPolicy (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:52:27
-    // signature to use in the veto list: Foption_t::ExecPolicy
-    t.method("ExecPolicy", [](const Foption_t& a) -> ROOT::EExecutionPolicy { return a.ExecPolicy; });
-    t.method("ExecPolicy", [](Foption_t& a) -> ROOT::EExecutionPolicy { return a.ExecPolicy; });
-    t.method("ExecPolicy", [](const Foption_t* a) -> ROOT::EExecutionPolicy { return a->ExecPolicy; });
-    t.method("ExecPolicy", [](Foption_t* a) -> ROOT::EExecutionPolicy { return a->ExecPolicy; });
-    // defined in /home/pgras/.julia/conda/3/include/Foption.h:52:27
-    // signature to use in the veto list: Foption_t::ExecPolicy
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding ExecPolicy! methods to provide write access to the field ExecPolicy (" __HERE__ ")");
-    t.method("ExecPolicy!", [](Foption_t& a, ROOT::EExecutionPolicy val) -> ROOT::EExecutionPolicy { return a.ExecPolicy = val; });
-
-    DEBUG_MSG("Adding ExecPolicy! methods to provide write access to the field ExecPolicy (" __HERE__ ")");
-    t.method("ExecPolicy!", [](Foption_t* a, ROOT::EExecutionPolicy val) -> ROOT::EExecutionPolicy { return a->ExecPolicy = val; });
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<Foption_t>> type_;
-};
-std::shared_ptr<Wrapper> newJlFoption_t(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlFoption_t(module));
 }

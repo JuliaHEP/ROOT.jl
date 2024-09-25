@@ -7,6 +7,661 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TGeoBatemanSol> : std::false_type { };
+  template<> struct DefaultConstructible<TGeoBatemanSol> : std::false_type { };
+template<> struct SuperType<TGeoBatemanSol> { typedef TObject type; };
+}
+
+// Class generating the wrapper for type TGeoBatemanSol
+// signature to use in the veto file: TGeoBatemanSol
+struct JlTGeoBatemanSol: public Wrapper {
+
+  JlTGeoBatemanSol(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TGeoBatemanSol (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:286:7
+    jlcxx::TypeWrapper<TGeoBatemanSol>  t = jlModule.add_type<TGeoBatemanSol>("TGeoBatemanSol",
+      jlcxx::julia_base_type<TObject>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoBatemanSol>>(new jlcxx::TypeWrapper<TGeoBatemanSol>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::TGeoBatemanSol(TGeoElementRN *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:316:4
+    t.constructor<TGeoElementRN *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::TGeoBatemanSol(const TObjArray *) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:317:4
+    t.constructor<const TObjArray *>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::TGeoBatemanSol(const TGeoBatemanSol &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:318:4
+    t.constructor<const TGeoBatemanSol &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for TGeoBatemanSol & TGeoBatemanSol::operator=(const TGeoBatemanSol &) (" __HERE__ ")");
+    // signature to use in the veto list: TGeoBatemanSol & TGeoBatemanSol::operator=(const TGeoBatemanSol &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:321:20
+    t.method("assign", static_cast<TGeoBatemanSol & (TGeoBatemanSol::*)(const TGeoBatemanSol &) >(&TGeoBatemanSol::operator=));
+
+    DEBUG_MSG("Adding wrapper for TGeoBatemanSol & TGeoBatemanSol::operator+=(const TGeoBatemanSol &) (" __HERE__ ")");
+    // signature to use in the veto list: TGeoBatemanSol & TGeoBatemanSol::operator+=(const TGeoBatemanSol &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:322:20
+    t.method("add!", static_cast<TGeoBatemanSol & (TGeoBatemanSol::*)(const TGeoBatemanSol &) >(&TGeoBatemanSol::operator+=));
+
+    DEBUG_MSG("Adding wrapper for Double_t TGeoBatemanSol::Concentration(Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: Double_t TGeoBatemanSol::Concentration(Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:324:13
+    t.method("Concentration", static_cast<Double_t (TGeoBatemanSol::*)(Double_t)  const>(&TGeoBatemanSol::Concentration));
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::Draw(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::Draw(Option_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:325:9
+    t.method("Draw", static_cast<void (TGeoBatemanSol::*)(Option_t *) >(&TGeoBatemanSol::Draw));
+    t.method("Draw", [](TGeoBatemanSol& a)->void { a.Draw(); });
+    t.method("Draw", [](TGeoBatemanSol* a)->void { a->Draw(); });
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::GetCoeff(Int_t, Double_t &, Double_t &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::GetCoeff(Int_t, Double_t &, Double_t &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:326:9
+    t.method("GetCoeff", static_cast<void (TGeoBatemanSol::*)(Int_t, Double_t &, Double_t &)  const>(&TGeoBatemanSol::GetCoeff));
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::GetRange(Double_t &, Double_t &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::GetRange(Double_t &, Double_t &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:331:9
+    t.method("GetRange", static_cast<void (TGeoBatemanSol::*)(Double_t &, Double_t &)  const>(&TGeoBatemanSol::GetRange));
+
+    DEBUG_MSG("Adding wrapper for TGeoElementRN * TGeoBatemanSol::GetElement() (" __HERE__ ")");
+    // signature to use in the veto list: TGeoElementRN * TGeoBatemanSol::GetElement()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:336:19
+    t.method("GetElement", static_cast<TGeoElementRN * (TGeoBatemanSol::*)()  const>(&TGeoBatemanSol::GetElement));
+
+    DEBUG_MSG("Adding wrapper for TGeoElementRN * TGeoBatemanSol::GetTopElement() (" __HERE__ ")");
+    // signature to use in the veto list: TGeoElementRN * TGeoBatemanSol::GetTopElement()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:337:19
+    t.method("GetTopElement", static_cast<TGeoElementRN * (TGeoBatemanSol::*)()  const>(&TGeoBatemanSol::GetTopElement));
+
+    DEBUG_MSG("Adding wrapper for Int_t TGeoBatemanSol::GetNcoeff() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TGeoBatemanSol::GetNcoeff()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:338:10
+    t.method("GetNcoeff", static_cast<Int_t (TGeoBatemanSol::*)()  const>(&TGeoBatemanSol::GetNcoeff));
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::Print(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::Print(Option_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:339:9
+    t.method("Print", static_cast<void (TGeoBatemanSol::*)(Option_t *)  const>(&TGeoBatemanSol::Print));
+    t.method("Print", [](TGeoBatemanSol const& a)->void { a.Print(); });
+    t.method("Print", [](TGeoBatemanSol const* a)->void { a->Print(); });
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::SetRange(Double_t, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::SetRange(Double_t, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:340:9
+    t.method("SetRange", static_cast<void (TGeoBatemanSol::*)(Double_t, Double_t) >(&TGeoBatemanSol::SetRange));
+    t.method("SetRange", [](TGeoBatemanSol& a)->void { a.SetRange(); });
+    t.method("SetRange", [](TGeoBatemanSol& a, Double_t arg0)->void { a.SetRange(arg0); });
+    t.method("SetRange", [](TGeoBatemanSol* a)->void { a->SetRange(); });
+    t.method("SetRange", [](TGeoBatemanSol* a, Double_t arg0)->void { a->SetRange(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::SetFactor(Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::SetFactor(Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:345:9
+    t.method("SetFactor", static_cast<void (TGeoBatemanSol::*)(Double_t) >(&TGeoBatemanSol::SetFactor));
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::FindSolution(const TObjArray *) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::FindSolution(const TObjArray *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:346:9
+    t.method("FindSolution", static_cast<void (TGeoBatemanSol::*)(const TObjArray *) >(&TGeoBatemanSol::FindSolution));
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::Normalize(Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::Normalize(Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:347:9
+    t.method("Normalize", static_cast<void (TGeoBatemanSol::*)(Double_t) >(&TGeoBatemanSol::Normalize));
+
+    DEBUG_MSG("Adding wrapper for Version_t TGeoBatemanSol::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TGeoBatemanSol::Class_Version()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!Class_Version", static_cast<Version_t (*)() >(&TGeoBatemanSol::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoBatemanSol::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoBatemanSol::IsA()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    t.method("IsA", static_cast<TClass * (TGeoBatemanSol::*)()  const>(&TGeoBatemanSol::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    t.method("StreamerNVirtual", static_cast<void (TGeoBatemanSol::*)(TBuffer &) >(&TGeoBatemanSol::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoBatemanSol::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoBatemanSol::DeclFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!DeclFileName", []() { return (std::string)TGeoBatemanSol::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TGeoBatemanSol::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoBatemanSol::ImplFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!ImplFileLine", static_cast<int (*)() >(&TGeoBatemanSol::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoBatemanSol::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoBatemanSol::ImplFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!ImplFileName", []() { return (std::string)TGeoBatemanSol::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoBatemanSol::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoBatemanSol::Class_Name()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!Class_Name", []() { return (std::string)TGeoBatemanSol::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoBatemanSol::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoBatemanSol::Dictionary()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!Dictionary", static_cast<TClass * (*)() >(&TGeoBatemanSol::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoBatemanSol::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoBatemanSol::Class()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!Class", static_cast<TClass * (*)() >(&TGeoBatemanSol::Class));
+
+    DEBUG_MSG("Adding wrapper for void TGeoBatemanSol::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoBatemanSol::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    t.method("Streamer", static_cast<void (TGeoBatemanSol::*)(TBuffer &) >(&TGeoBatemanSol::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TGeoBatemanSol::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoBatemanSol::DeclFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:349:4
+    module_.method("TGeoBatemanSol!DeclFileLine", static_cast<int (*)() >(&TGeoBatemanSol::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TGeoBatemanSol>> type_;
+};
+std::shared_ptr<Wrapper> newJlTGeoBatemanSol(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTGeoBatemanSol(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TGeoElemIter> : std::false_type { };
+  template<> struct DefaultConstructible<TGeoElemIter> : std::false_type { };
+}
+
+// Class generating the wrapper for type TGeoElemIter
+// signature to use in the veto file: TGeoElemIter
+struct JlTGeoElemIter: public Wrapper {
+
+  JlTGeoElemIter(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TGeoElemIter (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:358:7
+    jlcxx::TypeWrapper<TGeoElemIter>  t = jlModule.add_type<TGeoElemIter>("TGeoElemIter");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoElemIter>>(new jlcxx::TypeWrapper<TGeoElemIter>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+
+
+    DEBUG_MSG("Adding wrapper for void TGeoElemIter::TGeoElemIter(TGeoElementRN *, Double_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:373:4
+    t.constructor<TGeoElementRN *>(/*finalize=*/true);
+    t.constructor<TGeoElementRN *, Double_t>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TGeoElemIter::TGeoElemIter(const TGeoElemIter &) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:374:4
+    t.constructor<const TGeoElemIter &>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for TGeoElemIter & TGeoElemIter::operator=(const TGeoElemIter &) (" __HERE__ ")");
+    // signature to use in the veto list: TGeoElemIter & TGeoElemIter::operator=(const TGeoElemIter &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:377:18
+    t.method("assign", static_cast<TGeoElemIter & (TGeoElemIter::*)(const TGeoElemIter &) >(&TGeoElemIter::operator=));
+
+    DEBUG_MSG("Adding wrapper for TGeoElementRN * TGeoElemIter::operator()() (" __HERE__ ")");
+    // signature to use in the veto list: TGeoElementRN * TGeoElemIter::operator()()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:378:19
+    t.method("paren", static_cast<TGeoElementRN * (TGeoElemIter::*)() >(&TGeoElemIter::operator()));
+
+    DEBUG_MSG("Adding wrapper for TGeoElementRN * TGeoElemIter::Next() (" __HERE__ ")");
+    // signature to use in the veto list: TGeoElementRN * TGeoElemIter::Next()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:379:19
+    t.method("Next", static_cast<TGeoElementRN * (TGeoElemIter::*)() >(&TGeoElemIter::Next));
+
+    DEBUG_MSG("Adding wrapper for TObjArray * TGeoElemIter::GetBranch() (" __HERE__ ")");
+    // signature to use in the veto list: TObjArray * TGeoElemIter::GetBranch()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:381:15
+    t.method("GetBranch", static_cast<TObjArray * (TGeoElemIter::*)()  const>(&TGeoElemIter::GetBranch));
+
+    DEBUG_MSG("Adding wrapper for const TGeoElementRN * TGeoElemIter::GetTop() (" __HERE__ ")");
+    // signature to use in the veto list: const TGeoElementRN * TGeoElemIter::GetTop()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:382:25
+    t.method("GetTop", static_cast<const TGeoElementRN * (TGeoElemIter::*)()  const>(&TGeoElemIter::GetTop));
+
+    DEBUG_MSG("Adding wrapper for const TGeoElementRN * TGeoElemIter::GetElement() (" __HERE__ ")");
+    // signature to use in the veto list: const TGeoElementRN * TGeoElemIter::GetElement()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:383:25
+    t.method("GetElement", static_cast<const TGeoElementRN * (TGeoElemIter::*)()  const>(&TGeoElemIter::GetElement));
+
+    DEBUG_MSG("Adding wrapper for Int_t TGeoElemIter::GetLevel() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TGeoElemIter::GetLevel()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:384:10
+    t.method("GetLevel", static_cast<Int_t (TGeoElemIter::*)()  const>(&TGeoElemIter::GetLevel));
+
+    DEBUG_MSG("Adding wrapper for Double_t TGeoElemIter::GetRatio() (" __HERE__ ")");
+    // signature to use in the veto list: Double_t TGeoElemIter::GetRatio()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:385:13
+    t.method("GetRatio", static_cast<Double_t (TGeoElemIter::*)()  const>(&TGeoElemIter::GetRatio));
+
+    DEBUG_MSG("Adding wrapper for void TGeoElemIter::Print(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoElemIter::Print(Option_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:386:17
+    t.method("Print", static_cast<void (TGeoElemIter::*)(Option_t *)  const>(&TGeoElemIter::Print));
+    t.method("Print", [](TGeoElemIter const& a)->void { a.Print(); });
+    t.method("Print", [](TGeoElemIter const* a)->void { a->Print(); });
+
+    DEBUG_MSG("Adding wrapper for void TGeoElemIter::SetLimitRatio(Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoElemIter::SetLimitRatio(Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:387:9
+    t.method("SetLimitRatio", static_cast<void (TGeoElemIter::*)(Double_t) >(&TGeoElemIter::SetLimitRatio));
+
+    DEBUG_MSG("Adding wrapper for Version_t TGeoElemIter::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TGeoElemIter::Class_Version()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!Class_Version", static_cast<Version_t (*)() >(&TGeoElemIter::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoElemIter::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoElemIter::IsA()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    t.method("IsA", static_cast<TClass * (TGeoElemIter::*)()  const>(&TGeoElemIter::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TGeoElemIter::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoElemIter::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    t.method("StreamerNVirtual", static_cast<void (TGeoElemIter::*)(TBuffer &) >(&TGeoElemIter::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoElemIter::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoElemIter::DeclFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!DeclFileName", []() { return (std::string)TGeoElemIter::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TGeoElemIter::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoElemIter::ImplFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!ImplFileLine", static_cast<int (*)() >(&TGeoElemIter::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoElemIter::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoElemIter::ImplFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!ImplFileName", []() { return (std::string)TGeoElemIter::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoElemIter::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoElemIter::Class_Name()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!Class_Name", []() { return (std::string)TGeoElemIter::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoElemIter::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoElemIter::Dictionary()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!Dictionary", static_cast<TClass * (*)() >(&TGeoElemIter::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoElemIter::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoElemIter::Class()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!Class", static_cast<TClass * (*)() >(&TGeoElemIter::Class));
+
+    DEBUG_MSG("Adding wrapper for void TGeoElemIter::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoElemIter::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    t.method("Streamer", static_cast<void (TGeoElemIter::*)(TBuffer &) >(&TGeoElemIter::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TGeoElemIter::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoElemIter::DeclFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoElement.h:389:4
+    module_.method("TGeoElemIter!DeclFileLine", static_cast<int (*)() >(&TGeoElemIter::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TGeoElemIter>> type_;
+};
+std::shared_ptr<Wrapper> newJlTGeoElemIter(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTGeoElemIter(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TGeoExtension> : std::false_type { };
+  template<> struct DefaultConstructible<TGeoExtension> : std::false_type { };
+template<> struct SuperType<TGeoExtension> { typedef TObject type; };
+}
+
+// Class generating the wrapper for type TGeoExtension
+// signature to use in the veto file: TGeoExtension
+struct JlTGeoExtension: public Wrapper {
+
+  JlTGeoExtension(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TGeoExtension (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:17:7
+    jlcxx::TypeWrapper<TGeoExtension>  t = jlModule.add_type<TGeoExtension>("TGeoExtension",
+      jlcxx::julia_base_type<TObject>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoExtension>>(new jlcxx::TypeWrapper<TGeoExtension>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+
+    DEBUG_MSG("Adding wrapper for TGeoExtension * TGeoExtension::Grab() (" __HERE__ ")");
+    // signature to use in the veto list: TGeoExtension * TGeoExtension::Grab()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:25:27
+    t.method("Grab", static_cast<TGeoExtension * (TGeoExtension::*)() >(&TGeoExtension::Grab));
+
+    DEBUG_MSG("Adding wrapper for void TGeoExtension::Release() (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoExtension::Release()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:28:17
+    t.method("Release", static_cast<void (TGeoExtension::*)()  const>(&TGeoExtension::Release));
+
+    DEBUG_MSG("Adding wrapper for Version_t TGeoExtension::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TGeoExtension::Class_Version()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!Class_Version", static_cast<Version_t (*)() >(&TGeoExtension::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoExtension::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoExtension::IsA()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    t.method("IsA", static_cast<TClass * (TGeoExtension::*)()  const>(&TGeoExtension::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TGeoExtension::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoExtension::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    t.method("StreamerNVirtual", static_cast<void (TGeoExtension::*)(TBuffer &) >(&TGeoExtension::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoExtension::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoExtension::DeclFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!DeclFileName", []() { return (std::string)TGeoExtension::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TGeoExtension::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoExtension::ImplFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!ImplFileLine", static_cast<int (*)() >(&TGeoExtension::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoExtension::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoExtension::ImplFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!ImplFileName", []() { return (std::string)TGeoExtension::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoExtension::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoExtension::Class_Name()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!Class_Name", []() { return (std::string)TGeoExtension::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoExtension::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoExtension::Dictionary()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!Dictionary", static_cast<TClass * (*)() >(&TGeoExtension::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoExtension::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoExtension::Class()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!Class", static_cast<TClass * (*)() >(&TGeoExtension::Class));
+
+    DEBUG_MSG("Adding wrapper for void TGeoExtension::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoExtension::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    t.method("Streamer", static_cast<void (TGeoExtension::*)(TBuffer &) >(&TGeoExtension::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TGeoExtension::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoExtension::DeclFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoExtension.h:30:4
+    module_.method("TGeoExtension!DeclFileLine", static_cast<int (*)() >(&TGeoExtension::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TGeoExtension>> type_;
+};
+std::shared_ptr<Wrapper> newJlTGeoExtension(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTGeoExtension(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TGeoMixture> : std::false_type { };
+  template<> struct DefaultConstructible<TGeoMixture> : std::false_type { };
+template<> struct SuperType<TGeoMixture> { typedef TGeoMaterial type; };
+}
+
+// Class generating the wrapper for type TGeoMixture
+// signature to use in the veto file: TGeoMixture
+struct JlTGeoMixture: public Wrapper {
+
+  JlTGeoMixture(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TGeoMixture (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:159:7
+    jlcxx::TypeWrapper<TGeoMixture>  t = jlModule.add_type<TGeoMixture>("TGeoMixture",
+      jlcxx::julia_base_type<TGeoMaterial>());
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoMixture>>(new jlcxx::TypeWrapper<TGeoMixture>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::TGeoMixture(const char *, Int_t, Double_t) (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:177:4
+    t.constructor<const char *, Int_t>(/*finalize=*/true);
+    t.constructor<const char *, Int_t, Double_t>(/*finalize=*/true);
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::AddElement(Double_t, Double_t, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::AddElement(Double_t, Double_t, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:181:9
+    t.method("AddElement", static_cast<void (TGeoMixture::*)(Double_t, Double_t, Double_t) >(&TGeoMixture::AddElement));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::AddElement(TGeoMaterial *, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::AddElement(TGeoMaterial *, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:182:9
+    t.method("AddElement", static_cast<void (TGeoMixture::*)(TGeoMaterial *, Double_t) >(&TGeoMixture::AddElement));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::AddElement(TGeoElement *, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::AddElement(TGeoElement *, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:183:9
+    t.method("AddElement", static_cast<void (TGeoMixture::*)(TGeoElement *, Double_t) >(&TGeoMixture::AddElement));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::AddElement(TGeoElement *, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::AddElement(TGeoElement *, Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:184:9
+    t.method("AddElement", static_cast<void (TGeoMixture::*)(TGeoElement *, Int_t) >(&TGeoMixture::AddElement));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::DefineElement(Int_t, Double_t, Double_t, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::DefineElement(Int_t, Double_t, Double_t, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:186:9
+    t.method("DefineElement", static_cast<void (TGeoMixture::*)(Int_t, Double_t, Double_t, Double_t) >(&TGeoMixture::DefineElement));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::DefineElement(Int_t, TGeoElement *, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::DefineElement(Int_t, TGeoElement *, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:187:9
+    t.method("DefineElement", static_cast<void (TGeoMixture::*)(Int_t, TGeoElement *, Double_t) >(&TGeoMixture::DefineElement));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::DefineElement(Int_t, Int_t, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::DefineElement(Int_t, Int_t, Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:188:9
+    t.method("DefineElement", static_cast<void (TGeoMixture::*)(Int_t, Int_t, Int_t) >(&TGeoMixture::DefineElement));
+
+    DEBUG_MSG("Adding wrapper for TGeoMaterial * TGeoMixture::DecayMaterial(Double_t, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: TGeoMaterial * TGeoMixture::DecayMaterial(Double_t, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:190:18
+    t.method("DecayMaterial", static_cast<TGeoMaterial * (TGeoMixture::*)(Double_t, Double_t) >(&TGeoMixture::DecayMaterial));
+    t.method("DecayMaterial", [](TGeoMixture& a, Double_t arg0)->TGeoMaterial * { return a.DecayMaterial(arg0); });
+    t.method("DecayMaterial", [](TGeoMixture* a, Double_t arg0)->TGeoMaterial * { return a->DecayMaterial(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::FillMaterialEvolution(TObjArray *, Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::FillMaterialEvolution(TObjArray *, Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:191:9
+    t.method("FillMaterialEvolution", static_cast<void (TGeoMixture::*)(TObjArray *, Double_t) >(&TGeoMixture::FillMaterialEvolution));
+    t.method("FillMaterialEvolution", [](TGeoMixture& a, TObjArray * arg0)->void { a.FillMaterialEvolution(arg0); });
+    t.method("FillMaterialEvolution", [](TGeoMixture* a, TObjArray * arg0)->void { a->FillMaterialEvolution(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TGeoMixture::GetByteCount() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TGeoMixture::GetByteCount()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:193:10
+    t.method("GetByteCount", static_cast<Int_t (TGeoMixture::*)()  const>(&TGeoMixture::GetByteCount));
+
+    DEBUG_MSG("Adding wrapper for TGeoElement * TGeoMixture::GetElement(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: TGeoElement * TGeoMixture::GetElement(Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:194:17
+    t.method("GetElement", static_cast<TGeoElement * (TGeoMixture::*)(Int_t)  const>(&TGeoMixture::GetElement));
+    t.method("GetElement", [](TGeoMixture const& a)->TGeoElement * { return a.GetElement(); });
+    t.method("GetElement", [](TGeoMixture const* a)->TGeoElement * { return a->GetElement(); });
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::GetElementProp(Double_t &, Double_t &, Double_t &, Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::GetElementProp(Double_t &, Double_t &, Double_t &, Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:195:9
+    t.method("GetElementProp", static_cast<void (TGeoMixture::*)(Double_t &, Double_t &, Double_t &, Int_t) >(&TGeoMixture::GetElementProp));
+    t.method("GetElementProp", [](TGeoMixture& a, Double_t & arg0, Double_t & arg1, Double_t & arg2)->void { a.GetElementProp(arg0, arg1, arg2); });
+    t.method("GetElementProp", [](TGeoMixture* a, Double_t & arg0, Double_t & arg1, Double_t & arg2)->void { a->GetElementProp(arg0, arg1, arg2); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TGeoMixture::GetNelements() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TGeoMixture::GetNelements()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:201:10
+    t.method("GetNelements", static_cast<Int_t (TGeoMixture::*)()  const>(&TGeoMixture::GetNelements));
+
+    DEBUG_MSG("Adding wrapper for Double_t * TGeoMixture::GetZmixt() (" __HERE__ ")");
+    // signature to use in the veto list: Double_t * TGeoMixture::GetZmixt()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:202:14
+    t.method("GetZmixt", static_cast<Double_t * (TGeoMixture::*)()  const>(&TGeoMixture::GetZmixt));
+
+    DEBUG_MSG("Adding wrapper for Double_t * TGeoMixture::GetAmixt() (" __HERE__ ")");
+    // signature to use in the veto list: Double_t * TGeoMixture::GetAmixt()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:203:14
+    t.method("GetAmixt", static_cast<Double_t * (TGeoMixture::*)()  const>(&TGeoMixture::GetAmixt));
+
+    DEBUG_MSG("Adding wrapper for Double_t * TGeoMixture::GetWmixt() (" __HERE__ ")");
+    // signature to use in the veto list: Double_t * TGeoMixture::GetWmixt()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:204:14
+    t.method("GetWmixt", static_cast<Double_t * (TGeoMixture::*)()  const>(&TGeoMixture::GetWmixt));
+
+    DEBUG_MSG("Adding wrapper for Int_t * TGeoMixture::GetNmixt() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t * TGeoMixture::GetNmixt()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:205:11
+    t.method("GetNmixt", static_cast<Int_t * (TGeoMixture::*)()  const>(&TGeoMixture::GetNmixt));
+
+    DEBUG_MSG("Adding wrapper for Double_t TGeoMixture::GetSpecificActivity(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Double_t TGeoMixture::GetSpecificActivity(Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:206:13
+    t.method("GetSpecificActivity", static_cast<Double_t (TGeoMixture::*)(Int_t)  const>(&TGeoMixture::GetSpecificActivity));
+    t.method("GetSpecificActivity", [](TGeoMixture const& a)->Double_t { return a.GetSpecificActivity(); });
+    t.method("GetSpecificActivity", [](TGeoMixture const* a)->Double_t { return a->GetSpecificActivity(); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TGeoMixture::IsEq(const TGeoMaterial *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TGeoMixture::IsEq(const TGeoMaterial *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:208:11
+    t.method("IsEq", static_cast<Bool_t (TGeoMixture::*)(const TGeoMaterial *)  const>(&TGeoMixture::IsEq));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TGeoMixture::IsMixture() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TGeoMixture::IsMixture()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:209:11
+    t.method("IsMixture", static_cast<Bool_t (TGeoMixture::*)()  const>(&TGeoMixture::IsMixture));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::Print(const Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::Print(const Option_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:210:9
+    t.method("Print", static_cast<void (TGeoMixture::*)(const Option_t *)  const>(&TGeoMixture::Print));
+    t.method("Print", [](TGeoMixture const& a)->void { a.Print(); });
+    t.method("Print", [](TGeoMixture const* a)->void { a->Print(); });
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::SetA(Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::SetA(Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:212:9
+    t.method("SetA", static_cast<void (TGeoMixture::*)(Double_t) >(&TGeoMixture::SetA));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::SetZ(Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::SetZ(Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:213:9
+    t.method("SetZ", static_cast<void (TGeoMixture::*)(Double_t) >(&TGeoMixture::SetZ));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::SetDensity(Double_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::SetDensity(Double_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:214:9
+    t.method("SetDensity", static_cast<void (TGeoMixture::*)(Double_t) >(&TGeoMixture::SetDensity));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::ComputeDerivedQuantities() (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::ComputeDerivedQuantities()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:219:9
+    t.method("ComputeDerivedQuantities", static_cast<void (TGeoMixture::*)() >(&TGeoMixture::ComputeDerivedQuantities));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::ComputeRadiationLength() (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::ComputeRadiationLength()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:220:9
+    t.method("ComputeRadiationLength", static_cast<void (TGeoMixture::*)() >(&TGeoMixture::ComputeRadiationLength));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::ComputeNuclearInterLength() (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::ComputeNuclearInterLength()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:221:9
+    t.method("ComputeNuclearInterLength", static_cast<void (TGeoMixture::*)() >(&TGeoMixture::ComputeNuclearInterLength));
+
+    DEBUG_MSG("Adding wrapper for Version_t TGeoMixture::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TGeoMixture::Class_Version()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!Class_Version", static_cast<Version_t (*)() >(&TGeoMixture::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoMixture::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoMixture::IsA()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    t.method("IsA", static_cast<TClass * (TGeoMixture::*)()  const>(&TGeoMixture::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    t.method("StreamerNVirtual", static_cast<void (TGeoMixture::*)(TBuffer &) >(&TGeoMixture::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoMixture::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoMixture::DeclFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!DeclFileName", []() { return (std::string)TGeoMixture::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TGeoMixture::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoMixture::ImplFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!ImplFileLine", static_cast<int (*)() >(&TGeoMixture::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoMixture::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoMixture::ImplFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!ImplFileName", []() { return (std::string)TGeoMixture::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TGeoMixture::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TGeoMixture::Class_Name()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!Class_Name", []() { return (std::string)TGeoMixture::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoMixture::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoMixture::Dictionary()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!Dictionary", static_cast<TClass * (*)() >(&TGeoMixture::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TGeoMixture::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TGeoMixture::Class()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!Class", static_cast<TClass * (*)() >(&TGeoMixture::Class));
+
+    DEBUG_MSG("Adding wrapper for void TGeoMixture::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TGeoMixture::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    t.method("Streamer", static_cast<void (TGeoMixture::*)(TBuffer &) >(&TGeoMixture::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TGeoMixture::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TGeoMixture::DeclFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoMaterial.h:223:4
+    module_.method("TGeoMixture!DeclFileLine", static_cast<int (*)() >(&TGeoMixture::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TGeoMixture>> type_;
+};
+std::shared_ptr<Wrapper> newJlTGeoMixture(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTGeoMixture(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TGeoPatternFinder> : std::false_type { };
   template<> struct DefaultConstructible<TGeoPatternFinder> : std::false_type { };
 template<> struct SuperType<TGeoPatternFinder> { typedef TObject type; };
@@ -18,7 +673,7 @@ struct JlTGeoPatternFinder: public Wrapper {
 
   JlTGeoPatternFinder(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TGeoPatternFinder (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:31:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:31:7
     jlcxx::TypeWrapper<TGeoPatternFinder>  t = jlModule.add_type<TGeoPatternFinder>("TGeoPatternFinder",
       jlcxx::julia_base_type<TObject>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoPatternFinder>>(new jlcxx::TypeWrapper<TGeoPatternFinder>(jlModule, t));
@@ -29,214 +684,214 @@ struct JlTGeoPatternFinder: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for TGeoPatternFinder::ThreadData_t & TGeoPatternFinder::GetThreadData() (" __HERE__ ")");
     // signature to use in the veto list: TGeoPatternFinder::ThreadData_t & TGeoPatternFinder::GetThreadData()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:45:18
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:45:18
     t.method("GetThreadData", static_cast<TGeoPatternFinder::ThreadData_t & (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetThreadData));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::ClearThreadData() (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::ClearThreadData()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:46:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:46:9
     t.method("ClearThreadData", static_cast<void (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::ClearThreadData));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::CreateThreadData(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::CreateThreadData(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:47:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:47:9
     t.method("CreateThreadData", static_cast<void (TGeoPatternFinder::*)(Int_t) >(&TGeoPatternFinder::CreateThreadData));
 
 
     DEBUG_MSG("Adding wrapper for TGeoMatrix * TGeoPatternFinder::CreateMatrix() (" __HERE__ ")");
     // signature to use in the veto list: TGeoMatrix * TGeoPatternFinder::CreateMatrix()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:73:24
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:73:24
     t.method("CreateMatrix", static_cast<TGeoMatrix * (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::CreateMatrix));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::cd(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::cd(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:74:17
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:74:17
     t.method("cd", static_cast<void (TGeoPatternFinder::*)(Int_t) >(&TGeoPatternFinder::cd));
 
     DEBUG_MSG("Adding wrapper for TGeoNode * TGeoPatternFinder::CdNext() (" __HERE__ ")");
     // signature to use in the veto list: TGeoNode * TGeoPatternFinder::CdNext()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:75:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:75:22
     t.method("CdNext", static_cast<TGeoNode * (TGeoPatternFinder::*)() >(&TGeoPatternFinder::CdNext));
 
     DEBUG_MSG("Adding wrapper for TGeoNode * TGeoPatternFinder::FindNode(Double_t *, const Double_t *) (" __HERE__ ")");
     // signature to use in the veto list: TGeoNode * TGeoPatternFinder::FindNode(Double_t *, const Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:76:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:76:22
     t.method("FindNode", static_cast<TGeoNode * (TGeoPatternFinder::*)(Double_t *, const Double_t *) >(&TGeoPatternFinder::FindNode));
     t.method("FindNode", [](TGeoPatternFinder& a, Double_t * arg0)->TGeoNode * { return a.FindNode(arg0); });
     t.method("FindNode", [](TGeoPatternFinder* a, Double_t * arg0)->TGeoNode * { return a->FindNode(arg0); });
 
     DEBUG_MSG("Adding wrapper for Int_t TGeoPatternFinder::GetByteCount() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TGeoPatternFinder::GetByteCount()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:77:18
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:77:18
     t.method("GetByteCount", static_cast<Int_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetByteCount));
 
     DEBUG_MSG("Adding wrapper for Int_t TGeoPatternFinder::GetCurrent() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TGeoPatternFinder::GetCurrent()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:78:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:78:10
     t.method("GetCurrent", static_cast<Int_t (TGeoPatternFinder::*)() >(&TGeoPatternFinder::GetCurrent));
 
     DEBUG_MSG("Adding wrapper for Int_t TGeoPatternFinder::GetDivIndex() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TGeoPatternFinder::GetDivIndex()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:79:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:79:10
     t.method("GetDivIndex", static_cast<Int_t (TGeoPatternFinder::*)() >(&TGeoPatternFinder::GetDivIndex));
 
     DEBUG_MSG("Adding wrapper for Int_t TGeoPatternFinder::GetDivAxis() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TGeoPatternFinder::GetDivAxis()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:80:18
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:80:18
     t.method("GetDivAxis", static_cast<Int_t (TGeoPatternFinder::*)() >(&TGeoPatternFinder::GetDivAxis));
 
     DEBUG_MSG("Adding wrapper for TGeoMatrix * TGeoPatternFinder::GetMatrix() (" __HERE__ ")");
     // signature to use in the veto list: TGeoMatrix * TGeoPatternFinder::GetMatrix()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:81:24
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:81:24
     t.method("GetMatrix", static_cast<TGeoMatrix * (TGeoPatternFinder::*)() >(&TGeoPatternFinder::GetMatrix));
 
     DEBUG_MSG("Adding wrapper for Int_t TGeoPatternFinder::GetNdiv() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TGeoPatternFinder::GetNdiv()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:82:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:82:10
     t.method("GetNdiv", static_cast<Int_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetNdiv));
 
     DEBUG_MSG("Adding wrapper for Int_t TGeoPatternFinder::GetNext() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TGeoPatternFinder::GetNext()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:83:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:83:10
     t.method("GetNext", static_cast<Int_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetNext));
 
     DEBUG_MSG("Adding wrapper for TGeoNode * TGeoPatternFinder::GetNodeOffset(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: TGeoNode * TGeoPatternFinder::GetNodeOffset(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:84:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:84:14
     t.method("GetNodeOffset", static_cast<TGeoNode * (TGeoPatternFinder::*)(Int_t) >(&TGeoPatternFinder::GetNodeOffset));
 
     DEBUG_MSG("Adding wrapper for Double_t TGeoPatternFinder::GetStart() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TGeoPatternFinder::GetStart()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:85:13
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:85:13
     t.method("GetStart", static_cast<Double_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetStart));
 
     DEBUG_MSG("Adding wrapper for Double_t TGeoPatternFinder::GetStep() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TGeoPatternFinder::GetStep()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:86:13
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:86:13
     t.method("GetStep", static_cast<Double_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetStep));
 
     DEBUG_MSG("Adding wrapper for Double_t TGeoPatternFinder::GetEnd() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TGeoPatternFinder::GetEnd()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:87:13
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:87:13
     t.method("GetEnd", static_cast<Double_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetEnd));
 
     DEBUG_MSG("Adding wrapper for TGeoVolume * TGeoPatternFinder::GetVolume() (" __HERE__ ")");
     // signature to use in the veto list: TGeoVolume * TGeoPatternFinder::GetVolume()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:88:16
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:88:16
     t.method("GetVolume", static_cast<TGeoVolume * (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::GetVolume));
 
     DEBUG_MSG("Adding wrapper for Bool_t TGeoPatternFinder::IsOnBoundary(const Double_t *) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TGeoPatternFinder::IsOnBoundary(const Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:89:19
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:89:19
     t.method("IsOnBoundary", static_cast<Bool_t (TGeoPatternFinder::*)(const Double_t *)  const>(&TGeoPatternFinder::IsOnBoundary));
 
     DEBUG_MSG("Adding wrapper for Bool_t TGeoPatternFinder::IsReflected() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TGeoPatternFinder::IsReflected()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:90:11
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:90:11
     t.method("IsReflected", static_cast<Bool_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::IsReflected));
 
     DEBUG_MSG("Adding wrapper for Bool_t TGeoPatternFinder::IsSpacedOut() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TGeoPatternFinder::IsSpacedOut()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:91:11
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:91:11
     t.method("IsSpacedOut", static_cast<Bool_t (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::IsSpacedOut));
 
     DEBUG_MSG("Adding wrapper for TGeoPatternFinder * TGeoPatternFinder::MakeCopy(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: TGeoPatternFinder * TGeoPatternFinder::MakeCopy(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:92:31
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:92:31
     t.method("MakeCopy", static_cast<TGeoPatternFinder * (TGeoPatternFinder::*)(Bool_t) >(&TGeoPatternFinder::MakeCopy));
     t.method("MakeCopy", [](TGeoPatternFinder& a)->TGeoPatternFinder * { return a.MakeCopy(); });
     t.method("MakeCopy", [](TGeoPatternFinder* a)->TGeoPatternFinder * { return a->MakeCopy(); });
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::Reflect(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::Reflect(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:93:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:93:9
     t.method("Reflect", static_cast<void (TGeoPatternFinder::*)(Bool_t) >(&TGeoPatternFinder::Reflect));
     t.method("Reflect", [](TGeoPatternFinder& a)->void { a.Reflect(); });
     t.method("Reflect", [](TGeoPatternFinder* a)->void { a->Reflect(); });
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::SetDivIndex(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::SetDivIndex(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:94:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:94:9
     t.method("SetDivIndex", static_cast<void (TGeoPatternFinder::*)(Int_t) >(&TGeoPatternFinder::SetDivIndex));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::SetNext(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::SetNext(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:95:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:95:9
     t.method("SetNext", static_cast<void (TGeoPatternFinder::*)(Int_t) >(&TGeoPatternFinder::SetNext));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::SetRange(Double_t, Double_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::SetRange(Double_t, Double_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:96:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:96:9
     t.method("SetRange", static_cast<void (TGeoPatternFinder::*)(Double_t, Double_t, Int_t) >(&TGeoPatternFinder::SetRange));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::SetSpacedOut(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::SetSpacedOut(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:97:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:97:9
     t.method("SetSpacedOut", static_cast<void (TGeoPatternFinder::*)(Bool_t) >(&TGeoPatternFinder::SetSpacedOut));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::SetVolume(TGeoVolume *) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::SetVolume(TGeoVolume *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:98:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:98:9
     t.method("SetVolume", static_cast<void (TGeoPatternFinder::*)(TGeoVolume *) >(&TGeoPatternFinder::SetVolume));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::UpdateMatrix(Int_t, TGeoHMatrix &) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::UpdateMatrix(Int_t, TGeoHMatrix &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:99:17
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:99:17
     t.method("UpdateMatrix", static_cast<void (TGeoPatternFinder::*)(Int_t, TGeoHMatrix &)  const>(&TGeoPatternFinder::UpdateMatrix));
 
     DEBUG_MSG("Adding wrapper for Version_t TGeoPatternFinder::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TGeoPatternFinder::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!Class_Version", static_cast<Version_t (*)() >(&TGeoPatternFinder::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TGeoPatternFinder::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TGeoPatternFinder::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     t.method("IsA", static_cast<TClass * (TGeoPatternFinder::*)()  const>(&TGeoPatternFinder::IsA));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     t.method("StreamerNVirtual", static_cast<void (TGeoPatternFinder::*)(TBuffer &) >(&TGeoPatternFinder::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TGeoPatternFinder::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TGeoPatternFinder::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!DeclFileName", []() { return (std::string)TGeoPatternFinder::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TGeoPatternFinder::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TGeoPatternFinder::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!ImplFileLine", static_cast<int (*)() >(&TGeoPatternFinder::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TGeoPatternFinder::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TGeoPatternFinder::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!ImplFileName", []() { return (std::string)TGeoPatternFinder::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TGeoPatternFinder::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TGeoPatternFinder::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!Class_Name", []() { return (std::string)TGeoPatternFinder::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TGeoPatternFinder::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TGeoPatternFinder::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!Dictionary", static_cast<TClass * (*)() >(&TGeoPatternFinder::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TGeoPatternFinder::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TGeoPatternFinder::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!Class", static_cast<TClass * (*)() >(&TGeoPatternFinder::Class));
 
     DEBUG_MSG("Adding wrapper for void TGeoPatternFinder::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TGeoPatternFinder::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     t.method("Streamer", static_cast<void (TGeoPatternFinder::*)(TBuffer &) >(&TGeoPatternFinder::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TGeoPatternFinder::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TGeoPatternFinder::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TGeoPatternFinder.h:101:4
     module_.method("TGeoPatternFinder!DeclFileLine", static_cast<int (*)() >(&TGeoPatternFinder::DeclFileLine));
   }
 
@@ -245,477 +900,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTGeoPatternFinder(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTGeoPatternFinder(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TGeoVoxelFinder> : std::false_type { };
-  template<> struct DefaultConstructible<TGeoVoxelFinder> : std::false_type { };
-template<> struct SuperType<TGeoVoxelFinder> { typedef TObject type; };
-}
-
-// Class generating the wrapper for type TGeoVoxelFinder
-// signature to use in the veto file: TGeoVoxelFinder
-struct JlTGeoVoxelFinder: public Wrapper {
-
-  JlTGeoVoxelFinder(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TGeoVoxelFinder (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:20:7
-    jlcxx::TypeWrapper<TGeoVoxelFinder>  t = jlModule.add_type<TGeoVoxelFinder>("TGeoVoxelFinder",
-      jlcxx::julia_base_type<TObject>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoVoxelFinder>>(new jlcxx::TypeWrapper<TGeoVoxelFinder>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::TGeoVoxelFinder(TGeoVolume *) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:92:4
-    t.constructor<TGeoVolume *>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::DaughterToMother(Int_t, const Double_t *, Double_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::DaughterToMother(Int_t, const Double_t *, Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:94:9
-    t.method("DaughterToMother", static_cast<void (TGeoVoxelFinder::*)(Int_t, const Double_t *, Double_t *)  const>(&TGeoVoxelFinder::DaughterToMother));
-
-    DEBUG_MSG("Adding wrapper for Double_t TGeoVoxelFinder::Efficiency() (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TGeoVoxelFinder::Efficiency()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:95:21
-    t.method("Efficiency", static_cast<Double_t (TGeoVoxelFinder::*)() >(&TGeoVoxelFinder::Efficiency));
-
-    DEBUG_MSG("Adding wrapper for Int_t * TGeoVoxelFinder::GetCheckList(const Double_t *, Int_t &, TGeoStateInfo &) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t * TGeoVoxelFinder::GetCheckList(const Double_t *, Int_t &, TGeoStateInfo &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:96:19
-    t.method("GetCheckList", static_cast<Int_t * (TGeoVoxelFinder::*)(const Double_t *, Int_t &, TGeoStateInfo &) >(&TGeoVoxelFinder::GetCheckList));
-
-    DEBUG_MSG("Adding wrapper for Int_t * TGeoVoxelFinder::GetCheckList(Int_t &, TGeoStateInfo &) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t * TGeoVoxelFinder::GetCheckList(Int_t &, TGeoStateInfo &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:97:11
-    t.method("GetCheckList", static_cast<Int_t * (TGeoVoxelFinder::*)(Int_t &, TGeoStateInfo &)  const>(&TGeoVoxelFinder::GetCheckList));
-
-    DEBUG_MSG("Adding wrapper for Int_t * TGeoVoxelFinder::GetNextCandidates(const Double_t *, Int_t &, TGeoStateInfo &) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t * TGeoVoxelFinder::GetNextCandidates(const Double_t *, Int_t &, TGeoStateInfo &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:98:19
-    t.method("GetNextCandidates", static_cast<Int_t * (TGeoVoxelFinder::*)(const Double_t *, Int_t &, TGeoStateInfo &) >(&TGeoVoxelFinder::GetNextCandidates));
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::FindOverlaps(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::FindOverlaps(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:99:17
-    t.method("FindOverlaps", static_cast<void (TGeoVoxelFinder::*)(Int_t)  const>(&TGeoVoxelFinder::FindOverlaps));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TGeoVoxelFinder::IsInvalid() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TGeoVoxelFinder::IsInvalid()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:100:11
-    t.method("IsInvalid", static_cast<Bool_t (TGeoVoxelFinder::*)()  const>(&TGeoVoxelFinder::IsInvalid));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TGeoVoxelFinder::NeedRebuild() (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TGeoVoxelFinder::NeedRebuild()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:101:11
-    t.method("NeedRebuild", static_cast<Bool_t (TGeoVoxelFinder::*)()  const>(&TGeoVoxelFinder::NeedRebuild));
-
-    DEBUG_MSG("Adding wrapper for Double_t * TGeoVoxelFinder::GetBoxes() (" __HERE__ ")");
-    // signature to use in the veto list: Double_t * TGeoVoxelFinder::GetBoxes()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:102:14
-    t.method("GetBoxes", static_cast<Double_t * (TGeoVoxelFinder::*)()  const>(&TGeoVoxelFinder::GetBoxes));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TGeoVoxelFinder::IsSafeVoxel(const Double_t *, Int_t, Double_t) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TGeoVoxelFinder::IsSafeVoxel(const Double_t *, Int_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:103:11
-    t.method("IsSafeVoxel", static_cast<Bool_t (TGeoVoxelFinder::*)(const Double_t *, Int_t, Double_t)  const>(&TGeoVoxelFinder::IsSafeVoxel));
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::Print(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::Print(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:104:9
-    t.method("Print", static_cast<void (TGeoVoxelFinder::*)(Option_t *)  const>(&TGeoVoxelFinder::Print));
-    t.method("Print", [](TGeoVoxelFinder const& a)->void { a.Print(); });
-    t.method("Print", [](TGeoVoxelFinder const* a)->void { a->Print(); });
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::PrintVoxelLimits(const Double_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::PrintVoxelLimits(const Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:105:9
-    t.method("PrintVoxelLimits", static_cast<void (TGeoVoxelFinder::*)(const Double_t *)  const>(&TGeoVoxelFinder::PrintVoxelLimits));
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::SetInvalid(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::SetInvalid(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:106:9
-    t.method("SetInvalid", static_cast<void (TGeoVoxelFinder::*)(Bool_t) >(&TGeoVoxelFinder::SetInvalid));
-    t.method("SetInvalid", [](TGeoVoxelFinder& a)->void { a.SetInvalid(); });
-    t.method("SetInvalid", [](TGeoVoxelFinder* a)->void { a->SetInvalid(); });
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::SetNeedRebuild(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::SetNeedRebuild(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:107:9
-    t.method("SetNeedRebuild", static_cast<void (TGeoVoxelFinder::*)(Bool_t) >(&TGeoVoxelFinder::SetNeedRebuild));
-    t.method("SetNeedRebuild", [](TGeoVoxelFinder& a)->void { a.SetNeedRebuild(); });
-    t.method("SetNeedRebuild", [](TGeoVoxelFinder* a)->void { a->SetNeedRebuild(); });
-
-    DEBUG_MSG("Adding wrapper for Int_t * TGeoVoxelFinder::GetNextVoxel(const Double_t *, const Double_t *, Int_t &, TGeoStateInfo &) (" __HERE__ ")");
-    // signature to use in the veto list: Int_t * TGeoVoxelFinder::GetNextVoxel(const Double_t *, const Double_t *, Int_t &, TGeoStateInfo &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:108:19
-    t.method("GetNextVoxel", static_cast<Int_t * (TGeoVoxelFinder::*)(const Double_t *, const Double_t *, Int_t &, TGeoStateInfo &) >(&TGeoVoxelFinder::GetNextVoxel));
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::SortCrossedVoxels(const Double_t *, const Double_t *, TGeoStateInfo &) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::SortCrossedVoxels(const Double_t *, const Double_t *, TGeoStateInfo &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:109:17
-    t.method("SortCrossedVoxels", static_cast<void (TGeoVoxelFinder::*)(const Double_t *, const Double_t *, TGeoStateInfo &) >(&TGeoVoxelFinder::SortCrossedVoxels));
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::Voxelize(Option_t *) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::Voxelize(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:110:17
-    t.method("Voxelize", static_cast<void (TGeoVoxelFinder::*)(Option_t *) >(&TGeoVoxelFinder::Voxelize));
-    t.method("Voxelize", [](TGeoVoxelFinder& a)->void { a.Voxelize(); });
-    t.method("Voxelize", [](TGeoVoxelFinder* a)->void { a->Voxelize(); });
-
-    DEBUG_MSG("Adding wrapper for Version_t TGeoVoxelFinder::Class_Version() (" __HERE__ ")");
-    // signature to use in the veto list: Version_t TGeoVoxelFinder::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!Class_Version", static_cast<Version_t (*)() >(&TGeoVoxelFinder::Class_Version));
-
-    DEBUG_MSG("Adding wrapper for TClass * TGeoVoxelFinder::IsA() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TGeoVoxelFinder::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    t.method("IsA", static_cast<TClass * (TGeoVoxelFinder::*)()  const>(&TGeoVoxelFinder::IsA));
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    t.method("StreamerNVirtual", static_cast<void (TGeoVoxelFinder::*)(TBuffer &) >(&TGeoVoxelFinder::StreamerNVirtual));
-
-    DEBUG_MSG("Adding wrapper for const char * TGeoVoxelFinder::DeclFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TGeoVoxelFinder::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!DeclFileName", []() { return (std::string)TGeoVoxelFinder::DeclFileName(); });
-
-    DEBUG_MSG("Adding wrapper for int TGeoVoxelFinder::ImplFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TGeoVoxelFinder::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!ImplFileLine", static_cast<int (*)() >(&TGeoVoxelFinder::ImplFileLine));
-
-    DEBUG_MSG("Adding wrapper for const char * TGeoVoxelFinder::ImplFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TGeoVoxelFinder::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!ImplFileName", []() { return (std::string)TGeoVoxelFinder::ImplFileName(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TGeoVoxelFinder::Class_Name() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TGeoVoxelFinder::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!Class_Name", []() { return (std::string)TGeoVoxelFinder::Class_Name(); });
-
-    DEBUG_MSG("Adding wrapper for TClass * TGeoVoxelFinder::Dictionary() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TGeoVoxelFinder::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!Dictionary", static_cast<TClass * (*)() >(&TGeoVoxelFinder::Dictionary));
-
-    DEBUG_MSG("Adding wrapper for TClass * TGeoVoxelFinder::Class() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TGeoVoxelFinder::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!Class", static_cast<TClass * (*)() >(&TGeoVoxelFinder::Class));
-
-    DEBUG_MSG("Adding wrapper for void TGeoVoxelFinder::Streamer(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoVoxelFinder::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    t.method("Streamer", static_cast<void (TGeoVoxelFinder::*)(TBuffer &) >(&TGeoVoxelFinder::Streamer));
-
-    DEBUG_MSG("Adding wrapper for int TGeoVoxelFinder::DeclFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TGeoVoxelFinder::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVoxelFinder.h:112:4
-    module_.method("TGeoVoxelFinder!DeclFileLine", static_cast<int (*)() >(&TGeoVoxelFinder::DeclFileLine));
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TGeoVoxelFinder>> type_;
-};
-std::shared_ptr<Wrapper> newJlTGeoVoxelFinder(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTGeoVoxelFinder(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TGeoVolumeAssembly::ThreadData_t> : std::false_type { };
-  template<> struct DefaultConstructible<TGeoVolumeAssembly::ThreadData_t> : std::false_type { };
-}
-
-// Class generating the wrapper for type TGeoVolumeAssembly::ThreadData_t
-// signature to use in the veto file: TGeoVolumeAssembly::ThreadData_t
-struct JlTGeoVolumeAssembly_ThreadData_t: public Wrapper {
-
-  JlTGeoVolumeAssembly_ThreadData_t(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TGeoVolumeAssembly::ThreadData_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVolume.h:318:11
-    jlcxx::TypeWrapper<TGeoVolumeAssembly::ThreadData_t>  t = jlModule.add_type<TGeoVolumeAssembly::ThreadData_t>("TGeoVolumeAssembly!ThreadData_t");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoVolumeAssembly::ThreadData_t>>(new jlcxx::TypeWrapper<TGeoVolumeAssembly::ThreadData_t>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding fCurrent methods  to provide read access to the field fCurrent (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVolume.h:319:13
-    // signature to use in the veto list: TGeoVolumeAssembly::ThreadData_t::fCurrent
-    t.method("fCurrent", [](const TGeoVolumeAssembly::ThreadData_t& a) -> Int_t { return a.fCurrent; });
-    t.method("fCurrent", [](TGeoVolumeAssembly::ThreadData_t& a) -> Int_t { return a.fCurrent; });
-    t.method("fCurrent", [](const TGeoVolumeAssembly::ThreadData_t* a) -> Int_t { return a->fCurrent; });
-    t.method("fCurrent", [](TGeoVolumeAssembly::ThreadData_t* a) -> Int_t { return a->fCurrent; });
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVolume.h:319:13
-    // signature to use in the veto list: TGeoVolumeAssembly::ThreadData_t::fCurrent
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fCurrent! methods to provide write access to the field fCurrent (" __HERE__ ")");
-    t.method("fCurrent!", [](TGeoVolumeAssembly::ThreadData_t& a, Int_t val) -> Int_t { return a.fCurrent = val; });
-
-    DEBUG_MSG("Adding fCurrent! methods to provide write access to the field fCurrent (" __HERE__ ")");
-    t.method("fCurrent!", [](TGeoVolumeAssembly::ThreadData_t* a, Int_t val) -> Int_t { return a->fCurrent = val; });
-
-    DEBUG_MSG("Adding fNext methods  to provide read access to the field fNext (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVolume.h:320:13
-    // signature to use in the veto list: TGeoVolumeAssembly::ThreadData_t::fNext
-    t.method("fNext", [](const TGeoVolumeAssembly::ThreadData_t& a) -> Int_t { return a.fNext; });
-    t.method("fNext", [](TGeoVolumeAssembly::ThreadData_t& a) -> Int_t { return a.fNext; });
-    t.method("fNext", [](const TGeoVolumeAssembly::ThreadData_t* a) -> Int_t { return a->fNext; });
-    t.method("fNext", [](TGeoVolumeAssembly::ThreadData_t* a) -> Int_t { return a->fNext; });
-    // defined in /home/pgras/.julia/conda/3/include/TGeoVolume.h:320:13
-    // signature to use in the veto list: TGeoVolumeAssembly::ThreadData_t::fNext
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fNext! methods to provide write access to the field fNext (" __HERE__ ")");
-    t.method("fNext!", [](TGeoVolumeAssembly::ThreadData_t& a, Int_t val) -> Int_t { return a.fNext = val; });
-
-    DEBUG_MSG("Adding fNext! methods to provide write access to the field fNext (" __HERE__ ")");
-    t.method("fNext!", [](TGeoVolumeAssembly::ThreadData_t* a, Int_t val) -> Int_t { return a->fNext = val; });
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TGeoVolumeAssembly::ThreadData_t>> type_;
-};
-std::shared_ptr<Wrapper> newJlTGeoVolumeAssembly_ThreadData_t(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTGeoVolumeAssembly_ThreadData_t(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TGeoPatternFinder::ThreadData_t> : std::false_type { };
-  template<> struct DefaultConstructible<TGeoPatternFinder::ThreadData_t> : std::false_type { };
-}
-
-// Class generating the wrapper for type TGeoPatternFinder::ThreadData_t
-// signature to use in the veto file: TGeoPatternFinder::ThreadData_t
-struct JlTGeoPatternFinder_ThreadData_t: public Wrapper {
-
-  JlTGeoPatternFinder_ThreadData_t(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TGeoPatternFinder::ThreadData_t (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:33:11
-    jlcxx::TypeWrapper<TGeoPatternFinder::ThreadData_t>  t = jlModule.add_type<TGeoPatternFinder::ThreadData_t>("TGeoPatternFinder!ThreadData_t");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoPatternFinder::ThreadData_t>>(new jlcxx::TypeWrapper<TGeoPatternFinder::ThreadData_t>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding fMatrix methods  to provide read access to the field fMatrix (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:34:19
-    // signature to use in the veto list: TGeoPatternFinder::ThreadData_t::fMatrix
-    t.method("fMatrix", [](const TGeoPatternFinder::ThreadData_t& a) -> TGeoMatrix * { return a.fMatrix; });
-    t.method("fMatrix", [](TGeoPatternFinder::ThreadData_t& a) -> TGeoMatrix * { return a.fMatrix; });
-    t.method("fMatrix", [](const TGeoPatternFinder::ThreadData_t* a) -> TGeoMatrix * { return a->fMatrix; });
-    t.method("fMatrix", [](TGeoPatternFinder::ThreadData_t* a) -> TGeoMatrix * { return a->fMatrix; });
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:34:19
-    // signature to use in the veto list: TGeoPatternFinder::ThreadData_t::fMatrix
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fMatrix! methods to provide write access to the field fMatrix (" __HERE__ ")");
-    t.method("fMatrix!", [](TGeoPatternFinder::ThreadData_t& a, TGeoMatrix * val) -> TGeoMatrix * { return a.fMatrix = val; });
-
-    DEBUG_MSG("Adding fMatrix! methods to provide write access to the field fMatrix (" __HERE__ ")");
-    t.method("fMatrix!", [](TGeoPatternFinder::ThreadData_t* a, TGeoMatrix * val) -> TGeoMatrix * { return a->fMatrix = val; });
-
-    DEBUG_MSG("Adding fCurrent methods  to provide read access to the field fCurrent (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:35:13
-    // signature to use in the veto list: TGeoPatternFinder::ThreadData_t::fCurrent
-    t.method("fCurrent", [](const TGeoPatternFinder::ThreadData_t& a) -> Int_t { return a.fCurrent; });
-    t.method("fCurrent", [](TGeoPatternFinder::ThreadData_t& a) -> Int_t { return a.fCurrent; });
-    t.method("fCurrent", [](const TGeoPatternFinder::ThreadData_t* a) -> Int_t { return a->fCurrent; });
-    t.method("fCurrent", [](TGeoPatternFinder::ThreadData_t* a) -> Int_t { return a->fCurrent; });
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:35:13
-    // signature to use in the veto list: TGeoPatternFinder::ThreadData_t::fCurrent
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fCurrent! methods to provide write access to the field fCurrent (" __HERE__ ")");
-    t.method("fCurrent!", [](TGeoPatternFinder::ThreadData_t& a, Int_t val) -> Int_t { return a.fCurrent = val; });
-
-    DEBUG_MSG("Adding fCurrent! methods to provide write access to the field fCurrent (" __HERE__ ")");
-    t.method("fCurrent!", [](TGeoPatternFinder::ThreadData_t* a, Int_t val) -> Int_t { return a->fCurrent = val; });
-
-    DEBUG_MSG("Adding fNextIndex methods  to provide read access to the field fNextIndex (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:36:13
-    // signature to use in the veto list: TGeoPatternFinder::ThreadData_t::fNextIndex
-    t.method("fNextIndex", [](const TGeoPatternFinder::ThreadData_t& a) -> Int_t { return a.fNextIndex; });
-    t.method("fNextIndex", [](TGeoPatternFinder::ThreadData_t& a) -> Int_t { return a.fNextIndex; });
-    t.method("fNextIndex", [](const TGeoPatternFinder::ThreadData_t* a) -> Int_t { return a->fNextIndex; });
-    t.method("fNextIndex", [](TGeoPatternFinder::ThreadData_t* a) -> Int_t { return a->fNextIndex; });
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:36:13
-    // signature to use in the veto list: TGeoPatternFinder::ThreadData_t::fNextIndex
-    // with ! suffix to veto the setter only.
-    DEBUG_MSG("Adding fNextIndex! methods to provide write access to the field fNextIndex (" __HERE__ ")");
-    t.method("fNextIndex!", [](TGeoPatternFinder::ThreadData_t& a, Int_t val) -> Int_t { return a.fNextIndex = val; });
-
-    DEBUG_MSG("Adding fNextIndex! methods to provide write access to the field fNextIndex (" __HERE__ ")");
-    t.method("fNextIndex!", [](TGeoPatternFinder::ThreadData_t* a, Int_t val) -> Int_t { return a->fNextIndex = val; });
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TGeoPatternFinder::ThreadData_t>> type_;
-};
-std::shared_ptr<Wrapper> newJlTGeoPatternFinder_ThreadData_t(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTGeoPatternFinder_ThreadData_t(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TGeoPatternX> : std::false_type { };
-  template<> struct DefaultConstructible<TGeoPatternX> : std::false_type { };
-template<> struct SuperType<TGeoPatternX> { typedef TGeoPatternFinder type; };
-}
-
-// Class generating the wrapper for type TGeoPatternX
-// signature to use in the veto file: TGeoPatternX
-struct JlTGeoPatternX: public Wrapper {
-
-  JlTGeoPatternX(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TGeoPatternX (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:112:7
-    jlcxx::TypeWrapper<TGeoPatternX>  t = jlModule.add_type<TGeoPatternX>("TGeoPatternX",
-      jlcxx::julia_base_type<TGeoPatternFinder>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TGeoPatternX>>(new jlcxx::TypeWrapper<TGeoPatternX>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::TGeoPatternX(TGeoVolume *, Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:116:4
-    t.constructor<TGeoVolume *, Int_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::TGeoPatternX(TGeoVolume *, Int_t, Double_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:117:4
-    t.constructor<TGeoVolume *, Int_t, Double_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::TGeoPatternX(TGeoVolume *, Int_t, Double_t, Double_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:118:4
-    t.constructor<TGeoVolume *, Int_t, Double_t, Double_t>(/*finalize=*/true);
-
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::TGeoPatternX(const TGeoPatternX &) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:119:4
-    t.constructor<const TGeoPatternX &>(/*finalize=*/true);
-
-    DEBUG_MSG("Adding wrapper for TGeoPatternX & TGeoPatternX::operator=(const TGeoPatternX &) (" __HERE__ ")");
-    // signature to use in the veto list: TGeoPatternX & TGeoPatternX::operator=(const TGeoPatternX &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:120:18
-    t.method("assign", static_cast<TGeoPatternX & (TGeoPatternX::*)(const TGeoPatternX &) >(&TGeoPatternX::operator=));
-
-    DEBUG_MSG("Adding wrapper for TGeoMatrix * TGeoPatternX::CreateMatrix() (" __HERE__ ")");
-    // signature to use in the veto list: TGeoMatrix * TGeoPatternX::CreateMatrix()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:125:16
-    t.method("CreateMatrix", static_cast<TGeoMatrix * (TGeoPatternX::*)()  const>(&TGeoPatternX::CreateMatrix));
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::cd(Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoPatternX::cd(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:126:9
-    t.method("cd", static_cast<void (TGeoPatternX::*)(Int_t) >(&TGeoPatternX::cd));
-
-    DEBUG_MSG("Adding wrapper for TGeoNode * TGeoPatternX::FindNode(Double_t *, const Double_t *) (" __HERE__ ")");
-    // signature to use in the veto list: TGeoNode * TGeoPatternX::FindNode(Double_t *, const Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:127:14
-    t.method("FindNode", static_cast<TGeoNode * (TGeoPatternX::*)(Double_t *, const Double_t *) >(&TGeoPatternX::FindNode));
-    t.method("FindNode", [](TGeoPatternX& a, Double_t * arg0)->TGeoNode * { return a.FindNode(arg0); });
-    t.method("FindNode", [](TGeoPatternX* a, Double_t * arg0)->TGeoNode * { return a->FindNode(arg0); });
-
-    DEBUG_MSG("Adding wrapper for Double_t TGeoPatternX::FindNextBoundary(Double_t *, Double_t *, Int_t &) (" __HERE__ ")");
-    // signature to use in the veto list: Double_t TGeoPatternX::FindNextBoundary(Double_t *, Double_t *, Int_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:128:21
-    t.method("FindNextBoundary", static_cast<Double_t (TGeoPatternX::*)(Double_t *, Double_t *, Int_t &) >(&TGeoPatternX::FindNextBoundary));
-
-    DEBUG_MSG("Adding wrapper for Int_t TGeoPatternX::GetDivAxis() (" __HERE__ ")");
-    // signature to use in the veto list: Int_t TGeoPatternX::GetDivAxis()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:129:10
-    t.method("GetDivAxis", static_cast<Int_t (TGeoPatternX::*)() >(&TGeoPatternX::GetDivAxis));
-
-    DEBUG_MSG("Adding wrapper for Bool_t TGeoPatternX::IsOnBoundary(const Double_t *) (" __HERE__ ")");
-    // signature to use in the veto list: Bool_t TGeoPatternX::IsOnBoundary(const Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:130:11
-    t.method("IsOnBoundary", static_cast<Bool_t (TGeoPatternX::*)(const Double_t *)  const>(&TGeoPatternX::IsOnBoundary));
-
-    DEBUG_MSG("Adding wrapper for TGeoPatternFinder * TGeoPatternX::MakeCopy(Bool_t) (" __HERE__ ")");
-    // signature to use in the veto list: TGeoPatternFinder * TGeoPatternX::MakeCopy(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:132:23
-    t.method("MakeCopy", static_cast<TGeoPatternFinder * (TGeoPatternX::*)(Bool_t) >(&TGeoPatternX::MakeCopy));
-    t.method("MakeCopy", [](TGeoPatternX& a)->TGeoPatternFinder * { return a.MakeCopy(); });
-    t.method("MakeCopy", [](TGeoPatternX* a)->TGeoPatternFinder * { return a->MakeCopy(); });
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::UpdateMatrix(Int_t, TGeoHMatrix &) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoPatternX::UpdateMatrix(Int_t, TGeoHMatrix &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:134:9
-    t.method("UpdateMatrix", static_cast<void (TGeoPatternX::*)(Int_t, TGeoHMatrix &)  const>(&TGeoPatternX::UpdateMatrix));
-
-    DEBUG_MSG("Adding wrapper for Version_t TGeoPatternX::Class_Version() (" __HERE__ ")");
-    // signature to use in the veto list: Version_t TGeoPatternX::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!Class_Version", static_cast<Version_t (*)() >(&TGeoPatternX::Class_Version));
-
-    DEBUG_MSG("Adding wrapper for TClass * TGeoPatternX::IsA() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TGeoPatternX::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    t.method("IsA", static_cast<TClass * (TGeoPatternX::*)()  const>(&TGeoPatternX::IsA));
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoPatternX::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    t.method("StreamerNVirtual", static_cast<void (TGeoPatternX::*)(TBuffer &) >(&TGeoPatternX::StreamerNVirtual));
-
-    DEBUG_MSG("Adding wrapper for const char * TGeoPatternX::DeclFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TGeoPatternX::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!DeclFileName", []() { return (std::string)TGeoPatternX::DeclFileName(); });
-
-    DEBUG_MSG("Adding wrapper for int TGeoPatternX::ImplFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TGeoPatternX::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!ImplFileLine", static_cast<int (*)() >(&TGeoPatternX::ImplFileLine));
-
-    DEBUG_MSG("Adding wrapper for const char * TGeoPatternX::ImplFileName() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TGeoPatternX::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!ImplFileName", []() { return (std::string)TGeoPatternX::ImplFileName(); });
-
-    DEBUG_MSG("Adding wrapper for const char * TGeoPatternX::Class_Name() (" __HERE__ ")");
-    // signature to use in the veto list: const char * TGeoPatternX::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!Class_Name", []() { return (std::string)TGeoPatternX::Class_Name(); });
-
-    DEBUG_MSG("Adding wrapper for TClass * TGeoPatternX::Dictionary() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TGeoPatternX::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!Dictionary", static_cast<TClass * (*)() >(&TGeoPatternX::Dictionary));
-
-    DEBUG_MSG("Adding wrapper for TClass * TGeoPatternX::Class() (" __HERE__ ")");
-    // signature to use in the veto list: TClass * TGeoPatternX::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!Class", static_cast<TClass * (*)() >(&TGeoPatternX::Class));
-
-    DEBUG_MSG("Adding wrapper for void TGeoPatternX::Streamer(TBuffer &) (" __HERE__ ")");
-    // signature to use in the veto list: void TGeoPatternX::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    t.method("Streamer", static_cast<void (TGeoPatternX::*)(TBuffer &) >(&TGeoPatternX::Streamer));
-
-    DEBUG_MSG("Adding wrapper for int TGeoPatternX::DeclFileLine() (" __HERE__ ")");
-    // signature to use in the veto list: int TGeoPatternX::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TGeoPatternFinder.h:136:4
-    module_.method("TGeoPatternX!DeclFileLine", static_cast<int (*)() >(&TGeoPatternX::DeclFileLine));
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TGeoPatternX>> type_;
-};
-std::shared_ptr<Wrapper> newJlTGeoPatternX(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTGeoPatternX(module));
 }

@@ -7,6 +7,977 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TVirtualMutex> : std::false_type { };
+  template<> struct DefaultConstructible<TVirtualMutex> : std::false_type { };
+}
+
+// Class generating the wrapper for type TVirtualMutex
+// signature to use in the veto file: TVirtualMutex
+struct JlTVirtualMutex: public Wrapper {
+
+  JlTVirtualMutex(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TVirtualMutex (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualMutex.h:32:7
+    jlcxx::TypeWrapper<TVirtualMutex>  t = jlModule.add_type<TVirtualMutex>("TVirtualMutex");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TVirtualMutex>>(new jlcxx::TypeWrapper<TVirtualMutex>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TVirtualMutex>> type_;
+};
+std::shared_ptr<Wrapper> newJlTVirtualMutex(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTVirtualMutex(module));
+}
+
+namespace jlcxx {
+  template<> struct IsMirroredType<TROOT> : std::false_type { };
+  template<> struct DefaultConstructible<TROOT> : std::false_type { };
+}
+
+// Class generating the wrapper for type TROOT
+// signature to use in the veto file: TROOT
+struct JlTROOT: public Wrapper {
+
+  JlTROOT(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TROOT (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:94:7
+    jlcxx::TypeWrapper<TROOT>  t = jlModule.add_type<TROOT>("TROOT");
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TROOT>>(new jlcxx::TypeWrapper<TROOT>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+
+    DEBUG_MSG("Adding wrapper for void TROOT::AddClass(TClass *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::AddClass(TClass *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:191:22
+    t.method("AddClass", static_cast<void (TROOT::*)(TClass *) >(&TROOT::AddClass));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Append(TObject *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Append(TObject *, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:193:22
+    t.method("Append", static_cast<void (TROOT::*)(TObject *, Bool_t) >(&TROOT::Append));
+    t.method("Append", [](TROOT& a, TObject * arg0)->void { a.Append(arg0); });
+    t.method("Append", [](TROOT* a, TObject * arg0)->void { a->Append(arg0); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Browse(TBrowser *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Browse(TBrowser *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:194:22
+    t.method("Browse", static_cast<void (TROOT::*)(TBrowser *) >(&TROOT::Browse));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::ClassSaved(TClass *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::ClassSaved(TClass *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:195:22
+    t.method("ClassSaved", static_cast<Bool_t (TROOT::*)(TClass *) >(&TROOT::ClassSaved));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::CloseFiles() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::CloseFiles()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:196:22
+    t.method("CloseFiles", static_cast<void (TROOT::*)() >(&TROOT::CloseFiles));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::EndOfProcessCleanups() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::EndOfProcessCleanups()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:197:22
+    t.method("EndOfProcessCleanups", static_cast<void (TROOT::*)() >(&TROOT::EndOfProcessCleanups));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::FindObject(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::FindObject(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:198:22
+    t.method("FindObject", static_cast<TObject * (TROOT::*)(const char *)  const>(&TROOT::FindObject));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::FindObject(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::FindObject(const TObject *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:199:22
+    t.method("FindObject", static_cast<TObject * (TROOT::*)(const TObject *)  const>(&TROOT::FindObject));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::FindObjectAny(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::FindObjectAny(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:200:22
+    t.method("FindObjectAny", static_cast<TObject * (TROOT::*)(const char *)  const>(&TROOT::FindObjectAny));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::FindObjectAnyFile(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::FindObjectAnyFile(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:201:22
+    t.method("FindObjectAnyFile", static_cast<TObject * (TROOT::*)(const char *)  const>(&TROOT::FindObjectAnyFile));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::FindSpecialObject(const char *, void *&) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::FindSpecialObject(const char *, void *&)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:202:22
+    t.method("FindSpecialObject", static_cast<TObject * (TROOT::*)(const char *, void *&) >(&TROOT::FindSpecialObject));
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::FindObjectClassName(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::FindObjectClassName(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:203:22
+    t.method("FindObjectClassName", [](TROOT const& a, const char * arg0) { return (std::string)a.FindObjectClassName(arg0); });
+    t.method("FindObjectClassName", [](TROOT const* a, const char * arg0) { return (std::string)a->FindObjectClassName(arg0); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::FindObjectPathName(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::FindObjectPathName(const TObject *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:204:22
+    t.method("FindObjectPathName", [](TROOT const& a, const TObject * arg0) { return (std::string)a.FindObjectPathName(arg0); });
+    t.method("FindObjectPathName", [](TROOT const* a, const TObject * arg0) { return (std::string)a->FindObjectPathName(arg0); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TROOT::FindSTLClass(const char *, Bool_t, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TROOT::FindSTLClass(const char *, Bool_t, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:205:22
+    t.method("FindSTLClass", static_cast<TClass * (TROOT::*)(const char *, Bool_t, Bool_t)  const>(&TROOT::FindSTLClass));
+    t.method("FindSTLClass", [](TROOT const& a, const char * arg0, Bool_t arg1)->TClass * { return a.FindSTLClass(arg0, arg1); });
+    t.method("FindSTLClass", [](TROOT const* a, const char * arg0, Bool_t arg1)->TClass * { return a->FindSTLClass(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::ForceStyle(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::ForceStyle(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:206:22
+    t.method("ForceStyle", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::ForceStyle));
+    t.method("ForceStyle", [](TROOT& a)->void { a.ForceStyle(); });
+    t.method("ForceStyle", [](TROOT* a)->void { a->ForceStyle(); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::FromPopUp() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::FromPopUp()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:207:22
+    t.method("FromPopUp", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::FromPopUp));
+
+    DEBUG_MSG("Adding wrapper for TApplication * TROOT::GetApplication() (" __HERE__ ")");
+    // signature to use in the veto list: TApplication * TROOT::GetApplication()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:209:22
+    t.method("GetApplication", static_cast<TApplication * (TROOT::*)()  const>(&TROOT::GetApplication));
+
+    DEBUG_MSG("Adding wrapper for TInterpreter * TROOT::GetInterpreter() (" __HERE__ ")");
+    // signature to use in the veto list: TInterpreter * TROOT::GetInterpreter()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:210:22
+    t.method("GetInterpreter", static_cast<TInterpreter * (TROOT::*)()  const>(&TROOT::GetInterpreter));
+
+    DEBUG_MSG("Adding wrapper for TClass * TROOT::GetClass(const char *, Bool_t, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TROOT::GetClass(const char *, Bool_t, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:211:22
+    t.method("GetClass", static_cast<TClass * (TROOT::*)(const char *, Bool_t, Bool_t)  const>(&TROOT::GetClass));
+    t.method("GetClass", [](TROOT const& a, const char * arg0)->TClass * { return a.GetClass(arg0); });
+    t.method("GetClass", [](TROOT const& a, const char * arg0, Bool_t arg1)->TClass * { return a.GetClass(arg0, arg1); });
+    t.method("GetClass", [](TROOT const* a, const char * arg0)->TClass * { return a->GetClass(arg0); });
+    t.method("GetClass", [](TROOT const* a, const char * arg0, Bool_t arg1)->TClass * { return a->GetClass(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TROOT::GetClass(const std::type_info &, Bool_t, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TROOT::GetClass(const std::type_info &, Bool_t, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:212:22
+    t.method("GetClass", static_cast<TClass * (TROOT::*)(const std::type_info &, Bool_t, Bool_t)  const>(&TROOT::GetClass));
+    t.method("GetClass", [](TROOT const& a, const std::type_info & arg0)->TClass * { return a.GetClass(arg0); });
+    t.method("GetClass", [](TROOT const& a, const std::type_info & arg0, Bool_t arg1)->TClass * { return a.GetClass(arg0, arg1); });
+    t.method("GetClass", [](TROOT const* a, const std::type_info & arg0)->TClass * { return a->GetClass(arg0); });
+    t.method("GetClass", [](TROOT const* a, const std::type_info & arg0, Bool_t arg1)->TClass * { return a->GetClass(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetConfigOptions() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetConfigOptions()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:214:22
+    t.method("GetConfigOptions", [](TROOT const& a) { return (std::string)a.GetConfigOptions(); });
+    t.method("GetConfigOptions", [](TROOT const* a) { return (std::string)a->GetConfigOptions(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetConfigFeatures() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetConfigFeatures()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:215:22
+    t.method("GetConfigFeatures", [](TROOT const& a) { return (std::string)a.GetConfigFeatures(); });
+    t.method("GetConfigFeatures", [](TROOT const* a) { return (std::string)a->GetConfigFeatures(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetCutClassName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetCutClassName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:216:22
+    t.method("GetCutClassName", [](TROOT const& a) { return (std::string)a.GetCutClassName(); });
+    t.method("GetCutClassName", [](TROOT const* a) { return (std::string)a->GetCutClassName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetDefCanvasName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetDefCanvasName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:217:22
+    t.method("GetDefCanvasName", [](TROOT const& a) { return (std::string)a.GetDefCanvasName(); });
+    t.method("GetDefCanvasName", [](TROOT const* a) { return (std::string)a->GetDefCanvasName(); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::GetEditHistograms() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::GetEditHistograms()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:218:22
+    t.method("GetEditHistograms", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::GetEditHistograms));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetEditorMode() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetEditorMode()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:219:22
+    t.method("GetEditorMode", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetEditorMode));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::GetForceStyle() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::GetForceStyle()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:220:22
+    t.method("GetForceStyle", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::GetForceStyle));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetBuiltDate() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetBuiltDate()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:221:22
+    t.method("GetBuiltDate", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetBuiltDate));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetBuiltTime() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetBuiltTime()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:222:22
+    t.method("GetBuiltTime", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetBuiltTime));
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetGitCommit() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetGitCommit()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:223:22
+    t.method("GetGitCommit", [](TROOT const& a) { return (std::string)a.GetGitCommit(); });
+    t.method("GetGitCommit", [](TROOT const* a) { return (std::string)a->GetGitCommit(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetGitBranch() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetGitBranch()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:224:22
+    t.method("GetGitBranch", [](TROOT const& a) { return (std::string)a.GetGitBranch(); });
+    t.method("GetGitBranch", [](TROOT const* a) { return (std::string)a->GetGitBranch(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetGitDate() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetGitDate()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:225:22
+    t.method("GetGitDate", [](TROOT& a) { return (std::string)a.GetGitDate(); });
+    t.method("GetGitDate", [](TROOT* a) { return (std::string)a->GetGitDate(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetVersionDate() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetVersionDate()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:226:22
+    t.method("GetVersionDate", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetVersionDate));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetVersionTime() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetVersionTime()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:227:22
+    t.method("GetVersionTime", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetVersionTime));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetVersionInt() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetVersionInt()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:228:22
+    t.method("GetVersionInt", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetVersionInt));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetVersionCode() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetVersionCode()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:229:22
+    t.method("GetVersionCode", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetVersionCode));
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetVersion() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetVersion()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:230:22
+    t.method("GetVersion", [](TROOT const& a) { return (std::string)a.GetVersion(); });
+    t.method("GetVersion", [](TROOT const* a) { return (std::string)a->GetVersion(); });
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfClasses() (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfClasses()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:231:22
+    t.method("GetListOfClasses", static_cast<TCollection * (TROOT::*)()  const>(&TROOT::GetListOfClasses));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfColors() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfColors()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:232:22
+    t.method("GetListOfColors", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfColors));
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfTypes(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfTypes(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:233:22
+    t.method("GetListOfTypes", static_cast<TCollection * (TROOT::*)(Bool_t) >(&TROOT::GetListOfTypes));
+    t.method("GetListOfTypes", [](TROOT& a)->TCollection * { return a.GetListOfTypes(); });
+    t.method("GetListOfTypes", [](TROOT* a)->TCollection * { return a->GetListOfTypes(); });
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfGlobals(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfGlobals(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:234:22
+    t.method("GetListOfGlobals", static_cast<TCollection * (TROOT::*)(Bool_t) >(&TROOT::GetListOfGlobals));
+    t.method("GetListOfGlobals", [](TROOT& a)->TCollection * { return a.GetListOfGlobals(); });
+    t.method("GetListOfGlobals", [](TROOT* a)->TCollection * { return a->GetListOfGlobals(); });
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfGlobalFunctions(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfGlobalFunctions(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:235:22
+    t.method("GetListOfGlobalFunctions", static_cast<TCollection * (TROOT::*)(Bool_t) >(&TROOT::GetListOfGlobalFunctions));
+    t.method("GetListOfGlobalFunctions", [](TROOT& a)->TCollection * { return a.GetListOfGlobalFunctions(); });
+    t.method("GetListOfGlobalFunctions", [](TROOT* a)->TCollection * { return a->GetListOfGlobalFunctions(); });
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfClosedObjects() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfClosedObjects()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:236:22
+    t.method("GetListOfClosedObjects", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfClosedObjects));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfFiles() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfFiles()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:237:22
+    t.method("GetListOfFiles", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfFiles));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfMappedFiles() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfMappedFiles()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:238:22
+    t.method("GetListOfMappedFiles", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfMappedFiles));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfSockets() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfSockets()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:239:22
+    t.method("GetListOfSockets", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfSockets));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfCanvases() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfCanvases()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:240:22
+    t.method("GetListOfCanvases", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfCanvases));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfStyles() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfStyles()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:241:22
+    t.method("GetListOfStyles", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfStyles));
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfFunctions() (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfFunctions()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:242:22
+    t.method("GetListOfFunctions", static_cast<TCollection * (TROOT::*)()  const>(&TROOT::GetListOfFunctions));
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfFunctionOverloads(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfFunctionOverloads(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:243:22
+    t.method("GetListOfFunctionOverloads", static_cast<TCollection * (TROOT::*)(const char *)  const>(&TROOT::GetListOfFunctionOverloads));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfGeometries() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfGeometries()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:244:22
+    t.method("GetListOfGeometries", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfGeometries));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfBrowsers() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfBrowsers()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:245:22
+    t.method("GetListOfBrowsers", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfBrowsers));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfSpecials() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfSpecials()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:246:22
+    t.method("GetListOfSpecials", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfSpecials));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfTasks() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfTasks()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:247:22
+    t.method("GetListOfTasks", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfTasks));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfCleanups() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfCleanups()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:248:22
+    t.method("GetListOfCleanups", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfCleanups));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfStreamerInfo() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfStreamerInfo()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:249:22
+    t.method("GetListOfStreamerInfo", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfStreamerInfo));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfMessageHandlers() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfMessageHandlers()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:250:22
+    t.method("GetListOfMessageHandlers", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfMessageHandlers));
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfClassGenerators() (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfClassGenerators()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:251:22
+    t.method("GetListOfClassGenerators", static_cast<TCollection * (TROOT::*)()  const>(&TROOT::GetListOfClassGenerators));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfSecContexts() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfSecContexts()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:252:22
+    t.method("GetListOfSecContexts", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfSecContexts));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfProofs() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfProofs()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:253:22
+    t.method("GetListOfProofs", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfProofs));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetClipboard() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetClipboard()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:254:22
+    t.method("GetClipboard", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetClipboard));
+
+    DEBUG_MSG("Adding wrapper for TSeqCollection * TROOT::GetListOfDataSets() (" __HERE__ ")");
+    // signature to use in the veto list: TSeqCollection * TROOT::GetListOfDataSets()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:255:22
+    t.method("GetListOfDataSets", static_cast<TSeqCollection * (TROOT::*)()  const>(&TROOT::GetListOfDataSets));
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfEnums(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfEnums(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:256:22
+    t.method("GetListOfEnums", static_cast<TCollection * (TROOT::*)(Bool_t) >(&TROOT::GetListOfEnums));
+    t.method("GetListOfEnums", [](TROOT& a)->TCollection * { return a.GetListOfEnums(); });
+    t.method("GetListOfEnums", [](TROOT* a)->TCollection * { return a->GetListOfEnums(); });
+
+    DEBUG_MSG("Adding wrapper for TCollection * TROOT::GetListOfFunctionTemplates() (" __HERE__ ")");
+    // signature to use in the veto list: TCollection * TROOT::GetListOfFunctionTemplates()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:257:22
+    t.method("GetListOfFunctionTemplates", static_cast<TCollection * (TROOT::*)() >(&TROOT::GetListOfFunctionTemplates));
+
+    DEBUG_MSG("Adding wrapper for TList * TROOT::GetListOfBrowsables() (" __HERE__ ")");
+    // signature to use in the veto list: TList * TROOT::GetListOfBrowsables()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:258:22
+    t.method("GetListOfBrowsables", static_cast<TList * (TROOT::*)()  const>(&TROOT::GetListOfBrowsables));
+
+    DEBUG_MSG("Adding wrapper for TDataType * TROOT::GetType(const char *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TDataType * TROOT::GetType(const char *, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:259:22
+    t.method("GetType", static_cast<TDataType * (TROOT::*)(const char *, Bool_t)  const>(&TROOT::GetType));
+    t.method("GetType", [](TROOT const& a, const char * arg0)->TDataType * { return a.GetType(arg0); });
+    t.method("GetType", [](TROOT const* a, const char * arg0)->TDataType * { return a->GetType(arg0); });
+
+    DEBUG_MSG("Adding wrapper for TFile * TROOT::GetFile() (" __HERE__ ")");
+    // signature to use in the veto list: TFile * TROOT::GetFile()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:260:22
+    t.method("GetFile", static_cast<TFile * (TROOT::*)()  const>(&TROOT::GetFile));
+
+    DEBUG_MSG("Adding wrapper for TFile * TROOT::GetFile(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TFile * TROOT::GetFile(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:261:22
+    t.method("GetFile", static_cast<TFile * (TROOT::*)(const char *)  const>(&TROOT::GetFile));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::GetFunction(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::GetFunction(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:264:22
+    t.method("GetFunction", static_cast<TObject * (TROOT::*)(const char *)  const>(&TROOT::GetFunction));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::GetGeometry(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::GetGeometry(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:269:22
+    t.method("GetGeometry", static_cast<TObject * (TROOT::*)(const char *)  const>(&TROOT::GetGeometry));
+
+    DEBUG_MSG("Adding wrapper for const TObject * TROOT::GetSelectedPrimitive() (" __HERE__ ")");
+    // signature to use in the veto list: const TObject * TROOT::GetSelectedPrimitive()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:270:22
+    t.method("GetSelectedPrimitive", static_cast<const TObject * (TROOT::*)()  const>(&TROOT::GetSelectedPrimitive));
+
+    DEBUG_MSG("Adding wrapper for TVirtualPad * TROOT::GetSelectedPad() (" __HERE__ ")");
+    // signature to use in the veto list: TVirtualPad * TROOT::GetSelectedPad()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:271:22
+    t.method("GetSelectedPad", static_cast<TVirtualPad * (TROOT::*)()  const>(&TROOT::GetSelectedPad));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetNclasses() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetNclasses()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:272:22
+    t.method("GetNclasses", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetNclasses));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetNtypes() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetNtypes()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:273:22
+    t.method("GetNtypes", static_cast<Int_t (TROOT::*)()  const>(&TROOT::GetNtypes));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetWebDisplay() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetWebDisplay()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:276:22
+    t.method("GetWebDisplay", static_cast<const TString & (TROOT::*)()  const>(&TROOT::GetWebDisplay));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Idle(UInt_t, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Idle(UInt_t, const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:277:22
+    t.method("Idle", static_cast<void (TROOT::*)(UInt_t, const char *) >(&TROOT::Idle));
+    t.method("Idle", [](TROOT& a, UInt_t arg0)->void { a.Idle(arg0); });
+    t.method("Idle", [](TROOT* a, UInt_t arg0)->void { a->Idle(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::IgnoreInclude(const char *, const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::IgnoreInclude(const char *, const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:278:22
+    t.method("IgnoreInclude", static_cast<Int_t (TROOT::*)(const char *, const char *) >(&TROOT::IgnoreInclude));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsBatch() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsBatch()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:279:22
+    t.method("IsBatch", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsBatch));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsExecutingMacro() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsExecutingMacro()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:280:22
+    t.method("IsExecutingMacro", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsExecutingMacro));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsFolder() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsFolder()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:281:22
+    t.method("IsFolder", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsFolder));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsInterrupted() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsInterrupted()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:282:22
+    t.method("IsInterrupted", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsInterrupted));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsEscaped() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsEscaped()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:283:22
+    t.method("IsEscaped", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsEscaped));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsLineProcessing() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsLineProcessing()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:284:22
+    t.method("IsLineProcessing", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsLineProcessing));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsProofServ() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsProofServ()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:285:22
+    t.method("IsProofServ", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsProofServ));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsRootFile(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsRootFile(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:286:22
+    t.method("IsRootFile", static_cast<Bool_t (TROOT::*)(const char *)  const>(&TROOT::IsRootFile));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsWebDisplay() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsWebDisplay()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:287:22
+    t.method("IsWebDisplay", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsWebDisplay));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::IsWebDisplayBatch() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::IsWebDisplayBatch()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:288:22
+    t.method("IsWebDisplayBatch", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::IsWebDisplayBatch));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::ls(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::ls(Option_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:289:22
+    t.method("ls", static_cast<void (TROOT::*)(Option_t *)  const>(&TROOT::ls));
+    t.method("ls", [](TROOT const& a)->void { a.ls(); });
+    t.method("ls", [](TROOT const* a)->void { a->ls(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::LoadClass(const char *, const char *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::LoadClass(const char *, const char *, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:290:22
+    t.method("LoadClass", static_cast<Int_t (TROOT::*)(const char *, const char *, Bool_t) >(&TROOT::LoadClass));
+    t.method("LoadClass", [](TROOT& a, const char * arg0, const char * arg1)->Int_t { return a.LoadClass(arg0, arg1); });
+    t.method("LoadClass", [](TROOT* a, const char * arg0, const char * arg1)->Int_t { return a->LoadClass(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TROOT::LoadClass(const char *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TROOT::LoadClass(const char *, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:291:22
+    t.method("LoadClass", static_cast<TClass * (TROOT::*)(const char *, Bool_t)  const>(&TROOT::LoadClass));
+    t.method("LoadClass", [](TROOT const& a, const char * arg0)->TClass * { return a.LoadClass(arg0); });
+    t.method("LoadClass", [](TROOT const* a, const char * arg0)->TClass * { return a->LoadClass(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::LoadMacro(const char *, Int_t *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::LoadMacro(const char *, Int_t *, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:292:22
+    t.method("LoadMacro", static_cast<Int_t (TROOT::*)(const char *, Int_t *, Bool_t) >(&TROOT::LoadMacro));
+    t.method("LoadMacro", [](TROOT& a, const char * arg0)->Int_t { return a.LoadMacro(arg0); });
+    t.method("LoadMacro", [](TROOT& a, const char * arg0, Int_t * arg1)->Int_t { return a.LoadMacro(arg0, arg1); });
+    t.method("LoadMacro", [](TROOT* a, const char * arg0)->Int_t { return a->LoadMacro(arg0); });
+    t.method("LoadMacro", [](TROOT* a, const char * arg0, Int_t * arg1)->Int_t { return a->LoadMacro(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TROOT::Macro(const char *, Int_t *, Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TROOT::Macro(const char *, Int_t *, Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:293:22
+    t.method("Macro", static_cast<Longptr_t (TROOT::*)(const char *, Int_t *, Bool_t) >(&TROOT::Macro));
+    t.method("Macro", [](TROOT& a, const char * arg0)->Longptr_t { return a.Macro(arg0); });
+    t.method("Macro", [](TROOT& a, const char * arg0, Int_t * arg1)->Longptr_t { return a.Macro(arg0, arg1); });
+    t.method("Macro", [](TROOT* a, const char * arg0)->Longptr_t { return a->Macro(arg0); });
+    t.method("Macro", [](TROOT* a, const char * arg0, Int_t * arg1)->Longptr_t { return a->Macro(arg0, arg1); });
+
+    DEBUG_MSG("Adding wrapper for TCanvas * TROOT::MakeDefCanvas() (" __HERE__ ")");
+    // signature to use in the veto list: TCanvas * TROOT::MakeDefCanvas()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:294:22
+    t.method("MakeDefCanvas", static_cast<TCanvas * (TROOT::*)()  const>(&TROOT::MakeDefCanvas));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Message(Int_t, const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Message(Int_t, const TObject *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:295:22
+    t.method("Message", static_cast<void (TROOT::*)(Int_t, const TObject *) >(&TROOT::Message));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::MustClean() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::MustClean()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:296:22
+    t.method("MustClean", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::MustClean));
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TROOT::ProcessLine(const char *, Int_t *) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TROOT::ProcessLine(const char *, Int_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:297:22
+    t.method("ProcessLine", static_cast<Longptr_t (TROOT::*)(const char *, Int_t *) >(&TROOT::ProcessLine));
+    t.method("ProcessLine", [](TROOT& a, const char * arg0)->Longptr_t { return a.ProcessLine(arg0); });
+    t.method("ProcessLine", [](TROOT* a, const char * arg0)->Longptr_t { return a->ProcessLine(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TROOT::ProcessLineSync(const char *, Int_t *) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TROOT::ProcessLineSync(const char *, Int_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:298:22
+    t.method("ProcessLineSync", static_cast<Longptr_t (TROOT::*)(const char *, Int_t *) >(&TROOT::ProcessLineSync));
+    t.method("ProcessLineSync", [](TROOT& a, const char * arg0)->Longptr_t { return a.ProcessLineSync(arg0); });
+    t.method("ProcessLineSync", [](TROOT* a, const char * arg0)->Longptr_t { return a->ProcessLineSync(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Longptr_t TROOT::ProcessLineFast(const char *, Int_t *) (" __HERE__ ")");
+    // signature to use in the veto list: Longptr_t TROOT::ProcessLineFast(const char *, Int_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:299:22
+    t.method("ProcessLineFast", static_cast<Longptr_t (TROOT::*)(const char *, Int_t *) >(&TROOT::ProcessLineFast));
+    t.method("ProcessLineFast", [](TROOT& a, const char * arg0)->Longptr_t { return a.ProcessLineFast(arg0); });
+    t.method("ProcessLineFast", [](TROOT* a, const char * arg0)->Longptr_t { return a->ProcessLineFast(arg0); });
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::ReadingObject() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::ReadingObject()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:300:22
+    t.method("ReadingObject", static_cast<Bool_t (TROOT::*)()  const>(&TROOT::ReadingObject));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::RecursiveRemove(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::RecursiveRemove(TObject *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:301:22
+    t.method("RecursiveRemove", static_cast<void (TROOT::*)(TObject *) >(&TROOT::RecursiveRemove));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::RefreshBrowsers() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::RefreshBrowsers()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:302:22
+    t.method("RefreshBrowsers", static_cast<void (TROOT::*)() >(&TROOT::RefreshBrowsers));
+
+    DEBUG_MSG("Adding wrapper for TObject * TROOT::Remove(TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: TObject * TROOT::Remove(TObject *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:312:22
+    t.method("Remove", static_cast<TObject * (TROOT::*)(TObject *) >(&TROOT::Remove));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::RemoveClass(TClass *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::RemoveClass(TClass *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:313:22
+    t.method("RemoveClass", static_cast<void (TROOT::*)(TClass *) >(&TROOT::RemoveClass));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Reset(Option_t *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Reset(Option_t *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:314:22
+    t.method("Reset", static_cast<void (TROOT::*)(Option_t *) >(&TROOT::Reset));
+    t.method("Reset", [](TROOT& a)->void { a.Reset(); });
+    t.method("Reset", [](TROOT* a)->void { a->Reset(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::ResetClassSaved() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::ResetClassSaved()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:315:22
+    t.method("ResetClassSaved", static_cast<void (TROOT::*)() >(&TROOT::ResetClassSaved));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SaveContext() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SaveContext()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:316:22
+    t.method("SaveContext", static_cast<void (TROOT::*)() >(&TROOT::SaveContext));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetApplication(TApplication *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetApplication(TApplication *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:317:22
+    t.method("SetApplication", static_cast<void (TROOT::*)(TApplication *) >(&TROOT::SetApplication));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetBatch(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetBatch(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:318:22
+    t.method("SetBatch", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetBatch));
+    t.method("SetBatch", [](TROOT& a)->void { a.SetBatch(); });
+    t.method("SetBatch", [](TROOT* a)->void { a->SetBatch(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetWebDisplay(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetWebDisplay(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:319:22
+    t.method("SetWebDisplay", static_cast<void (TROOT::*)(const char *) >(&TROOT::SetWebDisplay));
+    t.method("SetWebDisplay", [](TROOT& a)->void { a.SetWebDisplay(); });
+    t.method("SetWebDisplay", [](TROOT* a)->void { a->SetWebDisplay(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetCutClassName(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetCutClassName(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:320:22
+    t.method("SetCutClassName", static_cast<void (TROOT::*)(const char *) >(&TROOT::SetCutClassName));
+    t.method("SetCutClassName", [](TROOT& a)->void { a.SetCutClassName(); });
+    t.method("SetCutClassName", [](TROOT* a)->void { a->SetCutClassName(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetDefCanvasName(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetDefCanvasName(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:321:22
+    t.method("SetDefCanvasName", static_cast<void (TROOT::*)(const char *) >(&TROOT::SetDefCanvasName));
+    t.method("SetDefCanvasName", [](TROOT& a)->void { a.SetDefCanvasName(); });
+    t.method("SetDefCanvasName", [](TROOT* a)->void { a->SetDefCanvasName(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetEditHistograms(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetEditHistograms(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:322:22
+    t.method("SetEditHistograms", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetEditHistograms));
+    t.method("SetEditHistograms", [](TROOT& a)->void { a.SetEditHistograms(); });
+    t.method("SetEditHistograms", [](TROOT* a)->void { a->SetEditHistograms(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetEditorMode(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetEditorMode(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:323:22
+    t.method("SetEditorMode", static_cast<void (TROOT::*)(const char *) >(&TROOT::SetEditorMode));
+    t.method("SetEditorMode", [](TROOT& a)->void { a.SetEditorMode(); });
+    t.method("SetEditorMode", [](TROOT* a)->void { a->SetEditorMode(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetExecutingMacro(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetExecutingMacro(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:324:22
+    t.method("SetExecutingMacro", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetExecutingMacro));
+    t.method("SetExecutingMacro", [](TROOT& a)->void { a.SetExecutingMacro(); });
+    t.method("SetExecutingMacro", [](TROOT* a)->void { a->SetExecutingMacro(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetFromPopUp(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetFromPopUp(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:325:22
+    t.method("SetFromPopUp", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetFromPopUp));
+    t.method("SetFromPopUp", [](TROOT& a)->void { a.SetFromPopUp(); });
+    t.method("SetFromPopUp", [](TROOT* a)->void { a->SetFromPopUp(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetInterrupt(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetInterrupt(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:326:22
+    t.method("SetInterrupt", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetInterrupt));
+    t.method("SetInterrupt", [](TROOT& a)->void { a.SetInterrupt(); });
+    t.method("SetInterrupt", [](TROOT* a)->void { a->SetInterrupt(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetEscape(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetEscape(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:327:22
+    t.method("SetEscape", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetEscape));
+    t.method("SetEscape", [](TROOT& a)->void { a.SetEscape(); });
+    t.method("SetEscape", [](TROOT* a)->void { a->SetEscape(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetLineIsProcessing() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetLineIsProcessing()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:328:22
+    t.method("SetLineIsProcessing", static_cast<void (TROOT::*)() >(&TROOT::SetLineIsProcessing));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetLineHasBeenProcessed() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetLineHasBeenProcessed()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:329:22
+    t.method("SetLineHasBeenProcessed", static_cast<void (TROOT::*)() >(&TROOT::SetLineHasBeenProcessed));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetReadingObject(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetReadingObject(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:330:22
+    t.method("SetReadingObject", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetReadingObject));
+    t.method("SetReadingObject", [](TROOT& a)->void { a.SetReadingObject(); });
+    t.method("SetReadingObject", [](TROOT* a)->void { a->SetReadingObject(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetMustClean(Bool_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetMustClean(Bool_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:331:22
+    t.method("SetMustClean", static_cast<void (TROOT::*)(Bool_t) >(&TROOT::SetMustClean));
+    t.method("SetMustClean", [](TROOT& a)->void { a.SetMustClean(); });
+    t.method("SetMustClean", [](TROOT* a)->void { a->SetMustClean(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetSelectedPrimitive(const TObject *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetSelectedPrimitive(const TObject *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:332:22
+    t.method("SetSelectedPrimitive", static_cast<void (TROOT::*)(const TObject *) >(&TROOT::SetSelectedPrimitive));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetSelectedPad(TVirtualPad *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetSelectedPad(TVirtualPad *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:333:22
+    t.method("SetSelectedPad", static_cast<void (TROOT::*)(TVirtualPad *) >(&TROOT::SetSelectedPad));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetStyle(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetStyle(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:334:22
+    t.method("SetStyle", static_cast<void (TROOT::*)(const char *) >(&TROOT::SetStyle));
+    t.method("SetStyle", [](TROOT& a)->void { a.SetStyle(); });
+    t.method("SetStyle", [](TROOT* a)->void { a->SetStyle(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Time(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Time(Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:335:22
+    t.method("Time", static_cast<void (TROOT::*)(Int_t) >(&TROOT::Time));
+    t.method("Time", [](TROOT& a)->void { a.Time(); });
+    t.method("Time", [](TROOT* a)->void { a->Time(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::Timer() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::Timer()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:336:22
+    t.method("Timer", static_cast<Int_t (TROOT::*)()  const>(&TROOT::Timer));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::DecreaseDirLevel() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::DecreaseDirLevel()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:339:23
+    module_.method("TROOT!DecreaseDirLevel", static_cast<Int_t (*)() >(&TROOT::DecreaseDirLevel));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::GetDirLevel() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::GetDirLevel()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:340:23
+    module_.method("TROOT!GetDirLevel", static_cast<Int_t (*)() >(&TROOT::GetDirLevel));
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetMacroPath() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetMacroPath()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:341:23
+    module_.method("TROOT!GetMacroPath", []() { return (std::string)TROOT::GetMacroPath(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetMacroPath(const char *) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetMacroPath(const char *)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:342:23
+    module_.method("TROOT!SetMacroPath", static_cast<void (*)(const char *) >(&TROOT::SetMacroPath));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::IncreaseDirLevel() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::IncreaseDirLevel()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:343:23
+    module_.method("TROOT!IncreaseDirLevel", static_cast<Int_t (*)() >(&TROOT::IncreaseDirLevel));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::IndentLevel() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::IndentLevel()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:344:23
+    module_.method("TROOT!IndentLevel", static_cast<void (*)() >(&TROOT::IndentLevel));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Initialize() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Initialize()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:345:23
+    module_.method("TROOT!Initialize", static_cast<void (*)() >(&TROOT::Initialize));
+
+    DEBUG_MSG("Adding wrapper for Bool_t TROOT::Initialized() (" __HERE__ ")");
+    // signature to use in the veto list: Bool_t TROOT::Initialized()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:346:23
+    module_.method("TROOT!Initialized", static_cast<Bool_t (*)() >(&TROOT::Initialized));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::SetDirLevel(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::SetDirLevel(Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:347:23
+    module_.method("TROOT!SetDirLevel", static_cast<void (*)(Int_t) >(&TROOT::SetDirLevel));
+    module_.method("TROOT!SetDirLevel", []()->void { TROOT::SetDirLevel(); });
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::ConvertVersionCode2Int(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::ConvertVersionCode2Int(Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:348:23
+    module_.method("TROOT!ConvertVersionCode2Int", static_cast<Int_t (*)(Int_t) >(&TROOT::ConvertVersionCode2Int));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::ConvertVersionInt2Code(Int_t) (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::ConvertVersionInt2Code(Int_t)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:349:23
+    module_.method("TROOT!ConvertVersionInt2Code", static_cast<Int_t (*)(Int_t) >(&TROOT::ConvertVersionInt2Code));
+
+    DEBUG_MSG("Adding wrapper for Int_t TROOT::RootVersionCode() (" __HERE__ ")");
+    // signature to use in the veto list: Int_t TROOT::RootVersionCode()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:350:23
+    module_.method("TROOT!RootVersionCode", static_cast<Int_t (*)() >(&TROOT::RootVersionCode));
+
+    DEBUG_MSG("Adding wrapper for const std::vector<std::string> & TROOT::AddExtraInterpreterArgs(const std::vector<std::string> &) (" __HERE__ ")");
+    // signature to use in the veto list: const std::vector<std::string> & TROOT::AddExtraInterpreterArgs(const std::vector<std::string> &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:351:43
+    module_.method("TROOT!AddExtraInterpreterArgs", static_cast<const std::vector<std::string> & (*)(const std::vector<std::string> &) >(&TROOT::AddExtraInterpreterArgs));
+
+    DEBUG_MSG("Adding wrapper for const char **& TROOT::GetExtraInterpreterArgs() (" __HERE__ ")");
+    // signature to use in the veto list: const char **& TROOT::GetExtraInterpreterArgs()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:352:24
+    module_.method("TROOT!GetExtraInterpreterArgs", static_cast<const char **& (*)() >(&TROOT::GetExtraInterpreterArgs));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetRootSys() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetRootSys()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:354:26
+    module_.method("TROOT!GetRootSys", static_cast<const TString & (*)() >(&TROOT::GetRootSys));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetBinDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetBinDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:355:26
+    module_.method("TROOT!GetBinDir", static_cast<const TString & (*)() >(&TROOT::GetBinDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetLibDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetLibDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:356:26
+    module_.method("TROOT!GetLibDir", static_cast<const TString & (*)() >(&TROOT::GetLibDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetSharedLibDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetSharedLibDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:357:26
+    module_.method("TROOT!GetSharedLibDir", static_cast<const TString & (*)() >(&TROOT::GetSharedLibDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetIncludeDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetIncludeDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:358:26
+    module_.method("TROOT!GetIncludeDir", static_cast<const TString & (*)() >(&TROOT::GetIncludeDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetEtcDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetEtcDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:359:26
+    module_.method("TROOT!GetEtcDir", static_cast<const TString & (*)() >(&TROOT::GetEtcDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetDataDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetDataDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:360:26
+    module_.method("TROOT!GetDataDir", static_cast<const TString & (*)() >(&TROOT::GetDataDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetDocDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetDocDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:361:26
+    module_.method("TROOT!GetDocDir", static_cast<const TString & (*)() >(&TROOT::GetDocDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetMacroDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetMacroDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:362:26
+    module_.method("TROOT!GetMacroDir", static_cast<const TString & (*)() >(&TROOT::GetMacroDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetTutorialDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetTutorialDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:363:26
+    module_.method("TROOT!GetTutorialDir", static_cast<const TString & (*)() >(&TROOT::GetTutorialDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetSourceDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetSourceDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:364:26
+    module_.method("TROOT!GetSourceDir", static_cast<const TString & (*)() >(&TROOT::GetSourceDir));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetIconPath() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetIconPath()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:365:26
+    module_.method("TROOT!GetIconPath", static_cast<const TString & (*)() >(&TROOT::GetIconPath));
+
+    DEBUG_MSG("Adding wrapper for const TString & TROOT::GetTTFFontDir() (" __HERE__ ")");
+    // signature to use in the veto list: const TString & TROOT::GetTTFFontDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:366:26
+    module_.method("TROOT!GetTTFFontDir", static_cast<const TString & (*)() >(&TROOT::GetTTFFontDir));
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::GetTutorialsDir() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::GetTutorialsDir()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:369:23
+    module_.method("TROOT!GetTutorialsDir", []() { return (std::string)TROOT::GetTutorialsDir(); });
+
+    DEBUG_MSG("Adding wrapper for void TROOT::ShutDown() (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::ShutDown()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:370:16
+    module_.method("TROOT!ShutDown", static_cast<void (*)() >(&TROOT::ShutDown));
+
+    DEBUG_MSG("Adding wrapper for Version_t TROOT::Class_Version() (" __HERE__ ")");
+    // signature to use in the veto list: Version_t TROOT::Class_Version()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!Class_Version", static_cast<Version_t (*)() >(&TROOT::Class_Version));
+
+    DEBUG_MSG("Adding wrapper for TClass * TROOT::IsA() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TROOT::IsA()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    t.method("IsA", static_cast<TClass * (TROOT::*)()  const>(&TROOT::IsA));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::StreamerNVirtual(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    t.method("StreamerNVirtual", static_cast<void (TROOT::*)(TBuffer &) >(&TROOT::StreamerNVirtual));
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::DeclFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::DeclFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!DeclFileName", []() { return (std::string)TROOT::DeclFileName(); });
+
+    DEBUG_MSG("Adding wrapper for int TROOT::ImplFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TROOT::ImplFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!ImplFileLine", static_cast<int (*)() >(&TROOT::ImplFileLine));
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::ImplFileName() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::ImplFileName()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!ImplFileName", []() { return (std::string)TROOT::ImplFileName(); });
+
+    DEBUG_MSG("Adding wrapper for const char * TROOT::Class_Name() (" __HERE__ ")");
+    // signature to use in the veto list: const char * TROOT::Class_Name()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!Class_Name", []() { return (std::string)TROOT::Class_Name(); });
+
+    DEBUG_MSG("Adding wrapper for TClass * TROOT::Dictionary() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TROOT::Dictionary()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!Dictionary", static_cast<TClass * (*)() >(&TROOT::Dictionary));
+
+    DEBUG_MSG("Adding wrapper for TClass * TROOT::Class() (" __HERE__ ")");
+    // signature to use in the veto list: TClass * TROOT::Class()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!Class", static_cast<TClass * (*)() >(&TROOT::Class));
+
+    DEBUG_MSG("Adding wrapper for void TROOT::Streamer(TBuffer &) (" __HERE__ ")");
+    // signature to use in the veto list: void TROOT::Streamer(TBuffer &)
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    t.method("Streamer", static_cast<void (TROOT::*)(TBuffer &) >(&TROOT::Streamer));
+
+    DEBUG_MSG("Adding wrapper for int TROOT::DeclFileLine() (" __HERE__ ")");
+    // signature to use in the veto list: int TROOT::DeclFileLine()
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TROOT.h:372:4
+    module_.method("TROOT!DeclFileLine", static_cast<int (*)() >(&TROOT::DeclFileLine));
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TROOT>> type_;
+};
+std::shared_ptr<Wrapper> newJlTROOT(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTROOT(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TApplication> : std::false_type { };
   template<> struct DefaultConstructible<TApplication> : std::false_type { };
 template<> struct SuperType<TApplication> { typedef TObject type; };
@@ -18,7 +989,7 @@ struct JlTApplication: public Wrapper {
 
   JlTApplication(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TApplication (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:39:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:39:7
     jlcxx::TypeWrapper<TApplication>  t = jlModule.add_type<TApplication>("TApplication",
       jlcxx::julia_base_type<TObject>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TApplication>>(new jlcxx::TypeWrapper<TApplication>(jlModule, t));
@@ -29,81 +1000,81 @@ struct JlTApplication: public Wrapper {
 
 
     DEBUG_MSG("Adding wrapper for void TApplication::TApplication(const char *, Int_t *, char **, void *, Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:101:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:101:4
     t.constructor<const char *, Int_t *, char **>(/*finalize=*/true);
     t.constructor<const char *, Int_t *, char **, void *>(/*finalize=*/true);
     t.constructor<const char *, Int_t *, char **, void *, Int_t>(/*finalize=*/true);
 
     DEBUG_MSG("Adding wrapper for void TApplication::InitializeGraphics(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::InitializeGraphics(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:105:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:105:20
     t.method("InitializeGraphics", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::InitializeGraphics));
     t.method("InitializeGraphics", [](TApplication& a)->void { a.InitializeGraphics(); });
     t.method("InitializeGraphics", [](TApplication* a)->void { a->InitializeGraphics(); });
 
     DEBUG_MSG("Adding wrapper for void TApplication::GetOptions(Int_t *, char **) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::GetOptions(Int_t *, char **)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:106:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:106:20
     t.method("GetOptions", static_cast<void (TApplication::*)(Int_t *, char **) >(&TApplication::GetOptions));
 
     DEBUG_MSG("Adding wrapper for TSignalHandler * TApplication::GetSignalHandler() (" __HERE__ ")");
     // signature to use in the veto list: TSignalHandler * TApplication::GetSignalHandler()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:107:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:107:20
     t.method("GetSignalHandler", static_cast<TSignalHandler * (TApplication::*)()  const>(&TApplication::GetSignalHandler));
 
     DEBUG_MSG("Adding wrapper for void TApplication::SetEchoMode(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::SetEchoMode(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:108:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:108:20
     t.method("SetEchoMode", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::SetEchoMode));
 
     DEBUG_MSG("Adding wrapper for TString TApplication::GetSetup() (" __HERE__ ")");
     // signature to use in the veto list: TString TApplication::GetSetup()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:109:12
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:109:12
     t.method("GetSetup", static_cast<TString (TApplication::*)() >(&TApplication::GetSetup));
 
     DEBUG_MSG("Adding wrapper for void TApplication::OpenForumTopic(const TString &) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::OpenForumTopic(const TString &)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:110:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:110:9
     t.method("OpenForumTopic", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenForumTopic));
 
     DEBUG_MSG("Adding wrapper for void TApplication::OpenGitHubIssue(const TString &) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::OpenGitHubIssue(const TString &)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:111:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:111:9
     t.method("OpenGitHubIssue", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenGitHubIssue));
 
     DEBUG_MSG("Adding wrapper for void TApplication::OpenInBrowser(const TString &) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::OpenInBrowser(const TString &)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:112:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:112:9
     t.method("OpenInBrowser", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenInBrowser));
 
     DEBUG_MSG("Adding wrapper for void TApplication::OpenReferenceGuideFor(const TString &) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::OpenReferenceGuideFor(const TString &)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:113:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:113:9
     t.method("OpenReferenceGuideFor", static_cast<void (TApplication::*)(const TString &) >(&TApplication::OpenReferenceGuideFor));
 
     DEBUG_MSG("Adding wrapper for void TApplication::HandleException(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::HandleException(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:114:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:114:20
     t.method("HandleException", static_cast<void (TApplication::*)(Int_t) >(&TApplication::HandleException));
 
     DEBUG_MSG("Adding wrapper for void TApplication::HandleIdleTimer() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::HandleIdleTimer()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:115:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:115:20
     t.method("HandleIdleTimer", static_cast<void (TApplication::*)() >(&TApplication::HandleIdleTimer));
 
     DEBUG_MSG("Adding wrapper for Bool_t TApplication::HandleTermInput() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TApplication::HandleTermInput()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:116:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:116:20
     t.method("HandleTermInput", static_cast<Bool_t (TApplication::*)() >(&TApplication::HandleTermInput));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Init() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Init()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:117:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:117:20
     t.method("Init", static_cast<void (TApplication::*)() >(&TApplication::Init));
 
     DEBUG_MSG("Adding wrapper for Longptr_t TApplication::ProcessLine(const char *, Bool_t, Int_t *) (" __HERE__ ")");
     // signature to use in the veto list: Longptr_t TApplication::ProcessLine(const char *, Bool_t, Int_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:118:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:118:22
     t.method("ProcessLine", static_cast<Longptr_t (TApplication::*)(const char *, Bool_t, Int_t *) >(&TApplication::ProcessLine));
     t.method("ProcessLine", [](TApplication& a, const char * arg0)->Longptr_t { return a.ProcessLine(arg0); });
     t.method("ProcessLine", [](TApplication& a, const char * arg0, Bool_t arg1)->Longptr_t { return a.ProcessLine(arg0, arg1); });
@@ -112,7 +1083,7 @@ struct JlTApplication: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for Longptr_t TApplication::ProcessFile(const char *, Int_t *, Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: Longptr_t TApplication::ProcessFile(const char *, Int_t *, Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:119:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:119:22
     t.method("ProcessFile", static_cast<Longptr_t (TApplication::*)(const char *, Int_t *, Bool_t) >(&TApplication::ProcessFile));
     t.method("ProcessFile", [](TApplication& a, const char * arg0)->Longptr_t { return a.ProcessFile(arg0); });
     t.method("ProcessFile", [](TApplication& a, const char * arg0, Int_t * arg1)->Longptr_t { return a.ProcessFile(arg0, arg1); });
@@ -121,260 +1092,260 @@ struct JlTApplication: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for void TApplication::Run(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Run(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:120:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:120:20
     t.method("Run", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::Run));
     t.method("Run", [](TApplication& a)->void { a.Run(); });
     t.method("Run", [](TApplication* a)->void { a->Run(); });
 
     DEBUG_MSG("Adding wrapper for void TApplication::SetIdleTimer(UInt_t, const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::SetIdleTimer(UInt_t, const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:121:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:121:20
     t.method("SetIdleTimer", static_cast<void (TApplication::*)(UInt_t, const char *) >(&TApplication::SetIdleTimer));
 
     DEBUG_MSG("Adding wrapper for void TApplication::RemoveIdleTimer() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::RemoveIdleTimer()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:122:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:122:20
     t.method("RemoveIdleTimer", static_cast<void (TApplication::*)() >(&TApplication::RemoveIdleTimer));
 
     DEBUG_MSG("Adding wrapper for const char * TApplication::GetIdleCommand() (" __HERE__ ")");
     // signature to use in the veto list: const char * TApplication::GetIdleCommand()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:123:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:123:20
     t.method("GetIdleCommand", [](TApplication const& a) { return (std::string)a.GetIdleCommand(); });
     t.method("GetIdleCommand", [](TApplication const* a) { return (std::string)a->GetIdleCommand(); });
 
     DEBUG_MSG("Adding wrapper for void TApplication::StartIdleing() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::StartIdleing()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:124:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:124:20
     t.method("StartIdleing", static_cast<void (TApplication::*)() >(&TApplication::StartIdleing));
 
     DEBUG_MSG("Adding wrapper for void TApplication::StopIdleing() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::StopIdleing()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:125:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:125:20
     t.method("StopIdleing", static_cast<void (TApplication::*)() >(&TApplication::StopIdleing));
 
     DEBUG_MSG("Adding wrapper for TApplication::EExitOnException TApplication::ExitOnException(TApplication::EExitOnException) (" __HERE__ ")");
     // signature to use in the veto list: TApplication::EExitOnException TApplication::ExitOnException(TApplication::EExitOnException)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:126:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:126:21
     t.method("ExitOnException", static_cast<TApplication::EExitOnException (TApplication::*)(TApplication::EExitOnException) >(&TApplication::ExitOnException));
     t.method("ExitOnException", [](TApplication& a)->TApplication::EExitOnException { return a.ExitOnException(); });
     t.method("ExitOnException", [](TApplication* a)->TApplication::EExitOnException { return a->ExitOnException(); });
 
     DEBUG_MSG("Adding wrapper for const char * TApplication::ApplicationName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TApplication::ApplicationName()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:128:24
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:128:24
     t.method("ApplicationName", [](TApplication const& a) { return (std::string)a.ApplicationName(); });
     t.method("ApplicationName", [](TApplication const* a) { return (std::string)a->ApplicationName(); });
 
     DEBUG_MSG("Adding wrapper for void TApplication::Show() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Show()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:129:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:129:20
     t.method("Show", static_cast<void (TApplication::*)() >(&TApplication::Show));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Hide() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Hide()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:130:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:130:20
     t.method("Hide", static_cast<void (TApplication::*)() >(&TApplication::Hide));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Iconify() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Iconify()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:131:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:131:20
     t.method("Iconify", static_cast<void (TApplication::*)() >(&TApplication::Iconify));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Open() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Open()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:132:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:132:20
     t.method("Open", static_cast<void (TApplication::*)() >(&TApplication::Open));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Raise() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Raise()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:133:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:133:20
     t.method("Raise", static_cast<void (TApplication::*)() >(&TApplication::Raise));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Lower() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Lower()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:134:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:134:20
     t.method("Lower", static_cast<void (TApplication::*)() >(&TApplication::Lower));
 
     DEBUG_MSG("Adding wrapper for Bool_t TApplication::IsCmdThread() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TApplication::IsCmdThread()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:135:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:135:20
     t.method("IsCmdThread", static_cast<Bool_t (TApplication::*)() >(&TApplication::IsCmdThread));
 
     DEBUG_MSG("Adding wrapper for TApplicationImp * TApplication::GetApplicationImp() (" __HERE__ ")");
     // signature to use in the veto list: TApplicationImp * TApplication::GetApplicationImp()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:136:29
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:136:29
     t.method("GetApplicationImp", static_cast<TApplicationImp * (TApplication::*)() >(&TApplication::GetApplicationImp));
 
     DEBUG_MSG("Adding wrapper for void TApplication::ls(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::ls(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:138:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:138:20
     t.method("ls", static_cast<void (TApplication::*)(Option_t *)  const>(&TApplication::ls));
     t.method("ls", [](TApplication const& a)->void { a.ls(); });
     t.method("ls", [](TApplication const* a)->void { a->ls(); });
 
     DEBUG_MSG("Adding wrapper for Int_t TApplication::Argc() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TApplication::Argc()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:140:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:140:20
     t.method("Argc", static_cast<Int_t (TApplication::*)()  const>(&TApplication::Argc));
 
     DEBUG_MSG("Adding wrapper for char ** TApplication::Argv() (" __HERE__ ")");
     // signature to use in the veto list: char ** TApplication::Argv()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:141:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:141:20
     t.method("Argv", static_cast<char ** (TApplication::*)()  const>(&TApplication::Argv));
 
     DEBUG_MSG("Adding wrapper for char * TApplication::Argv(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: char * TApplication::Argv(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:142:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:142:20
     t.method("Argv", static_cast<char * (TApplication::*)(Int_t)  const>(&TApplication::Argv));
 
     DEBUG_MSG("Adding wrapper for Bool_t TApplication::NoLogOpt() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TApplication::NoLogOpt()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:143:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:143:20
     t.method("NoLogOpt", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::NoLogOpt));
 
     DEBUG_MSG("Adding wrapper for Bool_t TApplication::NoLogoOpt() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TApplication::NoLogoOpt()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:144:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:144:20
     t.method("NoLogoOpt", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::NoLogoOpt));
 
     DEBUG_MSG("Adding wrapper for Bool_t TApplication::QuitOpt() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TApplication::QuitOpt()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:145:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:145:20
     t.method("QuitOpt", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::QuitOpt));
 
     DEBUG_MSG("Adding wrapper for TObjArray * TApplication::InputFiles() (" __HERE__ ")");
     // signature to use in the veto list: TObjArray * TApplication::InputFiles()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:146:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:146:20
     t.method("InputFiles", static_cast<TObjArray * (TApplication::*)()  const>(&TApplication::InputFiles));
 
     DEBUG_MSG("Adding wrapper for const char * TApplication::WorkingDirectory() (" __HERE__ ")");
     // signature to use in the veto list: const char * TApplication::WorkingDirectory()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:147:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:147:20
     t.method("WorkingDirectory", [](TApplication const& a) { return (std::string)a.WorkingDirectory(); });
     t.method("WorkingDirectory", [](TApplication const* a) { return (std::string)a->WorkingDirectory(); });
 
     DEBUG_MSG("Adding wrapper for void TApplication::ClearInputFiles() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::ClearInputFiles()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:148:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:148:20
     t.method("ClearInputFiles", static_cast<void (TApplication::*)() >(&TApplication::ClearInputFiles));
 
     DEBUG_MSG("Adding wrapper for TApplication * TApplication::GetAppRemote() (" __HERE__ ")");
     // signature to use in the veto list: TApplication * TApplication::GetAppRemote()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:150:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:150:20
     t.method("GetAppRemote", static_cast<TApplication * (TApplication::*)()  const>(&TApplication::GetAppRemote));
 
     DEBUG_MSG("Adding wrapper for Bool_t TApplication::IsRunning() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TApplication::IsRunning()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:152:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:152:20
     t.method("IsRunning", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::IsRunning));
 
     DEBUG_MSG("Adding wrapper for Bool_t TApplication::ReturnFromRun() (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TApplication::ReturnFromRun()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:153:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:153:20
     t.method("ReturnFromRun", static_cast<Bool_t (TApplication::*)()  const>(&TApplication::ReturnFromRun));
 
     DEBUG_MSG("Adding wrapper for void TApplication::SetReturnFromRun(Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::SetReturnFromRun(Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:154:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:154:20
     t.method("SetReturnFromRun", static_cast<void (TApplication::*)(Bool_t) >(&TApplication::SetReturnFromRun));
 
     DEBUG_MSG("Adding wrapper for void TApplication::LineProcessed(const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::LineProcessed(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:156:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:156:20
     t.method("LineProcessed", static_cast<void (TApplication::*)(const char *) >(&TApplication::LineProcessed));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Terminate(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Terminate(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:157:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:157:20
     t.method("Terminate", static_cast<void (TApplication::*)(Int_t) >(&TApplication::Terminate));
     t.method("Terminate", [](TApplication& a)->void { a.Terminate(); });
     t.method("Terminate", [](TApplication* a)->void { a->Terminate(); });
 
     DEBUG_MSG("Adding wrapper for void TApplication::KeyPressed(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::KeyPressed(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:158:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:158:20
     t.method("KeyPressed", static_cast<void (TApplication::*)(Int_t) >(&TApplication::KeyPressed));
 
     DEBUG_MSG("Adding wrapper for void TApplication::ReturnPressed(char *) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::ReturnPressed(char *)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:159:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:159:20
     t.method("ReturnPressed", static_cast<void (TApplication::*)(char *) >(&TApplication::ReturnPressed));
 
     DEBUG_MSG("Adding wrapper for Longptr_t TApplication::ExecuteFile(const char *, Int_t *, Bool_t) (" __HERE__ ")");
     // signature to use in the veto list: Longptr_t TApplication::ExecuteFile(const char *, Int_t *, Bool_t)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:162:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:162:21
     module_.method("TApplication!ExecuteFile", static_cast<Longptr_t (*)(const char *, Int_t *, Bool_t) >(&TApplication::ExecuteFile));
     module_.method("TApplication!ExecuteFile", [](const char * arg0)->Longptr_t { return TApplication::ExecuteFile(arg0); });
     module_.method("TApplication!ExecuteFile", [](const char * arg0, Int_t * arg1)->Longptr_t { return TApplication::ExecuteFile(arg0, arg1); });
 
     DEBUG_MSG("Adding wrapper for TList * TApplication::GetApplications() (" __HERE__ ")");
     // signature to use in the veto list: TList * TApplication::GetApplications()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:163:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:163:20
     module_.method("TApplication!GetApplications", static_cast<TList * (*)() >(&TApplication::GetApplications));
 
     DEBUG_MSG("Adding wrapper for void TApplication::CreateApplication() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::CreateApplication()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:164:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:164:20
     module_.method("TApplication!CreateApplication", static_cast<void (*)() >(&TApplication::CreateApplication));
 
     DEBUG_MSG("Adding wrapper for void TApplication::NeedGraphicsLibs() (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::NeedGraphicsLibs()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:165:20
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:165:20
     module_.method("TApplication!NeedGraphicsLibs", static_cast<void (*)() >(&TApplication::NeedGraphicsLibs));
 
     DEBUG_MSG("Adding wrapper for Version_t TApplication::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TApplication::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!Class_Version", static_cast<Version_t (*)() >(&TApplication::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TApplication::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TApplication::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     t.method("IsA", static_cast<TClass * (TApplication::*)()  const>(&TApplication::IsA));
 
     DEBUG_MSG("Adding wrapper for void TApplication::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     t.method("StreamerNVirtual", static_cast<void (TApplication::*)(TBuffer &) >(&TApplication::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TApplication::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TApplication::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!DeclFileName", []() { return (std::string)TApplication::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TApplication::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TApplication::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!ImplFileLine", static_cast<int (*)() >(&TApplication::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TApplication::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TApplication::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!ImplFileName", []() { return (std::string)TApplication::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TApplication::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TApplication::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!Class_Name", []() { return (std::string)TApplication::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TApplication::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TApplication::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!Dictionary", static_cast<TClass * (*)() >(&TApplication::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TApplication::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TApplication::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!Class", static_cast<TClass * (*)() >(&TApplication::Class));
 
     DEBUG_MSG("Adding wrapper for void TApplication::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TApplication::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     t.method("Streamer", static_cast<void (TApplication::*)(TBuffer &) >(&TApplication::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TApplication::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TApplication::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TApplication.h:167:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TApplication.h:167:4
     module_.method("TApplication!DeclFileLine", static_cast<int (*)() >(&TApplication::DeclFileLine));
   }
 
@@ -397,7 +1368,7 @@ struct JlTInterpreter: public Wrapper {
 
   JlTInterpreter(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TInterpreter (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TInterpreter.h:60:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TInterpreter.h:60:7
     jlcxx::TypeWrapper<TInterpreter>  t = jlModule.add_type<TInterpreter>("TInterpreter",
       jlcxx::julia_base_type<TNamed>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TInterpreter>>(new jlcxx::TypeWrapper<TInterpreter>(jlModule, t));
@@ -425,7 +1396,7 @@ struct JlTDataType: public Wrapper {
 
   JlTDataType(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TDataType (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TDataType.h:44:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TDataType.h:44:7
     jlcxx::TypeWrapper<TDataType>  t = jlModule.add_type<TDataType>("TDataType");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TDataType>>(new jlcxx::TypeWrapper<TDataType>(jlModule, t));
   }
@@ -440,63 +1411,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTDataType(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTDataType(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TVirtualPad> : std::false_type { };
-  template<> struct DefaultConstructible<TVirtualPad> : std::false_type { };
-template<> struct SuperType<TVirtualPad> { typedef TObject type; };
-}
-
-// Class generating the wrapper for type TVirtualPad
-// signature to use in the veto file: TVirtualPad
-struct JlTVirtualPad: public Wrapper {
-
-  JlTVirtualPad(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TVirtualPad (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualPad.h:50:7
-    jlcxx::TypeWrapper<TVirtualPad>  t = jlModule.add_type<TVirtualPad>("TVirtualPad",
-      jlcxx::julia_base_type<TObject>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TVirtualPad>>(new jlcxx::TypeWrapper<TVirtualPad>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TVirtualPad>> type_;
-};
-std::shared_ptr<Wrapper> newJlTVirtualPad(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTVirtualPad(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<TPad> : std::false_type { };
-  template<> struct DefaultConstructible<TPad> : std::false_type { };
-template<> struct SuperType<TPad> { typedef TVirtualPad type; };
-}
-
-// Class generating the wrapper for type TPad
-// signature to use in the veto file: TPad
-struct JlTPad: public Wrapper {
-
-  JlTPad(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type TPad (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TPad.h:28:7
-    jlcxx::TypeWrapper<TPad>  t = jlModule.add_type<TPad>("TPad",
-      jlcxx::julia_base_type<TVirtualPad>());
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<TPad>>(new jlcxx::TypeWrapper<TPad>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<TPad>> type_;
-};
-std::shared_ptr<Wrapper> newJlTPad(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlTPad(module));
 }

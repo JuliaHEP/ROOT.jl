@@ -18,7 +18,7 @@ struct JlTBuffer: public Wrapper {
 
   JlTBuffer(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TBuffer (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBuffer.h:43:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBuffer.h:43:7
     jlcxx::TypeWrapper<TBuffer>  t = jlModule.add_type<TBuffer>("TBuffer",
       jlcxx::julia_base_type<TObject>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TBuffer>>(new jlcxx::TypeWrapper<TBuffer>(jlModule, t));
@@ -53,7 +53,7 @@ struct JlTVectorT: public Wrapper {
 
   JlTVectorT(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TVectorT (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TVectorDfwd.h:22:31
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVectorDfwd.h:22:31
     jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>  t =  jlModule.add_type<jlcxx::Parametric<jlcxx::TypeVar<1>>>("TVectorT");
     type_ = std::unique_ptr<jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>>(new jlcxx::TypeWrapper<jlcxx::Parametric<jlcxx::TypeVar<1>>>(jlModule, t));
     t.constructor<>(/*finalize=*/true);

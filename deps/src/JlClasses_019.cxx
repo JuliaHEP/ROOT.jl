@@ -7,6 +7,37 @@
 #include "jlcxx/stl.hpp"
 
 namespace jlcxx {
+  template<> struct IsMirroredType<TArrayD> : std::false_type { };
+  template<> struct DefaultConstructible<TArrayD> : std::false_type { };
+template<> struct SuperType<TArrayD> { typedef TArray type; };
+}
+
+// Class generating the wrapper for type TArrayD
+// signature to use in the veto file: TArrayD
+struct JlTArrayD: public Wrapper {
+
+  JlTArrayD(jlcxx::Module& jlModule): Wrapper(jlModule){
+    DEBUG_MSG("Adding wrapper for type TArrayD (" __HERE__ ")");
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TArrayD.h:27:7
+    jlcxx::TypeWrapper<TArrayD>  t = jlModule.add_type<TArrayD>("TArrayD",
+      jlcxx::julia_base_type<TArray>());
+    jlcxx::stl::apply_stl<TArrayD>(jlModule);
+    type_ = std::unique_ptr<jlcxx::TypeWrapper<TArrayD>>(new jlcxx::TypeWrapper<TArrayD>(jlModule, t));
+  }
+
+  void add_methods() const{
+    auto& t = *type_;
+    t.template constructor<>(/*finalize=*/true);
+  }
+
+private:
+  std::unique_ptr<jlcxx::TypeWrapper<TArrayD>> type_;
+};
+std::shared_ptr<Wrapper> newJlTArrayD(jlcxx::Module& module){
+  return std::shared_ptr<Wrapper>(new JlTArrayD(module));
+}
+
+namespace jlcxx {
   template<> struct IsMirroredType<TAxisModLab> : std::false_type { };
   template<> struct DefaultConstructible<TAxisModLab> : std::false_type { };
 template<> struct SuperType<TAxisModLab> { typedef TObject type; };
@@ -18,7 +49,7 @@ struct JlTAxisModLab: public Wrapper {
 
   JlTAxisModLab(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TAxisModLab (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:21:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:21:7
     jlcxx::TypeWrapper<TAxisModLab>  t = jlModule.add_type<TAxisModLab>("TAxisModLab",
       jlcxx::julia_base_type<TObject>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TAxisModLab>>(new jlcxx::TypeWrapper<TAxisModLab>(jlModule, t));
@@ -30,153 +61,153 @@ struct JlTAxisModLab: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetLabNum(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetLabNum(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:32:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:32:9
     t.method("SetLabNum", static_cast<void (TAxisModLab::*)(Int_t) >(&TAxisModLab::SetLabNum));
     t.method("SetLabNum", [](TAxisModLab& a)->void { a.SetLabNum(); });
     t.method("SetLabNum", [](TAxisModLab* a)->void { a->SetLabNum(); });
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetLabValue(Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetLabValue(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:33:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:33:9
     t.method("SetLabValue", static_cast<void (TAxisModLab::*)(Double_t) >(&TAxisModLab::SetLabValue));
     t.method("SetLabValue", [](TAxisModLab& a)->void { a.SetLabValue(); });
     t.method("SetLabValue", [](TAxisModLab* a)->void { a->SetLabValue(); });
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetAngle(Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetAngle(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:34:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:34:9
     t.method("SetAngle", static_cast<void (TAxisModLab::*)(Double_t) >(&TAxisModLab::SetAngle));
     t.method("SetAngle", [](TAxisModLab& a)->void { a.SetAngle(); });
     t.method("SetAngle", [](TAxisModLab* a)->void { a->SetAngle(); });
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetSize(Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetSize(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:35:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:35:9
     t.method("SetSize", static_cast<void (TAxisModLab::*)(Double_t) >(&TAxisModLab::SetSize));
     t.method("SetSize", [](TAxisModLab& a)->void { a.SetSize(); });
     t.method("SetSize", [](TAxisModLab* a)->void { a->SetSize(); });
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetAlign(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetAlign(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:36:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:36:9
     t.method("SetAlign", static_cast<void (TAxisModLab::*)(Int_t) >(&TAxisModLab::SetAlign));
     t.method("SetAlign", [](TAxisModLab& a)->void { a.SetAlign(); });
     t.method("SetAlign", [](TAxisModLab* a)->void { a->SetAlign(); });
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetColor(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetColor(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:37:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:37:9
     t.method("SetColor", static_cast<void (TAxisModLab::*)(Int_t) >(&TAxisModLab::SetColor));
     t.method("SetColor", [](TAxisModLab& a)->void { a.SetColor(); });
     t.method("SetColor", [](TAxisModLab* a)->void { a->SetColor(); });
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetFont(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetFont(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:38:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:38:9
     t.method("SetFont", static_cast<void (TAxisModLab::*)(Int_t) >(&TAxisModLab::SetFont));
     t.method("SetFont", [](TAxisModLab& a)->void { a.SetFont(); });
     t.method("SetFont", [](TAxisModLab* a)->void { a->SetFont(); });
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::SetText(TString) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::SetText(TString)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:39:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:39:9
     t.method("SetText", static_cast<void (TAxisModLab::*)(TString) >(&TAxisModLab::SetText));
     t.method("SetText", [](TAxisModLab& a)->void { a.SetText(); });
     t.method("SetText", [](TAxisModLab* a)->void { a->SetText(); });
 
     DEBUG_MSG("Adding wrapper for Int_t TAxisModLab::GetLabNum() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TAxisModLab::GetLabNum()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:41:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:41:10
     t.method("GetLabNum", static_cast<Int_t (TAxisModLab::*)()  const>(&TAxisModLab::GetLabNum));
 
     DEBUG_MSG("Adding wrapper for Double_t TAxisModLab::GetLabValue() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TAxisModLab::GetLabValue()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:42:13
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:42:13
     t.method("GetLabValue", static_cast<Double_t (TAxisModLab::*)()  const>(&TAxisModLab::GetLabValue));
 
     DEBUG_MSG("Adding wrapper for Double_t TAxisModLab::GetAngle() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TAxisModLab::GetAngle()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:43:13
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:43:13
     t.method("GetAngle", static_cast<Double_t (TAxisModLab::*)()  const>(&TAxisModLab::GetAngle));
 
     DEBUG_MSG("Adding wrapper for Double_t TAxisModLab::GetSize() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TAxisModLab::GetSize()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:44:13
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:44:13
     t.method("GetSize", static_cast<Double_t (TAxisModLab::*)()  const>(&TAxisModLab::GetSize));
 
     DEBUG_MSG("Adding wrapper for Int_t TAxisModLab::GetAlign() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TAxisModLab::GetAlign()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:45:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:45:10
     t.method("GetAlign", static_cast<Int_t (TAxisModLab::*)()  const>(&TAxisModLab::GetAlign));
 
     DEBUG_MSG("Adding wrapper for Int_t TAxisModLab::GetColor() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TAxisModLab::GetColor()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:46:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:46:10
     t.method("GetColor", static_cast<Int_t (TAxisModLab::*)()  const>(&TAxisModLab::GetColor));
 
     DEBUG_MSG("Adding wrapper for Int_t TAxisModLab::GetFont() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TAxisModLab::GetFont()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:47:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:47:10
     t.method("GetFont", static_cast<Int_t (TAxisModLab::*)()  const>(&TAxisModLab::GetFont));
 
     DEBUG_MSG("Adding wrapper for const TString & TAxisModLab::GetText() (" __HERE__ ")");
     // signature to use in the veto list: const TString & TAxisModLab::GetText()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:48:19
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:48:19
     t.method("GetText", static_cast<const TString & (TAxisModLab::*)()  const>(&TAxisModLab::GetText));
 
     DEBUG_MSG("Adding wrapper for Version_t TAxisModLab::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TAxisModLab::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!Class_Version", static_cast<Version_t (*)() >(&TAxisModLab::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TAxisModLab::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TAxisModLab::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     t.method("IsA", static_cast<TClass * (TAxisModLab::*)()  const>(&TAxisModLab::IsA));
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     t.method("StreamerNVirtual", static_cast<void (TAxisModLab::*)(TBuffer &) >(&TAxisModLab::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TAxisModLab::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TAxisModLab::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!DeclFileName", []() { return (std::string)TAxisModLab::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TAxisModLab::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TAxisModLab::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!ImplFileLine", static_cast<int (*)() >(&TAxisModLab::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TAxisModLab::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TAxisModLab::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!ImplFileName", []() { return (std::string)TAxisModLab::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TAxisModLab::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TAxisModLab::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!Class_Name", []() { return (std::string)TAxisModLab::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TAxisModLab::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TAxisModLab::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!Dictionary", static_cast<TClass * (*)() >(&TAxisModLab::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TAxisModLab::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TAxisModLab::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!Class", static_cast<TClass * (*)() >(&TAxisModLab::Class));
 
     DEBUG_MSG("Adding wrapper for void TAxisModLab::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TAxisModLab::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     t.method("Streamer", static_cast<void (TAxisModLab::*)(TBuffer &) >(&TAxisModLab::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TAxisModLab::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TAxisModLab::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TAxisModLab.h:50:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TAxisModLab.h:50:4
     module_.method("TAxisModLab!DeclFileLine", static_cast<int (*)() >(&TAxisModLab::DeclFileLine));
   }
 
@@ -199,7 +230,7 @@ struct JlTVirtualFitter: public Wrapper {
 
   JlTVirtualFitter(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TVirtualFitter (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:29:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:29:7
     jlcxx::TypeWrapper<TVirtualFitter>  t = jlModule.add_type<TVirtualFitter>("TVirtualFitter",
       jlcxx::julia_base_type<TNamed>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TVirtualFitter>>(new jlcxx::TypeWrapper<TVirtualFitter>(jlModule, t));
@@ -210,340 +241,340 @@ struct JlTVirtualFitter: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for Double_t TVirtualFitter::Chisquare(Int_t, Double_t *) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TVirtualFitter::Chisquare(Int_t, Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:61:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:61:22
     t.method("Chisquare", static_cast<Double_t (TVirtualFitter::*)(Int_t, Double_t *)  const>(&TVirtualFitter::Chisquare));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::Clear(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::Clear(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:63:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:63:14
     t.method("Clear", static_cast<void (TVirtualFitter::*)(Option_t *) >(&TVirtualFitter::Clear));
     t.method("Clear", [](TVirtualFitter& a)->void { a.Clear(); });
     t.method("Clear", [](TVirtualFitter* a)->void { a->Clear(); });
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::ExecuteCommand(const char *, Double_t *, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::ExecuteCommand(const char *, Double_t *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:64:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:64:22
     t.method("ExecuteCommand", static_cast<Int_t (TVirtualFitter::*)(const char *, Double_t *, Int_t) >(&TVirtualFitter::ExecuteCommand));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::FixParameter(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::FixParameter(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:65:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:65:22
     t.method("FixParameter", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::FixParameter));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::GetConfidenceIntervals(Int_t, Int_t, const Double_t *, Double_t *, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::GetConfidenceIntervals(Int_t, Int_t, const Double_t *, Double_t *, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:66:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:66:22
     t.method("GetConfidenceIntervals", static_cast<void (TVirtualFitter::*)(Int_t, Int_t, const Double_t *, Double_t *, Double_t) >(&TVirtualFitter::GetConfidenceIntervals));
     t.method("GetConfidenceIntervals", [](TVirtualFitter& a, Int_t arg0, Int_t arg1, const Double_t * arg2, Double_t * arg3)->void { a.GetConfidenceIntervals(arg0, arg1, arg2, arg3); });
     t.method("GetConfidenceIntervals", [](TVirtualFitter* a, Int_t arg0, Int_t arg1, const Double_t * arg2, Double_t * arg3)->void { a->GetConfidenceIntervals(arg0, arg1, arg2, arg3); });
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::GetConfidenceIntervals(TObject *, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::GetConfidenceIntervals(TObject *, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:67:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:67:22
     t.method("GetConfidenceIntervals", static_cast<void (TVirtualFitter::*)(TObject *, Double_t) >(&TVirtualFitter::GetConfidenceIntervals));
     t.method("GetConfidenceIntervals", [](TVirtualFitter& a, TObject * arg0)->void { a.GetConfidenceIntervals(arg0); });
     t.method("GetConfidenceIntervals", [](TVirtualFitter* a, TObject * arg0)->void { a->GetConfidenceIntervals(arg0); });
 
     DEBUG_MSG("Adding wrapper for Double_t * TVirtualFitter::GetCovarianceMatrix() (" __HERE__ ")");
     // signature to use in the veto list: Double_t * TVirtualFitter::GetCovarianceMatrix()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:68:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:68:22
     t.method("GetCovarianceMatrix", static_cast<Double_t * (TVirtualFitter::*)()  const>(&TVirtualFitter::GetCovarianceMatrix));
 
     DEBUG_MSG("Adding wrapper for Double_t TVirtualFitter::GetCovarianceMatrixElement(Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TVirtualFitter::GetCovarianceMatrixElement(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:69:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:69:22
     t.method("GetCovarianceMatrixElement", static_cast<Double_t (TVirtualFitter::*)(Int_t, Int_t)  const>(&TVirtualFitter::GetCovarianceMatrixElement));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetErrors(Int_t, Double_t &, Double_t &, Double_t &, Double_t &) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetErrors(Int_t, Double_t &, Double_t &, Double_t &, Double_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:70:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:70:22
     t.method("GetErrors", static_cast<Int_t (TVirtualFitter::*)(Int_t, Double_t &, Double_t &, Double_t &, Double_t &)  const>(&TVirtualFitter::GetErrors));
 
     DEBUG_MSG("Adding wrapper for Foption_t TVirtualFitter::GetFitOption() (" __HERE__ ")");
     // signature to use in the veto list: Foption_t TVirtualFitter::GetFitOption()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:73:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:73:22
     t.method("GetFitOption", static_cast<Foption_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetFitOption));
 
     DEBUG_MSG("Adding wrapper for TMethodCall * TVirtualFitter::GetMethodCall() (" __HERE__ ")");
     // signature to use in the veto list: TMethodCall * TVirtualFitter::GetMethodCall()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:74:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:74:22
     t.method("GetMethodCall", static_cast<TMethodCall * (TVirtualFitter::*)()  const>(&TVirtualFitter::GetMethodCall));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetNumberTotalParameters() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetNumberTotalParameters()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:75:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:75:22
     t.method("GetNumberTotalParameters", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetNumberTotalParameters));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetNumberFreeParameters() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetNumberFreeParameters()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:76:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:76:22
     t.method("GetNumberFreeParameters", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetNumberFreeParameters));
 
     DEBUG_MSG("Adding wrapper for TObject * TVirtualFitter::GetObjectFit() (" __HERE__ ")");
     // signature to use in the veto list: TObject * TVirtualFitter::GetObjectFit()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:77:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:77:22
     t.method("GetObjectFit", static_cast<TObject * (TVirtualFitter::*)()  const>(&TVirtualFitter::GetObjectFit));
 
     DEBUG_MSG("Adding wrapper for Double_t TVirtualFitter::GetParError(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TVirtualFitter::GetParError(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:78:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:78:22
     t.method("GetParError", static_cast<Double_t (TVirtualFitter::*)(Int_t)  const>(&TVirtualFitter::GetParError));
 
     DEBUG_MSG("Adding wrapper for Double_t TVirtualFitter::GetParameter(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TVirtualFitter::GetParameter(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:79:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:79:22
     t.method("GetParameter", static_cast<Double_t (TVirtualFitter::*)(Int_t)  const>(&TVirtualFitter::GetParameter));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetParameter(Int_t, char *, Double_t &, Double_t &, Double_t &, Double_t &) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetParameter(Int_t, char *, Double_t &, Double_t &, Double_t &, Double_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:80:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:80:22
     t.method("GetParameter", static_cast<Int_t (TVirtualFitter::*)(Int_t, char *, Double_t &, Double_t &, Double_t &, Double_t &)  const>(&TVirtualFitter::GetParameter));
 
     DEBUG_MSG("Adding wrapper for const char * TVirtualFitter::GetParName(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: const char * TVirtualFitter::GetParName(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:81:24
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:81:24
     t.method("GetParName", [](TVirtualFitter const& a, Int_t arg0) { return (std::string)a.GetParName(arg0); });
     t.method("GetParName", [](TVirtualFitter const* a, Int_t arg0) { return (std::string)a->GetParName(arg0); });
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetStats(Double_t &, Double_t &, Double_t &, Int_t &, Int_t &) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetStats(Double_t &, Double_t &, Double_t &, Int_t &, Int_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:82:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:82:22
     t.method("GetStats", static_cast<Int_t (TVirtualFitter::*)(Double_t &, Double_t &, Double_t &, Int_t &, Int_t &)  const>(&TVirtualFitter::GetStats));
 
     DEBUG_MSG("Adding wrapper for Double_t TVirtualFitter::GetSumLog(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TVirtualFitter::GetSumLog(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:83:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:83:22
     t.method("GetSumLog", static_cast<Double_t (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::GetSumLog));
 
     DEBUG_MSG("Adding wrapper for TObject * TVirtualFitter::GetUserFunc() (" __HERE__ ")");
     // signature to use in the veto list: TObject * TVirtualFitter::GetUserFunc()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:84:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:84:22
     t.method("GetUserFunc", static_cast<TObject * (TVirtualFitter::*)()  const>(&TVirtualFitter::GetUserFunc));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetXfirst() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetXfirst()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:85:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:85:22
     t.method("GetXfirst", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetXfirst));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetXlast() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetXlast()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:86:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:86:22
     t.method("GetXlast", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetXlast));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetYfirst() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetYfirst()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:87:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:87:22
     t.method("GetYfirst", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetYfirst));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetYlast() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetYlast()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:88:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:88:22
     t.method("GetYlast", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetYlast));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetZfirst() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetZfirst()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:89:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:89:22
     t.method("GetZfirst", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetZfirst));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetZlast() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetZlast()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:90:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:90:22
     t.method("GetZlast", static_cast<Int_t (TVirtualFitter::*)()  const>(&TVirtualFitter::GetZlast));
 
     DEBUG_MSG("Adding wrapper for Bool_t TVirtualFitter::IsFixed(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TVirtualFitter::IsFixed(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:91:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:91:22
     t.method("IsFixed", static_cast<Bool_t (TVirtualFitter::*)(Int_t)  const>(&TVirtualFitter::IsFixed));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::PrintResults(Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::PrintResults(Int_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:92:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:92:22
     t.method("PrintResults", static_cast<void (TVirtualFitter::*)(Int_t, Double_t)  const>(&TVirtualFitter::PrintResults));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::ReleaseParameter(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::ReleaseParameter(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:93:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:93:22
     t.method("ReleaseParameter", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::ReleaseParameter));
 
     DEBUG_MSG("Adding wrapper for Double_t * TVirtualFitter::SetCache(Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t * TVirtualFitter::SetCache(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:94:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:94:22
     t.method("SetCache", static_cast<Double_t * (TVirtualFitter::*)(Int_t, Int_t) >(&TVirtualFitter::SetCache));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetFCN(void (*)(Int_t &, Double_t *, Double_t &, Double_t *, Int_t)) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetFCN(void (*)(Int_t &, Double_t *, Double_t &, Double_t *, Int_t))
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:95:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:95:22
     t.method("SetFCN", static_cast<void (TVirtualFitter::*)(void (*)(Int_t &, Double_t *, Double_t &, Double_t *, Int_t)) >(&TVirtualFitter::SetFCN));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetFitMethod(const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetFitMethod(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:96:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:96:22
     t.method("SetFitMethod", static_cast<void (TVirtualFitter::*)(const char *) >(&TVirtualFitter::SetFitMethod));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetFitOption(Foption_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetFitOption(Foption_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:97:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:97:22
     t.method("SetFitOption", static_cast<void (TVirtualFitter::*)(Foption_t) >(&TVirtualFitter::SetFitOption));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetObjectFit(TObject *) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetObjectFit(TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:98:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:98:22
     t.method("SetObjectFit", static_cast<void (TVirtualFitter::*)(TObject *) >(&TVirtualFitter::SetObjectFit));
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::SetParameter(Int_t, const char *, Double_t, Double_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::SetParameter(Int_t, const char *, Double_t, Double_t, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:99:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:99:22
     t.method("SetParameter", static_cast<Int_t (TVirtualFitter::*)(Int_t, const char *, Double_t, Double_t, Double_t, Double_t) >(&TVirtualFitter::SetParameter));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetUserFunc(TObject *) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetUserFunc(TObject *)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:100:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:100:22
     t.method("SetUserFunc", static_cast<void (TVirtualFitter::*)(TObject *) >(&TVirtualFitter::SetUserFunc));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetXfirst(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetXfirst(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:101:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:101:22
     t.method("SetXfirst", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::SetXfirst));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetXlast(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetXlast(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:102:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:102:22
     t.method("SetXlast", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::SetXlast));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetYfirst(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetYfirst(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:103:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:103:22
     t.method("SetYfirst", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::SetYfirst));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetYlast(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetYlast(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:104:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:104:22
     t.method("SetYlast", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::SetYlast));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetZfirst(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetZfirst(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:105:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:105:22
     t.method("SetZfirst", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::SetZfirst));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetZlast(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetZlast(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:106:22
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:106:22
     t.method("SetZlast", static_cast<void (TVirtualFitter::*)(Int_t) >(&TVirtualFitter::SetZlast));
 
     DEBUG_MSG("Adding wrapper for TVirtualFitter * TVirtualFitter::GetFitter() (" __HERE__ ")");
     // signature to use in the veto list: TVirtualFitter * TVirtualFitter::GetFitter()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:108:28
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:108:28
     module_.method("TVirtualFitter!GetFitter", static_cast<TVirtualFitter * (*)() >(&TVirtualFitter::GetFitter));
 
     DEBUG_MSG("Adding wrapper for TVirtualFitter * TVirtualFitter::Fitter(TObject *, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: TVirtualFitter * TVirtualFitter::Fitter(TObject *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:109:28
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:109:28
     module_.method("TVirtualFitter!Fitter", static_cast<TVirtualFitter * (*)(TObject *, Int_t) >(&TVirtualFitter::Fitter));
     module_.method("TVirtualFitter!Fitter", [](TObject * arg0)->TVirtualFitter * { return TVirtualFitter::Fitter(arg0); });
 
     DEBUG_MSG("Adding wrapper for const char * TVirtualFitter::GetDefaultFitter() (" __HERE__ ")");
     // signature to use in the veto list: const char * TVirtualFitter::GetDefaultFitter()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:110:23
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:110:23
     module_.method("TVirtualFitter!GetDefaultFitter", []() { return (std::string)TVirtualFitter::GetDefaultFitter(); });
 
     DEBUG_MSG("Adding wrapper for Int_t TVirtualFitter::GetMaxIterations() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TVirtualFitter::GetMaxIterations()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:111:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:111:21
     module_.method("TVirtualFitter!GetMaxIterations", static_cast<Int_t (*)() >(&TVirtualFitter::GetMaxIterations));
 
     DEBUG_MSG("Adding wrapper for Double_t TVirtualFitter::GetErrorDef() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TVirtualFitter::GetErrorDef()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:112:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:112:21
     module_.method("TVirtualFitter!GetErrorDef", static_cast<Double_t (*)() >(&TVirtualFitter::GetErrorDef));
 
     DEBUG_MSG("Adding wrapper for Double_t TVirtualFitter::GetPrecision() (" __HERE__ ")");
     // signature to use in the veto list: Double_t TVirtualFitter::GetPrecision()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:113:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:113:21
     module_.method("TVirtualFitter!GetPrecision", static_cast<Double_t (*)() >(&TVirtualFitter::GetPrecision));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetDefaultFitter(const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetDefaultFitter(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:114:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:114:21
     module_.method("TVirtualFitter!SetDefaultFitter", static_cast<void (*)(const char *) >(&TVirtualFitter::SetDefaultFitter));
     module_.method("TVirtualFitter!SetDefaultFitter", []()->void { TVirtualFitter::SetDefaultFitter(); });
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetFitter(TVirtualFitter *, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetFitter(TVirtualFitter *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:115:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:115:21
     module_.method("TVirtualFitter!SetFitter", static_cast<void (*)(TVirtualFitter *, Int_t) >(&TVirtualFitter::SetFitter));
     module_.method("TVirtualFitter!SetFitter", [](TVirtualFitter * arg0)->void { TVirtualFitter::SetFitter(arg0); });
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetMaxIterations(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetMaxIterations(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:116:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:116:21
     module_.method("TVirtualFitter!SetMaxIterations", static_cast<void (*)(Int_t) >(&TVirtualFitter::SetMaxIterations));
     module_.method("TVirtualFitter!SetMaxIterations", []()->void { TVirtualFitter::SetMaxIterations(); });
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetErrorDef(Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetErrorDef(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:117:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:117:21
     module_.method("TVirtualFitter!SetErrorDef", static_cast<void (*)(Double_t) >(&TVirtualFitter::SetErrorDef));
     module_.method("TVirtualFitter!SetErrorDef", []()->void { TVirtualFitter::SetErrorDef(); });
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::SetPrecision(Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::SetPrecision(Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:118:21
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:118:21
     module_.method("TVirtualFitter!SetPrecision", static_cast<void (*)(Double_t) >(&TVirtualFitter::SetPrecision));
     module_.method("TVirtualFitter!SetPrecision", []()->void { TVirtualFitter::SetPrecision(); });
 
     DEBUG_MSG("Adding wrapper for Version_t TVirtualFitter::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TVirtualFitter::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!Class_Version", static_cast<Version_t (*)() >(&TVirtualFitter::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TVirtualFitter::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TVirtualFitter::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     t.method("IsA", static_cast<TClass * (TVirtualFitter::*)()  const>(&TVirtualFitter::IsA));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     t.method("StreamerNVirtual", static_cast<void (TVirtualFitter::*)(TBuffer &) >(&TVirtualFitter::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TVirtualFitter::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TVirtualFitter::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!DeclFileName", []() { return (std::string)TVirtualFitter::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TVirtualFitter::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TVirtualFitter::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!ImplFileLine", static_cast<int (*)() >(&TVirtualFitter::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TVirtualFitter::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TVirtualFitter::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!ImplFileName", []() { return (std::string)TVirtualFitter::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TVirtualFitter::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TVirtualFitter::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!Class_Name", []() { return (std::string)TVirtualFitter::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TVirtualFitter::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TVirtualFitter::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!Dictionary", static_cast<TClass * (*)() >(&TVirtualFitter::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TVirtualFitter::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TVirtualFitter::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!Class", static_cast<TClass * (*)() >(&TVirtualFitter::Class));
 
     DEBUG_MSG("Adding wrapper for void TVirtualFitter::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TVirtualFitter::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     t.method("Streamer", static_cast<void (TVirtualFitter::*)(TBuffer &) >(&TVirtualFitter::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TVirtualFitter::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TVirtualFitter::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TVirtualFitter.h:120:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TVirtualFitter.h:120:4
     module_.method("TVirtualFitter!DeclFileLine", static_cast<int (*)() >(&TVirtualFitter::DeclFileLine));
   }
 
@@ -566,7 +597,7 @@ struct JlTMethodCall: public Wrapper {
 
   JlTMethodCall(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TMethodCall (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TMethodCall.h:37:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TMethodCall.h:37:7
     jlcxx::TypeWrapper<TMethodCall>  t = jlModule.add_type<TMethodCall>("TMethodCall",
       jlcxx::julia_base_type<TObject>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TMethodCall>>(new jlcxx::TypeWrapper<TMethodCall>(jlModule, t));
@@ -596,7 +627,7 @@ struct JlTBackCompFitter: public Wrapper {
 
   JlTBackCompFitter(jlcxx::Module& jlModule): Wrapper(jlModule){
     DEBUG_MSG("Adding wrapper for type TBackCompFitter (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:37:7
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:37:7
     jlcxx::TypeWrapper<TBackCompFitter>  t = jlModule.add_type<TBackCompFitter>("TBackCompFitter",
       jlcxx::julia_base_type<TVirtualFitter>());
     type_ = std::unique_ptr<jlcxx::TypeWrapper<TBackCompFitter>>(new jlcxx::TypeWrapper<TBackCompFitter>(jlModule, t));
@@ -608,159 +639,159 @@ struct JlTBackCompFitter: public Wrapper {
 
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::TBackCompFitter(const std::shared_ptr<ROOT::Fit::Fitter> &, const std::shared_ptr<ROOT::Fit::FitData> &) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:46:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:46:4
     t.constructor<const std::shared_ptr<ROOT::Fit::Fitter> &, const std::shared_ptr<ROOT::Fit::FitData> &>(/*finalize=*/true);
 
     DEBUG_MSG("Adding wrapper for Double_t TBackCompFitter::Chisquare(Int_t, Double_t *) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TBackCompFitter::Chisquare(Int_t, Double_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:57:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:57:14
     t.method("Chisquare", static_cast<Double_t (TBackCompFitter::*)(Int_t, Double_t *)  const>(&TBackCompFitter::Chisquare));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::Clear(Option_t *) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::Clear(Option_t *)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:58:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:58:14
     t.method("Clear", static_cast<void (TBackCompFitter::*)(Option_t *) >(&TBackCompFitter::Clear));
     t.method("Clear", [](TBackCompFitter& a)->void { a.Clear(); });
     t.method("Clear", [](TBackCompFitter* a)->void { a->Clear(); });
 
     DEBUG_MSG("Adding wrapper for Int_t TBackCompFitter::ExecuteCommand(const char *, Double_t *, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TBackCompFitter::ExecuteCommand(const char *, Double_t *, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:59:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:59:14
     t.method("ExecuteCommand", static_cast<Int_t (TBackCompFitter::*)(const char *, Double_t *, Int_t) >(&TBackCompFitter::ExecuteCommand));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::FixParameter(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::FixParameter(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:60:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:60:14
     t.method("FixParameter", static_cast<void (TBackCompFitter::*)(Int_t) >(&TBackCompFitter::FixParameter));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::GetConfidenceIntervals(Int_t, Int_t, const Double_t *, Double_t *, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::GetConfidenceIntervals(Int_t, Int_t, const Double_t *, Double_t *, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:62:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:62:14
     t.method("GetConfidenceIntervals", static_cast<void (TBackCompFitter::*)(Int_t, Int_t, const Double_t *, Double_t *, Double_t) >(&TBackCompFitter::GetConfidenceIntervals));
     t.method("GetConfidenceIntervals", [](TBackCompFitter& a, Int_t arg0, Int_t arg1, const Double_t * arg2, Double_t * arg3)->void { a.GetConfidenceIntervals(arg0, arg1, arg2, arg3); });
     t.method("GetConfidenceIntervals", [](TBackCompFitter* a, Int_t arg0, Int_t arg1, const Double_t * arg2, Double_t * arg3)->void { a->GetConfidenceIntervals(arg0, arg1, arg2, arg3); });
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::GetConfidenceIntervals(TObject *, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::GetConfidenceIntervals(TObject *, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:63:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:63:14
     t.method("GetConfidenceIntervals", static_cast<void (TBackCompFitter::*)(TObject *, Double_t) >(&TBackCompFitter::GetConfidenceIntervals));
     t.method("GetConfidenceIntervals", [](TBackCompFitter& a, TObject * arg0)->void { a.GetConfidenceIntervals(arg0); });
     t.method("GetConfidenceIntervals", [](TBackCompFitter* a, TObject * arg0)->void { a->GetConfidenceIntervals(arg0); });
 
     DEBUG_MSG("Adding wrapper for Double_t * TBackCompFitter::GetCovarianceMatrix() (" __HERE__ ")");
     // signature to use in the veto list: Double_t * TBackCompFitter::GetCovarianceMatrix()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:65:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:65:14
     t.method("GetCovarianceMatrix", static_cast<Double_t * (TBackCompFitter::*)()  const>(&TBackCompFitter::GetCovarianceMatrix));
 
     DEBUG_MSG("Adding wrapper for Double_t TBackCompFitter::GetCovarianceMatrixElement(Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TBackCompFitter::GetCovarianceMatrixElement(Int_t, Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:66:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:66:14
     t.method("GetCovarianceMatrixElement", static_cast<Double_t (TBackCompFitter::*)(Int_t, Int_t)  const>(&TBackCompFitter::GetCovarianceMatrixElement));
 
     DEBUG_MSG("Adding wrapper for Int_t TBackCompFitter::GetErrors(Int_t, Double_t &, Double_t &, Double_t &, Double_t &) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TBackCompFitter::GetErrors(Int_t, Double_t &, Double_t &, Double_t &, Double_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:67:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:67:14
     t.method("GetErrors", static_cast<Int_t (TBackCompFitter::*)(Int_t, Double_t &, Double_t &, Double_t &, Double_t &)  const>(&TBackCompFitter::GetErrors));
 
     DEBUG_MSG("Adding wrapper for Int_t TBackCompFitter::GetNumberTotalParameters() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TBackCompFitter::GetNumberTotalParameters()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:68:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:68:14
     t.method("GetNumberTotalParameters", static_cast<Int_t (TBackCompFitter::*)()  const>(&TBackCompFitter::GetNumberTotalParameters));
 
     DEBUG_MSG("Adding wrapper for Int_t TBackCompFitter::GetNumberFreeParameters() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TBackCompFitter::GetNumberFreeParameters()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:69:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:69:14
     t.method("GetNumberFreeParameters", static_cast<Int_t (TBackCompFitter::*)()  const>(&TBackCompFitter::GetNumberFreeParameters));
 
     DEBUG_MSG("Adding wrapper for Double_t TBackCompFitter::GetParError(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TBackCompFitter::GetParError(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:71:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:71:14
     t.method("GetParError", static_cast<Double_t (TBackCompFitter::*)(Int_t)  const>(&TBackCompFitter::GetParError));
 
     DEBUG_MSG("Adding wrapper for Double_t TBackCompFitter::GetParameter(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TBackCompFitter::GetParameter(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:72:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:72:14
     t.method("GetParameter", static_cast<Double_t (TBackCompFitter::*)(Int_t)  const>(&TBackCompFitter::GetParameter));
 
     DEBUG_MSG("Adding wrapper for Int_t TBackCompFitter::GetParameter(Int_t, char *, Double_t &, Double_t &, Double_t &, Double_t &) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TBackCompFitter::GetParameter(Int_t, char *, Double_t &, Double_t &, Double_t &, Double_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:73:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:73:14
     t.method("GetParameter", static_cast<Int_t (TBackCompFitter::*)(Int_t, char *, Double_t &, Double_t &, Double_t &, Double_t &)  const>(&TBackCompFitter::GetParameter));
 
     DEBUG_MSG("Adding wrapper for const char * TBackCompFitter::GetParName(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: const char * TBackCompFitter::GetParName(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:74:16
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:74:16
     t.method("GetParName", [](TBackCompFitter const& a, Int_t arg0) { return (std::string)a.GetParName(arg0); });
     t.method("GetParName", [](TBackCompFitter const* a, Int_t arg0) { return (std::string)a->GetParName(arg0); });
 
     DEBUG_MSG("Adding wrapper for Int_t TBackCompFitter::GetStats(Double_t &, Double_t &, Double_t &, Int_t &, Int_t &) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TBackCompFitter::GetStats(Double_t &, Double_t &, Double_t &, Int_t &, Int_t &)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:75:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:75:14
     t.method("GetStats", static_cast<Int_t (TBackCompFitter::*)(Double_t &, Double_t &, Double_t &, Int_t &, Int_t &)  const>(&TBackCompFitter::GetStats));
 
     DEBUG_MSG("Adding wrapper for Double_t TBackCompFitter::GetSumLog(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Double_t TBackCompFitter::GetSumLog(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:76:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:76:14
     t.method("GetSumLog", static_cast<Double_t (TBackCompFitter::*)(Int_t) >(&TBackCompFitter::GetSumLog));
 
     DEBUG_MSG("Adding wrapper for Bool_t TBackCompFitter::IsFixed(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Bool_t TBackCompFitter::IsFixed(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:78:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:78:14
     t.method("IsFixed", static_cast<Bool_t (TBackCompFitter::*)(Int_t)  const>(&TBackCompFitter::IsFixed));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::PrintResults(Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::PrintResults(Int_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:80:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:80:14
     t.method("PrintResults", static_cast<void (TBackCompFitter::*)(Int_t, Double_t)  const>(&TBackCompFitter::PrintResults));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::ReleaseParameter(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::ReleaseParameter(Int_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:81:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:81:14
     t.method("ReleaseParameter", static_cast<void (TBackCompFitter::*)(Int_t) >(&TBackCompFitter::ReleaseParameter));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::SetFitMethod(const char *) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::SetFitMethod(const char *)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:82:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:82:14
     t.method("SetFitMethod", static_cast<void (TBackCompFitter::*)(const char *) >(&TBackCompFitter::SetFitMethod));
 
     DEBUG_MSG("Adding wrapper for Int_t TBackCompFitter::SetParameter(Int_t, const char *, Double_t, Double_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TBackCompFitter::SetParameter(Int_t, const char *, Double_t, Double_t, Double_t, Double_t)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:83:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:83:14
     t.method("SetParameter", static_cast<Int_t (TBackCompFitter::*)(Int_t, const char *, Double_t, Double_t, Double_t, Double_t) >(&TBackCompFitter::SetParameter));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::SetFCN(void (*)(Int_t &, Double_t *, Double_t &, Double_t *, Int_t)) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::SetFCN(void (*)(Int_t &, Double_t *, Double_t &, Double_t *, Int_t))
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:85:14
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:85:14
     t.method("SetFCN", static_cast<void (TBackCompFitter::*)(void (*)(Int_t &, Double_t *, Double_t &, Double_t *, Int_t)) >(&TBackCompFitter::SetFCN));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::SetMethodCall(TMethodCall *) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::SetMethodCall(TMethodCall *)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:88:17
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:88:17
     t.method("SetMethodCall", static_cast<void (TBackCompFitter::*)(TMethodCall *) >(&TBackCompFitter::SetMethodCall));
 
     DEBUG_MSG("Adding wrapper for ROOT::Fit::FitConfig & TBackCompFitter::GetFitConfig() (" __HERE__ ")");
     // signature to use in the veto list: ROOT::Fit::FitConfig & TBackCompFitter::GetFitConfig()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:91:27
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:91:27
     t.method("GetFitConfig", static_cast<ROOT::Fit::FitConfig & (TBackCompFitter::*)() >(&TBackCompFitter::GetFitConfig));
 
     DEBUG_MSG("Adding wrapper for const ROOT::Fit::FitResult & TBackCompFitter::GetFitResult() (" __HERE__ ")");
     // signature to use in the veto list: const ROOT::Fit::FitResult & TBackCompFitter::GetFitResult()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:94:33
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:94:33
     t.method("GetFitResult", static_cast<const ROOT::Fit::FitResult & (TBackCompFitter::*)()  const>(&TBackCompFitter::GetFitResult));
 
     DEBUG_MSG("Adding wrapper for TFitResult * TBackCompFitter::GetTFitResult() (" __HERE__ ")");
     // signature to use in the veto list: TFitResult * TBackCompFitter::GetTFitResult()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:97:17
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:97:17
     t.method("GetTFitResult", static_cast<TFitResult * (TBackCompFitter::*)()  const>(&TBackCompFitter::GetTFitResult));
 
     DEBUG_MSG("Adding wrapper for const ROOT::Fit::FitData & TBackCompFitter::GetFitData() (" __HERE__ ")");
     // signature to use in the veto list: const ROOT::Fit::FitData & TBackCompFitter::GetFitData()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:100:31
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:100:31
     t.method("GetFitData", static_cast<const ROOT::Fit::FitData & (TBackCompFitter::*)()  const>(&TBackCompFitter::GetFitData));
 
     DEBUG_MSG("Adding wrapper for bool TBackCompFitter::Scan(unsigned int, TGraph *, double, double) (" __HERE__ ")");
     // signature to use in the veto list: bool TBackCompFitter::Scan(unsigned int, TGraph *, double, double)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:109:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:109:10
     t.method("Scan", static_cast<bool (TBackCompFitter::*)(unsigned int, TGraph *, double, double) >(&TBackCompFitter::Scan));
     t.method("Scan", [](TBackCompFitter& a, unsigned int arg0, TGraph * arg1)->bool { return a.Scan(arg0, arg1); });
     t.method("Scan", [](TBackCompFitter& a, unsigned int arg0, TGraph * arg1, double arg2)->bool { return a.Scan(arg0, arg1, arg2); });
@@ -769,69 +800,69 @@ struct JlTBackCompFitter: public Wrapper {
 
     DEBUG_MSG("Adding wrapper for bool TBackCompFitter::Contour(unsigned int, unsigned int, TGraph *, double) (" __HERE__ ")");
     // signature to use in the veto list: bool TBackCompFitter::Contour(unsigned int, unsigned int, TGraph *, double)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:117:10
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:117:10
     t.method("Contour", static_cast<bool (TBackCompFitter::*)(unsigned int, unsigned int, TGraph *, double) >(&TBackCompFitter::Contour));
     t.method("Contour", [](TBackCompFitter& a, unsigned int arg0, unsigned int arg1, TGraph * arg2)->bool { return a.Contour(arg0, arg1, arg2); });
     t.method("Contour", [](TBackCompFitter* a, unsigned int arg0, unsigned int arg1, TGraph * arg2)->bool { return a->Contour(arg0, arg1, arg2); });
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::ReCreateMinimizer() (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::ReCreateMinimizer()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:123:9
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:123:9
     t.method("ReCreateMinimizer", static_cast<void (TBackCompFitter::*)() >(&TBackCompFitter::ReCreateMinimizer));
 
     DEBUG_MSG("Adding wrapper for Version_t TBackCompFitter::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TBackCompFitter::Class_Version()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!Class_Version", static_cast<Version_t (*)() >(&TBackCompFitter::Class_Version));
 
     DEBUG_MSG("Adding wrapper for TClass * TBackCompFitter::IsA() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TBackCompFitter::IsA()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     t.method("IsA", static_cast<TClass * (TBackCompFitter::*)()  const>(&TBackCompFitter::IsA));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::StreamerNVirtual(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::StreamerNVirtual(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     t.method("StreamerNVirtual", static_cast<void (TBackCompFitter::*)(TBuffer &) >(&TBackCompFitter::StreamerNVirtual));
 
     DEBUG_MSG("Adding wrapper for const char * TBackCompFitter::DeclFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TBackCompFitter::DeclFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!DeclFileName", []() { return (std::string)TBackCompFitter::DeclFileName(); });
 
     DEBUG_MSG("Adding wrapper for int TBackCompFitter::ImplFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TBackCompFitter::ImplFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!ImplFileLine", static_cast<int (*)() >(&TBackCompFitter::ImplFileLine));
 
     DEBUG_MSG("Adding wrapper for const char * TBackCompFitter::ImplFileName() (" __HERE__ ")");
     // signature to use in the veto list: const char * TBackCompFitter::ImplFileName()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!ImplFileName", []() { return (std::string)TBackCompFitter::ImplFileName(); });
 
     DEBUG_MSG("Adding wrapper for const char * TBackCompFitter::Class_Name() (" __HERE__ ")");
     // signature to use in the veto list: const char * TBackCompFitter::Class_Name()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!Class_Name", []() { return (std::string)TBackCompFitter::Class_Name(); });
 
     DEBUG_MSG("Adding wrapper for TClass * TBackCompFitter::Dictionary() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TBackCompFitter::Dictionary()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!Dictionary", static_cast<TClass * (*)() >(&TBackCompFitter::Dictionary));
 
     DEBUG_MSG("Adding wrapper for TClass * TBackCompFitter::Class() (" __HERE__ ")");
     // signature to use in the veto list: TClass * TBackCompFitter::Class()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!Class", static_cast<TClass * (*)() >(&TBackCompFitter::Class));
 
     DEBUG_MSG("Adding wrapper for void TBackCompFitter::Streamer(TBuffer &) (" __HERE__ ")");
     // signature to use in the veto list: void TBackCompFitter::Streamer(TBuffer &)
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     t.method("Streamer", static_cast<void (TBackCompFitter::*)(TBuffer &) >(&TBackCompFitter::Streamer));
 
     DEBUG_MSG("Adding wrapper for int TBackCompFitter::DeclFileLine() (" __HERE__ ")");
     // signature to use in the veto list: int TBackCompFitter::DeclFileLine()
-    // defined in /home/pgras/.julia/conda/3/include/TBackCompFitter.h:143:4
+    // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TBackCompFitter.h:143:4
     module_.method("TBackCompFitter!DeclFileLine", static_cast<int (*)() >(&TBackCompFitter::DeclFileLine));
   }
 
@@ -840,32 +871,4 @@ private:
 };
 std::shared_ptr<Wrapper> newJlTBackCompFitter(jlcxx::Module& module){
   return std::shared_ptr<Wrapper>(new JlTBackCompFitter(module));
-}
-
-namespace jlcxx {
-  template<> struct IsMirroredType<ROOT::Fit::FitConfig> : std::false_type { };
-  template<> struct DefaultConstructible<ROOT::Fit::FitConfig> : std::false_type { };
-}
-
-// Class generating the wrapper for type ROOT::Fit::FitConfig
-// signature to use in the veto file: ROOT::Fit::FitConfig
-struct JlROOT_Fit_FitConfig: public Wrapper {
-
-  JlROOT_Fit_FitConfig(jlcxx::Module& jlModule): Wrapper(jlModule){
-    DEBUG_MSG("Adding wrapper for type ROOT::Fit::FitConfig (" __HERE__ ")");
-    // defined in /home/pgras/.julia/conda/3/include/Fit/FitConfig.h:47:7
-    jlcxx::TypeWrapper<ROOT::Fit::FitConfig>  t = jlModule.add_type<ROOT::Fit::FitConfig>("ROOT!Fit!FitConfig");
-    type_ = std::unique_ptr<jlcxx::TypeWrapper<ROOT::Fit::FitConfig>>(new jlcxx::TypeWrapper<ROOT::Fit::FitConfig>(jlModule, t));
-  }
-
-  void add_methods() const{
-    auto& t = *type_;
-    t.template constructor<>(/*finalize=*/true);
-  }
-
-private:
-  std::unique_ptr<jlcxx::TypeWrapper<ROOT::Fit::FitConfig>> type_;
-};
-std::shared_ptr<Wrapper> newJlROOT_Fit_FitConfig(jlcxx::Module& module){
-  return std::shared_ptr<Wrapper>(new JlROOT_Fit_FitConfig(module));
 }

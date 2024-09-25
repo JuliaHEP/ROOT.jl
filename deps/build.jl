@@ -9,7 +9,7 @@ const JL_SHARE = joinpath(Sys.BINDIR, Base.DATAROOTDIR, "julia")
 const JULIA = joinpath(Sys.BINDIR, "julia")
 const libname="libjlROOT." * Libdl.dlext
 
-const conda_root_version = "6.30.04"
+const conda_root_version = "6.32.06"
 const supported_root_versions = [ conda_root_version ]
 
 used_root_version = ""
