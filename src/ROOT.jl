@@ -1,83 +1,86 @@
 module ROOT
-
 import Base.getindex
 import Base.setindex!
 
-import Libdl
 import Pkg
 using CxxWrap
+using ROOTprefs
 
-Sys.iswindows() && error("Windows platform detected. ROOT is supported on Linux and MacOS only.")
+include("root_versions.jl")
 
-if !isfile("$(@__DIR__)/../deps/deps.jl")
-    error("File '$(@__DIR__)/../deps/deps.jl' missing. This can happen if the ROOT package was installed with the Pkg.develop() (or ] dev) command. Run 'import Pkg; Pkg.build(\"ROOT\", verbose=true)' (or ] build -v ROOT) to generate the missing file.")
-end
+"""
+    `get_supported_root_versions() -> Vector<Version>`
 
-include("$(@__DIR__)/../deps/deps.jl")
-include_dependency(libpath)
+Return the list of supported C++ ROOT framework versions.
 
-if !isfile(libpath)
-    error("File '$libpath' missing. This can happen if the ROOT package was installed with the Pkg.develop() (or ] dev) command. Run 'import Pkg; Pkg.build(\"ROOT\", verbose=true)' (or ] build -v ROOT) to generate the missing file.")
-end
+"""
+get_supported_root_versions() = supported_root_versions;
 
-@wrapmodule(()->libpath)
+#precompile_error::String = ""
 
-include("iROOT.jl")
+# utility code not exposed to the user
+include("internals.jl")
 
-TF1!kDefault = 0
+"""
+  `libroot_julia_path`
 
-module Internals
-import Conda
-function get_conda_build_sysroot()
-    cxx = joinpath(Conda.PREFIX, "bin", "c++")
-    cmd = `$cxx -DNDEBUG -xc++ -E -v /dev/null`
-    sysroot=""
-    err = Pipe()
-    run(pipeline(ignorestatus(cmd), stdout=devnull, stderr=err), wait=true)
-    close(err.in)
-    for l in eachline(err)
-        if occursin(r"sysroot/usr/include$", l)
-            sysroot = strip(l)
-            break
-        end
+Path of the shared library containing the C++ code interfacing the Julia ROOT package with the C++ ROOT libraries. This library is provided by the package libroot_julia_jll included in the dependency, when the C++ ROOT libraries are installed by the Julia package manager from the ROOT_jll package, or built on the fly (at first ROOT module import), if they are installed by another mean. 
+"""
+const libroot_julia_path = Internals.CxxBuild.get_or_build_libroot_julia()
+
+# Display libroot_julia_path value on precompilation
+@info "ROOT wrapper library: $libroot_julia_path"
+
+export cxxcompile
+
+"""
+  `cxxcompile() -> Bool`
+
+Check that the C+ code of the package is compiled and compile it if needed. Returns true if the code is compiled, false if it wasn't and the compilation failed. Experimental, function name/API may still change.
+"""
+cxxcompile() = !isempty(Internals.CxxBuild.get_or_build_libroot_julia())
+
+
+if(isempty(libroot_julia_path))
+    ok() = false
+else
+    ok() = true
+    
+    include_dependency(libroot_julia_path)
+
+    if is_root_jll_used()
+        Internals.loadlibdeps()
     end
-    replace(normpath(sysroot), normpath("/usr/include") => "")
+    @wrapmodule(()->libroot_julia_path)
+    
+    include("iROOT.jl")
+    
+    TF1!kDefault = 0
+    
+    export gROOT, gSystem
+    include("ROOT-export.jl")
+    
+    #export global function(s) taking a class instance as first parameter
+    #and missing from generated file ROOT-export.jl
+    export SetAddress
+    export move!
+    
+    include("def_args.jl")
+    include("move.jl")
+    
+    include("ROOTex.jl")
+    include("demo.jl")
 end
-end
-
-import .Internals
 
 function __init__()
-    # Some required environment cleanup before loading the ROOT libraries
-    withenv(
-        #   Prevent mix-up of root library version is another version than ours is in LD_LIBRARY_PATH:
-        "LD_LIBRARY_PATH" => "",
-        "DYLD_LIBRARY_PATH" => "",
-        #   Workaroud to prevent a crash with root installed with Conda linker to
-        #   the c++ compiler called by cling to get the include directories and
-        #   missing in the PATH list. In the Conda install, compiler is same directory as ROOT
-        #   binaries, rootbindir
-        "PATH" => ENV["PATH"] * ":" * rootbindir,
-        #   Fix "assert.h not found" issue:
-        "CONDA_BUILD_SYSROOT" => Internals.get_conda_build_sysroot()) do
-            @initcxx
-            global gROOT = ROOT!GetROOT()
-        end
-    isinteractive() && _init_event_loop()
+    if isempty(libroot_julia_path)
+        @error "Failed to load or build C++ librairies and no function imported. See above error message to fix the issue.\nBEWARE: Julia needs to be restarted for the fix to take effect."
+    else
+        Internals.loadlibdeps()
+        @initcxx
+        global gROOT = ROOT!GetROOT()
+        isinteractive() && _init_event_loop()
+    end
 end
-
-export gROOT, gSystem
-include("ROOT-export.jl")
-
-#export global function(s) taking a class instance as first parameter
-#and missing from generated file ROOT-export.jl
-export SetAddress
-export move!
-
-include("def_args.jl")
-include("move.jl")
-
-include("ROOTex.jl")
-include("demo.jl")
 
 end #module

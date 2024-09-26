@@ -1,24 +1,30 @@
 name = "ROOT"
 uuid = "1706fdcc-8426-44f1-a283-5be479e9517c"
 authors = ["Philippe Gras CEA/IRFU"]
-version = "0.3.2"
+version = "0.4.0-DEV"
 
 [deps]
-Conda = "8f4d0f93-b110-5947-807f-2305c1781a2d"
+Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
 Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+PkgDependency = "9eb5382b-762c-48ca-8139-e736883fe800"
+ROOT_jll = "45b42145-bbac-5752-8807-01f8b2702242"
+ROOTprefs = "492d890c-d9c4-11ef-b95f-3722e36032c2"
+SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 Scratch = "6c6a2e73-6563-6170-7368-637461726353"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+libroot_julia_jll = "2e5227ad-a2cb-5771-a73d-8331af68b27e"
 
 [compat]
 CxxWrap = "0.16"
+Scratch = "1.2"
 julia = "1.6"
 
 [extras]
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
-UnROOT = "3cd96dde-e98d-4713-81e9-a4a1b0235ce9"
 
 [targets]
-test = ["Test", "UnROOT"]
+test = ["Test", "Pkg"]

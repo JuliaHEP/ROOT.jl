@@ -16,11 +16,17 @@ function test_nothrow(script)
 end
 
 @testset verbose=true begin
+    if Sys.MACHINE == "x86_64-linux-gnu"
+        @testset verbose=true "ROOT install" begin
+            include("$(@__DIR__)/test_install.jl")
+        end
+    end
+    
     @testset verbose=true "TTree" begin
-        include("test_ttree.jl")
+        include("$(@__DIR__)/test_ttree.jl")
     end
     
     @testset verbose=true "Examples" begin
-        include("test_examples.jl")
+        include("$(@__DIR__)/test_examples.jl")
     end
 end

@@ -23,6 +23,14 @@ JULIA = julia
 
 CXX_IS_CLANG = $(shell $(CXX) -dM -E - < /dev/null | grep -c __clang__)
 
+VERBOSE = no #use -DVERBOSE to enable verbosity
+# Verbose output
+ifeq ($(VERBOSE), no)
+    Q =
+else
+    Q = @
+endif
+
 ifeq ($(UNAME),Darwin)
   SO_SUFFIX = .dylib
 else
@@ -63,10 +71,11 @@ distclean:
 #	@echo 'all:\n\n%:\n\t$$(MAKE) -C .. $$@\nclean:\n\t$$(MAKE) -C .. clean build\n' > $(BUILD_DIR)/Makefile
 
 $(BUILD_DIR)/ROOT-generated.wit: ROOT.wit #$(BUILD_DIR)
-	$(MAKE) check_root
-	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
-	$(shell echo "#\n# Warning: file generated automatically from $<\n#" > $@)
-	$(shell sed "s@%ROOT_INC_DIR%@$(ROOT_INC_DIR)@" $< >> $@ || rm $@)
+	@echo "Build $(notdir $@)"
+	$(Q) $(MAKE) -DVERBOSE=$(VERBOSE) check_root
+	$(Q) [ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
+	$(Q) $(shell echo "#\n# Warning: file generated automatically from $<\n#" > $@)
+	$(Q) $(shell sed "s@%ROOT_INC_DIR%@$(ROOT_INC_DIR)@" $< >> $@ || rm $@)
 
 check_root:
 ifeq ($(ROOT_LIBS),)
@@ -97,12 +106,14 @@ JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=..
 && JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree3.jl
 
 $(BUILD_DIR)/%.o: src/%.cxx #$(BUILD_DIR)
-	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
-	$(COMPILE.cc) $(CPPFLAGS) -o $@ $<
+	@echo "Make $(notdir $@)"
+	$(Q) [ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
+	$(Q) $(COMPILE.cc) $(CPPFLAGS) -o $@ $<
 
 $(BUILD_DIR)/libroot_julia$(SO_SUFFIX): $(OBJS)
-	$(MAKE) check_root
-	$(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
+	@echo "Make $(notdir $@)"
+	$(Q) $(MAKE) check_root
+	$(Q) $(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
 
 
 echo_%:
