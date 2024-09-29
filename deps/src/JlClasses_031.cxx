@@ -61,12 +61,12 @@ struct JlTH3I: public Wrapper {
     DEBUG_MSG("Adding wrapper for void TH3I::AddBinContent(Int_t, Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3I::AddBinContent(Int_t, Int_t, Int_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:254:22
-    t.method("AddBinContent", static_cast<void (TH3I::*)(Int_t, Int_t, Int_t) >(&TH3I::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3I::*)(Int_t, Int_t, Int_t) >(&TH3I::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3I::AddBinContent(Int_t, Int_t, Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3I::AddBinContent(Int_t, Int_t, Int_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:255:22
-    t.method("AddBinContent", static_cast<void (TH3I::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3I::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3I::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3I::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3I::Copy(TObject &) (" __HERE__ ")");
     // signature to use in the veto list: void TH3I::Copy(TObject &)
@@ -210,12 +210,12 @@ struct JlTH3L: public Wrapper {
     DEBUG_MSG("Adding wrapper for void TH3L::AddBinContent(Int_t, Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3L::AddBinContent(Int_t, Int_t, Int_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:294:14
-    t.method("AddBinContent", static_cast<void (TH3L::*)(Int_t, Int_t, Int_t) >(&TH3L::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3L::*)(Int_t, Int_t, Int_t) >(&TH3L::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3L::AddBinContent(Int_t, Int_t, Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3L::AddBinContent(Int_t, Int_t, Int_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:295:14
-    t.method("AddBinContent", static_cast<void (TH3L::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3L::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3L::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3L::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3L::Copy(TObject &) (" __HERE__ ")");
     // signature to use in the veto list: void TH3L::Copy(TObject &)
@@ -228,7 +228,7 @@ struct JlTH3L: public Wrapper {
     t.method("Reset", static_cast<void (TH3L::*)(Option_t *) >(&TH3L::Reset));
     t.method("Reset", [](TH3L& a)->void { a.Reset(); });
     t.method("Reset", [](TH3L* a)->void { a->Reset(); });
-
+    
     DEBUG_MSG("Adding wrapper for void TH3L::SetBinsLength(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3L::SetBinsLength(Int_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:298:14
@@ -359,12 +359,12 @@ struct JlTH3F: public Wrapper {
     DEBUG_MSG("Adding wrapper for void TH3F::AddBinContent(Int_t, Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3F::AddBinContent(Int_t, Int_t, Int_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:340:22
-    t.method("AddBinContent", static_cast<void (TH3F::*)(Int_t, Int_t, Int_t) >(&TH3F::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3F::*)(Int_t, Int_t, Int_t) >(&TH3F::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3F::AddBinContent(Int_t, Int_t, Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3F::AddBinContent(Int_t, Int_t, Int_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:341:22
-    t.method("AddBinContent", static_cast<void (TH3F::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3F::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3F::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3F::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3F::Copy(TObject &) (" __HERE__ ")");
     // signature to use in the veto list: void TH3F::Copy(TObject &)
@@ -508,12 +508,12 @@ struct JlTH3D: public Wrapper {
     DEBUG_MSG("Adding wrapper for void TH3D::AddBinContent(Int_t, Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3D::AddBinContent(Int_t, Int_t, Int_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:385:22
-    t.method("AddBinContent", static_cast<void (TH3D::*)(Int_t, Int_t, Int_t) >(&TH3D::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3D::*)(Int_t, Int_t, Int_t) >(&TH3D::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3D::AddBinContent(Int_t, Int_t, Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH3D::AddBinContent(Int_t, Int_t, Int_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH3.h:386:22
-    t.method("AddBinContent", static_cast<void (TH3D::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3D::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH3D::*)(Int_t, Int_t, Int_t, Double_t) >(&TH3D::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH3D::Copy(TObject &) (" __HERE__ ")");
     // signature to use in the veto list: void TH3D::Copy(TObject &)

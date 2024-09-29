@@ -71,12 +71,12 @@ struct JlTH2D: public Wrapper {
     DEBUG_MSG("Adding wrapper for void TH2D::AddBinContent(Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::AddBinContent(Int_t, Int_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:382:21
-    t.method("AddBinContent", static_cast<void (TH2D::*)(Int_t, Int_t) >(&TH2D::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH2D::*)(Int_t, Int_t) >(&TH2D::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH2D::AddBinContent(Int_t, Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::AddBinContent(Int_t, Int_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:383:21
-    t.method("AddBinContent", static_cast<void (TH2D::*)(Int_t, Int_t, Double_t) >(&TH2D::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH2D::*)(Int_t, Int_t, Double_t) >(&TH2D::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH2D::Copy(TObject &) (" __HERE__ ")");
     // signature to use in the veto list: void TH2D::Copy(TObject &)

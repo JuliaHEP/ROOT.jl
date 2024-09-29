@@ -559,12 +559,12 @@ struct JlTH2: public Wrapper {
     DEBUG_MSG("Adding wrapper for void TH2::AddBinContent(Int_t, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2::AddBinContent(Int_t, Int_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:75:21
-    t.method("AddBinContent", static_cast<void (TH2::*)(Int_t, Int_t) >(&TH2::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH2::*)(Int_t, Int_t) >(&TH2::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for void TH2::AddBinContent(Int_t, Int_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2::AddBinContent(Int_t, Int_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:76:21
-    t.method("AddBinContent", static_cast<void (TH2::*)(Int_t, Int_t, Double_t) >(&TH2::AddBinContent));
+    //t.method("AddBinContent", static_cast<void (TH2::*)(Int_t, Int_t, Double_t) >(&TH2::AddBinContent));
 
     DEBUG_MSG("Adding wrapper for Int_t TH2::BufferEmpty(Int_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TH2::BufferEmpty(Int_t)
@@ -586,22 +586,22 @@ struct JlTH2: public Wrapper {
     DEBUG_MSG("Adding wrapper for Int_t TH2::Fill(Double_t, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TH2::Fill(Double_t, Double_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:80:21
-    t.method("Fill", static_cast<Int_t (TH2::*)(Double_t, Double_t, Double_t) >(&TH2::Fill));
+    //t.method("Fill", static_cast<Int_t (TH2::*)(Double_t, Double_t, Double_t) >(&TH2::Fill));
 
     DEBUG_MSG("Adding wrapper for Int_t TH2::Fill(Double_t, const char *, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TH2::Fill(Double_t, const char *, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:81:21
-    t.method("Fill", static_cast<Int_t (TH2::*)(Double_t, const char *, Double_t) >(&TH2::Fill));
+    //t.method("Fill", static_cast<Int_t (TH2::*)(Double_t, const char *, Double_t) >(&TH2::Fill));
 
     DEBUG_MSG("Adding wrapper for Int_t TH2::Fill(const char *, Double_t, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TH2::Fill(const char *, Double_t, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:82:21
-    t.method("Fill", static_cast<Int_t (TH2::*)(const char *, Double_t, Double_t) >(&TH2::Fill));
+    //t.method("Fill", static_cast<Int_t (TH2::*)(const char *, Double_t, Double_t) >(&TH2::Fill));
 
     DEBUG_MSG("Adding wrapper for Int_t TH2::Fill(const char *, const char *, Double_t) (" __HERE__ ")");
     // signature to use in the veto list: Int_t TH2::Fill(const char *, const char *, Double_t)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:83:21
-    t.method("Fill", static_cast<Int_t (TH2::*)(const char *, const char *, Double_t) >(&TH2::Fill));
+    //t.method("Fill", static_cast<Int_t (TH2::*)(const char *, const char *, Double_t) >(&TH2::Fill));
 
     DEBUG_MSG("Adding wrapper for void TH2::FillN(Int_t, const Double_t *, const Double_t *, Int_t) (" __HERE__ ")");
     // signature to use in the veto list: void TH2::FillN(Int_t, const Double_t *, const Double_t *, Int_t)
@@ -636,7 +636,7 @@ struct JlTH2: public Wrapper {
     DEBUG_MSG("Adding wrapper for void TH2::FitSlicesX(TF1 *, Int_t, Int_t, Int_t, Option_t *, TObjArray *) (" __HERE__ ")");
     // signature to use in the veto list: void TH2::FitSlicesX(TF1 *, Int_t, Int_t, Int_t, Option_t *, TObjArray *)
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TH2.h:88:21
-    t.method("FitSlicesX", static_cast<void (TH2::*)(TF1 *, Int_t, Int_t, Int_t, Option_t *, TObjArray *) >(&TH2::FitSlicesX));
+    //t.method("FitSlicesX", static_cast<void (TH2::*)(TF1 *, Int_t, Int_t, Int_t, Option_t *, TObjArray *) >(&TH2::FitSlicesX));
     t.method("FitSlicesX", [](TH2& a)->void { a.FitSlicesX(); });
     t.method("FitSlicesX", [](TH2& a, TF1 * arg0)->void { a.FitSlicesX(arg0); });
     t.method("FitSlicesX", [](TH2& a, TF1 * arg0, Int_t arg1)->void { a.FitSlicesX(arg0, arg1); });

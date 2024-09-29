@@ -554,12 +554,12 @@ struct JlTTreeReader: public Wrapper {
     DEBUG_MSG("Adding wrapper for TTreeReader::Iterator_t TTreeReader::begin() (" __HERE__ ")");
     // signature to use in the veto list: TTreeReader::Iterator_t TTreeReader::begin()
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TTreeReader.h:259:15
-    t.method("begin", static_cast<TTreeReader::Iterator_t (TTreeReader::*)() >(&TTreeReader::begin));
+    t.method("begin", static_cast<TTreeReader::Iterator_t (TTreeReader::*)()>(&TTreeReader::begin));
 
     DEBUG_MSG("Adding wrapper for TTreeReader::Iterator_t TTreeReader::end() (" __HERE__ ")");
     // signature to use in the veto list: TTreeReader::Iterator_t TTreeReader::end()
     // defined in /home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include/TTreeReader.h:263:15
-    t.method("end", static_cast<TTreeReader::Iterator_t (TTreeReader::*)() >(&TTreeReader::end));
+    t.method("end", static_cast<TTreeReader::Iterator_t (TTreeReader::*)() const>(&TTreeReader::end));
 
     DEBUG_MSG("Adding wrapper for Version_t TTreeReader::Class_Version() (" __HERE__ ")");
     // signature to use in the veto list: Version_t TTreeReader::Class_Version()
