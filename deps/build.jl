@@ -9,7 +9,7 @@ const JL_SHARE = joinpath(Sys.BINDIR, Base.DATAROOTDIR, "julia")
 const JULIA = joinpath(Sys.BINDIR, "julia")
 const libname="libjlROOT." * Libdl.dlext
 
-const conda_root_version = "6.32.06"
+const conda_root_version = "6.32"
 const supported_root_versions = [ conda_root_version ]
 
 used_root_version = ""
@@ -33,7 +33,13 @@ end
 
 const scratch = joinpath(get_scratch!(pkg_uuid, "lib"), string(pkg_version), "ROOT-v" * used_root_version)
 
-found_root_ok = root_found && (used_root_version ∈ supported_root_versions)
+function iscompat(v, ref)
+    v_ = parse.(Int, split(v, "."))
+    ref_ = parse.(Int, split(ref, "."))
+    length(v_) ≥ length(ref_) && v_[1:length(ref_)] == ref_
+end
+
+found_root_ok = root_found && any(iscompat.(used_root_version, supported_root_versions))
 
 if found_root_ok
     @info "ROOT libraries from $root_libdir will be used."
