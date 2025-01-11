@@ -40,7 +40,7 @@ LINK.o = $(CXX) $(LDFLAGS) $(TARGET_ARCH)
 
 .PHONY: all clean distclean run_demo run_demo2 check_root make_lib_from_objs
 
-PRODUCTS = $(BUILD_DIR)/libjlROOT$(SO_SUFFIX)
+PRODUCTS = $(BUILD_DIR)/libroot_julia$(SO_SUFFIX)
 
 #Define WRAPPER_CXX
 #WRAPPER_CXX: = $(file < src/generated_cxx) Extra.cxx #does not work on MacOS
@@ -100,7 +100,7 @@ $(BUILD_DIR)/%.o: src/%.cxx #$(BUILD_DIR)
 	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
 	$(COMPILE.cc) $(CPPFLAGS) -o $@ $<
 
-$(BUILD_DIR)/libjlROOT$(SO_SUFFIX): $(OBJS)
+$(BUILD_DIR)/libroot_julia$(SO_SUFFIX): $(OBJS)
 	$(MAKE) check_root
 	$(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
 

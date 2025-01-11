@@ -4,10 +4,10 @@ version             = "0.3.2"
 
 export_jl_fname     = "ROOT-export.jl"
 module_jl_fname     = "ROOT-generated.jl"
-lib_basename        = "$(@__DIR__)/../deps/libjlROOT"
+lib_basename        = "$(@__DIR__)/../deps/libroot_julia"
 out_cxx_dir         = "ROOT/deps/src"
 
-include_dirs        = [ "/home/pgras/.julia/artifacts/883dde52995ca9517b0284d7d7f324e945daf399/include", "src" ]
+include_dirs        = [ "/opt/root63206jll/include", "src" ]
 
 input               = [
   "TROOT.h", "TBrowser.h", "TSystem.h", "TApplication.h", "Rtypes.h",
