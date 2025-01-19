@@ -52,10 +52,10 @@ DEPS = $(patsubst %.o,%.d, $(OBJS))
 all: $(PRODUCTS)
 
 clean:
-	-$(RM) -r build
+	-$(RM) -r $(BUILD_DIR)
 
 distclean:
-	-$(RM) -r build build.log
+	-$(RM) -r $(BUILD_DIR) build build.log
 	-$(RM) $(PRODUCTS)
 
 #$(BUILD_DIR):

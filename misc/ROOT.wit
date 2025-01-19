@@ -7,7 +7,7 @@ module_jl_fname     = "ROOT-generated.jl"
 lib_basename        = "$(@__DIR__)/../deps/libroot_julia"
 out_cxx_dir         = "ROOT/deps/src"
 
-include_dirs        = [ "/opt/root63206jll/include", "src" ]
+include_dirs        = [ "/home/pgras/.julia/artifacts/0d9da00603833dced24b998321d9c01c63ed469f/include", "src" ]
 
 input               = [
   "TROOT.h", "TBrowser.h", "TSystem.h", "TApplication.h", "Rtypes.h",
@@ -71,7 +71,8 @@ julia_names         = [ "TDirectoryFile::Get -> Get_", "TDirectory::Get -> Get_"
 fields_and_variables = true
 
 # Currently not working with CxxWrap 0.15+, use 0.14.x
-cxxwrap_version = "0.14"
+#cxxwrap_version = "0.14"
+cxxwrap_version = "0.16"
 
 #auto_veto           = false
 
