@@ -172,7 +172,7 @@ function check_rootsys()
             error("Found ROOT version $vers is not supported.")
         end
     catch e
-        rethrow(ErrorException(e.msg * ". " * "Please install C++ ROOT (http://cern/root) version $(_English_or_list(supported_root_versions)). If it is already installed, either set your shell environment to make ROOT binaries available e.g., by sourcing thisroot.(c)sh file, or set ROOTSYS in Julia by executing 'import ROOTprefs; ROOTprefs.set_ROOTSYS(..).'"))
+        rethrow(ErrorException(e.msg * ". " * "Please install C++ ROOT (https://root.cern/releases) version $(_English_or_list(supported_root_versions)). If already installed, either set your shell environment to make ROOT binaries available e.g., by sourcing thisroot.(c)sh file, or set ROOTSYS in Julia by executing 'import ROOTprefs; ROOTprefs.set_ROOTSYS!(...).'"))
     end
     rootsys
 end
@@ -199,7 +199,7 @@ function get_or_build_libroot_julia()
             rootsys = check_rootsys()
             @error("ROOT binaries not found in ROOT_jll for this platform. The wrapper will be compiled to use the ROOT libraries installed in $rootsys. The mode 'use_root_jll' has been disabled (can be reenabled with use_root_jll!()).")
         catch
-            @error("ROOT binaries not found in ROOT_jll for pthis platform. You need to install ROOT version $supported_root_versions on the host and restart Julia. If the ROOT binaries are not in the system executable search path, you need to provide to the ROOT installation by calling 'using ROOTprefs; set_ROOTSYS(path)'.  The mode 'use_root_jll' has been disabled (can be reenabled with use_root_jll!()).")
+            @error("ROOT binaries not found in ROOT_jll for pthis platform. You need to install ROOT version $supported_root_versions on the host and restart Julia. If the ROOT binaries are not in the system executable search path, you need to provide to the ROOT installation by calling 'using ROOTprefs; set_ROOTSYS!(path)'.  The mode 'use_root_jll' has been disabled (can be reenabled with use_root_jll!()).")
             return ""
         end
     else #rootsys mode
