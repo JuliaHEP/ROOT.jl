@@ -194,7 +194,7 @@ function get_or_build_libroot_julia()
     #Below, we process differently if root_jll mode is enabled or not
     #in order to adapt the error message.
     if is_root_jll_used() #jll mode but platform not supported.
-        use_root_jll!()
+        use_root_jll!(false)
         try
             rootsys = check_rootsys()
             @error("ROOT binaries not found in ROOT_jll for this platform. The wrapper will be compiled to use the ROOT libraries installed in $rootsys. The mode 'use_root_jll' has been disabled (can be reenabled with use_root_jll!()).")
@@ -206,7 +206,7 @@ function get_or_build_libroot_julia()
         try
             rootsys = check_rootsys()
         catch e
-            if e isa ErrorException && hasfield(e, :msg)
+            if e isa ErrorException
                 @error(e.msg)
                 return ""
             else

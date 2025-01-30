@@ -28,6 +28,13 @@ Path of the shared library containing the C++ code interfacing the Julia ROOT pa
 """
 const libroot_julia_path = Internals.CxxBuild.get_or_build_libroot_julia()
 
+"""
+  `libroot_julia_from_jll`
+
+Flag telling if the package was precompiled with the C++ wrapper library from the jll package (true) or built for an external C++ ROOT installation (false).
+"""
+const libroot_julia_from_jll = is_root_jll_used() && Internals.CxxBuild.is_jll_supported()
+
 # Display libroot_julia_path value on precompilation
 @info "ROOT wrapper library: $libroot_julia_path"
 
@@ -48,9 +55,7 @@ else
     
     include_dependency(libroot_julia_path)
 
-    if is_root_jll_used()
-        Internals.loadlibdeps()
-    end
+    libroot_julia_from_jll && Internals.loadlibdeps()
     @wrapmodule(()->libroot_julia_path)
     
     include("iROOT.jl")
@@ -76,7 +81,7 @@ function __init__()
     if isempty(libroot_julia_path)
         @error "Failed to load or build C++ librairies and no function imported. See above error message to fix the issue.\nBEWARE: Julia needs to be restarted for the fix to take effect."
     else
-        Internals.loadlibdeps()
+        libroot_julia_from_jll && Internals.loadlibdeps()
         @initcxx
         global gROOT = ROOT!GetROOT()
         isinteractive() && _init_event_loop()
