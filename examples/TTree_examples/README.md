@@ -31,6 +31,10 @@ This directory show examples that use the `ROOT` library wrapper to write and re
 ### `read_tree3.jl`
 
   Reads the tree produced by `write_tree_2.jl` using `TTreeReader`.
+
+### `inspect_tree.jl`
+
+  Open a [CMS] (https://cms.cern) nanoAOD file from CERN via the XrootD protocol and list branches of its Events tree.
   
 ## Examples in action
 

@@ -16,7 +16,6 @@ import libroot_julia_jll
 import Artifacts
 import SHA
 
-using UUIDs
 using Scratch
 
 
@@ -44,7 +43,7 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
     used_root_version = readchomp(`$rootconfig --version`)
     
     # Directory to store the generated library
-    pkg_uuid = UUID(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["uuid"])
+    pkg_uuid = Base.UUID(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["uuid"])
     pkg_version = VersionNumber(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["version"])    
     scratch = joinpath(get_scratch!(pkg_uuid, "lib"), string(pkg_version), "Julia-v" * string(Base.VERSION), "ROOT-v" * used_root_version)
     mkpath(scratch)
@@ -58,8 +57,6 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
     cmd=`make -C "$depsdir" BUILD_DIR="$buildpath" CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS)`
     cmd_clean = Cmd([collect(cmd)...,  "clean"]) #append clean to the command arguments
     cmd_file_list = Cmd([collect(cmd)..., "echo_WRAPPER_CXX"]) #command to list .cxx files
-    
-    @info "Build command: " * string(cmd)[2:end-1] * " executed in " * pwd() * " directory."
     
     #julia needs to be in the PATH for julia-config.jl, invoked by the Makefile, to run
     PATH=Sys.BINDIR * ":" * ENV["PATH"]
@@ -93,11 +90,12 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
     end
 
     if build
+        @info "Build command: " * string(cmd)[2:end-1] * " executed in " * pwd() * " directory."
+    
         #Call make to build the library
         cmd = Cmd(cmd, env = ["PATH" => PATH], ignorestatus=true)
         cmd_clean = Cmd(cmd_clean, env = ["PATH" => PATH], ignorestatus=true)
         pipe = Pipe()
-        srcfiles = []
         try
             run(pipeline(`tee "$scratch/build.log"`, stdin=pipe, stdout=stdout, stderr=stderr), wait=false)            
             
@@ -186,7 +184,7 @@ function get_or_build_libroot_julia()
     end
 
     if !is_root_jll_used() && is_jll_supported()
-        @info "The plaform supports ROOT_jll. You can use ROOT libraries from the ROOT_jll package to skip the long compilation step. To do so, interrupt the import, run 'using ROOTprefs; use_root_jll!() to enable the ROOT_jll mode, restart Julia, and execute 'import ROOT' again."
+        @info "The plaform supports ROOT_jll. You can use ROOT libraries from the ROOT_jll package to skip the long compilation step. To switch to ROOT_jll, interrupt the import, run 'using ROOTprefs; use_root_jll!() to enable the ROOT_jll mode, restart Julia, and execute 'import ROOT' again."
     end
 
     rootsys = ""
