@@ -18,6 +18,7 @@ libroot_julia_jll = "2e5227ad-a2cb-5771-a73d-8331af68b27e"
 CxxWrap = "0.16"
 Scratch = "1.2"
 julia = "1.6"
+ROOT_jll = "6.32.6 - 6.32.8"
 
 [extras]
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
