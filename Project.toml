@@ -8,17 +8,17 @@ Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 CxxWrap = "1f15a43c-97ca-5a2a-ae31-89f07a497df4"
 Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 ROOT_jll = "45b42145-bbac-5752-8807-01f8b2702242"
+ROOT_julia_jll = "4f7db680-92c2-5241-a1f0-57b96f62fa1d"
 ROOTprefs = "492d890c-d9c4-11ef-b95f-3722e36032c2"
 SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 Scratch = "6c6a2e73-6563-6170-7368-637461726353"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
-libroot_julia_jll = "2e5227ad-a2cb-5771-a73d-8331af68b27e"
 
 [compat]
 CxxWrap = "0.16"
 Scratch = "1.2"
 julia = "1.6"
-ROOT_jll = "6.32.6 - 6.32.8"
+ROOT_julia_jll = "0.0.1"
 
 [extras]
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"

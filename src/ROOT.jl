@@ -38,7 +38,7 @@ const rootsys = ROOTprefs.get_ROOTSYS()
 """
   `libroot_julia_path`
 
-Path of the shared library containing the C++ code interfacing the Julia ROOT package with the C++ ROOT libraries. This library is provided by the package libroot_julia_jll included in the dependency, when the C++ ROOT libraries are installed by the Julia package manager from the ROOT_jll package, or built on the fly (at first ROOT module import), if they are installed by another mean. 
+Path of the shared library containing the C++ code interfacing the Julia ROOT package with the C++ ROOT libraries. This library is provided by the package ROOT_julia_jll included in the dependency, when the C++ ROOT libraries are installed by the Julia package manager from the ROOT_jll package, or built on the fly (at first ROOT module import), if they are installed by another mean. 
 """
 const libroot_julia_path = Internals.CxxBuild.get_or_build_libroot_julia()
 

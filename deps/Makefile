@@ -1,5 +1,4 @@
-# This makefile is meant to be called from the companion build.jl Julia script.
-# and requires the CXXWRAP_PREFIX and JL_SHARE to be set.
+# This makefile requires the CXXWRAP_PREFIX and JL_SHARE to be set.
 #
 # make CXXWRAP_PREFIX=... JL_SHARE=...
 #
@@ -66,17 +65,6 @@ distclean:
 	-$(RM) -r $(BUILD_DIR) build build.log
 	-$(RM) $(PRODUCTS)
 
-#$(BUILD_DIR):
-#	@[ -d $(BUILD_DIR) ] && mkdir -p $(BUILD_DIR)
-#	@echo 'all:\n\n%:\n\t$$(MAKE) -C .. $$@\nclean:\n\t$$(MAKE) -C .. clean build\n' > $(BUILD_DIR)/Makefile
-
-$(BUILD_DIR)/ROOT-generated.wit: ROOT.wit #$(BUILD_DIR)
-	@echo "Build $(notdir $@)"
-	$(Q) $(MAKE) -DVERBOSE=$(VERBOSE) check_root
-	$(Q) [ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
-	$(Q) $(shell echo "#\n# Warning: file generated automatically from $<\n#" > $@)
-	$(Q) $(shell sed "s@%ROOT_INC_DIR%@$(ROOT_INC_DIR)@" $< >> $@ || rm $@)
-
 check_root:
 ifeq ($(ROOT_LIBS),)
 	$(error ERROR: "Command root-config not found. ROOT (http:://root.cern.ch) environment needs to be set")
@@ -105,7 +93,7 @@ JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=..
 JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree3.jl \
 && JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree3.jl
 
-$(BUILD_DIR)/%.o: src/%.cxx #$(BUILD_DIR)
+$(BUILD_DIR)/%.o: src/%.cxx
 	@echo "Make $(notdir $@)"
 	$(Q) [ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
 	$(Q) $(COMPILE.cc) $(CPPFLAGS) -o $@ $<

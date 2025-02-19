@@ -2,9 +2,11 @@
 
 [![Linux](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml) [![macOS](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml)
 
-## 📣 New: Support of recent Julia releases!
+## 📣 New: use of built-in Julia package manager to install ROOT libraries.
 
-ROOT.jl was not working with Julia version beyond 1.3 due to limitation of the [Cxx.jl](https://github.com/JuliaInterop/Cxx.jl) C++/Julia interface. Release 0.3.0 brings a new implementation based on the [CxxWrap](https://github.com/JuliaInterop/CxxWrap.jl) interface that supports recent Julia versions. The counterpart is a smaller coverage of ROOT classes: see Section C++/Julia interface.
+Starting from release x.y.z, the built-in Julia package manager is used to install the C++ ROOT framework. This mechansim replace the Conda one, which was introduced as an interim solution and rapidly showed its limits. The ROOT libraries (and also also executables) are package in the `ROOT_jll` [JLL](https://docs.binarybuilder.org/stable/jll/#JLL-packages) package. 
+
+📝 Automatic installation of the ROOT libraries is currently not supported for MacOS. It was supported for a short time by the Conda mechanism, before an update of the Conda forge repository broke the dependencies. The C++ ROOT framework must be installed separately using one of the [method supported by ROOT](https://root.cern/install/).
 
 ## Introduction
 
@@ -51,7 +53,7 @@ This is due to the installation of ROOT and compilation of the wrapper library. 
 
 ## ROOT version
 
-Current ROOT version uses ROOT release 6.30.04. If a ROOT installation is found in the default binary search paths (PATH environment variable) with this version, then it will be used. Otherwise, ROOT will be installed using [Conda](https://github.com/JuliaPy/Conda.jl) into `$HOME/.julia/Conda/3`.
+Current ROOT version uses ROOT release 6.32.08. If a ROOT installation is found in the default binary search paths (PATH environment variable) with this version, then it will be used. Otherwise, ROOT will be installed using [Conda](https://github.com/JuliaPy/Conda.jl) into `$HOME/.julia/Conda/3`.
 
 ## C++ / Julia mapping and symbol export
 

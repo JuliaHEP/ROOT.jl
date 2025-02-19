@@ -11,8 +11,7 @@ using ROOTprefs
 import CxxWrap
 import Libdl
 import TOML
-import ROOT_jll
-import libroot_julia_jll
+import ROOT_julia_jll
 import Artifacts
 import SHA
 
@@ -180,7 +179,7 @@ function get_or_build_libroot_julia()
 
     if is_root_jll_used() && is_jll_supported()
         #prebuilt wrapper used, no build to perform
-        return libroot_julia_jll.get_libroot_julia_path()
+        return ROOT_julia_jll.get_libroot_julia_path()
     end
 
     if !is_root_jll_used() && is_jll_supported()
