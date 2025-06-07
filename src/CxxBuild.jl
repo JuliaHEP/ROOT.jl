@@ -17,7 +17,6 @@ import SHA
 
 using Scratch
 
-
 import ....ROOT: supported_root_versions
 
 _English_or_list(v) = join(v, ", ", " or ")
@@ -54,11 +53,16 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
     JULIA = joinpath(Sys.BINDIR, "julia")
     depsdir = joinpath(dirname(@__DIR__), "deps")
     cmd=`make -C "$depsdir" BUILD_DIR="$buildpath" CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS)`
+    extra_make_options = ROOTprefs._load_preference("extra_make_options", "")
+    if !isempty(extra_make_options)
+        cmd = Cmd([collect(cmd)..., extra_make_options])
+    end
     cmd_clean = Cmd([collect(cmd)...,  "clean"]) #append clean to the command arguments
     cmd_file_list = Cmd([collect(cmd)..., "echo_WRAPPER_CXX"]) #command to list .cxx files
     
     #julia needs to be in the PATH for julia-config.jl, invoked by the Makefile, to run
-    PATH=Sys.BINDIR * ":" * ENV["PATH"]
+    build_env = copy(ENV)
+    build_env["PATH"] = Sys.BINDIR * ":" * ENV["PATH"]
 
     #Library name and path
     libname="libroot_julia." * Libdl.dlext
@@ -92,8 +96,8 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
         @info "Build command: " * string(cmd)[2:end-1] * " executed in " * pwd() * " directory."
     
         #Call make to build the library
-        cmd = Cmd(cmd, env = ["PATH" => PATH], ignorestatus=true)
-        cmd_clean = Cmd(cmd_clean, env = ["PATH" => PATH], ignorestatus=true)
+        cmd = Cmd(cmd, env = build_env, ignorestatus=true)
+        cmd_clean = Cmd(cmd_clean, env = build_env, ignorestatus=true)
         pipe = Pipe()
         try
             run(pipeline(`tee "$scratch/build.log"`, stdin=pipe, stdout=stdout, stderr=stderr), wait=false)            
@@ -101,11 +105,11 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
             ncxx = length(srcfiles)
             if ncxx > 0
                 warntime = if ncxx > 10
-                    " This will take some time. Be patient."
+                    ", which will take some time. Be patient."
                 else
-                    ""
+                    "."
                 end
-                println("\n>>> Making $ncxx XYZ.o object files.$warntime <<<\n")
+                println("\n>>> Making $ncxx XYZ.o object files$warntime <<<\n")
             end
             
             run(pipeline(cmd, stderr=pipe, stdout=pipe))
@@ -118,7 +122,7 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
             @error("Failed to compile the ROOT C++ library wrapper required by the Julia ROOT package. Logs can be found in $scratch/build.log")
             libpath = ""
         else
-        mv(joinpath(buildpath, libname), libpath, force=true)
+            mv(joinpath(buildpath, libname), libpath, force=true)
             sig = libsignature(joinpath(depsdir, "src"), srcfiles, libpath)
             open(joinpath(scratch, "sig"), "w") do f
                 write(f, sig)
@@ -157,21 +161,51 @@ function libsignature(srcdir, srcfiles, libpath)
 end
 
 function check_rootsys()
-    rootsys = get_ROOTSYS()
 
-    try
-        length(rootsys) == 0 && set_ROOTSYS!()
-
-        vers_numbers = parse.(Int, split(readchomp(`"$rootsys/bin/root-config" --version`), "."))
-        vers = VersionNumber(vers_numbers...)
-        
-        if is_root_version_checked() && vers ∉ supported_root_versions
-            error("Found ROOT version $vers is not supported.")
+    function get_vers(bindir)::Union{VersionNumber, Nothing}
+        try
+            rootconfig = joinpath(bindir, "root-config")
+            vers_numbers = parse.(Int, split(readchomp(`"$rootconfig" --version`), "."))
+            VersionNumber(vers_numbers...)
+        catch
+            nothing
         end
-    catch e
-        rethrow(ErrorException(e.msg * ". " * "Please install C++ ROOT (https://root.cern/releases) version $(_English_or_list(supported_root_versions)). If already installed, either set your shell environment to make ROOT binaries available e.g., by sourcing thisroot.(c)sh file, or set ROOTSYS in Julia by executing 'import ROOTprefs; ROOTprefs.set_ROOTSYS!(...).'"))
     end
-    rootsys
+    
+    rootsys = strip(ROOTprefs.get_ROOTSYS())
+    binpaths = String[]
+    
+    if length(rootsys) > 0
+        p = joinpath(rootsys, "bin")
+        vers_from_rootsys = get_vers(p)
+        push!(binpaths, p)
+    else
+        vers_from_rootsys = nothing
+    end
+
+    append!(binpaths, split(ENV["PATH"], ":")) 
+
+    i = findfirst(rootconfig->get_vers(rootconfig) ∈ supported_root_versions, binpaths)
+
+    if (   isnothing(i) && !ROOTprefs.is_root_version_checked() 
+        && length(binpaths) > 0 && !isnothing(vers_from_rootsys))
+       i = 1
+    end
+
+    if isnothing(i) || basename(rstrip(binpaths[i], '/')) != "bin"
+        if !isnothing(vers_from_rootsys)
+            msg1 = "Version $vers_from_rootsys of ROOT installed under ROOTSYS ($rootsys) is not supported."
+        elseif length(rootsys) > 0
+            msg1 = "No ROOT installation found under $rootsys."
+        else
+            msg1 = "No ROOT installation found."
+        end
+        error("$msg1 Please install ROOT (https://root.cern/install) version $(_English_or_list(supported_root_versions)), and call ROOTpres.setROOTSYS(path) to set the path to the installation base directory (i.e containting bin/root and bin/root-config).")
+    end
+
+    validrootsys = dirname(rstrip(binpaths[i], '/'))
+
+    (validrootsys, rootsys)
 end
 
 
@@ -186,22 +220,22 @@ function get_or_build_libroot_julia()
         @info "The plaform supports ROOT_jll. You can use ROOT libraries from the ROOT_jll package to skip the long compilation step. To switch to ROOT_jll, interrupt the import, run 'using ROOTprefs; use_root_jll!() to enable the ROOT_jll mode, restart Julia, and execute 'import ROOT' again."
     end
 
-    rootsys = ""
-
     #Below, we process differently if root_jll mode is enabled or not
     #in order to adapt the error message.
-    if is_root_jll_used() #jll mode but platform not supported.
-        use_root_jll!(false)
+    rootsys, pref_rootsys = if is_root_jll_used() #jll mode but platform not supported.
+        use_root_jll!(false, nowarn = true)
+        intro = "Platform not supported by the prebuilt wrapper ROOT_julia_jll package." 
+        postface = "The mode 'use_root_jll' has been disabled (can be reenabled by executing `using ROOTprefs; use_root_jll!()`)." 
         try
-            rootsys = check_rootsys()
-            @error("ROOT binaries not found in ROOT_jll for this platform. The wrapper will be compiled to use the ROOT libraries installed in $rootsys. The mode 'use_root_jll' has been disabled (can be reenabled with use_root_jll!()).")
+            @warn("$intro $postface")
+            rootsys, pref_rootsys = check_rootsys()
         catch
-            @error("ROOT binaries not found in ROOT_jll for pthis platform. You need to install ROOT version $supported_root_versions on the host and restart Julia. If the ROOT binaries are not in the system executable search path, you need to provide to the ROOT installation by calling 'using ROOTprefs; set_ROOTSYS!(path)'.  The mode 'use_root_jll' has been disabled (can be reenabled with use_root_jll!()).")
+            @error("$intro You need to install ROOT version $(_English_or_list(supported_root_versions)) on the host and restart Julia. Ensure that after installation the ROOT commands, especially root-config, can be executed from the shell prompt before restarting Julia. $postface")
             return ""
         end
     else #rootsys mode
         try
-            rootsys = check_rootsys()
+            check_rootsys()
         catch e
             if e isa ErrorException
                 @error(e.msg)
@@ -213,9 +247,10 @@ function get_or_build_libroot_julia()
     end
 
     libpath =  build_root_wrapper(rootsys)
-
-    if(isempty(libpath))
-        @error("Failed to build the Julia wrapper for the ROOT C++ framework installed in $(get_ROOTSYS()).")
+   
+    if !isempty(libpath) && rootsys != pref_rootsys
+      #If build succeeded and ROOTSYS was modified, update LocalPreference.toml
+      set_ROOTSYS!(rootsys, nocheck=true)
     end
     
     return libpath

@@ -4,6 +4,7 @@ import Base.setindex!
 
 using CxxWrap
 import ROOTprefs
+import Preferences
 
 include("root_versions.jl")
 
@@ -14,8 +15,6 @@ Return the list of supported C++ ROOT framework versions.
 
 """
 get_supported_root_versions() = supported_root_versions;
-
-#precompile_error::String = ""
 
 # utility code not exposed to the user
 include("internals.jl")
@@ -40,7 +39,15 @@ const rootsys = ROOTprefs.get_ROOTSYS()
 
 Path of the shared library containing the C++ code interfacing the Julia ROOT package with the C++ ROOT libraries. This library is provided by the package ROOT_julia_jll included in the dependency, when the C++ ROOT libraries are installed by the Julia package manager from the ROOT_jll package, or built on the fly (at first ROOT module import), if they are installed by another mean. 
 """
-const libroot_julia_path = Internals.CxxBuild.get_or_build_libroot_julia()
+const libroot_julia_path =  Internals.CxxBuild.get_or_build_libroot_julia() 
+
+const _libroot_compilation_failed = if isempty(libroot_julia_path) #precompilation failed
+   # trick to invalidate the precompilation cache
+   # and force precompilation after Julia session is restarted
+   ROOTprefs._set_preference("internal_compilation_failed", true)
+   ROOTprefs._load_preference("internal_compilation_failed", true)
+end
+
 
 """
   `libroot_julia_from_jll`
@@ -49,10 +56,8 @@ Flag telling if the package was precompiled with the C++ wrapper library from th
 """
 const libroot_julia_from_jll = root_jll_preferred && Internals.CxxBuild.is_jll_supported()
 
-#const ROOTSYS = Preferences.load_preference(Base.UUID(#=ROOTpref uuid:=# "492d890c-d9c4-11ef-b95f-3722e36032c2"), "ROOTSYS", "")
-
 # Display libroot_julia_path value on precompilation
-@info "ROOT wrapper library: $libroot_julia_path"
+isempty(libroot_julia_path) || (@info "ROOT wrapper library: $libroot_julia_path")
 
 export cxxcompile
 
@@ -65,6 +70,9 @@ cxxcompile() = !isempty(Internals.CxxBuild.get_or_build_libroot_julia())
 
 if(isempty(libroot_julia_path))
     ok() = false
+    # Abort precompilation, such that after a Julia restart, precompilation will be
+    # run again on 'import ROOT'
+    #__precompile__(false)
 else
     ok() = true
 
@@ -93,8 +101,10 @@ else
 end
 
 function __init__()
-    if isempty(libroot_julia_path)
-        @error "Failed to load or build C++ librairies and no function imported. See above error message to fix the issue.\nBEWARE: Julia needs to be restarted for the fix to take effect."
+    if !ok()
+        ROOTprefs._set_preference("internal_compilation_failed", nothing)
+        #@error join([precompile_error, "Beware a Julia restart is required to import the module again after resolving the issue."], "\n")
+        @warn "The imported ROOT module is empty because of the error mentioned above. To import the module again after resolving the issue, a restart of Julia is required."
     else
         libroot_julia_from_jll && Internals.loadlibdeps()
         @initcxx
