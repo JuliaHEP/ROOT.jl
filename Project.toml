@@ -24,7 +24,7 @@ julia = "1.6"
 Scratch = "1.2"
 CxxWrap = "0.17"
 Preferences = "1.4"
-ROOT_julia_jll = "0.1.0"
+ROOT_julia_jll = "1.0.0"
 
 [targets]
 test = ["Test", "Pkg"]
