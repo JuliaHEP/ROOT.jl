@@ -62,6 +62,8 @@ input               = [
    # <<< Geometry package
    ]
 
+class_order_constraints = [ "TTreeReader < TTreeReaderValue" ]
+
 extra_headers       = [ "TVectorT.h" ]
 
 veto_list           = "src/jlROOT-veto.h"

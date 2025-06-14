@@ -70,9 +70,6 @@ cxxcompile() = !isempty(Internals.CxxBuild.get_or_build_libroot_julia())
 
 if(isempty(libroot_julia_path))
     ok() = false
-    # Abort precompilation, such that after a Julia restart, precompilation will be
-    # run again on 'import ROOT'
-    #__precompile__(false)
 else
     ok() = true
 
@@ -103,7 +100,6 @@ end
 function __init__()
     if !ok()
         ROOTprefs._set_preference("internal_compilation_failed", nothing)
-        #@error join([precompile_error, "Beware a Julia restart is required to import the module again after resolving the issue."], "\n")
         @warn "The imported ROOT module is empty because of the error mentioned above. To import the module again after resolving the issue, a restart of Julia is required."
     else
         libroot_julia_from_jll && Internals.loadlibdeps()
