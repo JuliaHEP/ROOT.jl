@@ -131,7 +131,7 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
     end
     
     #Clean-up build area
-    if is_clean_after_build_enabled()
+    if get_clean_after_build()
         try
             splitpath(buildpath)[end-1] != "build" || error("Bug foud. buildpath must end with /build") #protect against wrong directory deletion after introduction of a bug
             rm(buildpath, recursive=true, force=true)
@@ -187,7 +187,7 @@ function check_rootsys()
 
     i = findfirst(rootconfig->get_vers(rootconfig) ∈ supported_root_versions, binpaths)
 
-    if (   isnothing(i) && !ROOTprefs.is_root_version_checked() 
+    if (   isnothing(i) && !ROOTprefs.get_check_root_version() 
         && length(binpaths) > 0 && !isnothing(vers_from_rootsys))
        i = 1
     end
@@ -211,21 +211,21 @@ end
 
 function get_or_build_libroot_julia()
 
-    if is_root_jll_used() && is_jll_supported()
+    if get_use_root_jll() && is_jll_supported()
         #prebuilt wrapper used, no build to perform
         return ROOT_julia_jll.get_libroot_julia_path()
     end
 
-    if !is_root_jll_used() && is_jll_supported()
-        @info "The plaform supports ROOT_jll. You can use ROOT libraries from the ROOT_jll package to skip the long compilation step. To switch to ROOT_jll, interrupt the import, run 'using ROOTprefs; use_root_jll!() to enable the ROOT_jll mode, restart Julia, and execute 'import ROOT' again."
+    if !get_use_root_jll() && is_jll_supported()
+        @info "The plaform supports ROOT_jll. You can use ROOT libraries from the ROOT_jll package to skip the long compilation step. To switch to ROOT_jll, interrupt the import, run 'using ROOTprefs; set_use_root_jll() to enable the ROOT_jll mode, restart Julia, and execute 'import ROOT' again."
     end
 
     #Below, we process differently if root_jll mode is enabled or not
     #in order to adapt the error message.
-    rootsys, pref_rootsys = if is_root_jll_used() #jll mode but platform not supported.
-        use_root_jll!(false, nowarn = true)
+    rootsys, pref_rootsys = if get_use_root_jll() #jll mode but platform not supported.
+        set_use_root_jll(false, nowarn = true)
         intro = "Platform not supported by the prebuilt wrapper ROOT_julia_jll package." 
-        postface = "The mode 'use_root_jll' has been disabled (can be reenabled by executing `using ROOTprefs; use_root_jll!()`)." 
+        postface = "The mode 'use_root_jll' has been disabled (can be reenabled by executing `using ROOTprefs; set_use_root_jll()`)." 
         try
             @warn("$intro $postface")
             rootsys, pref_rootsys = check_rootsys()
@@ -250,7 +250,7 @@ function get_or_build_libroot_julia()
    
     if !isempty(libpath) && rootsys != pref_rootsys
       #If build succeeded and ROOTSYS was modified, update LocalPreference.toml
-      set_ROOTSYS!(rootsys, nocheck=true)
+      set_ROOTSYS(rootsys, nocheck=true)
     end
     
     return libpath

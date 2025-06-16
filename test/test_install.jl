@@ -23,8 +23,8 @@
     import ROOT_jll
     using ROOTprefs
     
-    use_root_jll!(false)
-    set_ROOTSYS!(ROOT_jll.artifact_dir)
+    use_root_jll(false)
+    set_ROOTSYS(ROOT_jll.artifact_dir)
     project_path = Pkg.project().path
     
     rc = withenv("JULIA_LOAD_PATH" => join(LOAD_PATH, ":"),

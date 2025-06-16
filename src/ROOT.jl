@@ -22,10 +22,10 @@ include("internals.jl")
 """
    `root_jll_preferred`
 
-Value of `use_root_jll` preference when this module was precompiled.
+Value of `set_use_root_jll` preference when this module was precompiled.
 
 """
-const root_jll_preferred = ROOTprefs.is_root_jll_used()
+const root_jll_preferred = ROOTprefs.get_use_root_jll()
 
 """
    `rootsys`
