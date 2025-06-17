@@ -198,7 +198,7 @@ function check_rootsys()
         elseif length(rootsys) > 0
             msg1 = "No ROOT installation found under $rootsys."
         else
-            msg1 = "No ROOT installation found."
+            msg1 = "No supported ROOT version installation."
         end
         error("$msg1 Please install ROOT (https://root.cern/install) version $(_English_or_list(supported_root_versions)), and call ROOTpres.setROOTSYS(path) to set the path to the installation base directory (i.e containting bin/root and bin/root-config).")
     end
