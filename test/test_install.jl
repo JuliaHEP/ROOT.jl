@@ -23,7 +23,7 @@
     import ROOT_jll
     using ROOTprefs
     
-    use_root_jll(false)
+    set_use_root_jll(false)
     set_ROOTSYS(ROOT_jll.artifact_dir)
     project_path = Pkg.project().path
     
