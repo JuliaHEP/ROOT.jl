@@ -1,7 +1,7 @@
 name = "ROOT"
 uuid = "1706fdcc-8426-44f1-a283-5be479e9517c"
 authors = ["Philippe Gras CEA/IRFU"]
-version = "0.3.2"
+version = "0.4.0"
 
 [deps]
 Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
@@ -19,7 +19,6 @@ UnROOT = "3cd96dde-e98d-4713-81e9-a4a1b0235ce9"
 [compat]
 CxxWrap = "0.17"
 Preferences = "1.4"
-ROOT_jll = "6.32.8"
 ROOT_julia_jll = "1.0"
 ROOTprefs = "1.0"
 SHA = "0.7"

@@ -33,7 +33,7 @@
                          write(io, raw"""
 import ROOT
 using ROOTprefs
-println(stderr, is_root_jll_used())
+println(stderr, get_use_root_jll())
                 exit(isdefined(ROOT, :TH1D) ? 0 : 1)
                 """)
                          close(io)
