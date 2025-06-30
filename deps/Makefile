@@ -22,16 +22,18 @@ JULIA = julia
 
 CXX_IS_CLANG = $(shell $(CXX) -dM -E - < /dev/null | grep -c __clang__)
 
-VERBOSE = no #use -DVERBOSE to enable verbosity
+VERBOSE = y#use -DVERBOSE to enable verbosity
 # Verbose output
 ifeq ($(VERBOSE), no)
-    Q =
-else
     Q = @
+else
+    Q =
 endif
 
 ifeq ($(UNAME),Darwin)
   SO_SUFFIX = .dylib
+  #Prevent missing StdBinarySearch defintion error:
+  CPPFLAGS += -DJLCXX_FORCE_RANGES_OFF
 else
   SO_SUFFIX = .so
 endif

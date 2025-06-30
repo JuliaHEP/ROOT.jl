@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    shell: bash
+    shell: bash -l {0}
  
 jobs:
   test:
@@ -18,12 +18,11 @@ jobs:
       matrix:
         version:
           - '1.10'
-          - 'nightly'
         os:
 #          - ubuntu-latest
           - macOS-latest
         arch:
-          - x64
+          - aarch64
     steps:
       - uses: actions/checkout@v3
         with:
@@ -32,5 +31,27 @@ jobs:
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
-      - uses: julia-actions/julia-buildpkg@latest
+      - name: Install ROOT
+        run: |
+             CONDA_BINDIR="`julia .github/workflows/install_root_macos.jl | tail -n 1`"
+             source "$CONDA_BINDIR/activate"
+             cat >> "$GITHUB_ENV" <<EOF
+             #LDFLAGS="$LDFLAGS"
+             #CPPFLAGS="$CPPFLAGS"
+             #LIBTOOL="$LIBTOOL"
+             #CXXFLAGS="$CXXFLAGS"
+             #CPP="$CPP"
+             PATH="$PATH"
+             #LD="$LD"
+             CXX="$CXX"
+             #CFLAGS="$CFLAGS"
+             #CC="$CC"
+             EOF
+             echo -n "ROOT binary: " 1>&2
+             which root 1>&2
+      - name: Build the Julia wrapper library
+        run: |
+             julia --project=@. -e 'import Pkg; Pkg.add("ROOTprefs"); using ROOTprefs; set_use_root_jll(false); set_ROOTSYS()' 1>&2
+             julia --project=@. -e 'import ROOT' 1>&2
+      #- uses: julia-actions/julia-buildpkg@latest
       - uses: julia-actions/julia-runtest@latest
