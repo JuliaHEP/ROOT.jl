@@ -2,9 +2,11 @@
 
 [![Linux](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml) [![macOS](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml)
 
-## 📣 New: Support of recent Julia releases!
+## 📣 New: use of the built-in Julia package manager to install ROOT libraries on Linux.
 
-ROOT.jl was not working with Julia version beyond 1.3 due to limitation of the [Cxx.jl](https://github.com/JuliaInterop/Cxx.jl) C++/Julia interface. Release 0.3.0 brings a new implementation based on the [CxxWrap](https://github.com/JuliaInterop/CxxWrap.jl) interface that supports recent Julia versions. The counterpart is a smaller coverage of ROOT classes: see Section C++/Julia interface.
+Starting from release x.y.z, the built-in Julia package manager is used to install the C++ ROOT framework. This mechansim replace the Conda one, which was introduced as an interim solution and rapidly showed its limits. The ROOT libraries (and also also executables) are package in the `ROOT_jll` [JLL](https://docs.binarybuilder.org/stable/jll/#JLL-packages) package. 
+
+📝 Automatic installation of the ROOT libraries is currently not supported for MacOS. It was supported for a short time by the Conda mechanism, before an update of the Conda forge repository broke the dependencies. On MacOS, the C++ ROOT framework must be installed separately using one of the [method supported by ROOT](https://root.cern/install/).
 
 ## Introduction
 
@@ -30,28 +32,44 @@ To install the latest release, type from the Julia REPL, type `]` to enter in th
 add ROOT
 ```
 
-The developement version (github HEAD) can be installed using,
+If you are on MacOS, read the MacOS part of the next section.
+
+The development version (github HEAD) can be installed using,
 
 ```
 dev https://github.com/JuliaHEP/ROOT.jl
 build ROOT
 ```
 
-⚠ Installation can stay several minutes (ten of minutes on macOS) on the following message.
+## C++ ROOT backend installation
 
+### Linux
 
-```
-Building ROOT → `.../build.log`
-  Progress [=                  ]1/2
-```
+On Linux, the C++ ROOT framework used as backend is bundled in the `ROOT_jll` Julia package that is installed automatically. This is the default and recommended option on Linux.
 
-This is due to the installation of ROOT and compilation of the wrapper library. **Be patient**. You can open the indicated `build.log` file to see the progress.
+Use of C++ ROOT framework software installed outside of Julia is also possible. For this, the [`ROOTprefs.jl`](https://github.com/JuliaHEP/ROOTprefs.jl) should be used to change the default backend installation mode. This has to be done before the `ROOT` module is imported. Each `ROOT.jl` package is tight to one or few C++ ROOT versions: see the list in section [Backend versions](#versions).
 
-💡 Sometimes the `build.jl` script is not launched by the package manager. It is for instance the case in the development mode (package added with the `dev` command). In case of the command `add ...` command fail, try first to run `build ROOT` from the package manager prompt before investigating further.
+### MacOS
 
-## ROOT version
+The `ROOT_jll` package does not include yet the libraries for MacOS ([*](#footnote1)). Therefore, the user needs to take care of installing the C++ `ROOT` framework of the proper release: see next section for the required or do `import ROOT`, which will show a message specifying the required release if not accessible yet.
 
-Current ROOT version uses ROOT release 6.30.04. If a ROOT installation is found in the default binary search paths (PATH environment variable) with this version, then it will be used. Otherwise, ROOT will be installed using [Conda](https://github.com/JuliaPy/Conda.jl) into `$HOME/.julia/Conda/3`.
+Once the C++ `ROOT` framework installed, first run `root-config --version` to make sure it is accessible from the shell environment and the release is correct, then start Julia and import the `ROOT` module. The library providing the Julia bindings will be compiled.
+
+If after an upgrade of `ROOT.jl`, you needed to also upgrade the C++ framework installation and the installation path changed, then run `using ROOTprefs; set_ROOTSYS()` in Julia before importing the `ROOT` module in order to update the path.
+
+<a name="footnote1"></a>(*)The package `ROOT.jl` will still be installed, but be essentially empty on this platform.
+
+## <a name="versions"></a>Backend versions
+
+| Julia package<br>version | Default ROOT <br>version | Other supported<br> version(s) |
+|---------------|---------|----------|
+| 0.4.0         | 6.32.08 | 6.32.06 |
+| 0.3.1—0.3.2   | 6.32.02 |         |
+| 0.3.0         | 6.30.04 |         |
+
+  
+<br>
+The Julia ROOT package  version uses ROOT release 6.32.08. If a ROOT installation is found in the default binary search paths (PATH environment variable) with this version, then it will be used. Otherwise, ROOT will be installed using [Conda](https://github.com/JuliaPy/Conda.jl) into `$HOME/.julia/Conda/3`.
 
 ## C++ / Julia mapping and symbol export
 
@@ -110,119 +128,23 @@ More examples can be found in the `examples` directory.
 
 *See `input` list in [misc/ROOT.wit](misc/ROOT.wit)*
 
-  - `TSystem`, `TROOT`
-  - `TTree`,`TBranch`, `TLeaf`
-  - `TTreeReader`
-  - `TCanvas`
-  - `TH1`, `TH2`
-  - `TProfile`, `TProfile2D`
-  - `TRandom`
-  - `TAxis`
-  - `TGraph`
-  - `TF1`, `TFormula`
-  - `TFile`, `TDirectoryFile`, `TDirectory`
-  - `TTreeReader`, `TTreeReaderValue`, `TTreeReaderArray`
-  - `TVectorD`, `TVectorF`
-  - `TObject`, `TNamed`
-  - `TEntryList`, `Key`
+  - I/O and general classes:
+  
+     `TROOT`, `TBrowser`, `TSystem`, `TApplication`, `Rtypes`, `TNamed`, `TObject`, `TTree`, `TBranchPtr`, `TLeaf`, `TBranch`, `TTreeReader`, `TTreeReaderValue`, `TTreeReaderArray`, `TCanvas`, `TRandom`,  `TDirectory`, `TDirectoryFile`, `TFile`, `TEntryList`, `TKey`, `TObjArray`, `TVectorD`, `TVectorF`
 
-### Complete list of bound ROOT types, including classes whose methods are not exposed to Julia
+   - The complete set of classes of the Histogram library (except `TMultiGraph`):
+   
+    `Foption`, `HFitInterface`, `TAxis`, `TAxisModLab`,, `TBackCompFitter`, `TBinomialEfficiencyFitter`, `TConfidenceLevel`, `TEfficiency`, `TF12`, `TF1AbsComposition`, `TF1Convolution`, `TF1`, `TF1NormSum`, `TF2`, `TF3`, `TFitResult`, `TFitResultPtr`, `TFormula`, `TFractionFitter`, `TGraph2DAsymmErrors`, `TGraph2DErrors`, `TGraph2D`, `TGraphAsymmErrors`, `TGraphBentErrors`, `TGraphDelaunay2D`, `TGraphDelaunay`, `TGraphErrors`, `TGraph`, `TGraphMultiErrors`, `TGraphSmooth`, `TGraphTime`, `TH1C`, `TH1D`, `TH1F`, `TH1`, `TH1I`, `TH1K`, `TH1S`, `TH2C`, `TH2D`, `TH2F`, `TH2`, `TH2I`, `TH2Poly`, `TH2S`, `TH3C`, `TH3D`, `TH3F`, `TH3`, `TH3I`, `TH3S`, `THistRange`, `THLimitsFinder`, `THnBase`,, `THnChain`, `THn`, `THnSparse`, `THnSparse_Internal`, `THStack`,, `TKDE`, `TLimitDataSource`, `TLimit`, `TMultiDimFit`, `TMultiGraph`, `TNDArray`, `TPolyMarker`, `TPrincipal`, `TProfile2D`,, `TProfile2Poly`, `TProfile3D`, `TProfile`, `TScatter`, `TSpline`, `TSVDUnfold`, `TVirtualFitter`, `TVirtualGraphPainter`, `TVirtualHistPainter`, `TVirtualPaveStats`
+    
+   - The classes from the Geometry library:
+    
+    `TGDMLMatrix`, `TGeant4PhysicalConstants`, `TGeant4SystemOfUnits`, `TGeoArb8`, `TGeoAtt`, `TGeoBBox`, `TGeoBoolNode`, `TGeoBranchArray`, `TGeoBuilder`, `TGeoCache`, `TGeoCompositeShape`, `TGeoCone`, `TGeoElement`, `TGeoEltu`, `TGeoExtension`, `TGeoGlobalMagField`, `TGeoHalfSpace`, `TGeoHelix`, `TGeoHype`, `TGeoManager`, `TGeoMaterial`, `TGeoMatrix`, `TGeoMedium`, `TGeoNavigator`, `TGeoNode`, `TGeoOpticalSurface`, `TGeoParaboloid`, `TGeoPara`, `TGeoParallelWorld`, `TGeoPatternFinder`, `TGeoPcon`, `TGeoPgon`, `TGeoPhysicalConstants`, `TGeoPhysicalNode`, `TGeoPolygon`, `TGeoRCPtr`, `TGeoRegion`, `TGeoScaledShape`, `TGeoShapeAssembly`, `TGeoShape`, `TGeoSphere`, `TGeoStateInfo`, `TGeoSystemOfUnits`, `TGeoTessellated`, `TGeoTorus`, `TGeoTrd1`, `TGeoTrd2`, `TGeoTube`, `TGeoTypedefs`, `TGeoUniformMagField`, `TGeoVector3`, `TGeoVolume`, `TGeoVoxelFinder`, `TGeoXtru`, `TVirtualGeoConverter`, `TVirtualGeoPainter`, `TVirtualGeoTrack`, `TVirtualMagField`
+    
+   
+### Complete list of bound ROOT types, including classes whose methods are not exposed to Julia and list of wrapped methods
 
-*See also [misc/jlROOT-report.txt](misc/jlROOT-report.txt).*
+*See list in [misc/jlROOT-report.txt](misc/jlROOT-report.txt).*
 
-- TObject
-- TBrowser
-- TObjArray
-- TTimer
-- TClass
-- TBuffer
-- TVectorT
-- TVectorT
-- TVectorT
-- TNamed
-- TString
-- TDirectory
-- TDirectory::TContext
-- TKey
-- TFile
-- TList
-- TUUID
-- TVirtualMutex
-- TROOT
-- TApplication
-- TInterpreter
-- std::type_info
-- TCollection
-- TSeqCollection
-- TDataType
-- TVirtualPad
-- TCanvas
-- TBrowserImp
-- TBranch
-- TTree
-- TLeaf
-- TClonesArray
-- ROOT::TIOFeatures
-- TTree::TClusterIterator
-- TStreamerInfo
-- TEntryList
-- TH1
-- TIterator
-- TVirtualTreePlayer
-- TTreeFriendLeafIter
-- TBranchPtr
-- TLeaf::GetValueHelper
-- FileStat_t
-- UserGroup_t
-- SysInfo_t
-- CpuInfo_t
-- MemInfo_t
-- ProcInfo_t
-- RedirectHandle_t
-- TProcessEventTimer
-- TSystem
-- TFileHandler
-- TSignalHandler
-- TStdExceptionHandler
-- TTime
-- _IO_FILE
-- TInetAddress
-- TPad
-- TObjLink
-- TAxis
-- TArrayD
-- Foption_t
-- TF1
-- TRandom
-- TFitResultPtr
-- TH1C
-- TH1S
-- TH1I
-- TH1F
-- TH1D
-- TH2
-- TProfile
-- TH2C
-- TH2S
-- TH2I
-- TH2F
-- TH2D
-- TProfile2D
-- TApplicationImp
-- TDirectoryFile
-- TDatime
-- TArrayC
-- TUrl
-- TFileOpenHandle
-- TGraph
-- TF1Parameters
-- TF1::TF1FunctorPointer
-- TFormula
-- TMethodCall
-- TTreeReaderValue
-- TTreeReader
-- TTreeReader::Iterator_t
-- TTreeReaderArray
 
 
 ## Missing a ROOT class?

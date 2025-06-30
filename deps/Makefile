@@ -1,5 +1,4 @@
-# This makefile is meant to be called from the companion build.jl Julia script.
-# and requires the CXXWRAP_PREFIX and JL_SHARE to be set.
+# This makefile requires the CXXWRAP_PREFIX and JL_SHARE to be set.
 #
 # make CXXWRAP_PREFIX=... JL_SHARE=...
 #
@@ -7,7 +6,7 @@ BUILD_DIR = build
 ROOT_CONFIG = root-config
 UNAME=$(shell uname)
 
-ROOT_LIBS = $(shell $(ROOT_CONFIG) --libs)
+ROOT_LIBS = $(shell $(ROOT_CONFIG) --libs) -lGeom
 ROOT_INC_DIR = $(shell $(ROOT_CONFIG) --incdir)
 
 CPPFLAGS = -MMD -I. -I $(CXXWRAP_PREFIX)/include
@@ -22,6 +21,14 @@ LDLIBS = $(shell $(JL_SHARE)/julia-config.jl --ldlibs) -L$(CXXWRAP_PREFIX)/lib -
 JULIA = julia
 
 CXX_IS_CLANG = $(shell $(CXX) -dM -E - < /dev/null | grep -c __clang__)
+
+VERBOSE = no #use -DVERBOSE to enable verbosity
+# Verbose output
+ifeq ($(VERBOSE), no)
+    Q =
+else
+    Q = @
+endif
 
 ifeq ($(UNAME),Darwin)
   SO_SUFFIX = .dylib
@@ -40,7 +47,7 @@ LINK.o = $(CXX) $(LDFLAGS) $(TARGET_ARCH)
 
 .PHONY: all clean distclean run_demo run_demo2 check_root make_lib_from_objs
 
-PRODUCTS = $(BUILD_DIR)/libjlROOT$(SO_SUFFIX)
+PRODUCTS = $(BUILD_DIR)/libroot_julia$(SO_SUFFIX)
 
 #Define WRAPPER_CXX
 #WRAPPER_CXX: = $(file < src/generated_cxx) Extra.cxx #does not work on MacOS
@@ -52,21 +59,11 @@ DEPS = $(patsubst %.o,%.d, $(OBJS))
 all: $(PRODUCTS)
 
 clean:
-	-$(RM) -r build
+	-$(RM) -r $(BUILD_DIR)
 
 distclean:
-	-$(RM) -r build build.log
+	-$(RM) -r $(BUILD_DIR) build build.log
 	-$(RM) $(PRODUCTS)
-
-#$(BUILD_DIR):
-#	@[ -d $(BUILD_DIR) ] && mkdir -p $(BUILD_DIR)
-#	@echo 'all:\n\n%:\n\t$$(MAKE) -C .. $$@\nclean:\n\t$$(MAKE) -C .. clean build\n' > $(BUILD_DIR)/Makefile
-
-$(BUILD_DIR)/ROOT-generated.wit: ROOT.wit #$(BUILD_DIR)
-	$(MAKE) check_root
-	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
-	$(shell echo "#\n# Warning: file generated automatically from $<\n#" > $@)
-	$(shell sed "s@%ROOT_INC_DIR%@$(ROOT_INC_DIR)@" $< >> $@ || rm $@)
 
 check_root:
 ifeq ($(ROOT_LIBS),)
@@ -96,13 +93,15 @@ JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=..
 JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree3.jl \
 && JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree3.jl
 
-$(BUILD_DIR)/%.o: src/%.cxx #$(BUILD_DIR)
-	[ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
-	$(COMPILE.cc) $(CPPFLAGS) -o $@ $<
+$(BUILD_DIR)/%.o: src/%.cxx
+	@echo "Make $(notdir $@)"
+	$(Q) [ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
+	$(Q) $(COMPILE.cc) $(CPPFLAGS) -o $@ $<
 
-$(BUILD_DIR)/libjlROOT$(SO_SUFFIX): $(OBJS)
-	$(MAKE) check_root
-	$(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
+$(BUILD_DIR)/libroot_julia$(SO_SUFFIX): $(OBJS)
+	@echo "Make $(notdir $@)"
+	$(Q) $(MAKE) check_root
+	$(Q) $(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
 
 
 echo_%:
