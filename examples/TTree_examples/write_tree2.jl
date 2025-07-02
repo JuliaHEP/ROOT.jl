@@ -1,7 +1,7 @@
 using ROOT
 const R = ROOT
 
-println("Creating a ROOT file with a TTree filled with  arrays.\n")
+println("Creating a ROOT file with a TTree filled with c-arrays.\n")
 
 f = R.TFile!Open("test2.root", "RECREATE")
 tree = R.TTree("tree", "tree")

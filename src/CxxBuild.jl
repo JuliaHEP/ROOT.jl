@@ -1,4 +1,4 @@
-# Submodule of ROOT providing support to build
+## Submodule of ROOT providing support to build
 # the C++ code of the ROOT library wrapper.
 #
 # This is an internal module to be used by the ROOT module
@@ -22,9 +22,9 @@ import ....ROOT: supported_root_versions
 _English_or_list(v) = join(v, ", ", " or ")
 
 function is_jll_supported()
-    root_jll = Base.find_package("ROOT_julia_jll")
-    isnothing(root_jll) && error("Package ROOT_julia_jll not found. Please try to add it with 'import Pkg; Pkg.add(\"ROOT_jll\").")
-    ROOT_jll_dir = dirname(dirname(Base.find_package("ROOT_julia_jll")))
+    root_julia_jll_path = pathof(ROOT_julia_jll)
+    isnothing(root_julia_jll_path) && error("Package ROOT_julia_jll not found. Please try to add it with 'import Pkg; Pkg.add(\"ROOT_julia_jll\").")
+    ROOT_jll_dir = dirname(dirname(root_julia_jll_path))
     artifacts = Artifacts.select_downloadable_artifacts(joinpath(ROOT_jll_dir, "Artifacts.toml"))
     length(artifacts) > 0
 end

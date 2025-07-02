@@ -1,5 +1,7 @@
 [deps]
 ROOT = "1706fdcc-8426-44f1-a283-5be479e9517c"
+UnROOT = "3cd96dde-e98d-4713-81e9-a4a1b0235ce9"
 
 [compat]
 ROOT = "≥ 0.3.0"
+UnROOT = "0.10"
