@@ -2,9 +2,14 @@
 
 [![Linux](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml) [![macOS](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml)
 
+
 ## 📣 New: use of the built-in Julia package manager to install ROOT libraries on Linux.
 
-Starting from release x.y.z, the built-in Julia package manager is used to install the C++ ROOT framework. This mechansim replace the Conda one, which was introduced as an interim solution and rapidly showed its limits. The ROOT libraries (and also also executables) are package in the `ROOT_jll` [JLL](https://docs.binarybuilder.org/stable/jll/#JLL-packages) package. 
+Release 0.3.4 bring interactive help to all types and methods of ROOT.jl.
+
+## 📣 New: use of the built-in Julia package manager to install ROOT libraries on Linux.
+
+Starting from release 0.3.3, the built-in Julia package manager is used to install the C++ ROOT framework. This mechansim replace the Conda one, which was introduced as an interim solution and rapidly showed its limits. The ROOT libraries (and also also executables) are package in the `ROOT_jll` [JLL](https://docs.binarybuilder.org/stable/jll/#JLL-packages) package. 
 
 📝 Automatic installation of the ROOT libraries is currently not supported for MacOS. It was supported for a short time by the Conda mechanism, before an update of the Conda forge repository broke the dependencies. On MacOS, the C++ ROOT framework must be installed separately using one of the [method supported by ROOT](https://root.cern/install/).
 

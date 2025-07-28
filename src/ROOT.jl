@@ -92,9 +92,17 @@ else
     
     include("def_args.jl")
     include("move.jl")
+
+    @doc """
+    ROOT.TVectorD
+
+Alias for [ROOT.TVectorT{Float64}](@ref)
+"""
+    const TVectorD = TVectorT{Float64}
     
     include("ROOTex.jl")
     include("demo.jl")
+    include("ROOTdoc.jl")
 end
 
 function __init__()
