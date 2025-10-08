@@ -12,6 +12,7 @@ ROOT_INC_DIR = $(shell $(ROOT_CONFIG) --incdir)
 CPPFLAGS = -MMD -I. -I $(CXXWRAP_PREFIX)/include
 CXXFLAGS = $(patsubst -std=gnu%,,$(shell $(JL_SHARE)/julia-config.jl --cflags))
 CXXFLAGS += $(shell $(ROOT_CONFIG) --cflags)
+CXXFLAGS += -I$(VDT_DIR)/include
 CXXFLAGS += -O2
 CXXFLAGS += -Wno-c++20-extensions
 #CXXFLAGS += -DVERBOSE_IMPORT #To enable the verbose mode of the libray loading
@@ -22,7 +23,7 @@ JULIA = julia
 
 CXX_IS_CLANG = $(shell $(CXX) -dM -E - < /dev/null | grep -c __clang__)
 
-VERBOSE = y#use -DVERBOSE to enable verbosity
+VERBOSE = no#use -DVERBOSE to enable verbosity
 # Verbose output
 ifeq ($(VERBOSE), no)
     Q = @
@@ -32,8 +33,6 @@ endif
 
 ifeq ($(UNAME),Darwin)
   SO_SUFFIX = .dylib
-  #Prevent missing StdBinarySearch defintion error:
-  CPPFLAGS += -DJLCXX_FORCE_RANGES_OFF
 else
   SO_SUFFIX = .so
 endif
