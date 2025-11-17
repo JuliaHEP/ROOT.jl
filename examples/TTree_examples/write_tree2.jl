@@ -11,10 +11,10 @@ Muon_pt::Vector{Float32} = Float32[]
 Muon_eta::Vector{Float32} = Float32[]
 Muon_phi::Vector{Float32} = Float32[]
 
-brCnt = Branch(tree, "nMuon", nMuon, 32000, 99)
-brMuon_pt  = Branch(tree, "Muon_pt[nMuon]", Muon_pt, 32000, 99)
-brMuon_eta = Branch(tree, "Muon_eta[nMuon]", Muon_eta, 32000, 99)
-brMuon_phi = Branch(tree, "Muon_phi[nMuon]", Muon_phi, 32000, 99)
+brCnt = Branch(tree, "nMuon", nMuon)
+brMuon_pt  = Branch(tree, "Muon_pt[nMuon]", Muon_pt)
+brMuon_eta = Branch(tree, "Muon_eta[nMuon]", Muon_eta)
+brMuon_phi = Branch(tree, "Muon_phi[nMuon]", Muon_phi)
 
 nevts = 10
 

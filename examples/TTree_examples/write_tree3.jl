@@ -10,9 +10,9 @@ Muon_pt = StdVector{Float32}()
 Muon_eta = StdVector{Float32}()
 Muon_phi = StdVector{Float32}()
 
-brMuon_pt = Branch(tree, "Muon_pt", Muon_pt, 32000, 99)
-brMuon_eta = Branch(tree, "Muon_eta", Muon_eta, 32000, 99)
-brMuon_phi = Branch(tree, "Muon_phi", Muon_phi, 32000, 99)
+brMuon_pt = Branch(tree, "Muon_pt", Muon_pt)
+brMuon_eta = Branch(tree, "Muon_eta", Muon_eta)
+brMuon_phi = Branch(tree, "Muon_phi", Muon_phi)
 
 nevts = 10
 
