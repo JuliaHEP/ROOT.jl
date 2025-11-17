@@ -1,3 +1,9 @@
+if !isdefined(Main, :RUNTESTS)
+    using ROOT, CxxWrap
+    using Test
+    import Pkg
+end
+
 @testset "Test install"  begin
 
     using ROOTprefs

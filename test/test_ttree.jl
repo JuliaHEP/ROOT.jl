@@ -1,3 +1,12 @@
+#
+# Test of plain ROOT.TTree
+#
+
+if !isdefined(Main, :RUNTESTS)
+    using ROOT
+    using Test
+end
+
 @testset "StdVector tree branch" begin
     t = ROOT.TTree("tree", "")
     

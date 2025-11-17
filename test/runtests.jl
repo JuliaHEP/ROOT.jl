@@ -4,6 +4,8 @@ import Pkg
 
 Base.ENV["JULIA_PROJECT"] = dirname(Pkg.project().path)
 
+const RUNTESTS = @__FILE__
+
 function test_nothrow(script)
     @test begin
         try
