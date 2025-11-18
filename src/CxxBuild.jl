@@ -86,12 +86,15 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
     #Check if library is already built and up-to-date. Returns if it's the case.
     sigfile = joinpath(scratch, "sig")
     if isfile(libpath) && isfile(sigfile)
+        t0 = time()
         newsig = libsignature(joinpath(depsdir, "src"), srcfiles, libpath)
         oldsig = readline(sigfile)
         if newsig == oldsig
             @info "Library $libpath is already up-to-date."
             build = false
         end
+        t1 = time()
+        @info "Time spent to check for modifications in the ROOT-julia library source code that would require a compilation: $(round(t1-t0, digits=2)) s"
     end
 
     if build
@@ -130,6 +133,7 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
         try
             pipe = Pipe()
             proc = run(pipeline(cmd, stdout=pipe, stderr=pipe), wait=false)
+            t0 = time()
             @async open("$scratch/build.log", "w") do io
                 i = 0
                 for l in eachline(pipe)
@@ -146,8 +150,9 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
                     println(io, pref, l)
                 end
             end
-            
             wait(proc)
+            t1 = time()
+            @info "Time spent in building the library: $(round(t1-t0, digits=2)) s"
         finally
             close(pipe)
         end

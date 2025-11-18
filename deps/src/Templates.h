@@ -20,7 +20,7 @@ inline TTree* GetTTree(TDirectoryFile& f, const char *namecycle){
 }
 
 inline TH1* GetTH1(TDirectoryFile& f, const char *namecycle){
-  return f.Get<TH1>(namecycle);  
+  return f.Get<TH1>(namecycle);
 }
 
 #ifdef WRAPIT
@@ -60,11 +60,31 @@ template class TTreeReaderArray<Double_t>;
 //template class TTreeReaderArray<ULong64_t>;
 
 template<typename T>
-inline size_t length(const TTreeReaderArray<T>& a){
-  return a.end() - a.begin();
-}
+std::size_t GetSize(const TTreeReaderArray<T>* x){ return x->GetSize(); }
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Char_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<UChar_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Short_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<UShort_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Int_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<UInt_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Long_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ULong_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Float_t>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Double_t>* x);
 
-FCN_TEMPLATE size_t length(const TTreeReaderArray<Float_t>&);
+
+template<typename T>
+std::size_t GetSize(const TTreeReaderArray<T>& x){ return x.GetSize(); }
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Char_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<UChar_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Short_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<UShort_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Int_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<UInt_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Long_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ULong_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Float_t>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Double_t>& x);
 
 
 template class TBranchPtr<Char_t>;

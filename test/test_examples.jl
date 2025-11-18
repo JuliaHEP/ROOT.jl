@@ -22,7 +22,8 @@ test_fileproducer("TTree_examples/write_tree2", "test2.root")
 test_fileproducer("TTree_examples/write_tree3", "test3.root")
 @testset "read_tree3" test_nothrow(joinpath(@__DIR__, "../examples/TTree_examples/read_tree3.jl"))
 @testset "string_branch_example" test_nothrow(joinpath(@__DIR__, "../examples/TTree_examples/string_branch_example.jl"))
-@testset "inspect_tree example" test_nothrow(joinpath(@__DIR__, "../examples/TTree_examples/inspect_tree.jl"))
+#Open data used for this example temporary not accssible. Comment the test
+#@testset "inspect_tree example" test_nothrow(joinpath(@__DIR__, "../examples/TTree_examples/inspect_tree.jl"))
 @testset "ROOT.demo()" begin
     @test begin
         try

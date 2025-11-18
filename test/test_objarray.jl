@@ -1,8 +1,8 @@
-#=
-using ROOT
-using CxxWrap
-using Test
-=#
+if !isdefined(Main, :RUNTESTS)
+    using ROOT
+    using CxxWrap
+    using Test
+end
 
 objarray  = ROOT.TObjArray()
 
@@ -25,9 +25,9 @@ h2_ = CxxWrap.CxxPtr{ROOT.TH1D}(At(objarray, 1))[]
 @test GetTitle(h1_) == "h1"
 @test GetTitle(h2_) == "h2"
 
-@test h1_ == h1
-@test h2_ == h2
-@test h1_ != h2
+@test h1_.cpp_object == h1.cpp_object
+@test h2_.cpp_object == h2.cpp_object
+@test h1_.cpp_object != h2.cpp_object
 
 SetBinContent(h1, 1, 100)
 @test GetBinContent(h1, 1) == 100

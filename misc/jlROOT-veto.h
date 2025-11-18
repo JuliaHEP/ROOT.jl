@@ -143,11 +143,10 @@ int TF1NormSum::GetParameters();
 
 /.*::Copy(TAtt.* &)/;
 
-//To prevent double registration errors
+//Causes overwritten errors on module precompilation
 Int_t TBuffer::ReadStaticArray(UChar_t *);
 Int_t TBuffer::ReadStaticArray(ULong_t *);
 Int_t TBuffer::ReadStaticArray(Long_t *);
-//Int_t TBuffer::ReadStaticArray(ULong64_t *);
 void TBuffer::ReadFastArray(UChar_t *, Int_t);
 void TBuffer::ReadFastArray(ULong_t *, Int_t);
 void TBuffer::ReadFastArray(Long_t *, Int_t);
@@ -169,22 +168,13 @@ TBuffer & ::operator>>(TBuffer &, UShort_t &);
 TBuffer & ::operator>>(TBuffer &, Int_t &);
 TBuffer & ::operator>>(TBuffer &, ULong_t &);
 TBuffer & ::operator>>(TBuffer &, Char_t *);
-//TBuffer & ::operator<<(TBuffer &, Char_t);
-//TBuffer & ::operator<<(TBuffer &, UChar_t);
-//TBuffer & ::operator<<(TBuffer &, Short_t);
-//TBuffer & ::operator<<(TBuffer &, UShort_t);
-//TBuffer & ::operator<<(TBuffer &, Int_t);
-//TBuffer & ::operator<<(TBuffer &, UInt_t)
-//TBuffer & ::operator<<(TBuffer &, ULong_t)
 TBuffer & ::operator<<(TBuffer &, const Char_t *);
 
-//Duplicates (overwritten error) with version with (U)Long64_t in place of (U)Long_t
-//Long_t ::TMath::Abs(Long_t);
-//Long64_t ::TMath::Abs(Long64_t); //not clear when this one needs to be vetoed
-//Long_t ::TMath::Min(Long_t, Long_t);
-//Long_t ::TMath::Max(Long_t, Long_t);
-//ULong_t ::TMath::Min(ULong_t, ULong_t);
-//ULong_t ::TMath::Max(ULong_t, ULong_t);
+//Duplicates with xxx(Long_t &*)
+Int_t TBuffer::ReadArray(Long64_t *&);
+Int_t TBuffer::ReadArray(ULong64_t *&);
+
+//Overwritten overwritten error with version with (U)Long64_t in place of (U)Long_t
 ULong_t ::host2net(ULong_t)
 Long_t ::host2net(Long_t)
 ULong_t ::net2host(ULong_t)
@@ -194,23 +184,20 @@ Long_t ::net2host(Long_t)
 TList::TList(TObject *);
 Bool_t TGeoBBox::AreOverlapping(const TGeoBBox *, const TGeoMatrix *, const TGeoBBox *, const TGeoMatrix *);
 
-//void TEnv::SetValue(const char *, const char *, EEnvLevel, const char *)
-//void TEnv::SetValue(const char *, EEnvLevel)
-//generate a double registration error with `void TEnv::SetValue(const char *, EEnvLevel)`
-//void TEnv::SetValue(const char *, Int_t);
-//void TEnv::SetValue(const char *, Double_t)
-
-//Causes a Double registration error
+//Causes a overwritten errors
 UInt_t ::Hash(const TString &);
 UInt_t ::Hash(const TString *);
-
-//Causes a overwritten error
 TString::TString(Ssiz_t);
-
-//overwritten error 
 TString & TString::Remove(TString::EStripType, char);
 
-//duplicates (overwritten error) with methods with Int_t in place of Window_t
+//to prevent double registration with Long64_t version:
+Long_t ::TMath::Abs(Long_t);
+Long_t ::TMath::Min(Long_t, Long_t);
+ULong_t ::TMath::Min(ULong_t, ULong_t);
+Long_t ::TMath::Max(Long_t, Long_t);
+ULong_t ::TMath::Max(ULong_t, ULong_t);
+
+//overwritten error with methods with Int_t in place of Window_t
 void TVirtualX::MoveWindow(Window_t, Int_t, Int_t);
 void TVirtualX::SetCursor(Window_t, Cursor_t);
 
@@ -218,5 +205,9 @@ void TVirtualX::SetCursor(Window_t, Cursor_t);
 //precompilation
 void ::frombuf(char *&, Bool_t *);
 
+//breaks the == operator defined by CxxWrap to compare CxxBaseRefs
+bool ::operator==(TObjOptLink *, const std::shared_ptr<TObjLink> &);
+bool ::operator==(const std::shared_ptr<TObjLink> &, TObjOptLink *);
 
-
+//reimplemented in Julia in order to dereference the returned pointer
+TObject *& TObjArray::operator[](Int_t);

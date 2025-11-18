@@ -67,6 +67,19 @@ std::basic_string_view<char,std::char_traits<char>>
 
 Auto-vetoed functions
 ---------------------
+TF3::TF3(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
+TGraphAsymmErrors::TGraphAsymmErrors(const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &)
+std::vector<ROOT::Math::Delaunay2D::Triangle>::const_iterator TGraphDelaunay2D::begin()
+std::vector<ROOT::Math::Delaunay2D::Triangle>::const_iterator TGraphDelaunay2D::end()
+TGraphErrors::TGraphErrors(const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &)
+TGraphMultiErrors::TGraphMultiErrors(const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, Int_t)
+TGraphMultiErrors::TGraphMultiErrors(Int_t, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF *, const TVectorF *, Int_t)
+TH1F::TH1F(const TVectorF &)
+TH2F::TH2F(const TMatrixFBase &)
+TH2D::TH2D(const TMatrixDBase &)
+TNDArrayRef TNDArrayRef::operator[](Int_t)
+TNDArrayRef TNDArrayT::operator[](Int_t)
+Long64_t THStack::Merge(TCollection *, TFileMergeInfo *)
 TGeoRCPtr::TGeoRCPtr<T>(const TGeoRCPtr &)
 TGeoRCPtr & TGeoRCPtr::operator=(T *)
 TGeoRCPtr & TGeoRCPtr::operator=(const TGeoRCPtr &)
@@ -218,44 +231,33 @@ void TTree::RemoveExternalFriend(TFriendElement *)
 void TTree::ResetAfterMerge(TFileMergeInfo *)
 void TTree::SetEventList(TEventList *)
 void TTree::SetTreeIndex(TVirtualIndex *)
+TContextMenu * TCanvas::GetContextMenu()
+TCanvasImp * TCanvas::GetCanvasImp()
+void TCanvas::SetCanvasImp(TCanvasImp *)
+void TDirectoryFile::ResetAfterMerge(TFileMergeInfo *)
+TArchiveFile * TFile::GetArchive()
+TFileCacheRead * TFile::GetCacheRead(const TObject *)
+TFileCacheWrite * TFile::GetCacheWrite()
+void TFile::SetCacheRead(TFileCacheRead *, TObject *, TFile::ECacheAction)
+void TFile::SetCacheWrite(TFileCacheWrite *)
+TFitResultPtr ROOT::Fit::FitObject(TMultiGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
+void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const TH1 *, TF1 *)
+void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const THnBase *, TF1 *)
+void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TMultiGraph *, TF1 *)
 ROOT::Math::Minimizer * TBackCompFitter::GetMinimizer()
 ROOT::Math::IMultiGenFunction * TBackCompFitter::GetObjFunction()
 void TBackCompFitter::SetObjFunction(ROOT::Math::IMultiGenFunction *)
 TF1::TF1(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Int_t, Int_t, TF1::EAddToList)
 TF2::TF2(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
 TGraph::TGraph(const TVectorF &, const TVectorF &)
-TF3::TF3(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
-TGraphAsymmErrors::TGraphAsymmErrors(const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &)
-std::vector<ROOT::Math::Delaunay2D::Triangle>::const_iterator TGraphDelaunay2D::begin()
-std::vector<ROOT::Math::Delaunay2D::Triangle>::const_iterator TGraphDelaunay2D::end()
-TGraphErrors::TGraphErrors(const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &)
-TGraphMultiErrors::TGraphMultiErrors(const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, Int_t)
-TGraphMultiErrors::TGraphMultiErrors(Int_t, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF *, const TVectorF *, Int_t)
-TH1F::TH1F(const TVectorF &)
-TH2F::TH2F(const TMatrixFBase &)
-TH2D::TH2D(const TMatrixDBase &)
-TNDArrayRef TNDArrayRef::operator[](Int_t)
-TNDArrayRef TNDArrayT::operator[](Int_t)
-Long64_t THStack::Merge(TCollection *, TFileMergeInfo *)
-TFitResultPtr ROOT::Fit::FitObject(TMultiGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
-void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const TH1 *, TF1 *)
-void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const THnBase *, TF1 *)
-void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TMultiGraph *, TF1 *)
-TArchiveFile * TFile::GetArchive()
-TFileCacheRead * TFile::GetCacheRead(const TObject *)
-TFileCacheWrite * TFile::GetCacheWrite()
-void TFile::SetCacheRead(TFileCacheRead *, TObject *, TFile::ECacheAction)
-void TFile::SetCacheWrite(TFileCacheWrite *)
-void TDirectoryFile::ResetAfterMerge(TFileMergeInfo *)
-TContextMenu * TCanvas::GetContextMenu()
-TCanvasImp * TCanvas::GetCanvasImp()
-void TCanvas::SetCanvasImp(TCanvasImp *)
 TTreeReaderArray::iterator TTreeReaderArray::begin()
 TTreeReaderArray::iterator TTreeReaderArray::end()
 TTreeReaderArray::const_iterator TTreeReaderArray::begin()
 TTreeReaderArray::const_iterator TTreeReaderArray::end()
 TTreeReaderArray::const_iterator TTreeReaderArray::cbegin()
 TTreeReaderArray::const_iterator TTreeReaderArray::cend()
+void TBranchObject::ResetAfterMerge(TFileMergeInfo *)
+void TBranchElement::ResetAfterMerge(TFileMergeInfo *)
 
 Class(es) from vetoed_finalizer_classes configuration parameter that were not found:
 -------------------------------------------------------------------------------------
@@ -275,6 +277,8 @@ TObjArray
 TTimer
 TBuffer
 std::basic_string
+CompareDesc
+CompareAsc
 TVectorT
 TVectorT
 TVectorT
@@ -476,6 +480,23 @@ TPrincipal
 TTreeFriendLeafIter
 TBranchPtr
 TLeaf::GetValueHelper
+TLeafB
+TLeafC
+TLeafD32
+TLeafD
+TBranchElement
+TLeafElement
+TMethodCall
+TLeafF16
+TLeafF
+TLeafG
+TLeafI
+TLeafL
+TLeafObject
+TLeafO
+TLeafS
+TBranchObject
+TBranchSTL
 TTreeReaderValue
 TTreeReader
 TTreeReader::Iterator_t
@@ -499,7 +520,6 @@ ROOT::Fit::FitResult
 TGraphErrors
 TAxisModLab
 TVirtualFitter
-TMethodCall
 TBackCompFitter
 ROOT::Fit::FitConfig
 ROOT::Fit::FitData
@@ -1004,7 +1024,6 @@ TObject * TObjArray::Before(const TObject *)  const
 TObject * TObjArray::After(const TObject *)  const
 TObject * TObjArray::First()  const
 TObject * TObjArray::Last()  const
-TObject *& TObjArray::operator[](Int_t) 
 TObject * TObjArray::operator[](Int_t)  const
 Int_t TObjArray::LowerBound()  const
 Int_t TObjArray::IndexOf(const TObject *)  const
@@ -1144,8 +1163,6 @@ Int_t TBuffer::ReadArray(Int_t *&)
 Int_t TBuffer::ReadArray(UInt_t *&) 
 Int_t TBuffer::ReadArray(Long_t *&) 
 Int_t TBuffer::ReadArray(ULong_t *&) 
-Int_t TBuffer::ReadArray(Long64_t *&) 
-Int_t TBuffer::ReadArray(ULong64_t *&) 
 Int_t TBuffer::ReadArray(Float_t *&) 
 Int_t TBuffer::ReadArray(Double_t *&) 
 Int_t TBuffer::ReadStaticArray(Bool_t *) 
@@ -7353,6 +7370,482 @@ static int TTreeFriendLeafIter::DeclFileLine()
 TBranchPtr::TBranchPtr<T>(TBranch *) 
 TBranch * TBranchPtr::operator->()  const
 TBranch & TBranchPtr::operator*()  const
+TLeafB::TLeafB(TBranch *, const char *, const char *) 
+void TLeafB::Export(TClonesArray *, Int_t) 
+void TLeafB::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafB::GetDeserializeType()  const
+Int_t TLeafB::GetMaximum()  const
+Int_t TLeafB::GetMinimum()  const
+const char * TLeafB::GetTypeName()  const
+Double_t TLeafB::GetValue(Int_t)  const
+void * TLeafB::GetValuePointer()  const
+bool TLeafB::IncludeRange(TLeaf *) 
+void TLeafB::Import(TClonesArray *, Int_t) 
+void TLeafB::PrintValue(Int_t)  const
+void TLeafB::ReadBasket(TBuffer &) 
+void TLeafB::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+void TLeafB::SetAddress(void *) 
+void TLeafB::SetMaximum(Char_t) 
+void TLeafB::SetMinimum(Char_t) 
+bool TLeafB::ReadBasketFast(TBuffer &, Long64_t) 
+static Version_t TLeafB::Class_Version() 
+TClass * TLeafB::IsA()  const
+void TLeafB::StreamerNVirtual(TBuffer &) 
+static const char * TLeafB::DeclFileName() 
+static int TLeafB::ImplFileLine() 
+static const char * TLeafB::ImplFileName() 
+static const char * TLeafB::Class_Name() 
+static TClass * TLeafB::Dictionary() 
+static TClass * TLeafB::Class() 
+void TLeafB::Streamer(TBuffer &) 
+static int TLeafB::DeclFileLine() 
+TLeafC::TLeafC(TBranch *, const char *, const char *) 
+void TLeafC::Export(TClonesArray *, Int_t) 
+void TLeafC::FillBasket(TBuffer &) 
+Int_t TLeafC::GetMaximum()  const
+Int_t TLeafC::GetMinimum()  const
+const char * TLeafC::GetTypeName()  const
+Double_t TLeafC::GetValue(Int_t)  const
+void * TLeafC::GetValuePointer()  const
+char * TLeafC::GetValueString()  const
+bool TLeafC::IncludeRange(TLeaf *) 
+void TLeafC::Import(TClonesArray *, Int_t) 
+void TLeafC::PrintValue(Int_t)  const
+void TLeafC::ReadBasket(TBuffer &) 
+void TLeafC::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+void TLeafC::SetAddress(void *) 
+void TLeafC::SetMaximum(Int_t) 
+void TLeafC::SetMinimum(Int_t) 
+static Version_t TLeafC::Class_Version() 
+TClass * TLeafC::IsA()  const
+void TLeafC::StreamerNVirtual(TBuffer &) 
+static const char * TLeafC::DeclFileName() 
+static int TLeafC::ImplFileLine() 
+static const char * TLeafC::ImplFileName() 
+static const char * TLeafC::Class_Name() 
+static TClass * TLeafC::Dictionary() 
+static TClass * TLeafC::Class() 
+void TLeafC::Streamer(TBuffer &) 
+static int TLeafC::DeclFileLine() 
+TLeafD32::TLeafD32(TBranch *, const char *, const char *) 
+TLeaf::DeserializeType TLeafD32::GetDeserializeType()  const
+void TLeafD32::Export(TClonesArray *, Int_t) 
+void TLeafD32::FillBasket(TBuffer &) 
+const char * TLeafD32::GetTypeName()  const
+Double_t TLeafD32::GetValue(Int_t)  const
+void * TLeafD32::GetValuePointer()  const
+void TLeafD32::Import(TClonesArray *, Int_t) 
+void TLeafD32::PrintValue(Int_t)  const
+void TLeafD32::ReadBasket(TBuffer &) 
+void TLeafD32::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+void TLeafD32::SetAddress(void *) 
+static Version_t TLeafD32::Class_Version() 
+TClass * TLeafD32::IsA()  const
+void TLeafD32::StreamerNVirtual(TBuffer &) 
+static const char * TLeafD32::DeclFileName() 
+static int TLeafD32::ImplFileLine() 
+static const char * TLeafD32::ImplFileName() 
+static const char * TLeafD32::Class_Name() 
+static TClass * TLeafD32::Dictionary() 
+static TClass * TLeafD32::Class() 
+void TLeafD32::Streamer(TBuffer &) 
+static int TLeafD32::DeclFileLine() 
+TLeafD::TLeafD(TBranch *, const char *, const char *) 
+void TLeafD::Export(TClonesArray *, Int_t) 
+void TLeafD::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafD::GetDeserializeType()  const
+const char * TLeafD::GetTypeName()  const
+Double_t TLeafD::GetValue(Int_t)  const
+void * TLeafD::GetValuePointer()  const
+void TLeafD::Import(TClonesArray *, Int_t) 
+void TLeafD::PrintValue(Int_t)  const
+void TLeafD::ReadBasket(TBuffer &) 
+void TLeafD::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+void TLeafD::SetAddress(void *) 
+bool TLeafD::ReadBasketFast(TBuffer &, Long64_t) 
+static Version_t TLeafD::Class_Version() 
+TClass * TLeafD::IsA()  const
+void TLeafD::StreamerNVirtual(TBuffer &) 
+static const char * TLeafD::DeclFileName() 
+static int TLeafD::ImplFileLine() 
+static const char * TLeafD::ImplFileName() 
+static const char * TLeafD::Class_Name() 
+static TClass * TLeafD::Dictionary() 
+static TClass * TLeafD::Class() 
+void TLeafD::Streamer(TBuffer &) 
+static int TLeafD::DeclFileLine() 
+TBranchElement::TBranchElement(TTree *, const char *, TStreamerInfo *, Int_t, char *, Int_t, Int_t, Int_t) 
+TBranchElement::TBranchElement(TTree *, const char *, TClonesArray *, Int_t, Int_t, Int_t) 
+TBranchElement::TBranchElement(TTree *, const char *, TVirtualCollectionProxy *, Int_t, Int_t, Int_t) 
+TBranchElement::TBranchElement(TBranch *, const char *, TStreamerInfo *, Int_t, char *, Int_t, Int_t, Int_t) 
+TBranchElement::TBranchElement(TBranch *, const char *, TClonesArray *, Int_t, Int_t, Int_t) 
+TBranchElement::TBranchElement(TBranch *, const char *, TVirtualCollectionProxy *, Int_t, Int_t, Int_t) 
+void TBranchElement::Browse(TBrowser *) 
+TBranch * TBranchElement::FindBranch(const char *) 
+TLeaf * TBranchElement::FindLeaf(const char *) 
+char * TBranchElement::GetAddress()  const
+TBranchElement * TBranchElement::GetBranchCount()  const
+TBranchElement * TBranchElement::GetBranchCount2()  const
+Int_t * TBranchElement::GetBranchOffset()  const
+UInt_t TBranchElement::GetCheckSum() 
+const char * TBranchElement::GetClassName()  const
+TClass * TBranchElement::GetClass()  const
+const char * TBranchElement::GetClonesName()  const
+TVirtualCollectionProxy * TBranchElement::GetCollectionProxy() 
+TClass * TBranchElement::GetCurrentClass() 
+Int_t TBranchElement::GetEntry(Long64_t, Int_t) 
+Int_t TBranchElement::GetExpectedType(TClass *&, EDataType &) 
+TString TBranchElement::GetFullName()  const
+const char * TBranchElement::GetIconName()  const
+Int_t TBranchElement::GetID()  const
+TStreamerInfo * TBranchElement::GetInfo()  const
+bool TBranchElement::GetMakeClass()  const
+char * TBranchElement::GetObject()  const
+TVirtualArray * TBranchElement::GetOnfileObject()  const
+const char * TBranchElement::GetParentName()  const
+Int_t TBranchElement::GetMaximum()  const
+Int_t TBranchElement::GetNdata()  const
+Int_t TBranchElement::GetType()  const
+Int_t TBranchElement::GetStreamerType()  const
+TClass * TBranchElement::GetTargetClass() 
+const char * TBranchElement::GetTypeName()  const
+Double_t TBranchElement::GetValue(Int_t, Int_t, bool)  const
+void * TBranchElement::GetValuePointer()  const
+Int_t TBranchElement::GetClassVersion() 
+bool TBranchElement::IsBranchFolder()  const
+bool TBranchElement::IsFolder()  const
+bool TBranchElement::IsObjectOwner()  const
+bool TBranchElement::Notify() 
+void TBranchElement::Print(Option_t *)  const
+void TBranchElement::PrintValue(Int_t)  const
+void TBranchElement::Reset(Option_t *) 
+void TBranchElement::ResetAddress() 
+void TBranchElement::ResetDeleteObject() 
+void TBranchElement::ResetInitInfo(bool) 
+void TBranchElement::SetAddress(void *) 
+bool TBranchElement::SetMakeClass(bool) 
+void TBranchElement::SetObject(void *) 
+void TBranchElement::SetBasketSize(Int_t) 
+void TBranchElement::SetBranchFolder() 
+void TBranchElement::SetClassName(const char *) 
+void TBranchElement::SetOffset(Int_t) 
+void TBranchElement::SetMissing() 
+void TBranchElement::SetParentClass(TClass *) 
+void TBranchElement::SetParentName(const char *) 
+void TBranchElement::SetTargetClass(const char *) 
+void TBranchElement::SetupAddresses() 
+void TBranchElement::SetType(Int_t) 
+void TBranchElement::UpdateFile() 
+void TBranchElement::Unroll(const char *, TClass *, TStreamerInfo *, char *, Int_t, Int_t) 
+static Version_t TBranchElement::Class_Version() 
+TClass * TBranchElement::IsA()  const
+void TBranchElement::StreamerNVirtual(TBuffer &) 
+static const char * TBranchElement::DeclFileName() 
+static int TBranchElement::ImplFileLine() 
+static const char * TBranchElement::ImplFileName() 
+static const char * TBranchElement::Class_Name() 
+static TClass * TBranchElement::Dictionary() 
+static TClass * TBranchElement::Class() 
+void TBranchElement::Streamer(TBuffer &) 
+static int TBranchElement::DeclFileLine() 
+TLeafElement::TLeafElement(TBranch *, const char *, Int_t, Int_t) 
+bool TLeafElement::CanGenerateOffsetArray() 
+Int_t * TLeafElement::GenerateOffsetArrayBase(Int_t, Int_t) 
+TLeaf::DeserializeType TLeafElement::GetDeserializeType()  const
+Int_t TLeafElement::GetID()  const
+TString TLeafElement::GetFullName()  const
+Int_t TLeafElement::GetLen()  const
+TMethodCall * TLeafElement::GetMethodCall(const char *) 
+Int_t TLeafElement::GetMaximum()  const
+Int_t TLeafElement::GetNdata()  const
+const char * TLeafElement::GetTypeName()  const
+Double_t TLeafElement::GetValue(Int_t)  const
+Long64_t TLeafElement::GetValueLong64(Int_t)  const
+bool TLeafElement::ReadBasketFast(TBuffer &, Long64_t) 
+void * TLeafElement::GetValuePointer()  const
+bool TLeafElement::IncludeRange(TLeaf *) 
+bool TLeafElement::IsOnTerminalBranch()  const
+void TLeafElement::PrintValue(Int_t)  const
+void TLeafElement::SetLeafCount(TLeaf *) 
+static Version_t TLeafElement::Class_Version() 
+TClass * TLeafElement::IsA()  const
+void TLeafElement::StreamerNVirtual(TBuffer &) 
+static const char * TLeafElement::DeclFileName() 
+static int TLeafElement::ImplFileLine() 
+static const char * TLeafElement::ImplFileName() 
+static const char * TLeafElement::Class_Name() 
+static TClass * TLeafElement::Dictionary() 
+static TClass * TLeafElement::Class() 
+void TLeafElement::Streamer(TBuffer &) 
+static int TLeafElement::DeclFileLine() 
+TLeafF16::TLeafF16(TBranch *, const char *, const char *) 
+TLeaf::DeserializeType TLeafF16::GetDeserializeType()  const
+void TLeafF16::Export(TClonesArray *, Int_t) 
+void TLeafF16::FillBasket(TBuffer &) 
+const char * TLeafF16::GetTypeName()  const
+Double_t TLeafF16::GetValue(Int_t)  const
+void * TLeafF16::GetValuePointer()  const
+void TLeafF16::Import(TClonesArray *, Int_t) 
+void TLeafF16::PrintValue(Int_t)  const
+void TLeafF16::ReadBasket(TBuffer &) 
+void TLeafF16::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+void TLeafF16::SetAddress(void *) 
+static Version_t TLeafF16::Class_Version() 
+TClass * TLeafF16::IsA()  const
+void TLeafF16::StreamerNVirtual(TBuffer &) 
+static const char * TLeafF16::DeclFileName() 
+static int TLeafF16::ImplFileLine() 
+static const char * TLeafF16::ImplFileName() 
+static const char * TLeafF16::Class_Name() 
+static TClass * TLeafF16::Dictionary() 
+static TClass * TLeafF16::Class() 
+void TLeafF16::Streamer(TBuffer &) 
+static int TLeafF16::DeclFileLine() 
+TLeafF::TLeafF(TBranch *, const char *, const char *) 
+void TLeafF::Export(TClonesArray *, Int_t) 
+void TLeafF::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafF::GetDeserializeType()  const
+const char * TLeafF::GetTypeName()  const
+Double_t TLeafF::GetValue(Int_t)  const
+void * TLeafF::GetValuePointer()  const
+void TLeafF::Import(TClonesArray *, Int_t) 
+void TLeafF::PrintValue(Int_t)  const
+void TLeafF::ReadBasket(TBuffer &) 
+void TLeafF::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+void TLeafF::SetAddress(void *) 
+bool TLeafF::ReadBasketFast(TBuffer &, Long64_t) 
+static Version_t TLeafF::Class_Version() 
+TClass * TLeafF::IsA()  const
+void TLeafF::StreamerNVirtual(TBuffer &) 
+static const char * TLeafF::DeclFileName() 
+static int TLeafF::ImplFileLine() 
+static const char * TLeafF::ImplFileName() 
+static const char * TLeafF::Class_Name() 
+static TClass * TLeafF::Dictionary() 
+static TClass * TLeafF::Class() 
+void TLeafF::Streamer(TBuffer &) 
+static int TLeafF::DeclFileLine() 
+TLeafG::TLeafG(TBranch *, const char *, const char *) 
+void TLeafG::Export(TClonesArray *, Int_t) 
+void TLeafG::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafG::GetDeserializeType()  const
+const char * TLeafG::GetTypeName()  const
+Int_t TLeafG::GetMaximum()  const
+Int_t TLeafG::GetMinimum()  const
+Double_t TLeafG::GetValue(Int_t)  const
+Long64_t TLeafG::GetValueLong64(Int_t)  const
+void * TLeafG::GetValuePointer()  const
+bool TLeafG::IncludeRange(TLeaf *) 
+void TLeafG::Import(TClonesArray *, Int_t) 
+void TLeafG::PrintValue(Int_t)  const
+void TLeafG::ReadBasket(TBuffer &) 
+void TLeafG::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+bool TLeafG::ReadBasketFast(TBuffer &, Long64_t) 
+void TLeafG::SetAddress(void *) 
+void TLeafG::SetMaximum(Long_t) 
+void TLeafG::SetMinimum(Long_t) 
+static Version_t TLeafG::Class_Version() 
+TClass * TLeafG::IsA()  const
+void TLeafG::StreamerNVirtual(TBuffer &) 
+static const char * TLeafG::DeclFileName() 
+static int TLeafG::ImplFileLine() 
+static const char * TLeafG::ImplFileName() 
+static const char * TLeafG::Class_Name() 
+static TClass * TLeafG::Dictionary() 
+static TClass * TLeafG::Class() 
+void TLeafG::Streamer(TBuffer &) 
+static int TLeafG::DeclFileLine() 
+TLeafI::TLeafI(TBranch *, const char *, const char *) 
+void TLeafI::Export(TClonesArray *, Int_t) 
+void TLeafI::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafI::GetDeserializeType()  const
+const char * TLeafI::GetTypeName()  const
+Int_t TLeafI::GetMaximum()  const
+Int_t TLeafI::GetMinimum()  const
+Double_t TLeafI::GetValue(Int_t)  const
+void * TLeafI::GetValuePointer()  const
+bool TLeafI::IncludeRange(TLeaf *) 
+void TLeafI::Import(TClonesArray *, Int_t) 
+void TLeafI::PrintValue(Int_t)  const
+void TLeafI::ReadBasket(TBuffer &) 
+void TLeafI::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+bool TLeafI::ReadBasketFast(TBuffer &, Long64_t) 
+void TLeafI::SetAddress(void *) 
+void TLeafI::SetMaximum(Int_t) 
+void TLeafI::SetMinimum(Int_t) 
+static Version_t TLeafI::Class_Version() 
+TClass * TLeafI::IsA()  const
+void TLeafI::StreamerNVirtual(TBuffer &) 
+static const char * TLeafI::DeclFileName() 
+static int TLeafI::ImplFileLine() 
+static const char * TLeafI::ImplFileName() 
+static const char * TLeafI::Class_Name() 
+static TClass * TLeafI::Dictionary() 
+static TClass * TLeafI::Class() 
+void TLeafI::Streamer(TBuffer &) 
+static int TLeafI::DeclFileLine() 
+TLeafL::TLeafL(TBranch *, const char *, const char *) 
+void TLeafL::Export(TClonesArray *, Int_t) 
+void TLeafL::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafL::GetDeserializeType()  const
+const char * TLeafL::GetTypeName()  const
+Int_t TLeafL::GetMaximum()  const
+Int_t TLeafL::GetMinimum()  const
+Double_t TLeafL::GetValue(Int_t)  const
+Long64_t TLeafL::GetValueLong64(Int_t)  const
+void * TLeafL::GetValuePointer()  const
+bool TLeafL::IncludeRange(TLeaf *) 
+void TLeafL::Import(TClonesArray *, Int_t) 
+void TLeafL::PrintValue(Int_t)  const
+void TLeafL::ReadBasket(TBuffer &) 
+void TLeafL::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+bool TLeafL::ReadBasketFast(TBuffer &, Long64_t) 
+void TLeafL::SetAddress(void *) 
+void TLeafL::SetMaximum(Long64_t) 
+void TLeafL::SetMinimum(Long64_t) 
+static Version_t TLeafL::Class_Version() 
+TClass * TLeafL::IsA()  const
+void TLeafL::StreamerNVirtual(TBuffer &) 
+static const char * TLeafL::DeclFileName() 
+static int TLeafL::ImplFileLine() 
+static const char * TLeafL::ImplFileName() 
+static const char * TLeafL::Class_Name() 
+static TClass * TLeafL::Dictionary() 
+static TClass * TLeafL::Class() 
+void TLeafL::Streamer(TBuffer &) 
+static int TLeafL::DeclFileLine() 
+TLeafObject::TLeafObject(TBranch *, const char *, const char *) 
+bool TLeafObject::CanGenerateOffsetArray() 
+void TLeafObject::FillBasket(TBuffer &) 
+Int_t * TLeafObject::GenerateOffsetArrayBase(Int_t, Int_t) 
+TClass * TLeafObject::GetClass()  const
+TMethodCall * TLeafObject::GetMethodCall(const char *) 
+TObject * TLeafObject::GetObject()  const
+const char * TLeafObject::GetTypeName()  const
+void * TLeafObject::GetValuePointer()  const
+bool TLeafObject::IsOnTerminalBranch()  const
+bool TLeafObject::IsVirtual()  const
+bool TLeafObject::Notify() 
+void TLeafObject::PrintValue(Int_t)  const
+void TLeafObject::ReadBasket(TBuffer &) 
+void TLeafObject::SetAddress(void *) 
+void TLeafObject::SetVirtual(bool) 
+static Version_t TLeafObject::Class_Version() 
+TClass * TLeafObject::IsA()  const
+void TLeafObject::StreamerNVirtual(TBuffer &) 
+static const char * TLeafObject::DeclFileName() 
+static int TLeafObject::ImplFileLine() 
+static const char * TLeafObject::ImplFileName() 
+static const char * TLeafObject::Class_Name() 
+static TClass * TLeafObject::Dictionary() 
+static TClass * TLeafObject::Class() 
+void TLeafObject::Streamer(TBuffer &) 
+static int TLeafObject::DeclFileLine() 
+TLeafO::TLeafO(TBranch *, const char *, const char *) 
+void TLeafO::Export(TClonesArray *, Int_t) 
+void TLeafO::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafO::GetDeserializeType()  const
+Int_t TLeafO::GetMaximum()  const
+Int_t TLeafO::GetMinimum()  const
+const char * TLeafO::GetTypeName()  const
+Double_t TLeafO::GetValue(Int_t)  const
+void * TLeafO::GetValuePointer()  const
+bool TLeafO::IncludeRange(TLeaf *) 
+void TLeafO::Import(TClonesArray *, Int_t) 
+void TLeafO::PrintValue(Int_t)  const
+void TLeafO::ReadBasket(TBuffer &) 
+void TLeafO::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+void TLeafO::SetAddress(void *) 
+void TLeafO::SetMaximum(bool) 
+void TLeafO::SetMinimum(bool) 
+bool TLeafO::ReadBasketFast(TBuffer &, Long64_t) 
+static Version_t TLeafO::Class_Version() 
+TClass * TLeafO::IsA()  const
+void TLeafO::StreamerNVirtual(TBuffer &) 
+static const char * TLeafO::DeclFileName() 
+static int TLeafO::ImplFileLine() 
+static const char * TLeafO::ImplFileName() 
+static const char * TLeafO::Class_Name() 
+static TClass * TLeafO::Dictionary() 
+static TClass * TLeafO::Class() 
+void TLeafO::Streamer(TBuffer &) 
+static int TLeafO::DeclFileLine() 
+TLeafS::TLeafS(TBranch *, const char *, const char *) 
+void TLeafS::Export(TClonesArray *, Int_t) 
+void TLeafS::FillBasket(TBuffer &) 
+TLeaf::DeserializeType TLeafS::GetDeserializeType()  const
+Int_t TLeafS::GetMaximum()  const
+Int_t TLeafS::GetMinimum()  const
+const char * TLeafS::GetTypeName()  const
+Double_t TLeafS::GetValue(Int_t)  const
+void * TLeafS::GetValuePointer()  const
+bool TLeafS::IncludeRange(TLeaf *) 
+void TLeafS::Import(TClonesArray *, Int_t) 
+void TLeafS::PrintValue(Int_t)  const
+void TLeafS::ReadBasket(TBuffer &) 
+void TLeafS::ReadBasketExport(TBuffer &, TClonesArray *, Int_t) 
+bool TLeafS::ReadBasketFast(TBuffer &, Long64_t) 
+void TLeafS::SetAddress(void *) 
+void TLeafS::SetMaximum(Short_t) 
+void TLeafS::SetMinimum(Short_t) 
+static Version_t TLeafS::Class_Version() 
+TClass * TLeafS::IsA()  const
+void TLeafS::StreamerNVirtual(TBuffer &) 
+static const char * TLeafS::DeclFileName() 
+static int TLeafS::ImplFileLine() 
+static const char * TLeafS::ImplFileName() 
+static const char * TLeafS::Class_Name() 
+static TClass * TLeafS::Dictionary() 
+static TClass * TLeafS::Class() 
+void TLeafS::Streamer(TBuffer &) 
+static int TLeafS::DeclFileLine() 
+TBranchObject::TBranchObject(TBranch *, const char *, const char *, void *, Int_t, Int_t, Int_t, bool) 
+TBranchObject::TBranchObject(TTree *, const char *, const char *, void *, Int_t, Int_t, Int_t, bool) 
+void TBranchObject::Browse(TBrowser *) 
+const char * TBranchObject::GetClassName()  const
+const char * TBranchObject::GetObjClassName() 
+Int_t TBranchObject::GetEntry(Long64_t, Int_t) 
+Int_t TBranchObject::GetExpectedType(TClass *&, EDataType &) 
+bool TBranchObject::IsFolder()  const
+void TBranchObject::Print(Option_t *)  const
+void TBranchObject::Reset(Option_t *) 
+void TBranchObject::SetAddress(void *) 
+void TBranchObject::SetAutoDelete(bool) 
+void TBranchObject::SetBasketSize(Int_t) 
+void TBranchObject::SetupAddresses() 
+void TBranchObject::UpdateAddress() 
+static Version_t TBranchObject::Class_Version() 
+TClass * TBranchObject::IsA()  const
+void TBranchObject::StreamerNVirtual(TBuffer &) 
+static const char * TBranchObject::DeclFileName() 
+static int TBranchObject::ImplFileLine() 
+static const char * TBranchObject::ImplFileName() 
+static const char * TBranchObject::Class_Name() 
+static TClass * TBranchObject::Dictionary() 
+static TClass * TBranchObject::Class() 
+void TBranchObject::Streamer(TBuffer &) 
+static int TBranchObject::DeclFileLine() 
+TBranchSTL::TBranchSTL(TTree *, const char *, TVirtualCollectionProxy *, Int_t, Int_t) 
+TBranchSTL::TBranchSTL(TBranch *, const char *, TVirtualCollectionProxy *, Int_t, Int_t, TStreamerInfo *, Int_t) 
+void TBranchSTL::Browse(TBrowser *) 
+bool TBranchSTL::IsFolder()  const
+const char * TBranchSTL::GetClassName()  const
+Int_t TBranchSTL::GetExpectedType(TClass *&, EDataType &) 
+Int_t TBranchSTL::GetEntry(Long64_t, Int_t) 
+TStreamerInfo * TBranchSTL::GetInfo()  const
+void TBranchSTL::Print(Option_t *)  const
+void TBranchSTL::SetAddress(void *) 
+static Version_t TBranchSTL::Class_Version() 
+TClass * TBranchSTL::IsA()  const
+void TBranchSTL::StreamerNVirtual(TBuffer &) 
+static const char * TBranchSTL::DeclFileName() 
+static int TBranchSTL::ImplFileLine() 
+static const char * TBranchSTL::ImplFileName() 
+static const char * TBranchSTL::Class_Name() 
+static TClass * TBranchSTL::Dictionary() 
+static TClass * TBranchSTL::Class() 
+void TBranchSTL::Streamer(TBuffer &) 
+static int TBranchSTL::DeclFileLine() 
 TTreeReader::TTreeReader(TTree *, TEntryList *) 
 TTreeReader::TTreeReader(const char *, TDirectory *, TEntryList *) 
 TTreeReader::TTreeReader(const char *, TEntryList *) 
@@ -14941,6 +15434,39 @@ void ::ROOT::RemoveClass(const char *, TClass *)
 void ::ROOT::ResetClassVersion(TClass *, const char *, Short_t) 
 TNamed * ::ROOT::RegisterClassTemplate(const char *, const char *, Int_t) 
 std::string ::cling::printValue(TObject *) 
+Short_t ::TMath::Abs(Short_t) 
+Int_t ::TMath::Abs(Int_t) 
+Long64_t ::TMath::Abs(Long64_t) 
+Float_t ::TMath::Abs(Float_t) 
+Double_t ::TMath::Abs(Double_t) 
+Bool_t ::TMath::Even(Long_t) 
+Bool_t ::TMath::Odd(Long_t) 
+Bool_t ::TMath::SignBit(Float_t) 
+Bool_t ::TMath::SignBit(Double_t) 
+Float_t ::TMath::Sign(Float_t, Float_t) 
+Double_t ::TMath::Sign(Double_t, Double_t) 
+Short_t ::TMath::Min(Short_t, Short_t) 
+UShort_t ::TMath::Min(UShort_t, UShort_t) 
+Int_t ::TMath::Min(Int_t, Int_t) 
+UInt_t ::TMath::Min(UInt_t, UInt_t) 
+Long64_t ::TMath::Min(Long64_t, Long64_t) 
+ULong64_t ::TMath::Min(ULong64_t, ULong64_t) 
+Float_t ::TMath::Min(Float_t, Float_t) 
+Double_t ::TMath::Min(Double_t, Double_t) 
+Short_t ::TMath::Max(Short_t, Short_t) 
+UShort_t ::TMath::Max(UShort_t, UShort_t) 
+Int_t ::TMath::Max(Int_t, Int_t) 
+UInt_t ::TMath::Max(UInt_t, UInt_t) 
+Long64_t ::TMath::Max(Long64_t, Long64_t) 
+ULong64_t ::TMath::Max(ULong64_t, ULong64_t) 
+Float_t ::TMath::Max(Float_t, Float_t) 
+Double_t ::TMath::Max(Double_t, Double_t) 
+Short_t ::TMath::Range(Short_t, Short_t, Short_t) 
+Int_t ::TMath::Range(Int_t, Int_t, Int_t) 
+Long_t ::TMath::Range(Long_t, Long_t, Long_t) 
+ULong_t ::TMath::Range(ULong_t, ULong_t, ULong_t) 
+Double_t ::TMath::Range(Double_t, Double_t, Double_t) 
+Long_t ::TMath::NextPrime(Long_t) 
 static uint64_t ::R__bswap_constant_64(uint64_t) 
 void ::tobuf(char *&, Bool_t) 
 void ::tobuf(char *&, UChar_t) 
@@ -15029,8 +15555,6 @@ Bool_t ::operator!=(const TString &, const TSubString &)
 Bool_t ::operator!=(const char *, const TSubString &) 
 std::string ::cling::printValue(const TString *) 
 std::string ::cling::printValue(const TSubString *) 
-bool ::operator==(TObjOptLink *, const std::shared_ptr<TObjLink> &) 
-bool ::operator==(const std::shared_ptr<TObjLink> &, TObjOptLink *) 
 Bool_t ::ConnectCINT(TQObject *, const char *, const char *) 
 TBuffer & ::operator>>(TBuffer &, Long_t &) 
 TBuffer & ::operator>>(TBuffer &, Float_t &) 
@@ -15125,7 +15649,26 @@ TBuffer & ::operator>>(TBuffer &, TArrayL64 *&)
 TBuffer & ::operator<<(TBuffer &, const TArrayL64 *) 
 TTree * ::GetTTree(TDirectoryFile &, const char *) 
 TH1 * ::GetTH1(TDirectoryFile &, const char *) 
-size_t ::length(const TTreeReaderArray<Float_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<Char_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<UChar_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<Short_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<UShort_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<Int_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<UInt_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<Long_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ULong_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<Float_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<Double_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<Char_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<UChar_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<Short_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<UShort_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<Int_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<UInt_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<Long_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ULong_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<Float_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<Double_t> &) 
 TBranchPtr<Char_t> ::Branch(TTree &, const char *, Char_t &, Int_t, Int_t) 
 TBranchPtr<UChar_t> ::Branch(TTree &, const char *, UChar_t &, Int_t, Int_t) 
 TBranchPtr<Short_t> ::Branch(TTree &, const char *, Short_t &, Int_t, Int_t) 

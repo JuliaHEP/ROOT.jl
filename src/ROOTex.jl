@@ -67,6 +67,65 @@ function _GetHelper(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name;
     (type, obj)
 end
 
+#--TObject derefence extension-------------------------------------------------------------------
+"""
+    unsafe_getindex(p::CxxWrap.CxxBaseRef{ROOT.TObject})
+
+Dereference a TObject reference (a `CxxPtr` or `CxxRef`) that resolves the dynamce type of the object. If p is a pointer to an instance of a class `C` (e.g. `TH1D`) cast into a`TObject` pointer, then a `C` class instance is returned, and the same for a `CxxRef`.
+
+This function should not be called for a null reference/pointer: it will crash or corrupt the memory. User will typically call the safe version [`getindex(::CxxWrap.CxxBaseRef{ROOT.TObject})`](@ref), or equivalently the `[]` dereference operator.
+"""
+function unsafe_getindex(p::CxxWrap.CxxBaseRef{TObject})
+    type = getproperty(ROOT, Symbol(ClassName(p)))
+    CxxWrap.CxxPtr{type}(p)[]
+end    
+
+"""
+    getindex(p::CxxWrap.CxxBaseRef{ROOT.TObject})
+
+Dereference a TObject reference (a `CxxPtr` or `CxxRef`) that resolves the dynamce type of the object. If p is a pointer to an instance of a class `C` (e.g. `TH1D`) cast into a`TObject` pointer, then a `C` class instance is returned, and the same for a `CxxRef`.
+"""
+function Base.getindex(p::CxxWrap.CxxBaseRef{TObject})
+    if p == C_NULL
+        throw(UndefRefError())
+    else
+        unsafe_getindex(p)
+    end
+end
+#-------------------------------------------------------------------------------------------------
+
+#---- TSeqCollection juliafication --------------------------------------------------------------------
+# Iterators
+function Base.iterate(a::Union{TSeqCollection, CxxRef{<:TSeqCollection}},
+                               state=-1)
+    state += 1
+    if(state < GetEntries(a))
+        (unsafe_getindex(At(a, state)), state)
+    else
+        nothing
+    end
+end
+                      
+Base.IteratorSize(a::Union{TList, CxxRef{<:TList},
+                           TBtree, CxxRef{<:TBtree}}) = Base.SizeUnknown()
+
+# Specific to arrays
+function Base.getindex(a::Union{TObjArray, CxxRef{<:TObjArray},
+                                TRefArray, CxxRef{<:TRefArray}},
+                       i::Int)
+    p = At(a, i)
+    if p == C_NULL
+        throw(BoundsError(a, i))
+    else
+        unsafe_getindex(p)
+    end
+end
+
+Base.length(a::Union{TObjArray, CxxRef{<:TObjArray},
+                     TRefArray, CxxRef{<:TRefArray}}) = GetEntries(a)
+
+Base.length(a::Union{TTreeReaderArray, CxxRef{<:TTreeReaderArray}}) = GetSize(a)
+
 #---TFile extensions-------------------------------------------------------------------------------
 """
    `Get(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name)`
