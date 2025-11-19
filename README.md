@@ -3,11 +3,13 @@
 [![Linux](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-linux.yml) [![macOS](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml/badge.svg)](https://github.com/JuliaHEP/ROOT.jl/actions/workflows/test-macos.yml)
 
 
-## 📣 New: use of the built-in Julia package manager to install ROOT libraries on Linux.
+## 📣 New. Release 0.4.0: TObject dereference, TSeqCollection iterators, and multiple inheritance
 
-Release 0.3.4 bring interactive help to all types and methods of ROOT.jl.
+With release 0.4.0, dereferencing a TObject reference returns an instance of the actual derived class. In addition, this release julia iterators for ROOT collections (TSeqCollection and derived classes). Coverage of the ROOT core/base package as been extended to the full set of classes.
 
-## 📣 New: use of the built-in Julia package manager to install ROOT libraries on Linux.
+Attributes of histograms (line style, line color, etc.), and other drawables, can now be set thanks to the mapping of multiple inheritance provided by the release 1.7.0 of WrapIt: C++ ROOT code uses multiple inheritance for this, which was not mapped to Julia in previous releases.
+
+## Backend installation
 
 Starting from release 0.3.3, the built-in Julia package manager is used to install the C++ ROOT framework. This mechansim replace the Conda one, which was introduced as an interim solution and rapidly showed its limits. The ROOT libraries (and also also executables) are package in the `ROOT_jll` [JLL](https://docs.binarybuilder.org/stable/jll/#JLL-packages) package. 
 

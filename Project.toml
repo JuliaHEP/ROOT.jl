@@ -1,7 +1,7 @@
 authors = ["Philippe Gras CEA/IRFU"]
 name = "ROOT"
 uuid = "1706fdcc-8426-44f1-a283-5be479e9517c"
-version = "0.3.2"
+version = "0.4.0"
 
 [compat]
 CxxWrap = "0.17"
