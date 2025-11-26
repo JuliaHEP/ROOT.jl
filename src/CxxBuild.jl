@@ -24,7 +24,7 @@ _English_or_list(v) = join(v, ", ", " or ")
 
 function is_jll_supported()
     root_jll = Base.find_package("ROOT_julia_jll")
-    isnothing(root_jll) && error("Package ROOT_julia_jll not found. Please try to add it with 'import Pkg; Pkg.add(\"ROOT_jll\").")
+    isnothing(root_jll) && error("Package ROOT_julia_jll not found. Please try to add it with 'import Pkg; Pkg.add(\"ROOT_julia_jll\").")
     ROOT_jll_dir = dirname(dirname(Base.find_package("ROOT_julia_jll")))
     artifacts = Artifacts.select_downloadable_artifacts(joinpath(ROOT_jll_dir, "Artifacts.toml"))
     length(artifacts) > 0
