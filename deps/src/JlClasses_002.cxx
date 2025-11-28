@@ -1266,17 +1266,17 @@ struct JlTObjArray: public Wrapper {
     // defined in /home/pgras/.julia/artifacts/54e60c641c75fb2e5777b51cd519d1c05678ef04/include/TObjArray.h:88:21
     t.method("Last", [](TObjArray const& a)->TObject * { return a.Last(); }, jlcxx::arg("this"));
     t.method("Last", [](TObjArray const* a)->TObject * { return a->Last(); }, jlcxx::arg("this"));
-    module_.set_override_module(jl_base_module);
+    //    module_.set_override_module(jl_base_module);
 
 
-    DEBUG_MSG("Adding getindex method to wrap TObject * TObjArray::operator[](Int_t) (" __HERE__ ")");
-    // defined in /home/pgras/.julia/artifacts/54e60c641c75fb2e5777b51cd519d1c05678ef04/include/TObjArray.h:90:21
-    t.method("getindex",
-      [](TObjArray& a, int32_t i){
-      return a[i];
-    }, jlcxx::arg("this"), jlcxx::arg("index"));
+    //    DEBUG_MSG("Adding getindex method to wrap TObject * TObjArray::operator[](Int_t) (" __HERE__ ")");
+    //    // defined in /home/pgras/.julia/artifacts/54e60c641c75fb2e5777b51cd519d1c05678ef04/include/TObjArray.h:90:21
+    //    t.method("getindex",
+    //      [](TObjArray& a, int32_t i){
+    //  return a[i];
+    //    }, jlcxx::arg("this"), jlcxx::arg("index"));
 
-    module_.unset_override_module();
+    //module_.unset_override_module();
 
     DEBUG_MSG("Adding wrapper for Int_t TObjArray::LowerBound() (" __HERE__ ")");
     // signature to use in the veto list: Int_t TObjArray::LowerBound()
