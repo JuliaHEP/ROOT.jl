@@ -14,7 +14,6 @@ ROOT::Math::IBaseFunctionMultiDimTempl<double>
 ROOT::Math::Minimizer
 ROOT::Math::ParamFunctorTempl<double>
 ROOT::TClassAlt
-ROOT::TSeq::iterator
 ROOT::TVirtualRWMutex::Hint_t
 TArchiveFile
 TBasket
@@ -85,7 +84,6 @@ TGeoRCPtr & TGeoRCPtr::operator=(T *)
 TGeoRCPtr & TGeoRCPtr::operator=(const TGeoRCPtr &)
 bool TGeoRCPtr::operator==(const TGeoRCPtr &)
 TVirtualGeoConverter * TVirtualGeoConverter::Instance(TGeoManager *)
-void TVirtualGeoConverter::SetConverter(const TVirtualGeoConverter *)
 ROOT::TClassAlt * ROOT::AddClassAlternate(const char *, const char *)
 void ROOT::RemoveClassAlternate(ROOT::TClassAlt *)
 void ROOT::Class_ShowMembers(TClass *, const void *, TMemberInspector &)
@@ -188,8 +186,6 @@ void TVirtualPad::SetView(TView *)
 TObject * TVirtualPad::CreateToolTip(const TBox *, const char *, Long_t)
 void TVirtualPS::SetStream(std::ofstream *)
 UInt_t TVirtualX::ExecCommand(TGWin32Command *)
-ROOT::TSeq::iterator ROOT::TSeq::begin()
-ROOT::TSeq::iterator ROOT::TSeq::end()
 void TClassTable::Add(TProtoClass *)
 ROOT::TClassAlt * TClassTable::AddAlternate(const char *, const char *)
 DictFuncPtr_t TClassTable::GetDict(const char *)
@@ -256,8 +252,8 @@ TTreeReaderArray::const_iterator TTreeReaderArray::begin()
 TTreeReaderArray::const_iterator TTreeReaderArray::end()
 TTreeReaderArray::const_iterator TTreeReaderArray::cbegin()
 TTreeReaderArray::const_iterator TTreeReaderArray::cend()
-void TBranchObject::ResetAfterMerge(TFileMergeInfo *)
 void TBranchElement::ResetAfterMerge(TFileMergeInfo *)
+void TBranchObject::ResetAfterMerge(TFileMergeInfo *)
 
 Class(es) from vetoed_finalizer_classes configuration parameter that were not found:
 -------------------------------------------------------------------------------------
@@ -722,7 +718,7 @@ TGeoXtru::ThreadData_t
 
 List of wrapped methods:
 
-:TObject::TObject(const TObject &) 
+TObject::TObject(const TObject &) 
 TObject & TObject::operator=(const TObject &) 
 void TObject::AppendPad(Option_t *) 
 void TObject::Browse(TBrowser *) 
@@ -1024,7 +1020,6 @@ TObject * TObjArray::Before(const TObject *)  const
 TObject * TObjArray::After(const TObject *)  const
 TObject * TObjArray::First()  const
 TObject * TObjArray::Last()  const
-TObject * TObjArray::operator[](Int_t)  const
 Int_t TObjArray::LowerBound()  const
 Int_t TObjArray::IndexOf(const TObject *)  const
 void TObjArray::SetLast(Int_t) 
@@ -15805,3 +15800,1210 @@ ROOT::Geom::Vertex_t ::ROOT::Geom::operator/(const double, const ROOT::Geom::Ver
 
 
 List of methods not wrapped to prevent overwriting. Method that would have been overwritten in parenthesis.
+
+List of vetoed types:
+-------------------
+
+Atom_t
+Colormap_t
+Cursor_t
+DictFuncPtr_t
+Display_t
+Drawable_t
+EDataType
+EEnvLevel
+FILE *
+FontH_t
+FontStruct_t
+Foption_t
+GContext_t
+Handle_t
+Pixmap_t
+ROOT::Detail::TCollectionProxyInfo
+ROOT::Detail::TCollectionProxyInfo::Address
+ROOT::Detail::TCollectionProxyInfo::Environ
+ROOT::Detail::TCollectionProxyInfo::EnvironBase
+ROOT::Detail::TCollectionProxyInfo::Insert
+ROOT::Detail::TCollectionProxyInfo::IteratorValue
+ROOT::Detail::TCollectionProxyInfo::Iterators
+ROOT::Detail::TCollectionProxyInfo::MapInsert
+ROOT::Detail::TCollectionProxyInfo::PairHolder
+ROOT::Detail::TCollectionProxyInfo::Pushback
+ROOT::Detail::TCollectionProxyInfo::Pushfront
+ROOT::Detail::TCollectionProxyInfo::SfinaeHelper
+ROOT::Detail::TCollectionProxyInfo::Type
+ROOT::Detail::TRangeCast
+ROOT::Experimental::Internal::TBulkBranchRead
+ROOT::Fit::FitConfig &
+ROOT::Fit::Fitter *
+ROOT::Geom::Vertex_t
+ROOT::Geom::Vertex_t &
+ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector
+ROOT::Internal::GetFunctorType
+ROOT::Internal::TAtomicPointer
+ROOT::Internal::TCDGIILIBase
+ROOT::Internal::TDefaultInitBehavior
+ROOT::Internal::TDirectoryAtomicAdapter
+ROOT::Internal::TF1Builder
+ROOT::Internal::THashConsistencyHolder
+ROOT::Internal::THnBaseBinIter
+ROOT::Internal::THnBaseBrowsable
+ROOT::Internal::TInitBehavior
+ROOT::Internal::TParBranchProcessingRAII
+ROOT::Internal::TQObjectInitBehavior
+ROOT::Internal::TStdBitsetHelper
+ROOT::Internal::TTreeReaderArrayBase
+ROOT::Internal::TTreeReaderValueBase
+ROOT::Math::IBaseFunctionMultiDimTempl
+ROOT::Math::IMultiGenFunction *
+ROOT::Math::Minimizer *
+ROOT::TClassAlt *
+ROOT::TIOFeatures
+ROOT::TVirtualRWMutex *
+ROOT::TVirtualRWMutex::Hint_t *
+Rectangle_t
+Region_t
+TApplication *
+TApplication::EExitOnException
+TApplicationImp *
+TArchiveFile *
+TArray &
+TArray *
+TArrayC &
+TArrayC *
+TArrayD &
+TArrayD *
+TArrayF &
+TArrayI &
+TArrayL &
+TArrayL64 &
+TArrayS &
+TAttBBox &
+TAttFill *
+TAttLine *
+TAttText *
+TAxis &
+TAxis *
+TBasket *
+TBinIterator
+TBinIterator &
+TBits
+TBits &
+TBits *
+TBits::TReference
+TBits::TReference &
+TBranch &
+TBranch *
+TBranch::TIOFeatures
+TBranchElement *
+TBranchPtr<Char_t>
+TBranchPtr<Double_t>
+TBranchPtr<Float_t>
+TBranchPtr<Int_t>
+TBranchPtr<Long_t>
+TBranchPtr<Short_t>
+TBranchPtr<UChar_t>
+TBranchPtr<UInt_t>
+TBranchPtr<ULong_t>
+TBranchPtr<UShort_t>
+TBranchPtr<std::vector<Char_t>>
+TBranchPtr<std::vector<Double_t>>
+TBranchPtr<std::vector<Float_t>>
+TBranchPtr<std::vector<Int_t>>
+TBranchPtr<std::vector<Long_t>>
+TBranchPtr<std::vector<Short_t>>
+TBranchPtr<std::vector<UChar_t>>
+TBranchPtr<std::vector<UInt_t>>
+TBranchPtr<std::vector<ULong_t>>
+TBranchPtr<std::vector<UShort_t>>
+TBranchRef *
+TBrowserImp *
+TBtItem &
+TBtLeafNode *
+TBtNode *
+TBtree *
+TBtreeIter &
+TBuffer &
+TBuffer *
+TBuffer3D *
+TCanvas *
+TCanvasImp *
+TClass *
+TClass::ObjectPtr
+TClonesArray &
+TCollection *
+TColor &
+TColor *
+TColorGradient::ECoordinateMode
+TColorGradient::SizeType_t
+TConfidenceLevel *
+TContextMenu *
+TDataType *
+TDatime
+TDatime &
+TDirectory *
+TEfficiency &
+TEfficiency::EStatOption
+TEntryList *
+TEnvRec *
+TEventList *
+TExMap &
+TExMapIter &
+TF1 &
+TF1 *
+TF1::TF1FunctorPointer *
+TF1Convolution &
+TF1NormSum &
+TF1Parameters &
+TF2 &
+TF3 &
+TFile *
+TFile *&
+TFile::EAsyncOpenStatus
+TFile::EFileType
+TFileCacheRead *
+TFileCacheWrite *
+TFileCollection *
+TFileHandler *
+TFileInfoMeta *
+TFileOpenHandle *
+TFitResult &
+TFitResult *
+TFitResultPtr
+TFitResultPtr &
+TFolder *
+TFormula &
+TFormula *
+TFrame *
+TFriendElement *
+TFunction *
+TFunctionTemplate *
+TGDMLMatrix &
+TGDMLMatrix *
+TGeoBatemanSol &
+TGeoBatemanSol *
+TGeoBoolNode *
+TGeoBoolNode::EGeoBoolType
+TGeoBoolNode::ThreadData_t &
+TGeoBorderSurface *
+TGeoBranchArray &
+TGeoBranchArray *
+TGeoBuilder *
+TGeoCombiTrans
+TGeoCombiTrans &
+TGeoDecayChannel &
+TGeoDecayChannel *
+TGeoElemIter &
+TGeoElement *
+TGeoElementRN *
+TGeoElementTable *
+TGeoExtension *
+TGeoGlobalMagField *
+TGeoHMatrix
+TGeoHMatrix &
+TGeoHMatrix *
+TGeoIsotope *
+TGeoIterator &
+TGeoIteratorPlugin *
+TGeoManager *
+TGeoManager::EDefaultUnits
+TGeoMaterial *
+TGeoMaterial::EGeoMaterialState
+TGeoMatrix *
+TGeoMedium *
+TGeoNavigator *
+TGeoNavigatorArray *
+TGeoNode *
+TGeoNode **
+TGeoNodeCache *
+TGeoOpticalSurface *
+TGeoOpticalSurface::ESurfaceFinish
+TGeoOpticalSurface::ESurfaceModel
+TGeoOpticalSurface::ESurfaceType
+TGeoPNEntry *
+TGeoParallelWorld *
+TGeoPatternCylR &
+TGeoPatternFinder *
+TGeoPatternFinder::ThreadData_t &
+TGeoPatternParaX &
+TGeoPatternParaY &
+TGeoPatternParaZ &
+TGeoPatternSphR &
+TGeoPatternSphTheta &
+TGeoPatternTrapZ &
+TGeoPatternX &
+TGeoPatternY &
+TGeoPatternZ &
+TGeoPgon::ThreadData_t &
+TGeoPhysicalNode *
+TGeoRCPtr &
+TGeoRegion &
+TGeoRegion *
+TGeoRegionCut *
+TGeoRotation
+TGeoRotation &
+TGeoRotation *
+TGeoScale
+TGeoScale &
+TGeoScale *
+TGeoShape *
+TGeoSkinSurface *
+TGeoStateInfo *
+TGeoTessellated *
+TGeoTessellated::Vertex_t
+TGeoTranslation
+TGeoTranslation &
+TGeoVolume *
+TGeoVolumeAssembly *
+TGeoVolumeAssembly::ThreadData_t &
+TGeoVolumeMulti *
+TGeoVoxelFinder *
+TGeoXtru::ThreadData_t &
+TGlobal *
+TGraph &
+TGraph *
+TGraph2D &
+TGraph2D *
+TGraph2DAsymmErrors &
+TGraph2DAsymmErrors *
+TGraph2DErrors &
+TGraphAsymmErrors &
+TGraphAsymmErrors *
+TGraphErrors &
+TGraphErrors *
+TGraphMultiErrors &
+TH1 *
+TH1::EBinErrorOpt
+TH1::EStatOverflows
+TH1C
+TH1C &
+TH1D
+TH1D &
+TH1D *
+TH1F
+TH1F &
+TH1F *
+TH1I
+TH1I &
+TH1L
+TH1L &
+TH1S
+TH1S &
+TH2 *
+TH2C &
+TH2D &
+TH2D *
+TH2F &
+TH2F *
+TH2I &
+TH2L &
+TH2Poly &
+TH2PolyBin *
+TH2S &
+TH3 *
+TH3C &
+TH3D &
+TH3D *
+TH3F &
+TH3I &
+TH3L &
+TH3S &
+THLimitsFinder *
+THashList *
+THashTableIter &
+THistRange::iterator
+THn *
+THnBase *
+THnSparse *
+TInetAddress
+TInetAddress &
+TInterpreter *
+TIter
+TIter &
+TIterCategory
+TIterCategory &
+TIterator &
+TIterator *
+TKey *
+TLeaf *
+TLeaf::DeserializeType
+TLeaf::GetValueHelper
+TLegend *
+TList *
+TListIter &
+TMD5 &
+TMD5 *
+TMacro &
+TMap *
+TMapIter &
+TMatrixDSym
+TMatrixTBase
+TMethodCall *
+TMultiDimFit *
+TNDArray &
+TNDArrayRef
+TNamed &
+TNamed *
+TObjArray &
+TObjArray *
+TObjArrayIter &
+TObjLink *
+TObjLink::TObjLinkPtr_t
+TObjString *
+TObject &
+TObject *
+TObject *&
+TObject **
+TOrdCollectionIter &
+TPRegexp &
+TPad *
+TPair *
+TPluginHandler *
+TPluginManager *
+TPoint
+TPrincipal *
+TProcessID *
+TProcessUUID *
+TProfile &
+TProfile *
+TProfile2D &
+TProfile2D *
+TProfile3D &
+TProtoClass *
+TQCommand *
+TQConnection *
+TROOT *
+TRadialGradient::EGradientType
+TRef &
+TRefArray &
+TRefArrayIter &
+TRefTable *
+TRegexp &
+TRegexp::EStatVal
+TSQLResult *
+TSecContext *
+TSeqCollection *
+TSignalHandler *
+TSpline3 &
+TSpline5 &
+TSplinePoly &
+TSplinePoly3 &
+TSplinePoly5 &
+TStdExceptionHandler *
+TStreamerInfo *
+TStreamerInfoActions::TActionSequence *
+TString
+TString &
+TString *
+TStyle &
+TStyle *
+TSubString
+TSubString &
+TSystem::EAclicMode
+TTask &
+TTime
+TTime &
+TTimer *
+TTree *
+TTree::TClusterIterator
+TTreeCache *
+TTreeFormula *
+TTreeFriendLeafIter &
+TTreeReader::EEntryStatus
+TTreeReader::Iterator_t
+TTreeReaderArray::const_iterator
+TTreeReaderArray::iterator
+TUUID
+TUUID *
+TUri
+TUri &
+TUrl &
+TUrl *
+TVectorT
+TVectorT &
+TView *
+TVirtualArray *
+TVirtualCollectionProxy *
+TVirtualCollectionProxy::CopyIterator_t
+TVirtualCollectionProxy::CreateIterators_t
+TVirtualCollectionProxy::DeleteIterator_t
+TVirtualCollectionProxy::DeleteTwoIterators_t
+TVirtualCollectionProxy::Next_t
+TVirtualFFT *
+TVirtualFitter *
+TVirtualGeoConverter
+TVirtualGeoConverter *
+TVirtualGeoPainter *
+TVirtualGeoTrack *
+TVirtualGraphPainter *
+TVirtualHistPainter *
+TVirtualIndex *
+TVirtualMagField *
+TVirtualMutex *
+TVirtualPad *
+TVirtualPad *&
+TVirtualPadEditor *
+TVirtualPadPainter *
+TVirtualPerfStats *
+TVirtualPerfStats *&
+TVirtualStreamerInfo *
+TVirtualTreePlayer *
+TVirtualViewer3D *
+TVirtualX *&
+TVirtualX::EDrawMode
+UserGroup_t *
+Visual_t
+Window_t
+bool
+char
+char &
+char *
+char **
+const ROOT::Fit::FitData &
+const ROOT::Fit::FitResult &
+const TArrayD *
+const TArrayI &
+const TAxis *
+const TBuffer3D &
+const TCollection *
+const TColorGradient::Point &
+const TDatime &
+const TEfficiency
+const TExMap *
+const TFormula *
+const TGeoElementRN *
+const TGeoFacet &
+const TGeoHMatrix *
+const TGeoMatrix *
+const TGeoNode *
+const TGeoOpticalSurface *
+const TGeoTessellated::Vertex_t &
+const TGeoVolume *
+const TH1 *
+const THashTable *
+const TInetAddress::AddressList_t &
+const TInetAddress::AliasList_t &
+const TLeaf::Counts_t *
+const TList &
+const TList *
+const TMatrixD *
+const TNDArray &
+const TObjArray *
+const TObject *
+const TString
+const TString &
+const TUrl *
+const TVectorD *
+const TVectorT &
+const char **&
+const double &
+const std::vector<Double_t> &
+const std::vector<double> &
+const std::vector<std::string> &
+double
+double &
+int
+int &
+size_t
+std::atomic
+std::atomic<TDirectory *> &
+std::basic_ofstream
+std::basic_string
+std::basic_string_view
+std::size_t
+std::string
+std::string &
+std::unique_ptr<ROOT::TVirtualRWMutex::State>
+std::unique_ptr<ROOT::TVirtualRWMutex::StateDelta>
+std::vector<ROOT::Math::Delaunay2D::Triangle>::const_iterator
+std::vector<double>
+time_t
+timespec_t
+uint64_t
+unsigned char *
+unsigned int
+void *
+
+List of vetoed enums:
+-------------------
+
+ROOT::Internal::TTreeReaderValueBase::EReadStatus
+ROOT::Internal::TTreeReaderValueBase::ESetupStatus
+
+List of vetoed methods:
+---------------------
+
+Bool_t ROOT::Internal::THnBaseBinIter::HaveSkippedBin()
+Bool_t ROOT::Internal::THnBaseBinIter::RespectsAxisRange()
+Bool_t ROOT::Internal::THnBaseBrowsable::IsFolder()
+Bool_t TColor::SaveColor(std::ostream &, Int_t)
+Bool_t TGeoBBox::AreOverlapping(const TGeoBBox *, const TGeoMatrix *, const TGeoBBox *, const TGeoMatrix *)
+Func_t TSystem::DynFindSymbol(const char *, const char *)
+Int_t ROOT::Experimental::Internal::TBulkBranchRead::GetBulkEntries(Long64_t, TBuffer &)
+Int_t ROOT::Experimental::Internal::TBulkBranchRead::GetEntriesSerialized(Long64_t, TBuffer &)
+Int_t ROOT::Experimental::Internal::TBulkBranchRead::GetEntriesSerialized(Long64_t, TBuffer &, TBuffer *)
+Int_t ROOT::Internal::THnBaseBinIter::GetCoord(Int_t)
+Int_t TApplication::TabCompletionHook(char *, int *, std::ostream &)
+Int_t TBranch::FillImpl(ROOT::Internal::TBranchIMTHelper *)
+Int_t TBuffer::ReadArray(Long64_t *&)
+Int_t TBuffer::ReadArray(ULong64_t *&)
+Int_t TBuffer::ReadStaticArray(Long_t *)
+Int_t TBuffer::ReadStaticArray(UChar_t *)
+Int_t TBuffer::ReadStaticArray(ULong_t *)
+Long64_t ROOT::Internal::THnBaseBinIter::Next(Int_t *)
+Long64_t TTree::ReadStream(std::istream &, const char *, char)
+LongDouble_t TLeaf::GetValueLongDouble(Int_t)
+LongDouble_t TLeafElement::GetValueLongDouble(Int_t)
+LongDouble_t TLeafG::GetValueLongDouble(Int_t)
+LongDouble_t TLeafL::GetValueLongDouble(Int_t)
+ROOT::Detail::TCollectionProxyInfo::Environ::Environ<T>()
+ROOT::Detail::TCollectionProxyInfo::EnvironBase::EnvironBase()
+ROOT::Detail::TCollectionProxyInfo::EnvironBase::EnvironBase(const ROOT::Detail::TCollectionProxyInfo::EnvironBase &)
+ROOT::Detail::TCollectionProxyInfo::PairHolder::PairHolder<T, Q>()
+ROOT::Detail::TCollectionProxyInfo::PairHolder::PairHolder<T, Q>(const ROOT::Detail::TCollectionProxyInfo::PairHolder &)
+ROOT::Detail::TCollectionProxyInfo::TCollectionProxyInfo(const std::type_info &, size_t, size_t, int, void *(*)(void *), void (*)(void *, size_t), void *(*)(void *), void *(*)(void *), void *(*)(void *), void *(*)(void *, size_t), void (*)(void *, size_t), void *(*)(void *, void *, size_t), void *(*)(void *, void *), void *(*)(), void (*)(void *, void **, void **, TVirtualCollectionProxy *), void *(*)(void *, const void *), void *(*)(void *, const void *), void (*)(void *), void (*)(void *, void *))
+ROOT::Detail::TCollectionProxyInfo::Type::PCont_t ROOT::Detail::TCollectionProxyInfo::Type::object(void *)
+ROOT::Detail::TRangeCast::TRangeCast<T, isDynamic>(const TCollection &)
+ROOT::Detail::TRangeCast::TRangeCast<T, isDynamic>(const TCollection *)
+ROOT::Experimental::Internal::TBulkBranchRead & TBranch::GetBulkRead()
+ROOT::Experimental::Internal::TBulkBranchRead::TBulkBranchRead(TBranch &)
+ROOT::Internal::TAtomicPointer::TAtomicPointer<T>()
+ROOT::Internal::TDirectoryAtomicAdapter::TDirectoryAtomicAdapter()
+ROOT::Internal::THnBaseBinIter * THn::CreateIter(Bool_t)
+ROOT::Internal::THnBaseBinIter * THnBase::CreateIter(Bool_t)
+ROOT::Internal::THnBaseBinIter * THnSparse::CreateIter(Bool_t)
+ROOT::Internal::THnBaseBinIter::THnBaseBinIter(Bool_t)
+ROOT::Internal::THnBaseBrowsable::THnBaseBrowsable(THnBase *, Int_t)
+ROOT::Internal::TParBranchProcessingRAII::TParBranchProcessingRAII()
+ROOT::Internal::TTreeReaderArrayBase::TTreeReaderArrayBase(TTreeReader *, const char *, TDictionary *)
+ROOT::Internal::TTreeReaderValueBase::EReadStatus ROOT::Internal::TTreeReaderArrayBase::GetReadStatus()
+ROOT::Internal::TTreeReaderValueBase::EReadStatus ROOT::Internal::TTreeReaderValueBase::GetReadStatus()
+ROOT::Internal::TTreeReaderValueBase::EReadStatus ROOT::Internal::TTreeReaderValueBase::ProxyRead()
+ROOT::Internal::TTreeReaderValueBase::EReadStatus ROOT::Internal::TTreeReaderValueBase::ProxyReadDefaultImpl()
+ROOT::Internal::TTreeReaderValueBase::ESetupStatus ROOT::Internal::TTreeReaderValueBase::GetSetupStatus()
+ROOT::Internal::TTreeReaderValueBase::TTreeReaderValueBase(TTreeReader *, const char *, TDictionary *)
+ROOT::Internal::TTreeReaderValueBase::TTreeReaderValueBase(const ROOT::Internal::TTreeReaderValueBase &)
+ROOT::TGenericClassInfo * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::GenerateInitInstanceLocal()
+ReAllocCharFun_t TBuffer::GetReAllocFunc()
+T & ROOT::Detail::TCollectionProxyInfo::Environ::iter()
+T ROOT::Internal::TAtomicPointer::operator->()
+T ROOT::Internal::TAtomicPointer::operator=(const T &)
+TBranch * TTree::Branch(const char *, Longptr_t, const char *, Int_t)
+TBranch * TTree::Branch(const char *, int, const char *, Int_t)
+TClass * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Class()
+TClass * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Dictionary()
+TClass * ROOT::Internal::TDefaultInitBehavior::CreateClass(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t)
+TClass * ROOT::Internal::THnBaseBrowsable::Class()
+TClass * ROOT::Internal::THnBaseBrowsable::Dictionary()
+TClass * ROOT::Internal::THnBaseBrowsable::IsA()
+TClass * ROOT::Internal::TInitBehavior::CreateClass(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t)
+TClass * ROOT::Internal::TQObjectInitBehavior::CreateClass(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t)
+TDirectory * ROOT::Internal::TDirectoryAtomicAdapter::operator->()
+TDirectory * ROOT::Internal::TDirectoryAtomicAdapter::operator=(TDirectory *)
+TF1::TF1(const char *, Double_t (*)(Double_t *, Double_t *), Double_t, Double_t, Int_t, Int_t, TF1::EAddToList)
+TF2::TF2(const char *, Double_t (*)(Double_t *, Double_t *), Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
+TF3::TF3(const char *, Double_t (*)(Double_t *, Double_t *), Double_t, Double_t, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
+TLeaf * ROOT::Internal::TTreeReaderValueBase::GetLeaf()
+TList::TList(TObject *)
+TObject * TObjArray::operator[](Int_t)
+TObject *& TObjArray::operator[](Int_t)
+TROOT::TROOT(const char *, const char *, VoidFuncPtr_t *)
+TString & TString::Remove(TString::EStripType, char)
+TString::TString(Ssiz_t)
+TTreeReader::Iterator_t & TTreeReader::Iterator_t::operator++()
+TTreeReader::Iterator_t TTreeReader::Iterator_t::operator++(int)
+TVirtualFitter::FCNFunc_t TVirtualFitter::GetFCN()
+Version_t ROOT::Internal::THnBaseBrowsable::Class_Version()
+Window_t TVirtualX::CreateOpenGLWindow(Window_t, UInt_t, UInt_t, const std::vector<std::pair<UInt_t,Int_t>> &)
+bool ROOT::Experimental::Internal::TBulkBranchRead::SupportsBulkRead()
+bool ROOT::Internal::TDirectoryAtomicAdapter::operator!=(TDirectory *)
+bool ROOT::Internal::TDirectoryAtomicAdapter::operator!=(const TDirectory *)
+bool ROOT::Internal::TDirectoryAtomicAdapter::operator==(TDirectory *)
+bool ROOT::Internal::TDirectoryAtomicAdapter::operator==(const TDirectory *)
+bool ROOT::Internal::TTreeReaderArrayBase::IsEmpty()
+bool ROOT::Internal::TTreeReaderValueBase::IsValid()
+const char * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Name()
+const char * ROOT::Internal::THnBaseBrowsable::Class_Name()
+const char * ROOT::Internal::THnBaseBrowsable::DeclFileName()
+const char * ROOT::Internal::THnBaseBrowsable::ImplFileName()
+const char * ROOT::Internal::TTreeReaderValueBase::GetBranchName()
+int ROOT::Detail::TCollectionProxyInfo::Insert::value_offset()
+int ROOT::Detail::TCollectionProxyInfo::MapInsert::value_offset()
+int ROOT::Detail::TCollectionProxyInfo::Pushback::value_offset()
+int ROOT::Detail::TCollectionProxyInfo::Pushfront::value_offset()
+int ROOT::Internal::THnBaseBrowsable::DeclFileLine()
+int ROOT::Internal::THnBaseBrowsable::ImplFileLine()
+int TSystem::GetPathInfo(const char *, Long_t *, Long64_t *, Long_t *, Long_t *)
+std::istream & TString::ReadFile(std::istream &)
+std::istream & TString::ReadLine(std::istream &, Bool_t)
+std::istream & TString::ReadString(std::istream &)
+std::istream & TString::ReadToDelim(std::istream &, char)
+std::istream & TString::ReadToken(std::istream &)
+std::pair<Long64_t,Long64_t> TTreeReader::GetEntriesRange()
+std::size_t ROOT::Internal::TTreeReaderArrayBase::GetSize()
+void * ROOT::Detail::TCollectionProxyInfo::Address::address(T)
+void * ROOT::Detail::TCollectionProxyInfo::Environ::Create()
+void * ROOT::Detail::TCollectionProxyInfo::Insert::feed(void *, void *, size_t)
+void * ROOT::Detail::TCollectionProxyInfo::IteratorValue::get(typename Cont_t::iterator &)
+void * ROOT::Detail::TCollectionProxyInfo::Iterators::copy(void *, const void *)
+void * ROOT::Detail::TCollectionProxyInfo::Iterators::next(void *, const void *)
+void * ROOT::Detail::TCollectionProxyInfo::MapInsert::feed(void *, void *, size_t)
+void * ROOT::Detail::TCollectionProxyInfo::Pushback::feed(void *, void *, size_t)
+void * ROOT::Detail::TCollectionProxyInfo::Pushfront::feed(void *, void *, size_t)
+void * ROOT::Detail::TCollectionProxyInfo::Type::clear(void *)
+void * ROOT::Detail::TCollectionProxyInfo::Type::collect(void *, void *)
+void * ROOT::Detail::TCollectionProxyInfo::Type::construct(void *, size_t)
+void * ROOT::Detail::TCollectionProxyInfo::Type::first(void *)
+void * ROOT::Detail::TCollectionProxyInfo::Type::next(void *)
+void * ROOT::Detail::TCollectionProxyInfo::Type::size(void *)
+void * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::New(void *)
+void * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::NewArray(Long_t, void *)
+void * ROOT::Internal::TTreeReaderValueBase::GetAddress()
+void CpuInfo_t::ShowMembers(TMemberInspector &)
+void MemInfo_t::ShowMembers(TMemberInspector &)
+void ProcInfo_t::ShowMembers(TMemberInspector &)
+void ROOT::Detail::TCollectionProxyInfo::Insert::resize(void *, size_t)
+void ROOT::Detail::TCollectionProxyInfo::Iterators::create(void *, void **, void **, TVirtualCollectionProxy *)
+void ROOT::Detail::TCollectionProxyInfo::Iterators::destruct1(void *)
+void ROOT::Detail::TCollectionProxyInfo::Iterators::destruct2(void *, void *)
+void ROOT::Detail::TCollectionProxyInfo::MapInsert::resize(void *, size_t)
+void ROOT::Detail::TCollectionProxyInfo::Pushback::resize(void *, size_t)
+void ROOT::Detail::TCollectionProxyInfo::Pushfront::resize(void *, size_t)
+void ROOT::Detail::TCollectionProxyInfo::Type::destruct(void *, size_t)
+void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Delete(void *)
+void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::DeleteArray(void *)
+void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Destruct(void *)
+void ROOT::Internal::TCDGIILIBase::SetInstance(ROOT::TGenericClassInfo &, ROOT::NewFunc_t, ROOT::NewArrFunc_t, ROOT::DelFunc_t, ROOT::DelArrFunc_t, ROOT::DesFunc_t)
+void ROOT::Internal::TCDGIILIBase::SetName(const std::string &, std::string &)
+void ROOT::Internal::TCDGIILIBase::SetfgIsA(atomic_TClass_ptr &, TClass *(*)())
+void ROOT::Internal::TDefaultInitBehavior::Register(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
+void ROOT::Internal::TDefaultInitBehavior::Unregister(const char *, TClass *)
+void ROOT::Internal::TF1Builder::Build(TF1 *, Func)
+void ROOT::Internal::TF1Builder<type-parameter-0-0 *>::Build(TF1 *, Func *)
+void ROOT::Internal::THnBaseBrowsable::Browse(TBrowser *)
+void ROOT::Internal::THnBaseBrowsable::ShowMembers(TMemberInspector &)
+void ROOT::Internal::THnBaseBrowsable::Streamer(TBuffer &)
+void ROOT::Internal::THnBaseBrowsable::StreamerNVirtual(TBuffer &)
+void ROOT::Internal::TInitBehavior::Register(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
+void ROOT::Internal::TInitBehavior::Unregister(const char *, TClass *)
+void ROOT::TReadLockGuard::ShowMembers(TMemberInspector &)
+void ROOT::TVirtualRWMutex::ShowMembers(TMemberInspector &)
+void ROOT::TWriteLockGuard::ShowMembers(TMemberInspector &)
+void SysInfo_t::ShowMembers(TMemberInspector &)
+void TApplication::ShowMembers(TMemberInspector &)
+void TArray::ShowMembers(TMemberInspector &)
+void TArrayC::ShowMembers(TMemberInspector &)
+void TArrayD::ShowMembers(TMemberInspector &)
+void TArrayF::ShowMembers(TMemberInspector &)
+void TArrayI::ShowMembers(TMemberInspector &)
+void TArrayL64::ShowMembers(TMemberInspector &)
+void TArrayL::ShowMembers(TMemberInspector &)
+void TArrayS::ShowMembers(TMemberInspector &)
+void TAtt3D::ShowMembers(TMemberInspector &)
+void TAttAxis::Copy(TAttAxis &)
+void TAttAxis::SaveAttributes(std::ostream &, const char *, const char *)
+void TAttAxis::ShowMembers(TMemberInspector &)
+void TAttBBox2D::ShowMembers(TMemberInspector &)
+void TAttBBox::ShowMembers(TMemberInspector &)
+void TAttFill::Copy(TAttFill &)
+void TAttFill::SaveFillAttributes(std::ostream &, const char *, Int_t, Int_t)
+void TAttFill::ShowMembers(TMemberInspector &)
+void TAttLine::Copy(TAttLine &)
+void TAttLine::SaveLineAttributes(std::ostream &, const char *, Int_t, Int_t, Int_t)
+void TAttLine::ShowMembers(TMemberInspector &)
+void TAttMarker::Copy(TAttMarker &)
+void TAttMarker::SaveMarkerAttributes(std::ostream &, const char *, Int_t, Int_t, Int_t)
+void TAttMarker::ShowMembers(TMemberInspector &)
+void TAttPad::Copy(TAttPad &)
+void TAttPad::ShowMembers(TMemberInspector &)
+void TAttText::Copy(TAttText &)
+void TAttText::SaveTextAttributes(std::ostream &, const char *, Int_t, Float_t, Int_t, Int_t, Float_t)
+void TAttText::ShowMembers(TMemberInspector &)
+void TAxis::SaveAttributes(std::ostream &, const char *, const char *)
+void TAxis::ShowMembers(TMemberInspector &)
+void TAxisModLab::ShowMembers(TMemberInspector &)
+void TBackCompFitter::ShowMembers(TMemberInspector &)
+void TBase64::ShowMembers(TMemberInspector &)
+void TBenchmark::ShowMembers(TMemberInspector &)
+void TBinomialEfficiencyFitter::ShowMembers(TMemberInspector &)
+void TBits::Output(std::ostream &)
+void TBits::ShowMembers(TMemberInspector &)
+void TBranch::ShowMembers(TMemberInspector &)
+void TBranchElement::ShowMembers(TMemberInspector &)
+void TBranchObject::ShowMembers(TMemberInspector &)
+void TBranchSTL::ShowMembers(TMemberInspector &)
+void TBrowser::ShowMembers(TMemberInspector &)
+void TBtree::ShowMembers(TMemberInspector &)
+void TBtreeIter::ShowMembers(TMemberInspector &)
+void TBuffer3D::ShowMembers(TMemberInspector &)
+void TBuffer::ReadFastArray(Long_t *, Int_t)
+void TBuffer::ReadFastArray(UChar_t *, Int_t)
+void TBuffer::ReadFastArray(ULong_t *, Int_t)
+void TBuffer::ShowMembers(TMemberInspector &)
+void TBuffer::WriteArray(const Long_t *, Int_t)
+void TBuffer::WriteArray(const UChar_t *, Int_t)
+void TBuffer::WriteArray(const ULong_t *, Int_t)
+void TBuffer::WriteFastArray(const Long_t *, Long64_t)
+void TBuffer::WriteFastArray(const UChar_t *, Long64_t)
+void TBuffer::WriteFastArray(const ULong_t *, Long64_t)
+void TCanvas::SavePrimitive(std::ostream &, Option_t *)
+void TCanvas::ShowMembers(TMemberInspector &)
+void TClassTable::ShowMembers(TMemberInspector &)
+void TClonesArray::ShowMembers(TMemberInspector &)
+void TCollection::ShowMembers(TMemberInspector &)
+void TColor::ShowMembers(TMemberInspector &)
+void TColorGradient::ShowMembers(TMemberInspector &)
+void TConfidenceLevel::ShowMembers(TMemberInspector &)
+void TDatime::ShowMembers(TMemberInspector &)
+void TDirectory::ShowMembers(TMemberInspector &)
+void TDirectoryFile::ShowMembers(TMemberInspector &)
+void TEfficiency::SavePrimitive(std::ostream &, Option_t *)
+void TEfficiency::ShowMembers(TMemberInspector &)
+void TEntryList::ShowMembers(TMemberInspector &)
+void TEnv::ShowMembers(TMemberInspector &)
+void TEnvRec::ShowMembers(TMemberInspector &)
+void TExMap::ShowMembers(TMemberInspector &)
+void TExMapIter::ShowMembers(TMemberInspector &)
+void TExec::SavePrimitive(std::ostream &, Option_t *)
+void TExec::ShowMembers(TMemberInspector &)
+void TF12::SavePrimitive(std::ostream &, Option_t *)
+void TF12::ShowMembers(TMemberInspector &)
+void TF1::SavePrimitive(std::ostream &, Option_t *)
+void TF1::ShowMembers(TMemberInspector &)
+void TF1AbsComposition::ShowMembers(TMemberInspector &)
+void TF1Convolution::ShowMembers(TMemberInspector &)
+void TF1NormSum::ShowMembers(TMemberInspector &)
+void TF1Parameters::ShowMembers(TMemberInspector &)
+void TF2::SavePrimitive(std::ostream &, Option_t *)
+void TF2::ShowMembers(TMemberInspector &)
+void TF3::SavePrimitive(std::ostream &, Option_t *)
+void TF3::ShowMembers(TMemberInspector &)
+void TFile::ShowMembers(TMemberInspector &)
+void TFileCollection::ShowMembers(TMemberInspector &)
+void TFileInfo::ShowMembers(TMemberInspector &)
+void TFileInfoMeta::ShowMembers(TMemberInspector &)
+void TFitResult::ShowMembers(TMemberInspector &)
+void TFitResultPtr::ShowMembers(TMemberInspector &)
+void TFolder::ShowMembers(TMemberInspector &)
+void TFormula::SetVariables(const std::pair<TString,Double_t> *, const Int_t)
+void TFormula::ShowMembers(TMemberInspector &)
+void TFractionFitter::ShowMembers(TMemberInspector &)
+void TGDMLMatrix::ShowMembers(TMemberInspector &)
+void TGeoArb8::SavePrimitive(std::ostream &, Option_t *)
+void TGeoArb8::ShowMembers(TMemberInspector &)
+void TGeoAtt::ShowMembers(TMemberInspector &)
+void TGeoBBox::SavePrimitive(std::ostream &, Option_t *)
+void TGeoBBox::ShowMembers(TMemberInspector &)
+void TGeoBatemanSol::ShowMembers(TMemberInspector &)
+void TGeoBoolNode::SavePrimitive(std::ostream &, Option_t *)
+void TGeoBoolNode::ShowMembers(TMemberInspector &)
+void TGeoBorderSurface::ShowMembers(TMemberInspector &)
+void TGeoBranchArray::ShowMembers(TMemberInspector &)
+void TGeoBuilder::ShowMembers(TMemberInspector &)
+void TGeoCacheState::ShowMembers(TMemberInspector &)
+void TGeoCombiTrans::SavePrimitive(std::ostream &, Option_t *)
+void TGeoCombiTrans::ShowMembers(TMemberInspector &)
+void TGeoCompositeShape::SavePrimitive(std::ostream &, Option_t *)
+void TGeoCompositeShape::ShowMembers(TMemberInspector &)
+void TGeoCone::SavePrimitive(std::ostream &, Option_t *)
+void TGeoCone::ShowMembers(TMemberInspector &)
+void TGeoConeSeg::SavePrimitive(std::ostream &, Option_t *)
+void TGeoConeSeg::ShowMembers(TMemberInspector &)
+void TGeoCtub::SavePrimitive(std::ostream &, Option_t *)
+void TGeoCtub::ShowMembers(TMemberInspector &)
+void TGeoDecayChannel::SavePrimitive(std::ostream &, Option_t *)
+void TGeoDecayChannel::ShowMembers(TMemberInspector &)
+void TGeoElemIter::ShowMembers(TMemberInspector &)
+void TGeoElement::ShowMembers(TMemberInspector &)
+void TGeoElementRN::SavePrimitive(std::ostream &, Option_t *)
+void TGeoElementRN::ShowMembers(TMemberInspector &)
+void TGeoElementTable::ShowMembers(TMemberInspector &)
+void TGeoEltu::SavePrimitive(std::ostream &, Option_t *)
+void TGeoEltu::ShowMembers(TMemberInspector &)
+void TGeoExtension::ShowMembers(TMemberInspector &)
+void TGeoGenTrans::ShowMembers(TMemberInspector &)
+void TGeoGlobalMagField::ShowMembers(TMemberInspector &)
+void TGeoGtra::SavePrimitive(std::ostream &, Option_t *)
+void TGeoGtra::ShowMembers(TMemberInspector &)
+void TGeoHMatrix::SavePrimitive(std::ostream &, Option_t *)
+void TGeoHMatrix::ShowMembers(TMemberInspector &)
+void TGeoHalfSpace::SavePrimitive(std::ostream &, Option_t *)
+void TGeoHalfSpace::ShowMembers(TMemberInspector &)
+void TGeoHelix::ShowMembers(TMemberInspector &)
+void TGeoHype::SavePrimitive(std::ostream &, Option_t *)
+void TGeoHype::ShowMembers(TMemberInspector &)
+void TGeoIdentity::SavePrimitive(std::ostream &, Option_t *)
+void TGeoIdentity::ShowMembers(TMemberInspector &)
+void TGeoIntersection::SavePrimitive(std::ostream &, Option_t *)
+void TGeoIntersection::ShowMembers(TMemberInspector &)
+void TGeoIsotope::ShowMembers(TMemberInspector &)
+void TGeoIterator::ShowMembers(TMemberInspector &)
+void TGeoIteratorPlugin::ShowMembers(TMemberInspector &)
+void TGeoManager::ShowMembers(TMemberInspector &)
+void TGeoMaterial::SavePrimitive(std::ostream &, Option_t *)
+void TGeoMaterial::ShowMembers(TMemberInspector &)
+void TGeoMatrix::ShowMembers(TMemberInspector &)
+void TGeoMedium::SavePrimitive(std::ostream &, Option_t *)
+void TGeoMedium::ShowMembers(TMemberInspector &)
+void TGeoMixture::SavePrimitive(std::ostream &, Option_t *)
+void TGeoMixture::ShowMembers(TMemberInspector &)
+void TGeoNavigator::ShowMembers(TMemberInspector &)
+void TGeoNavigatorArray::ShowMembers(TMemberInspector &)
+void TGeoNode::SaveAttributes(std::ostream &)
+void TGeoNode::ShowMembers(TMemberInspector &)
+void TGeoNodeCache::ShowMembers(TMemberInspector &)
+void TGeoNodeMatrix::ShowMembers(TMemberInspector &)
+void TGeoNodeOffset::ShowMembers(TMemberInspector &)
+void TGeoOpticalSurface::ShowMembers(TMemberInspector &)
+void TGeoPNEntry::ShowMembers(TMemberInspector &)
+void TGeoPara::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPara::ShowMembers(TMemberInspector &)
+void TGeoParaboloid::SavePrimitive(std::ostream &, Option_t *)
+void TGeoParaboloid::ShowMembers(TMemberInspector &)
+void TGeoParallelWorld::ShowMembers(TMemberInspector &)
+void TGeoPatternCylPhi::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternCylPhi::ShowMembers(TMemberInspector &)
+void TGeoPatternCylR::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternCylR::ShowMembers(TMemberInspector &)
+void TGeoPatternFinder::ShowMembers(TMemberInspector &)
+void TGeoPatternHoneycomb::ShowMembers(TMemberInspector &)
+void TGeoPatternParaX::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternParaX::ShowMembers(TMemberInspector &)
+void TGeoPatternParaY::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternParaY::ShowMembers(TMemberInspector &)
+void TGeoPatternParaZ::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternParaZ::ShowMembers(TMemberInspector &)
+void TGeoPatternSphPhi::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternSphPhi::ShowMembers(TMemberInspector &)
+void TGeoPatternSphR::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternSphR::ShowMembers(TMemberInspector &)
+void TGeoPatternSphTheta::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternSphTheta::ShowMembers(TMemberInspector &)
+void TGeoPatternTrapZ::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternTrapZ::ShowMembers(TMemberInspector &)
+void TGeoPatternX::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternX::ShowMembers(TMemberInspector &)
+void TGeoPatternY::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternY::ShowMembers(TMemberInspector &)
+void TGeoPatternZ::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPatternZ::ShowMembers(TMemberInspector &)
+void TGeoPcon::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPcon::ShowMembers(TMemberInspector &)
+void TGeoPgon::SavePrimitive(std::ostream &, Option_t *)
+void TGeoPgon::ShowMembers(TMemberInspector &)
+void TGeoPhysicalNode::ShowMembers(TMemberInspector &)
+void TGeoPolygon::ShowMembers(TMemberInspector &)
+void TGeoRCExtension::ShowMembers(TMemberInspector &)
+void TGeoRegion::ShowMembers(TMemberInspector &)
+void TGeoRegionCut::ShowMembers(TMemberInspector &)
+void TGeoRotation::SavePrimitive(std::ostream &, Option_t *)
+void TGeoRotation::ShowMembers(TMemberInspector &)
+void TGeoScale::ShowMembers(TMemberInspector &)
+void TGeoScaledShape::SavePrimitive(std::ostream &, Option_t *)
+void TGeoScaledShape::ShowMembers(TMemberInspector &)
+void TGeoShape::ShowMembers(TMemberInspector &)
+void TGeoShapeAssembly::SavePrimitive(std::ostream &, Option_t *)
+void TGeoShapeAssembly::ShowMembers(TMemberInspector &)
+void TGeoSkinSurface::ShowMembers(TMemberInspector &)
+void TGeoSphere::SavePrimitive(std::ostream &, Option_t *)
+void TGeoSphere::ShowMembers(TMemberInspector &)
+void TGeoStateInfo::ShowMembers(TMemberInspector &)
+void TGeoSubtraction::SavePrimitive(std::ostream &, Option_t *)
+void TGeoSubtraction::ShowMembers(TMemberInspector &)
+void TGeoTessellated::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTessellated::ShowMembers(TMemberInspector &)
+void TGeoTorus::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTorus::ShowMembers(TMemberInspector &)
+void TGeoTranslation::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTranslation::ShowMembers(TMemberInspector &)
+void TGeoTrap::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTrap::ShowMembers(TMemberInspector &)
+void TGeoTrd1::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTrd1::ShowMembers(TMemberInspector &)
+void TGeoTrd2::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTrd2::ShowMembers(TMemberInspector &)
+void TGeoTube::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTube::ShowMembers(TMemberInspector &)
+void TGeoTubeSeg::SavePrimitive(std::ostream &, Option_t *)
+void TGeoTubeSeg::ShowMembers(TMemberInspector &)
+void TGeoUniformMagField::ShowMembers(TMemberInspector &)
+void TGeoUnion::SavePrimitive(std::ostream &, Option_t *)
+void TGeoUnion::ShowMembers(TMemberInspector &)
+void TGeoVolume::SavePrimitive(std::ostream &, Option_t *)
+void TGeoVolume::ShowMembers(TMemberInspector &)
+void TGeoVolumeAssembly::ShowMembers(TMemberInspector &)
+void TGeoVolumeMulti::ShowMembers(TMemberInspector &)
+void TGeoVoxelFinder::ShowMembers(TMemberInspector &)
+void TGeoXtru::SavePrimitive(std::ostream &, Option_t *)
+void TGeoXtru::ShowMembers(TMemberInspector &)
+void TGraph2D::SavePrimitive(std::ostream &, Option_t *)
+void TGraph2D::ShowMembers(TMemberInspector &)
+void TGraph2DAsymmErrors::ShowMembers(TMemberInspector &)
+void TGraph2DErrors::ShowMembers(TMemberInspector &)
+void TGraph::SavePrimitive(std::ostream &, Option_t *)
+void TGraph::ShowMembers(TMemberInspector &)
+void TGraphAsymmErrors::SavePrimitive(std::ostream &, Option_t *)
+void TGraphAsymmErrors::ShowMembers(TMemberInspector &)
+void TGraphBentErrors::SavePrimitive(std::ostream &, Option_t *)
+void TGraphBentErrors::ShowMembers(TMemberInspector &)
+void TGraphDelaunay2D::ShowMembers(TMemberInspector &)
+void TGraphDelaunay::ShowMembers(TMemberInspector &)
+void TGraphErrors::SavePrimitive(std::ostream &, Option_t *)
+void TGraphErrors::ShowMembers(TMemberInspector &)
+void TGraphMultiErrors::SavePrimitive(std::ostream &, Option_t *)
+void TGraphMultiErrors::ShowMembers(TMemberInspector &)
+void TGraphSmooth::ShowMembers(TMemberInspector &)
+void TGraphTime::ShowMembers(TMemberInspector &)
+void TH1::SavePrimitive(std::ostream &, Option_t *)
+void TH1::ShowMembers(TMemberInspector &)
+void TH1C::ShowMembers(TMemberInspector &)
+void TH1D::ShowMembers(TMemberInspector &)
+void TH1F::ShowMembers(TMemberInspector &)
+void TH1I::ShowMembers(TMemberInspector &)
+void TH1K::SavePrimitive(std::ostream &, Option_t *)
+void TH1K::ShowMembers(TMemberInspector &)
+void TH1L::ShowMembers(TMemberInspector &)
+void TH1S::ShowMembers(TMemberInspector &)
+void TH2::ShowMembers(TMemberInspector &)
+void TH2C::ShowMembers(TMemberInspector &)
+void TH2D::ShowMembers(TMemberInspector &)
+void TH2F::ShowMembers(TMemberInspector &)
+void TH2I::ShowMembers(TMemberInspector &)
+void TH2L::ShowMembers(TMemberInspector &)
+void TH2Poly::SavePrimitive(std::ostream &, Option_t *)
+void TH2Poly::ShowMembers(TMemberInspector &)
+void TH2PolyBin::ShowMembers(TMemberInspector &)
+void TH2S::ShowMembers(TMemberInspector &)
+void TH3::ShowMembers(TMemberInspector &)
+void TH3C::ShowMembers(TMemberInspector &)
+void TH3D::ShowMembers(TMemberInspector &)
+void TH3F::ShowMembers(TMemberInspector &)
+void TH3I::ShowMembers(TMemberInspector &)
+void TH3L::ShowMembers(TMemberInspector &)
+void TH3S::ShowMembers(TMemberInspector &)
+void THLimitsFinder::ShowMembers(TMemberInspector &)
+void THStack::SavePrimitive(std::ostream &, Option_t *)
+void THStack::ShowMembers(TMemberInspector &)
+void THashList::ShowMembers(TMemberInspector &)
+void THashTable::ShowMembers(TMemberInspector &)
+void THashTableIter::ShowMembers(TMemberInspector &)
+void THn::ShowMembers(TMemberInspector &)
+void THnBase::ShowMembers(TMemberInspector &)
+void THnChain::ShowMembers(TMemberInspector &)
+void THnIter::ShowMembers(TMemberInspector &)
+void THnSparse::ShowMembers(TMemberInspector &)
+void THnSparseT::ShowMembers(TMemberInspector &)
+void THnT::ShowMembers(TMemberInspector &)
+void TInetAddress::ShowMembers(TMemberInspector &)
+void TIter::ShowMembers(TMemberInspector &)
+void TIterator::ShowMembers(TMemberInspector &)
+void TKDE::ShowMembers(TMemberInspector &)
+void TKey::ShowMembers(TMemberInspector &)
+void TLeaf::ReadValue(std::istream &, Char_t)
+void TLeaf::ShowMembers(TMemberInspector &)
+void TLeafB::ReadValue(std::istream &, Char_t)
+void TLeafB::ShowMembers(TMemberInspector &)
+void TLeafC::ReadValue(std::istream &, Char_t)
+void TLeafC::ShowMembers(TMemberInspector &)
+void TLeafD32::ReadValue(std::istream &, Char_t)
+void TLeafD32::ShowMembers(TMemberInspector &)
+void TLeafD::ReadValue(std::istream &, Char_t)
+void TLeafD::ShowMembers(TMemberInspector &)
+void TLeafElement::ShowMembers(TMemberInspector &)
+void TLeafF16::ReadValue(std::istream &, Char_t)
+void TLeafF16::ShowMembers(TMemberInspector &)
+void TLeafF::ReadValue(std::istream &, Char_t)
+void TLeafF::ShowMembers(TMemberInspector &)
+void TLeafG::ReadValue(std::istream &, Char_t)
+void TLeafG::ShowMembers(TMemberInspector &)
+void TLeafI::ReadValue(std::istream &, Char_t)
+void TLeafI::ShowMembers(TMemberInspector &)
+void TLeafL::ReadValue(std::istream &, Char_t)
+void TLeafL::ShowMembers(TMemberInspector &)
+void TLeafO::ReadValue(std::istream &, Char_t)
+void TLeafO::ShowMembers(TMemberInspector &)
+void TLeafObject::ShowMembers(TMemberInspector &)
+void TLeafS::ReadValue(std::istream &, Char_t)
+void TLeafS::ShowMembers(TMemberInspector &)
+void TLimit::ShowMembers(TMemberInspector &)
+void TLimitDataSource::ShowMembers(TMemberInspector &)
+void TLinearGradient::ShowMembers(TMemberInspector &)
+void TList::ShowMembers(TMemberInspector &)
+void TListIter::ShowMembers(TMemberInspector &)
+void TLockGuard::ShowMembers(TMemberInspector &)
+void TMD5::ShowMembers(TMemberInspector &)
+void TMacro::SavePrimitive(std::ostream &, Option_t *)
+void TMacro::ShowMembers(TMemberInspector &)
+void TMap::ShowMembers(TMemberInspector &)
+void TMapIter::ShowMembers(TMemberInspector &)
+void TMessageHandler::ShowMembers(TMemberInspector &)
+void TMultiDimFit::ShowMembers(TMemberInspector &)
+void TNDArray::ShowMembers(TMemberInspector &)
+void TNDArrayRef::ShowMembers(TMemberInspector &)
+void TNDArrayT::ShowMembers(TMemberInspector &)
+void TNamed::ShowMembers(TMemberInspector &)
+void TNotifyLink::ShowMembers(TMemberInspector &)
+void TNotifyLinkBase::ShowMembers(TMemberInspector &)
+void TObjArray::ShowMembers(TMemberInspector &)
+void TObjArrayIter::ShowMembers(TMemberInspector &)
+void TObject::SavePrimitive(std::ostream &, Option_t *)
+void TObject::ShowMembers(TMemberInspector &)
+void TObjectTable::ShowMembers(TMemberInspector &)
+void TOrdCollection::ShowMembers(TMemberInspector &)
+void TOrdCollectionIter::ShowMembers(TMemberInspector &)
+void TPMERegexp::ShowMembers(TMemberInspector &)
+void TPRegexp::ShowMembers(TMemberInspector &)
+void TPair::ShowMembers(TMemberInspector &)
+void TParameter::ShowMembers(TMemberInspector &)
+void TPluginHandler::ShowMembers(TMemberInspector &)
+void TPluginManager::ShowMembers(TMemberInspector &)
+void TPolyMarker::SavePrimitive(std::ostream &, Option_t *)
+void TPolyMarker::ShowMembers(TMemberInspector &)
+void TPrincipal::ShowMembers(TMemberInspector &)
+void TProcessEventTimer::ShowMembers(TMemberInspector &)
+void TProcessID::ShowMembers(TMemberInspector &)
+void TProcessUUID::ShowMembers(TMemberInspector &)
+void TProfile2D::SavePrimitive(std::ostream &, Option_t *)
+void TProfile2D::ShowMembers(TMemberInspector &)
+void TProfile2Poly::ShowMembers(TMemberInspector &)
+void TProfile2PolyBin::ShowMembers(TMemberInspector &)
+void TProfile3D::SavePrimitive(std::ostream &, Option_t *)
+void TProfile3D::ShowMembers(TMemberInspector &)
+void TProfile::SavePrimitive(std::ostream &, Option_t *)
+void TProfile::ShowMembers(TMemberInspector &)
+void TQClass::ShowMembers(TMemberInspector &)
+void TQCommand::ShowMembers(TMemberInspector &)
+void TQConnection::ShowMembers(TMemberInspector &)
+void TQObjSender::ShowMembers(TMemberInspector &)
+void TQObject::ShowMembers(TMemberInspector &)
+void TQUndoManager::ShowMembers(TMemberInspector &)
+void TROOT::RegisterModule(const char *, const char **, const char **, const char *, const char *, void (*)(), const TROOT::FwdDeclArgsToKeepCollection_t &, const char **, bool)
+void TROOT::ShowMembers(TMemberInspector &)
+void TRadialGradient::ShowMembers(TMemberInspector &)
+void TRandom::ShowMembers(TMemberInspector &)
+void TRedirectOutputGuard::ShowMembers(TMemberInspector &)
+void TRef::ShowMembers(TMemberInspector &)
+void TRefArray::ShowMembers(TMemberInspector &)
+void TRefArrayIter::ShowMembers(TMemberInspector &)
+void TRefTable::ShowMembers(TMemberInspector &)
+void TRegexp::ShowMembers(TMemberInspector &)
+void TRemoteObject::ShowMembers(TMemberInspector &)
+void TSVDUnfold::ShowMembers(TMemberInspector &)
+void TScatter::SavePrimitive(std::ostream &, Option_t *)
+void TScatter::ShowMembers(TMemberInspector &)
+void TSeqCollection::ShowMembers(TMemberInspector &)
+void TSortedList::ShowMembers(TMemberInspector &)
+void TSpline3::SavePrimitive(std::ostream &, Option_t *)
+void TSpline3::ShowMembers(TMemberInspector &)
+void TSpline5::SavePrimitive(std::ostream &, Option_t *)
+void TSpline5::ShowMembers(TMemberInspector &)
+void TSpline::ShowMembers(TMemberInspector &)
+void TSplinePoly3::ShowMembers(TMemberInspector &)
+void TSplinePoly5::ShowMembers(TMemberInspector &)
+void TSplinePoly::ShowMembers(TMemberInspector &)
+void TStopwatch::ShowMembers(TMemberInspector &)
+void TString::ShowMembers(TMemberInspector &)
+void TStringToken::ShowMembers(TMemberInspector &)
+void TStyle::SavePrimitive(std::ostream &, Option_t *)
+void TStyle::ShowMembers(TMemberInspector &)
+void TSystem::ShowMembers(TMemberInspector &)
+void TSystemDirectory::ShowMembers(TMemberInspector &)
+void TSystemFile::ShowMembers(TMemberInspector &)
+void TTask::ShowMembers(TMemberInspector &)
+void TTime::ShowMembers(TMemberInspector &)
+void TTimeStamp::ShowMembers(TMemberInspector &)
+void TTimer::ShowMembers(TMemberInspector &)
+void TTree::ShowMembers(TMemberInspector &)
+void TTreeFriendLeafIter::ShowMembers(TMemberInspector &)
+void TTreeReader::ShowMembers(TMemberInspector &)
+void TUUID::ShowMembers(TMemberInspector &)
+void TUri::ShowMembers(TMemberInspector &)
+void TUrl::ShowMembers(TMemberInspector &)
+void TVectorT::ShowMembers(TMemberInspector &)
+void TVirtualAuth::ShowMembers(TMemberInspector &)
+void TVirtualFFT::ShowMembers(TMemberInspector &)
+void TVirtualFitter::ShowMembers(TMemberInspector &)
+void TVirtualGeoConverter::ShowMembers(TMemberInspector &)
+void TVirtualGeoPainter::ShowMembers(TMemberInspector &)
+void TVirtualGeoTrack::ShowMembers(TMemberInspector &)
+void TVirtualGraphPainter::ShowMembers(TMemberInspector &)
+void TVirtualHistPainter::ShowMembers(TMemberInspector &)
+void TVirtualMagField::ShowMembers(TMemberInspector &)
+void TVirtualMapFile::ShowMembers(TMemberInspector &)
+void TVirtualMonitoringReader::ShowMembers(TMemberInspector &)
+void TVirtualMonitoringWriter::ShowMembers(TMemberInspector &)
+void TVirtualMutex::ShowMembers(TMemberInspector &)
+void TVirtualPS::ShowMembers(TMemberInspector &)
+void TVirtualPad::ShowMembers(TMemberInspector &)
+void TVirtualPadEditor::ShowMembers(TMemberInspector &)
+void TVirtualPadPainter::ShowMembers(TMemberInspector &)
+void TVirtualPaveStats::ShowMembers(TMemberInspector &)
+void TVirtualPerfStats::ShowMembers(TMemberInspector &)
+void TVirtualTableInterface::ShowMembers(TMemberInspector &)
+void TVirtualViewer3D::ShowMembers(TMemberInspector &)
+void TVirtualX::MoveWindow(Window_t, Int_t, Int_t)
+void TVirtualX::SetCursor(Window_t, Cursor_t)
+void TVirtualX::ShowMembers(TMemberInspector &)
+
+List of vetoed global funcs:
+--------------------------
+
+Bool_t ROOT::Internal::HasConsistentHashMember(TClass &)
+Bool_t ROOT::Internal::HasConsistentHashMember(const char *)
+Bool_t ROOT::Internal::IsParBranchProcessingEnabled()
+Bool_t ROOT::Internal::RequiresCleanup(TObject &)
+Bool_t TMath::SignBit(LongDouble_t)
+LongDouble_t TMath::Abs(LongDouble_t)
+LongDouble_t TMath::Sign(LongDouble_t, LongDouble_t)
+TROOT * ROOT::Internal::GetROOT2()
+bool ROOT::Detail::HasBeenDeleted(const TObject *)
+bool ROOT::Internal::ContaineeInheritsFrom(TClass *, TClass *)
+bool ROOT::Internal::DeleteChangesMemory()
+bool ROOT::Internal::DeleteChangesMemoryImpl()
+const ROOT::Internal::TInitBehavior * ROOT::Internal::DefineBehavior(void *, void *)
+const ROOT::Internal::TQObjectInitBehavior * ROOT::Internal::DefineBehavior(TQObject *, TQObject *)
+const TCollection & ROOT::Internal::EmptyCollection()
+float ROOT::Experimental::Internal::HalfToFloat(std::uint16_t)
+std::istream & operator>>(std::istream &, TString &)
+std::ostream & operator<<(std::ostream &, const ROOT::Geom::Vertex_t &)
+std::ostream & operator<<(std::ostream &, const TBits &)
+std::ostream & operator<<(std::ostream &, const TString &)
+std::ostream & operator<<(std::ostream &, const TTimeStamp &)
+std::string cling::printValue(ROOT::Internal::TTreeReaderValueBase *)
+std::uint16_t ROOT::Experimental::Internal::FloatToHalf(float)
+std::uint16_t ROOT::Experimental::Internal::GetOverflowedValue(std::uint16_t)
+std::uint16_t ROOT::Experimental::Internal::GetRoundedValue(std::uint16_t, int, int)
+void ROOT::Internal::DefaultStreamer(TBuffer &, const TClass *, void *)
+void ROOT::Internal::DisableParBranchProcessing()
+void ROOT::Internal::EnableParBranchProcessing()
+void ROOT::Internal::ReleaseDefaultErrorHandler()
+void ROOT::Internal::SetRequireCleanup(TObject &)
+void TFractionFitFCN(Int_t &, Double_t *, Double_t &, Double_t *, Int_t)
+
+List of vetoed specializations:
+-----------------------------
+
+(none)
+
+List of vetoed field accessors (both getter and setter):
+------------------------------------------------------
+
+ExceptionContext_t::fBuf
+ROOT::Detail::TCollectionProxyInfo::fgIteratorArenaSize
+ROOT::Internal::gROOTLocal
+ROOT::Internal::gVersionCheck
+
+List of vetoed field setters:
+---------------------------
+
+ROOT::TVirtualRWMutex::StateAndRecurseCount::fState
+
+List of vetoed global variable accessors (both getter and setter):
+----------------------------------------------------------------
+
+(none)
+
+List of vetoed global variable setters:
+-------------------------------------
+
+(none)

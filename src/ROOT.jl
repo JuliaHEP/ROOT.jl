@@ -68,6 +68,10 @@ Check that the C+ code of the package is compiled and compile it if needed. Retu
 """
 cxxcompile() = !isempty(Internals.CxxBuild.get_or_build_libroot_julia())
 
+# declaration to prevent tbe different ROOT.Set methods to be
+# interpreted as Base.Set contructors
+function Set end
+
 if(isempty(libroot_julia_path))
     ok() = false
 else

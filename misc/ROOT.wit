@@ -1,13 +1,13 @@
 module_name         = "ROOT"
 uuid                = "1706fdcc-8426-44f1-a283-5be479e9517c"
-version             = "0.3.2"
+version             = "0.4.0"
 
 export_jl_fname     = "ROOT-export.jl"
 module_jl_fname     = "ROOT-generated.jl"
 lib_basename        = "$(@__DIR__)/../deps/libroot_julia"
 out_cxx_dir         = "ROOT/deps/src"
 
-include_dirs        = [ "/home/pgras/.julia/artifacts/54e60c641c75fb2e5777b51cd519d1c05678ef04/include", "src", "/home/pgras/.julia/artifacts/18df5e18057f7c98339fdbbc02a6da42d38b237e/include", "/usr/include/c++/12" ]
+include_dirs        = [ "/home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include", "src", "/home/pgras/.julia/artifacts/18df5e18057f7c98339fdbbc02a6da42d38b237e/include", "/usr/include/c++/12" ]
 
 input               = [
    # Base package (core/base) >>>
@@ -119,7 +119,14 @@ julia_names         = [ "TDirectoryFile::Get -> Get_",
                         "start -> thestart",
                         "end -> theend",
                         "TSubString::String -> GetString",
-                        "TRandom::Integer -> GetInteger" ]
+                        "TString::SubString -> GetSubString",
+                        "TRandom::Integer -> GetInteger",
+                        "TBuffer3D::Type -> GetType",
+                        "TVirtualPS::Text -> GetText",
+                        "TGeoManager::Matrix -> GetMatrix",
+                        "TGeoBuilder::Matrix -> GetMatrix",
+                        "TROOT::Timer -> GetTimer"
+]
 
 fields_and_variables = true
 

@@ -211,3 +211,7 @@ bool ::operator==(const std::shared_ptr<TObjLink> &, TObjOptLink *);
 
 //reimplemented in Julia in order to dereference the returned pointer
 TObject *& TObjArray::operator[](Int_t);
+TObject * TObjArray::operator[](Int_t);
+
+
+long double;

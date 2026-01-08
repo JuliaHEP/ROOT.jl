@@ -126,7 +126,7 @@ In order to retrieve a [TClass](@ref) instance from the type system, a query can
 
 The name of classes is crucial for [ROOT](@ref). A careful procedure of *name normalization* is carried out for each and every class. A *normalized name* is a valid C++ class name. In order to access the name of a class within the [ROOT](@ref) type system, the method [TClass!GetName()](@ref) can be used.
 
-Related functions: [`AddImplFile`](@ref), [`AddInstance`](@ref), [`AdoptMemberStreamer`](@ref), [`AdoptReferenceProxy`](@ref), [`AdoptSchemaRules`](@ref), [`AdoptStreamer`](@ref), [`Browse`](@ref), [`BuildEmulatedRealData`](@ref), [`BuildRealData`](@ref), [`CalculateStreamerOffset`](@ref), [`CallShowMembers`](@ref), [`CanIgnoreTObjectStreamer`](@ref), [`CanSplit`](@ref), [`ClassProperty`](@ref), [`Clone`](@ref), [`CopyCollectionProxy`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`DynamicCast`](@ref), [`EscapeChars`](@ref), [`FindConversionStreamerInfo`](@ref), [`FindStreamerInfoAbstractEmulated`](@ref), [`FindStreamerInfo`](@ref), [`ForceReload`](@ref), [`GetActualClass`](@ref), [`GetBaseClassOffset`](@ref), [`GetBaseClass`](@ref), [`GetBaseDataMember`](@ref), [`GetCheckSum`](@ref), [`GetClassInfo`](@ref), [`GetClassMethodWithPrototype`](@ref), [`GetClassMethod`](@ref), [`GetClassSize`](@ref), [`GetClassVersion`](@ref), [`GetCollectionProxy`](@ref), [`GetCollectionType`](@ref), [`GetContextMenuTitle`](@ref), [`GetConvStreamerFunc`](@ref), [`GetConversionStreamerInfo`](@ref), [`GetCurrentStreamerInfo`](@ref), [`GetDataMemberOffset`](@ref), [`GetDataMember`](@ref), [`GetDeclFileLine`](@ref), [`GetDeclFileName`](@ref), [`GetDeleteArray`](@ref), [`GetDelete`](@ref), [`GetDestructor`](@ref), [`GetDirectoryAutoAdd`](@ref), [`GetFunctionTemplate`](@ref), [`GetHeapInstanceCount`](@ref), [`GetImplFileLine`](@ref), [`GetImplFileName`](@ref), [`GetInstanceCount`](@ref), [`GetIsAProxy`](@ref), [`GetLastReadInfo`](@ref), [`GetListOfAllPublicDataMembers`](@ref), [`GetListOfAllPublicMethods`](@ref), [`GetListOfBases`](@ref), [`GetListOfDataMembers`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfMethodOverloads`](@ref), [`GetListOfMethods`](@ref), [`GetListOfRealData`](@ref), [`GetListOfUsingDataMembers`](@ref), [`GetMenuItems`](@ref), [`GetMenuList`](@ref), [`GetMerge`](@ref), [`GetMethodAllAny`](@ref), [`GetMethodAny`](@ref), [`GetMethodWithPrototype`](@ref), [`GetMethod`](@ref), [`GetMissingDictionaries`](@ref), [`GetNdata`](@ref), [`GetNewArray`](@ref), [`GetNew`](@ref), [`GetNmethods`](@ref), [`GetPersistentRef`](@ref), [`GetRealData`](@ref), [`GetReferenceProxy`](@ref), [`GetResetAfterMerge`](@ref), [`GetSchemaRules`](@ref), [`GetSharedLibs`](@ref), [`GetShowMembersWrapper`](@ref), [`GetState`](@ref), [`GetStreamerFunc`](@ref), [`GetStreamerInfoAbstractEmulated`](@ref), [`GetStreamerInfo`](@ref), [`GetStreamerInfos`](@ref), [`GetStreamer`](@ref), [`GetTypeInfo`](@ref), [`HasConsistentHashMember`](@ref), [`HasCustomStreamerMember`](@ref), [`HasDataMemberInfo`](@ref), [`HasDefaultConstructor`](@ref), [`HasDictionary`](@ref), [`HasInterpreterInfoInMemory`](@ref), [`HasInterpreterInfo`](@ref), [`HasLocalHashMember`](@ref), [`IgnoreTObjectStreamer`](@ref), [`InheritsFrom`](@ref), [`InterpretedShowMembers`](@ref), [`IsFolder`](@ref), [`IsForeign`](@ref), [`IsLoaded`](@ref), [`IsStartingWithTObject`](@ref), [`IsSyntheticPair`](@ref), [`IsTObject`](@ref), [`IsVersioned`](@ref), [`MakeCustomMenuList`](@ref), [`MatchLegacyCheckSum`](@ref), [`Move`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PostLoadCheck`](@ref), [`Property`](@ref), [`ReadBuffer`](@ref), [`RegisterStreamerInfo`](@ref), [`RemoveStreamerInfo`](@ref), [`ReplaceWith`](@ref), [`ResetCaches`](@ref), [`ResetClassInfo`](@ref), [`ResetInstanceCount`](@ref), [`ResetMenuList`](@ref), [`SetCanSplit`](@ref), [`SetCollectionProxy`](@ref), [`SetContextMenuTitle`](@ref), [`SetConvStreamerFunc`](@ref), [`SetCurrentStreamerInfo`](@ref), [`SetDeclFile`](@ref), [`SetDeleteArray`](@ref), [`SetDelete`](@ref), [`SetDestructor`](@ref), [`SetDirectoryAutoAdd`](@ref), [`SetGlobalIsA`](@ref), [`SetImplFileName`](@ref), [`SetLastReadInfo`](@ref), [`SetMemberStreamer`](@ref), [`SetMerge`](@ref), [`SetNewArray`](@ref), [`SetNew`](@ref), [`SetResetAfterMerge`](@ref), [`SetStreamerFunc`](@ref), [`SetStreamerInfo`](@ref), [`SetUnloaded`](@ref), [`Size`](@ref), [`Store`](@ref), [`Streamer`](@ref), [`TClass!AddClassToDeclIdMap`](@ref), [`TClass!AddClass`](@ref), [`TClass!AddRule`](@ref), [`TClass!AutoBrowse`](@ref), [`TClass!GetClass`](@ref), [`TClass!GetDict`](@ref), [`TClass!HasDictionarySelection`](@ref), [`TClass!IsCallingNew`](@ref), [`TClass!LoadClass`](@ref), [`TClass!Load`](@ref), [`TClass!ReadRules`](@ref), [`TClass!RemoveClassDeclId`](@ref), [`TClass!RemoveClass`](@ref), [`TClass`](@ref), [`WriteBuffer`](@ref), [`ls`](@ref)
+Related functions: [`AddImplFile`](@ref), [`AddInstance`](@ref), [`AdoptMemberStreamer`](@ref), [`AdoptReferenceProxy`](@ref), [`AdoptSchemaRules`](@ref), [`AdoptStreamer`](@ref), [`Browse`](@ref), [`BuildEmulatedRealData`](@ref), [`BuildRealData`](@ref), [`CalculateStreamerOffset`](@ref), [`CallShowMembers`](@ref), [`CanIgnoreTObjectStreamer`](@ref), [`CanSplit`](@ref), [`ClassProperty`](@ref), [`Clone`](@ref), [`CopyCollectionProxy`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`DynamicCast`](@ref), [`EscapeChars`](@ref), [`FindConversionStreamerInfo`](@ref), [`FindStreamerInfoAbstractEmulated`](@ref), [`FindStreamerInfo`](@ref), [`ForceReload`](@ref), [`GetActualClass`](@ref), [`GetBaseClassOffset`](@ref), [`GetBaseClass`](@ref), [`GetBaseDataMember`](@ref), [`GetCheckSum`](@ref), [`GetClassInfo`](@ref), [`GetClassMethodWithPrototype`](@ref), [`GetClassMethod`](@ref), [`GetClassSize`](@ref), [`GetClassVersion`](@ref), [`GetCollectionGetType`](@ref), [`GetCollectionProxy`](@ref), [`GetContextMenuTitle`](@ref), [`GetConvStreamerFunc`](@ref), [`GetConversionStreamerInfo`](@ref), [`GetCurrentStreamerInfo`](@ref), [`GetDataMemberOffset`](@ref), [`GetDataMember`](@ref), [`GetDeclFileLine`](@ref), [`GetDeclFileName`](@ref), [`GetDeleteArray`](@ref), [`GetDelete`](@ref), [`GetDestructor`](@ref), [`GetDirectoryAutoAdd`](@ref), [`GetFunctionTemplate`](@ref), [`GetGetTypeInfo`](@ref), [`GetHeapInstanceCount`](@ref), [`GetImplFileLine`](@ref), [`GetImplFileName`](@ref), [`GetInstanceCount`](@ref), [`GetIsAProxy`](@ref), [`GetLastReadInfo`](@ref), [`GetListOfAllPublicDataMembers`](@ref), [`GetListOfAllPublicMethods`](@ref), [`GetListOfBases`](@ref), [`GetListOfDataMembers`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfMethodOverloads`](@ref), [`GetListOfMethods`](@ref), [`GetListOfRealData`](@ref), [`GetListOfUsingDataMembers`](@ref), [`GetMenuItems`](@ref), [`GetMenuList`](@ref), [`GetMerge`](@ref), [`GetMethodAllAny`](@ref), [`GetMethodAny`](@ref), [`GetMethodWithPrototype`](@ref), [`GetMethod`](@ref), [`GetMissingDictionaries`](@ref), [`GetNdata`](@ref), [`GetNewArray`](@ref), [`GetNew`](@ref), [`GetNmethods`](@ref), [`GetPersistentRef`](@ref), [`GetRealData`](@ref), [`GetReferenceProxy`](@ref), [`GetResetAfterMerge`](@ref), [`GetSchemaRules`](@ref), [`GetSharedLibs`](@ref), [`GetShowMembersWrapper`](@ref), [`GetState`](@ref), [`GetStreamerFunc`](@ref), [`GetStreamerInfoAbstractEmulated`](@ref), [`GetStreamerInfo`](@ref), [`GetStreamerInfos`](@ref), [`GetStreamer`](@ref), [`HasConsistentHashMember`](@ref), [`HasCustomStreamerMember`](@ref), [`HasDataMemberInfo`](@ref), [`HasDefaultConstructor`](@ref), [`HasDictionary`](@ref), [`HasInterpreterInfoInMemory`](@ref), [`HasInterpreterInfo`](@ref), [`HasLocalHashMember`](@ref), [`IgnoreTObjectStreamer`](@ref), [`InheritsFrom`](@ref), [`InterpretedShowMembers`](@ref), [`IsFolder`](@ref), [`IsForeign`](@ref), [`IsLoaded`](@ref), [`IsStartingWithTObject`](@ref), [`IsSyntheticPair`](@ref), [`IsTObject`](@ref), [`IsVersioned`](@ref), [`MakeCustomMenuList`](@ref), [`MatchLegacyCheckSum`](@ref), [`Move`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PostLoadCheck`](@ref), [`Property`](@ref), [`ReadBuffer`](@ref), [`RegisterStreamerInfo`](@ref), [`RemoveStreamerInfo`](@ref), [`ReplaceWith`](@ref), [`ResetCaches`](@ref), [`ResetClassInfo`](@ref), [`ResetInstanceCount`](@ref), [`ResetMenuList`](@ref), [`SetCanSplit`](@ref), [`SetCollectionProxy`](@ref), [`SetContextMenuTitle`](@ref), [`SetConvStreamerFunc`](@ref), [`SetCurrentStreamerInfo`](@ref), [`SetDeclFile`](@ref), [`SetDeleteArray`](@ref), [`SetDelete`](@ref), [`SetDestructor`](@ref), [`SetDirectoryAutoAdd`](@ref), [`SetGlobalIsA`](@ref), [`SetImplFileName`](@ref), [`SetLastReadInfo`](@ref), [`SetMemberStreamer`](@ref), [`SetMerge`](@ref), [`SetNewArray`](@ref), [`SetNew`](@ref), [`SetResetAfterMerge`](@ref), [`SetStreamerFunc`](@ref), [`SetStreamerInfo`](@ref), [`SetUnloaded`](@ref), [`Size`](@ref), [`Store`](@ref), [`Streamer`](@ref), [`TClass!AddClassToDeclIdMap`](@ref), [`TClass!AddClass`](@ref), [`TClass!AddRule`](@ref), [`TClass!AutoBrowse`](@ref), [`TClass!GetClass`](@ref), [`TClass!GetDict`](@ref), [`TClass!HasDictionarySelection`](@ref), [`TClass!IsCallingNew`](@ref), [`TClass!LoadClass`](@ref), [`TClass!Load`](@ref), [`TClass!ReadRules`](@ref), [`TClass!RemoveClassDeclId`](@ref), [`TClass!RemoveClass`](@ref), [`TClass`](@ref), [`WriteBuffer`](@ref), [`ls`](@ref)
 """ TClass
 
 # Wrapper of TVirtualIsAProxy
@@ -172,7 +172,7 @@ The [TObject](@ref) class provides default behaviour and protocol for all object
 
 [TObject](@ref)'s bits can be used as flags, bits 0 - 13 and 24-31 are reserved as global_ bits while bits 14 - 23 can be used in different class hierarchies (watch out for overlaps).
 
-Related functions: [`AbstractMethod`](@ref), [`AppendPad`](@ref), [`Browse`](@ref), [`CheckedHash`](@ref), [`ClassName`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`Compare`](@ref), [`Copy`](@ref), [`Delete`](@ref), [`DistancetoPrimitive`](@ref), [`DrawClass`](@ref), [`DrawClone`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`Error`](@ref), [`ExecuteEvent`](@ref), [`Execute`](@ref), [`Fatal`](@ref), [`FindObject`](@ref), [`GetDrawOption`](@ref), [`GetIconName`](@ref), [`GetName`](@ref), [`GetObjectInfo`](@ref), [`GetOption`](@ref), [`GetTitle`](@ref), [`GetUniqueID`](@ref), [`HandleTimer`](@ref), [`HasInconsistentHash`](@ref), [`Hash`](@ref), [`Info`](@ref), [`InheritsFrom`](@ref), [`Inspect`](@ref), [`InvertBit`](@ref), [`IsA`](@ref), [`IsDestructed`](@ref), [`IsEqual`](@ref), [`IsFolder`](@ref), [`IsOnHeap`](@ref), [`IsSortable`](@ref), [`IsZombie`](@ref), [`MayNotUse`](@ref), [`Notify`](@ref), [`Obsolete`](@ref), [`Paint`](@ref), [`Pop`](@ref), [`Print`](@ref), [`Read`](@ref), [`RecursiveRemove`](@ref), [`ResetBit`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SetBit`](@ref), [`SetDrawOption`](@ref), [`SetUniqueID`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SysError`](@ref), [`TObject!Class_Name`](@ref), [`TObject!Class_Version`](@ref), [`TObject!Class`](@ref), [`TObject!DeclFileName`](@ref), [`TObject!GetDtorOnly`](@ref), [`TObject!GetObjectStat`](@ref), [`TObject!SetDtorOnly`](@ref), [`TObject!SetObjectStat`](@ref), [`TObject`](@ref), [`TestBit`](@ref), [`TestBits`](@ref), [`UseCurrentStyle`](@ref), [`Warning`](@ref), [`Write`](@ref), [`assign`](@ref), [`delete`](@ref), [`deletearray`](@ref), [`ls`](@ref), [`new`](@ref), [`newarray`](@ref)
+Related functions: [`AbstractMethod`](@ref), [`AppendPad`](@ref), [`Browse`](@ref), [`CheckedHash`](@ref), [`ClassName`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`Compare`](@ref), [`Copy`](@ref), [`Delete`](@ref), [`DistancetoPrimitive`](@ref), [`DrawClass`](@ref), [`DrawClone`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`Error`](@ref), [`ExecuteEvent`](@ref), [`Execute`](@ref), [`Fatal`](@ref), [`FindObject`](@ref), [`GetDrawOption`](@ref), [`GetIconName`](@ref), [`GetName`](@ref), [`GetObjectInfo`](@ref), [`GetOption`](@ref), [`GetTitle`](@ref), [`GetUniqueID`](@ref), [`HandleGetTimer`](@ref), [`HasInconsistentHash`](@ref), [`Hash`](@ref), [`Info`](@ref), [`InheritsFrom`](@ref), [`Inspect`](@ref), [`InvertBit`](@ref), [`IsA`](@ref), [`IsDestructed`](@ref), [`IsEqual`](@ref), [`IsFolder`](@ref), [`IsOnHeap`](@ref), [`IsSortable`](@ref), [`IsZombie`](@ref), [`MayNotUse`](@ref), [`Notify`](@ref), [`Obsolete`](@ref), [`Paint`](@ref), [`Pop`](@ref), [`Print`](@ref), [`Read`](@ref), [`RecursiveRemove`](@ref), [`ResetBit`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SetBit`](@ref), [`SetDrawOption`](@ref), [`SetUniqueID`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SysError`](@ref), [`TObject!Class_Name`](@ref), [`TObject!Class_Version`](@ref), [`TObject!Class`](@ref), [`TObject!DeclFileName`](@ref), [`TObject!GetDtorOnly`](@ref), [`TObject!GetObjectStat`](@ref), [`TObject!SetDtorOnly`](@ref), [`TObject!SetObjectStat`](@ref), [`TObject`](@ref), [`TestBit`](@ref), [`TestBits`](@ref), [`UseCurrentStyle`](@ref), [`Warning`](@ref), [`Write`](@ref), [`assign`](@ref), [`delete`](@ref), [`deletearray`](@ref), [`ls`](@ref), [`new`](@ref), [`newarray`](@ref)
 """ TObject
 
 # Wrapper of TBrowser
@@ -195,7 +195,7 @@ ROOT version 6.24/00
 
 (C++ version of the code)
 
-Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObject`](@ref), [`CheckObjectItem`](@ref), [`Create`](@ref), [`Destructor`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowserImp`](@ref), [`GetContextMenu`](@ref), [`GetDrawOption`](@ref), [`GetRefreshFlag`](@ref), [`GetSelected`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowserImp`](@ref), [`SetDrawOption`](@ref), [`SetRefreshFlag`](@ref), [`SetSelected`](@ref), [`SetStatusText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowser`](@ref)
+Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObject`](@ref), [`CheckObjectItem`](@ref), [`Create`](@ref), [`Destructor`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowserImp`](@ref), [`GetContextMenu`](@ref), [`GetDrawOption`](@ref), [`GetRefreshFlag`](@ref), [`GetSelected`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowserImp`](@ref), [`SetDrawOption`](@ref), [`SetRefreshFlag`](@ref), [`SetSelected`](@ref), [`SetStatusGetText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowser`](@ref)
 """ TBrowser
 
 # Wrapper of TObjArray
@@ -242,7 +242,7 @@ Buffer base class used for serializing objects.
 
 
 
-Related functions: [`ApplySequenceVecPtr`](@ref), [`ApplySequence`](@ref), [`AutoExpand`](@ref), [`BufferSize`](@ref), [`Buffer`](@ref), [`ByteSwapBuffer`](@ref), [`CheckByteCount`](@ref), [`CheckObject`](@ref), [`ClassBegin`](@ref), [`ClassEnd`](@ref), [`ClassMember`](@ref), [`DecrementLevel`](@ref), [`DetachBuffer`](@ref), [`Expand`](@ref), [`ForceWriteInfoClones`](@ref), [`ForceWriteInfo`](@ref), [`GetBufferDisplacement`](@ref), [`GetBufferVersion`](@ref), [`GetCurrent`](@ref), [`GetInfo`](@ref), [`GetLastProcessID`](@ref), [`GetMapCount`](@ref), [`GetMappedObject`](@ref), [`GetParent`](@ref), [`GetPidOffset`](@ref), [`GetReAllocFunc`](@ref), [`GetTRefExecId`](@ref), [`GetVersionOwner`](@ref), [`IncrementLevel`](@ref), [`InitMap`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`IsWriting`](@ref), [`Length`](@ref), [`MapObject`](@ref), [`PeekDataCache`](@ref), [`PopDataCache`](@ref), [`PushDataCache`](@ref), [`ReadArrayDouble32`](@ref), [`ReadArrayFloat16`](@ref), [`ReadArray`](@ref), [`ReadBool`](@ref), [`ReadBuf`](@ref), [`ReadCharP`](@ref), [`ReadCharStar`](@ref), [`ReadChar`](@ref), [`ReadClassBuffer`](@ref), [`ReadClassEmulated`](@ref), [`ReadClass`](@ref), [`ReadClones`](@ref), [`ReadDouble32`](@ref), [`ReadDouble`](@ref), [`ReadFastArrayDouble32`](@ref), [`ReadFastArrayFloat16`](@ref), [`ReadFastArrayString`](@ref), [`ReadFastArrayWithFactor`](@ref), [`ReadFastArrayWithNbits`](@ref), [`ReadFastArray`](@ref), [`ReadFloat16`](@ref), [`ReadFloat`](@ref), [`ReadInt`](@ref), [`ReadLong64`](@ref), [`ReadLong`](@ref), [`ReadObjectAny`](@ref), [`ReadObject`](@ref), [`ReadProcessID`](@ref), [`ReadShort`](@ref), [`ReadStaticArrayDouble32`](@ref), [`ReadStaticArrayFloat16`](@ref), [`ReadStaticArray`](@ref), [`ReadStdString`](@ref), [`ReadString`](@ref), [`ReadTString`](@ref), [`ReadUChar`](@ref), [`ReadUInt`](@ref), [`ReadULong64`](@ref), [`ReadULong`](@ref), [`ReadUShort`](@ref), [`ReadVersionForMemberWise`](@ref), [`ReadVersionNoCheckSum`](@ref), [`ReadVersion`](@ref), [`ReadWithFactor`](@ref), [`ReadWithNbits`](@ref), [`ResetMap`](@ref), [`Reset`](@ref), [`SetBufferDisplacement`](@ref), [`SetBufferOffset`](@ref), [`SetBuffer`](@ref), [`SetByteCount`](@ref), [`SetParent`](@ref), [`SetPidOffset`](@ref), [`SetReAllocFunc`](@ref), [`SetReadMode`](@ref), [`SetReadParam`](@ref), [`SetStreamerElementNumber`](@ref), [`SetWriteMode`](@ref), [`SetWriteParam`](@ref), [`SkipObjectAny`](@ref), [`SkipVersion`](@ref), [`StreamObject`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer!Class_Name`](@ref), [`TBuffer!Class_Version`](@ref), [`TBuffer!Class`](@ref), [`TBuffer!DeclFileName`](@ref), [`TBuffer!GetClass`](@ref), [`TBuffer`](@ref), [`TagStreamerInfo`](@ref), [`WriteArrayDouble32`](@ref), [`WriteArrayFloat16`](@ref), [`WriteArray`](@ref), [`WriteBool`](@ref), [`WriteBuf`](@ref), [`WriteCharP`](@ref), [`WriteCharStar`](@ref), [`WriteChar`](@ref), [`WriteClassBuffer`](@ref), [`WriteClass`](@ref), [`WriteClones`](@ref), [`WriteDouble32`](@ref), [`WriteDouble`](@ref), [`WriteFastArrayDouble32`](@ref), [`WriteFastArrayFloat16`](@ref), [`WriteFastArrayString`](@ref), [`WriteFastArray`](@ref), [`WriteFloat16`](@ref), [`WriteFloat`](@ref), [`WriteInt`](@ref), [`WriteLong64`](@ref), [`WriteLong`](@ref), [`WriteObjectAny`](@ref), [`WriteObject`](@ref), [`WriteProcessID`](@ref), [`WriteShort`](@ref), [`WriteStdString`](@ref), [`WriteString`](@ref), [`WriteTString`](@ref), [`WriteUChar`](@ref), [`WriteUInt`](@ref), [`WriteULong64`](@ref), [`WriteULong`](@ref), [`WriteUShort`](@ref), [`WriteVersionMemberWise`](@ref), [`WriteVersion`](@ref)
+Related functions: [`ApplySequenceVecPtr`](@ref), [`ApplySequence`](@ref), [`AutoExpand`](@ref), [`BufferSize`](@ref), [`Buffer`](@ref), [`ByteSwapBuffer`](@ref), [`CheckByteCount`](@ref), [`CheckObject`](@ref), [`ClassBegin`](@ref), [`ClassEnd`](@ref), [`ClassMember`](@ref), [`DecrementLevel`](@ref), [`DetachBuffer`](@ref), [`Expand`](@ref), [`ForceWriteInfoClones`](@ref), [`ForceWriteInfo`](@ref), [`GetBufferDisplacement`](@ref), [`GetBufferVersion`](@ref), [`GetCurrent`](@ref), [`GetInfo`](@ref), [`GetLastProcessID`](@ref), [`GetMapCount`](@ref), [`GetMappedObject`](@ref), [`GetParent`](@ref), [`GetPidOffset`](@ref), [`GetReAllocFunc`](@ref), [`GetTRefExecId`](@ref), [`GetVersionOwner`](@ref), [`IncrementLevel`](@ref), [`InitMap`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`IsWriting`](@ref), [`Length`](@ref), [`MapObject`](@ref), [`PeekDataCache`](@ref), [`PopDataCache`](@ref), [`PushDataCache`](@ref), [`ReadArrayDouble32`](@ref), [`ReadArrayFloat16`](@ref), [`ReadArray`](@ref), [`ReadBool`](@ref), [`ReadBuf`](@ref), [`ReadCharP`](@ref), [`ReadCharStar`](@ref), [`ReadChar`](@ref), [`ReadClassBuffer`](@ref), [`ReadClassEmulated`](@ref), [`ReadClass`](@ref), [`ReadClones`](@ref), [`ReadDouble32`](@ref), [`ReadDouble`](@ref), [`ReadFastArrayDouble32`](@ref), [`ReadFastArrayFloat16`](@ref), [`ReadFastArrayGetString`](@ref), [`ReadFastArrayWithFactor`](@ref), [`ReadFastArrayWithNbits`](@ref), [`ReadFastArray`](@ref), [`ReadFloat16`](@ref), [`ReadFloat`](@ref), [`ReadGetString`](@ref), [`ReadInt`](@ref), [`ReadLong64`](@ref), [`ReadLong`](@ref), [`ReadObjectAny`](@ref), [`ReadObject`](@ref), [`ReadProcessID`](@ref), [`ReadShort`](@ref), [`ReadStaticArrayDouble32`](@ref), [`ReadStaticArrayFloat16`](@ref), [`ReadStaticArray`](@ref), [`ReadStdGetString`](@ref), [`ReadTGetString`](@ref), [`ReadUChar`](@ref), [`ReadUInt`](@ref), [`ReadULong64`](@ref), [`ReadULong`](@ref), [`ReadUShort`](@ref), [`ReadVersionForMemberWise`](@ref), [`ReadVersionNoCheckSum`](@ref), [`ReadVersion`](@ref), [`ReadWithFactor`](@ref), [`ReadWithNbits`](@ref), [`ResetMap`](@ref), [`Reset`](@ref), [`SetBufferDisplacement`](@ref), [`SetBufferOffset`](@ref), [`SetBuffer`](@ref), [`SetByteCount`](@ref), [`SetParent`](@ref), [`SetPidOffset`](@ref), [`SetReAllocFunc`](@ref), [`SetReadMode`](@ref), [`SetReadParam`](@ref), [`SetStreamerElementNumber`](@ref), [`SetWriteMode`](@ref), [`SetWriteParam`](@ref), [`SkipObjectAny`](@ref), [`SkipVersion`](@ref), [`StreamObject`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer!Class_Name`](@ref), [`TBuffer!Class_Version`](@ref), [`TBuffer!Class`](@ref), [`TBuffer!DeclFileName`](@ref), [`TBuffer!GetClass`](@ref), [`TBuffer`](@ref), [`TagStreamerInfo`](@ref), [`WriteArrayDouble32`](@ref), [`WriteArrayFloat16`](@ref), [`WriteArray`](@ref), [`WriteBool`](@ref), [`WriteBuf`](@ref), [`WriteCharP`](@ref), [`WriteCharStar`](@ref), [`WriteChar`](@ref), [`WriteClassBuffer`](@ref), [`WriteClass`](@ref), [`WriteClones`](@ref), [`WriteDouble32`](@ref), [`WriteDouble`](@ref), [`WriteFastArrayDouble32`](@ref), [`WriteFastArrayFloat16`](@ref), [`WriteFastArrayGetString`](@ref), [`WriteFastArray`](@ref), [`WriteFloat16`](@ref), [`WriteFloat`](@ref), [`WriteGetString`](@ref), [`WriteInt`](@ref), [`WriteLong64`](@ref), [`WriteLong`](@ref), [`WriteObjectAny`](@ref), [`WriteObject`](@ref), [`WriteProcessID`](@ref), [`WriteShort`](@ref), [`WriteStdGetString`](@ref), [`WriteTGetString`](@ref), [`WriteUChar`](@ref), [`WriteUInt`](@ref), [`WriteULong64`](@ref), [`WriteULong`](@ref), [`WriteUShort`](@ref), [`WriteVersionMemberWise`](@ref), [`WriteVersion`](@ref)
 """ TBuffer
 
 # Wrapper of TVectorT
@@ -257,7 +257,7 @@ See the [Matrix Linear Algebra](@ref) page for the documentation of the linear a
 
 Unless otherwise specified, vector indices always thestart with 0, spanning up to the specified limit-1.
 
-For (n) vectors where n <= kSizeMax (5 currently) storage space is available on the stack, thus avoiding expensive allocation/ deallocation of heap space . However, this Int32roduces of course kSizeMax overhead for each vector object . If this is an issue recompile with a new appropriate value (>=0) for kSizeMax
+For (n) vectors where n <= kSizeMax (5 currently) storage space is available on the stack, thus avoiding expensive allocation/ deallocation of heap space . However, this introduces of course kSizeMax overhead for each vector object . If this is an issue recompile with a new appropriate value (>=0) for kSizeMax
 
 Another way to assign and store vector data is through Use see for instance stressLinear.cxx file .
 
@@ -265,7 +265,7 @@ Note that Constructors/assignments exists for all different matrix views
 
 For usage examples see `$ROOTSYS/test/stressLinear.cxx`
 
-Related functions: [`Abs`](@ref), [`AddSomeConstant`](@ref), [`Add`](@ref), [`Apply`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`GetLwb`](@ref), [`GetMatrixArray`](@ref), [`GetNoElements`](@ref), [`GetNrows`](@ref), [`GetSub`](@ref), [`GetUpb`](@ref), [`Invalidate`](@ref), [`Invert`](@ref), [`IsOwner`](@ref), [`IsValid`](@ref), [`MakeValid`](@ref), [`MatchesNonZeroPattern`](@ref), [`Max`](@ref), [`Min`](@ref), [`NonZeros`](@ref), [`Norm1`](@ref), [`Norm2Sqr`](@ref), [`NormInf`](@ref), [`Print`](@ref), [`Randomize`](@ref), [`ResizeTo`](@ref), [`SelectNonZeros`](@ref), [`SetElements`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SomePositive`](@ref), [`Sqr`](@ref), [`Sqrt`](@ref), [`Sum`](@ref), [`TVectorT`](@ref), [`Use`](@ref), [`Zero`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
+Related functions: [`Abs`](@ref), [`AddSomeConstant`](@ref), [`Add`](@ref), [`Apply`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`GetGetMatrixArray`](@ref), [`GetLwb`](@ref), [`GetNoElements`](@ref), [`GetNrows`](@ref), [`GetSub`](@ref), [`GetUpb`](@ref), [`Invalidate`](@ref), [`Invert`](@ref), [`IsOwner`](@ref), [`IsValid`](@ref), [`MakeValid`](@ref), [`MatchesNonZeroPattern`](@ref), [`Max`](@ref), [`Min`](@ref), [`NonZeros`](@ref), [`Norm1`](@ref), [`Norm2Sqr`](@ref), [`NormInf`](@ref), [`Print`](@ref), [`Randomize`](@ref), [`ResizeTo`](@ref), [`SelectNonZeros`](@ref), [`SetElements`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SomePositive`](@ref), [`Sqr`](@ref), [`Sqrt`](@ref), [`Sum`](@ref), [`TVectorT`](@ref), [`Use`](@ref), [`Zero`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
 """ TVectorT
 
 # Wrapper of TCollection
@@ -293,7 +293,7 @@ Basic string class.
 
 Cannot be stored in a [TCollection](@ref)... use [TObjString](@ref) instead.
 
-The underlying string is stored as a char* that can be accessed via [TString!Data()](@ref). [TString](@ref) provides Short String Optimization (SSO) so that short strings (<15 on 64-bit and <11 on 32-bit) are contained in the [TString](@ref) Int32ernal data structure without the need for mallocing the required space.
+The underlying string is stored as a char* that can be accessed via [TString!Data()](@ref). [TString](@ref) provides Short String Optimization (SSO) so that short strings (<15 on 64-bit and <11 on 32-bit) are contained in the [TString](@ref) internal data structure without the need for mallocing the required space.
 
 Substring operations are provided by the [TSubString](@ref) class, which holds a reference to the original string and its data, along with the offset and length of the substring. To retrieve the substring as a [TString](@ref), construct a [TString](@ref) from it, eg: 
 
@@ -304,7 +304,7 @@ Substring operations are provided by the [TSubString](@ref) class, which holds a
 
 (C++ version of the code)
 
-Related functions: [`Append`](@ref), [`Atof`](@ref), [`Atoi`](@ref), [`Atoll`](@ref), [`Base.getindex`](@ref), [`BeginsWith`](@ref), [`Capacity`](@ref), [`Chop`](@ref), [`Clear`](@ref), [`CompareTo`](@ref), [`Contains`](@ref), [`Copy`](@ref), [`CountChar`](@ref), [`Data`](@ref), [`EndsWith`](@ref), [`EqualTo`](@ref), [`FillBuffer`](@ref), [`First`](@ref), [`Form`](@ref), [`Gets`](@ref), [`Hash`](@ref), [`Index`](@ref), [`Insert`](@ref), [`IsA`](@ref), [`IsAlnum`](@ref), [`IsAlpha`](@ref), [`IsAscii`](@ref), [`IsBin`](@ref), [`IsDec`](@ref), [`IsDigit`](@ref), [`IsFloat`](@ref), [`IsHex`](@ref), [`IsInBaseN`](@ref), [`IsNull`](@ref), [`IsOct`](@ref), [`IsWhitespace`](@ref), [`Last`](@ref), [`Length`](@ref), [`MD5`](@ref), [`MaybeRegexp`](@ref), [`MaybeWildcard`](@ref), [`Prepend`](@ref), [`Puts`](@ref), [`ReadBuffer`](@ref), [`ReadFile`](@ref), [`ReadLine`](@ref), [`ReadString`](@ref), [`ReadToDelim`](@ref), [`ReadToken`](@ref), [`Remove`](@ref), [`ReplaceAll`](@ref), [`ReplaceSpecialCppChars`](@ref), [`Replace`](@ref), [`Resize`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Strip`](@ref), [`SubString`](@ref), [`Swap`](@ref), [`TString!BaseConvert`](@ref), [`TString!Class_Name`](@ref), [`TString!Class_Version`](@ref), [`TString!Class`](@ref), [`TString!DeclFileName`](@ref), [`TString!Format`](@ref), [`TString!GetInitialCapacity`](@ref), [`TString!GetMaxWaste`](@ref), [`TString!GetResizeIncrement`](@ref), [`TString!Hash`](@ref), [`TString!InitialCapacity`](@ref), [`TString!Itoa`](@ref), [`TString!LLtoa`](@ref), [`TString!MaxWaste`](@ref), [`TString!ReadString`](@ref), [`TString!ResizeIncrement`](@ref), [`TString!UItoa`](@ref), [`TString!ULLtoa`](@ref), [`TString!WriteString`](@ref), [`TString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`Tokenize`](@ref), [`View`](@ref), [`add!`](@ref), [`assign`](@ref), [`const char *`](@ref), [`paren`](@ref)
+Related functions: [`Append`](@ref), [`Atof`](@ref), [`Atoi`](@ref), [`Atoll`](@ref), [`Base.getindex`](@ref), [`BeginsWith`](@ref), [`Capacity`](@ref), [`Chop`](@ref), [`Clear`](@ref), [`CompareTo`](@ref), [`Contains`](@ref), [`Copy`](@ref), [`CountChar`](@ref), [`Data`](@ref), [`EndsWith`](@ref), [`EqualTo`](@ref), [`FillBuffer`](@ref), [`First`](@ref), [`Form`](@ref), [`GetSubString`](@ref), [`Gets`](@ref), [`Hash`](@ref), [`Index`](@ref), [`Insert`](@ref), [`IsA`](@ref), [`IsAlnum`](@ref), [`IsAlpha`](@ref), [`IsAscii`](@ref), [`IsBin`](@ref), [`IsDec`](@ref), [`IsDigit`](@ref), [`IsFloat`](@ref), [`IsHex`](@ref), [`IsInBaseN`](@ref), [`IsNull`](@ref), [`IsOct`](@ref), [`IsWhitespace`](@ref), [`Last`](@ref), [`Length`](@ref), [`MD5`](@ref), [`MaybeRegexp`](@ref), [`MaybeWildcard`](@ref), [`Prepend`](@ref), [`Puts`](@ref), [`ReadBuffer`](@ref), [`ReadFile`](@ref), [`ReadGetString`](@ref), [`ReadLine`](@ref), [`ReadToDelim`](@ref), [`ReadToken`](@ref), [`Remove`](@ref), [`ReplaceAll`](@ref), [`ReplaceSpecialCppChars`](@ref), [`Replace`](@ref), [`Resize`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Strip`](@ref), [`Swap`](@ref), [`TGetString`](@ref), [`TString!BaseConvert`](@ref), [`TString!Class_Name`](@ref), [`TString!Class_Version`](@ref), [`TString!Class`](@ref), [`TString!DeclFileName`](@ref), [`TString!Format`](@ref), [`TString!GetInitialCapacity`](@ref), [`TString!GetMaxWaste`](@ref), [`TString!GetResizeIncrement`](@ref), [`TString!Hash`](@ref), [`TString!InitialCapacity`](@ref), [`TString!Itoa`](@ref), [`TString!LLtoa`](@ref), [`TString!MaxWaste`](@ref), [`TString!ReadGetString`](@ref), [`TString!ResizeIncrement`](@ref), [`TString!UItoa`](@ref), [`TString!ULLtoa`](@ref), [`TString!WriteGetString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`Tokenize`](@ref), [`View`](@ref), [`add!`](@ref), [`assign`](@ref), [`const char *`](@ref), [`paren`](@ref)
 """ TString
 
 # Wrapper of TSubString
@@ -317,7 +317,7 @@ It can thestart at any character. It is considered to be "pointing" to just befo
 
 A "null" substring is a zero length substring that starts with the nonsense index kNPOS. It can be detected with the member function [IsNull()](@ref).
 
-Related functions: [`Base.:!`](@ref), [`Base.getindex`](@ref), [`Data`](@ref), [`IsNull`](@ref), [`Length`](@ref), [`Start`](@ref), [`String`](@ref), [`TSubString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`assign`](@ref), [`paren`](@ref)
+Related functions: [`Base.:!`](@ref), [`Base.getindex`](@ref), [`Data`](@ref), [`GetString`](@ref), [`IsNull`](@ref), [`Length`](@ref), [`Start`](@ref), [`TGetSubString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`assign`](@ref), [`paren`](@ref)
 """ TSubString
 
 # Wrapper of TRegexp
@@ -362,7 +362,7 @@ Related functions: [`GetModifiers`](@ref), [`GetPattern`](@ref), [`IsA`](@ref), 
 @trydoc raw"""
     ROOT.TVirtualMutex
 
-This class implements a mutex Int32erface.
+This class implements a mutex interface.
 
 The actual work is done via [TMutex](@ref) which is available as soon as the thread library is loaded.
 
@@ -412,7 +412,7 @@ Related functions: [`Base.:(!=)`](@ref), [`Base.:(==)`](@ref), [`Base.getindex`]
 
 Iterator abstract base class.
 
-This base class provides the Int32erface for collection iterators.
+This base class provides the interface for collection iterators.
 
 Related functions: [`Base.:(!=)`](@ref), [`Base.:(==)`](@ref), [`Base.getindex`](@ref), [`GetCollection`](@ref), [`GetOption`](@ref), [`Next`](@ref), [`Reset`](@ref), [`assign`](@ref), [`paren`](@ref)
 """ TIterator
@@ -445,7 +445,7 @@ Related functions: [`AddAfter`](@ref), [`AddAt`](@ref), [`AddBefore`](@ref), [`A
 
 A doubly linked list.
 
-All classes inheriting from [TObject](@ref) can be inserted in a [TList](@ref). Before being inserted Int32o the list the object pointer is wrapped in a [TObjLink](@ref) object which contains, besides the object pointer also a previous and next pointer.
+All classes inheriting from [TObject](@ref) can be inserted in a [TList](@ref). Before being inserted into the list the object pointer is wrapped in a [TObjLink](@ref) object which contains, besides the object pointer also a previous and next pointer.
 
 There are several ways to iterate over a [TList](@ref); in order of preference, if not forced by other constraints:
 
@@ -554,7 +554,7 @@ Mediates the link between the signal and the slot.
 
 It decouples the setting of arguments and sending a signal.
 
-There are three different modes in argument setting required by [TQObject](@ref)'s Emit/EmitVA: setting Int32egral types, setting array types and setting const char*.
+There are three different modes in argument setting required by [TQObject](@ref)'s Emit/EmitVA: setting integral types, setting array types and setting const char*.
 
 Related functions: [`SendSignal`](@ref), [`SetArgs`](@ref)
 """ TVirtualQConnection
@@ -565,7 +565,7 @@ Related functions: [`SendSignal`](@ref), [`SetArgs`](@ref)
 
 This is the [ROOT](@ref) implementation of the Qt object communication mechanism (see also [http://www.troll.no/qt/metaobjects.html](http://www.troll.no/qt/metaobjects.html))
 
-Signals and slots are used for communication between objects. When an object has changed in some way that might be Int32eresting for the outside world, it emits a signal to tell whoever is listening. All slots that are connected to this signal will be activated (called). It is even possible to connect a signal directly to another signal (this will emit the second signal immediately whenever the first is emitted.) There is no limitation on the number of slots that can be connected to a signal. The slots will be activated in the order they were connected to the signal. This mechanism allows objects to be easily reused, because the object that emits a signal does not need to know to which objects the signals are connected. Together, signals and slots make up a powerfull component programming mechanism.
+Signals and slots are used for communication between objects. When an object has changed in some way that might be interesting for the outside world, it emits a signal to tell whoever is listening. All slots that are connected to this signal will be activated (called). It is even possible to connect a signal directly to another signal (this will emit the second signal immediately whenever the first is emitted.) There is no limitation on the number of slots that can be connected to a signal. The slots will be activated in the order they were connected to the signal. This mechanism allows objects to be easily reused, because the object that emits a signal does not need to know to which objects the signals are connected. Together, signals and slots make up a powerfull component programming mechanism.
 
 ### Signals
 
@@ -605,11 +605,11 @@ Related functions: [`IsA`](@ref), [`SetSenderClassName`](@ref), [`SetSender`](@r
 @trydoc raw"""
     ROOT.TApplication
 
-This class creates the [ROOT](@ref) Application Environment that Int32erfaces to the windowing system eventloop and eventhandlers.
+This class creates the [ROOT](@ref) Application Environment that interfaces to the windowing system eventloop and eventhandlers.
 
 This class must be instantiated exactly once in any given application. Normally the specific application class inherits from [TApplication](@ref) (see [TRint](@ref)).
 
-Related functions: [`ApplicationName`](@ref), [`Argc`](@ref), [`Argv`](@ref), [`ClearInputFiles`](@ref), [`ExitOnException`](@ref), [`GetAppRemote`](@ref), [`GetApplicationImp`](@ref), [`GetIdleCommand`](@ref), [`GetOptions`](@ref), [`GetSetup`](@ref), [`GetSignalHandler`](@ref), [`HandleException`](@ref), [`HandleIdleTimer`](@ref), [`HandleTermInput`](@ref), [`Hide`](@ref), [`Iconify`](@ref), [`Init`](@ref), [`InitializeGraphics`](@ref), [`InputFiles`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsRunning`](@ref), [`KeyPressed`](@ref), [`LineProcessed`](@ref), [`Lower`](@ref), [`NoLogOpt`](@ref), [`NoLogoOpt`](@ref), [`OpenForumTopic`](@ref), [`OpenGitHubIssue`](@ref), [`OpenInBrowser`](@ref), [`OpenReferenceGuideFor`](@ref), [`Open`](@ref), [`ProcessFile`](@ref), [`ProcessLine`](@ref), [`QuitOpt`](@ref), [`Raise`](@ref), [`RemoveIdleTimer`](@ref), [`ReturnFromRun`](@ref), [`ReturnPressed`](@ref), [`Run`](@ref), [`SetEchoMode`](@ref), [`SetIdleTimer`](@ref), [`SetReturnFromRun`](@ref), [`Show`](@ref), [`StartIdleing`](@ref), [`StopIdleing`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TApplication!Class_Name`](@ref), [`TApplication!Class_Version`](@ref), [`TApplication!Class`](@ref), [`TApplication!CreateApplication`](@ref), [`TApplication!DeclFileName`](@ref), [`TApplication!ExecuteFile`](@ref), [`TApplication!GetApplications`](@ref), [`TApplication!NeedGraphicsLibs`](@ref), [`TApplication`](@ref), [`TabCompletionHook`](@ref), [`Terminate`](@ref), [`WorkingDirectory`](@ref), [`ls`](@ref)
+Related functions: [`ApplicationName`](@ref), [`Argc`](@ref), [`Argv`](@ref), [`ClearInputFiles`](@ref), [`ExitOnException`](@ref), [`GetAppRemote`](@ref), [`GetApplicationImp`](@ref), [`GetIdleCommand`](@ref), [`GetOptions`](@ref), [`GetSetup`](@ref), [`GetSignalHandler`](@ref), [`HandleException`](@ref), [`HandleIdleGetTimer`](@ref), [`HandleTermInput`](@ref), [`Hide`](@ref), [`Iconify`](@ref), [`Init`](@ref), [`InitializeGraphics`](@ref), [`InputFiles`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsRunning`](@ref), [`KeyPressed`](@ref), [`LineProcessed`](@ref), [`Lower`](@ref), [`NoLogOpt`](@ref), [`NoLogoOpt`](@ref), [`OpenForumTopic`](@ref), [`OpenGitHubIssue`](@ref), [`OpenInBrowser`](@ref), [`OpenReferenceGuideFor`](@ref), [`Open`](@ref), [`ProcessFile`](@ref), [`ProcessLine`](@ref), [`QuitOpt`](@ref), [`Raise`](@ref), [`RemoveIdleGetTimer`](@ref), [`ReturnFromRun`](@ref), [`ReturnPressed`](@ref), [`Run`](@ref), [`SetEchoMode`](@ref), [`SetIdleGetTimer`](@ref), [`SetReturnFromRun`](@ref), [`Show`](@ref), [`StartIdleing`](@ref), [`StopIdleing`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TApplication!Class_Name`](@ref), [`TApplication!Class_Version`](@ref), [`TApplication!Class`](@ref), [`TApplication!CreateApplication`](@ref), [`TApplication!DeclFileName`](@ref), [`TApplication!ExecuteFile`](@ref), [`TApplication!GetApplications`](@ref), [`TApplication!NeedGraphicsLibs`](@ref), [`TApplication`](@ref), [`TabCompletionHook`](@ref), [`Terminate`](@ref), [`WorkingDirectory`](@ref), [`ls`](@ref)
 """ TApplication
 
 # Wrapper of TSignalHandler
@@ -718,13 +718,13 @@ Fill Area attributes are:
 
 ## Fill Area color
 
-The fill area color is a color index (Int32eger) pointing in the [ROOT](@ref) color table. The fill area color of any class inheriting from `TAttFill` can be changed using the method `SetFillColor` and retrieved using the method `GetFillColor`. The following table shows the first 50 default colors.
+The fill area color is a color index (integer) pointing in the [ROOT](@ref) color table. The fill area color of any class inheriting from `TAttFill` can be changed using the method `SetFillColor` and retrieved using the method `GetFillColor`. The following table shows the first 50 default colors.
 
 ![https://root.cern/doc/v636/pict1_TAttFill_001.png](https://root.cern/doc/v636/pict1_TAttFill_001.png)
 
 ### Color transparency
 
-`SetFillColorAlpha()`, allows to set a transparent color. In the following example the fill color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is Int32ernally stored as fully opaque.)
+`SetFillColorAlpha()`, allows to set a transparent color. In the following example the fill color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is internally stored as fully opaque.)
 
     histo->SetFillColorAlpha(kBlue, 0.35);
 
@@ -742,7 +742,7 @@ Using this color set for your text, background or graphics will give your applic
 
 Colors are grouped by hue, the aspect most important in human perception Touching color chips have the same hue, but with different brightness and vividness.
 
-Colors of slightly different hues *clash*. If you Int32end to display colors of the same hue together, you should pick them from the same group.
+Colors of slightly different hues *clash*. If you intend to display colors of the same hue together, you should pick them from the same group.
 
 Each color chip is identified by a mnemonic (eg kYellow) and a number. The keywords, kRed, kBlue, kYellow, kPink, etc are defined in the header file **Rtypes.h** that is included in all [ROOT](@ref) other header files. We strongly recommend to use these keywords in your code instead of hardcoded color numbers, eg: 
 
@@ -832,13 +832,13 @@ Line attributes are:
 
 ## Line Color
 
-The line color is a color index (Int32eger) pointing in the [ROOT](@ref) color table. The line color of any class inheriting from `TAttLine` can be changed using the method `SetLineColor` and retrieved using the method `GetLineColor`. The following table shows the first 50 default colors.
+The line color is a color index (integer) pointing in the [ROOT](@ref) color table. The line color of any class inheriting from `TAttLine` can be changed using the method `SetLineColor` and retrieved using the method `GetLineColor`. The following table shows the first 50 default colors.
 
 ![https://root.cern/doc/v636/pict1_TAttLine_001.png](https://root.cern/doc/v636/pict1_TAttLine_001.png)
 
 ### Color transparency
 
-`SetLineColorAlpha()`, allows to set a transparent color. In the following example the line color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is Int32ernally stored as fully opaque.)
+`SetLineColorAlpha()`, allows to set a transparent color. In the following example the line color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is internally stored as fully opaque.)
 
     histo->SetLineColorAlpha(kBlue, 0.35);
 
@@ -856,7 +856,7 @@ The line width is expressed in pixel units. The line width of any class inheriti
 
 ## Line Style
 
-Line styles are identified via Int32eger numbers. The line style of any class inheriting from `TAttLine` can be changed using the method `SetLineStyle` and retrieved using the method `GetLineStyle`.
+Line styles are identified via integer numbers. The line style of any class inheriting from `TAttLine` can be changed using the method `SetLineStyle` and retrieved using the method `GetLineStyle`.
 
 The first 10 line styles are predefined as shown on the following picture:
 
@@ -902,13 +902,13 @@ The marker attributes are:
 
 ## Marker color
 
-The marker color is a color index (Int32eger) pointing in the [ROOT](@ref) color table. The marker color of any class inheriting from `TAttMarker` can be changed using the method `SetMarkerColor` and retrieved using the method `GetMarkerColor`. The following table shows the first 50 default colors.
+The marker color is a color index (integer) pointing in the [ROOT](@ref) color table. The marker color of any class inheriting from `TAttMarker` can be changed using the method `SetMarkerColor` and retrieved using the method `GetMarkerColor`. The following table shows the first 50 default colors.
 
 ![https://root.cern/doc/v636/pict1_TAttMarker_001.png](https://root.cern/doc/v636/pict1_TAttMarker_001.png)
 
 ### Color transparency
 
-`SetMarkerColorAlpha()`, allows to set a transparent color. In the following example the marker color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is Int32ernally stored as fully opaque.)
+`SetMarkerColorAlpha()`, allows to set a transparent color. In the following example the marker color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is internally stored as fully opaque.)
 
     histo->SetMarkerColorAlpha(kBlue, 0.35);
 
@@ -922,7 +922,7 @@ Alternatively, you can call at the top of your script `gSytle->SetCanvasPreferGL
 
 The Marker style defines the markers' shape. The marker style of any class inheriting from `TAttMarker` can be changed using the method `SetMarkerStyle` and retrieved using the method `GetMarkerStyle`.
 
-The following list gives the currently supported markers (screen and PostScript) style. Each marker style is identified by an Int32eger number (first column) corresponding to a marker shape (second column) and can be also accessed via a global_ name (third column).
+The following list gives the currently supported markers (screen and PostScript) style. Each marker style is identified by an integer number (first column) corresponding to a marker shape (second column) and can be also accessed via a global_ name (third column).
 
     Marker number         Marker shape          Marker name
          1                    dot                  kDot
@@ -1036,7 +1036,7 @@ Text attributes are:
 
 ## Text Alignment
 
-The text alignment is an Int32eger number (`align`) allowing to control the horizontal and vertical position of the text string with respect to the text position. The text alignment of any class inheriting from `TAttText` can be changed using the method `SetTextAlign` and retrieved using the method `GetTextAlign`.
+The text alignment is an integer number (`align`) allowing to control the horizontal and vertical position of the text string with respect to the text position. The text alignment of any class inheriting from `TAttText` can be changed using the method `SetTextAlign` and retrieved using the method `GetTextAlign`.
 
     align = 10*HorizontalAlign + VerticalAlign
 
@@ -1088,13 +1088,13 @@ Text angle in degrees. The text angle of any class inheriting from `TAttText` ca
 
 ## Text Color
 
-The text color is a color index (Int32eger) pointing in the [ROOT](@ref) color table. The text color of any class inheriting from `TAttText` can be changed using the method `SetTextColor` and retrieved using the method `GetTextColor`. The following table shows the first 50 default colors.
+The text color is a color index (integer) pointing in the [ROOT](@ref) color table. The text color of any class inheriting from `TAttText` can be changed using the method `SetTextColor` and retrieved using the method `GetTextColor`. The following table shows the first 50 default colors.
 
 ![https://root.cern/doc/v636/pict1_TAttText_003.png](https://root.cern/doc/v636/pict1_TAttText_003.png)
 
 ### Color transparency
 
-`SetTextColorAlpha()`, allows to set a transparent color. In the following example the text color of the text `text` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is Int32ernally stored as fully opaque.)
+`SetTextColorAlpha()`, allows to set a transparent color. In the following example the text color of the text `text` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is internally stored as fully opaque.)
 
     text->SetTextColorAlpha(kBlue, 0.35);
 
@@ -1182,7 +1182,7 @@ On screen, text is rendered using free [TTF](@ref) fonts similar to the PDF ones
 
 ![https://root.cern/doc/v636/pict1_TAttText_004.png](https://root.cern/doc/v636/pict1_TAttText_004.png)
 
-Related functions: [`Copy`](@ref), [`GetTextAlign`](@ref), [`GetTextAngle`](@ref), [`GetTextColor`](@ref), [`GetTextFont`](@ref), [`GetTextSizePercent`](@ref), [`GetTextSize`](@ref), [`IsA`](@ref), [`Modify`](@ref), [`ResetAttText`](@ref), [`SaveTextAttributes`](@ref), [`SetTextAlign`](@ref), [`SetTextAngle`](@ref), [`SetTextAttributes`](@ref), [`SetTextColorAlpha`](@ref), [`SetTextColor`](@ref), [`SetTextFont`](@ref), [`SetTextSizePixels`](@ref), [`SetTextSize`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TAttText!Class_Name`](@ref), [`TAttText!Class_Version`](@ref), [`TAttText!Class`](@ref), [`TAttText!DeclFileName`](@ref), [`TAttText`](@ref)
+Related functions: [`Copy`](@ref), [`GetGetTextAlign`](@ref), [`GetGetTextAngle`](@ref), [`GetGetTextColor`](@ref), [`GetGetTextFont`](@ref), [`GetGetTextSizePercent`](@ref), [`GetGetTextSize`](@ref), [`IsA`](@ref), [`Modify`](@ref), [`ResetAttGetText`](@ref), [`SaveGetTextAttributes`](@ref), [`SetGetTextAlign`](@ref), [`SetGetTextAngle`](@ref), [`SetGetTextAttributes`](@ref), [`SetGetTextColorAlpha`](@ref), [`SetGetTextColor`](@ref), [`SetGetTextFont`](@ref), [`SetGetTextSizePixels`](@ref), [`SetGetTextSize`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TAttGetText`](@ref), [`TAttText!Class_Name`](@ref), [`TAttText!Class_Version`](@ref), [`TAttText!Class`](@ref), [`TAttText!DeclFileName`](@ref)
 """ TAttText
 
 # Wrapper of TBase64
@@ -1228,13 +1228,13 @@ See [TBuffer3DTypes](@ref) for producer classes.
 
 ### Filling TBuffer3D and Adding to Viewer
 
-The viewers behind the [TVirtualViewer3D](@ref) Int32erface differ greatly in their capabilities e.g.
+The viewers behind the [TVirtualViewer3D](@ref) interface differ greatly in their capabilities e.g.
 
 - Some know how to draw certain shapes natively (e.g. spheres/tubes in OpenGL)
 - others always require a raw tessellation description of points/lines/segments.
 - Some need the 3D object positions in the global_ frame, others can cope with local_ frames + a translation matrix - which can give considerable performance benefits.
 
-To cope with these situations the object buffer is filled out in negotiation with the viewer. [TBuffer3D](@ref) classes are conceptually divided Int32o enumerated sections Core, BoundingBox, Raw etc (see TBuffer3D.h for more details).
+To cope with these situations the object buffer is filled out in negotiation with the viewer. [TBuffer3D](@ref) classes are conceptually divided into enumerated sections Core, BoundingBox, Raw etc (see TBuffer3D.h for more details).
 
 ![https://root.cern/doc/v636/base_tbuffer3d.png](https://root.cern/doc/v636/base_tbuffer3d.png)
 
@@ -1284,13 +1284,13 @@ OpenGL only supports solid spheres at present - cut/hollow ones will be requeste
 
 Anyone is free to add new [TBuffer3D](@ref) classes, but it should be clear that the viewers require updating to be able to take advantage of them. The number of native shapes in OpenGL will be expanded over time.
 
-`BoundingBox:` You are not obliged to complete this, as any viewer requiring one Int32ernally (OpenGL) will build one for you if you do not provide. However to do this the viewer will force you to provide the raw tessellation, and the resulting box will be axis aligned with the overall scene, which is non-ideal for rotated shapes.
+`BoundingBox:` You are not obliged to complete this, as any viewer requiring one internally (OpenGL) will build one for you if you do not provide. However to do this the viewer will force you to provide the raw tessellation, and the resulting box will be axis aligned with the overall scene, which is non-ideal for rotated shapes.
 
 As we need to support orientated (rotated) bounding boxes, [TBuffer3D](@ref) requires the 6 vertices of the box. We also provide a convenience function, [SetAABoundingBox()](@ref), for simpler case of setting an axis aligned bounding box.
 
 ### Master/Local Reference Frames
 
-The `Core` section of [TBuffer3D](@ref) contains two members relating to reference frames: `fLocalFrame` & `fLocalMaster`. `fLocalFrame` indicates if any positions in the buffer (bounding box and tessellation vertexes) are in local_ or master (world frame). `fLocalMaster` is a standard 4x4 translation matrix (OpenGL column major ordering) for placing the object Int32o the 3D master frame.
+The `Core` section of [TBuffer3D](@ref) contains two members relating to reference frames: `fLocalFrame` & `fLocalMaster`. `fLocalFrame` indicates if any positions in the buffer (bounding box and tessellation vertexes) are in local_ or master (world frame). `fLocalMaster` is a standard 4x4 translation matrix (OpenGL column major ordering) for placing the object into the 3D master frame.
 
 If `fLocalFrame` is kFALSE, `fLocalMaster` should contain an identity matrix. This is set by default, and can be reset using `SetLocalMasterIdentity()` function.
 
@@ -1299,9 +1299,9 @@ Logical & Physical Objects. There are two cases of object addition:
 - Add this object as a single independent entity in the world reference frame.
 - Add a physical placement (copy) of this logical object (described in local_ reference frame).
 
-The second case is very typical in geometry packages, GEANT4, where we have very large number repeated placements of relatively few logical (unique) shapes. Some viewers (OpenGL only at present) are able to take advantage of this by identifying unique logical shapes from the `fID` logical ID member of [TBuffer3D](@ref). If repeated addition of the same `fID` is found, the shape is cached already - and the costly tessellation does not need to be sent again. The viewer can also perform Int32ernal GL specific caching with considerable performance gains in these cases.
+The second case is very typical in geometry packages, GEANT4, where we have very large number repeated placements of relatively few logical (unique) shapes. Some viewers (OpenGL only at present) are able to take advantage of this by identifying unique logical shapes from the `fID` logical ID member of [TBuffer3D](@ref). If repeated addition of the same `fID` is found, the shape is cached already - and the costly tessellation does not need to be sent again. The viewer can also perform internal GL specific caching with considerable performance gains in these cases.
 
-For this to work correctly the logical object in must be described in [TBuffer3D](@ref) in the local_ reference frame, complete with the local_/master translation. The viewer indicates this through the Int32erface method
+For this to work correctly the logical object in must be described in [TBuffer3D](@ref) in the local_ reference frame, complete with the local_/master translation. The viewer indicates this through the interface method
 
     PreferLocalFrame()
 
@@ -1318,13 +1318,13 @@ As a minimum requirement all clients must be capable of filling the raw tessella
 It should be understood that AddObject is not an explicit command to the viewer
 
 - it may for various reasons decide to ignore it:
-- It already has the object Int32ernally cached .
-- The object falls outside some 'Int32erest' limits of the viewer camera.
+- It already has the object internally cached .
+- The object falls outside some 'interest' limits of the viewer camera.
 - The object is too small to be worth drawing.
 
 In all these cases AddObject() returns kNone, as it does for successful addition, simply indicating it does not require you to provide further information about this object. You should not try to make any assumptions about what the viewer did with it.
 
-This enables the viewer to be connected to a client which sends potentially millions of objects, and only accept those that are of Int32erest at a certain time, caching the relatively small number of CPU/memory costly logical shapes, and retaining/discarding the physical placements as required. The viewer may decide to force the client to rebuild (republish) the scene (via a [TPad](@ref) repaint at present), and thus collect these objects if the Int32ernal viewer state changes. It does this presently by forcing a repaint on the attached [TPad](@ref) object - hence the reason for putting all publishing to the viewer in the attached pad objects [Paint()](@ref) method. We will likely remove this requirement in the future, indicating the rebuild request via a normal [ROOT](@ref) signal, which the client can detect.
+This enables the viewer to be connected to a client which sends potentially millions of objects, and only accept those that are of interest at a certain time, caching the relatively small number of CPU/memory costly logical shapes, and retaining/discarding the physical placements as required. The viewer may decide to force the client to rebuild (republish) the scene (via a [TPad](@ref) repaint at present), and thus collect these objects if the internal viewer state changes. It does this presently by forcing a repaint on the attached [TPad](@ref) object - hence the reason for putting all publishing to the viewer in the attached pad objects [Paint()](@ref) method. We will likely remove this requirement in the future, indicating the rebuild request via a normal [ROOT](@ref) signal, which the client can detect.
 
 ### Physical IDs
 
@@ -1334,17 +1334,17 @@ This enables the viewer to be connected to a client which sends potentially mill
 
 (C++ version of the code)
 
-If you use the first (simple) case a viewer using logical/physical pairs SetSectionsValid(TBuffer3D!kBoundingBox); will generate IDs for each physical object Int32ernally. In the second you can specify a unique identifier from the client, which allows the viewer to be more efficient. It can now cache both logical and physical objects, and only discard physical objects no longer of Int32erest as part of scene rebuilds.
+If you use the first (simple) case a viewer using logical/physical pairs SetSectionsValid(TBuffer3D!kBoundingBox); will generate IDs for each physical object internally. In the second you can specify a unique identifier from the client, which allows the viewer to be more efficient. It can now cache both logical and physical objects, and only discard physical objects no longer of interest as part of scene rebuilds.
 
 ### Child Objects
 
-In many geometries there is a rigid containment hierarchy, and so if the viewer is not Int32erested in a certain object due to limits/size then it will also not be Int32erest in any of the contained branch of descendents. Both AddObject() methods have an addChildren parameter. The viewer will complete this (if passed) indicating if children (contained within the one just sent) are worth adding.
+In many geometries there is a rigid containment hierarchy, and so if the viewer is not interested in a certain object due to limits/size then it will also not be interest in any of the contained branch of descendents. Both AddObject() methods have an addChildren parameter. The viewer will complete this (if passed) indicating if children (contained within the one just sent) are worth adding.
 
 ### Recycling TBuffer3D
 
-Once add AddObject() has been called, the contents are copied to the viewer Int32ernally. You are free to destroy this object, or recycle it for the next object if suitable.
+Once add AddObject() has been called, the contents are copied to the viewer internally. You are free to destroy this object, or recycle it for the next object if suitable.
 
-Related functions: [`ClearSectionsValid`](@ref), [`GetSections`](@ref), [`IsA`](@ref), [`NbPnts`](@ref), [`NbPols`](@ref), [`NbSegs`](@ref), [`SectionsValid`](@ref), [`SetAABoundingBox`](@ref), [`SetLocalMasterIdentity`](@ref), [`SetRawSizes`](@ref), [`SetSectionsValid`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer3D!Class_Name`](@ref), [`TBuffer3D!Class_Version`](@ref), [`TBuffer3D!Class`](@ref), [`TBuffer3D!DecCSLevel`](@ref), [`TBuffer3D!DeclFileName`](@ref), [`TBuffer3D!GetCSLevel`](@ref), [`TBuffer3D!IncCSLevel`](@ref), [`TBuffer3D`](@ref), [`Type`](@ref)
+Related functions: [`ClearSectionsValid`](@ref), [`GetSections`](@ref), [`GetType`](@ref), [`IsA`](@ref), [`NbPnts`](@ref), [`NbPols`](@ref), [`NbSegs`](@ref), [`SectionsValid`](@ref), [`SetAABoundingBox`](@ref), [`SetLocalMasterIdentity`](@ref), [`SetRawSizes`](@ref), [`SetSectionsValid`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer3D!Class_Name`](@ref), [`TBuffer3D!Class_Version`](@ref), [`TBuffer3D!Class`](@ref), [`TBuffer3D!DecCSLevel`](@ref), [`TBuffer3D!DeclFileName`](@ref), [`TBuffer3D!GetCSLevel`](@ref), [`TBuffer3D!IncCSLevel`](@ref), [`TBuffer3D`](@ref)
 """ TBuffer3D
 
 # Wrapper of TBuffer3DSphere
@@ -1445,7 +1445,7 @@ The [TProcessID](@ref) title consists of a [TUUID](@ref) object which provides a
 
 A [TProcessID](@ref) is automatically created by the [TROOT](@ref) constructor. When a [TFile](@ref) contains referenced objects (see [TRef](@ref)), the [TProcessID](@ref) object is written to the file. If a file has been written in multiple sessions (same machine or not), a [TProcessID](@ref) is written for each session. These objects are used by the class [TRef](@ref) to uniquely identified any [TObject](@ref) pointed by a [TRef](@ref).
 
-When a referenced object is read from a file (its bit kIsReferenced is set), this object is entered Int32o the objects table of the corresponding [TProcessID](@ref). Each [TFile](@ref) has a list of TProcessIDs (see [TFile!fProcessIDs](@ref)) also accessible via [TProcessID!fgPIDs](@ref) (for all files). When this object is deleted, it is removed from the table via the cleanup mechanism invoked by the [TObject](@ref) destructor.
+When a referenced object is read from a file (its bit kIsReferenced is set), this object is entered into the objects table of the corresponding [TProcessID](@ref). Each [TFile](@ref) has a list of TProcessIDs (see [TFile!fProcessIDs](@ref)) also accessible via [TProcessID!fgPIDs](@ref) (for all files). When this object is deleted, it is removed from the table via the cleanup mechanism invoked by the [TObject](@ref) destructor.
 
 Each [TProcessID](@ref) has a table ([TObjArray](@ref) *fObjects) that keeps track of all referenced objects. If a referenced object has a fUniqueID set, a pointer to this unique object may be found via fObjects->At(fUniqueID). In the same way, when a [TRef!GetObject](@ref) is called, GetObject uses its own fUniqueID to find the pointer to the referenced object. See [TProcessID!GetObjectWithID](@ref) and PutObjectWithID.
 
@@ -1468,7 +1468,7 @@ To reduce the very large number of new and delete calls in large loops like this
 
     TObjArray a(10000);
     while (TEvent *ev = (TEvent *)next()) {      // O(100000) events
-       for (Int32 i = 0; i < ev->Ntracks; i++) {   // O(10000) tracks
+       for (int i = 0; i < ev->Ntracks; i++) {   // O(10000) tracks
           a[i] = new TTrack(x,y,z,...);
           ...
           ...
@@ -1483,7 +1483,7 @@ To reduce the very large number of new and delete calls in large loops like this
 
     TClonesArray a("TTrack", 10000);
     while (TEvent *ev = (TEvent *)next()) {      // O(100000) events
-       for (Int32 i = 0; i < ev->Ntracks; i++) {   // O(10000) tracks
+       for (int i = 0; i < ev->Ntracks; i++) {   // O(10000) tracks
           new(a[i]) TTrack(x,y,z,...);
           ...
           ...
@@ -1498,7 +1498,7 @@ To reduce the very large number of new and delete calls in large loops like this
 
     TClonesArray a("TTrack", 10000);
     while (TEvent *ev = (TEvent *)next()) {      // O(100000) events
-       for (Int32 i = 0; i < ev->Ntracks; i++) {   // O(10000) tracks
+       for (int i = 0; i < ev->Ntracks; i++) {   // O(10000) tracks
           TTrack *track = (TTrack*)a.ConstructedAt(i);
           track->Set(x,y,z,....);
           ...
@@ -1519,7 +1519,7 @@ Considering that a new/delete costs about 70 mus on a 300 MHz HP, O(10^9) new/de
 C/C++ offers the possibility of allocating and deleting memory. Forgetting to delete allocated memory is a programming error called a "memory leak", i.e. the memory of your process grows and eventually your program crashes. Even if you *always* delete the allocated memory, the recovered space may not be efficiently reused. The process knows that there are portions of free memory, but when you allocate it again, a fresh piece of memory is grabbed. Your program is free from semantic errors, but the total memory of your process still grows, because your program's memory is full of "holes" which reduce the efficiency of memory access; this is called "memory
 fragmentation". Moreover new / delete are expensive operations in terms of CPU time.
 
-Without entering Int32o technical details, [TClonesArray](@ref) allows you to "reuse" the same portion of memory for new/delete avoiding memory fragmentation and memory growth and improving the performance by orders of magnitude. Every time the memory of the [TClonesArray](@ref) has to be reused, the [Clear()](@ref) method is used. To provide its benefits, each [TClonesArray](@ref) must be allocated *once* per process and disposed of (deleted) *only when not needed any more*.
+Without entering into technical details, [TClonesArray](@ref) allows you to "reuse" the same portion of memory for new/delete avoiding memory fragmentation and memory growth and improving the performance by orders of magnitude. Every time the memory of the [TClonesArray](@ref) has to be reused, the [Clear()](@ref) method is used. To provide its benefits, each [TClonesArray](@ref) must be allocated *once* per process and disposed of (deleted) *only when not needed any more*.
 
 So a job should see *only one* deletion for each [TClonesArray](@ref), which should be [Clear()](@ref)ed during the job several times. Deleting a [TClonesArray](@ref) is a double waste. Not only you do not avoid memory fragmentation, but you worsen it because the [TClonesArray](@ref) itself is a rather heavy structure, and there is quite some code in the destructor, so you have more memory fragmentation and slower code.
 
@@ -1610,7 +1610,7 @@ Using this color set for your text, background or graphics will give your applic
 
 Colors are grouped by hue, the aspect most important in human perception. Touching color chips have the same hue, but with different brightness and vividness.
 
-Colors of slightly different hues clash. If you Int32end to display colors of the same hue together, you should pick them from the same group.
+Colors of slightly different hues clash. If you intend to display colors of the same hue together, you should pick them from the same group.
 
 Each color chip is identified by a mnemonic (e.g. kYellow) and a number. The keywords, kRed, kBlue, kYellow, kPink, etc are defined in the header file Rtypes.h that is included in all [ROOT](@ref) other header files. It is better to use these keywords in user code instead of hardcoded color numbers, e.g.:
 
@@ -1691,7 +1691,7 @@ After a call to `TColor!CreateGradientColorTable()` it is sometimes useful to st
     Double_t Blue[]   = {0., 1.0, 0.0, 0.0, 1.0};
     Double_t Length[] = {0., .25, .50, .75, 1.0};
     Int_t FI = TColor!CreateGradientColorTable(5, Length, Red, Green, Blue, 100);
-    for (Int32 i=0;i<100;i++) MyPalette[i] = FI+i;
+    for (int i=0;i<100;i++) MyPalette[i] = FI+i;
 
 (C++ version of the code)
 
@@ -1709,7 +1709,7 @@ As only one palette is active, one need to use `TExec` to be able to display plo
 
 ###Since
 
-6.26: The function TColor!CreateColorTableFromFile("filename.txt") allows you to create a color palette based on an input ASCII file. In contrast to TColor!CreateGradientColorTable(), here the length (spacing) is constant and can not be tuned. There is no gradient being Int32erpolated between adjacent colors. The palette will contain the exact colors stored in the file, that comprises one line per color in the format "r g b" as floats.
+6.26: The function TColor!CreateColorTableFromFile("filename.txt") allows you to create a color palette based on an input ASCII file. In contrast to TColor!CreateGradientColorTable(), here the length (spacing) is constant and can not be tuned. There is no gradient being interpolated between adjacent colors. The palette will contain the exact colors stored in the file, that comprises one line per color in the format "r g b" as floats.
 
 ## High quality predefined palettes
 
@@ -1751,7 +1751,7 @@ The `kCMYK` palette, is also not great because it's dark, then lighter, then hal
 
 Therefore the palettes are classified in two categories: those which are Colour Vision Deficiency friendly and those which are not.
 
-An easy way to classify the palettes is to turn them Int32o grayscale using [TCanvas!SetGrayscale()](@ref). The grayscale version of a palette should be as proportional as possible, and monotonously increasing or decreasing.
+An easy way to classify the palettes is to turn them into grayscale using [TCanvas!SetGrayscale()](@ref). The grayscale version of a palette should be as proportional as possible, and monotonously increasing or decreasing.
 
 Unless it is symmetrical, then it is fine to have white in the borders and black in the centre (for example an axis that goes between -40 degrees and +40 degrees, the 0 has a meaning in the perceptualcolormap.C example).
 
@@ -1820,7 +1820,7 @@ To ease the creation of a transparent color the static method `GetColorTranspare
 
 (C++ version of the code)
 
-This function is also used in the methods `SetFillColorAlpha()`, `SetLineColorAlpha()`, `SetMarkerColorAlpha()` and `SetTextColorAlpha()`. In the following example the fill color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is Int32ernally stored as fully opaque.)
+This function is also used in the methods `SetFillColorAlpha()`, `SetLineColorAlpha()`, `SetMarkerColorAlpha()` and `SetTextColorAlpha()`. In the following example the fill color of the histogram `histo` is set to blue with an opacity of 35% (i.e. a transparency of 65%). (The color `kBlue` itself is internally stored as fully opaque.)
 
     histo->SetFillColorAlpha(kBlue, 0.35);
 
@@ -1836,7 +1836,7 @@ The following macro gives an example of transparency usage:
 
  ![https://root.cern/doc/v636/pict1_TColor_071.png](https://root.cern/doc/v636/pict1_TColor_071.png)
 
-Related functions: [`AsHexString`](@ref), [`Copy`](@ref), [`GetAlpha`](@ref), [`GetBlue`](@ref), [`GetGrayscale`](@ref), [`GetGreen`](@ref), [`GetHLS`](@ref), [`GetHue`](@ref), [`GetLight`](@ref), [`GetNumber`](@ref), [`GetPixel`](@ref), [`GetRGB`](@ref), [`GetRed`](@ref), [`GetSaturation`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetAlpha`](@ref), [`SetRGB`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColor!Class_Name`](@ref), [`TColor!Class_Version`](@ref), [`TColor!Class`](@ref), [`TColor!CreateColorTableFromFile`](@ref), [`TColor!CreateColorWheel`](@ref), [`TColor!CreateColorsCircle`](@ref), [`TColor!CreateColorsGray`](@ref), [`TColor!CreateColorsRectangle`](@ref), [`TColor!CreateGradientColorTable`](@ref), [`TColor!DeclFileName`](@ref), [`TColor!DefinedColors`](@ref), [`TColor!GetColorBright`](@ref), [`TColor!GetColorByName`](@ref), [`TColor!GetColorDark`](@ref), [`TColor!GetColorPalette`](@ref), [`TColor!GetColorTransparent`](@ref), [`TColor!GetColor`](@ref), [`TColor!GetFreeColorIndex`](@ref), [`TColor!GetLinearGradient`](@ref), [`TColor!GetNumberOfColors`](@ref), [`TColor!GetPalette`](@ref), [`TColor!GetRadialGradient`](@ref), [`TColor!HLS2RGB`](@ref), [`TColor!HLStoRGB`](@ref), [`TColor!HSV2RGB`](@ref), [`TColor!InitializeColors`](@ref), [`TColor!InvertPalette`](@ref), [`TColor!IsGrayscale`](@ref), [`TColor!ListColors`](@ref), [`TColor!Number2Pixel`](@ref), [`TColor!Pixel2RGB`](@ref), [`TColor!PixelAsHexString`](@ref), [`TColor!RGB2HLS`](@ref), [`TColor!RGB2HSV`](@ref), [`TColor!RGB2Pixel`](@ref), [`TColor!RGBtoHLS`](@ref), [`TColor!SaveColor`](@ref), [`TColor!SetColorThreshold`](@ref), [`TColor!SetGrayscale`](@ref), [`TColor!SetPalette`](@ref), [`TColor`](@ref), [`assign`](@ref), [`ls`](@ref)
+Related functions: [`AsHexGetString`](@ref), [`Copy`](@ref), [`GetAlpha`](@ref), [`GetBlue`](@ref), [`GetGrayscale`](@ref), [`GetGreen`](@ref), [`GetHLS`](@ref), [`GetHue`](@ref), [`GetLight`](@ref), [`GetNumber`](@ref), [`GetPixel`](@ref), [`GetRGB`](@ref), [`GetRed`](@ref), [`GetSaturation`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetAlpha`](@ref), [`SetRGB`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColor!Class_Name`](@ref), [`TColor!Class_Version`](@ref), [`TColor!Class`](@ref), [`TColor!CreateColorTableFromFile`](@ref), [`TColor!CreateColorWheel`](@ref), [`TColor!CreateColorsCircle`](@ref), [`TColor!CreateColorsGray`](@ref), [`TColor!CreateColorsRectangle`](@ref), [`TColor!CreateGradientColorTable`](@ref), [`TColor!DeclFileName`](@ref), [`TColor!DefinedColors`](@ref), [`TColor!GetColorBright`](@ref), [`TColor!GetColorByName`](@ref), [`TColor!GetColorDark`](@ref), [`TColor!GetColorPalette`](@ref), [`TColor!GetColorTransparent`](@ref), [`TColor!GetColor`](@ref), [`TColor!GetFreeColorIndex`](@ref), [`TColor!GetLinearGradient`](@ref), [`TColor!GetNumberOfColors`](@ref), [`TColor!GetPalette`](@ref), [`TColor!GetRadialGradient`](@ref), [`TColor!HLS2RGB`](@ref), [`TColor!HLStoRGB`](@ref), [`TColor!HSV2RGB`](@ref), [`TColor!InitializeColors`](@ref), [`TColor!InvertPalette`](@ref), [`TColor!IsGrayscale`](@ref), [`TColor!ListColors`](@ref), [`TColor!Number2Pixel`](@ref), [`TColor!Pixel2RGB`](@ref), [`TColor!PixelAsHexGetString`](@ref), [`TColor!RGB2HLS`](@ref), [`TColor!RGB2HSV`](@ref), [`TColor!RGB2Pixel`](@ref), [`TColor!RGBtoHLS`](@ref), [`TColor!SaveColor`](@ref), [`TColor!SetColorThreshold`](@ref), [`TColor!SetGrayscale`](@ref), [`TColor!SetPalette`](@ref), [`TColor`](@ref), [`assign`](@ref), [`ls`](@ref)
 """ TColor
 
 # Wrapper of TColorGradient
@@ -1871,7 +1871,7 @@ Related functions: [`GetEnd`](@ref), [`GetStart`](@ref), [`IsA`](@ref), [`SetSta
 
 
 
-Related functions: [`GetCenter`](@ref), [`GetEnd`](@ref), [`GetGradientType`](@ref), [`GetR1`](@ref), [`GetR2`](@ref), [`GetRadius`](@ref), [`GetStart`](@ref), [`IsA`](@ref), [`SetRadialGradient`](@ref), [`SetStartEndR1R2`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColorGradient`](@ref), [`TRadialGradient!Class_Name`](@ref), [`TRadialGradient!Class_Version`](@ref), [`TRadialGradient!Class`](@ref), [`TRadialGradient!DeclFileName`](@ref), [`TRadialGradient`](@ref)
+Related functions: [`GetCenter`](@ref), [`GetEnd`](@ref), [`GetGradientGetType`](@ref), [`GetR1`](@ref), [`GetR2`](@ref), [`GetRadius`](@ref), [`GetStart`](@ref), [`IsA`](@ref), [`SetRadialGradient`](@ref), [`SetStartEndR1R2`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColorGradient`](@ref), [`TRadialGradient!Class_Name`](@ref), [`TRadialGradient!Class_Version`](@ref), [`TRadialGradient!Class`](@ref), [`TRadialGradient!DeclFileName`](@ref), [`TRadialGradient`](@ref)
 """ TRadialGradient
 
 # Wrapper of TDatime
@@ -1884,7 +1884,7 @@ The date is stored with the origin being the 1st January 1995.
 
 This class has no support for time zones. The time is assumed to be in the local_ time of the machine where the object was created. As a result, [TDatime](@ref) objects are not portable between machines operating in different time zones and unsuitable for storing the date/time of data taking events and the like. If absolute time is required, use [TTimeStamp](@ref).
 
-Related functions: [`AsSQLString`](@ref), [`AsString`](@ref), [`Convert`](@ref), [`Copy`](@ref), [`FillBuffer`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDay`](@ref), [`GetHour`](@ref), [`GetMinute`](@ref), [`GetMonth`](@ref), [`GetSecond`](@ref), [`GetTime`](@ref), [`GetYear`](@ref), [`Get`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`Set`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TDatime!Class_Name`](@ref), [`TDatime!Class_Version`](@ref), [`TDatime!Class`](@ref), [`TDatime!DeclFileName`](@ref), [`TDatime!GetDateFromGlobalDay`](@ref), [`TDatime!GetDateTime`](@ref), [`TDatime!GetGlobalDayFromDate`](@ref), [`TDatime!GetLegalGlobalDayFromDate`](@ref), [`TDatime`](@ref), [`assign`](@ref)
+Related functions: [`AsGetString`](@ref), [`AsSQLGetString`](@ref), [`Convert`](@ref), [`Copy`](@ref), [`FillBuffer`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDay`](@ref), [`GetHour`](@ref), [`GetMinute`](@ref), [`GetMonth`](@ref), [`GetSecond`](@ref), [`GetTime`](@ref), [`GetYear`](@ref), [`Get`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`Set`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TDatime!Class_Name`](@ref), [`TDatime!Class_Version`](@ref), [`TDatime!Class`](@ref), [`TDatime!DeclFileName`](@ref), [`TDatime!GetDateFromGlobalDay`](@ref), [`TDatime!GetDateTime`](@ref), [`TDatime!GetGlobalDayFromDate`](@ref), [`TDatime!GetLegalGlobalDayFromDate`](@ref), [`TDatime`](@ref), [`assign`](@ref)
 """ TDatime
 
 # Wrapper of TUUID
@@ -1901,7 +1901,7 @@ In the way this UUID is constructed, when used outside of their original concept
 
 Structure of universal unique IDs (UUIDs).
 
-Depending on the network data representation, the multi- octet unsigned Int32eger fields are subject to byte swapping when communicated between dissimilar endian machines. 
+Depending on the network data representation, the multi- octet unsigned integer fields are subject to byte swapping when communicated between dissimilar endian machines. 
 
     +-----------------------------------+
     |     low 32 bits of time           |  0-3   .fTimeLow
@@ -1919,9 +1919,9 @@ Depending on the network data representation, the multi- octet unsigned Int32ege
 
 (C++ version of the code)
 
-The adjusted time stamp is split Int32o three fields, and the clockSeq is split Int32o two fields.
+The adjusted time stamp is split into three fields, and the clockSeq is split into two fields.
 
-The timestamp is a 60-bit value. For UUID version 1, this is represented by Coordinated Universal Time (UTC/GMT) as a count of 100-nanosecond Int32ervals since 00:00:00.00, 15 October 1582 (the date of Gregorian reform to the Christian calendar).
+The timestamp is a 60-bit value. For UUID version 1, this is represented by Coordinated Universal Time (UTC/GMT) as a count of 100-nanosecond intervals since 00:00:00.00, 15 October 1582 (the date of Gregorian reform to the Christian calendar).
 
 The version number is multiplexed in the 4 most significant bits of the 'fTimeHiAndVersion' field. There are two defined versions: 
 
@@ -1954,7 +1954,7 @@ UUIDs may be created at a rate greater than the system clock resolution. Therefo
 
 The 100-nanosecond granularity of time should prove sufficient even for bursts of UUID production in the next generation of high-performance multiprocessors. If a system overruns the clock adjustment by requesting too many UUIDs within a single system clock tick, the UUID generator will stall until the system clock catches up.
 
-Related functions: [`AsString`](@ref), [`Compare`](@ref), [`FillBuffer`](@ref), [`GetHostAddress`](@ref), [`GetTime`](@ref), [`GetUUIDNumber`](@ref), [`GetUUID`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`SetUUIDNumber`](@ref), [`SetUUID`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`StreamerV1`](@ref), [`Streamer`](@ref), [`TUUID!Class_Name`](@ref), [`TUUID!Class_Version`](@ref), [`TUUID!Class`](@ref), [`TUUID!DeclFileName`](@ref), [`TUUID`](@ref)
+Related functions: [`AsGetString`](@ref), [`Compare`](@ref), [`FillBuffer`](@ref), [`GetHostAddress`](@ref), [`GetTime`](@ref), [`GetUUIDNumber`](@ref), [`GetUUID`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`SetUUIDNumber`](@ref), [`SetUUID`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`StreamerV1`](@ref), [`Streamer`](@ref), [`TUUID!Class_Name`](@ref), [`TUUID!Class_Version`](@ref), [`TUUID!Class`](@ref), [`TUUID!DeclFileName`](@ref), [`TUUID`](@ref)
 """ TUUID
 
 # Wrapper of TInetAddress
@@ -1993,7 +1993,7 @@ The [TKey](@ref) class includes functions to book space in a file, to create I/O
 | fDatime         | Date/Time when the object was written.                                                                                          |
 | fKeylen         | Number of bytes for the key structure.                                                                                          |
 | fCycle          | Cycle number of the object.                                                                                                     |
-| fSeekKey        | Address of the object on file (points to fNbytes). This is a redundant information used to cross-check the data base Int32egrity. |
+| fSeekKey        | Address of the object on file (points to fNbytes). This is a redundant information used to cross-check the data base integrity. |
 | fSeekPdir       | Pointer to the directory supporting this object.                                                                                |
 | fClassName      | Object class name.                                                                                                              |
 | fName           | Name of the object.                                                                                                             |
@@ -2047,7 +2047,7 @@ The first data record starts at byte fBEGIN (currently set to kBEGIN). Bytes 1->
 | 42->45 [54->57] | fNbytesInfo     | Number of bytes in [TStreamerInfo](@ref) record    |
 | 46->63 [58->75] | fUUID           | Universal Unique ID                                |
 
-For the purpose of magic bytes in the context of [ROOT](@ref) files' MIME definition, the following additional requirements are Int32roduced:
+For the purpose of magic bytes in the context of [ROOT](@ref) files' MIME definition, the following additional requirements are introduced:
 
 - The value of `fBEGIN` is fixed at 100.
 - The four bytes starting at position 96 are reserved and must be 0. If any changes to this need to be made, `media-types@iana.org` needs to be notified in accordance with RFC 6838.
@@ -2076,7 +2076,7 @@ The key structure is as follows; if a key is located past the 32 bit file limit 
 
 The structure of a directory is shown in TDirectoryFile!TDirectoryFile
 
-Related functions: [`Close`](@ref), [`Copy`](@ref), [`Cp`](@ref), [`CreateKey`](@ref), [`Delete`](@ref), [`DrawMap`](@ref), [`Draw`](@ref), [`FillBuffer`](@ref), [`Flush`](@ref), [`GetArchiveOffset`](@ref), [`GetArchive`](@ref), [`GetBestBuffer`](@ref), [`GetBytesReadExtra`](@ref), [`GetBytesRead`](@ref), [`GetBytesToPrefetch`](@ref), [`GetBytesWritten`](@ref), [`GetCacheRead`](@ref), [`GetCacheWrite`](@ref), [`GetClassIndex`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionFactor`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetEND`](@ref), [`GetEndpointUrl`](@ref), [`GetErrno`](@ref), [`GetFd`](@ref), [`GetListOfFree`](@ref), [`GetListOfProcessIDs`](@ref), [`GetNProcessIDs`](@ref), [`GetNbytesFree`](@ref), [`GetNbytesInfo`](@ref), [`GetNewUrl`](@ref), [`GetNfree`](@ref), [`GetOption`](@ref), [`GetReadCalls`](@ref), [`GetRecordHeader`](@ref), [`GetRelOffset`](@ref), [`GetSeekFree`](@ref), [`GetSeekInfo`](@ref), [`GetSize`](@ref), [`GetStreamerInfoCache`](@ref), [`GetStreamerInfoList`](@ref), [`GetVersion`](@ref), [`IncrementProcessIDs`](@ref), [`IsArchive`](@ref), [`IsBinary`](@ref), [`IsOpen`](@ref), [`IsRaw`](@ref), [`MakeFree`](@ref), [`MakeProject`](@ref), [`Map`](@ref), [`Matches`](@ref), [`MustFlush`](@ref), [`Paint`](@ref), [`Print`](@ref), [`ReOpen`](@ref), [`ReadBufferAsync`](@ref), [`ReadBuffer`](@ref), [`ReadBuffers`](@ref), [`ReadFree`](@ref), [`ReadProcessID`](@ref), [`ReadStreamerInfo`](@ref), [`Recover`](@ref), [`ResetErrno`](@ref), [`Seek`](@ref), [`SetCacheRead`](@ref), [`SetCacheWrite`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEND`](@ref), [`SetOffset`](@ref), [`SetOption`](@ref), [`SetReadCalls`](@ref), [`ShowStreamerInfo`](@ref), [`Sizeof`](@ref), [`SumBuffer`](@ref), [`TFile!AsyncOpen`](@ref), [`TFile!Cp`](@ref), [`TFile!CurrentFile`](@ref), [`TFile!GetAsyncOpenStatus`](@ref), [`TFile!GetCacheFileDir`](@ref), [`TFile!GetEndpointUrl`](@ref), [`TFile!GetFileBytesRead`](@ref), [`TFile!GetFileBytesWritten`](@ref), [`TFile!GetFileCounter`](@ref), [`TFile!GetFileReadCalls`](@ref), [`TFile!GetOnlyStaged`](@ref), [`TFile!GetOpenTimeout`](@ref), [`TFile!GetReadStreamerInfo`](@ref), [`TFile!GetReadaheadSize`](@ref), [`TFile!GetType`](@ref), [`TFile!IncrementFileCounter`](@ref), [`TFile!Open`](@ref), [`TFile!SetCacheFileDir`](@ref), [`TFile!SetFileBytesRead`](@ref), [`TFile!SetFileBytesWritten`](@ref), [`TFile!SetFileReadCalls`](@ref), [`TFile!SetOnlyStaged`](@ref), [`TFile!SetOpenTimeout`](@ref), [`TFile!SetReadStreamerInfo`](@ref), [`TFile!SetReadaheadSize`](@ref), [`TFile!ShrinkCacheFileDir`](@ref), [`TFile`](@ref), [`WriteBuffer`](@ref), [`WriteFree`](@ref), [`WriteHeader`](@ref), [`WriteProcessID`](@ref), [`WriteStreamerInfo`](@ref), [`Write`](@ref), [`ls`](@ref)
+Related functions: [`Close`](@ref), [`Copy`](@ref), [`Cp`](@ref), [`CreateKey`](@ref), [`Delete`](@ref), [`DrawMap`](@ref), [`Draw`](@ref), [`FillBuffer`](@ref), [`Flush`](@ref), [`GetArchiveOffset`](@ref), [`GetArchive`](@ref), [`GetBestBuffer`](@ref), [`GetBytesReadExtra`](@ref), [`GetBytesRead`](@ref), [`GetBytesToPrefetch`](@ref), [`GetBytesWritten`](@ref), [`GetCacheRead`](@ref), [`GetCacheWrite`](@ref), [`GetClassIndex`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionFactor`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetEND`](@ref), [`GetEndpointUrl`](@ref), [`GetErrno`](@ref), [`GetFd`](@ref), [`GetListOfFree`](@ref), [`GetListOfProcessIDs`](@ref), [`GetNProcessIDs`](@ref), [`GetNbytesFree`](@ref), [`GetNbytesInfo`](@ref), [`GetNewUrl`](@ref), [`GetNfree`](@ref), [`GetOption`](@ref), [`GetReadCalls`](@ref), [`GetRecordHeader`](@ref), [`GetRelOffset`](@ref), [`GetSeekFree`](@ref), [`GetSeekInfo`](@ref), [`GetSize`](@ref), [`GetStreamerInfoCache`](@ref), [`GetStreamerInfoList`](@ref), [`GetVersion`](@ref), [`IncrementProcessIDs`](@ref), [`IsArchive`](@ref), [`IsBinary`](@ref), [`IsOpen`](@ref), [`IsRaw`](@ref), [`MakeFree`](@ref), [`MakeProject`](@ref), [`Map`](@ref), [`Matches`](@ref), [`MustFlush`](@ref), [`Paint`](@ref), [`Print`](@ref), [`ReOpen`](@ref), [`ReadBufferAsync`](@ref), [`ReadBuffer`](@ref), [`ReadBuffers`](@ref), [`ReadFree`](@ref), [`ReadProcessID`](@ref), [`ReadStreamerInfo`](@ref), [`Recover`](@ref), [`ResetErrno`](@ref), [`Seek`](@ref), [`SetCacheRead`](@ref), [`SetCacheWrite`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEND`](@ref), [`SetOffset`](@ref), [`SetOption`](@ref), [`SetReadCalls`](@ref), [`ShowStreamerInfo`](@ref), [`Sizeof`](@ref), [`SumBuffer`](@ref), [`TFile!AsyncOpen`](@ref), [`TFile!Cp`](@ref), [`TFile!CurrentFile`](@ref), [`TFile!GetAsyncOpenStatus`](@ref), [`TFile!GetCacheFileDir`](@ref), [`TFile!GetEndpointUrl`](@ref), [`TFile!GetFileBytesRead`](@ref), [`TFile!GetFileBytesWritten`](@ref), [`TFile!GetFileCounter`](@ref), [`TFile!GetFileReadCalls`](@ref), [`TFile!GetGetType`](@ref), [`TFile!GetOnlyStaged`](@ref), [`TFile!GetOpenTimeout`](@ref), [`TFile!GetReadStreamerInfo`](@ref), [`TFile!GetReadaheadSize`](@ref), [`TFile!IncrementFileCounter`](@ref), [`TFile!Open`](@ref), [`TFile!SetCacheFileDir`](@ref), [`TFile!SetFileBytesRead`](@ref), [`TFile!SetFileBytesWritten`](@ref), [`TFile!SetFileReadCalls`](@ref), [`TFile!SetOnlyStaged`](@ref), [`TFile!SetOpenTimeout`](@ref), [`TFile!SetReadStreamerInfo`](@ref), [`TFile!SetReadaheadSize`](@ref), [`TFile!ShrinkCacheFileDir`](@ref), [`TFile`](@ref), [`WriteBuffer`](@ref), [`WriteFree`](@ref), [`WriteHeader`](@ref), [`WriteProcessID`](@ref), [`WriteStreamerInfo`](@ref), [`Write`](@ref), [`ls`](@ref)
 """ TFile
 
 # Wrapper of TEnv
@@ -2093,7 +2093,7 @@ The format of the `.rootrc` file is similar to the `.Xdefaults` format:
 
 (C++ version of the code)
 
- Where `<SystemName>` is either Unix, WinNT, MacOS or Vms, `<RootName>` the name as given in the [TApplication](@ref) ctor (or "RootApp" in case no explicit [TApplication](@ref) derived object was created), `<ProgName>` the current program name and `<name>` the resource name, with optionally a type specification. `<value>` can be either a string, an Int32eger, a float/double or a boolean with the values TRUE, FALSE, ON, OFF, YES, NO, OK, NOT. Booleans will be returned as an Int32eger 0 or 1. The options [+] allows the concatenation of values to the same resource name.
+ Where `<SystemName>` is either Unix, WinNT, MacOS or Vms, `<RootName>` the name as given in the [TApplication](@ref) ctor (or "RootApp" in case no explicit [TApplication](@ref) derived object was created), `<ProgName>` the current program name and `<name>` the resource name, with optionally a type specification. `<value>` can be either a string, an integer, a float/double or a boolean with the values TRUE, FALSE, ON, OFF, YES, NO, OK, NOT. Booleans will be returned as an integer 0 or 1. The options [+] allows the concatenation of values to the same resource name.
 
 E.g.: 
 
@@ -2120,7 +2120,7 @@ To add new entries to a [TEnv](@ref):
 
 (C++ version of the code)
 
- All new entries will be saved in the file corresponding to the first [SaveLevel()](@ref) command. If [Save()](@ref) is used, new entries go Int32o the local_ file by default.
+ All new entries will be saved in the file corresponding to the first [SaveLevel()](@ref) command. If [Save()](@ref) is used, new entries go into the local_ file by default.
 
 Related functions: [`Defined`](@ref), [`GetRcName`](@ref), [`GetTable`](@ref), [`GetValue`](@ref), [`IgnoreDuplicates`](@ref), [`IsA`](@ref), [`Lookup`](@ref), [`PrintEnv`](@ref), [`Print`](@ref), [`ReadFile`](@ref), [`SaveLevel`](@ref), [`Save`](@ref), [`SetRcName`](@ref), [`SetValue`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TEnv!Class_Name`](@ref), [`TEnv!Class_Version`](@ref), [`TEnv!Class`](@ref), [`TEnv!DeclFileName`](@ref), [`TEnv`](@ref), [`WriteFile`](@ref)
 """ TEnv
@@ -2133,7 +2133,7 @@ Related functions: [`Defined`](@ref), [`GetRcName`](@ref), [`GetTable`](@ref), [
 
 
 
-Related functions: [`GetLevel`](@ref), [`GetName`](@ref), [`GetType`](@ref), [`GetValue`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TEnvRec!Class_Name`](@ref), [`TEnvRec!Class_Version`](@ref), [`TEnvRec!Class`](@ref), [`TEnvRec!DeclFileName`](@ref), [`TEnvRec`](@ref)
+Related functions: [`GetGetType`](@ref), [`GetLevel`](@ref), [`GetName`](@ref), [`GetValue`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TEnvRec!Class_Name`](@ref), [`TEnvRec!Class_Version`](@ref), [`TEnvRec!Class`](@ref), [`TEnvRec!DeclFileName`](@ref), [`TEnvRec`](@ref)
 """ TEnvRec
 
 # Wrapper of THashList
@@ -2168,7 +2168,7 @@ The command in turn can invoke a C++ macro to paint graphics objects at position
 
 ### Case 1:
 
-The [TExec](@ref) object is in the list of pad primitives (after exec.Draw()). When the pad is drawn, the [TExec!Paint](@ref) function is called. This function will execute the specified command. The following example uses the services of the class Aclock created in `$ROOTSYS/test/Aclock.cxx`. This examples uses a [TTimer](@ref) to redraw a pad at regular Int32ervals (clock). When the clock is updated, a string with the current date&time is drawn. 
+The [TExec](@ref) object is in the list of pad primitives (after exec.Draw()). When the pad is drawn, the [TExec!Paint](@ref) function is called. This function will execute the specified command. The following example uses the services of the class Aclock created in `$ROOTSYS/test/Aclock.cxx`. This examples uses a [TTimer](@ref) to redraw a pad at regular intervals (clock). When the clock is updated, a string with the current date&time is drawn. 
 
     {
        gSystem->Load("$ROOTSYS/test/Aclock");
@@ -2202,11 +2202,11 @@ Assume an histogram [TH1F](@ref) *h already filled.
 
 (C++ version of the code)
 
-When the Paint function for the histogram will be called, the "DoSomething" function will be called (Int32erpreted or compiled) and also the macro.C.
+When the Paint function for the histogram will be called, the "DoSomething" function will be called (interpreted or compiled) and also the macro.C.
 
 ### Case 3:
 
-A [TExec](@ref) object is automatically generated when invoking [TPad!AddExec](@ref). Each pad contains a [TList](@ref) of TExecs (0, 1 or more). When a mouse event (motion, click, etc) happens, the pad object executes sequentially this list of TExecs. In the code (Int32erpreted or compiled) executed by the [TExec](@ref) referenced command, one can call the pad service functions such as [TPad!GetEvent](@ref), [TPad!GetEventX](@ref), [TPad!GetEventY](@ref) to find which type of event and the X,Y position of the mouse. By default, the list of TExecs is executed. This can be disabled via the canvas menu "Option". See $ROOTSYS/tutorials/hist/exec2.C for an example. 
+A [TExec](@ref) object is automatically generated when invoking [TPad!AddExec](@ref). Each pad contains a [TList](@ref) of TExecs (0, 1 or more). When a mouse event (motion, click, etc) happens, the pad object executes sequentially this list of TExecs. In the code (interpreted or compiled) executed by the [TExec](@ref) referenced command, one can call the pad service functions such as [TPad!GetEvent](@ref), [TPad!GetEventX](@ref), [TPad!GetEventY](@ref) to find which type of event and the X,Y position of the mouse. By default, the list of TExecs is executed. This can be disabled via the canvas menu "Option". See $ROOTSYS/tutorials/hist/exec2.C for an example. 
 
     Root > TFile f("hsimple.root");
     Root > hpxpy.Draw();
@@ -2214,7 +2214,7 @@ A [TExec](@ref) object is automatically generated when invoking [TPad!AddExec](@
 
 (C++ version of the code)
 
- When moving the mouse in the canvas, a second canvas shows the projection along X of the bin corresponding to the Y position of the mouse. The resulting histogram is fitted with a gaussian. A "dynamic" line shows the current bin position in Y. This more elaborated example can be used as a starting point to develop more powerful Int32eractive applications exploiting CINT as a development engine.
+ When moving the mouse in the canvas, a second canvas shows the projection along X of the bin corresponding to the Y position of the mouse. The resulting histogram is fitted with a gaussian. A "dynamic" line shows the current bin position in Y. This more elaborated example can be used as a starting point to develop more powerful interactive applications exploiting CINT as a development engine.
 
 The 3 options above can be combined.
 
@@ -2292,7 +2292,7 @@ Equivalent code is available from RSA Data Security, Inc. This code has been tes
 
 To compute the message digest of a chunk of bytes, create an [TMD5](@ref) object, call [Update()](@ref) as needed on buffers full of bytes, and then call [Final()](@ref), which will, optionally, fill a supplied 16-byte array with the digest.
 
-Related functions: [`AsString`](@ref), [`Final`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetDigest`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TMD5!Class_Name`](@ref), [`TMD5!Class_Version`](@ref), [`TMD5!Class`](@ref), [`TMD5!DeclFileName`](@ref), [`TMD5!FileChecksum`](@ref), [`TMD5!ReadChecksum`](@ref), [`TMD5!WriteChecksum`](@ref), [`TMD5`](@ref), [`Update`](@ref), [`assign`](@ref)
+Related functions: [`AsGetString`](@ref), [`Final`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetDigest`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TMD5!Class_Name`](@ref), [`TMD5!Class_Version`](@ref), [`TMD5!Class`](@ref), [`TMD5!DeclFileName`](@ref), [`TMD5!FileChecksum`](@ref), [`TMD5!ReadChecksum`](@ref), [`TMD5!WriteChecksum`](@ref), [`TMD5`](@ref), [`Update`](@ref), [`assign`](@ref)
 """ TMD5
 
 # Wrapper of TFolder
@@ -2307,7 +2307,7 @@ A [TFolder](@ref) object is a collection of objects and folders. Folders have a 
 
 The Root folders hierarchy can be seen as a whiteboard where objects are posted. Other classes/tasks can access these objects by specifying only a string pathname. This whiteboard facility greatly improves the modularity of an application, minimizing the class relationship problem that penalizes large applications.
 
-Pointers are efficient to communicate between classes. However, one has Int32erest to minimize direct coupling between classes in the form of direct pointers. One better uses the naming and search service provided by the Root folders hierarchy. This makes the classes loosely coupled and also greatly facilitates I/O operations. In a client/server environment, this mechanism facilitates the access to any kind of object in //root stores running on different processes.
+Pointers are efficient to communicate between classes. However, one has interest to minimize direct coupling between classes in the form of direct pointers. One better uses the naming and search service provided by the Root folders hierarchy. This makes the classes loosely coupled and also greatly facilitates I/O operations. In a client/server environment, this mechanism facilitates the access to any kind of object in //root stores running on different processes.
 
 A [TFolder](@ref) is created by invoking the [TFolder](@ref) constructor. It is placed inside an existing folder via the [TFolder!AddFolder](@ref) method. One can search for a folder or an object in a folder using the FindObject method. FindObject analyses the string passed as its argument and searches in the hierarchy until it finds an object or folder matching the name.
 
@@ -2404,7 +2404,7 @@ A node in a doubly linked list of subscribers to [TChain](@ref) notifications.
 
 [TObject](@ref) has a virtual [TObject!Notify()](@ref) method that takes no parameters and returns a boolean. By default the method does nothing, and different objects in [ROOT](@ref) use this method for different purposes.
 
-`TChain` uses `Notify` to implement a callback mechanism that notifies Int32erested parties (subscribers) when the chain switches to a new sub-tree. In practice it calls the [Notify()](@ref) method of its fNotify data member from [TChain!LoadTree()](@ref). However there could be several different objects Int32erested in knowing that a given [TChain](@ref) switched to a new tree. [TNotifyLink](@ref) can be used to build a linked list of subscribers: calling [TNotifyLink!Notify()](@ref) on the head node of the list propagates the call to all subscribers in the list.
+`TChain` uses `Notify` to implement a callback mechanism that notifies interested parties (subscribers) when the chain switches to a new sub-tree. In practice it calls the [Notify()](@ref) method of its fNotify data member from [TChain!LoadTree()](@ref). However there could be several different objects interested in knowing that a given [TChain](@ref) switched to a new tree. [TNotifyLink](@ref) can be used to build a linked list of subscribers: calling [TNotifyLink!Notify()](@ref) on the head node of the list propagates the call to all subscribers in the list.
 
 Example usage: 
 
@@ -2470,12 +2470,12 @@ The [TROOT](@ref) class provides also many useful services:
 - Get pointer to an object in any of the lists above
 - Time utilities [TROOT!Time](@ref)
 
-The [ROOT](@ref) object must be created as a static object. An example of a main program creating an Int32eractive version is shown below:
+The [ROOT](@ref) object must be created as a static object. An example of a main program creating an interactive version is shown below:
 
 ### Example of a main program
 
     #include "TRint.h"
-    Int32 main(Int32 argc, char **argv)
+    int main(int argc, char **argv)
     {
        TRint *theApp = new TRint("ROOT example", &argc, argv);
        // Init Intrinsics, build all windows, and enter event loop
@@ -2485,7 +2485,7 @@ The [ROOT](@ref) object must be created as a static object. An example of a main
 
 (C++ version of the code)
 
-Related functions: [`AddClassGenerator`](@ref), [`AddClass`](@ref), [`Append`](@ref), [`Browse`](@ref), [`ClassSaved`](@ref), [`CloseFiles`](@ref), [`EndOfProcessCleanups`](@ref), [`FindObjectAnyFile`](@ref), [`FindObjectAny`](@ref), [`FindObjectClassName`](@ref), [`FindObjectPathName`](@ref), [`FindObject`](@ref), [`FindSTLClass`](@ref), [`FindSpecialObject`](@ref), [`ForceStyle`](@ref), [`FromPopUp`](@ref), [`GetApplication`](@ref), [`GetBuiltDate`](@ref), [`GetBuiltTime`](@ref), [`GetClass`](@ref), [`GetClipboard`](@ref), [`GetColor`](@ref), [`GetConfigFeatures`](@ref), [`GetConfigOptions`](@ref), [`GetCutClassName`](@ref), [`GetDefCanvasName`](@ref), [`GetEditHistograms`](@ref), [`GetEditorMode`](@ref), [`GetFile`](@ref), [`GetForceStyle`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunction`](@ref), [`GetGeometry`](@ref), [`GetGitBranch`](@ref), [`GetGitCommit`](@ref), [`GetGitDate`](@ref), [`GetGlobalFunctionWithPrototype`](@ref), [`GetGlobalFunction`](@ref), [`GetGlobal`](@ref), [`GetInterpreter`](@ref), [`GetListOfBrowsables`](@ref), [`GetListOfBrowsers`](@ref), [`GetListOfCanvases`](@ref), [`GetListOfClassGenerators`](@ref), [`GetListOfClasses`](@ref), [`GetListOfCleanups`](@ref), [`GetListOfClosedObjects`](@ref), [`GetListOfColors`](@ref), [`GetListOfDataSets`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFiles`](@ref), [`GetListOfFunctionOverloads`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfFunctions`](@ref), [`GetListOfGeometries`](@ref), [`GetListOfGlobalFunctions`](@ref), [`GetListOfGlobals`](@ref), [`GetListOfMappedFiles`](@ref), [`GetListOfMessageHandlers`](@ref), [`GetListOfProofs`](@ref), [`GetListOfSecContexts`](@ref), [`GetListOfSockets`](@ref), [`GetListOfSpecials`](@ref), [`GetListOfStreamerInfo`](@ref), [`GetListOfStyles`](@ref), [`GetListOfTasks`](@ref), [`GetListOfTypes`](@ref), [`GetNclasses`](@ref), [`GetNtypes`](@ref), [`GetPluginManager`](@ref), [`GetRootFolder`](@ref), [`GetSelectedPad`](@ref), [`GetSelectedPrimitive`](@ref), [`GetStyle`](@ref), [`GetType`](@ref), [`GetUUIDs`](@ref), [`GetVersionCode`](@ref), [`GetVersionDate`](@ref), [`GetVersionInt`](@ref), [`GetVersionTime`](@ref), [`GetVersion`](@ref), [`GetWebDisplay`](@ref), [`Idle`](@ref), [`IgnoreInclude`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsEscaped`](@ref), [`IsExecutingMacro`](@ref), [`IsFolder`](@ref), [`IsInterrupted`](@ref), [`IsLineProcessing`](@ref), [`IsProofServ`](@ref), [`IsRootFile`](@ref), [`IsWebDisplayBatch`](@ref), [`IsWebDisplay`](@ref), [`LoadClass`](@ref), [`LoadMacro`](@ref), [`Macro`](@ref), [`MakeDefCanvas`](@ref), [`Message`](@ref), [`MustClean`](@ref), [`ProcessLineFast`](@ref), [`ProcessLineSync`](@ref), [`ProcessLine`](@ref), [`ReadingObject`](@ref), [`RecursiveRemove`](@ref), [`RefreshBrowsers`](@ref), [`RemoveClass`](@ref), [`Remove`](@ref), [`ResetClassSaved`](@ref), [`Reset`](@ref), [`SaveContext`](@ref), [`SetApplication`](@ref), [`SetBatch`](@ref), [`SetCutClassName`](@ref), [`SetDefCanvasName`](@ref), [`SetEditHistograms`](@ref), [`SetEditorMode`](@ref), [`SetEscape`](@ref), [`SetExecutingMacro`](@ref), [`SetFromPopUp`](@ref), [`SetInterrupt`](@ref), [`SetLineHasBeenProcessed`](@ref), [`SetLineIsProcessing`](@ref), [`SetMustClean`](@ref), [`SetReadingObject`](@ref), [`SetSelectedPad`](@ref), [`SetSelectedPrimitive`](@ref), [`SetStyle`](@ref), [`SetWebDisplay`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TROOT!AddExtraInterpreterArgs`](@ref), [`TROOT!Class_Name`](@ref), [`TROOT!Class_Version`](@ref), [`TROOT!Class`](@ref), [`TROOT!ConvertVersionCode2Int`](@ref), [`TROOT!ConvertVersionInt2Code`](@ref), [`TROOT!DeclFileName`](@ref), [`TROOT!DecreaseDirLevel`](@ref), [`TROOT!GetBinDir`](@ref), [`TROOT!GetDataDir`](@ref), [`TROOT!GetDirLevel`](@ref), [`TROOT!GetDocDir`](@ref), [`TROOT!GetEtcDir`](@ref), [`TROOT!GetExtraInterpreterArgs`](@ref), [`TROOT!GetIconPath`](@ref), [`TROOT!GetIncludeDir`](@ref), [`TROOT!GetLibDir`](@ref), [`TROOT!GetMacroDir`](@ref), [`TROOT!GetMacroPath`](@ref), [`TROOT!GetRootSys`](@ref), [`TROOT!GetSharedLibDir`](@ref), [`TROOT!GetSourceDir`](@ref), [`TROOT!GetTTFFontDir`](@ref), [`TROOT!GetTutorialDir`](@ref), [`TROOT!GetTutorialsDir`](@ref), [`TROOT!IncreaseDirLevel`](@ref), [`TROOT!IndentLevel`](@ref), [`TROOT!Initialize`](@ref), [`TROOT!Initialized`](@ref), [`TROOT!RegisterModule`](@ref), [`TROOT!RootVersionCode`](@ref), [`TROOT!SetDirLevel`](@ref), [`TROOT!SetMacroPath`](@ref), [`TROOT!ShutDown`](@ref), [`TROOT`](@ref), [`Time`](@ref), [`Timer`](@ref), [`ls`](@ref)
+Related functions: [`AddClassGenerator`](@ref), [`AddClass`](@ref), [`Append`](@ref), [`Browse`](@ref), [`ClassSaved`](@ref), [`CloseFiles`](@ref), [`EndOfProcessCleanups`](@ref), [`FindObjectAnyFile`](@ref), [`FindObjectAny`](@ref), [`FindObjectClassName`](@ref), [`FindObjectPathName`](@ref), [`FindObject`](@ref), [`FindSTLClass`](@ref), [`FindSpecialObject`](@ref), [`ForceStyle`](@ref), [`FromPopUp`](@ref), [`GetApplication`](@ref), [`GetBuiltDate`](@ref), [`GetBuiltTime`](@ref), [`GetClass`](@ref), [`GetClipboard`](@ref), [`GetColor`](@ref), [`GetConfigFeatures`](@ref), [`GetConfigOptions`](@ref), [`GetCutClassName`](@ref), [`GetDefCanvasName`](@ref), [`GetEditHistograms`](@ref), [`GetEditorMode`](@ref), [`GetFile`](@ref), [`GetForceStyle`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunction`](@ref), [`GetGeometry`](@ref), [`GetGetType`](@ref), [`GetGitBranch`](@ref), [`GetGitCommit`](@ref), [`GetGitDate`](@ref), [`GetGlobalFunctionWithPrototype`](@ref), [`GetGlobalFunction`](@ref), [`GetGlobal`](@ref), [`GetInterpreter`](@ref), [`GetListOfBrowsables`](@ref), [`GetListOfBrowsers`](@ref), [`GetListOfCanvases`](@ref), [`GetListOfClassGenerators`](@ref), [`GetListOfClasses`](@ref), [`GetListOfCleanups`](@ref), [`GetListOfClosedObjects`](@ref), [`GetListOfColors`](@ref), [`GetListOfDataSets`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFiles`](@ref), [`GetListOfFunctionOverloads`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfFunctions`](@ref), [`GetListOfGeometries`](@ref), [`GetListOfGetTypes`](@ref), [`GetListOfGlobalFunctions`](@ref), [`GetListOfGlobals`](@ref), [`GetListOfMappedFiles`](@ref), [`GetListOfMessageHandlers`](@ref), [`GetListOfProofs`](@ref), [`GetListOfSecContexts`](@ref), [`GetListOfSockets`](@ref), [`GetListOfSpecials`](@ref), [`GetListOfStreamerInfo`](@ref), [`GetListOfStyles`](@ref), [`GetListOfTasks`](@ref), [`GetNclasses`](@ref), [`GetNtypes`](@ref), [`GetPluginManager`](@ref), [`GetRootFolder`](@ref), [`GetSelectedPad`](@ref), [`GetSelectedPrimitive`](@ref), [`GetStyle`](@ref), [`GetTimer`](@ref), [`GetUUIDs`](@ref), [`GetVersionCode`](@ref), [`GetVersionDate`](@ref), [`GetVersionInt`](@ref), [`GetVersionTime`](@ref), [`GetVersion`](@ref), [`GetWebDisplay`](@ref), [`Idle`](@ref), [`IgnoreInclude`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsEscaped`](@ref), [`IsExecutingMacro`](@ref), [`IsFolder`](@ref), [`IsInterrupted`](@ref), [`IsLineProcessing`](@ref), [`IsProofServ`](@ref), [`IsRootFile`](@ref), [`IsWebDisplayBatch`](@ref), [`IsWebDisplay`](@ref), [`LoadClass`](@ref), [`LoadMacro`](@ref), [`Macro`](@ref), [`MakeDefCanvas`](@ref), [`Message`](@ref), [`MustClean`](@ref), [`ProcessLineFast`](@ref), [`ProcessLineSync`](@ref), [`ProcessLine`](@ref), [`ReadingObject`](@ref), [`RecursiveRemove`](@ref), [`RefreshBrowsers`](@ref), [`RemoveClass`](@ref), [`Remove`](@ref), [`ResetClassSaved`](@ref), [`Reset`](@ref), [`SaveContext`](@ref), [`SetApplication`](@ref), [`SetBatch`](@ref), [`SetCutClassName`](@ref), [`SetDefCanvasName`](@ref), [`SetEditHistograms`](@ref), [`SetEditorMode`](@ref), [`SetEscape`](@ref), [`SetExecutingMacro`](@ref), [`SetFromPopUp`](@ref), [`SetInterrupt`](@ref), [`SetLineHasBeenProcessed`](@ref), [`SetLineIsProcessing`](@ref), [`SetMustClean`](@ref), [`SetReadingObject`](@ref), [`SetSelectedPad`](@ref), [`SetSelectedPrimitive`](@ref), [`SetStyle`](@ref), [`SetWebDisplay`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TROOT!AddExtraInterpreterArgs`](@ref), [`TROOT!Class_Name`](@ref), [`TROOT!Class_Version`](@ref), [`TROOT!Class`](@ref), [`TROOT!ConvertVersionCode2Int`](@ref), [`TROOT!ConvertVersionInt2Code`](@ref), [`TROOT!DeclFileName`](@ref), [`TROOT!DecreaseDirLevel`](@ref), [`TROOT!GetBinDir`](@ref), [`TROOT!GetDataDir`](@ref), [`TROOT!GetDirLevel`](@ref), [`TROOT!GetDocDir`](@ref), [`TROOT!GetEtcDir`](@ref), [`TROOT!GetExtraInterpreterArgs`](@ref), [`TROOT!GetIconPath`](@ref), [`TROOT!GetIncludeDir`](@ref), [`TROOT!GetLibDir`](@ref), [`TROOT!GetMacroDir`](@ref), [`TROOT!GetMacroPath`](@ref), [`TROOT!GetRootSys`](@ref), [`TROOT!GetSharedLibDir`](@ref), [`TROOT!GetSourceDir`](@ref), [`TROOT!GetTTFFontDir`](@ref), [`TROOT!GetTutorialDir`](@ref), [`TROOT!GetTutorialsDir`](@ref), [`TROOT!IncreaseDirLevel`](@ref), [`TROOT!IndentLevel`](@ref), [`TROOT!Initialize`](@ref), [`TROOT!Initialized`](@ref), [`TROOT!RegisterModule`](@ref), [`TROOT!RootVersionCode`](@ref), [`TROOT!SetDirLevel`](@ref), [`TROOT!SetMacroPath`](@ref), [`TROOT!ShutDown`](@ref), [`TROOT`](@ref), [`Time`](@ref), [`ls`](@ref)
 """ TROOT
 
 # Wrapper of TPluginManager
@@ -2539,11 +2539,11 @@ Related functions: [`AddHandler`](@ref), [`FindHandler`](@ref), [`IsA`](@ref), [
 @trydoc raw"""
     ROOT.TInterpreter
 
-This class defines an abstract Int32erface to a generic command line Int32erpreter.
+This class defines an abstract interface to a generic command line interpreter.
 
 
 
-Related functions: [`AddAvailableIndentifiers`](@ref), [`AddIncludePath`](@ref), [`AutoLoad`](@ref), [`AutoParse`](@ref), [`BaseClassInfo_ClassInfo`](@ref), [`BaseClassInfo_Delete`](@ref), [`BaseClassInfo_Factory`](@ref), [`BaseClassInfo_FullName`](@ref), [`BaseClassInfo_Name`](@ref), [`BaseClassInfo_Next`](@ref), [`BaseClassInfo_Offset`](@ref), [`BaseClassInfo_Property`](@ref), [`BaseClassInfo_Tagnum`](@ref), [`BaseClassInfo_TmpltName`](@ref), [`Calc`](@ref), [`CallFunc_Delete`](@ref), [`CallFunc_ExecDouble`](@ref), [`CallFunc_ExecInt64`](@ref), [`CallFunc_ExecInt`](@ref), [`CallFunc_ExecWithArgsAndReturn`](@ref), [`CallFunc_ExecWithReturn`](@ref), [`CallFunc_Exec`](@ref), [`CallFunc_FactoryCopy`](@ref), [`CallFunc_FactoryMethod`](@ref), [`CallFunc_Factory`](@ref), [`CallFunc_GetWrapperCode`](@ref), [`CallFunc_IFacePtr`](@ref), [`CallFunc_IgnoreExtraArgs`](@ref), [`CallFunc_Init`](@ref), [`CallFunc_IsValid`](@ref), [`CallFunc_ResetArg`](@ref), [`CallFunc_SetArgArray`](@ref), [`CallFunc_SetArgImpl`](@ref), [`CallFunc_SetArgRef`](@ref), [`CallFunc_SetArg`](@ref), [`CallFunc_SetArgs`](@ref), [`CallFunc_SetArguments`](@ref), [`CallFunc_SetFuncProto`](@ref), [`CallFunc_SetFunc`](@ref), [`CheckClassInfo`](@ref), [`CheckClassTemplate`](@ref), [`ClassInfo_ClassProperty`](@ref), [`ClassInfo_Contains`](@ref), [`ClassInfo_DeleteArray`](@ref), [`ClassInfo_Delete`](@ref), [`ClassInfo_Destruct`](@ref), [`ClassInfo_Factory`](@ref), [`ClassInfo_FileName`](@ref), [`ClassInfo_FullName`](@ref), [`ClassInfo_GetBaseOffset`](@ref), [`ClassInfo_GetMethodNArg`](@ref), [`ClassInfo_GetUnderlyingType`](@ref), [`ClassInfo_HasDefaultConstructor`](@ref), [`ClassInfo_HasMethod`](@ref), [`ClassInfo_Init`](@ref), [`ClassInfo_IsBase`](@ref), [`ClassInfo_IsEnum`](@ref), [`ClassInfo_IsLoaded`](@ref), [`ClassInfo_IsScopedEnum`](@ref), [`ClassInfo_IsValidMethod`](@ref), [`ClassInfo_IsValid`](@ref), [`ClassInfo_Name`](@ref), [`ClassInfo_New`](@ref), [`ClassInfo_Next`](@ref), [`ClassInfo_Property`](@ref), [`ClassInfo_Size`](@ref), [`ClassInfo_Tagnum`](@ref), [`ClassInfo_Title`](@ref), [`ClassInfo_TmpltName`](@ref), [`ClearFileBusy`](@ref), [`ClearStack`](@ref), [`CodeComplete`](@ref), [`CreateEnum`](@ref), [`CreateListOfBaseClasses`](@ref), [`CreateListOfDataMembers`](@ref), [`CreateListOfMethodArgs`](@ref), [`CreateListOfMethods`](@ref), [`CreateTemporary`](@ref), [`DataMemberInfo_ArrayDim`](@ref), [`DataMemberInfo_Delete`](@ref), [`DataMemberInfo_FactoryCopy`](@ref), [`DataMemberInfo_Factory`](@ref), [`DataMemberInfo_IsValid`](@ref), [`DataMemberInfo_MaxIndex`](@ref), [`DataMemberInfo_Name`](@ref), [`DataMemberInfo_Next`](@ref), [`DataMemberInfo_Offset`](@ref), [`DataMemberInfo_Property`](@ref), [`DataMemberInfo_Title`](@ref), [`DataMemberInfo_TypeName`](@ref), [`DataMemberInfo_TypeProperty`](@ref), [`DataMemberInfo_TypeSize`](@ref), [`DataMemberInfo_TypeTrueName`](@ref), [`DataMemberInfo_ValidArrayIndex`](@ref), [`Declare`](@ref), [`DeleteGlobal`](@ref), [`DeleteVariable`](@ref), [`DiagnoseIfInterpreterException`](@ref), [`DisplayClass`](@ref), [`DisplayIncludePath`](@ref), [`EndOfLineAction`](@ref), [`Evaluate`](@ref), [`ExecuteMacro`](@ref), [`ExecuteWithArgsAndReturn`](@ref), [`Execute`](@ref), [`FindSym`](@ref), [`ForgetMutexState`](@ref), [`FuncTempInfo_Delete`](@ref), [`FuncTempInfo_ExtraProperty`](@ref), [`FuncTempInfo_FactoryCopy`](@ref), [`FuncTempInfo_Factory`](@ref), [`FuncTempInfo_IsValid`](@ref), [`FuncTempInfo_Name`](@ref), [`FuncTempInfo_Property`](@ref), [`FuncTempInfo_TemplateMinReqArgs`](@ref), [`FuncTempInfo_TemplateNargs`](@ref), [`FuncTempInfo_Title`](@ref), [`FunctionDeclId_IsMethod`](@ref), [`GenerateDictionary`](@ref), [`GenerateTClass`](@ref), [`GenericError`](@ref), [`GetAutoLoadCallBack`](@ref), [`GetClassSharedLibs`](@ref), [`GetClass`](@ref), [`GetCurrentMacroName`](@ref), [`GetDataMemberAtAddr`](@ref), [`GetDataMemberWithValue`](@ref), [`GetDataMember`](@ref), [`GetDeclId`](@ref), [`GetEnum`](@ref), [`GetExecByteCode`](@ref), [`GetExitCode`](@ref), [`GetFunctionOverloads`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunctionWithPrototype`](@ref), [`GetFunctionWithValues`](@ref), [`GetFunction`](@ref), [`GetIncludePath`](@ref), [`GetInterfaceMethodWithPrototype`](@ref), [`GetInterfaceMethod`](@ref), [`GetInterpreterStateMarker`](@ref), [`GetInterpreterTypeName`](@ref), [`GetMangledNameWithPrototype`](@ref), [`GetMangledName`](@ref), [`GetMapfile`](@ref), [`GetMore`](@ref), [`GetPrompt`](@ref), [`GetRootMapFiles`](@ref), [`GetSTLIncludePath`](@ref), [`GetSecurityError`](@ref), [`GetSharedLibDeps`](@ref), [`GetSharedLibs`](@ref), [`GetTopLevelMacroName`](@ref), [`GetUsingNamespaces`](@ref), [`HasPCMForLibrary`](@ref), [`Initialize`](@ref), [`InspectMembers`](@ref), [`IsAutoParsingSuspended`](@ref), [`IsErrorMessagesEnabled`](@ref), [`IsFloatingType`](@ref), [`IsIntegerType`](@ref), [`IsLibraryLoaded`](@ref), [`IsLoaded`](@ref), [`IsPointerType`](@ref), [`IsProcessLineLocked`](@ref), [`IsSameType`](@ref), [`IsSignedIntegerType`](@ref), [`IsUnsignedIntegerType`](@ref), [`IsVoidPointerType`](@ref), [`LoadEnums`](@ref), [`LoadFile`](@ref), [`LoadFunctionTemplates`](@ref), [`LoadLibraryMap`](@ref), [`LoadMacro`](@ref), [`LoadText`](@ref), [`Load`](@ref), [`MakeInterpreterValue`](@ref), [`MapCppName`](@ref), [`MethodArgInfo_DefaultValue`](@ref), [`MethodArgInfo_Delete`](@ref), [`MethodArgInfo_FactoryCopy`](@ref), [`MethodArgInfo_Factory`](@ref), [`MethodArgInfo_IsValid`](@ref), [`MethodArgInfo_Name`](@ref), [`MethodArgInfo_Next`](@ref), [`MethodArgInfo_Property`](@ref), [`MethodArgInfo_TypeInfo`](@ref), [`MethodArgInfo_TypeName`](@ref), [`MethodArgInfo_TypeNormalizedName`](@ref), [`MethodCallReturnType`](@ref), [`MethodInfo_CreateSignature`](@ref), [`MethodInfo_Delete`](@ref), [`MethodInfo_ExtraProperty`](@ref), [`MethodInfo_FactoryCopy`](@ref), [`MethodInfo_Factory`](@ref), [`MethodInfo_GetMangledName`](@ref), [`MethodInfo_GetPrototype`](@ref), [`MethodInfo_InterfaceMethod`](@ref), [`MethodInfo_IsValid`](@ref), [`MethodInfo_MethodCallReturnType`](@ref), [`MethodInfo_NArg`](@ref), [`MethodInfo_NDefaultArg`](@ref), [`MethodInfo_Name`](@ref), [`MethodInfo_Next`](@ref), [`MethodInfo_Property`](@ref), [`MethodInfo_Title`](@ref), [`MethodInfo_TypeName`](@ref), [`MethodInfo_TypeNormalizedName`](@ref), [`MethodInfo_Type`](@ref), [`PrintIntro`](@ref), [`ProcessLineSynch`](@ref), [`ProcessLine`](@ref), [`RegisterModule`](@ref), [`RegisterPrebuiltModulePath`](@ref), [`RegisterTClassUpdate`](@ref), [`ReloadAllSharedLibraryMaps`](@ref), [`ReportDiagnosticsToErrorHandler`](@ref), [`RescanLibraryMap`](@ref), [`ResetAll`](@ref), [`ResetGlobalVar`](@ref), [`ResetGlobals`](@ref), [`Reset`](@ref), [`RewindDictionary`](@ref), [`SaveContext`](@ref), [`SaveGlobalsContext`](@ref), [`SetAlloclockfunc`](@ref), [`SetAllocunlockfunc`](@ref), [`SetAutoLoadCallBack`](@ref), [`SetClassAutoLoading`](@ref), [`SetClassAutoloading`](@ref), [`SetClassAutoparsing`](@ref), [`SetClassInfo`](@ref), [`SetClassSharedLibs`](@ref), [`SetDeclAttr`](@ref), [`SetErrmsgcallback`](@ref), [`SetErrorMessages`](@ref), [`SetGetline`](@ref), [`SetProcessLineLock`](@ref), [`SetTempLevel`](@ref), [`ShutDown`](@ref), [`SnapshotMutexState`](@ref), [`TInterpreter!Instance`](@ref), [`TInterpreter`](@ref), [`ToString`](@ref), [`TypeInfo_Delete`](@ref), [`TypeInfo_FactoryCopy`](@ref), [`TypeInfo_Factory`](@ref), [`TypeInfo_Init`](@ref), [`TypeInfo_IsValid`](@ref), [`TypeInfo_Name`](@ref), [`TypeInfo_Property`](@ref), [`TypeInfo_QualTypePtr`](@ref), [`TypeInfo_RefType`](@ref), [`TypeInfo_Size`](@ref), [`TypeInfo_TrueName`](@ref), [`TypeName`](@ref), [`TypedefInfo_Delete`](@ref), [`TypedefInfo_FactoryCopy`](@ref), [`TypedefInfo_Factory`](@ref), [`TypedefInfo_Init`](@ref), [`TypedefInfo_IsValid`](@ref), [`TypedefInfo_Name`](@ref), [`TypedefInfo_Next`](@ref), [`TypedefInfo_Property`](@ref), [`TypedefInfo_Size`](@ref), [`TypedefInfo_Title`](@ref), [`TypedefInfo_TrueName`](@ref), [`UnRegisterTClassUpdate`](@ref), [`UnloadAllSharedLibraryMaps`](@ref), [`UnloadFile`](@ref), [`UnloadLibraryMap`](@ref), [`UpdateEnumConstants`](@ref), [`UpdateListOfGlobalFunctions`](@ref), [`UpdateListOfGlobals`](@ref), [`UpdateListOfMethods`](@ref), [`UpdateListOfTypes`](@ref)
+Related functions: [`AddAvailableIndentifiers`](@ref), [`AddIncludePath`](@ref), [`AutoLoad`](@ref), [`AutoParse`](@ref), [`BaseClassInfo_ClassInfo`](@ref), [`BaseClassInfo_Delete`](@ref), [`BaseClassInfo_Factory`](@ref), [`BaseClassInfo_FullName`](@ref), [`BaseClassInfo_Name`](@ref), [`BaseClassInfo_Next`](@ref), [`BaseClassInfo_Offset`](@ref), [`BaseClassInfo_Property`](@ref), [`BaseClassInfo_Tagnum`](@ref), [`BaseClassInfo_TmpltName`](@ref), [`Calc`](@ref), [`CallFunc_Delete`](@ref), [`CallFunc_ExecDouble`](@ref), [`CallFunc_ExecInt64`](@ref), [`CallFunc_ExecInt`](@ref), [`CallFunc_ExecWithArgsAndReturn`](@ref), [`CallFunc_ExecWithReturn`](@ref), [`CallFunc_Exec`](@ref), [`CallFunc_FactoryCopy`](@ref), [`CallFunc_FactoryMethod`](@ref), [`CallFunc_Factory`](@ref), [`CallFunc_GetWrapperCode`](@ref), [`CallFunc_IFacePtr`](@ref), [`CallFunc_IgnoreExtraArgs`](@ref), [`CallFunc_Init`](@ref), [`CallFunc_IsValid`](@ref), [`CallFunc_ResetArg`](@ref), [`CallFunc_SetArgArray`](@ref), [`CallFunc_SetArgImpl`](@ref), [`CallFunc_SetArgRef`](@ref), [`CallFunc_SetArg`](@ref), [`CallFunc_SetArgs`](@ref), [`CallFunc_SetArguments`](@ref), [`CallFunc_SetFuncProto`](@ref), [`CallFunc_SetFunc`](@ref), [`CheckClassInfo`](@ref), [`CheckClassTemplate`](@ref), [`ClassInfo_ClassProperty`](@ref), [`ClassInfo_Contains`](@ref), [`ClassInfo_DeleteArray`](@ref), [`ClassInfo_Delete`](@ref), [`ClassInfo_Destruct`](@ref), [`ClassInfo_Factory`](@ref), [`ClassInfo_FileName`](@ref), [`ClassInfo_FullName`](@ref), [`ClassInfo_GetBaseOffset`](@ref), [`ClassInfo_GetMethodNArg`](@ref), [`ClassInfo_GetUnderlyingGetType`](@ref), [`ClassInfo_HasDefaultConstructor`](@ref), [`ClassInfo_HasMethod`](@ref), [`ClassInfo_Init`](@ref), [`ClassInfo_IsBase`](@ref), [`ClassInfo_IsEnum`](@ref), [`ClassInfo_IsLoaded`](@ref), [`ClassInfo_IsScopedEnum`](@ref), [`ClassInfo_IsValidMethod`](@ref), [`ClassInfo_IsValid`](@ref), [`ClassInfo_Name`](@ref), [`ClassInfo_New`](@ref), [`ClassInfo_Next`](@ref), [`ClassInfo_Property`](@ref), [`ClassInfo_Size`](@ref), [`ClassInfo_Tagnum`](@ref), [`ClassInfo_Title`](@ref), [`ClassInfo_TmpltName`](@ref), [`ClearFileBusy`](@ref), [`ClearStack`](@ref), [`CodeComplete`](@ref), [`CreateEnum`](@ref), [`CreateListOfBaseClasses`](@ref), [`CreateListOfDataMembers`](@ref), [`CreateListOfMethodArgs`](@ref), [`CreateListOfMethods`](@ref), [`CreateTemporary`](@ref), [`DataMemberInfo_ArrayDim`](@ref), [`DataMemberInfo_Delete`](@ref), [`DataMemberInfo_FactoryCopy`](@ref), [`DataMemberInfo_Factory`](@ref), [`DataMemberInfo_GetTypeName`](@ref), [`DataMemberInfo_GetTypeProperty`](@ref), [`DataMemberInfo_GetTypeSize`](@ref), [`DataMemberInfo_GetTypeTrueName`](@ref), [`DataMemberInfo_IsValid`](@ref), [`DataMemberInfo_MaxIndex`](@ref), [`DataMemberInfo_Name`](@ref), [`DataMemberInfo_Next`](@ref), [`DataMemberInfo_Offset`](@ref), [`DataMemberInfo_Property`](@ref), [`DataMemberInfo_Title`](@ref), [`DataMemberInfo_ValidArrayIndex`](@ref), [`Declare`](@ref), [`DeleteGlobal`](@ref), [`DeleteVariable`](@ref), [`DiagnoseIfInterpreterException`](@ref), [`DisplayClass`](@ref), [`DisplayIncludePath`](@ref), [`EndOfLineAction`](@ref), [`Evaluate`](@ref), [`ExecuteMacro`](@ref), [`ExecuteWithArgsAndReturn`](@ref), [`Execute`](@ref), [`FindSym`](@ref), [`ForgetMutexState`](@ref), [`FuncTempInfo_Delete`](@ref), [`FuncTempInfo_ExtraProperty`](@ref), [`FuncTempInfo_FactoryCopy`](@ref), [`FuncTempInfo_Factory`](@ref), [`FuncTempInfo_IsValid`](@ref), [`FuncTempInfo_Name`](@ref), [`FuncTempInfo_Property`](@ref), [`FuncTempInfo_TemplateMinReqArgs`](@ref), [`FuncTempInfo_TemplateNargs`](@ref), [`FuncTempInfo_Title`](@ref), [`FunctionDeclId_IsMethod`](@ref), [`GenerateDictionary`](@ref), [`GenerateTClass`](@ref), [`GenericError`](@ref), [`GetAutoLoadCallBack`](@ref), [`GetClassSharedLibs`](@ref), [`GetClass`](@ref), [`GetCurrentMacroName`](@ref), [`GetDataMemberAtAddr`](@ref), [`GetDataMemberWithValue`](@ref), [`GetDataMember`](@ref), [`GetDeclId`](@ref), [`GetEnum`](@ref), [`GetExecByteCode`](@ref), [`GetExitCode`](@ref), [`GetFunctionOverloads`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunctionWithPrototype`](@ref), [`GetFunctionWithValues`](@ref), [`GetFunction`](@ref), [`GetIncludePath`](@ref), [`GetInterfaceMethodWithPrototype`](@ref), [`GetInterfaceMethod`](@ref), [`GetInterpreterGetTypeName`](@ref), [`GetInterpreterStateMarker`](@ref), [`GetMangledNameWithPrototype`](@ref), [`GetMangledName`](@ref), [`GetMapfile`](@ref), [`GetMore`](@ref), [`GetPrompt`](@ref), [`GetRootMapFiles`](@ref), [`GetSTLIncludePath`](@ref), [`GetSecurityError`](@ref), [`GetSharedLibDeps`](@ref), [`GetSharedLibs`](@ref), [`GetTopLevelMacroName`](@ref), [`GetTypeInfo_Delete`](@ref), [`GetTypeInfo_FactoryCopy`](@ref), [`GetTypeInfo_Factory`](@ref), [`GetTypeInfo_Init`](@ref), [`GetTypeInfo_IsValid`](@ref), [`GetTypeInfo_Name`](@ref), [`GetTypeInfo_Property`](@ref), [`GetTypeInfo_QualGetTypePtr`](@ref), [`GetTypeInfo_RefGetType`](@ref), [`GetTypeInfo_Size`](@ref), [`GetTypeInfo_TrueName`](@ref), [`GetTypeName`](@ref), [`GetTypedefInfo_Delete`](@ref), [`GetTypedefInfo_FactoryCopy`](@ref), [`GetTypedefInfo_Factory`](@ref), [`GetTypedefInfo_Init`](@ref), [`GetTypedefInfo_IsValid`](@ref), [`GetTypedefInfo_Name`](@ref), [`GetTypedefInfo_Next`](@ref), [`GetTypedefInfo_Property`](@ref), [`GetTypedefInfo_Size`](@ref), [`GetTypedefInfo_Title`](@ref), [`GetTypedefInfo_TrueName`](@ref), [`GetUsingNamespaces`](@ref), [`HasPCMForLibrary`](@ref), [`Initialize`](@ref), [`InspectMembers`](@ref), [`IsAutoParsingSuspended`](@ref), [`IsErrorMessagesEnabled`](@ref), [`IsFloatingGetType`](@ref), [`IsGetIntegerGetType`](@ref), [`IsLibraryLoaded`](@ref), [`IsLoaded`](@ref), [`IsPointerGetType`](@ref), [`IsProcessLineLocked`](@ref), [`IsSameGetType`](@ref), [`IsSignedGetIntegerGetType`](@ref), [`IsUnsignedGetIntegerGetType`](@ref), [`IsVoidPointerGetType`](@ref), [`LoadEnums`](@ref), [`LoadFile`](@ref), [`LoadFunctionTemplates`](@ref), [`LoadGetText`](@ref), [`LoadLibraryMap`](@ref), [`LoadMacro`](@ref), [`Load`](@ref), [`MakeInterpreterValue`](@ref), [`MapCppName`](@ref), [`MethodArgInfo_DefaultValue`](@ref), [`MethodArgInfo_Delete`](@ref), [`MethodArgInfo_FactoryCopy`](@ref), [`MethodArgInfo_Factory`](@ref), [`MethodArgInfo_GetTypeInfo`](@ref), [`MethodArgInfo_GetTypeName`](@ref), [`MethodArgInfo_GetTypeNormalizedName`](@ref), [`MethodArgInfo_IsValid`](@ref), [`MethodArgInfo_Name`](@ref), [`MethodArgInfo_Next`](@ref), [`MethodArgInfo_Property`](@ref), [`MethodCallReturnGetType`](@ref), [`MethodInfo_CreateSignature`](@ref), [`MethodInfo_Delete`](@ref), [`MethodInfo_ExtraProperty`](@ref), [`MethodInfo_FactoryCopy`](@ref), [`MethodInfo_Factory`](@ref), [`MethodInfo_GetMangledName`](@ref), [`MethodInfo_GetPrototype`](@ref), [`MethodInfo_GetTypeName`](@ref), [`MethodInfo_GetTypeNormalizedName`](@ref), [`MethodInfo_GetType`](@ref), [`MethodInfo_InterfaceMethod`](@ref), [`MethodInfo_IsValid`](@ref), [`MethodInfo_MethodCallReturnGetType`](@ref), [`MethodInfo_NArg`](@ref), [`MethodInfo_NDefaultArg`](@ref), [`MethodInfo_Name`](@ref), [`MethodInfo_Next`](@ref), [`MethodInfo_Property`](@ref), [`MethodInfo_Title`](@ref), [`PrintIntro`](@ref), [`ProcessLineSynch`](@ref), [`ProcessLine`](@ref), [`RegisterModule`](@ref), [`RegisterPrebuiltModulePath`](@ref), [`RegisterTClassUpdate`](@ref), [`ReloadAllSharedLibraryMaps`](@ref), [`ReportDiagnosticsToErrorHandler`](@ref), [`RescanLibraryMap`](@ref), [`ResetAll`](@ref), [`ResetGlobalVar`](@ref), [`ResetGlobals`](@ref), [`Reset`](@ref), [`RewindDictionary`](@ref), [`SaveContext`](@ref), [`SaveGlobalsContext`](@ref), [`SetAlloclockfunc`](@ref), [`SetAllocunlockfunc`](@ref), [`SetAutoLoadCallBack`](@ref), [`SetClassAutoLoading`](@ref), [`SetClassAutoloading`](@ref), [`SetClassAutoparsing`](@ref), [`SetClassInfo`](@ref), [`SetClassSharedLibs`](@ref), [`SetDeclAttr`](@ref), [`SetErrmsgcallback`](@ref), [`SetErrorMessages`](@ref), [`SetGetline`](@ref), [`SetProcessLineLock`](@ref), [`SetTempLevel`](@ref), [`ShutDown`](@ref), [`SnapshotMutexState`](@ref), [`TInterpreter!Instance`](@ref), [`TInterpreter`](@ref), [`ToGetString`](@ref), [`UnRegisterTClassUpdate`](@ref), [`UnloadAllSharedLibraryMaps`](@ref), [`UnloadFile`](@ref), [`UnloadLibraryMap`](@ref), [`UpdateEnumConstants`](@ref), [`UpdateListOfGetTypes`](@ref), [`UpdateListOfGlobalFunctions`](@ref), [`UpdateListOfGlobals`](@ref), [`UpdateListOfMethods`](@ref)
 """ TInterpreter
 
 # Wrapper of TDataType
@@ -2554,7 +2554,7 @@ Basic data type descriptor (datatype information is obtained from CINT).
 
 This class describes the attributes of type definitions (typedef's). The [TROOT](@ref) class contains a list of all currently defined types (accessible via [TROOT!GetListOfTypes()](@ref)).
 
-Related functions: [`AsString`](@ref), [`GetFullTypeName`](@ref), [`GetTypeName`](@ref), [`GetType`](@ref), [`Property`](@ref), [`Size`](@ref), [`TDataType!AddBuiltins`](@ref), [`TDataType!GetDataType`](@ref), [`TDataType!GetTypeName`](@ref), [`TDataType!GetType`](@ref), [`TDataType`](@ref)
+Related functions: [`AsGetString`](@ref), [`GetFullGetTypeName`](@ref), [`GetGetTypeName`](@ref), [`GetGetType`](@ref), [`Property`](@ref), [`Size`](@ref), [`TDataGetType`](@ref), [`TDataType!AddBuiltins`](@ref), [`TDataType!GetDataGetType`](@ref), [`TDataType!GetGetTypeName`](@ref), [`TDataType!GetGetType`](@ref)
 """ TDataType
 
 # Wrapper of TStyle
@@ -2648,7 +2648,7 @@ The description of the style functions should be clear from the name of the [TSt
 - [TStyle](@ref):SetPalette to change the colors palette.
 - [TStyle](@ref):SetTitleOffset.
 
-Related functions: [`AxisChoice`](@ref), [`Browse`](@ref), [`Copy`](@ref), [`DistancetoPrimitive`](@ref), [`GetAttDate`](@ref), [`GetAxisColor`](@ref), [`GetAxisMaxDigits`](@ref), [`GetBarOffset`](@ref), [`GetBarWidth`](@ref), [`GetCandleBoxRange`](@ref), [`GetCandleScaled`](@ref), [`GetCandleWhiskerRange`](@ref), [`GetCanvasBorderMode`](@ref), [`GetCanvasBorderSize`](@ref), [`GetCanvasColor`](@ref), [`GetCanvasDefH`](@ref), [`GetCanvasDefW`](@ref), [`GetCanvasDefX`](@ref), [`GetCanvasDefY`](@ref), [`GetCanvasPreferGL`](@ref), [`GetCapLinePS`](@ref), [`GetColorModelPS`](@ref), [`GetColorPalette`](@ref), [`GetDateX`](@ref), [`GetDateY`](@ref), [`GetDrawBorder`](@ref), [`GetEndErrorSize`](@ref), [`GetErrorX`](@ref), [`GetExponentOffset`](@ref), [`GetFitFormat`](@ref), [`GetFrameBorderMode`](@ref), [`GetFrameBorderSize`](@ref), [`GetFrameFillColor`](@ref), [`GetFrameFillStyle`](@ref), [`GetFrameLineColor`](@ref), [`GetFrameLineStyle`](@ref), [`GetFrameLineWidth`](@ref), [`GetFuncColor`](@ref), [`GetFuncStyle`](@ref), [`GetFuncWidth`](@ref), [`GetGridColor`](@ref), [`GetGridStyle`](@ref), [`GetGridWidth`](@ref), [`GetHatchesLineWidth`](@ref), [`GetHatchesSpacing`](@ref), [`GetHeaderPS`](@ref), [`GetHistFillColor`](@ref), [`GetHistFillStyle`](@ref), [`GetHistLineColor`](@ref), [`GetHistLineStyle`](@ref), [`GetHistLineWidth`](@ref), [`GetHistMinimumZero`](@ref), [`GetHistTopMargin`](@ref), [`GetImageScaling`](@ref), [`GetJoinLinePS`](@ref), [`GetLabelColor`](@ref), [`GetLabelFont`](@ref), [`GetLabelOffset`](@ref), [`GetLabelSize`](@ref), [`GetLegendBorderSize`](@ref), [`GetLegendFillColor`](@ref), [`GetLegendFont`](@ref), [`GetLegendTextSize`](@ref), [`GetLegoInnerR`](@ref), [`GetLineScalePS`](@ref), [`GetLineStyleString`](@ref), [`GetNdivisions`](@ref), [`GetNumberContours`](@ref), [`GetNumberOfColors`](@ref), [`GetOptDate`](@ref), [`GetOptFile`](@ref), [`GetOptFit`](@ref), [`GetOptLogx`](@ref), [`GetOptLogy`](@ref), [`GetOptLogz`](@ref), [`GetOptStat`](@ref), [`GetOptTitle`](@ref), [`GetOrthoCamera`](@ref), [`GetPadBorderMode`](@ref), [`GetPadBorderSize`](@ref), [`GetPadBottomMargin`](@ref), [`GetPadColor`](@ref), [`GetPadGridX`](@ref), [`GetPadGridY`](@ref), [`GetPadLeftMargin`](@ref), [`GetPadRightMargin`](@ref), [`GetPadTickX`](@ref), [`GetPadTickY`](@ref), [`GetPadTopMargin`](@ref), [`GetPaintTextFormat`](@ref), [`GetPaperSize`](@ref), [`GetScreenFactor`](@ref), [`GetShowEditor`](@ref), [`GetShowEventStatus`](@ref), [`GetShowToolBar`](@ref), [`GetStatBorderSize`](@ref), [`GetStatColor`](@ref), [`GetStatFontSize`](@ref), [`GetStatFont`](@ref), [`GetStatFormat`](@ref), [`GetStatH`](@ref), [`GetStatStyle`](@ref), [`GetStatTextColor`](@ref), [`GetStatW`](@ref), [`GetStatX`](@ref), [`GetStatY`](@ref), [`GetStripDecimals`](@ref), [`GetTickLength`](@ref), [`GetTimeOffset`](@ref), [`GetTitleAlign`](@ref), [`GetTitleBorderSize`](@ref), [`GetTitleColor`](@ref), [`GetTitleFillColor`](@ref), [`GetTitleFontSize`](@ref), [`GetTitleFont`](@ref), [`GetTitleH`](@ref), [`GetTitleOffset`](@ref), [`GetTitlePS`](@ref), [`GetTitleSize`](@ref), [`GetTitleStyle`](@ref), [`GetTitleTextColor`](@ref), [`GetTitleW`](@ref), [`GetTitleXOffset`](@ref), [`GetTitleXSize`](@ref), [`GetTitleX`](@ref), [`GetTitleYOffset`](@ref), [`GetTitleYSize`](@ref), [`GetTitleY`](@ref), [`GetViolinScaled`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`Paint`](@ref), [`Reset`](@ref), [`SavePrimitive`](@ref), [`SaveSource`](@ref), [`SetAxisColor`](@ref), [`SetAxisMaxDigits`](@ref), [`SetBarOffset`](@ref), [`SetBarWidth`](@ref), [`SetCandleBoxRange`](@ref), [`SetCandleScaled`](@ref), [`SetCandleWhiskerRange`](@ref), [`SetCanvasBorderMode`](@ref), [`SetCanvasBorderSize`](@ref), [`SetCanvasColor`](@ref), [`SetCanvasDefH`](@ref), [`SetCanvasDefW`](@ref), [`SetCanvasDefX`](@ref), [`SetCanvasDefY`](@ref), [`SetCanvasPreferGL`](@ref), [`SetCapLinePS`](@ref), [`SetColorModelPS`](@ref), [`SetDateX`](@ref), [`SetDateY`](@ref), [`SetDrawBorder`](@ref), [`SetEndErrorSize`](@ref), [`SetErrorX`](@ref), [`SetExponentOffset`](@ref), [`SetFitFormat`](@ref), [`SetFrameBorderMode`](@ref), [`SetFrameBorderSize`](@ref), [`SetFrameFillColor`](@ref), [`SetFrameFillStyle`](@ref), [`SetFrameLineColor`](@ref), [`SetFrameLineStyle`](@ref), [`SetFrameLineWidth`](@ref), [`SetFuncColor`](@ref), [`SetFuncStyle`](@ref), [`SetFuncWidth`](@ref), [`SetGridColor`](@ref), [`SetGridStyle`](@ref), [`SetGridWidth`](@ref), [`SetHatchesLineWidth`](@ref), [`SetHatchesSpacing`](@ref), [`SetHeaderPS`](@ref), [`SetHistFillColor`](@ref), [`SetHistFillStyle`](@ref), [`SetHistLineColor`](@ref), [`SetHistLineStyle`](@ref), [`SetHistLineWidth`](@ref), [`SetHistMinimumZero`](@ref), [`SetHistTopMargin`](@ref), [`SetImageScaling`](@ref), [`SetIsReading`](@ref), [`SetJoinLinePS`](@ref), [`SetLabelColor`](@ref), [`SetLabelFont`](@ref), [`SetLabelOffset`](@ref), [`SetLabelSize`](@ref), [`SetLegendBorderSize`](@ref), [`SetLegendFillColor`](@ref), [`SetLegendFont`](@ref), [`SetLegendTextSize`](@ref), [`SetLegoInnerR`](@ref), [`SetLineScalePS`](@ref), [`SetLineStyleString`](@ref), [`SetNdivisions`](@ref), [`SetNumberContours`](@ref), [`SetOptDate`](@ref), [`SetOptFile`](@ref), [`SetOptFit`](@ref), [`SetOptLogx`](@ref), [`SetOptLogy`](@ref), [`SetOptLogz`](@ref), [`SetOptStat`](@ref), [`SetOptTitle`](@ref), [`SetOrthoCamera`](@ref), [`SetPadBorderMode`](@ref), [`SetPadBorderSize`](@ref), [`SetPadBottomMargin`](@ref), [`SetPadColor`](@ref), [`SetPadGridX`](@ref), [`SetPadGridY`](@ref), [`SetPadLeftMargin`](@ref), [`SetPadRightMargin`](@ref), [`SetPadTickX`](@ref), [`SetPadTickY`](@ref), [`SetPadTopMargin`](@ref), [`SetPaintTextFormat`](@ref), [`SetPalette`](@ref), [`SetPaperSize`](@ref), [`SetScreenFactor`](@ref), [`SetStatBorderSize`](@ref), [`SetStatColor`](@ref), [`SetStatFontSize`](@ref), [`SetStatFont`](@ref), [`SetStatFormat`](@ref), [`SetStatH`](@ref), [`SetStatStyle`](@ref), [`SetStatTextColor`](@ref), [`SetStatW`](@ref), [`SetStatX`](@ref), [`SetStatY`](@ref), [`SetStripDecimals`](@ref), [`SetTickLength`](@ref), [`SetTimeOffset`](@ref), [`SetTitleAlign`](@ref), [`SetTitleBorderSize`](@ref), [`SetTitleColor`](@ref), [`SetTitleFillColor`](@ref), [`SetTitleFontSize`](@ref), [`SetTitleFont`](@ref), [`SetTitleH`](@ref), [`SetTitleOffset`](@ref), [`SetTitlePS`](@ref), [`SetTitleSize`](@ref), [`SetTitleStyle`](@ref), [`SetTitleTextColor`](@ref), [`SetTitleW`](@ref), [`SetTitleXOffset`](@ref), [`SetTitleXSize`](@ref), [`SetTitleX`](@ref), [`SetTitleYOffset`](@ref), [`SetTitleYSize`](@ref), [`SetTitleY`](@ref), [`SetViolinScaled`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TStyle!BuildStyles`](@ref), [`TStyle!Class_Name`](@ref), [`TStyle!Class_Version`](@ref), [`TStyle!Class`](@ref), [`TStyle!DeclFileName`](@ref), [`TStyle`](@ref), [`ToggleEditor`](@ref), [`ToggleEventStatus`](@ref), [`ToggleToolBar`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`AxisChoice`](@ref), [`Browse`](@ref), [`Copy`](@ref), [`DistancetoPrimitive`](@ref), [`GetAttDate`](@ref), [`GetAxisColor`](@ref), [`GetAxisMaxDigits`](@ref), [`GetBarOffset`](@ref), [`GetBarWidth`](@ref), [`GetCandleBoxRange`](@ref), [`GetCandleScaled`](@ref), [`GetCandleWhiskerRange`](@ref), [`GetCanvasBorderMode`](@ref), [`GetCanvasBorderSize`](@ref), [`GetCanvasColor`](@ref), [`GetCanvasDefH`](@ref), [`GetCanvasDefW`](@ref), [`GetCanvasDefX`](@ref), [`GetCanvasDefY`](@ref), [`GetCanvasPreferGL`](@ref), [`GetCapLinePS`](@ref), [`GetColorModelPS`](@ref), [`GetColorPalette`](@ref), [`GetDateX`](@ref), [`GetDateY`](@ref), [`GetDrawBorder`](@ref), [`GetEndErrorSize`](@ref), [`GetErrorX`](@ref), [`GetExponentOffset`](@ref), [`GetFitFormat`](@ref), [`GetFrameBorderMode`](@ref), [`GetFrameBorderSize`](@ref), [`GetFrameFillColor`](@ref), [`GetFrameFillStyle`](@ref), [`GetFrameLineColor`](@ref), [`GetFrameLineStyle`](@ref), [`GetFrameLineWidth`](@ref), [`GetFuncColor`](@ref), [`GetFuncStyle`](@ref), [`GetFuncWidth`](@ref), [`GetGridColor`](@ref), [`GetGridStyle`](@ref), [`GetGridWidth`](@ref), [`GetHatchesLineWidth`](@ref), [`GetHatchesSpacing`](@ref), [`GetHeaderPS`](@ref), [`GetHistFillColor`](@ref), [`GetHistFillStyle`](@ref), [`GetHistLineColor`](@ref), [`GetHistLineStyle`](@ref), [`GetHistLineWidth`](@ref), [`GetHistMinimumZero`](@ref), [`GetHistTopMargin`](@ref), [`GetImageScaling`](@ref), [`GetJoinLinePS`](@ref), [`GetLabelColor`](@ref), [`GetLabelFont`](@ref), [`GetLabelOffset`](@ref), [`GetLabelSize`](@ref), [`GetLegendBorderSize`](@ref), [`GetLegendFillColor`](@ref), [`GetLegendFont`](@ref), [`GetLegendGetTextSize`](@ref), [`GetLegoInnerR`](@ref), [`GetLineScalePS`](@ref), [`GetLineStyleGetString`](@ref), [`GetNdivisions`](@ref), [`GetNumberContours`](@ref), [`GetNumberOfColors`](@ref), [`GetOptDate`](@ref), [`GetOptFile`](@ref), [`GetOptFit`](@ref), [`GetOptLogx`](@ref), [`GetOptLogy`](@ref), [`GetOptLogz`](@ref), [`GetOptStat`](@ref), [`GetOptTitle`](@ref), [`GetOrthoCamera`](@ref), [`GetPadBorderMode`](@ref), [`GetPadBorderSize`](@ref), [`GetPadBottomMargin`](@ref), [`GetPadColor`](@ref), [`GetPadGridX`](@ref), [`GetPadGridY`](@ref), [`GetPadLeftMargin`](@ref), [`GetPadRightMargin`](@ref), [`GetPadTickX`](@ref), [`GetPadTickY`](@ref), [`GetPadTopMargin`](@ref), [`GetPaintGetTextFormat`](@ref), [`GetPaperSize`](@ref), [`GetScreenFactor`](@ref), [`GetShowEditor`](@ref), [`GetShowEventStatus`](@ref), [`GetShowToolBar`](@ref), [`GetStatBorderSize`](@ref), [`GetStatColor`](@ref), [`GetStatFontSize`](@ref), [`GetStatFont`](@ref), [`GetStatFormat`](@ref), [`GetStatGetTextColor`](@ref), [`GetStatH`](@ref), [`GetStatStyle`](@ref), [`GetStatW`](@ref), [`GetStatX`](@ref), [`GetStatY`](@ref), [`GetStripDecimals`](@ref), [`GetTickLength`](@ref), [`GetTimeOffset`](@ref), [`GetTitleAlign`](@ref), [`GetTitleBorderSize`](@ref), [`GetTitleColor`](@ref), [`GetTitleFillColor`](@ref), [`GetTitleFontSize`](@ref), [`GetTitleFont`](@ref), [`GetTitleGetTextColor`](@ref), [`GetTitleH`](@ref), [`GetTitleOffset`](@ref), [`GetTitlePS`](@ref), [`GetTitleSize`](@ref), [`GetTitleStyle`](@ref), [`GetTitleW`](@ref), [`GetTitleXOffset`](@ref), [`GetTitleXSize`](@ref), [`GetTitleX`](@ref), [`GetTitleYOffset`](@ref), [`GetTitleYSize`](@ref), [`GetTitleY`](@ref), [`GetViolinScaled`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`Paint`](@ref), [`Reset`](@ref), [`SavePrimitive`](@ref), [`SaveSource`](@ref), [`SetAxisColor`](@ref), [`SetAxisMaxDigits`](@ref), [`SetBarOffset`](@ref), [`SetBarWidth`](@ref), [`SetCandleBoxRange`](@ref), [`SetCandleScaled`](@ref), [`SetCandleWhiskerRange`](@ref), [`SetCanvasBorderMode`](@ref), [`SetCanvasBorderSize`](@ref), [`SetCanvasColor`](@ref), [`SetCanvasDefH`](@ref), [`SetCanvasDefW`](@ref), [`SetCanvasDefX`](@ref), [`SetCanvasDefY`](@ref), [`SetCanvasPreferGL`](@ref), [`SetCapLinePS`](@ref), [`SetColorModelPS`](@ref), [`SetDateX`](@ref), [`SetDateY`](@ref), [`SetDrawBorder`](@ref), [`SetEndErrorSize`](@ref), [`SetErrorX`](@ref), [`SetExponentOffset`](@ref), [`SetFitFormat`](@ref), [`SetFrameBorderMode`](@ref), [`SetFrameBorderSize`](@ref), [`SetFrameFillColor`](@ref), [`SetFrameFillStyle`](@ref), [`SetFrameLineColor`](@ref), [`SetFrameLineStyle`](@ref), [`SetFrameLineWidth`](@ref), [`SetFuncColor`](@ref), [`SetFuncStyle`](@ref), [`SetFuncWidth`](@ref), [`SetGridColor`](@ref), [`SetGridStyle`](@ref), [`SetGridWidth`](@ref), [`SetHatchesLineWidth`](@ref), [`SetHatchesSpacing`](@ref), [`SetHeaderPS`](@ref), [`SetHistFillColor`](@ref), [`SetHistFillStyle`](@ref), [`SetHistLineColor`](@ref), [`SetHistLineStyle`](@ref), [`SetHistLineWidth`](@ref), [`SetHistMinimumZero`](@ref), [`SetHistTopMargin`](@ref), [`SetImageScaling`](@ref), [`SetIsReading`](@ref), [`SetJoinLinePS`](@ref), [`SetLabelColor`](@ref), [`SetLabelFont`](@ref), [`SetLabelOffset`](@ref), [`SetLabelSize`](@ref), [`SetLegendBorderSize`](@ref), [`SetLegendFillColor`](@ref), [`SetLegendFont`](@ref), [`SetLegendGetTextSize`](@ref), [`SetLegoInnerR`](@ref), [`SetLineScalePS`](@ref), [`SetLineStyleGetString`](@ref), [`SetNdivisions`](@ref), [`SetNumberContours`](@ref), [`SetOptDate`](@ref), [`SetOptFile`](@ref), [`SetOptFit`](@ref), [`SetOptLogx`](@ref), [`SetOptLogy`](@ref), [`SetOptLogz`](@ref), [`SetOptStat`](@ref), [`SetOptTitle`](@ref), [`SetOrthoCamera`](@ref), [`SetPadBorderMode`](@ref), [`SetPadBorderSize`](@ref), [`SetPadBottomMargin`](@ref), [`SetPadColor`](@ref), [`SetPadGridX`](@ref), [`SetPadGridY`](@ref), [`SetPadLeftMargin`](@ref), [`SetPadRightMargin`](@ref), [`SetPadTickX`](@ref), [`SetPadTickY`](@ref), [`SetPadTopMargin`](@ref), [`SetPaintGetTextFormat`](@ref), [`SetPalette`](@ref), [`SetPaperSize`](@ref), [`SetScreenFactor`](@ref), [`SetStatBorderSize`](@ref), [`SetStatColor`](@ref), [`SetStatFontSize`](@ref), [`SetStatFont`](@ref), [`SetStatFormat`](@ref), [`SetStatGetTextColor`](@ref), [`SetStatH`](@ref), [`SetStatStyle`](@ref), [`SetStatW`](@ref), [`SetStatX`](@ref), [`SetStatY`](@ref), [`SetStripDecimals`](@ref), [`SetTickLength`](@ref), [`SetTimeOffset`](@ref), [`SetTitleAlign`](@ref), [`SetTitleBorderSize`](@ref), [`SetTitleColor`](@ref), [`SetTitleFillColor`](@ref), [`SetTitleFontSize`](@ref), [`SetTitleFont`](@ref), [`SetTitleGetTextColor`](@ref), [`SetTitleH`](@ref), [`SetTitleOffset`](@ref), [`SetTitlePS`](@ref), [`SetTitleSize`](@ref), [`SetTitleStyle`](@ref), [`SetTitleW`](@ref), [`SetTitleXOffset`](@ref), [`SetTitleXSize`](@ref), [`SetTitleX`](@ref), [`SetTitleYOffset`](@ref), [`SetTitleYSize`](@ref), [`SetTitleY`](@ref), [`SetViolinScaled`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TStyle!BuildStyles`](@ref), [`TStyle!Class_Name`](@ref), [`TStyle!Class_Version`](@ref), [`TStyle!Class`](@ref), [`TStyle!DeclFileName`](@ref), [`TStyle`](@ref), [`ToggleEditor`](@ref), [`ToggleEventStatus`](@ref), [`ToggleToolBar`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TStyle
 
 # Wrapper of TVirtualPad
@@ -2659,7 +2659,7 @@ Related functions: [`AxisChoice`](@ref), [`Browse`](@ref), [`Copy`](@ref), [`Dis
 
 
 
-Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`Clip`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`ExecuteEventAxis`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsBeingResized`](@ref), [`IsEditable`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadInHighlightMode`](@ref), [`PadInSelectionMode`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBorderPS`](@ref), [`PaintBox`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`PaintTextNDC`](@ref), [`PaintText`](@ref), [`Paint`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`PopTopLevelSelectable`](@ref), [`Pop`](@ref), [`Print`](@ref), [`PushSelectableObject`](@ref), [`PushTopLevelSelectable`](@ref), [`RangeAxisChanged`](@ref), [`RangeAxis`](@ref), [`Range`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetAttTextPS`](@ref), [`SetBatch`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetEditable`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPad!Class_Name`](@ref), [`TVirtualPad!Class_Version`](@ref), [`TVirtualPad!Class`](@ref), [`TVirtualPad!DeclFileName`](@ref), [`TVirtualPad!Pad`](@ref), [`TVirtualPad`](@ref), [`UnZoomed`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref)
+Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`Clip`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`ExecuteEventAxis`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsBeingResized`](@ref), [`IsEditable`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadInHighlightMode`](@ref), [`PadInSelectionMode`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBorderPS`](@ref), [`PaintBox`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintGetTextNDC`](@ref), [`PaintGetText`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`Paint`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`PopTopLevelSelectable`](@ref), [`Pop`](@ref), [`Print`](@ref), [`PushSelectableObject`](@ref), [`PushTopLevelSelectable`](@ref), [`RangeAxisChanged`](@ref), [`RangeAxis`](@ref), [`Range`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttGetTextPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetBatch`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetEditable`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipGetText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPad!Class_Name`](@ref), [`TVirtualPad!Class_Version`](@ref), [`TVirtualPad!Class`](@ref), [`TVirtualPad!DeclFileName`](@ref), [`TVirtualPad!Pad`](@ref), [`TVirtualPad`](@ref), [`UnZoomed`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref)
 """ TVirtualPad
 
 # Wrapper of TProcessUUID
@@ -2673,7 +2673,7 @@ In addition to [TProcessID](@ref), this object has the following members:
 - fUUIDs : a [THashList](@ref) of TUUIDs in string format (using a [TObjString](@ref))
 - fActive : a [TBits](@ref) table with one bit per [TUUID](@ref) in the table
 
-When a new [TUUID](@ref) is entered Int32o the list fUUIDs, it is assigned the first free slot in the list of bits and the [TUUID](@ref) UUIDNumber is set to this slot number.
+When a new [TUUID](@ref) is entered into the list fUUIDs, it is assigned the first free slot in the list of bits and the [TUUID](@ref) UUIDNumber is set to this slot number.
 
 When a [TUUID](@ref) is removed from the list, the corresponding bit is reset in fActive.
 
@@ -2697,7 +2697,7 @@ The Canvas class.
 
 A Canvas is an area mapped to a window directly under the control of the display manager. A [ROOT](@ref) session may have several canvases open at any given time.
 
-A Canvas may be subdivided Int32o independent graphical areas: the **Pads**. A canvas has a default pad which has the name of the canvas itself. An example of a Canvas layout is sketched in the picture below.
+A Canvas may be subdivided into independent graphical areas: the **Pads**. A canvas has a default pad which has the name of the canvas itself. An example of a Canvas layout is sketched in the picture below.
 
 ![https://root.cern/doc/v636/gpad_canvas.png](https://root.cern/doc/v636/gpad_canvas.png)
 
@@ -2707,11 +2707,11 @@ Once objects have been drawn in a canvas, they can be edited/moved by pointing d
 
 A graphical editor may be started from the canvas "View" menu under the menu entry "Toolbar".
 
-An Int32eractive HELP is available by clicking on the HELP button at the top right of the canvas. It gives a short explanation about the canvas' menus.
+An interactive HELP is available by clicking on the HELP button at the top right of the canvas. It gives a short explanation about the canvas' menus.
 
-A canvas may be automatically divided Int32o pads via `TPad!Divide`.
+A canvas may be automatically divided into pads via `TPad!Divide`.
 
-At creation time, no matter if in Int32eractive or batch mode, the constructor defines the size of the canvas window (including the size of the window manager's decoration). To define precisely the graphics area size of a canvas in the Int32eractive mode, the following four lines of code should be used: 
+At creation time, no matter if in interactive or batch mode, the constructor defines the size of the canvas window (including the size of the window manager's decoration). To define precisely the graphics area size of a canvas in the interactive mode, the following four lines of code should be used: 
 
     {
        Double_t w = 600;
@@ -2778,7 +2778,7 @@ Related functions: [`GetAt`](@ref), [`GetSize`](@ref), [`SetAt`](@ref), [`Set`](
 @trydoc raw"""
     ROOT.TArrayI
 
-Array of Int32egers (32 bits per element).
+Array of integers (32 bits per element).
 
 
 
@@ -2812,7 +2812,7 @@ Provides iteration through tokens of a given string.
 
 Current token is stored in the [TString](@ref) base-class. During construction no match is done, use [NextToken()](@ref) to get the first and all subsequent tokens.
 
-Related functions: [`AtEnd`](@ref), [`IsA`](@ref), [`NextToken`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TStringToken!Class_Name`](@ref), [`TStringToken!Class_Version`](@ref), [`TStringToken!Class`](@ref), [`TStringToken!DeclFileName`](@ref), [`TStringToken`](@ref)
+Related functions: [`AtEnd`](@ref), [`IsA`](@ref), [`NextToken`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TGetStringToken`](@ref), [`TStringToken!Class_Name`](@ref), [`TStringToken!Class_Version`](@ref), [`TStringToken!Class`](@ref), [`TStringToken!DeclFileName`](@ref)
 """ TStringToken
 
 # Wrapper of TBits
@@ -2929,7 +2929,7 @@ Related functions: [`Add`](@ref), [`CanCompress`](@ref), [`CanMerge`](@ref), [`C
 @trydoc raw"""
     ROOT.TQConnection
 
-[TQConnection](@ref) class is an Int32ernal class, used in the object communication mechanism.
+[TQConnection](@ref) class is an internal class, used in the object communication mechanism.
 
 [TQConnection](@ref):
 
@@ -2958,7 +2958,7 @@ Basic time type with millisecond precision.
 
 
 
-Related functions: [`AsString`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTime!Class_Name`](@ref), [`TTime!Class_Version`](@ref), [`TTime!Class`](@ref), [`TTime!DeclFileName`](@ref), [`TTime`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`long long`](@ref), [`long`](@ref), [`mult!`](@ref), [`sub!`](@ref), [`unsigned long long`](@ref), [`unsigned long`](@ref)
+Related functions: [`AsGetString`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTime!Class_Name`](@ref), [`TTime!Class_Version`](@ref), [`TTime!Class`](@ref), [`TTime!DeclFileName`](@ref), [`TTime`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`long long`](@ref), [`long`](@ref), [`mult!`](@ref), [`sub!`](@ref), [`unsigned long long`](@ref), [`unsigned long`](@ref)
 """ TTime
 
 # Wrapper of TTimer
@@ -2967,17 +2967,17 @@ Related functions: [`AsString`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref)
 
 Handles synchronous and a-synchronous timer events.
 
-1. synchronous timer is registered Int32o [TSystem](@ref) and is processed within the standard [ROOT](@ref) event-loop.
-2. asynchronous timer is passed to the operating system which sends an external signal to [ROOT](@ref) and thus Int32errupts its event-loop.
+1. synchronous timer is registered into [TSystem](@ref) and is processed within the standard [ROOT](@ref) event-loop.
+2. asynchronous timer is passed to the operating system which sends an external signal to [ROOT](@ref) and thus interrupts its event-loop.
 
 You can use this class in one of the following ways:
 
 - Sub-class [TTimer](@ref) and override the [Notify()](@ref) method.
 - Re-implement the [TObject!HandleTimer()](@ref) method in your class and pass a pointer to this object to timer, see the [SetObject()](@ref) method.
-- Pass an Int32erpreter command to timer, see [SetCommand()](@ref) method.
+- Pass an interpreter command to timer, see [SetCommand()](@ref) method.
 - Create a [TTimer](@ref), connect its [Timeout()](@ref) signal to the appropriate methods. Then when the time is up it will emit a [Timeout()](@ref) signal and call connected slots.
 
-Minimum timeout Int32erval is defined in TSystem!ESysConstants as `kItimerResolution` (currently 10 ms).
+Minimum timeout interval is defined in TSystem!ESysConstants as `kItimerResolution` (currently 10 ms).
 
 Signal/slots example: 
 
@@ -2994,7 +2994,7 @@ Signal/slots example:
 
 (C++ version of the code)
 
-Related functions: [`Add`](@ref), [`CheckTimer`](@ref), [`GetAbsTime`](@ref), [`GetCommand`](@ref), [`GetObject`](@ref), [`GetTime`](@ref), [`GetTimerID`](@ref), [`HasTimedOut`](@ref), [`IsA`](@ref), [`IsAsync`](@ref), [`IsInterruptingSyscalls`](@ref), [`IsRunning`](@ref), [`IsSync`](@ref), [`Notify`](@ref), [`Remove`](@ref), [`Reset`](@ref), [`SetCommand`](@ref), [`SetInterruptSyscalls`](@ref), [`SetObject`](@ref), [`SetTime`](@ref), [`SetTimerID`](@ref), [`Start`](@ref), [`Stop`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTimer!Class_Name`](@ref), [`TTimer!Class_Version`](@ref), [`TTimer!Class`](@ref), [`TTimer!DeclFileName`](@ref), [`TTimer!SingleShot`](@ref), [`TTimer`](@ref), [`Timeout`](@ref), [`TurnOff`](@ref), [`TurnOn`](@ref)
+Related functions: [`Add`](@ref), [`CheckGetTimer`](@ref), [`GetAbsTime`](@ref), [`GetCommand`](@ref), [`GetGetTimerID`](@ref), [`GetObject`](@ref), [`GetTime`](@ref), [`HasTimedOut`](@ref), [`IsA`](@ref), [`IsAsync`](@ref), [`IsInterruptingSyscalls`](@ref), [`IsRunning`](@ref), [`IsSync`](@ref), [`Notify`](@ref), [`Remove`](@ref), [`Reset`](@ref), [`SetCommand`](@ref), [`SetGetTimerID`](@ref), [`SetInterruptSyscalls`](@ref), [`SetObject`](@ref), [`SetTime`](@ref), [`Start`](@ref), [`Stop`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TGetTimer`](@ref), [`TTimer!Class_Name`](@ref), [`TTimer!Class_Version`](@ref), [`TTimer!Class`](@ref), [`TTimer!DeclFileName`](@ref), [`TTimer!SingleShot`](@ref), [`Timeout`](@ref), [`TurnOff`](@ref), [`TurnOn`](@ref)
 """ TTimer
 
 # Wrapper of TProcessEventTimer
@@ -3005,18 +3005,18 @@ Related functions: [`Add`](@ref), [`CheckTimer`](@ref), [`GetAbsTime`](@ref), [`
 
 
 
-Related functions: [`IsA`](@ref), [`Notify`](@ref), [`ProcessEvents`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TProcessEventTimer!Class_Name`](@ref), [`TProcessEventTimer!Class_Version`](@ref), [`TProcessEventTimer!Class`](@ref), [`TProcessEventTimer!DeclFileName`](@ref), [`TProcessEventTimer`](@ref)
+Related functions: [`IsA`](@ref), [`Notify`](@ref), [`ProcessEvents`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TProcessEventGetTimer`](@ref), [`TProcessEventTimer!Class_Name`](@ref), [`TProcessEventTimer!Class_Version`](@ref), [`TProcessEventTimer!Class`](@ref), [`TProcessEventTimer!DeclFileName`](@ref)
 """ TProcessEventTimer
 
 # Wrapper of TSystem
 @trydoc raw"""
     ROOT.TSystem
 
-Abstract base class defining a generic Int32erface to the underlying Operating System.
+Abstract base class defining a generic interface to the underlying Operating System.
 
 This is not an ABC in the strict sense of the (C++) word. For every member function there is an implementation (often not more than a call to [AbstractMethod()](@ref) which prints a warning saying that the method should be overridden in a derived class), which allows a simple partial implementation for new OS'es.
 
-Related functions: [`Abort`](@ref), [`AcceptConnection`](@ref), [`AccessPathName`](@ref), [`AddDynamicPath`](@ref), [`AddFileHandler`](@ref), [`AddIncludePath`](@ref), [`AddLinkedLibs`](@ref), [`AddSignalHandler`](@ref), [`AddStdExceptionHandler`](@ref), [`AddTimer`](@ref), [`AnnounceTcpService`](@ref), [`AnnounceUdpService`](@ref), [`AnnounceUnixService`](@ref), [`BaseName`](@ref), [`Beep`](@ref), [`ChangeDirectory`](@ref), [`Chmod`](@ref), [`CleanCompiledMacros`](@ref), [`CloseConnection`](@ref), [`ClosePipe`](@ref), [`Closelog`](@ref), [`CompileMacro`](@ref), [`ConcatFileName`](@ref), [`CopyFile`](@ref), [`DirName`](@ref), [`DispatchOneEvent`](@ref), [`DynFindSymbol`](@ref), [`DynamicPathName`](@ref), [`Exec`](@ref), [`ExitLoop`](@ref), [`Exit`](@ref), [`ExpandPathName`](@ref), [`FindDynamicLibrary`](@ref), [`FindFile`](@ref), [`FreeDirectory`](@ref), [`GetAclicMode`](@ref), [`GetAclicProperties`](@ref), [`GetBeepDefaults`](@ref), [`GetBuildArch`](@ref), [`GetBuildCompilerVersionStr`](@ref), [`GetBuildCompilerVersion`](@ref), [`GetBuildCompiler`](@ref), [`GetBuildDir`](@ref), [`GetBuildNode`](@ref), [`GetCpuInfo`](@ref), [`GetCryptoRandom`](@ref), [`GetDirEntry`](@ref), [`GetDirName`](@ref), [`GetDirPtr`](@ref), [`GetDynamicPath`](@ref), [`GetEffectiveGid`](@ref), [`GetEffectiveUid`](@ref), [`GetErrorStr`](@ref), [`GetError`](@ref), [`GetFPEMask`](@ref), [`GetFlagsDebug`](@ref), [`GetFlagsOpt`](@ref), [`GetFromPipe`](@ref), [`GetFsInfo`](@ref), [`GetGid`](@ref), [`GetGroupInfo`](@ref), [`GetHomeDirectory`](@ref), [`GetHostByName`](@ref), [`GetIncludePath`](@ref), [`GetLibraries`](@ref), [`GetLinkdefSuffix`](@ref), [`GetLinkedLibs`](@ref), [`GetListOfFileHandlers`](@ref), [`GetListOfSignalHandlers`](@ref), [`GetListOfStdExceptionHandlers`](@ref), [`GetListOfTimers`](@ref), [`GetMakeExe`](@ref), [`GetMakeSharedLib`](@ref), [`GetMemInfo`](@ref), [`GetObjExt`](@ref), [`GetPathInfo`](@ref), [`GetPeerName`](@ref), [`GetPid`](@ref), [`GetProcInfo`](@ref), [`GetServiceByName`](@ref), [`GetServiceByPort`](@ref), [`GetSoExt`](@ref), [`GetSockName`](@ref), [`GetSockOpt`](@ref), [`GetSysInfo`](@ref), [`GetUid`](@ref), [`GetUserInfo`](@ref), [`GetVolumes`](@ref), [`GetWorkingDirectory`](@ref), [`Getenv`](@ref), [`HomeDirectory`](@ref), [`HostName`](@ref), [`IgnoreInterrupt`](@ref), [`IgnoreSignal`](@ref), [`InControl`](@ref), [`Init`](@ref), [`InnerLoop`](@ref), [`IsA`](@ref), [`IsAbsoluteFileName`](@ref), [`IsFileInIncludePath`](@ref), [`IsPathLocal`](@ref), [`Link`](@ref), [`ListLibraries`](@ref), [`ListSymbols`](@ref), [`LoadAllLibraries`](@ref), [`Load`](@ref), [`MakeDirectory`](@ref), [`NextTimeOut`](@ref), [`NotifyApplicationCreated`](@ref), [`Now`](@ref), [`OpenConnection`](@ref), [`OpenDirectory`](@ref), [`OpenPipe`](@ref), [`Openlog`](@ref), [`PrependPathName`](@ref), [`ProcessEvents`](@ref), [`RecvBuf`](@ref), [`RecvRaw`](@ref), [`RedirectOutput`](@ref), [`RemoveFileHandler`](@ref), [`RemoveOnExit`](@ref), [`RemoveSignalHandler`](@ref), [`RemoveStdExceptionHandler`](@ref), [`RemoveTimer`](@ref), [`Rename`](@ref), [`ResetSignal`](@ref), [`ResetSignals`](@ref), [`ResetTimer`](@ref), [`Run`](@ref), [`Select`](@ref), [`SendBuf`](@ref), [`SendRaw`](@ref), [`SetAclicMode`](@ref), [`SetBuildDir`](@ref), [`SetDisplay`](@ref), [`SetDynamicPath`](@ref), [`SetErrorStr`](@ref), [`SetFPEMask`](@ref), [`SetFlagsDebug`](@ref), [`SetFlagsOpt`](@ref), [`SetIncludePath`](@ref), [`SetLinkdefSuffix`](@ref), [`SetLinkedLibs`](@ref), [`SetMakeExe`](@ref), [`SetMakeSharedLib`](@ref), [`SetObjExt`](@ref), [`SetProgname`](@ref), [`SetSoExt`](@ref), [`SetSockOpt`](@ref), [`Setenv`](@ref), [`ShowOutput`](@ref), [`Sleep`](@ref), [`SplitAclicMode`](@ref), [`StackTrace`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Symlink`](@ref), [`Syslog`](@ref), [`TSystem!Class_Name`](@ref), [`TSystem!Class_Version`](@ref), [`TSystem!Class`](@ref), [`TSystem!DeclFileName`](@ref), [`TSystem!GetErrno`](@ref), [`TSystem!ResetErrno`](@ref), [`TSystem`](@ref), [`TempDirectory`](@ref), [`TempFileName`](@ref), [`Umask`](@ref), [`UnixPathName`](@ref), [`Unlink`](@ref), [`Unload`](@ref), [`Unsetenv`](@ref), [`Utime`](@ref), [`Which`](@ref), [`WorkingDirectory`](@ref), [`cd`](@ref), [`mkdir`](@ref), [`pwd`](@ref)
+Related functions: [`Abort`](@ref), [`AcceptConnection`](@ref), [`AccessPathName`](@ref), [`AddDynamicPath`](@ref), [`AddFileHandler`](@ref), [`AddGetTimer`](@ref), [`AddIncludePath`](@ref), [`AddLinkedLibs`](@ref), [`AddSignalHandler`](@ref), [`AddStdExceptionHandler`](@ref), [`AnnounceTcpService`](@ref), [`AnnounceUdpService`](@ref), [`AnnounceUnixService`](@ref), [`BaseName`](@ref), [`Beep`](@ref), [`ChangeDirectory`](@ref), [`Chmod`](@ref), [`CleanCompiledMacros`](@ref), [`CloseConnection`](@ref), [`ClosePipe`](@ref), [`Closelog`](@ref), [`CompileMacro`](@ref), [`ConcatFileName`](@ref), [`CopyFile`](@ref), [`DirName`](@ref), [`DispatchOneEvent`](@ref), [`DynFindSymbol`](@ref), [`DynamicPathName`](@ref), [`Exec`](@ref), [`ExitLoop`](@ref), [`Exit`](@ref), [`ExpandPathName`](@ref), [`FindDynamicLibrary`](@ref), [`FindFile`](@ref), [`FreeDirectory`](@ref), [`GetAclicMode`](@ref), [`GetAclicProperties`](@ref), [`GetBeepDefaults`](@ref), [`GetBuildArch`](@ref), [`GetBuildCompilerVersionStr`](@ref), [`GetBuildCompilerVersion`](@ref), [`GetBuildCompiler`](@ref), [`GetBuildDir`](@ref), [`GetBuildNode`](@ref), [`GetCpuInfo`](@ref), [`GetCryptoRandom`](@ref), [`GetDirEntry`](@ref), [`GetDirName`](@ref), [`GetDirPtr`](@ref), [`GetDynamicPath`](@ref), [`GetEffectiveGid`](@ref), [`GetEffectiveUid`](@ref), [`GetErrorStr`](@ref), [`GetError`](@ref), [`GetFPEMask`](@ref), [`GetFlagsDebug`](@ref), [`GetFlagsOpt`](@ref), [`GetFromPipe`](@ref), [`GetFsInfo`](@ref), [`GetGid`](@ref), [`GetGroupInfo`](@ref), [`GetHomeDirectory`](@ref), [`GetHostByName`](@ref), [`GetIncludePath`](@ref), [`GetLibraries`](@ref), [`GetLinkdefSuffix`](@ref), [`GetLinkedLibs`](@ref), [`GetListOfFileHandlers`](@ref), [`GetListOfGetTimers`](@ref), [`GetListOfSignalHandlers`](@ref), [`GetListOfStdExceptionHandlers`](@ref), [`GetMakeExe`](@ref), [`GetMakeSharedLib`](@ref), [`GetMemInfo`](@ref), [`GetObjExt`](@ref), [`GetPathInfo`](@ref), [`GetPeerName`](@ref), [`GetPid`](@ref), [`GetProcInfo`](@ref), [`GetServiceByName`](@ref), [`GetServiceByPort`](@ref), [`GetSoExt`](@ref), [`GetSockName`](@ref), [`GetSockOpt`](@ref), [`GetSysInfo`](@ref), [`GetUid`](@ref), [`GetUserInfo`](@ref), [`GetVolumes`](@ref), [`GetWorkingDirectory`](@ref), [`Getenv`](@ref), [`HomeDirectory`](@ref), [`HostName`](@ref), [`IgnoreInterrupt`](@ref), [`IgnoreSignal`](@ref), [`InControl`](@ref), [`Init`](@ref), [`InnerLoop`](@ref), [`IsA`](@ref), [`IsAbsoluteFileName`](@ref), [`IsFileInIncludePath`](@ref), [`IsPathLocal`](@ref), [`Link`](@ref), [`ListLibraries`](@ref), [`ListSymbols`](@ref), [`LoadAllLibraries`](@ref), [`Load`](@ref), [`MakeDirectory`](@ref), [`NextTimeOut`](@ref), [`NotifyApplicationCreated`](@ref), [`Now`](@ref), [`OpenConnection`](@ref), [`OpenDirectory`](@ref), [`OpenPipe`](@ref), [`Openlog`](@ref), [`PrependPathName`](@ref), [`ProcessEvents`](@ref), [`RecvBuf`](@ref), [`RecvRaw`](@ref), [`RedirectOutput`](@ref), [`RemoveFileHandler`](@ref), [`RemoveGetTimer`](@ref), [`RemoveOnExit`](@ref), [`RemoveSignalHandler`](@ref), [`RemoveStdExceptionHandler`](@ref), [`Rename`](@ref), [`ResetGetTimer`](@ref), [`ResetSignal`](@ref), [`ResetSignals`](@ref), [`Run`](@ref), [`Select`](@ref), [`SendBuf`](@ref), [`SendRaw`](@ref), [`SetAclicMode`](@ref), [`SetBuildDir`](@ref), [`SetDisplay`](@ref), [`SetDynamicPath`](@ref), [`SetErrorStr`](@ref), [`SetFPEMask`](@ref), [`SetFlagsDebug`](@ref), [`SetFlagsOpt`](@ref), [`SetIncludePath`](@ref), [`SetLinkdefSuffix`](@ref), [`SetLinkedLibs`](@ref), [`SetMakeExe`](@ref), [`SetMakeSharedLib`](@ref), [`SetObjExt`](@ref), [`SetProgname`](@ref), [`SetSoExt`](@ref), [`SetSockOpt`](@ref), [`Setenv`](@ref), [`ShowOutput`](@ref), [`Sleep`](@ref), [`SplitAclicMode`](@ref), [`StackTrace`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Symlink`](@ref), [`Syslog`](@ref), [`TSystem!Class_Name`](@ref), [`TSystem!Class_Version`](@ref), [`TSystem!Class`](@ref), [`TSystem!DeclFileName`](@ref), [`TSystem!GetErrno`](@ref), [`TSystem!ResetErrno`](@ref), [`TSystem`](@ref), [`TempDirectory`](@ref), [`TempFileName`](@ref), [`Umask`](@ref), [`UnixPathName`](@ref), [`Unlink`](@ref), [`Unload`](@ref), [`Unsetenv`](@ref), [`Utime`](@ref), [`Which`](@ref), [`WorkingDirectory`](@ref), [`cd`](@ref), [`mkdir`](@ref), [`pwd`](@ref)
 """ TSystem
 
 # Wrapper of TFileHandler
@@ -3066,7 +3066,7 @@ This object can be used instead of normal C++ pointers in case
 
 When a top level object (eg Event *event) is a tree/graph of many objects, the normal [ROOT](@ref) Streaming mechanism ensures that only one copy of each object in the tree/graph is written to the output buffer to avoid circular dependencies.
 
-However if the object event is split Int32o several files or Int32o several branches of one or more Trees, normal C++ pointers cannot be used because each I/O operation will write the referenced objects.
+However if the object event is split into several files or into several branches of one or more Trees, normal C++ pointers cannot be used because each I/O operation will write the referenced objects.
 
 When a [TRef](@ref) is used to point to a [TObject](@ref) *robj, for example in a class with 
 
@@ -3109,7 +3109,7 @@ See section "ObjectNumber" below for a recipe to minimize the object count. If t
 - The object count is never reset (see below)
 - [TRef](@ref) is misused.
 
-When a referenced object robj is written, [TObject!Streamer](@ref) writes in addition to the standard (fBits,fUniqueID) the pidf. When this robj is read by [TObject!Streamer](@ref), the pidf is read. At this point, robj is entered Int32o the table of objects of the [TProcessID](@ref) corresponding to pidf.
+When a referenced object robj is written, [TObject!Streamer](@ref) writes in addition to the standard (fBits,fUniqueID) the pidf. When this robj is read by [TObject!Streamer](@ref), the pidf is read. At this point, robj is entered into the table of objects of the [TProcessID](@ref) corresponding to pidf.
 
 ### WARNING1:
 
@@ -3132,7 +3132,7 @@ The value of ObjectNumber (say saveNumber=[TProcessID!GetObjectCount()](@ref)) m
 The normal behaviour of a [TRef](@ref) has been described above. In addition, [TRef](@ref) supports also "Actions on Demand". It may happen that the object referenced is not yet in memory, on a separate file or not yet computed. In this case [TRef](@ref) is able to automatically execute an action:
 
 - call to a compiled function (static function of member function)
-- call to an Int32erpreted function
+- call to an interpreted function
 - execution of a C++ script
 
 How to select this option? In the definition of the [TRef](@ref) data member in the original class, do: 
@@ -3180,7 +3180,7 @@ An example of action on demand is shown in $ROOTSYS/test/Event.h with the member
 
 (C++ version of the code)
 
- When calling fWebHistogram.GetObject(), the function GetObject will automatically invoke a script GetWebHistogram.C via the Int32erpreter.
+ When calling fWebHistogram.GetObject(), the function GetObject will automatically invoke a script GetWebHistogram.C via the interpreter.
 
 An example of a GetWebHistogram.C script is shown below 
 
@@ -3203,13 +3203,13 @@ Note that if the definition of the [TRef](@ref) fWebHistogram had been:
 
 (C++ version of the code)
 
- then, the compiled or Int32erpreted function GetWebHistogram() would have been called instead of the C++ script GetWebHistogram.C
+ then, the compiled or interpreted function GetWebHistogram() would have been called instead of the C++ script GetWebHistogram.C
 
 ## Special case of a TRef pointing to an object with a TUUID
 
 If the referenced object has a [TUUID](@ref), its bit kHasUUID has been set. This case is detected by the [TRef](@ref) assignment operator. (For example, [TFile](@ref) and [TDirectory](@ref) have a [TUUID](@ref)) The [TRef](@ref) fPID points directly to the single object [TProcessUUID](@ref) (deriving from [TProcessID](@ref)) and managing the list of TUUIDs for a process. The [TRef](@ref) kHasUUID bit is set and its fUniqueID is set to the fUniqueID of the referenced object.
 
-When the [TRef](@ref) is streamed to a buffer, the corresponding [TUUID](@ref) is also streamed with the [TRef](@ref). When a [TRef](@ref) is read from a buffer, the corresponding [TUUID](@ref) is also read and entered Int32o the global_ list of TUUIDs (if not already there). The [TRef](@ref) fUniqueID is set to the UUIDNumber. see [TProcessUUID](@ref) for more details.
+When the [TRef](@ref) is streamed to a buffer, the corresponding [TUUID](@ref) is also streamed with the [TRef](@ref). When a [TRef](@ref) is read from a buffer, the corresponding [TUUID](@ref) is also read and entered into the global_ list of TUUIDs (if not already there). The [TRef](@ref) fUniqueID is set to the UUIDNumber. see [TProcessUUID](@ref) for more details.
 
 ## Array of TRef
 
@@ -3228,9 +3228,9 @@ Related functions: [`GetObject`](@ref), [`GetPID`](@ref), [`IsA`](@ref), [`IsVal
 
 A [TRefTable](@ref) maintains the association between a referenced object and the parent object supporting this referenced object.
 
-The parent object is typically a branch of a [TTree](@ref). For each object referenced in a [TTree](@ref) entry, the corresponding entry in the [TTree](@ref)'s [TBranchRef!fRefTable](@ref) contains the index of the branch that needs to be loaded to bring the object Int32o memory.
+The parent object is typically a branch of a [TTree](@ref). For each object referenced in a [TTree](@ref) entry, the corresponding entry in the [TTree](@ref)'s [TBranchRef!fRefTable](@ref) contains the index of the branch that needs to be loaded to bring the object into memory.
 
-Persistency of a [TRefTable](@ref) is split Int32o two parts:
+Persistency of a [TRefTable](@ref) is split into two parts:
 
 - entry specific information is stored (read) by FillBuffer (ReadBuffer). For each referenced object the object's fUniqueID and the referencing [TRef!fPID](@ref) is stored (to allow the [TRefTable](@ref) to autoload references created by different processes).
 - non-entry specific, i.e. global_ information is stored (read) by the Streamer function. This comprises all members marked as persistent.
@@ -3374,9 +3374,9 @@ This extends (and isolates) struct timespec
 
 Due to ROOT/CINT limitations [TTimeStamp](@ref) does not explicitly hold a timespec struct; attempting to do so means the Streamer must be hand written. Instead we have chosen to simply contain similar fields within the private area of this class.
 
-NOTE: the use of time_t (and its default implementation as a 32 Int32) implies overflow conditions occurs somewhere around `Jan 18, 19:14:07, 2038`. If this experiment is still going when it becomes significant someone will have to deal with it.
+NOTE: the use of time_t (and its default implementation as a 32 int) implies overflow conditions occurs somewhere around `Jan 18, 19:14:07, 2038`. If this experiment is still going when it becomes significant someone will have to deal with it.
 
-Related functions: [`Add`](@ref), [`AsDouble`](@ref), [`AsGAST`](@ref), [`AsGMST`](@ref), [`AsJulianDate`](@ref), [`AsLAST`](@ref), [`AsLMST`](@ref), [`AsString`](@ref), [`Copy`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDayOfYear`](@ref), [`GetMonth`](@ref), [`GetNanoSec`](@ref), [`GetSec`](@ref), [`GetTimeSpec`](@ref), [`GetTime`](@ref), [`GetWeek`](@ref), [`IsA`](@ref), [`IsLeapYear`](@ref), [`Print`](@ref), [`SetNanoSec`](@ref), [`SetSec`](@ref), [`Set`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTimeStamp!Class_Name`](@ref), [`TTimeStamp!Class_Version`](@ref), [`TTimeStamp!Class`](@ref), [`TTimeStamp!DeclFileName`](@ref), [`TTimeStamp!DumpTMStruct`](@ref), [`TTimeStamp!GetDayOfWeek`](@ref), [`TTimeStamp!GetDayOfYear`](@ref), [`TTimeStamp!GetWeek`](@ref), [`TTimeStamp!GetZoneOffset`](@ref), [`TTimeStamp!IsLeapYear`](@ref), [`TTimeStamp!MktimeFromUTC`](@ref), [`TTimeStamp`](@ref), [`double`](@ref)
+Related functions: [`Add`](@ref), [`AsDouble`](@ref), [`AsGAST`](@ref), [`AsGMST`](@ref), [`AsGetString`](@ref), [`AsJulianDate`](@ref), [`AsLAST`](@ref), [`AsLMST`](@ref), [`Copy`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDayOfYear`](@ref), [`GetMonth`](@ref), [`GetNanoSec`](@ref), [`GetSec`](@ref), [`GetTimeSpec`](@ref), [`GetTime`](@ref), [`GetWeek`](@ref), [`IsA`](@ref), [`IsLeapYear`](@ref), [`Print`](@ref), [`SetNanoSec`](@ref), [`SetSec`](@ref), [`Set`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTimeStamp!Class_Name`](@ref), [`TTimeStamp!Class_Version`](@ref), [`TTimeStamp!Class`](@ref), [`TTimeStamp!DeclFileName`](@ref), [`TTimeStamp!DumpTMStruct`](@ref), [`TTimeStamp!GetDayOfWeek`](@ref), [`TTimeStamp!GetDayOfYear`](@ref), [`TTimeStamp!GetWeek`](@ref), [`TTimeStamp!GetZoneOffset`](@ref), [`TTimeStamp!IsLeapYear`](@ref), [`TTimeStamp!MktimeFromUTC`](@ref), [`TTimeStamp`](@ref), [`double`](@ref)
 """ TTimeStamp
 
 # Wrapper of TUri
@@ -3407,7 +3407,7 @@ Related functions: [`Authenticate`](@ref), [`ClientVersion`](@ref), [`ErrorMsg`]
 @trydoc raw"""
     ROOT.TVirtualFFT
 
-[TVirtualFFT](@ref) is an Int32erface class for Fast Fourier Transforms.
+[TVirtualFFT](@ref) is an interface class for Fast Fourier Transforms.
 
 The default FFT library is FFTW. To use it, FFTW3 library should already be installed, and [ROOT](@ref) should be have fftw3 themodule enabled, with the directories of fftw3 include file and library specified (see installation instructions). Function [SetDefaultFFT()](@ref) allows to change the default library.
 
@@ -3463,7 +3463,7 @@ Call to the static function FFT returns a pointer to a fast Fourier transform wi
 
  Different options are explained in the function comments
 
-Related functions: [`GetN`](@ref), [`GetNdim`](@ref), [`GetPointComplex`](@ref), [`GetPointReal`](@ref), [`GetPointsComplex`](@ref), [`GetPointsReal`](@ref), [`GetPoints`](@ref), [`GetSign`](@ref), [`GetTransformFlag`](@ref), [`GetType`](@ref), [`Init`](@ref), [`IsA`](@ref), [`IsInplace`](@ref), [`SetPointComplex`](@ref), [`SetPoint`](@ref), [`SetPointsComplex`](@ref), [`SetPoints`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualFFT!Class_Name`](@ref), [`TVirtualFFT!Class_Version`](@ref), [`TVirtualFFT!Class`](@ref), [`TVirtualFFT!DeclFileName`](@ref), [`TVirtualFFT!FFT`](@ref), [`TVirtualFFT!GetCurrentTransform`](@ref), [`TVirtualFFT!GetDefaultFFT`](@ref), [`TVirtualFFT!SetDefaultFFT`](@ref), [`TVirtualFFT!SetTransform`](@ref), [`TVirtualFFT!SineCosine`](@ref), [`TVirtualFFT`](@ref), [`Transform`](@ref)
+Related functions: [`GetGetType`](@ref), [`GetN`](@ref), [`GetNdim`](@ref), [`GetPointComplex`](@ref), [`GetPointReal`](@ref), [`GetPointsComplex`](@ref), [`GetPointsReal`](@ref), [`GetPoints`](@ref), [`GetSign`](@ref), [`GetTransformFlag`](@ref), [`Init`](@ref), [`IsA`](@ref), [`IsInplace`](@ref), [`SetPointComplex`](@ref), [`SetPoint`](@ref), [`SetPointsComplex`](@ref), [`SetPoints`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualFFT!Class_Name`](@ref), [`TVirtualFFT!Class_Version`](@ref), [`TVirtualFFT!Class`](@ref), [`TVirtualFFT!DeclFileName`](@ref), [`TVirtualFFT!FFT`](@ref), [`TVirtualFFT!GetCurrentTransform`](@ref), [`TVirtualFFT!GetDefaultFFT`](@ref), [`TVirtualFFT!SetDefaultFFT`](@ref), [`TVirtualFFT!SetTransform`](@ref), [`TVirtualFFT!SineCosine`](@ref), [`TVirtualFFT`](@ref), [`Transform`](@ref)
 """ TVirtualFFT
 
 # Wrapper of TVirtualMapFile
@@ -3553,7 +3553,7 @@ Abstract base class used by [ROOT](@ref) graphics editor.
 
 
 
-Related functions: [`Build`](@ref), [`DeleteEditors`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`DrawTextNDC`](@ref), [`DrawText`](@ref), [`FillAttributes`](@ref), [`GetCanvas`](@ref), [`Hide`](@ref), [`IsA`](@ref), [`IsGlobal`](@ref), [`LineAttributes`](@ref), [`MarkerAttributes`](@ref), [`SetGlobal`](@ref), [`Show`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadEditor!Class_Name`](@ref), [`TVirtualPadEditor!Class_Version`](@ref), [`TVirtualPadEditor!Class`](@ref), [`TVirtualPadEditor!DeclFileName`](@ref), [`TVirtualPadEditor!GetEditorName`](@ref), [`TVirtualPadEditor!GetPadEditor`](@ref), [`TVirtualPadEditor!HideEditor`](@ref), [`TVirtualPadEditor!LoadEditor`](@ref), [`TVirtualPadEditor!SetPadEditorName`](@ref), [`TVirtualPadEditor!ShowEditor`](@ref), [`TVirtualPadEditor!Terminate`](@ref), [`TVirtualPadEditor!UpdateFillAttributes`](@ref), [`TVirtualPadEditor!UpdateLineAttributes`](@ref), [`TVirtualPadEditor!UpdateMarkerAttributes`](@ref), [`TVirtualPadEditor!UpdateTextAttributes`](@ref), [`TVirtualPadEditor`](@ref), [`TextAttributes`](@ref)
+Related functions: [`Build`](@ref), [`DeleteEditors`](@ref), [`DrawGetTextNDC`](@ref), [`DrawGetText`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`FillAttributes`](@ref), [`GetCanvas`](@ref), [`GetTextAttributes`](@ref), [`Hide`](@ref), [`IsA`](@ref), [`IsGlobal`](@ref), [`LineAttributes`](@ref), [`MarkerAttributes`](@ref), [`SetGlobal`](@ref), [`Show`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadEditor!Class_Name`](@ref), [`TVirtualPadEditor!Class_Version`](@ref), [`TVirtualPadEditor!Class`](@ref), [`TVirtualPadEditor!DeclFileName`](@ref), [`TVirtualPadEditor!GetEditorName`](@ref), [`TVirtualPadEditor!GetPadEditor`](@ref), [`TVirtualPadEditor!HideEditor`](@ref), [`TVirtualPadEditor!LoadEditor`](@ref), [`TVirtualPadEditor!SetPadEditorName`](@ref), [`TVirtualPadEditor!ShowEditor`](@ref), [`TVirtualPadEditor!Terminate`](@ref), [`TVirtualPadEditor!UpdateFillAttributes`](@ref), [`TVirtualPadEditor!UpdateGetTextAttributes`](@ref), [`TVirtualPadEditor!UpdateLineAttributes`](@ref), [`TVirtualPadEditor!UpdateMarkerAttributes`](@ref), [`TVirtualPadEditor`](@ref)
 """ TVirtualPadEditor
 
 # Wrapper of TAxis
@@ -3582,7 +3582,7 @@ The concrete implementations are:
 
 The 3D Viewer infrastructure consists of:
 
-- [TVirtualViewer3D](@ref) Int32erface: An abstract handle to the viewer, allowing client to test preferences, add objects, control the viewer via scripting (to be added) etc. -[TBuffer3D](@ref) class hierarchy: Used to describe 3D objects ("shapes")
+- [TVirtualViewer3D](@ref) interface: An abstract handle to the viewer, allowing client to test preferences, add objects, control the viewer via scripting (to be added) etc. -[TBuffer3D](@ref) class hierarchy: Used to describe 3D objects ("shapes")
 
     - filled /added by negotiation with viewer via [TVirtualViewer3D](@ref).
 
@@ -3605,7 +3605,7 @@ Create/obtain the viewer handle via local_/global_ pad - the viewer is always bo
 
 (C++ version of the code)
 
-" xxxx" is viewer type: OpenGL "ogl", X3D "x3d" or Pad "pad" (default). The viewer is created via the plugin manager, attached to pad, and the Int32erface returned.
+" xxxx" is viewer type: OpenGL "ogl", X3D "x3d" or Pad "pad" (default). The viewer is created via the plugin manager, attached to pad, and the interface returned.
 
 ## Begin / End Scene
 
@@ -3624,12 +3624,12 @@ The BeginScene call will cause the viewer to suspend redraws etc, and after the 
 
 ## Filling TBuffer3D and Adding to Viewer
 
-The viewers behind the [TVirtualViewer3D](@ref) Int32erface differ greatly in their capabilities e.g.
+The viewers behind the [TVirtualViewer3D](@ref) interface differ greatly in their capabilities e.g.
 
 - Some know how to draw certain shapes natively (e.g. spheres/tubes in OpenGL) - others always require a raw tessellation description of points/lines/segments.
 - Some need the 3D object positions in the global_ frame, others can cope with local_ frames + a translation matrix - which can give considerable performance benefits.
 
-To cope with these situations the object buffer is filled out in negotiation with the viewer. [TBuffer3D](@ref) classes are conceptually divided Int32o enumerated sections Core, BoundingBox, Raw etc (see TBuffer3D.h for more details). ![https://root.cern/doc/v636/base_tbuffer3d.png](https://root.cern/doc/v636/base_tbuffer3d.png)
+To cope with these situations the object buffer is filled out in negotiation with the viewer. [TBuffer3D](@ref) classes are conceptually divided into enumerated sections Core, BoundingBox, Raw etc (see TBuffer3D.h for more details). ![https://root.cern/doc/v636/base_tbuffer3d.png](https://root.cern/doc/v636/base_tbuffer3d.png)
 
 The SectionsValid() / SetSectionsValid / ClearSectionsValid() methods of [TBuffer3D](@ref) are used to test/set/clear these section valid flags.
 
@@ -3675,13 +3675,13 @@ OpenGL only supports solid spheres at present - cut/hollow ones will be requeste
 
 Anyone is free to add new [TBuffer3D](@ref) classes, but it should be clear that the viewers require updating to be able to take advantage of them. The number of native shapes in OpenGL will be expanded over time.
 
-BoundingBox: You are not obliged to complete this, as any viewer requiring one Int32ernally (OpenGL) will build one for you if you do not provide. However to do this the viewer will force you to provide the raw tessellation, and the resulting box will be axis aligned with the overall scene, which is non-ideal for rotated shapes.
+BoundingBox: You are not obliged to complete this, as any viewer requiring one internally (OpenGL) will build one for you if you do not provide. However to do this the viewer will force you to provide the raw tessellation, and the resulting box will be axis aligned with the overall scene, which is non-ideal for rotated shapes.
 
 As we need to support orientated (rotated) bounding boxes, [TBuffer3D](@ref) requires the 6 vertices of the box. We also provide a convenience function, SetAABoundingBox(), for simpler case of setting an axis aligned bounding box.
 
 ## Master/Local Reference Frames
 
-The Core section of [TBuffer3D](@ref) contains two members relating to reference frames: fLocalFrame & fLocalMaster. fLocalFrame indicates if any positions in the buffer (bounding box and tessellation vertexes) are in local_ or master (world frame). fLocalMaster is a standard 4x4 translation matrix (OpenGL column major ordering) for placing the object Int32o the 3D master frame.
+The Core section of [TBuffer3D](@ref) contains two members relating to reference frames: fLocalFrame & fLocalMaster. fLocalFrame indicates if any positions in the buffer (bounding box and tessellation vertexes) are in local_ or master (world frame). fLocalMaster is a standard 4x4 translation matrix (OpenGL column major ordering) for placing the object into the 3D master frame.
 
 If fLocalFrame is kFALSE, fLocalMaster should contain an identity matrix. This is set by default, and can be reset using SetLocalMasterIdentity() function.
 
@@ -3692,9 +3692,9 @@ There are two cases of object addition:
 - Add this object as a single independent entity in the world reference frame.
 - Add a physical placement (copy) of this logical object (described in local_ reference frame).
 
-The second case is very typical in geometry packages, GEANT4, where we have very large number repeated placements of relatively few logical (unique) shapes. Some viewers (OpenGL only at present) are able to take advantage of this by identifying unique logical shapes from the fID logical ID member of [TBuffer3D](@ref). If repeated addition of the same fID is found, the shape is cached already - and the costly tessellation does not need to be sent again. The viewer can also perform Int32ernal GL specific caching with considerable performance gains in these cases.
+The second case is very typical in geometry packages, GEANT4, where we have very large number repeated placements of relatively few logical (unique) shapes. Some viewers (OpenGL only at present) are able to take advantage of this by identifying unique logical shapes from the fID logical ID member of [TBuffer3D](@ref). If repeated addition of the same fID is found, the shape is cached already - and the costly tessellation does not need to be sent again. The viewer can also perform internal GL specific caching with considerable performance gains in these cases.
 
-For this to work correctly the logical object in must be described in [TBuffer3D](@ref) in the local_ reference frame, complete with the local_/master translation. The viewer indicates this through the Int32erface method 
+For this to work correctly the logical object in must be described in [TBuffer3D](@ref) in the local_ reference frame, complete with the local_/master translation. The viewer indicates this through the interface method 
 
     PreferLocalFrame()
 
@@ -3711,13 +3711,13 @@ As a minimum requirement all clients must be capable of filling the raw tessella
 It should be understood that AddObject is not an explicit command to the viewer
 
 - it may for various reasons decide to ignore it:
-- It already has the object Int32ernally cached .
-- The object falls outside some 'Int32erest' limits of the viewer camera.
+- It already has the object internally cached .
+- The object falls outside some 'interest' limits of the viewer camera.
 - The object is too small to be worth drawing.
 
 In all these cases [AddObject()](@ref) returns kNone, as it does for successful addition, simply indicating it does not require you to provide further information about this object. You should not try to make any assumptions about what the viewer did with it.
 
-This enables the viewer to be connected to a client which sends potentially millions of objects, and only accept those that are of Int32erest at a certain time, caching the relatively small number of CPU/memory costly logical shapes, and retaining/discarding the physical placements as required. The viewer may decide to force the client to rebuild (republish) the scene (via a [TPad](@ref) repaint at present), and thus collect these objects if the Int32ernal viewer state changes. It does this presently by forcing a repaint on the attached [TPad](@ref) object - hence the reason for putting all publishing to the viewer in the attached pad objects [Paint()](@ref) method. We will likely remove this requirement in the future, indicating the rebuild request via a normal [ROOT](@ref) signal, which the client can detect.
+This enables the viewer to be connected to a client which sends potentially millions of objects, and only accept those that are of interest at a certain time, caching the relatively small number of CPU/memory costly logical shapes, and retaining/discarding the physical placements as required. The viewer may decide to force the client to rebuild (republish) the scene (via a [TPad](@ref) repaint at present), and thus collect these objects if the internal viewer state changes. It does this presently by forcing a repaint on the attached [TPad](@ref) object - hence the reason for putting all publishing to the viewer in the attached pad objects [Paint()](@ref) method. We will likely remove this requirement in the future, indicating the rebuild request via a normal [ROOT](@ref) signal, which the client can detect.
 
 ## Physical IDs
 
@@ -3727,15 +3727,15 @@ This enables the viewer to be connected to a client which sends potentially mill
 
 (C++ version of the code)
 
-If you use the first (simple) case a viewer using logical/physical pairs will generate IDs for each physical object Int32ernally. In the second you can specify a unique identifier from the client, which allows the viewer to be more efficient. It can now cache both logical and physical objects, and only discard physical objects no longer of Int32erest as part of scene rebuilds.
+If you use the first (simple) case a viewer using logical/physical pairs will generate IDs for each physical object internally. In the second you can specify a unique identifier from the client, which allows the viewer to be more efficient. It can now cache both logical and physical objects, and only discard physical objects no longer of interest as part of scene rebuilds.
 
 ## Child Objects
 
-In many geometries there is a rigid containment hierarchy, and so if the viewer is not Int32erested in a certain object due to limits/size then it will also not be Int32erest in any of the contained branch of descendents. Both [AddObject()](@ref) methods have an addChildren parameter. The viewer will complete this (if passed) indicating if children (contained within the one just sent) are worth adding.
+In many geometries there is a rigid containment hierarchy, and so if the viewer is not interested in a certain object due to limits/size then it will also not be interest in any of the contained branch of descendents. Both [AddObject()](@ref) methods have an addChildren parameter. The viewer will complete this (if passed) indicating if children (contained within the one just sent) are worth adding.
 
 ## Recycling TBuffer3D
 
-Once add [AddObject()](@ref) has been called, the contents are copied to the viewer Int32ernally. You are free to destroy this object, or recycle it for the next object if suitable.
+Once add [AddObject()](@ref) has been called, the contents are copied to the viewer internally. You are free to destroy this object, or recycle it for the next object if suitable.
 
 Related functions: [`AddCompositeOp`](@ref), [`AddObject`](@ref), [`BeginScene`](@ref), [`BuildingScene`](@ref), [`CanLoopOnPrimitives`](@ref), [`CloseComposite`](@ref), [`DrawViewer`](@ref), [`EndScene`](@ref), [`IsA`](@ref), [`ObjectPaint`](@ref), [`OpenComposite`](@ref), [`PadPaint`](@ref), [`PreferLocalFrame`](@ref), [`PrintObjects`](@ref), [`ResetCamerasAfterNextUpdate`](@ref), [`ResetCameras`](@ref), [`SelectObject`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualViewer3D!Class_Name`](@ref), [`TVirtualViewer3D!Class_Version`](@ref), [`TVirtualViewer3D!Class`](@ref), [`TVirtualViewer3D!DeclFileName`](@ref), [`TVirtualViewer3D!Viewer3D`](@ref)
 """ TVirtualViewer3D
@@ -3746,9 +3746,9 @@ Related functions: [`AddCompositeOp`](@ref), [`AddObject`](@ref), [`BeginScene`]
 
 To make it possible to use GL for 2D graphic in a TPad/TCanvas.
 
-[TVirtualPadPainter](@ref) Int32erface must be used instead of [TVirtualX](@ref). Internally, non-GL implementation *should* delegate all calls to gVirtualX, GL implementation will delegate part of calls to gVirtualX, and has to implement some of the calls from the scratch.
+[TVirtualPadPainter](@ref) interface must be used instead of [TVirtualX](@ref). Internally, non-GL implementation *should* delegate all calls to gVirtualX, GL implementation will delegate part of calls to gVirtualX, and has to implement some of the calls from the scratch.
 
-Related functions: [`ClearDrawable`](@ref), [`CopyDrawable`](@ref), [`CreateDrawable`](@ref), [`DestroyDrawable`](@ref), [`DrawBox`](@ref), [`DrawFillArea`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`DrawPixels`](@ref), [`DrawPolyLineNDC`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`DrawTextNDC`](@ref), [`DrawText`](@ref), [`GetFillColor`](@ref), [`GetFillStyle`](@ref), [`GetLineColor`](@ref), [`GetLineStyle`](@ref), [`GetLineWidth`](@ref), [`GetTextAlign`](@ref), [`GetTextAngle`](@ref), [`GetTextColor`](@ref), [`GetTextFont`](@ref), [`GetTextMagnitude`](@ref), [`GetTextSize`](@ref), [`InitPainter`](@ref), [`InvalidateCS`](@ref), [`IsA`](@ref), [`IsTransparent`](@ref), [`LockPainter`](@ref), [`SaveImage`](@ref), [`SelectDrawable`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetOpacity`](@ref), [`SetTextAlign`](@ref), [`SetTextAngle`](@ref), [`SetTextColor`](@ref), [`SetTextFont`](@ref), [`SetTextSizePixels`](@ref), [`SetTextSize`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadPainter!Class_Name`](@ref), [`TVirtualPadPainter!Class_Version`](@ref), [`TVirtualPadPainter!Class`](@ref), [`TVirtualPadPainter!DeclFileName`](@ref), [`TVirtualPadPainter!PadPainter`](@ref)
+Related functions: [`ClearDrawable`](@ref), [`CopyDrawable`](@ref), [`CreateDrawable`](@ref), [`DestroyDrawable`](@ref), [`DrawBox`](@ref), [`DrawFillArea`](@ref), [`DrawGetTextNDC`](@ref), [`DrawGetText`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`DrawPixels`](@ref), [`DrawPolyLineNDC`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`GetFillColor`](@ref), [`GetFillStyle`](@ref), [`GetGetTextAlign`](@ref), [`GetGetTextAngle`](@ref), [`GetGetTextColor`](@ref), [`GetGetTextFont`](@ref), [`GetGetTextMagnitude`](@ref), [`GetGetTextSize`](@ref), [`GetLineColor`](@ref), [`GetLineStyle`](@ref), [`GetLineWidth`](@ref), [`InitPainter`](@ref), [`InvalidateCS`](@ref), [`IsA`](@ref), [`IsTransparent`](@ref), [`LockPainter`](@ref), [`SaveImage`](@ref), [`SelectDrawable`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetGetTextAlign`](@ref), [`SetGetTextAngle`](@ref), [`SetGetTextColor`](@ref), [`SetGetTextFont`](@ref), [`SetGetTextSizePixels`](@ref), [`SetGetTextSize`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetOpacity`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadPainter!Class_Name`](@ref), [`TVirtualPadPainter!Class_Version`](@ref), [`TVirtualPadPainter!Class`](@ref), [`TVirtualPadPainter!DeclFileName`](@ref), [`TVirtualPadPainter!PadPainter`](@ref)
 """ TVirtualPadPainter
 
 # Wrapper of TPickerStackGuard
@@ -3766,11 +3766,11 @@ Related functions: [`TPickerStackGuard`](@ref)
 @trydoc raw"""
     ROOT.TVirtualPerfStats
 
-Provides the Int32erface for the PROOF Int32ernal performance measurement and event tracing.
+Provides the interface for the PROOF internal performance measurement and event tracing.
 
 
 
-Related functions: [`FileEvent`](@ref), [`FileOpenEvent`](@ref), [`FileReadEvent`](@ref), [`GetBytesRead`](@ref), [`GetNumEvents`](@ref), [`IsA`](@ref), [`PacketEvent`](@ref), [`PrintBasketInfo`](@ref), [`RateEvent`](@ref), [`SetBytesRead`](@ref), [`SetLoadedMiss`](@ref), [`SetLoaded`](@ref), [`SetMissed`](@ref), [`SetNumEvents`](@ref), [`SetUsed`](@ref), [`SimpleEvent`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPerfStats!Class_Name`](@ref), [`TVirtualPerfStats!Class_Version`](@ref), [`TVirtualPerfStats!Class`](@ref), [`TVirtualPerfStats!CurrentPerfStats`](@ref), [`TVirtualPerfStats!DeclFileName`](@ref), [`TVirtualPerfStats!EventType`](@ref), [`UnzipEvent`](@ref), [`UpdateBranchIndices`](@ref)
+Related functions: [`FileEvent`](@ref), [`FileOpenEvent`](@ref), [`FileReadEvent`](@ref), [`GetBytesRead`](@ref), [`GetNumEvents`](@ref), [`IsA`](@ref), [`PacketEvent`](@ref), [`PrintBasketInfo`](@ref), [`RateEvent`](@ref), [`SetBytesRead`](@ref), [`SetLoadedMiss`](@ref), [`SetLoaded`](@ref), [`SetMissed`](@ref), [`SetNumEvents`](@ref), [`SetUsed`](@ref), [`SimpleEvent`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPerfStats!Class_Name`](@ref), [`TVirtualPerfStats!Class_Version`](@ref), [`TVirtualPerfStats!Class`](@ref), [`TVirtualPerfStats!CurrentPerfStats`](@ref), [`TVirtualPerfStats!DeclFileName`](@ref), [`TVirtualPerfStats!EventGetType`](@ref), [`UnzipEvent`](@ref), [`UpdateBranchIndices`](@ref)
 """ TVirtualPerfStats
 
 # Wrapper of TBranch
@@ -3791,18 +3791,18 @@ See also specialized branches:
 - [TBranchObject](@ref) in case the branch is one object
 - [TBranchClones](@ref) in case the branch is an array of clone objects
 
-Related functions: [`AddBasket`](@ref), [`AddLastBasket`](@ref), [`BackFill`](@ref), [`Browse`](@ref), [`ClassDefOverride`](@ref), [`DeleteBaskets`](@ref), [`DropBaskets`](@ref), [`ExpandBasketArrays`](@ref), [`FillImpl`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`FlushBaskets`](@ref), [`FlushOneBasket`](@ref), [`GetAddress`](@ref), [`GetBasketBytes`](@ref), [`GetBasketEntry`](@ref), [`GetBasketSeek`](@ref), [`GetBasketSize`](@ref), [`GetBasket`](@ref), [`GetBrowsables`](@ref), [`GetBulkRead`](@ref), [`GetClassName`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetDirectory`](@ref), [`GetEntries`](@ref), [`GetEntryExport`](@ref), [`GetEntryNumber`](@ref), [`GetEntryOffsetLen`](@ref), [`GetEntry`](@ref), [`GetEvent`](@ref), [`GetExpectedType`](@ref), [`GetFileName`](@ref), [`GetFile`](@ref), [`GetFirstEntry`](@ref), [`GetFullName`](@ref), [`GetIOFeatures`](@ref), [`GetIconName`](@ref), [`GetLeaf`](@ref), [`GetListOfBaskets`](@ref), [`GetListOfBranches`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxBaskets`](@ref), [`GetMother`](@ref), [`GetNleaves`](@ref), [`GetOffset`](@ref), [`GetReadBasket`](@ref), [`GetReadEntry`](@ref), [`GetRow`](@ref), [`GetSplitLevel`](@ref), [`GetSubBranch`](@ref), [`GetTotBytes`](@ref), [`GetTotalSize`](@ref), [`GetTransientBuffer`](@ref), [`GetTree`](@ref), [`GetWriteBasket`](@ref), [`GetZipBytes`](@ref), [`IsAutoDelete`](@ref), [`IsFolder`](@ref), [`KeepCircular`](@ref), [`LoadBaskets`](@ref), [`PrintCacheInfo`](@ref), [`Print`](@ref), [`ReadBasket`](@ref), [`Refresh`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetReadEntry`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetBufferAddress`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEntries`](@ref), [`SetEntryOffsetLen`](@ref), [`SetFile`](@ref), [`SetFirstEntry`](@ref), [`SetIOFeatures`](@ref), [`SetMakeClass`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetStatus`](@ref), [`SetTree`](@ref), [`SetupAddresses`](@ref), [`SupportsBulkRead`](@ref), [`TBranch!ResetCount`](@ref), [`TBranch`](@ref), [`UpdateAddress`](@ref), [`UpdateFile`](@ref)
+Related functions: [`AddBasket`](@ref), [`AddLastBasket`](@ref), [`BackFill`](@ref), [`Browse`](@ref), [`ClassDefOverride`](@ref), [`DeleteBaskets`](@ref), [`DropBaskets`](@ref), [`ExpandBasketArrays`](@ref), [`FillImpl`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`FlushBaskets`](@ref), [`FlushOneBasket`](@ref), [`GetAddress`](@ref), [`GetBasketBytes`](@ref), [`GetBasketEntry`](@ref), [`GetBasketSeek`](@ref), [`GetBasketSize`](@ref), [`GetBasket`](@ref), [`GetBrowsables`](@ref), [`GetBulkRead`](@ref), [`GetClassName`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetDirectory`](@ref), [`GetEntries`](@ref), [`GetEntryExport`](@ref), [`GetEntryNumber`](@ref), [`GetEntryOffsetLen`](@ref), [`GetEntry`](@ref), [`GetEvent`](@ref), [`GetExpectedGetType`](@ref), [`GetFileName`](@ref), [`GetFile`](@ref), [`GetFirstEntry`](@ref), [`GetFullName`](@ref), [`GetIOFeatures`](@ref), [`GetIconName`](@ref), [`GetLeaf`](@ref), [`GetListOfBaskets`](@ref), [`GetListOfBranches`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxBaskets`](@ref), [`GetMother`](@ref), [`GetNleaves`](@ref), [`GetOffset`](@ref), [`GetReadBasket`](@ref), [`GetReadEntry`](@ref), [`GetRow`](@ref), [`GetSplitLevel`](@ref), [`GetSubBranch`](@ref), [`GetTotBytes`](@ref), [`GetTotalSize`](@ref), [`GetTransientBuffer`](@ref), [`GetTree`](@ref), [`GetWriteBasket`](@ref), [`GetZipBytes`](@ref), [`IsAutoDelete`](@ref), [`IsFolder`](@ref), [`KeepCircular`](@ref), [`LoadBaskets`](@ref), [`PrintCacheInfo`](@ref), [`Print`](@ref), [`ReadBasket`](@ref), [`Refresh`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetReadEntry`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetBufferAddress`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEntries`](@ref), [`SetEntryOffsetLen`](@ref), [`SetFile`](@ref), [`SetFirstEntry`](@ref), [`SetIOFeatures`](@ref), [`SetMakeClass`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetStatus`](@ref), [`SetTree`](@ref), [`SetupAddresses`](@ref), [`SupportsBulkRead`](@ref), [`TBranch!ResetCount`](@ref), [`TBranch`](@ref), [`UpdateAddress`](@ref), [`UpdateFile`](@ref)
 """ TBranch
 
 # Wrapper of TVirtualPS
 @trydoc raw"""
     ROOT.TVirtualPS
 
-[TVirtualPS](@ref) is an abstract Int32erface to Postscript, PDF, SVG.
+[TVirtualPS](@ref) is an abstract interface to Postscript, PDF, SVG.
 
 TeX etc... drivers
 
-Related functions: [`CellArrayBegin`](@ref), [`CellArrayEnd`](@ref), [`CellArrayFill`](@ref), [`Close`](@ref), [`DrawBox`](@ref), [`DrawFrame`](@ref), [`DrawPS`](@ref), [`DrawPolyMarker`](@ref), [`GetStream`](@ref), [`GetType`](@ref), [`IsA`](@ref), [`NewPage`](@ref), [`Open`](@ref), [`PrintFast`](@ref), [`PrintRaw`](@ref), [`PrintStr`](@ref), [`SetColor`](@ref), [`SetStream`](@ref), [`SetType`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPS!Class_Name`](@ref), [`TVirtualPS!Class_Version`](@ref), [`TVirtualPS!Class`](@ref), [`TVirtualPS!DeclFileName`](@ref), [`TVirtualPS`](@ref), [`Text`](@ref), [`WriteInteger`](@ref), [`WriteReal`](@ref)
+Related functions: [`CellArrayBegin`](@ref), [`CellArrayEnd`](@ref), [`CellArrayFill`](@ref), [`Close`](@ref), [`DrawBox`](@ref), [`DrawFrame`](@ref), [`DrawPS`](@ref), [`DrawPolyMarker`](@ref), [`GetGetType`](@ref), [`GetStream`](@ref), [`GetText`](@ref), [`IsA`](@ref), [`NewPage`](@ref), [`Open`](@ref), [`PrintFast`](@ref), [`PrintRaw`](@ref), [`PrintStr`](@ref), [`SetColor`](@ref), [`SetGetType`](@ref), [`SetStream`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPS!Class_Name`](@ref), [`TVirtualPS!Class_Version`](@ref), [`TVirtualPS!Class`](@ref), [`TVirtualPS!DeclFileName`](@ref), [`TVirtualPS`](@ref), [`WriteGetInteger`](@ref), [`WriteReal`](@ref)
 """ TVirtualPS
 
 # Wrapper of TVirtualTableInterface
@@ -3813,18 +3813,18 @@ Related functions: [`CellArrayBegin`](@ref), [`CellArrayEnd`](@ref), [`CellArray
 
 
 
-Related functions: [`GetColumnHeader`](@ref), [`GetNColumns`](@ref), [`GetNRows`](@ref), [`GetRowHeader`](@ref), [`GetValueAsString`](@ref), [`GetValue`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualTableInterface!Class_Name`](@ref), [`TVirtualTableInterface!Class_Version`](@ref), [`TVirtualTableInterface!Class`](@ref), [`TVirtualTableInterface!DeclFileName`](@ref), [`TVirtualTableInterface`](@ref)
+Related functions: [`GetColumnHeader`](@ref), [`GetNColumns`](@ref), [`GetNRows`](@ref), [`GetRowHeader`](@ref), [`GetValueAsGetString`](@ref), [`GetValue`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualTableInterface!Class_Name`](@ref), [`TVirtualTableInterface!Class_Version`](@ref), [`TVirtualTableInterface!Class`](@ref), [`TVirtualTableInterface!DeclFileName`](@ref), [`TVirtualTableInterface`](@ref)
 """ TVirtualTableInterface
 
 # Wrapper of TVirtualX
 @trydoc raw"""
     ROOT.TVirtualX
 
-Semi-Abstract base class defining a generic Int32erface to the underlying, low level, native graphics backend (X11, Win32, MacOS, OpenGL...).
+Semi-Abstract base class defining a generic interface to the underlying, low level, native graphics backend (X11, Win32, MacOS, OpenGL...).
 
-An instance of [TVirtualX](@ref) itself defines a batch Int32erface to the graphics system.
+An instance of [TVirtualX](@ref) itself defines a batch interface to the graphics system.
 
-Related functions: [`AddPixmap`](@ref), [`AddWindow`](@ref), [`AllocColor`](@ref), [`BeginModalSessionFor`](@ref), [`Bell`](@ref), [`ChangeActivePointerGrab`](@ref), [`ChangeGC`](@ref), [`ChangeProperties`](@ref), [`ChangeProperty`](@ref), [`ChangeWindowAttributes`](@ref), [`CheckEvent`](@ref), [`ClearArea`](@ref), [`ClearWindow`](@ref), [`CloseDisplay`](@ref), [`ClosePixmap`](@ref), [`CloseWindow`](@ref), [`ConvertPrimarySelection`](@ref), [`ConvertSelection`](@ref), [`CopyArea`](@ref), [`CopyGC`](@ref), [`CopyPixmap`](@ref), [`CreateBitmap`](@ref), [`CreateCursor`](@ref), [`CreateGC`](@ref), [`CreateImage`](@ref), [`CreateOpenGLContext`](@ref), [`CreateOpenGLWindow`](@ref), [`CreatePictureFromData`](@ref), [`CreatePictureFromFile`](@ref), [`CreatePixmapFromData`](@ref), [`CreatePixmap`](@ref), [`CreateRegion`](@ref), [`CreateWindow`](@ref), [`DeleteFont`](@ref), [`DeleteGC`](@ref), [`DeleteImage`](@ref), [`DeleteOpenGLContext`](@ref), [`DeletePictureData`](@ref), [`DeletePixmap`](@ref), [`DeleteProperty`](@ref), [`DestroyRegion`](@ref), [`DestroySubwindows`](@ref), [`DestroyWindow`](@ref), [`DispatchClientMessage`](@ref), [`DisplayName`](@ref), [`DrawBox`](@ref), [`DrawCellArray`](@ref), [`DrawFillArea`](@ref), [`DrawLine`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`DrawRectangle`](@ref), [`DrawSegments`](@ref), [`DrawString`](@ref), [`DrawText`](@ref), [`EmptyRegion`](@ref), [`EqualRegion`](@ref), [`EventsPending`](@ref), [`ExecCommand`](@ref), [`FillPolygon`](@ref), [`FillRectangle`](@ref), [`FindRWindow`](@ref), [`FlushOpenGLBuffer`](@ref), [`FreeColor`](@ref), [`FreeFontNames`](@ref), [`FreeFontStruct`](@ref), [`GetCharacterUp`](@ref), [`GetColorBits`](@ref), [`GetColormap`](@ref), [`GetCurrentOpenGLContext`](@ref), [`GetCurrentWindow`](@ref), [`GetDefaultRootWindow`](@ref), [`GetDepth`](@ref), [`GetDisplay`](@ref), [`GetDoubleBuffer`](@ref), [`GetDrawMode`](@ref), [`GetFontAscent`](@ref), [`GetFontDescent`](@ref), [`GetFontHandle`](@ref), [`GetFontProperties`](@ref), [`GetFontStruct`](@ref), [`GetGCFont`](@ref), [`GetGCValues`](@ref), [`GetGeometry`](@ref), [`GetImageSize`](@ref), [`GetInputFocus`](@ref), [`GetNativeEvent`](@ref), [`GetOpenGLScalingFactor`](@ref), [`GetParent`](@ref), [`GetPasteBuffer`](@ref), [`GetPixel`](@ref), [`GetPlanes`](@ref), [`GetPrimarySelectionOwner`](@ref), [`GetProperty`](@ref), [`GetRGB`](@ref), [`GetRegionBox`](@ref), [`GetScreen`](@ref), [`GetTextExtent`](@ref), [`GetTextMagnitude`](@ref), [`GetVisual`](@ref), [`GetWindowAttributes`](@ref), [`GetWindowID`](@ref), [`GetWindowSize`](@ref), [`GrabButton`](@ref), [`GrabKey`](@ref), [`GrabPointer`](@ref), [`HasTTFonts`](@ref), [`IconifyWindow`](@ref), [`InitWindow`](@ref), [`Init`](@ref), [`InternAtom`](@ref), [`IntersectRegion`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsDNDAware`](@ref), [`KeysymToKeycode`](@ref), [`ListFonts`](@ref), [`LoadQueryFont`](@ref), [`LookupString`](@ref), [`LowerWindow`](@ref), [`MakeOpenGLContextCurrent`](@ref), [`MapGCFont`](@ref), [`MapRaised`](@ref), [`MapSubwindows`](@ref), [`MapWindow`](@ref), [`MoveResizeWindow`](@ref), [`MoveWindow`](@ref), [`NeedRedraw`](@ref), [`NextEvent`](@ref), [`OpenDisplay`](@ref), [`OpenPixmap`](@ref), [`ParseColor`](@ref), [`PointInRegion`](@ref), [`PolygonRegion`](@ref), [`PutImage`](@ref), [`PutPixel`](@ref), [`QueryColor`](@ref), [`QueryPointer`](@ref), [`RaiseWindow`](@ref), [`ReadGIF`](@ref), [`ReadPictureDataFromFile`](@ref), [`RemoveWindow`](@ref), [`ReparentWindow`](@ref), [`RequestLocator`](@ref), [`RequestString`](@ref), [`RescaleWindow`](@ref), [`ResizePixmap`](@ref), [`ResizeWindow`](@ref), [`ScreenWidthMM`](@ref), [`SelectInput`](@ref), [`SelectPixmap`](@ref), [`SelectWindow`](@ref), [`SendEvent`](@ref), [`SetCharacterUp`](@ref), [`SetClassHints`](@ref), [`SetClipOFF`](@ref), [`SetClipRectangles`](@ref), [`SetClipRegion`](@ref), [`SetCursor`](@ref), [`SetDNDAware`](@ref), [`SetDashes`](@ref), [`SetDoubleBufferOFF`](@ref), [`SetDoubleBufferON`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawMode`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetForeground`](@ref), [`SetIconName`](@ref), [`SetIconPixmap`](@ref), [`SetInputFocus`](@ref), [`SetKeyAutoRepeat`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineType`](@ref), [`SetLineWidth`](@ref), [`SetMWMHints`](@ref), [`SetMarkerColor`](@ref), [`SetMarkerSize`](@ref), [`SetMarkerStyle`](@ref), [`SetOpacity`](@ref), [`SetPrimarySelectionOwner`](@ref), [`SetRGB`](@ref), [`SetSelectionOwner`](@ref), [`SetTextAlign`](@ref), [`SetTextColor`](@ref), [`SetTextFont`](@ref), [`SetTextMagnitude`](@ref), [`SetTextSize`](@ref), [`SetTypeList`](@ref), [`SetWMPosition`](@ref), [`SetWMSizeHints`](@ref), [`SetWMSize`](@ref), [`SetWMState`](@ref), [`SetWMTransientHint`](@ref), [`SetWindowBackgroundPixmap`](@ref), [`SetWindowBackground`](@ref), [`SetWindowName`](@ref), [`ShapeCombineMask`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SubtractRegion`](@ref), [`SupportsExtension`](@ref), [`Sync`](@ref), [`TVirtualX!Class_Name`](@ref), [`TVirtualX!Class_Version`](@ref), [`TVirtualX!Class`](@ref), [`TVirtualX!DeclFileName`](@ref), [`TVirtualX!Instance`](@ref), [`TVirtualX`](@ref), [`TextWidth`](@ref), [`TranslateCoordinates`](@ref), [`UnionRectWithRegion`](@ref), [`UnionRegion`](@ref), [`UnmapWindow`](@ref), [`UpdateWindow`](@ref), [`Update`](@ref), [`WMDeleteNotify`](@ref), [`Warp`](@ref), [`WriteGIF`](@ref), [`WritePixmap`](@ref), [`XorRegion`](@ref)
+Related functions: [`AddPixmap`](@ref), [`AddWindow`](@ref), [`AllocColor`](@ref), [`BeginModalSessionFor`](@ref), [`Bell`](@ref), [`ChangeActivePointerGrab`](@ref), [`ChangeGC`](@ref), [`ChangeProperties`](@ref), [`ChangeProperty`](@ref), [`ChangeWindowAttributes`](@ref), [`CheckEvent`](@ref), [`ClearArea`](@ref), [`ClearWindow`](@ref), [`CloseDisplay`](@ref), [`ClosePixmap`](@ref), [`CloseWindow`](@ref), [`ConvertPrimarySelection`](@ref), [`ConvertSelection`](@ref), [`CopyArea`](@ref), [`CopyGC`](@ref), [`CopyPixmap`](@ref), [`CreateBitmap`](@ref), [`CreateCursor`](@ref), [`CreateGC`](@ref), [`CreateImage`](@ref), [`CreateOpenGLContext`](@ref), [`CreateOpenGLWindow`](@ref), [`CreatePictureFromData`](@ref), [`CreatePictureFromFile`](@ref), [`CreatePixmapFromData`](@ref), [`CreatePixmap`](@ref), [`CreateRegion`](@ref), [`CreateWindow`](@ref), [`DeleteFont`](@ref), [`DeleteGC`](@ref), [`DeleteImage`](@ref), [`DeleteOpenGLContext`](@ref), [`DeletePictureData`](@ref), [`DeletePixmap`](@ref), [`DeleteProperty`](@ref), [`DestroyRegion`](@ref), [`DestroySubwindows`](@ref), [`DestroyWindow`](@ref), [`DispatchClientMessage`](@ref), [`DisplayName`](@ref), [`DrawBox`](@ref), [`DrawCellArray`](@ref), [`DrawFillArea`](@ref), [`DrawGetString`](@ref), [`DrawGetText`](@ref), [`DrawLine`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`DrawRectangle`](@ref), [`DrawSegments`](@ref), [`EmptyRegion`](@ref), [`EqualRegion`](@ref), [`EventsPending`](@ref), [`ExecCommand`](@ref), [`FillPolygon`](@ref), [`FillRectangle`](@ref), [`FindRWindow`](@ref), [`FlushOpenGLBuffer`](@ref), [`FreeColor`](@ref), [`FreeFontNames`](@ref), [`FreeFontStruct`](@ref), [`GetCharacterUp`](@ref), [`GetColorBits`](@ref), [`GetColormap`](@ref), [`GetCurrentOpenGLContext`](@ref), [`GetCurrentWindow`](@ref), [`GetDefaultRootWindow`](@ref), [`GetDepth`](@ref), [`GetDisplay`](@ref), [`GetDoubleBuffer`](@ref), [`GetDrawMode`](@ref), [`GetFontAscent`](@ref), [`GetFontDescent`](@ref), [`GetFontHandle`](@ref), [`GetFontProperties`](@ref), [`GetFontStruct`](@ref), [`GetGCFont`](@ref), [`GetGCValues`](@ref), [`GetGeometry`](@ref), [`GetGetTextExtent`](@ref), [`GetGetTextMagnitude`](@ref), [`GetImageSize`](@ref), [`GetInputFocus`](@ref), [`GetNativeEvent`](@ref), [`GetOpenGLScalingFactor`](@ref), [`GetParent`](@ref), [`GetPasteBuffer`](@ref), [`GetPixel`](@ref), [`GetPlanes`](@ref), [`GetPrimarySelectionOwner`](@ref), [`GetProperty`](@ref), [`GetRGB`](@ref), [`GetRegionBox`](@ref), [`GetScreen`](@ref), [`GetTextWidth`](@ref), [`GetVisual`](@ref), [`GetWindowAttributes`](@ref), [`GetWindowID`](@ref), [`GetWindowSize`](@ref), [`GrabButton`](@ref), [`GrabKey`](@ref), [`GrabPointer`](@ref), [`HasTTFonts`](@ref), [`IconifyWindow`](@ref), [`InitWindow`](@ref), [`Init`](@ref), [`InternAtom`](@ref), [`IntersectRegion`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsDNDAware`](@ref), [`KeysymToKeycode`](@ref), [`ListFonts`](@ref), [`LoadQueryFont`](@ref), [`LookupGetString`](@ref), [`LowerWindow`](@ref), [`MakeOpenGLContextCurrent`](@ref), [`MapGCFont`](@ref), [`MapRaised`](@ref), [`MapSubwindows`](@ref), [`MapWindow`](@ref), [`MoveResizeWindow`](@ref), [`MoveWindow`](@ref), [`NeedRedraw`](@ref), [`NextEvent`](@ref), [`OpenDisplay`](@ref), [`OpenPixmap`](@ref), [`ParseColor`](@ref), [`PointInRegion`](@ref), [`PolygonRegion`](@ref), [`PutImage`](@ref), [`PutPixel`](@ref), [`QueryColor`](@ref), [`QueryPointer`](@ref), [`RaiseWindow`](@ref), [`ReadGIF`](@ref), [`ReadPictureDataFromFile`](@ref), [`RemoveWindow`](@ref), [`ReparentWindow`](@ref), [`RequestGetString`](@ref), [`RequestLocator`](@ref), [`RescaleWindow`](@ref), [`ResizePixmap`](@ref), [`ResizeWindow`](@ref), [`ScreenWidthMM`](@ref), [`SelectInput`](@ref), [`SelectPixmap`](@ref), [`SelectWindow`](@ref), [`SendEvent`](@ref), [`SetCharacterUp`](@ref), [`SetClassHints`](@ref), [`SetClipOFF`](@ref), [`SetClipRectangles`](@ref), [`SetClipRegion`](@ref), [`SetCursor`](@ref), [`SetDNDAware`](@ref), [`SetDashes`](@ref), [`SetDoubleBufferOFF`](@ref), [`SetDoubleBufferON`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawMode`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetForeground`](@ref), [`SetGetTextAlign`](@ref), [`SetGetTextColor`](@ref), [`SetGetTextFont`](@ref), [`SetGetTextMagnitude`](@ref), [`SetGetTextSize`](@ref), [`SetGetTypeList`](@ref), [`SetIconName`](@ref), [`SetIconPixmap`](@ref), [`SetInputFocus`](@ref), [`SetKeyAutoRepeat`](@ref), [`SetLineColor`](@ref), [`SetLineGetType`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetMWMHints`](@ref), [`SetMarkerColor`](@ref), [`SetMarkerSize`](@ref), [`SetMarkerStyle`](@ref), [`SetOpacity`](@ref), [`SetPrimarySelectionOwner`](@ref), [`SetRGB`](@ref), [`SetSelectionOwner`](@ref), [`SetWMPosition`](@ref), [`SetWMSizeHints`](@ref), [`SetWMSize`](@ref), [`SetWMState`](@ref), [`SetWMTransientHint`](@ref), [`SetWindowBackgroundPixmap`](@ref), [`SetWindowBackground`](@ref), [`SetWindowName`](@ref), [`ShapeCombineMask`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SubtractRegion`](@ref), [`SupportsExtension`](@ref), [`Sync`](@ref), [`TVirtualX!Class_Name`](@ref), [`TVirtualX!Class_Version`](@ref), [`TVirtualX!Class`](@ref), [`TVirtualX!DeclFileName`](@ref), [`TVirtualX!Instance`](@ref), [`TVirtualX`](@ref), [`TranslateCoordinates`](@ref), [`UnionRectWithRegion`](@ref), [`UnionRegion`](@ref), [`UnmapWindow`](@ref), [`UpdateWindow`](@ref), [`Update`](@ref), [`WMDeleteNotify`](@ref), [`Warp`](@ref), [`WriteGIF`](@ref), [`WritePixmap`](@ref), [`XorRegion`](@ref)
 """ TVirtualX
 
 # Wrapper of TClassTable
@@ -3885,13 +3885,13 @@ The values of InnerLowWaterMark and LeafLowWaterMark may actually be set by the 
 
  If the tree is only filled, then all the nodes will be at least 2/3 full. They will almost all be exactly 2/3 full if the elements are added to the tree in order (either increasing or decreasing). [Knuth says McCreight's experiments showed almost 100% memory utilization. I don't see how that can be given the algorithms that Knuth gives. McCreight must have used a different scheme for balancing. [No, he used a different scheme for splitting: he did a two-way split instead of the three way split as we do here. Which means that McCreight does better on insertion of ordered data, but we should do better on insertion of random data.]]
 
-It must also be noted that B-trees were designed for DISK access algorithms, not necessarily in-memory sorting, as we Int32end it to be used here. However, if the order is kept small (< 6?) any inefficiency is negligible for in-memory sorting. Knuth points out that balanced trees are actually preferable for memory sorting. I'm not sure that I believe this, but it's Int32eresting. Also, deleting elements from balanced binary trees, being beyond the scope of Knuth's book (p. 465), is beyond my scope. B-trees are good enough.
+It must also be noted that B-trees were designed for DISK access algorithms, not necessarily in-memory sorting, as we intend it to be used here. However, if the order is kept small (< 6?) any inefficiency is negligible for in-memory sorting. Knuth points out that balanced trees are actually preferable for memory sorting. I'm not sure that I believe this, but it's interesting. Also, deleting elements from balanced binary trees, being beyond the scope of Knuth's book (p. 465), is beyond my scope. B-trees are good enough.
 
-A B-tree is declared to be of a certain ORDER (3 by default). This number determines the number of keys contained in any Int32erior node of the tree. Each Int32erior node will contain ORDER keys, and therefore ORDER+1 pointers to sub-trees. The keys are numbered and indexed 1 to ORDER while the pointers are numbered and indexed 0 to ORDER. The 0th ptr points to the sub-tree of all elements that are less than key[1]. Ptr[1] points to the sub-tree that contains all the elements greater than key[1] and less than key[2]. etc. The array of pointers and keys is allocated as ORDER+1 pairs of keys and nodes, meaning that one key field (key[0]) is not used and therefore wasted. Given that the number of Int32erior nodes is small, that this waste allows fewer cases of special code, and that it is useful in certain of the methods, it was felt to be a worthwhile waste.
+A B-tree is declared to be of a certain ORDER (3 by default). This number determines the number of keys contained in any interior node of the tree. Each interior node will contain ORDER keys, and therefore ORDER+1 pointers to sub-trees. The keys are numbered and indexed 1 to ORDER while the pointers are numbered and indexed 0 to ORDER. The 0th ptr points to the sub-tree of all elements that are less than key[1]. Ptr[1] points to the sub-tree that contains all the elements greater than key[1] and less than key[2]. etc. The array of pointers and keys is allocated as ORDER+1 pairs of keys and nodes, meaning that one key field (key[0]) is not used and therefore wasted. Given that the number of interior nodes is small, that this waste allows fewer cases of special code, and that it is useful in certain of the methods, it was felt to be a worthwhile waste.
 
-The size of the exterior nodes (leaf nodes) does not need to be related to the size of the Int32erior nodes at all. Since leaf nodes contain only keys, they may be as large or small as we like independent of the size of the Int32erior nodes. For no particular reason other than it seems like a good idea, we will allocate 2*(ORDER+1) keys in each leaf node, and they will be numbered and indexed from 0 to 2*ORDER+1. It does have the advantage of keeping the size of the leaf and Int32erior arrays the same, so that if we find allocation and de-allocation of these arrays expensive, we can modify their allocation to use a garbage ring, or something.
+The size of the exterior nodes (leaf nodes) does not need to be related to the size of the interior nodes at all. Since leaf nodes contain only keys, they may be as large or small as we like independent of the size of the interior nodes. For no particular reason other than it seems like a good idea, we will allocate 2*(ORDER+1) keys in each leaf node, and they will be numbered and indexed from 0 to 2*ORDER+1. It does have the advantage of keeping the size of the leaf and interior arrays the same, so that if we find allocation and de-allocation of these arrays expensive, we can modify their allocation to use a garbage ring, or something.
 
-Both of these numbers will be run-time constants associated with each tree (each tree at run-time can be of a different order). The variable "order" is the order of the tree, and the inclusive upper limit on the indices of the keys in the Int32erior nodes. The variable "order2" is the inclusive upper limit on the indices of the leaf nodes, and is designed 
+Both of these numbers will be run-time constants associated with each tree (each tree at run-time can be of a different order). The variable "order" is the order of the tree, and the inclusive upper limit on the indices of the keys in the interior nodes. The variable "order2" is the inclusive upper limit on the indices of the leaf nodes, and is designed 
 
     (1) to keep the sizes of the two kinds of nodes the same;
     (2) to keep the expressions involving the arrays of keys looking
@@ -3944,8 +3944,8 @@ These are the primitive operations on Nodes:
     Split()         - divide a node in two, and create two new nodes.
     SplitWith(sib)  - create a third node between this node and the sib node,
                       divvying up the elements of their arrays.
-    PushLeft(n)     - move n elements Int32o the left sibling
-    PushRight(n)    - move n elements Int32o the right sibling
+    PushLeft(n)     - move n elements into the left sibling
+    PushRight(n)    - move n elements into the right sibling
     BalanceWithRight() - even up the number of elements in the two nodes.
     BalanceWithLeft()  - ditto
 
@@ -4187,11 +4187,11 @@ Related functions: [`AddAt`](@ref), [`Adopt`](@ref), [`At`](@ref), [`Base.getind
 @trydoc raw"""
     ROOT.TVirtualCollectionProxy
 
-Defines a common Int32erface to inspect/change the contents of an object that represents a collection.
+Defines a common interface to inspect/change the contents of an object that represents a collection.
 
-Specifically, an object of a class that derives from [TVirtualCollectionProxy](@ref) relays accesses to any object that matches the proxied collection type. The Int32erface provides two families of functions: (i) for direct manipulation, e.g. `Insert()` or `At()`; and (ii) iterator-based, e.g. `GetFunctionCreateIterators()` or `GetFunctionNext()`. [TVirtualCollectionProxy](@ref) objects are stateful; in particular, many functions require to set the object to operate on via `PushProxy()` / `PopProxy()`. The `TPushPop` RAII class is provided for convenience. A collection proxy for a given class can be permanently set using `TClass!CopyCollectionProxy()`. The `Generate()` function should be overridden in derived classes to return a clean object of the most-derived class.
+Specifically, an object of a class that derives from [TVirtualCollectionProxy](@ref) relays accesses to any object that matches the proxied collection type. The interface provides two families of functions: (i) for direct manipulation, e.g. `Insert()` or `At()`; and (ii) iterator-based, e.g. `GetFunctionCreateIterators()` or `GetFunctionNext()`. [TVirtualCollectionProxy](@ref) objects are stateful; in particular, many functions require to set the object to operate on via `PushProxy()` / `PopProxy()`. The `TPushPop` RAII class is provided for convenience. A collection proxy for a given class can be permanently set using `TClass!CopyCollectionProxy()`. The `Generate()` function should be overridden in derived classes to return a clean object of the most-derived class.
 
-Related functions: [`Allocate`](@ref), [`At`](@ref), [`Base.getindex`](@ref), [`Clear`](@ref), [`Commit`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Generate`](@ref), [`GetCollectionClass`](@ref), [`GetCollectionType`](@ref), [`GetConversionReadMemberWiseActions`](@ref), [`GetFunctionCopyIterator`](@ref), [`GetFunctionCreateIterators`](@ref), [`GetFunctionDeleteIterator`](@ref), [`GetFunctionDeleteTwoIterators`](@ref), [`GetFunctionNext`](@ref), [`GetIncrement`](@ref), [`GetProperties`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetType`](@ref), [`GetValueClass`](@ref), [`GetWriteMemberWiseActions`](@ref), [`HasPointers`](@ref), [`Insert`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PopProxy`](@ref), [`PushProxy`](@ref), [`Reset`](@ref), [`Size`](@ref), [`Sizeof`](@ref), [`TVirtualCollectionProxy`](@ref)
+Related functions: [`Allocate`](@ref), [`At`](@ref), [`Base.getindex`](@ref), [`Clear`](@ref), [`Commit`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Generate`](@ref), [`GetCollectionClass`](@ref), [`GetCollectionGetType`](@ref), [`GetConversionReadMemberWiseActions`](@ref), [`GetFunctionCopyIterator`](@ref), [`GetFunctionCreateIterators`](@ref), [`GetFunctionDeleteIterator`](@ref), [`GetFunctionDeleteTwoIterators`](@ref), [`GetFunctionNext`](@ref), [`GetGetType`](@ref), [`GetIncrement`](@ref), [`GetProperties`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetValueClass`](@ref), [`GetWriteMemberWiseActions`](@ref), [`HasPointers`](@ref), [`Insert`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PopProxy`](@ref), [`PushProxy`](@ref), [`Reset`](@ref), [`Size`](@ref), [`Sizeof`](@ref), [`TVirtualCollectionProxy`](@ref)
 """ TVirtualCollectionProxy
 
 # Wrapper of TOrdCollection
@@ -4248,7 +4248,7 @@ The [Add()](@ref) and [Remove()](@ref) members are called from the [TObject](@re
 
 Using the compile option R__NOSTATS one can de-active this feature for the entire system (for maximum performance in highly time critical applications).
 
-The following output has been produced in a [ROOT](@ref) Int32eractive session via the command gObjectTable->[Print()](@ref) 
+The following output has been produced in a [ROOT](@ref) interactive session via the command gObjectTable->[Print()](@ref) 
 
     class                     cnt    on heap     size    total size    heap size
     ============================================================================
@@ -4317,7 +4317,7 @@ ABC describing GUI independent browser implementation protocol.
 
 
 
-Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObj`](@ref), [`Browser`](@ref), [`CheckObjectItem`](@ref), [`CloseTabs`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowser`](@ref), [`GetDrawOption`](@ref), [`GetMainFrame`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowser`](@ref), [`SetDrawOption`](@ref), [`SetStatusText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowserImp`](@ref)
+Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObj`](@ref), [`Browser`](@ref), [`CheckObjectItem`](@ref), [`CloseTabs`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowser`](@ref), [`GetDrawOption`](@ref), [`GetMainFrame`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowser`](@ref), [`SetDrawOption`](@ref), [`SetStatusGetText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowserImp`](@ref)
 """ TBrowserImp
 
 # Wrapper of TTree
@@ -4330,7 +4330,7 @@ Any C++ type can be stored in its columns.
 
 A [TTree](@ref), often called in jargon *tree*, consists of a list of independent columns or *branches*, represented by the [TBranch](@ref) class. Behind each branch, buffers are allocated automatically by [ROOT](@ref). Such buffers are automatically written to disk or kept in memory until the size stored in the attribute fMaxVirtualSize is reached. Variables of one branch are written to the same buffer. A branch buffer is automatically compressed if the file compression attribute is set (default). Branches may be written to different files (see [TBranch!SetFile](@ref)).
 
-The [ROOT](@ref) user can decide to make one single branch and serialize one object Int32o one single I/O buffer or to make several branches. Making several branches is particularly Int32eresting in the data analysis phase, when it is desirable to have a high reading rate and not all columns are equally Int32eresting
+The [ROOT](@ref) user can decide to make one single branch and serialize one object into one single I/O buffer or to make several branches. Making several branches is particularly interesting in the data analysis phase, when it is desirable to have a high reading rate and not all columns are equally interesting
 
 ## Create a TTree to store columnar data
 
@@ -4370,32 +4370,32 @@ This strategy works also for lists of variables, e.g. to describe simple structu
 - leaflist is the concatenation of all the variable names and types separated by a colon character : The variable name and the variable type are separated by a slash (/). The variable type must be 1 character. (Characters after the first are legal and will be appended to the visible name of the leaf, but have no effect.) If no type is given, the type of the variable is assumed to be the same as the previous variable. If the first variable does not have a type, it is assumed of type F by default. The list of currently supported types is given below:
 
     - `C` : a character string terminated by the 0 character
-    - `B` : an 8 bit signed Int32eger (`Char_t`); Treated as a character when in an array.
-    - `b` : an 8 bit unsigned Int32eger (`UChar_t`)
-    - `S` : a 16 bit signed Int32eger (`Short_t`)
-    - `s` : a 16 bit unsigned Int32eger (`UShort_t`)
-    - `I` : a 32 bit signed Int32eger (`Int_t`)
-    - `i` : a 32 bit unsigned Int32eger (`UInt_t`)
+    - `B` : an 8 bit signed integer (`Char_t`); Treated as a character when in an array.
+    - `b` : an 8 bit unsigned integer (`UChar_t`)
+    - `S` : a 16 bit signed integer (`Short_t`)
+    - `s` : a 16 bit unsigned integer (`UShort_t`)
+    - `I` : a 32 bit signed integer (`Int_t`)
+    - `i` : a 32 bit unsigned integer (`UInt_t`)
     - `F` : a 32 bit floating point (`Float_t`)
     - `f` : a 24 bit floating point with truncated mantissa (`Float16_t`)
     - `D` : a 64 bit floating point (`Double_t`)
     - `d` : a 24 bit truncated floating point (`Double32_t`)
-    - `L` : a 64 bit signed Int32eger (`Long64_t`)
-    - `l` : a 64 bit unsigned Int32eger (`ULong64_t`)
-    - `G` : a long signed Int32eger, stored as 64 bit (`Long_t`)
-    - `g` : a long unsigned Int32eger, stored as 64 bit (`ULong_t`)
+    - `L` : a 64 bit signed integer (`Long64_t`)
+    - `l` : a 64 bit unsigned integer (`ULong64_t`)
+    - `G` : a long signed integer, stored as 64 bit (`Long_t`)
+    - `g` : a long unsigned integer, stored as 64 bit (`ULong_t`)
     - `O` : [the letter `o`, not a zero] a boolean (`bool`)
 
     Examples:
 
-    - A Int32: "myVar/I"
+    - A int: "myVar/I"
     - A float array with fixed size: "myArrfloat[42]/F"
     - An double array with variable size, held by the `myvar` column: "myArrdouble[myvar]/D"
     - An Double32_t array with variable size, held by the `myvar` column , with values between 0 and 16: "myArr[myvar]/d[0,10]"
     - The `myvar` column, which holds the variable size, **MUST** be an `Int_t` (/I).
 - If the address points to a single numerical variable, the leaflist is optional: 
 
-        Int32 value;
+        int value;
         tree->Branch(branchname, &value);
 
 (C++ version of the code)
@@ -4427,8 +4427,8 @@ This strategy works also for lists of variables, e.g. to describe simple structu
  Note: The 2nd parameter must be the address of a valid object. The object must not be destroyed (i.e. be deleted) until the [TTree](@ref) is deleted or [TTree!ResetBranchAddress](@ref) is called.
 
 - if splitlevel=0, the object is serialized in the branch buffer.
-- if splitlevel=1 (default), this branch will automatically be split Int32o subbranches, with one subbranch for each data member or object of the object itself. In case the object member is a [TClonesArray](@ref), the mechanism described in case C is applied to this array.
-- if splitlevel=2 ,this branch will automatically be split Int32o subbranches, with one subbranch for each data member or object of the object itself. In case the object member is a [TClonesArray](@ref), it is processed as a TObject*, only one branch.
+- if splitlevel=1 (default), this branch will automatically be split into subbranches, with one subbranch for each data member or object of the object itself. In case the object member is a [TClonesArray](@ref), the mechanism described in case C is applied to this array.
+- if splitlevel=2 ,this branch will automatically be split into subbranches, with one subbranch for each data member or object of the object itself. In case the object member is a [TClonesArray](@ref), it is processed as a TObject*, only one branch.
 
 Another available syntax is the following:
 
@@ -4523,7 +4523,7 @@ You may want to add a branch to an existing tree. For example, if one variable i
         #include "TRandom.h"
         #include "TTree.h"
         //__________________________________________________________________________
-        main(Int32 argc, char **argv)
+        main(int argc, char **argv)
         {
         // Create a new ROOT binary machine independent file.
         // Note that this file may contain any kind of ROOT objects, histograms,trees
@@ -4584,7 +4584,7 @@ You may want to add a branch to an existing tree. For example, if one variable i
 
 (C++ version of the code)
 
-Related functions: [`AddAllocationCount`](@ref), [`AddBranchToCache`](@ref), [`AddClone`](@ref), [`AddFriend`](@ref), [`AddTotBytes`](@ref), [`AddZipBytes`](@ref), [`AutoSave`](@ref), [`BranchOld`](@ref), [`BranchRef`](@ref), [`Branch`](@ref), [`Bronch`](@ref), [`Browse`](@ref), [`BuildIndex`](@ref), [`BuildStreamerInfo`](@ref), [`ChangeFile`](@ref), [`CloneTree`](@ref), [`CopyAddresses`](@ref), [`CopyEntries`](@ref), [`CopyTree`](@ref), [`CreateBasket`](@ref), [`Debug`](@ref), [`Delete`](@ref), [`DirectoryAutoAdd`](@ref), [`Draw`](@ref), [`DropBaskets`](@ref), [`DropBranchFromCache`](@ref), [`DropBuffers`](@ref), [`EnableCache`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`Fit`](@ref), [`FlushBaskets`](@ref), [`GetAlias`](@ref), [`GetAllocationCount`](@ref), [`GetAutoFlush`](@ref), [`GetAutoSave`](@ref), [`GetBranchRef`](@ref), [`GetBranchStatus`](@ref), [`GetBranch`](@ref), [`GetCacheSize`](@ref), [`GetChainEntryNumber`](@ref), [`GetChainOffset`](@ref), [`GetClusterIterator`](@ref), [`GetClusterPrefetch`](@ref), [`GetCurrentFile`](@ref), [`GetDebugMax`](@ref), [`GetDebugMin`](@ref), [`GetDefaultEntryOffsetLen`](@ref), [`GetDirectory`](@ref), [`GetEntriesFast`](@ref), [`GetEntriesFriend`](@ref), [`GetEntries`](@ref), [`GetEntryList`](@ref), [`GetEntryNumberWithBestIndex`](@ref), [`GetEntryNumberWithIndex`](@ref), [`GetEntryNumber`](@ref), [`GetEntryWithIndex`](@ref), [`GetEntry`](@ref), [`GetEstimate`](@ref), [`GetEventList`](@ref), [`GetEvent`](@ref), [`GetFileNumber`](@ref), [`GetFriendAlias`](@ref), [`GetFriend`](@ref), [`GetHistogram`](@ref), [`GetIOFeatures`](@ref), [`GetImplicitMT`](@ref), [`GetIndexValues`](@ref), [`GetIndex`](@ref), [`GetIteratorOnAllLeaves`](@ref), [`GetLeaf`](@ref), [`GetListOfAliases`](@ref), [`GetListOfBranches`](@ref), [`GetListOfClones`](@ref), [`GetListOfFriends`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxEntryLoop`](@ref), [`GetMaxVirtualSize`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNbranches`](@ref), [`GetNotify`](@ref), [`GetPacketSize`](@ref), [`GetPerfStats`](@ref), [`GetPlayer`](@ref), [`GetReadCache`](@ref), [`GetReadEntry`](@ref), [`GetReadEvent`](@ref), [`GetScanField`](@ref), [`GetSelect`](@ref), [`GetSelectedRows`](@ref), [`GetTargetMemoryRatio`](@ref), [`GetTimerInterval`](@ref), [`GetTotBytes`](@ref), [`GetTransientBuffer`](@ref), [`GetTreeIndex`](@ref), [`GetTreeNumber`](@ref), [`GetTree`](@ref), [`GetUpdate`](@ref), [`GetUserInfo`](@ref), [`GetV1`](@ref), [`GetV2`](@ref), [`GetV3`](@ref), [`GetV4`](@ref), [`GetVal`](@ref), [`GetVar1`](@ref), [`GetVar2`](@ref), [`GetVar3`](@ref), [`GetVar4`](@ref), [`GetVar`](@ref), [`GetW`](@ref), [`GetWeight`](@ref), [`GetZipBytes`](@ref), [`InPlaceClone`](@ref), [`IncrementTotalBuffers`](@ref), [`IsFolder`](@ref), [`LoadBaskets`](@ref), [`LoadTreeFriend`](@ref), [`LoadTree`](@ref), [`MakeClass`](@ref), [`MakeCode`](@ref), [`MakeProxy`](@ref), [`MakeSelector`](@ref), [`MemoryFull`](@ref), [`Merge`](@ref), [`Notify`](@ref), [`OptimizeBaskets`](@ref), [`Principal`](@ref), [`PrintCacheStats`](@ref), [`Print`](@ref), [`Process`](@ref), [`Project`](@ref), [`Query`](@ref), [`ReadFile`](@ref), [`ReadStream`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RegisterExternalFriend`](@ref), [`RemoveExternalFriend`](@ref), [`RemoveFriend`](@ref), [`ResetAfterMerge`](@ref), [`ResetBranchAddress`](@ref), [`ResetBranchAddresses`](@ref), [`Reset`](@ref), [`Scan`](@ref), [`SetAlias`](@ref), [`SetAutoFlush`](@ref), [`SetAutoSave`](@ref), [`SetBasketSize`](@ref), [`SetBranchAddress`](@ref), [`SetBranchStatus`](@ref), [`SetCacheEntryRange`](@ref), [`SetCacheLearnEntries`](@ref), [`SetCacheSize`](@ref), [`SetChainOffset`](@ref), [`SetCircular`](@ref), [`SetClusterPrefetch`](@ref), [`SetDebug`](@ref), [`SetDefaultEntryOffsetLen`](@ref), [`SetDirectory`](@ref), [`SetEntries`](@ref), [`SetEntryList`](@ref), [`SetEstimate`](@ref), [`SetEventList`](@ref), [`SetFileNumber`](@ref), [`SetIOFeatures`](@ref), [`SetImplicitMT`](@ref), [`SetMakeClass`](@ref), [`SetMaxEntryLoop`](@ref), [`SetMaxVirtualSize`](@ref), [`SetName`](@ref), [`SetNotify`](@ref), [`SetObject`](@ref), [`SetParallelUnzip`](@ref), [`SetPerfStats`](@ref), [`SetScanField`](@ref), [`SetTargetMemoryRatio`](@ref), [`SetTimerInterval`](@ref), [`SetTreeIndex`](@ref), [`SetUpdate`](@ref), [`SetWeight`](@ref), [`Show`](@ref), [`StartViewer`](@ref), [`StopCacheLearningPhase`](@ref), [`TTree!GetBranchStyle`](@ref), [`TTree!GetMaxTreeSize`](@ref), [`TTree!MergeTrees`](@ref), [`TTree!SetBranchStyle`](@ref), [`TTree!SetMaxTreeSize`](@ref), [`TTree`](@ref), [`UnbinnedFit`](@ref), [`UseCurrentStyle`](@ref), [`Write`](@ref), [`assign`](@ref)
+Related functions: [`AddAllocationCount`](@ref), [`AddBranchToCache`](@ref), [`AddClone`](@ref), [`AddFriend`](@ref), [`AddTotBytes`](@ref), [`AddZipBytes`](@ref), [`AutoSave`](@ref), [`BranchOld`](@ref), [`BranchRef`](@ref), [`Branch`](@ref), [`Bronch`](@ref), [`Browse`](@ref), [`BuildIndex`](@ref), [`BuildStreamerInfo`](@ref), [`ChangeFile`](@ref), [`CloneTree`](@ref), [`CopyAddresses`](@ref), [`CopyEntries`](@ref), [`CopyTree`](@ref), [`CreateBasket`](@ref), [`Debug`](@ref), [`Delete`](@ref), [`DirectoryAutoAdd`](@ref), [`Draw`](@ref), [`DropBaskets`](@ref), [`DropBranchFromCache`](@ref), [`DropBuffers`](@ref), [`EnableCache`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`Fit`](@ref), [`FlushBaskets`](@ref), [`GetAlias`](@ref), [`GetAllocationCount`](@ref), [`GetAutoFlush`](@ref), [`GetAutoSave`](@ref), [`GetBranchRef`](@ref), [`GetBranchStatus`](@ref), [`GetBranch`](@ref), [`GetCacheSize`](@ref), [`GetChainEntryNumber`](@ref), [`GetChainOffset`](@ref), [`GetClusterIterator`](@ref), [`GetClusterPrefetch`](@ref), [`GetCurrentFile`](@ref), [`GetDebugMax`](@ref), [`GetDebugMin`](@ref), [`GetDefaultEntryOffsetLen`](@ref), [`GetDirectory`](@ref), [`GetEntriesFast`](@ref), [`GetEntriesFriend`](@ref), [`GetEntries`](@ref), [`GetEntryList`](@ref), [`GetEntryNumberWithBestIndex`](@ref), [`GetEntryNumberWithIndex`](@ref), [`GetEntryNumber`](@ref), [`GetEntryWithIndex`](@ref), [`GetEntry`](@ref), [`GetEstimate`](@ref), [`GetEventList`](@ref), [`GetEvent`](@ref), [`GetFileNumber`](@ref), [`GetFriendAlias`](@ref), [`GetFriend`](@ref), [`GetGetTimerInterval`](@ref), [`GetHistogram`](@ref), [`GetIOFeatures`](@ref), [`GetImplicitMT`](@ref), [`GetIndexValues`](@ref), [`GetIndex`](@ref), [`GetIteratorOnAllLeaves`](@ref), [`GetLeaf`](@ref), [`GetListOfAliases`](@ref), [`GetListOfBranches`](@ref), [`GetListOfClones`](@ref), [`GetListOfFriends`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxEntryLoop`](@ref), [`GetMaxVirtualSize`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNbranches`](@ref), [`GetNotify`](@ref), [`GetPacketSize`](@ref), [`GetPerfStats`](@ref), [`GetPlayer`](@ref), [`GetReadCache`](@ref), [`GetReadEntry`](@ref), [`GetReadEvent`](@ref), [`GetScanField`](@ref), [`GetSelect`](@ref), [`GetSelectedRows`](@ref), [`GetTargetMemoryRatio`](@ref), [`GetTotBytes`](@ref), [`GetTransientBuffer`](@ref), [`GetTreeIndex`](@ref), [`GetTreeNumber`](@ref), [`GetTree`](@ref), [`GetUpdate`](@ref), [`GetUserInfo`](@ref), [`GetV1`](@ref), [`GetV2`](@ref), [`GetV3`](@ref), [`GetV4`](@ref), [`GetVal`](@ref), [`GetVar1`](@ref), [`GetVar2`](@ref), [`GetVar3`](@ref), [`GetVar4`](@ref), [`GetVar`](@ref), [`GetW`](@ref), [`GetWeight`](@ref), [`GetZipBytes`](@ref), [`InPlaceClone`](@ref), [`IncrementTotalBuffers`](@ref), [`IsFolder`](@ref), [`LoadBaskets`](@ref), [`LoadTreeFriend`](@ref), [`LoadTree`](@ref), [`MakeClass`](@ref), [`MakeCode`](@ref), [`MakeProxy`](@ref), [`MakeSelector`](@ref), [`MemoryFull`](@ref), [`Merge`](@ref), [`Notify`](@ref), [`OptimizeBaskets`](@ref), [`Principal`](@ref), [`PrintCacheStats`](@ref), [`Print`](@ref), [`Process`](@ref), [`Project`](@ref), [`Query`](@ref), [`ReadFile`](@ref), [`ReadStream`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RegisterExternalFriend`](@ref), [`RemoveExternalFriend`](@ref), [`RemoveFriend`](@ref), [`ResetAfterMerge`](@ref), [`ResetBranchAddress`](@ref), [`ResetBranchAddresses`](@ref), [`Reset`](@ref), [`Scan`](@ref), [`SetAlias`](@ref), [`SetAutoFlush`](@ref), [`SetAutoSave`](@ref), [`SetBasketSize`](@ref), [`SetBranchAddress`](@ref), [`SetBranchStatus`](@ref), [`SetCacheEntryRange`](@ref), [`SetCacheLearnEntries`](@ref), [`SetCacheSize`](@ref), [`SetChainOffset`](@ref), [`SetCircular`](@ref), [`SetClusterPrefetch`](@ref), [`SetDebug`](@ref), [`SetDefaultEntryOffsetLen`](@ref), [`SetDirectory`](@ref), [`SetEntries`](@ref), [`SetEntryList`](@ref), [`SetEstimate`](@ref), [`SetEventList`](@ref), [`SetFileNumber`](@ref), [`SetGetTimerInterval`](@ref), [`SetIOFeatures`](@ref), [`SetImplicitMT`](@ref), [`SetMakeClass`](@ref), [`SetMaxEntryLoop`](@ref), [`SetMaxVirtualSize`](@ref), [`SetName`](@ref), [`SetNotify`](@ref), [`SetObject`](@ref), [`SetParallelUnzip`](@ref), [`SetPerfStats`](@ref), [`SetScanField`](@ref), [`SetTargetMemoryRatio`](@ref), [`SetTreeIndex`](@ref), [`SetUpdate`](@ref), [`SetWeight`](@ref), [`Show`](@ref), [`StartViewer`](@ref), [`StopCacheLearningPhase`](@ref), [`TTree!GetBranchStyle`](@ref), [`TTree!GetMaxTreeSize`](@ref), [`TTree!MergeTrees`](@ref), [`TTree!SetBranchStyle`](@ref), [`TTree!SetMaxTreeSize`](@ref), [`TTree`](@ref), [`UnbinnedFit`](@ref), [`UseCurrentStyle`](@ref), [`Write`](@ref), [`assign`](@ref)
 """ TTree
 
 # Wrapper of TLeaf
@@ -4605,7 +4605,7 @@ Note options (2) and (3) can combined - if fLeafCount says an entry has 3 elemen
 
 Additionally, `fNdata` is transient and generated on read to determine the necessary size of a buffer to hold event data; depending on the call-site, it may be sized larger than the number of elements
 
-Related functions: [`Browse`](@ref), [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArray`](@ref), [`GetBranch`](@ref), [`GetDeserializeType`](@ref), [`GetFullName`](@ref), [`GetLeafCountValues`](@ref), [`GetLeafCount`](@ref), [`GetLeafCounter`](@ref), [`GetLenStatic`](@ref), [`GetLenType`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNdata`](@ref), [`GetOffset`](@ref), [`GetTypeName`](@ref), [`GetTypedValue`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`IsRange`](@ref), [`IsUnsigned`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasketSerialized`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`ResetAddress`](@ref), [`SetAddress`](@ref), [`SetBranch`](@ref), [`SetLeafCount`](@ref), [`SetLen`](@ref), [`SetOffset`](@ref), [`SetRange`](@ref), [`SetUnsigned`](@ref), [`TLeaf`](@ref)
+Related functions: [`Browse`](@ref), [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArray`](@ref), [`GetBranch`](@ref), [`GetDeserializeGetType`](@ref), [`GetFullName`](@ref), [`GetGetTypeName`](@ref), [`GetGetTypedValue`](@ref), [`GetLeafCountValues`](@ref), [`GetLeafCount`](@ref), [`GetLeafCounter`](@ref), [`GetLenGetType`](@ref), [`GetLenStatic`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNdata`](@ref), [`GetOffset`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`IsRange`](@ref), [`IsUnsigned`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasketSerialized`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`ResetAddress`](@ref), [`SetAddress`](@ref), [`SetBranch`](@ref), [`SetLeafCount`](@ref), [`SetLen`](@ref), [`SetOffset`](@ref), [`SetRange`](@ref), [`SetUnsigned`](@ref), [`TLeaf`](@ref)
 """ TLeaf
 
 # Wrapper of TStreamerInfo
@@ -4623,7 +4623,7 @@ A [ROOT](@ref) file contains the list of [TStreamerInfo](@ref) objects for all t
 
  A [TStreamerInfo](@ref) is a list of [TStreamerElement](@ref) objects (one per data member or base class). When streaming an object, the system ([TClass](@ref)) loops on all the [TStreamerElement](@ref) objects and calls the appropriate function for each element type.
 
-Related functions: [`BuildCheck`](@ref), [`BuildEmulated`](@ref), [`BuildFor`](@ref), [`BuildOld`](@ref), [`Build`](@ref), [`CallShowMembers`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`CompareContent`](@ref), [`Compile`](@ref), [`ComputeSize`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`ForceWriteInfo`](@ref), [`GenEmulatedClassStreamer`](@ref), [`GenEmulatedProxy`](@ref), [`GenExplicitClassStreamer`](@ref), [`GenExplicitProxy`](@ref), [`GenerateHeaderFile`](@ref), [`GenerateInfoForPair`](@ref), [`GetActualClass`](@ref), [`GetCheckSum`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetDataMemberOffset`](@ref), [`GetElem`](@ref), [`GetElementOffset`](@ref), [`GetElement`](@ref), [`GetElements`](@ref), [`GetLength`](@ref), [`GetMethod`](@ref), [`GetNdata`](@ref), [`GetNelement`](@ref), [`GetNewType`](@ref), [`GetNumber`](@ref), [`GetOffset`](@ref), [`GetOldVersion`](@ref), [`GetOnFileClassVersion`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetReadObjectWiseActions`](@ref), [`GetReadTextActions`](@ref), [`GetSizeElements`](@ref), [`GetSize`](@ref), [`GetStreamerElementReal`](@ref), [`GetStreamerElement`](@ref), [`GetType`](@ref), [`GetTypedValueClones`](@ref), [`GetTypedValueSTLP`](@ref), [`GetTypedValueSTL`](@ref), [`GetTypedValue`](@ref), [`GetValueClones`](@ref), [`GetValueSTLP`](@ref), [`GetValueSTL`](@ref), [`GetValue`](@ref), [`GetWriteMemberWiseActions`](@ref), [`GetWriteObjectWiseActions`](@ref), [`GetWriteTextActions`](@ref), [`MatchLegacyCheckSum`](@ref), [`NewArray`](@ref), [`NewInfo`](@ref), [`New`](@ref), [`PrintValueClones`](@ref), [`PrintValueSTL`](@ref), [`PrintValue`](@ref), [`ReadBufferArtificial`](@ref), [`ReadBufferClones`](@ref), [`ReadBufferConv`](@ref), [`ReadBufferSTL`](@ref), [`ReadBufferSkip`](@ref), [`ReadBuffer`](@ref), [`SetCheckSum`](@ref), [`SetClassVersion`](@ref), [`SetClass`](@ref), [`SetOnFileClassVersion`](@ref), [`TStreamerInfo!GetCurrentElement`](@ref), [`TStreamerInfo`](@ref), [`TagFile`](@ref), [`Update`](@ref), [`WriteBufferAux`](@ref), [`ls`](@ref)
+Related functions: [`BuildCheck`](@ref), [`BuildEmulated`](@ref), [`BuildFor`](@ref), [`BuildOld`](@ref), [`Build`](@ref), [`CallShowMembers`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`CompareContent`](@ref), [`Compile`](@ref), [`ComputeSize`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`ForceWriteInfo`](@ref), [`GenEmulatedClassStreamer`](@ref), [`GenEmulatedProxy`](@ref), [`GenExplicitClassStreamer`](@ref), [`GenExplicitProxy`](@ref), [`GenerateHeaderFile`](@ref), [`GenerateInfoForPair`](@ref), [`GetActualClass`](@ref), [`GetCheckSum`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetDataMemberOffset`](@ref), [`GetElem`](@ref), [`GetElementOffset`](@ref), [`GetElement`](@ref), [`GetElements`](@ref), [`GetGetType`](@ref), [`GetGetTypedValueClones`](@ref), [`GetGetTypedValueSTLP`](@ref), [`GetGetTypedValueSTL`](@ref), [`GetGetTypedValue`](@ref), [`GetLength`](@ref), [`GetMethod`](@ref), [`GetNdata`](@ref), [`GetNelement`](@ref), [`GetNewGetType`](@ref), [`GetNumber`](@ref), [`GetOffset`](@ref), [`GetOldVersion`](@ref), [`GetOnFileClassVersion`](@ref), [`GetReadGetTextActions`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetReadObjectWiseActions`](@ref), [`GetSizeElements`](@ref), [`GetSize`](@ref), [`GetStreamerElementReal`](@ref), [`GetStreamerElement`](@ref), [`GetValueClones`](@ref), [`GetValueSTLP`](@ref), [`GetValueSTL`](@ref), [`GetValue`](@ref), [`GetWriteGetTextActions`](@ref), [`GetWriteMemberWiseActions`](@ref), [`GetWriteObjectWiseActions`](@ref), [`MatchLegacyCheckSum`](@ref), [`NewArray`](@ref), [`NewInfo`](@ref), [`New`](@ref), [`PrintValueClones`](@ref), [`PrintValueSTL`](@ref), [`PrintValue`](@ref), [`ReadBufferArtificial`](@ref), [`ReadBufferClones`](@ref), [`ReadBufferConv`](@ref), [`ReadBufferSTL`](@ref), [`ReadBufferSkip`](@ref), [`ReadBuffer`](@ref), [`SetCheckSum`](@ref), [`SetClassVersion`](@ref), [`SetClass`](@ref), [`SetOnFileClassVersion`](@ref), [`TStreamerInfo!GetCurrentElement`](@ref), [`TStreamerInfo`](@ref), [`TagFile`](@ref), [`Update`](@ref), [`WriteBufferAux`](@ref), [`ls`](@ref)
 """ TStreamerInfo
 
 # Wrapper of TEntryList
@@ -4643,7 +4643,7 @@ Note: It is recommended to use approaches such as TTreeReader!SetEntryRange or [
 
 ## TTree::Draw() and TChain::Draw()
 
-Use option **entrylist** to write the results of [TTree!Draw](@ref) and [TChain!Draw](@ref) Int32o an entry list. Example: 
+Use option **entrylist** to write the results of [TTree!Draw](@ref) and [TChain!Draw](@ref) into an entry list. Example: 
 
     tree->Draw(">>elist", "x<0 && y>0", "entrylist");
     TEntryList *elist = (TEntryList*)gDirectory->Get("elist");
@@ -4681,7 +4681,7 @@ Use option **entrylist** to write the results of [TTree!Draw](@ref) and [TChain!
 
 (C++ version of the code)
 
- When using the [TEntryList](@ref) Int32erface directly, you can get the 'tree number' and entry in the current tree (i.e. value similar to the return value of LoadTree) from calling [TEntryList!GetEntryAndTree](@ref): 
+ When using the [TEntryList](@ref) interface directly, you can get the 'tree number' and entry in the current tree (i.e. value similar to the return value of LoadTree) from calling [TEntryList!GetEntryAndTree](@ref): 
 
     Long64_t treeEntry = myelist->GetEntryAndTree(el,treenum);
 
@@ -4715,7 +4715,7 @@ while the [TTree!SetEntryList()](@ref) function is only setting the [TTree!fEntr
 
 ## TEntryList and TEventList
 
-[TTree!SetEventList()](@ref) and [TChain!SetEventList()](@ref) transform a [TEventList](@ref) Int32o a [TEntryList](@ref) See comments to those functions for more details
+[TTree!SetEventList()](@ref) and [TChain!SetEventList()](@ref) transform a [TEventList](@ref) into a [TEntryList](@ref) See comments to those functions for more details
 
 ## Types of entry lists
 
@@ -4723,7 +4723,7 @@ There are two types of entry lists:
 
 #### 1.
 
-for a [TTree](@ref) (fBlocks data member is non-zero) Entry numbers are stored in TEntryListBlocks, which, in their turn, are stored in the [TObjArray](@ref) fBlocks. The range of the entry numbers is cut Int32o Int32ervals of kBlockSize entries (currently 64000), so that the first block contains information which entries out of the first 64000 pass the selection, the second block - which entries out of the 64000-127999 Int32erval pass the selection, etc. Some blocks, obviously, might be empty. The Int32ernal representation of entry numbers in the blocks is described in the [TEntryListBlock](@ref) class description, and this representation might be changed by calling [OptimizeStorage()](@ref) function (when the list is filled via the [Enter()](@ref) function, this is done automatically, except for the last block). Individual entry lists can be merged (functions [Merge()](@ref) and [Add()](@ref)) to make an entry list for a [TChain](@ref) of corresponding TTrees.
+for a [TTree](@ref) (fBlocks data member is non-zero) Entry numbers are stored in TEntryListBlocks, which, in their turn, are stored in the [TObjArray](@ref) fBlocks. The range of the entry numbers is cut into intervals of kBlockSize entries (currently 64000), so that the first block contains information which entries out of the first 64000 pass the selection, the second block - which entries out of the 64000-127999 interval pass the selection, etc. Some blocks, obviously, might be empty. The internal representation of entry numbers in the blocks is described in the [TEntryListBlock](@ref) class description, and this representation might be changed by calling [OptimizeStorage()](@ref) function (when the list is filled via the [Enter()](@ref) function, this is done automatically, except for the last block). Individual entry lists can be merged (functions [Merge()](@ref) and [Add()](@ref)) to make an entry list for a [TChain](@ref) of corresponding TTrees.
 
 ![https://root.cern/doc/v636/pict1_TEntryList_001.png](https://root.cern/doc/v636/pict1_TEntryList_001.png)
 
@@ -4742,7 +4742,7 @@ Related functions: [`AddSubList`](@ref), [`Add`](@ref), [`ClassDefOverride`](@re
 
 [TH1](@ref) is the base class of all histogram classes in ROOT.
 
-It provides the common Int32erface for operations such as binning, filling, drawing, which will be detailed below.
+It provides the common interface for operations such as binning, filling, drawing, which will be detailed below.
 
 1. [Creating histograms](@ref)
 
@@ -4778,32 +4778,32 @@ It provides the common Int32erface for operations such as binning, filling, draw
 
     - [TH1C](@ref) : histograms with one byte per channel. Maximum bin content = 127
     - [TH1S](@ref) : histograms with one short per channel. Maximum bin content = 32767
-    - [TH1I](@ref) : histograms with one Int32 per channel. Maximum bin content = INT_MAX ([*](@ref))
+    - [TH1I](@ref) : histograms with one int per channel. Maximum bin content = INT_MAX ([*](@ref))
     - [TH1L](@ref) : histograms with one long64 per channel. Maximum bin content = LLONG_MAX ([**](@ref))
-    - [TH1F](@ref) : histograms with one float per channel. Maximum precision 7 digits, maximum Int32eger bin content = +/-16777216 ([***](@ref))
-    - [TH1D](@ref) : histograms with one double per channel. Maximum precision 14 digits, maximum Int32eger bin content = +/-9007199254740992 ([****](@ref))
+    - [TH1F](@ref) : histograms with one float per channel. Maximum precision 7 digits, maximum integer bin content = +/-16777216 ([***](@ref))
+    - [TH1D](@ref) : histograms with one double per channel. Maximum precision 14 digits, maximum integer bin content = +/-9007199254740992 ([****](@ref))
 - 2-D histograms:
 
     - [TH2C](@ref) : histograms with one byte per channel. Maximum bin content = 127
     - [TH2S](@ref) : histograms with one short per channel. Maximum bin content = 32767
-    - [TH2I](@ref) : histograms with one Int32 per channel. Maximum bin content = INT_MAX ([*](@ref))
+    - [TH2I](@ref) : histograms with one int per channel. Maximum bin content = INT_MAX ([*](@ref))
     - [TH2L](@ref) : histograms with one long64 per channel. Maximum bin content = LLONG_MAX ([**](@ref))
-    - [TH2F](@ref) : histograms with one float per channel. Maximum precision 7 digits, maximum Int32eger bin content = +/-16777216 ([***](@ref))
-    - [TH2D](@ref) : histograms with one double per channel. Maximum precision 14 digits, maximum Int32eger bin content = +/-9007199254740992 ([****](@ref))
+    - [TH2F](@ref) : histograms with one float per channel. Maximum precision 7 digits, maximum integer bin content = +/-16777216 ([***](@ref))
+    - [TH2D](@ref) : histograms with one double per channel. Maximum precision 14 digits, maximum integer bin content = +/-9007199254740992 ([****](@ref))
 - 3-D histograms:
 
     - [TH3C](@ref) : histograms with one byte per channel. Maximum bin content = 127
     - [TH3S](@ref) : histograms with one short per channel. Maximum bin content = 32767
-    - [TH3I](@ref) : histograms with one Int32 per channel. Maximum bin content = INT_MAX ([*](@ref))
+    - [TH3I](@ref) : histograms with one int per channel. Maximum bin content = INT_MAX ([*](@ref))
     - [TH3L](@ref) : histograms with one long64 per channel. Maximum bin content = LLONG_MAX ([**](@ref))
-    - [TH3F](@ref) : histograms with one float per channel. Maximum precision 7 digits, maximum Int32eger bin content = +/-16777216 ([***](@ref))
-    - [TH3D](@ref) : histograms with one double per channel. Maximum precision 14 digits, maximum Int32eger bin content = +/-9007199254740992 ([****](@ref))
-- Profile histograms: See classes [TProfile](@ref), [TProfile2D](@ref) and [TProfile3D](@ref). Profile histograms are used to display the mean value of Y and its standard deviation for each bin in X. Profile histograms are in many cases an elegant replacement of two-dimensional histograms : the Int32er-relation of two measured quantities X and Y can always be visualized by a two-dimensional histogram or scatter-plot; If Y is an unknown (but single-valued) approximate function of X, this function is displayed by a profile histogram with much better precision than by a scatter-plot.
+    - [TH3F](@ref) : histograms with one float per channel. Maximum precision 7 digits, maximum integer bin content = +/-16777216 ([***](@ref))
+    - [TH3D](@ref) : histograms with one double per channel. Maximum precision 14 digits, maximum integer bin content = +/-9007199254740992 ([****](@ref))
+- Profile histograms: See classes [TProfile](@ref), [TProfile2D](@ref) and [TProfile3D](@ref). Profile histograms are used to display the mean value of Y and its standard deviation for each bin in X. Profile histograms are in many cases an elegant replacement of two-dimensional histograms : the inter-relation of two measured quantities X and Y can always be visualized by a two-dimensional histogram or scatter-plot; If Y is an unknown (but single-valued) approximate function of X, this function is displayed by a profile histogram with much better precision than by a scatter-plot.
 
-<sup> (*) INT_MAX = 2147483647 is the [maximum value for a variable of type Int32.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-Int32eger-limits)<br/>
- (**) LLONG_MAX = 9223372036854775807 is the [maximum value for a variable of type long64.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-Int32eger-limits)<br/>
- (***) 2^24 = 16777216 is the [maximum Int32eger that can be properly represented by a float32 with 23-bit mantissa.](https://stackoverflow.com/a/3793950/7471760)<br/>
- (****) 2^53 = 9007199254740992 is the [maximum Int32eger that can be properly represented by a double64 with 52-bit mantissa.](https://stackoverflow.com/a/3793950/7471760) </sup>
+<sup> (*) INT_MAX = 2147483647 is the [maximum value for a variable of type int.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-integer-limits)<br/>
+ (**) LLONG_MAX = 9223372036854775807 is the [maximum value for a variable of type long64.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-integer-limits)<br/>
+ (***) 2^24 = 16777216 is the [maximum integer that can be properly represented by a float32 with 23-bit mantissa.](https://stackoverflow.com/a/3793950/7471760)<br/>
+ (****) 2^53 = 9007199254740992 is the [maximum integer that can be properly represented by a double64 with 52-bit mantissa.](https://stackoverflow.com/a/3793950/7471760) </sup>
 
 The inheritance hierarchy looks as follows:
 
@@ -4884,7 +4884,7 @@ Each histogram always contains 3 axis objects of type [TAxis](@ref): fXaxis, fYa
 
 (C++ version of the code)
 
- See class [TAxis](@ref) for a description of all the access functions. The axis range is always stored Int32ernally in double precision.
+ See class [TAxis](@ref) for a description of all the access functions. The axis range is always stored internally in double precision.
 
 ### Convention for numbering bins
 
@@ -5020,7 +5020,7 @@ One or more object (typically a TF1*) can be added to the list of functions (fFu
 Many types of operations are supported on histograms or between histograms
 
 - Addition of a histogram to the current histogram.
-- Additions of two histograms with coefficients and storage Int32o the current histogram.
+- Additions of two histograms with coefficients and storage into the current histogram.
 - Multiplications and Divisions are supported in the same way as additions.
 - The Add, Divide and Multiply functions also exist to add, divide or multiply a histogram by a function.
 
@@ -5060,7 +5060,7 @@ Like for any other [ROOT](@ref) object derived from [TObject](@ref), one can use
 
 ### Normalizing histograms
 
-One can scale a histogram such that the bins Int32egral is equal to the normalization parameter via TH1!Scale(Double_t norm), where norm is the desired normalization divided by the Int32egral of the histogram.
+One can scale a histogram such that the bins integral is equal to the normalization parameter via TH1!Scale(Double_t norm), where norm is the desired normalization divided by the integral of the histogram.
 
 ## Drawing histograms
 
@@ -5080,7 +5080,7 @@ One can use [TH1!SetMaximum()](@ref) and [TH1!SetMinimum()](@ref) to force a par
 
 ### Setting Drawing histogram contour levels (2-D hists only)
 
-By default contours are automatically generated at equidistant Int32ervals. A default value of 20 levels is used. This can be modified via [TH1!SetContour()](@ref) or [TH1!SetContourLevel()](@ref). the contours level info is used by the drawing options "cont", "surf", and "lego".
+By default contours are automatically generated at equidistant intervals. A default value of 20 levels is used. This can be modified via [TH1!SetContour()](@ref) or [TH1!SetContourLevel()](@ref). the contours level info is used by the drawing options "cont", "surf", and "lego".
 
 ### Setting histogram graphics attributes
 
@@ -5130,9 +5130,9 @@ The following statements create a [ROOT](@ref) file and store a histogram on the
     TH1!KolmogorovTest(): statistical test of compatibility in shape
                          between two histograms
     TH1!Smooth() smooths the bin contents of a 1-d histogram
-    TH1!Integral() returns the Int32egral of bin contents in a given bin range
-    TH1!GetMean(Int32 axis) returns the mean value along axis
-    TH1!GetStdDev(Int32 axis)  returns the sigma distribution along axis
+    TH1!Integral() returns the integral of bin contents in a given bin range
+    TH1!GetMean(int axis) returns the mean value along axis
+    TH1!GetStdDev(int axis)  returns the sigma distribution along axis
     TH1!GetEntries() returns the number of entries
     TH1!Reset() resets the bin contents and errors of a histogram
 
@@ -5158,7 +5158,7 @@ Related functions: [`AddBinContent`](@ref), [`ClassDefOverride`](@ref), [`Copy`]
 @trydoc raw"""
     ROOT.TVirtualTreePlayer
 
-Abstract base class defining the Int32erface for the plugins that implement Draw, Scan, Process, MakeProxy, etc.
+Abstract base class defining the interface for the plugins that implement Draw, Scan, Process, MakeProxy, etc.
 
 for a [TTree](@ref) object. See the individual documentations in [TTree](@ref).
 
@@ -5214,7 +5214,7 @@ Let's consider a sample of $M$ prototypes each being characterized by $P$ variab
 
 Those $P$ variables are the quantities accessible to the experimentalist, but are not necessarily the most significant for the classification purpose.
 
-The *Principal Components Method* consists of applying a linear* transformation to the original variables. This transformation is described by an orthogonal matrix and is equivalent to a rotation of the original pattern space Int32o a new set of coordinate vectors, which hopefully provide easier feature identification and dimensionality reduction.
+The *Principal Components Method* consists of applying a linear* transformation to the original variables. This transformation is described by an orthogonal matrix and is equivalent to a rotation of the original pattern space into a new set of coordinate vectors, which hopefully provide easier feature identification and dimensionality reduction.
 
 Let's define the covariance matrix: 
 
@@ -5226,7 +5226,7 @@ Let's define the covariance matrix:
 
 This matrix $\mathsf{C}$ is real, positive definite, symmetric, and will have all its eigenvalues greater then zero. It will now be show that among the family of all the complete orthonormal bases of the pattern space, the base formed by the eigenvectors of the covariance matrix and belonging to the largest eigenvalues, corresponds to the most significant features of the description of the original prototypes.
 
-let the prototypes be expanded on Int32o a set of $N$ basis vectors $\mathbf{e}_n, n=0,\ldots,N,N+1, \ldots, P-1$ 
+let the prototypes be expanded on into a set of $N$ basis vectors $\mathbf{e}_n, n=0,\ldots,N,N+1, \ldots, P-1$ 
 
 ``\mathbf{y}_i = \sum^N_{i=0} a_{i_n} \mathbf{e}_n,
   \quad
@@ -5297,7 +5297,7 @@ The transformation matrix to go from the pattern space to the feature space cons
 
 Christian Holm August 2000, CERN
 
-Related functions: [`AddRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`GetCovarianceMatrix`](@ref), [`GetEigenValues`](@ref), [`GetEigenVectors`](@ref), [`GetHistograms`](@ref), [`GetMeanValues`](@ref), [`GetRow`](@ref), [`GetSigmas`](@ref), [`GetUserData`](@ref), [`IsFolder`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethods`](@ref), [`MakePrincipals`](@ref), [`P2X`](@ref), [`Print`](@ref), [`SumOfSquareResiduals`](@ref), [`TPrincipal`](@ref), [`Test`](@ref), [`X2P`](@ref)
+Related functions: [`AddRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`GetCovarianceGetMatrix`](@ref), [`GetEigenValues`](@ref), [`GetEigenVectors`](@ref), [`GetHistograms`](@ref), [`GetMeanValues`](@ref), [`GetRow`](@ref), [`GetSigmas`](@ref), [`GetUserData`](@ref), [`IsFolder`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethods`](@ref), [`MakePrincipals`](@ref), [`P2X`](@ref), [`Print`](@ref), [`SumOfSquareResiduals`](@ref), [`TPrincipal`](@ref), [`Test`](@ref), [`X2P`](@ref)
 """ TPrincipal
 
 # Wrapper of TTreeFriendLeafIter
@@ -5319,7 +5319,7 @@ A [TLeaf](@ref) for an 8 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafB`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafB`](@ref)
 """ TLeafB
 
 # Wrapper of TLeafC
@@ -5330,7 +5330,7 @@ A [TLeaf](@ref) for a variable length string.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValueString`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafC`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValueGetString`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafC`](@ref)
 """ TLeafC
 
 # Wrapper of TLeafD
@@ -5341,7 +5341,7 @@ A [TLeaf](@ref) for a 64 bit floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD`](@ref)
 """ TLeafD
 
 # Wrapper of TLeafD32
@@ -5352,7 +5352,7 @@ A [TLeaf](@ref) for a 24 bit truncated floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD32`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD32`](@ref)
 """ TLeafD32
 
 # Wrapper of TBranchElement
@@ -5363,7 +5363,7 @@ A Branch for the case of an object.
 
 
 
-Related functions: [`Browse`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`GetAddress`](@ref), [`GetBranchCount2`](@ref), [`GetBranchCount`](@ref), [`GetBranchOffset`](@ref), [`GetCheckSum`](@ref), [`GetClassName`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetClonesName`](@ref), [`GetCollectionProxy`](@ref), [`GetCurrentClass`](@ref), [`GetEntry`](@ref), [`GetExpectedType`](@ref), [`GetFullName`](@ref), [`GetID`](@ref), [`GetIconName`](@ref), [`GetInfo`](@ref), [`GetMakeClass`](@ref), [`GetMaximum`](@ref), [`GetNdata`](@ref), [`GetObject`](@ref), [`GetOnfileObject`](@ref), [`GetParentName`](@ref), [`GetStreamerType`](@ref), [`GetTargetClass`](@ref), [`GetTypeName`](@ref), [`GetType`](@ref), [`GetTypedValue`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IsBranchFolder`](@ref), [`IsFolder`](@ref), [`IsObjectOwner`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`Print`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetDeleteObject`](@ref), [`ResetInitInfo`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetBasketSize`](@ref), [`SetBranchFolder`](@ref), [`SetClassName`](@ref), [`SetMakeClass`](@ref), [`SetMissing`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetParentClass`](@ref), [`SetParentName`](@ref), [`SetTargetClass`](@ref), [`SetType`](@ref), [`SetupAddresses`](@ref), [`TBranchElement`](@ref), [`Unroll`](@ref), [`UpdateFile`](@ref)
+Related functions: [`Browse`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`GetAddress`](@ref), [`GetBranchCount2`](@ref), [`GetBranchCount`](@ref), [`GetBranchOffset`](@ref), [`GetCheckSum`](@ref), [`GetClassName`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetClonesName`](@ref), [`GetCollectionProxy`](@ref), [`GetCurrentClass`](@ref), [`GetEntry`](@ref), [`GetExpectedGetType`](@ref), [`GetFullName`](@ref), [`GetGetTypeName`](@ref), [`GetGetType`](@ref), [`GetGetTypedValue`](@ref), [`GetID`](@ref), [`GetIconName`](@ref), [`GetInfo`](@ref), [`GetMakeClass`](@ref), [`GetMaximum`](@ref), [`GetNdata`](@ref), [`GetObject`](@ref), [`GetOnfileObject`](@ref), [`GetParentName`](@ref), [`GetStreamerGetType`](@ref), [`GetTargetClass`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IsBranchFolder`](@ref), [`IsFolder`](@ref), [`IsObjectOwner`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`Print`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetDeleteObject`](@ref), [`ResetInitInfo`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetBasketSize`](@ref), [`SetBranchFolder`](@ref), [`SetClassName`](@ref), [`SetGetType`](@ref), [`SetMakeClass`](@ref), [`SetMissing`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetParentClass`](@ref), [`SetParentName`](@ref), [`SetTargetClass`](@ref), [`SetupAddresses`](@ref), [`TBranchElement`](@ref), [`Unroll`](@ref), [`UpdateFile`](@ref)
 """ TBranchElement
 
 # Wrapper of TLeafElement
@@ -5374,20 +5374,20 @@ A [TLeaf](@ref) for the general case when using the branches created via a [TStr
 
 using [TBranchElement](@ref)).
 
-Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetDeserializeType`](@ref), [`GetFullName`](@ref), [`GetID`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMethodCall`](@ref), [`GetNdata`](@ref), [`GetTypeName`](@ref), [`GetTypedValueSubArray`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`PrintValue`](@ref), [`ReadBasketFast`](@ref), [`SetLeafCount`](@ref), [`TLeafElement`](@ref)
+Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetDeserializeGetType`](@ref), [`GetFullName`](@ref), [`GetGetTypeName`](@ref), [`GetGetTypedValueSubArray`](@ref), [`GetID`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMethodCall`](@ref), [`GetNdata`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`PrintValue`](@ref), [`ReadBasketFast`](@ref), [`SetLeafCount`](@ref), [`TLeafElement`](@ref)
 """ TLeafElement
 
 # Wrapper of TMethodCall
 @trydoc raw"""
     ROOT.TMethodCall
 
-Method or function calling Int32erface.
+Method or function calling interface.
 
 Objects of this class contain the (CINT) environment to call a global_ function or a method for an object of a specific class with the desired arguments. This class is especially useful when a method has to be called more times for different objects and/or with different arguments. If a function or method needs to be called only once one better uses [TInterpreter!Execute()](@ref).
 
 A limitation is known with the present implementation: failures can occur if parameters involve temporary object construction.
 
-Related functions: [`CallDtorOnly`](@ref), [`Clone`](@ref), [`Execute`](@ref), [`GetCallFunc`](@ref), [`GetMethodName`](@ref), [`GetMethod`](@ref), [`GetParams`](@ref), [`GetProto`](@ref), [`InitWithPrototype`](@ref), [`Init`](@ref), [`IsValid`](@ref), [`ResetParam`](@ref), [`ReturnType`](@ref), [`SetParamPtrs`](@ref), [`SetParam`](@ref), [`SetParams`](@ref), [`TMethodCall`](@ref), [`assign`](@ref)
+Related functions: [`CallDtorOnly`](@ref), [`Clone`](@ref), [`Execute`](@ref), [`GetCallFunc`](@ref), [`GetMethodName`](@ref), [`GetMethod`](@ref), [`GetParams`](@ref), [`GetProto`](@ref), [`InitWithPrototype`](@ref), [`Init`](@ref), [`IsValid`](@ref), [`ResetParam`](@ref), [`ReturnGetType`](@ref), [`SetParamPtrs`](@ref), [`SetParam`](@ref), [`SetParams`](@ref), [`TMethodCall`](@ref), [`assign`](@ref)
 """ TMethodCall
 
 # Wrapper of TLeafF
@@ -5398,7 +5398,7 @@ A [TLeaf](@ref) for a 32 bit floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF`](@ref)
 """ TLeafF
 
 # Wrapper of TLeafF16
@@ -5409,7 +5409,7 @@ A [TLeaf](@ref) for a 24 bit truncated floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF16`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF16`](@ref)
 """ TLeafF16
 
 # Wrapper of TLeafG
@@ -5420,7 +5420,7 @@ A [TLeaf](@ref) for a 64 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafG`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafG`](@ref)
 """ TLeafG
 
 # Wrapper of TLeafI
@@ -5431,7 +5431,7 @@ A [TLeaf](@ref) for an Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafI`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafI`](@ref)
 """ TLeafI
 
 # Wrapper of TLeafL
@@ -5442,7 +5442,7 @@ A [TLeaf](@ref) for a 64 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafL`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafL`](@ref)
 """ TLeafL
 
 # Wrapper of TLeafO
@@ -5453,7 +5453,7 @@ A [TLeaf](@ref) for a bool data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafO`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafO`](@ref)
 """ TLeafO
 
 # Wrapper of TLeafObject
@@ -5464,7 +5464,7 @@ A [TLeaf](@ref) for a general object derived from [TObject](@ref).
 
 
 
-Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetClass`](@ref), [`GetMethodCall`](@ref), [`GetObject`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`IsOnTerminalBranch`](@ref), [`IsVirtual`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`ReadBasket`](@ref), [`SetAddress`](@ref), [`SetVirtual`](@ref), [`TLeafObject`](@ref)
+Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetClass`](@ref), [`GetGetTypeName`](@ref), [`GetMethodCall`](@ref), [`GetObject`](@ref), [`GetValuePointer`](@ref), [`IsOnTerminalBranch`](@ref), [`IsVirtual`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`ReadBasket`](@ref), [`SetAddress`](@ref), [`SetVirtual`](@ref), [`TLeafObject`](@ref)
 """ TLeafObject
 
 # Wrapper of TLeafS
@@ -5475,7 +5475,7 @@ A [TLeaf](@ref) for a 16 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafS`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafS`](@ref)
 """ TLeafS
 
 # Wrapper of TBranchObject
@@ -5486,7 +5486,7 @@ A Branch for the case of an object.
 
 
 
-Related functions: [`Browse`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedType`](@ref), [`GetObjClassName`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`ResetAfterMerge`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetupAddresses`](@ref), [`TBranchObject`](@ref), [`UpdateAddress`](@ref)
+Related functions: [`Browse`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedGetType`](@ref), [`GetObjClassName`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`ResetAfterMerge`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetupAddresses`](@ref), [`TBranchObject`](@ref), [`UpdateAddress`](@ref)
 """ TBranchObject
 
 # Wrapper of TBranchSTL
@@ -5497,14 +5497,14 @@ A Branch handling STL collection of pointers (vectors, lists, queues, sets and m
 
 
 
-Related functions: [`Browse`](@ref), [`FillImpl`](@ref), [`FillLeavesImpl`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedType`](@ref), [`GetInfo`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`SetAddress`](@ref), [`TBranchSTL`](@ref)
+Related functions: [`Browse`](@ref), [`FillImpl`](@ref), [`FillLeavesImpl`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedGetType`](@ref), [`GetInfo`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`SetAddress`](@ref), [`TBranchSTL`](@ref)
 """ TBranchSTL
 
 # Wrapper of TTreeReader
 @trydoc raw"""
     ROOT.TTreeReader
 
-A simple, robust and fast Int32erface to read values from [ROOT](@ref) columnar datasets such as [TTree](@ref), [TChain](@ref) or [TNtuple](@ref).
+A simple, robust and fast interface to read values from [ROOT](@ref) columnar datasets such as [TTree](@ref), [TChain](@ref) or [TNtuple](@ref).
 
 [TTreeReader](@ref) is associated to [TTreeReaderValue](@ref) and [TTreeReaderArray](@ref) which are handles to concretely access the information in the dataset.
 
@@ -5568,7 +5568,7 @@ A more complete example including error handling and a few combinations of [TTre
        }
        return true;
     }
-    // Analyze the tree "MyTree" in the file passed Int32o the function.
+    // Analyze the tree "MyTree" in the file passed into the function.
     // Returns false in case of errors.
     bool analyze(TFile* file) {
        // Create a TTreeReader named "MyTree" from the given TDirectory.
@@ -5633,7 +5633,7 @@ Related functions: [`GetCurrentEntry`](@ref), [`GetEntries`](@ref), [`GetEntryLi
 @trydoc raw"""
     ROOT.TTreeReaderValue
 
-An Int32erface for reading values stored in [ROOT](@ref) columnar datasets.
+An interface for reading values stored in [ROOT](@ref) columnar datasets.
 
 The [TTreeReaderValue](@ref) is a type-safe tool to be used in association with a [TTreeReader](@ref) to access the values stored in [TTree](@ref), [TNtuple](@ref) and [TChain](@ref) datasets. [TTreeReaderValue](@ref) can be also used to access collections such as `std!vector`s or [TClonesArray](@ref) stored in columnar datasets but it is recommended to use [TTreeReaderArray](@ref) instead as it offers several advantages.
 
@@ -5646,7 +5646,7 @@ Related functions: [`Base.getindex`](@ref), [`Get`](@ref), [`TTreeReaderValue`](
 @trydoc raw"""
     ROOT.TTreeReaderArray
 
-An Int32erface for reading collections stored in [ROOT](@ref) columnar datasets.
+An interface for reading collections stored in [ROOT](@ref) columnar datasets.
 
 The [TTreeReaderArray](@ref) is a type-safe tool to be used in association with a [TTreeReader](@ref) to access the collections stored in [TTree](@ref), [TNtuple](@ref) and [TChain](@ref) datasets. In order to access values which are not collections, the [TTreeReaderValue](@ref) class can be used.
 
@@ -5667,7 +5667,7 @@ A Pad may contain other pads (unlimited pad hierarchy).
 
 A pad is a linked list of primitives of any type (graphics objects, histograms, detectors, tracks, etc.).
 
-Adding a new element Int32o a pad is in general performed by the Draw member function of the object classes.
+Adding a new element into a pad is in general performed by the Draw member function of the object classes.
 
 It is important to realize that the pad is a linked list of references to the original object. For example, in case of a histogram, the histogram.Draw() operation only stores a reference to the histogram object and not a graphical representation of this histogram. When the mouse is used to change (say the bin content), the bin content of the original histogram is changed.
 
@@ -5695,7 +5695,7 @@ For examples of DistancetoPrimitive and ExecuteEvent functions, see classes
 
  A Pad supports linear and log scales coordinate systems. The transformation coefficients are explained in [TPad!ResizePad](@ref).
 
-Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoXY`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`AutoExec`](@ref), [`Browse`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`ClipPolygon`](@ref), [`Clip`](@ref), [`ClippingCode`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`Closed`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`DivideSquare`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawCollideGrid`](@ref), [`DrawCrosshair`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`EventPave`](@ref), [`ExecuteEventAxis`](@ref), [`FindObject`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBBoxCenter`](@ref), [`GetBBox`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetCrosshair`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`Hash`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsBatch`](@ref), [`IsEditable`](@ref), [`IsFolder`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBox`](@ref), [`PaintFillAreaHatches`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintHatches`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`PaintTextNDC`](@ref), [`PaintText`](@ref), [`Paint`](@ref), [`Pick`](@ref), [`PixeltoXY`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`Pop`](@ref), [`Print`](@ref), [`RangeAxis`](@ref), [`RangeChanged`](@ref), [`Range`](@ref), [`RecordLatex`](@ref), [`RecordPave`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`Resized`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetAttTextPS`](@ref), [`SetBBoxCenterX`](@ref), [`SetBBoxCenterY`](@ref), [`SetBBoxCenter`](@ref), [`SetBBoxX1`](@ref), [`SetBBoxX2`](@ref), [`SetBBoxY1`](@ref), [`SetBBoxY2`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawOption`](@ref), [`SetEditable`](@ref), [`SetFillStyle`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGLDevice`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetNumber`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StartEditing`](@ref), [`TPad!DrawColorTable`](@ref), [`TPad!GetMaxPickDistance`](@ref), [`TPad!SetMaxPickDistance`](@ref), [`TPad`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UseCurrentStyle`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XYtoAbsPixel`](@ref), [`XYtoPixel`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref), [`x3d`](@ref)
+Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoXY`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`AutoExec`](@ref), [`Browse`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`ClipPolygon`](@ref), [`Clip`](@ref), [`ClippingCode`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`Closed`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`DivideSquare`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawCollideGrid`](@ref), [`DrawCrosshair`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`EventPave`](@ref), [`ExecuteEventAxis`](@ref), [`FindObject`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBBoxCenter`](@ref), [`GetBBox`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetCrosshair`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`Hash`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsBatch`](@ref), [`IsEditable`](@ref), [`IsFolder`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBox`](@ref), [`PaintFillAreaHatches`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintGetTextNDC`](@ref), [`PaintGetText`](@ref), [`PaintHatches`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`Paint`](@ref), [`Pick`](@ref), [`PixeltoXY`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`Pop`](@ref), [`Print`](@ref), [`RangeAxis`](@ref), [`RangeChanged`](@ref), [`Range`](@ref), [`RecordLatex`](@ref), [`RecordPave`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`Resized`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttGetTextPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetBBoxCenterX`](@ref), [`SetBBoxCenterY`](@ref), [`SetBBoxCenter`](@ref), [`SetBBoxX1`](@ref), [`SetBBoxX2`](@ref), [`SetBBoxY1`](@ref), [`SetBBoxY2`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawOption`](@ref), [`SetEditable`](@ref), [`SetFillStyle`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGLDevice`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetNumber`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipGetText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StartEditing`](@ref), [`TPad!DrawColorTable`](@ref), [`TPad!GetMaxPickDistance`](@ref), [`TPad!SetMaxPickDistance`](@ref), [`TPad`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UseCurrentStyle`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XYtoAbsPixel`](@ref), [`XYtoPixel`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref), [`x3d`](@ref)
 """ TPad
 
 # Wrapper of TRandom
@@ -5704,15 +5704,15 @@ Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoXY`](@ref), [`AbsPixelt
 
 This is the base class for the [ROOT](@ref) Random number generators.
 
-This class defines the [ROOT](@ref) Random number Int32erface and it should not be instantiated directly but used via its derived classes. The generator provided in [TRandom](@ref) itself is a LCG (Linear Congruential Generator), the [BSD rand generator](https://www.gnu.org/software/gsl/manual/html_node/Unix-random-number-generators.html), that it should not be used because its period is only 2**31, i.e. approximately 2 billion events, that can be generated in just few seconds.
+This class defines the [ROOT](@ref) Random number interface and it should not be instantiated directly but used via its derived classes. The generator provided in [TRandom](@ref) itself is a LCG (Linear Congruential Generator), the [BSD rand generator](https://www.gnu.org/software/gsl/manual/html_node/Unix-random-number-generators.html), that it should not be used because its period is only 2**31, i.e. approximately 2 billion events, that can be generated in just few seconds.
 
 To generate random numbers, one should use one of the derived classes, which are:
 
 - [TRandom3](@ref): it is based on the "Mersenne Twister generator", it is fast and a very long period of about $10^{6000}$. However it fails some of the most stringent tests of the [TestU01 suite](http://simul.iro.umontreal.ca/testu01/tu01.html). In addition this generator provide only numbers with 32 random bits, which might be not sufficient for some application based on double or extended precision. This generator is however used in [ROOT](@ref) used to instantiate the global_ pointer to the [ROOT](@ref) generator, *gRandom*.
 - [TRandomRanluxpp](@ref) : New implementation of the Ranlux generator algorithm based on a fast modular multiplication of 576 bits. This new implementation is built on the idea and the original code of Alexei Sibidanov, described in his [paper](https://arxiv.org/abs/1705.03123). It generates random numbers with 52 bit precision (double precision) and it has an higher luxury level than the original Ranlux generator (`p = 2048` instead of `p=794`).
-- [TRandomMixMax](@ref): Generator based on the family of the MIXMAX matrix generators (see the [MIXMAX HEPFORGE Web page](https://mixmax.hepforge.org) and the documentation of the class [ROOT!Math!MixMaxEngine](@ref) for more information), that are base on the Asanov dynamical C systems. This generator has a state of N=240 64 bit Int32egers, proof random properties, it provides 61 random bits and it has a very large period ( $10^{4839}$). Furthermore, it provides the capability to be seeded with the guarantee that, for each given different seed, a different sequence of random numbers will be generated. The only drawback is that the seeding time is time consuming, of the order of 0.1 ms, while the time to generate a number is few ns (more than 10000 faster).
+- [TRandomMixMax](@ref): Generator based on the family of the MIXMAX matrix generators (see the [MIXMAX HEPFORGE Web page](https://mixmax.hepforge.org) and the documentation of the class [ROOT!Math!MixMaxEngine](@ref) for more information), that are base on the Asanov dynamical C systems. This generator has a state of N=240 64 bit integers, proof random properties, it provides 61 random bits and it has a very large period ( $10^{4839}$). Furthermore, it provides the capability to be seeded with the guarantee that, for each given different seed, a different sequence of random numbers will be generated. The only drawback is that the seeding time is time consuming, of the order of 0.1 ms, while the time to generate a number is few ns (more than 10000 faster).
 - [TRandomMixMax17](@ref): Another MixMax generator, but with a smaller state, N=17, and this results in a smaller entropy than the generator with N=240. However, it has the same seeding capabilities, with a much faster seeding time (about 200 times less than TRandomMixMax240 and comparable to [TRandom3](@ref)).
-- [TRandomMixMax256](@ref) : A variant of the MIXMAX generators, based on a state of N=256, and described in the [2015 paper](http://arxiv.org/abs/1403.5355). This implementation has been modified with respect to the paper, by skipping 2 Int32ernal iterations, to provide improved random properties.
+- [TRandomMixMax256](@ref) : A variant of the MIXMAX generators, based on a state of N=256, and described in the [2015 paper](http://arxiv.org/abs/1403.5355). This implementation has been modified with respect to the paper, by skipping 2 internal iterations, to provide improved random properties.
 - [TRandomMT64](@ref) : Generator based on a the Mersenne-Twister generator with 64 bits, using the implementation provided by the standard library ( [std!mt19937_64](http://www.cplusplus.com/reference/random/mt19937_64/) )
 - [TRandom1](@ref) based on the RANLUX algorithm, has mathematically proven random proprieties and a period of about $10{171}$. It is however much slower than the others and it has only 24 random bits. It can be constructed with different luxury levels.
 - [TRandomRanlux48](@ref) : Generator based on a the RanLux generator with 48 bits and highest luxury level using the implementation provided by the standard library ([std!ranlux48](http://www.cplusplus.com/reference/random/ranlux48/)). The drawback of this generator is its slow generation time.
@@ -5791,21 +5791,21 @@ Note that the time to generate a number from an arbitrary [TF1](@ref) function u
 
 TH1!FillRandom(TH1 *) or TH1!FillRandom(const char *tf1name) can be used to fill an histogram (1-d, 2-d, 3-d from an existing histogram or from an existing function.
 
-Note this Int32eresting feature when working with objects. You can use several [TRandom](@ref) objects, each with their "independent" random sequence. For example, one can imagine 
+Note this interesting feature when working with objects. You can use several [TRandom](@ref) objects, each with their "independent" random sequence. For example, one can imagine 
 
     TRandom *eventGenerator = new TRandom();
     TRandom *tracking       = new TRandom();
 
 (C++ version of the code)
 
- `eventGenerator` can be used to generate the event kinematics. tracking can be used to track the generated particles with random numbers independent from eventGenerator. This very Int32eresting feature gives the possibility to work with simple and very fast random number generators without worrying about random number periodicity as it was the case with Fortran. One can use [TRandom!SetSeed](@ref) to modify the seed of one generator.
+ `eventGenerator` can be used to generate the event kinematics. tracking can be used to track the generated particles with random numbers independent from eventGenerator. This very interesting feature gives the possibility to work with simple and very fast random number generators without worrying about random number periodicity as it was the case with Fortran. One can use [TRandom!SetSeed](@ref) to modify the seed of one generator.
 
 A [TRandom](@ref) object may be written to a Root file
 
 - as part of another object
 - or with its own key (example: `gRandom->Write("Random")` ) ;
 
-Related functions: [`Binomial`](@ref), [`BreitWigner`](@ref), [`Circle`](@ref), [`Exp`](@ref), [`Gaus`](@ref), [`GetSeed`](@ref), [`Integer`](@ref), [`Landau`](@ref), [`PoissonD`](@ref), [`Poisson`](@ref), [`Rannor`](@ref), [`ReadRandom`](@ref), [`RndmArray`](@ref), [`Rndm`](@ref), [`SetSeed`](@ref), [`Sphere`](@ref), [`TRandom`](@ref), [`Uniform`](@ref), [`WriteRandom`](@ref)
+Related functions: [`Binomial`](@ref), [`BreitWigner`](@ref), [`Circle`](@ref), [`Exp`](@ref), [`Gaus`](@ref), [`GetInteger`](@ref), [`GetSeed`](@ref), [`Landau`](@ref), [`PoissonD`](@ref), [`Poisson`](@ref), [`Rannor`](@ref), [`ReadRandom`](@ref), [`RndmArray`](@ref), [`Rndm`](@ref), [`SetSeed`](@ref), [`Sphere`](@ref), [`TRandom`](@ref), [`Uniform`](@ref), [`WriteRandom`](@ref)
 """ TRandom
 
 # Wrapper of TDirectoryFile
@@ -5841,7 +5841,7 @@ Extends the ROOT!Fit!Result class with a [TNamed](@ref) inheritance providing ea
 
 
 
-Related functions: [`Contour`](@ref), [`Error`](@ref), [`GetCorrelationMatrix`](@ref), [`GetCovarianceMatrix`](@ref), [`Print`](@ref), [`Scan`](@ref), [`TFitResult`](@ref)
+Related functions: [`Contour`](@ref), [`Error`](@ref), [`GetCorrelationGetMatrix`](@ref), [`GetCovarianceGetMatrix`](@ref), [`Print`](@ref), [`Scan`](@ref), [`TFitResult`](@ref)
 """ TFitResult
 
 # Wrapper of TFitResultPtr
@@ -5850,9 +5850,9 @@ Related functions: [`Contour`](@ref), [`Error`](@ref), [`GetCorrelationMatrix`](
 
 Provides an indirection to the [TFitResult](@ref) class and with a semantics identical to a [TFitResult](@ref) pointer, i.e.
 
-it is like a smart pointer to a [TFitResult](@ref). In addition it provides an automatic conversion to an Int32eger. In this way it can be returned from the [TH1!Fit](@ref) method and the change in [TH1!Fit](@ref) be backward compatible.
+it is like a smart pointer to a [TFitResult](@ref). In addition it provides an automatic conversion to an integer. In this way it can be returned from the [TH1!Fit](@ref) method and the change in [TH1!Fit](@ref) be backward compatible.
 
-Related functions: [`Base.getindex`](@ref), [`Get`](@ref), [`TFitResultPtr`](@ref), [`arrow`](@ref), [`assign`](@ref), [`Int32`](@ref)
+Related functions: [`Base.getindex`](@ref), [`Get`](@ref), [`TFitResultPtr`](@ref), [`arrow`](@ref), [`assign`](@ref), [`int`](@ref)
 """ TFitResultPtr
 
 # Wrapper of TF1
@@ -5977,7 +5977,7 @@ Consider the macro myfunc.C below:
 
 (C++ version of the code)
 
-In an Int32eractive session you can do:
+In an interactive session you can do:
 
     Root > .L myfunc.C
     Root > myfunc();
@@ -6117,14 +6117,14 @@ This class has different constructors:
 
 (C++ version of the code)
 
- x, y, z arrays can be doubles, floats, or Int32s.
+ x, y, z arrays can be doubles, floats, or ints.
 - With an array's dimension only: 
 
         auto g = new TGraph2D(n);
 
 (C++ version of the code)
 
- The Int32ernal arrays are then filled with `SetPoint()`. The following line fills the Int32ernal arrays at the position `i` with the values `x`, `y`, `z`. 
+ The internal arrays are then filled with `SetPoint()`. The following line fills the internal arrays at the position `i` with the values `x`, `y`, `z`. 
 
         g->SetPoint(i, x, y, z);
 
@@ -6136,7 +6136,7 @@ This class has different constructors:
 
 (C++ version of the code)
 
- again `SetPoint()` must be used to fill the Int32ernal arrays.
+ again `SetPoint()` must be used to fill the internal arrays.
 - From a file: 
 
         auto g = new TGraph2D("graph.dat");
@@ -6145,7 +6145,7 @@ This class has different constructors:
 
  Arrays are read from the ASCII file "graph.dat" according to a specifies format. The default format is `%lg %lg %lg`
 
-Note that in any of these three cases, `SetPoint()` can be used to change a data point or add a new one. If the data point index (`i`) is greater than the current size of the Int32ernal arrays, they are automatically extended.
+Note that in any of these three cases, `SetPoint()` can be used to change a data point or add a new one. If the data point index (`i`) is greater than the current size of the internal arrays, they are automatically extended.
 
 Like [TGraph](@ref) some [TGraph2D](@ref) constructors do not have the [TGraph2D](@ref) title and name as parameters. For these constructors [TGraph2D](@ref) has the default title and name "Graph2D". To change the default title and name `SetTitle` and `SetName` should be called on the [TGraph2D](@ref) after its creation.
 
@@ -6167,11 +6167,11 @@ Specific drawing options can be used to paint a [TGraph2D](@ref):
 
 A [TGraph2D](@ref) can be also drawn with any options valid to draw a 2D histogram (like `COL`, `SURF`, `LEGO`, `CONT` etc..).
 
-When a [TGraph2D](@ref) is drawn with one of the 2D histogram drawing option, an Int32ermediate 2D histogram is filled using the Delaunay triangles to Int32erpolate the data set. The 2D histogram has equidistant bins along the X and Y directions. The number of bins along each direction can be change using `SetNpx()` and `SetNpy()`. Each bin is filled with the Z value found via a linear Int32erpolation on the plane defined by the triangle above the (X,Y) coordinates of the bin center.
+When a [TGraph2D](@ref) is drawn with one of the 2D histogram drawing option, an intermediate 2D histogram is filled using the Delaunay triangles to interpolate the data set. The 2D histogram has equidistant bins along the X and Y directions. The number of bins along each direction can be change using `SetNpx()` and `SetNpy()`. Each bin is filled with the Z value found via a linear interpolation on the plane defined by the triangle above the (X,Y) coordinates of the bin center.
 
-The existing (X,Y,Z) points can be randomly scattered. The Delaunay triangles are build in the (X,Y) plane. These 2D triangles are then used to define flat planes in (X,Y,Z) over which the Int32erpolation is done to fill the 2D histogram. The 3D triangles Int32 takes build a 3D surface in the form of tessellating triangles at various angles. The triangles found can be drawn in 3D with one of the [TGraph2D](@ref) specific drawing options.
+The existing (X,Y,Z) points can be randomly scattered. The Delaunay triangles are build in the (X,Y) plane. These 2D triangles are then used to define flat planes in (X,Y,Z) over which the interpolation is done to fill the 2D histogram. The 3D triangles int takes build a 3D surface in the form of tessellating triangles at various angles. The triangles found can be drawn in 3D with one of the [TGraph2D](@ref) specific drawing options.
 
-The histogram generated by the Delaunay Int32erpolation can be accessed using the `GetHistogram()` method.
+The histogram generated by the Delaunay interpolation can be accessed using the `GetHistogram()` method.
 
 The axis settings (title, ranges etc ...) can be changed accessing the axis via the GetXaxis GetYaxis and GetZaxis methods. They access the histogram axis created at drawing time only. Therefore they should called after the [TGraph2D](@ref) is drawn:
 
@@ -6209,7 +6209,7 @@ Example showing the PCOL option.
 
 ## Definition of the Delaunay triangulation (After B. Delaunay)
 
-For a set S of points in the Euclidean plane, the unique triangulation DT(S) of S such that no point in S is inside the circumcircle of any triangle in DT(S). DT(S) is the dual of the Voronoi diagram of S. If n is the number of points in S, the Voronoi diagram of S is the partitioning of the plane containing S points Int32o n convex polygons such that each polygon contains exactly one point and every point in a given polygon is closer to its central point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation.
+For a set S of points in the Euclidean plane, the unique triangulation DT(S) of S such that no point in S is inside the circumcircle of any triangle in DT(S). DT(S) is the dual of the Voronoi diagram of S. If n is the number of points in S, the Voronoi diagram of S is the partitioning of the plane containing S points into n convex polygons such that each polygon contains exactly one point and every point in a given polygon is closer to its central point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation.
 
 ![https://root.cern/doc/v636/tgraph2d_delaunay.png](https://root.cern/doc/v636/tgraph2d_delaunay.png)
 
@@ -6243,7 +6243,7 @@ Related functions: [`ApplyX`](@ref), [`Apply`](@ref), [`ComputeRange`](@ref), [`
 
 
 
-Related functions: [`GetAlign`](@ref), [`GetAngle`](@ref), [`GetColor`](@ref), [`GetFont`](@ref), [`GetLabNum`](@ref), [`GetLabValue`](@ref), [`GetSize`](@ref), [`GetText`](@ref), [`SetAlign`](@ref), [`SetAngle`](@ref), [`SetColor`](@ref), [`SetFont`](@ref), [`SetLabNum`](@ref), [`SetLabValue`](@ref), [`SetSize`](@ref), [`SetText`](@ref), [`TAxisModLab`](@ref)
+Related functions: [`GetAlign`](@ref), [`GetAngle`](@ref), [`GetColor`](@ref), [`GetFont`](@ref), [`GetGetText`](@ref), [`GetLabNum`](@ref), [`GetLabValue`](@ref), [`GetSize`](@ref), [`SetAlign`](@ref), [`SetAngle`](@ref), [`SetColor`](@ref), [`SetFont`](@ref), [`SetGetText`](@ref), [`SetLabNum`](@ref), [`SetLabValue`](@ref), [`SetSize`](@ref), [`TAxisModLab`](@ref)
 """ TAxisModLab
 
 # Wrapper of TVirtualFitter
@@ -6254,7 +6254,7 @@ Abstract Base Class for Fitting.
 
 
 
-Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceMatrixElement`](@ref), [`GetCovarianceMatrix`](@ref), [`GetErrors`](@ref), [`GetFCN`](@ref), [`GetFitOption`](@ref), [`GetMethodCall`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjectFit`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetUserFunc`](@ref), [`GetXfirst`](@ref), [`GetXlast`](@ref), [`GetYfirst`](@ref), [`GetYlast`](@ref), [`GetZfirst`](@ref), [`GetZlast`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReleaseParameter`](@ref), [`SetCache`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetFitOption`](@ref), [`SetObjectFit`](@ref), [`SetParameter`](@ref), [`SetUserFunc`](@ref), [`SetXfirst`](@ref), [`SetXlast`](@ref), [`SetYfirst`](@ref), [`SetYlast`](@ref), [`SetZfirst`](@ref), [`SetZlast`](@ref), [`TVirtualFitter!Fitter`](@ref), [`TVirtualFitter!GetDefaultFitter`](@ref), [`TVirtualFitter!GetErrorDef`](@ref), [`TVirtualFitter!GetFitter`](@ref), [`TVirtualFitter!GetMaxIterations`](@ref), [`TVirtualFitter!GetPrecision`](@ref), [`TVirtualFitter!SetDefaultFitter`](@ref), [`TVirtualFitter!SetErrorDef`](@ref), [`TVirtualFitter!SetFitter`](@ref), [`TVirtualFitter!SetMaxIterations`](@ref), [`TVirtualFitter!SetPrecision`](@ref), [`TVirtualFitter`](@ref)
+Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceGetMatrixElement`](@ref), [`GetCovarianceGetMatrix`](@ref), [`GetErrors`](@ref), [`GetFCN`](@ref), [`GetFitOption`](@ref), [`GetMethodCall`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjectFit`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetUserFunc`](@ref), [`GetXfirst`](@ref), [`GetXlast`](@ref), [`GetYfirst`](@ref), [`GetYlast`](@ref), [`GetZfirst`](@ref), [`GetZlast`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReleaseParameter`](@ref), [`SetCache`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetFitOption`](@ref), [`SetObjectFit`](@ref), [`SetParameter`](@ref), [`SetUserFunc`](@ref), [`SetXfirst`](@ref), [`SetXlast`](@ref), [`SetYfirst`](@ref), [`SetYlast`](@ref), [`SetZfirst`](@ref), [`SetZlast`](@ref), [`TVirtualFitter!Fitter`](@ref), [`TVirtualFitter!GetDefaultFitter`](@ref), [`TVirtualFitter!GetErrorDef`](@ref), [`TVirtualFitter!GetFitter`](@ref), [`TVirtualFitter!GetMaxIterations`](@ref), [`TVirtualFitter!GetPrecision`](@ref), [`TVirtualFitter!SetDefaultFitter`](@ref), [`TVirtualFitter!SetErrorDef`](@ref), [`TVirtualFitter!SetFitter`](@ref), [`TVirtualFitter!SetMaxIterations`](@ref), [`TVirtualFitter!SetPrecision`](@ref), [`TVirtualFitter`](@ref)
 """ TVirtualFitter
 
 # Wrapper of TBackCompFitter
@@ -6273,7 +6273,7 @@ Backward compatible implementation of [TVirtualFitter](@ref) using the class [RO
 
 Methods for getting the confidence level or contours are also provided. Note that after a new calls to [TH1!Fit](@ref) (or similar) the class will be deleted and all reference to the FitResult, FitConfig or minimizer will be invalid. One could eventually copying the class before issuing a new fit to avoid deleting this information.
 
-Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`Contour`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceMatrixElement`](@ref), [`GetCovarianceMatrix`](@ref), [`GetErrors`](@ref), [`GetFitConfig`](@ref), [`GetFitData`](@ref), [`GetFitResult`](@ref), [`GetMinimizer`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjFunction`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetTFitResult`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReCreateMinimizer`](@ref), [`ReleaseParameter`](@ref), [`Scan`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetMethodCall`](@ref), [`SetObjFunction`](@ref), [`SetParameter`](@ref), [`TBackCompFitter`](@ref)
+Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`Contour`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceGetMatrixElement`](@ref), [`GetCovarianceGetMatrix`](@ref), [`GetErrors`](@ref), [`GetFitConfig`](@ref), [`GetFitData`](@ref), [`GetFitResult`](@ref), [`GetMinimizer`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjFunction`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetTFitResult`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReCreateMinimizer`](@ref), [`ReleaseParameter`](@ref), [`Scan`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetMethodCall`](@ref), [`SetObjFunction`](@ref), [`SetParameter`](@ref), [`TBackCompFitter`](@ref)
 """ TBackCompFitter
 
 # Wrapper of TBinomialEfficiencyFitter
@@ -6362,18 +6362,18 @@ Class to handle efficiency histograms.
 
 - [VI. Further operations](@ref)
 
-    - [VI.1 Information about the Int32ernal histograms](@ref)
+    - [VI.1 Information about the internal histograms](@ref)
     - [VI.2 Fitting](@ref)
     - [VI.3 Draw a TEfficiency object](@ref)
     - [VI.4 TEfficiency object's axis customisation](@ref)
 
 ## I. Overview
 
-This class handles the calculation of efficiencies and their uncertainties. It provides several statistical methods for calculating frequentist and Bayesian confidence Int32ervals as well as a function for combining several efficiencies.
+This class handles the calculation of efficiencies and their uncertainties. It provides several statistical methods for calculating frequentist and Bayesian confidence intervals as well as a function for combining several efficiencies.
 
-Efficiencies have a lot of applications and meanings but in principle, they can be described by the fraction of good/passed events k out of sample containing N events. One is usually Int32erested in the dependency of the efficiency on other (binned) variables. The number of passed and total events is therefore stored Int32ernally in two histograms ([TEfficiency!fTotalHistogram](@ref) and [TEfficiency!fPassedHistogram](@ref)). Then the efficiency, as well as its upper and lower error, can be calculated for each bin individually.
+Efficiencies have a lot of applications and meanings but in principle, they can be described by the fraction of good/passed events k out of sample containing N events. One is usually interested in the dependency of the efficiency on other (binned) variables. The number of passed and total events is therefore stored internally in two histograms ([TEfficiency!fTotalHistogram](@ref) and [TEfficiency!fPassedHistogram](@ref)). Then the efficiency, as well as its upper and lower error, can be calculated for each bin individually.
 
-As the efficiency can be regarded as a parameter of a binomial distribution, the number of passed and total events must always be Int32eger numbers. Therefore a filling with weights is not possible. However, you can assign a global_ weight to each [TEfficiency](@ref) object ([TEfficiency!SetWeight](@ref)). It is necessary to create one [TEfficiency](@ref) object for each weight if you investigate a process involving different weights. This procedure needs more effort but enables you to re-use the filled object in cases where you want to change one or more weights. This would not be possible if all events with different weights were filled in the same histogram.
+As the efficiency can be regarded as a parameter of a binomial distribution, the number of passed and total events must always be integer numbers. Therefore a filling with weights is not possible. However, you can assign a global_ weight to each [TEfficiency](@ref) object ([TEfficiency!SetWeight](@ref)). It is necessary to create one [TEfficiency](@ref) object for each weight if you investigate a process involving different weights. This procedure needs more effort but enables you to re-use the filled object in cases where you want to change one or more weights. This would not be possible if all events with different weights were filled in the same histogram.
 
 ## II. Creating a TEfficiency object
 
@@ -6464,16 +6464,16 @@ Optionally the mode can also be used as a value for the estimated efficiency. Th
 
 In the case of a uniform prior distribution, B(x,1,1), the posterior mode is k/n, equivalent to the frequentist estimate (the maximum likelihood value).
 
-The statistic options also specify which confidence Int32erval is used for calculating the uncertainties of the efficiency. The following properties define the error calculation:
+The statistic options also specify which confidence interval is used for calculating the uncertainties of the efficiency. The following properties define the error calculation:
 
 - **fConfLevel:** desired confidence level: 0 < fConfLevel < 1 ([TEfficiency!GetConfidenceLevel](@ref) / [TEfficiency!SetConfidenceLevel](@ref))
-- **fStatisticOption** defines which method is used to calculate the boundaries of the confidence Int32erval ([TEfficiency!SetStatisticOption](@ref))
+- **fStatisticOption** defines which method is used to calculate the boundaries of the confidence interval ([TEfficiency!SetStatisticOption](@ref))
 - **fBeta_alpha, fBeta_beta:** parameters for the prior distribution which is only used in the bayesian case ([TEfficiency!GetBetaAlpha](@ref) / [TEfficiency!GetBetaBeta](@ref) / [TEfficiency!SetBetaAlpha](@ref) / [TEfficiency!SetBetaBeta](@ref))
 - **kIsBayesian:** flag whether bayesian statistics are used or not ([TEfficiency!UsesBayesianStat](@ref))
-- **kShortestInterval:** flag whether shortest Int32erval (instead of central one) are used in case of Bayesian statistics ([TEfficiency!UsesShortestInterval](@ref)). Normally shortest Int32erval should be used in combination with the mode (see [TEfficiency!UsesPosteriorMode](@ref))
+- **kShortestInterval:** flag whether shortest interval (instead of central one) are used in case of Bayesian statistics ([TEfficiency!UsesShortestInterval](@ref)). Normally shortest interval should be used in combination with the mode (see [TEfficiency!UsesPosteriorMode](@ref))
 - **fWeight:** global_ weight for this [TEfficiency](@ref) object which is used during combining or merging with other [TEfficiency](@ref) objects([TEfficiency!GetWeight](@ref) / [TEfficiency!SetWeight](@ref))
 
-In the following table, the implemented confidence Int32ervals are listed with their corresponding statistic option. For more details on the calculation, please have a look at the mentioned functions.
+In the following table, the implemented confidence intervals are listed with their corresponding statistic option. For more details on the calculation, please have a look at the mentioned functions.
 
 | **name**             | **statistic option** | **function**                       | **kIsBayesian** | **parameters**                                                                     |
 |:---------------------|:---------------------|:-----------------------------------|:----------------|:-----------------------------------------------------------------------------------|
@@ -6540,7 +6540,7 @@ In particle physics weights arises from the fact that you want to normalise your
 The reason for different weights can therefore be:
 
 - different processes
-- other Int32egrated luminosity
+- other integrated luminosity
 - varying trigger efficiency
 - different sample sizes
 - ...
@@ -6556,21 +6556,21 @@ If the weights are artificial and do not represent real alternative hypotheses, 
 - eff1 += eff2
 - eff1 = eff1 + eff2
 
-The result of the merging is stored in the [TEfficiency](@ref) object which is marked bold above. The contents of the Int32ernal histograms of both [TEfficiency](@ref) objects are added and a new weight is assigned. The statistic options are not changed.
+The result of the merging is stored in the [TEfficiency](@ref) object which is marked bold above. The contents of the internal histograms of both [TEfficiency](@ref) objects are added and a new weight is assigned. The statistic options are not changed.
 
 ``\frac{1}{w_{new}} = \frac{1}{w_{1}} + \frac{1}{w_{2}}``
 
 ### Example:
 
-If you use two samples with different numbers of generated events for the same process and you want to normalise both to the same Int32egrated luminosity and trigger efficiency, the different weights then arise just from the fact that you have different numbers of events. The [TEfficiency](@ref) objects should be merged because the samples do not represent true alternatives. You expect the same result as if you would have a big sample with all events in it.
+If you use two samples with different numbers of generated events for the same process and you want to normalise both to the same integrated luminosity and trigger efficiency, the different weights then arise just from the fact that you have different numbers of events. The [TEfficiency](@ref) objects should be merged because the samples do not represent true alternatives. You expect the same result as if you would have a big sample with all events in it.
 
 ``w_{1} = \frac{\sigma L}{\epsilon N_{1}}, w_{2} = \frac{\sigma L}{\epsilon N_{2}} \Rightarrow w_{new} = \frac{\sigma L}{\epsilon (N_{1} + N_{2})} = \frac{1}{\frac{1}{w_{1}} + \frac{1}{w_{2}}}``
 
 ### V.2 When should I use combining?
 
-You should combine [TEfficiency](@ref) objects whenever the weights represent alternatives processes for the efficiency. As the combination of two [TEfficiency](@ref) objects is not always consistent with the representation by two Int32ernal histograms, the result is not stored in a [TEfficiency](@ref) object but a [TGraphAsymmErrors](@ref) is returned which shows the estimated combined efficiency and its uncertainty for each bin. At the moment the combination method [TEfficiency!Combine](@ref) only supports a combination of 1-dimensional efficiencies in a Bayesian approach.
+You should combine [TEfficiency](@ref) objects whenever the weights represent alternatives processes for the efficiency. As the combination of two [TEfficiency](@ref) objects is not always consistent with the representation by two internal histograms, the result is not stored in a [TEfficiency](@ref) object but a [TGraphAsymmErrors](@ref) is returned which shows the estimated combined efficiency and its uncertainty for each bin. At the moment the combination method [TEfficiency!Combine](@ref) only supports a combination of 1-dimensional efficiencies in a Bayesian approach.
 
-For calculating the combined efficiency and its uncertainty for each bin only Bayesian statistics is used. No frequentists methods are presently supported for computing the combined efficiency and its confidence Int32erval. In the case of the Bayesian statistics, a combined posterior is constructed taking Int32o account the weight of each [TEfficiency](@ref) object. The same prior is used for all the [TEfficiency](@ref) objects.
+For calculating the combined efficiency and its uncertainty for each bin only Bayesian statistics is used. No frequentists methods are presently supported for computing the combined efficiency and its confidence interval. In the case of the Bayesian statistics, a combined posterior is constructed taking into account the weight of each [TEfficiency](@ref) object. The same prior is used for all the [TEfficiency](@ref) objects.
 
 \thebegin{eqnarray*}
   P_{comb}(\epsilon | {w_{i}}, {k_{i}} , {N_{i}}) = \frac{1}{norm} \prod_{i}{L(k_{i} | N_{i}, \epsilon)}^{w_{i}} \Pi( \epsilon )\\
@@ -6578,10 +6578,10 @@ L(k_{i} | N_{i}, \epsilon)\ is\ the\ likelihood\ function\ for\ the\ sample\ i\ 
 \Pi( \epsilon)\ is\ the\ prior,\ a\ beta\ distribution\ B(\epsilon, \alpha, \beta).\\
 The\ resulting\ combined\ posterior\ is \\
 P_{comb}(\epsilon |{w_{i}}; {k_{i}}; {N_{i}}) = B(\epsilon, \sum_{i}{ w_{i} k_{i}} + \alpha, \sum_{i}{ w_{i}(n_{i}-k_{i})}+\beta) \\
-\hat{\varepsilon} = \Int32_{0}^{1} \epsilon \times P_{comb}(\epsilon | {k_{i}} , {N_{i}}) d\epsilon \\
+\hat{\varepsilon} = \int_{0}^{1} \epsilon \times P_{comb}(\epsilon | {k_{i}} , {N_{i}}) d\epsilon \\
 confidence\ level = 1 - \alpha \\
-\frac{\alpha}{2} = \Int32_{0}^{\epsilon_{low}} P_{comb}(\epsilon | {k_{i}} , {N_{i}}) d\epsilon ...\ defines\ lower\ boundary \\
-1- \frac{\alpha}{2} = \Int32_{0}^{\epsilon_{up}} P_{comb}(\epsilon | {k_{i}} , {N_{i}}) d\epsilon ...\ defines\ upper\ boundary
+\frac{\alpha}{2} = \int_{0}^{\epsilon_{low}} P_{comb}(\epsilon | {k_{i}} , {N_{i}}) d\epsilon ...\ defines\ lower\ boundary \\
+1- \frac{\alpha}{2} = \int_{0}^{\epsilon_{up}} P_{comb}(\epsilon | {k_{i}} , {N_{i}}) d\epsilon ...\ defines\ upper\ boundary
 \theend{eqnarray*}
 
 ### Example:
@@ -6593,9 +6593,9 @@ p_{2} = \frac{\sigma_{2}}{\sigma_{1} + \sigma_{2}} = \frac{N_{2}w_{2}}{N_{1}w_{1
 
 ## VI. Further operations
 
-### VI.1 Information about the Int32ernal histograms
+### VI.1 Information about the internal histograms
 
-The methods [TEfficiency!GetPassedHistogram](@ref) and [TEfficiency!GetTotalHistogram](@ref) return a constant pointer to the Int32ernal histograms. They can be used to obtain information about the Int32ernal histograms (e.g., the binning, number of passed / total events in a bin, mean values...). One can obtain a clone of the Int32ernal histograms by calling [TEfficiency!GetCopyPassedHisto](@ref) or [TEfficiency!GetCopyTotalHisto](@ref). The returned histograms are completely independent from the current [TEfficiency](@ref) object. By default, they are not attached to a directory to avoid the duplication of data and the user is responsible for deleting them.
+The methods [TEfficiency!GetPassedHistogram](@ref) and [TEfficiency!GetTotalHistogram](@ref) return a constant pointer to the internal histograms. They can be used to obtain information about the internal histograms (e.g., the binning, number of passed / total events in a bin, mean values...). One can obtain a clone of the internal histograms by calling [TEfficiency!GetCopyPassedHisto](@ref) or [TEfficiency!GetCopyTotalHisto](@ref). The returned histograms are completely independent from the current [TEfficiency](@ref) object. By default, they are not attached to a directory to avoid the duplication of data and the user is responsible for deleting them.
 
     //open a root file which contains a TEfficiency object
     TFile* pFile = new TFile("myfile.root","update");
@@ -6615,13 +6615,13 @@ The methods [TEfficiency!GetPassedHistogram](@ref) and [TEfficiency!GetTotalHist
 
 (C++ version of the code)
 
-It is also possible to set the Int32ernal total or passed histogram by using the methods [TEfficiency!SetPassedHistogram](@ref) or [TEfficiency!SetTotalHistogram](@ref).
+It is also possible to set the internal total or passed histogram by using the methods [TEfficiency!SetPassedHistogram](@ref) or [TEfficiency!SetTotalHistogram](@ref).
 
-In order to ensure the validity of the [TEfficiency](@ref) object, the consistency of the new histogram and the stored histogram is checked. It might be impossible sometimes to change the histograms in a consistent way. Therefore one can force the replacement by passing the "f" option. Then the user has to ensure that the other Int32ernal histogram is replaced as well and that the [TEfficiency](@ref) object is in a valid state.
+In order to ensure the validity of the [TEfficiency](@ref) object, the consistency of the new histogram and the stored histogram is checked. It might be impossible sometimes to change the histograms in a consistent way. Therefore one can force the replacement by passing the "f" option. Then the user has to ensure that the other internal histogram is replaced as well and that the [TEfficiency](@ref) object is in a valid state.
 
 ### VI.2 Fitting
 
-The efficiency can be fitted using the [TEfficiency!Fit](@ref) function which Int32ernally uses the [TBinomialEfficiencyFitter!Fit](@ref) method. As this method is using a maximum-likelihood-fit, it is necessary to initialise the given fit function with reasonable thestart values. The resulting fit function is attached to the list of associated functions and will be drawn automatically during the next [TEfficiency!Draw](@ref) command. The list of associated function can be modified by using the pointer returned by [TEfficiency!GetListOfFunctions](@ref).
+The efficiency can be fitted using the [TEfficiency!Fit](@ref) function which internally uses the [TBinomialEfficiencyFitter!Fit](@ref) method. As this method is using a maximum-likelihood-fit, it is necessary to initialise the given fit function with reasonable thestart values. The resulting fit function is attached to the list of associated functions and will be drawn automatically during the next [TEfficiency!Draw](@ref) command. The list of associated function can be modified by using the pointer returned by [TEfficiency!GetListOfFunctions](@ref).
 
 (C++ version of the code)
 
@@ -6683,16 +6683,16 @@ Related functions: [`GetEXhigh`](@ref), [`GetEXlow`](@ref), [`GetEYhigh`](@ref),
 Service class for 2-D histogram classes.
 
 - [TH2C](@ref) a 2-D histogram with one byte per cell (char). Maximum bin content = 127
-- [TH2S](@ref) a 2-D histogram with two bytes per cell (short Int32eger). Maximum bin content = 32767
-- [TH2I](@ref) a 2-D histogram with four bytes per cell (32 bit Int32eger). Maximum bin content = INT_MAX ([*](@ref))
-- [TH2L](@ref) a 2-D histogram with eight bytes per cell (64 bit Int32eger). Maximum bin content = LLONG_MAX ([**](@ref))
-- [TH2F](@ref) a 2-D histogram with four bytes per cell (float). Maximum precision 7 digits, maximum Int32eger bin content = +/-16777216 ([***](@ref))
-- [TH2D](@ref) a 2-D histogram with eight bytes per cell (double). Maximum precision 14 digits, maximum Int32eger bin content = +/-9007199254740992 ([****](@ref))
+- [TH2S](@ref) a 2-D histogram with two bytes per cell (short integer). Maximum bin content = 32767
+- [TH2I](@ref) a 2-D histogram with four bytes per cell (32 bit integer). Maximum bin content = INT_MAX ([*](@ref))
+- [TH2L](@ref) a 2-D histogram with eight bytes per cell (64 bit integer). Maximum bin content = LLONG_MAX ([**](@ref))
+- [TH2F](@ref) a 2-D histogram with four bytes per cell (float). Maximum precision 7 digits, maximum integer bin content = +/-16777216 ([***](@ref))
+- [TH2D](@ref) a 2-D histogram with eight bytes per cell (double). Maximum precision 14 digits, maximum integer bin content = +/-9007199254740992 ([****](@ref))
 
-<sup> (*) INT_MAX = 2147483647 is the [maximum value for a variable of type Int32.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-Int32eger-limits)<br/>
- (**) LLONG_MAX = 9223372036854775807 is the [maximum value for a variable of type long64.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-Int32eger-limits)<br/>
- (***) 2^24 = 16777216 is the [maximum Int32eger that can be properly represented by a float32 with 23-bit mantissa.](https://stackoverflow.com/a/3793950/7471760)<br/>
- (****) 2^53 = 9007199254740992 is the [maximum Int32eger that can be properly represented by a double64 with 52-bit mantissa.](https://stackoverflow.com/a/3793950/7471760) </sup>
+<sup> (*) INT_MAX = 2147483647 is the [maximum value for a variable of type int.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-integer-limits)<br/>
+ (**) LLONG_MAX = 9223372036854775807 is the [maximum value for a variable of type long64.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-integer-limits)<br/>
+ (***) 2^24 = 16777216 is the [maximum integer that can be properly represented by a float32 with 23-bit mantissa.](https://stackoverflow.com/a/3793950/7471760)<br/>
+ (****) 2^53 = 9007199254740992 is the [maximum integer that can be properly represented by a double64 with 52-bit mantissa.](https://stackoverflow.com/a/3793950/7471760) </sup>
 
 Related functions: [`AddBinContent`](@ref), [`BufferEmpty`](@ref), [`Copy`](@ref), [`FillN`](@ref), [`FillRandom`](@ref), [`Fill`](@ref), [`FitSlicesX`](@ref), [`FitSlicesY`](@ref), [`GetBinContent`](@ref), [`GetBinErrorLow`](@ref), [`GetBinErrorUp`](@ref), [`GetBinWithContent2`](@ref), [`GetBin`](@ref), [`GetCorrelationFactor`](@ref), [`GetCovariance`](@ref), [`GetRandom2`](@ref), [`GetStats`](@ref), [`IntegralAndError`](@ref), [`Integral`](@ref), [`Interpolate`](@ref), [`KolmogorovTest`](@ref), [`ProfileX`](@ref), [`ProfileY`](@ref), [`ProjectionX`](@ref), [`ProjectionY`](@ref), [`PutStats`](@ref), [`QuantilesX`](@ref), [`QuantilesY`](@ref), [`Rebin2D`](@ref), [`RebinX`](@ref), [`RebinY`](@ref), [`Rebin`](@ref), [`Reset`](@ref), [`SetBinContent`](@ref), [`SetShowProjectionXY`](@ref), [`SetShowProjectionX`](@ref), [`SetShowProjectionY`](@ref), [`ShowBackground`](@ref), [`ShowPeaks`](@ref), [`Smooth`](@ref)
 """ TH2
@@ -6819,7 +6819,7 @@ The list of available predefined functions which can be used as shortcuts is the
 
 ### An expanded note on variables and parameters
 
-In a [TFormula](@ref), a variable is a defined by a name `x`, `y`, `z` or `t` or an index like `x[0]`, `x[1]`, `x[2]`; that is `x[N]` where N is an Int32eger.
+In a [TFormula](@ref), a variable is a defined by a name `x`, `y`, `z` or `t` or an index like `x[0]`, `x[1]`, `x[2]`; that is `x[N]` where N is an integer.
 
     TFormula("", "x[0] * x[1] + 10")
 
@@ -6856,9 +6856,9 @@ Parameter values can be provided dynamically using `TFormula!EvalPar` instead of
 
 All operators of C/C++ are allowed in a [TFormula](@ref) with a few caveats.
 
-The operators `|`, `&`, `%` can be used but will raise an error if used in conjunction with a variable or a parameter. Variables and parameters are treated as doubles Int32ernally for which these operators are not defined. This means the following command will run successfully `root -l -q -e TFormula("", "x+(10%3)").Eval(0)` but not `root -l -q -e TFormula("", "x%10").Eval(0)`.
+The operators `|`, `&`, `%` can be used but will raise an error if used in conjunction with a variable or a parameter. Variables and parameters are treated as doubles internally for which these operators are not defined. This means the following command will run successfully `root -l -q -e TFormula("", "x+(10%3)").Eval(0)` but not `root -l -q -e TFormula("", "x%10").Eval(0)`.
 
-The operator `^` is defined to mean exponentiation instead of the C/C++ Int32erpretation xor. `**` is added, also meaning exponentiation.
+The operator `^` is defined to mean exponentiation instead of the C/C++ interpretation xor. `**` is added, also meaning exponentiation.
 
 The operators `++` and `@` are added, and are shorthand for the a linear function. That means the expression `x@2` will be expanded to `[n]*x + [n+1]*2` where n is the first previously unused parameter number.
 
@@ -6993,7 +6993,7 @@ Related functions: [`DistancetoPrimitive`](@ref), [`Draw`](@ref), [`Eval`](@ref)
 
 Class wrapping convolution of two functions.
 
-Class wrapping convolution of two functions: evaluation of $\Int32 f(x)g(x-t)dx$
+Class wrapping convolution of two functions: evaluation of $\int f(x)g(x-t)dx$
 
 The convolution is performed by default using FFTW if it is available . One can pass optionally the range of the convolution (by default the first function range is used). Note that when using Discrete Fourier Transform (as FFTW), it is a circular transform, so the functions should be approximately zero at the theend of the range. If they are significantly different than zero on one side (e.g. the left side) a spill over will occur on the other side (e.g right side). If no function range is given by default the function1 range + 10% is used One should use also a not too small number of points for the DFT (a minimum of 1000). By default 10000 points are used.
 
@@ -7030,7 +7030,7 @@ Fits MC fractions to data histogram.
 
 A la HMCMLL, see R. Barlow and C. Beeston, Comp. Phys. Comm. 77 (1993) 219-228, and [http://www.hep.man.ac.uk/~roger/hfrac.f](http://www.hep.man.ac.uk/~roger/hfrac.f)
 
-The virtue of this fit is that it takes Int32o account both data and Monte Carlo statistical uncertainties. The way in which this is done is through a standard likelihood fit using Poisson statistics; however, the template (MC) predictions are also varied within statistics, leading to additional contributions to the overall likelihood. This leads to many more fit parameters (one per bin per template), but the minimisation with respect to these additional parameters is done analytically rather than Int32roducing them as formal fit parameters. Some special care needs to be taken in the case of bins with zero content. For more details please see the original publication cited above.
+The virtue of this fit is that it takes into account both data and Monte Carlo statistical uncertainties. The way in which this is done is through a standard likelihood fit using Poisson statistics; however, the template (MC) predictions are also varied within statistics, leading to additional contributions to the overall likelihood. This leads to many more fit parameters (one per bin per template), but the minimisation with respect to these additional parameters is done analytically rather than introducing them as formal fit parameters. Some special care needs to be taken in the case of bins with zero content. For more details please see the original publication cited above.
 
 An example application of this fit is given below. For a TH1* histogram ("data") fitted as the sum of three Monte Carlo sources ("mc"):
 
@@ -7066,7 +7066,7 @@ Biased fit uncertainties may result if these conditions are not fulfilled (see e
 
 ## Instantiation
 
-A fit object is instantiated through TFractionFitter* fit = new [TFractionFitter(data, mc)](@ref); A number of basic checks (Int32ended to ensure that the template histograms represent the same "kind" of distribution as the data one) are carried out. The [TVirtualFitter](@ref) object is then addressed and all fit parameters (the template fractions) declared (initially unbounded).
+A fit object is instantiated through TFractionFitter* fit = new [TFractionFitter(data, mc)](@ref); A number of basic checks (intended to ensure that the template histograms represent the same "kind" of distribution as the data one) are carried out. The [TVirtualFitter](@ref) object is then addressed and all fit parameters (the template fractions) declared (initially unbounded).
 
 ## Applying constraints
 
@@ -7205,7 +7205,7 @@ This triangulation code derives from an implementation done by Luke Jones (Royal
 
 This software cannot be guaranteed to work under all circumstances. They were originally written to work with a few hundred points in an XY space with similar X and Y ranges.
 
-Definition of Delaunay triangulation (After B. Delaunay): For a set S of points in the Euclidean plane, the unique triangulation DT(S) of S such that no point in S is inside the circumcircle of any triangle in DT(S). DT(S) is the dual of the Voronoi diagram of S. If n is the number of points in S, the Voronoi diagram of S is the partitioning of the plane containing S points Int32o n convex polygons such that each polygon contains exactly one point and every point in a given polygon is closer to its central point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation.
+Definition of Delaunay triangulation (After B. Delaunay): For a set S of points in the Euclidean plane, the unique triangulation DT(S) of S such that no point in S is inside the circumcircle of any triangle in DT(S). DT(S) is the dual of the Voronoi diagram of S. If n is the number of points in S, the Voronoi diagram of S is the partitioning of the plane containing S points into n convex polygons such that each polygon contains exactly one point and every point in a given polygon is closer to its central point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation.
 
 ![https://root.cern/doc/v636/tgraph2d_delaunay.png](https://root.cern/doc/v636/tgraph2d_delaunay.png)
 
@@ -7226,7 +7226,7 @@ The [ROOT!Math!Delaunay2D](@ref) class provides a wrapper for using the **CDT** 
 
 This implementation provides large improvements in terms of computational performances compared to the legacy one available in [TGraphDelaunay](@ref), and it is by default used in [TGraph2D](@ref). The old, legacy implementation can be still used when calling `TGraph2D!GetHistogram` and `TGraph2D!Draw` with the `old` option.
 
-Definition of Delaunay triangulation (After B. Delaunay): For a set S of points in the Euclidean plane, the unique triangulation DT(S) of S such that no point in S is inside the circumcircle of any triangle in DT(S). DT(S) is the dual of the Voronoi diagram of S. If n is the number of points in S, the Voronoi diagram of S is the partitioning of the plane containing S points Int32o n convex polygons such that each polygon contains exactly one point and every point in a given polygon is closer to its central point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation.
+Definition of Delaunay triangulation (After B. Delaunay): For a set S of points in the Euclidean plane, the unique triangulation DT(S) of S such that no point in S is inside the circumcircle of any triangle in DT(S). DT(S) is the dual of the Voronoi diagram of S. If n is the number of points in S, the Voronoi diagram of S is the partitioning of the plane containing S points into n convex polygons such that each polygon contains exactly one point and every point in a given polygon is closer to its central point than to any other. A Voronoi diagram is sometimes also known as a Dirichlet tessellation.
 
 ![https://root.cern/doc/v636/tgraph2d_delaunay.png](https://root.cern/doc/v636/tgraph2d_delaunay.png)
 
@@ -7278,7 +7278,7 @@ Related functions: [`Add`](@ref), [`Draw`](@ref), [`GetSteps`](@ref), [`Paint`](
 @trydoc raw"""
     ROOT.TVirtualHistPainter
 
-Abstract Int32erface to a histogram painter.
+Abstract interface to a histogram painter.
 
 
 
@@ -7311,7 +7311,7 @@ Related functions: [`AddBinContent`](@ref), [`ClassDefOverride`](@ref), [`Copy`]
 @trydoc raw"""
     ROOT.TH1I
 
-1-D histogram with an Int32 per channel (see [TH1](@ref) documentation)
+1-D histogram with an int per channel (see [TH1](@ref) documentation)
 
 
 
@@ -7365,7 +7365,7 @@ Related functions: [`Copy`](@ref), [`Fill`](@ref), [`GetBinContent`](@ref), [`Ge
 
 Profile Histogram.
 
-Profile histograms are used to display the mean value of Y and its error for each bin in X. The displayed error is by default the standard error on the mean (i.e. the standard deviation divided by the sqrt(n) ). Profile histograms are in many cases an elegant replacement of two-dimensional histograms. The Int32er-relation of two measured quantities X and Y can always be visualized by a two-dimensional histogram or scatter plot, but if Y is an unknown (but single-valued) approximate function of X, this function is displayed by a profile histogram with much better precision than by a scatter plot.
+Profile histograms are used to display the mean value of Y and its error for each bin in X. The displayed error is by default the standard error on the mean (i.e. the standard deviation divided by the sqrt(n) ). Profile histograms are in many cases an elegant replacement of two-dimensional histograms. The inter-relation of two measured quantities X and Y can always be visualized by a two-dimensional histogram or scatter plot, but if Y is an unknown (but single-valued) approximate function of X, this function is displayed by a profile histogram with much better precision than by a scatter plot.
 
 The following formulae show the cumulated contents (capital letters) and the values displayed by the printing or plotting routines (small letters) of the elements for bin j. 
 
@@ -7386,7 +7386,7 @@ The following formulae show the cumulated contents (capital letters) and the val
         \thebegin{cases}
           e(j)                 &\text{if option="" (default). Error of the mean of all y values.} \\
           s(j)                 &\text{if option="s". Standard deviation of all y values.} \\
-          \thebegin{cases} e(j) &\text{if } h(j) \ne 0 \\ 1/\sqrt{12 N} &\text{if } h(j)=0 \theend{cases}       &\text{if option="i". This is useful for storing Int32egers such as ADC counts.} \\
+          \thebegin{cases} e(j) &\text{if } h(j) \ne 0 \\ 1/\sqrt{12 N} &\text{if } h(j)=0 \theend{cases}       &\text{if option="i". This is useful for storing integers such as ADC counts.} \\
           1/\sqrt{W(j)}           &\text{if option="g". Error of a weighted mean for combining measurements with variances of } w. \\
         \theend{cases}
     \theend{align}``
@@ -7438,7 +7438,7 @@ Related functions: [`AddBinContent`](@ref), [`Copy`](@ref), [`Reset`](@ref), [`S
 @trydoc raw"""
     ROOT.TH2I
 
-2-D histogram with an Int32 per channel (see [TH1](@ref) documentation)
+2-D histogram with an int per channel (see [TH1](@ref) documentation)
 
 
 
@@ -7485,13 +7485,13 @@ Bins are defined using one of the `AddBin()` methods. The bin definition should 
 
 The histogram can be filled with `Fill(Double_t x, Double_t y, Double_t w) `. `w` is the weight. If no weight is specified, it is assumed to be 1.
 
-Not all histogram's area need to be binned. Filling an area without bins, will falls Int32o the overflows. Adding a bin is not retroactive; it doesn't affect previous fillings. A `Fill()` call, that was previously ignored due to the lack of a bin at the specified location, is not reconsidered when that location is binned later.
+Not all histogram's area need to be binned. Filling an area without bins, will falls into the overflows. Adding a bin is not retroactive; it doesn't affect previous fillings. A `Fill()` call, that was previously ignored due to the lack of a bin at the specified location, is not reconsidered when that location is binned later.
 
 If there are two overlapping bins, the first one in the list will be incremented by `Fill()`.
 
 The histogram may automatically extends its limits if a bin outside the histogram limits is added. This is done when the default constructor (with no arguments) is used. It generates a histogram with no limits along the X and Y axis. Adding bins to it will extend it up to a proper size.
 
-`TH2Poly` implements a partitioning algorithm to speed up bins' filling (see the "Partitioning Algorithm" section for details). The partitioning algorithm divides the histogram Int32o regions called cells. The bins that each cell Int32ersects are recorded in an array of `TList`s. When a coordinate in the histogram is to be filled; the method (quickly) finds which cell the coordinate belongs. It then only loops over the bins Int32ersecting that cell to find the bin the input coordinate corresponds to. The partitioning of the histogram is updated continuously as each bin is added. The default number of cells on each axis is 25. This number could be set to another value in the constructor or adjusted later by calling the `ChangePartition(Int_t, Int_t)` method. The partitioning algorithm is considerably faster than the brute force algorithm (i.e. checking if each bin contains the input coordinates), especially if the histogram is to be filled many times.
+`TH2Poly` implements a partitioning algorithm to speed up bins' filling (see the "Partitioning Algorithm" section for details). The partitioning algorithm divides the histogram into regions called cells. The bins that each cell intersects are recorded in an array of `TList`s. When a coordinate in the histogram is to be filled; the method (quickly) finds which cell the coordinate belongs. It then only loops over the bins intersecting that cell to find the bin the input coordinate corresponds to. The partitioning of the histogram is updated continuously as each bin is added. The default number of cells on each axis is 25. This number could be set to another value in the constructor or adjusted later by calling the `ChangePartition(Int_t, Int_t)` method. The partitioning algorithm is considerably faster than the brute force algorithm (i.e. checking if each bin contains the input coordinates), especially if the histogram is to be filled many times.
 
 The following very simple macro shows how to build and fill a `TH2Poly`: 
 
@@ -7522,13 +7522,13 @@ The partitioning algorithm forms an essential part of the `TH2Poly` class. It is
 
 With the brute force approach, the filling is done in the following way: An iterator loops over all bins in the `TH2Poly` and invokes the method `IsInside()` for each of them. This method checks if the input location is in that bin. If the filling coordinate is inside, the bin is filled. Looping over all the bin is very slow.
 
-The alternative is to divide the histogram Int32o virtual rectangular regions called "cells". Each cell stores the pointers of the bins Int32ersecting it. When a coordinate is to be filled, the method finds which cell the coordinate falls Int32o. Since the cells are rectangular, this can be done very quickly. It then only loops over the bins associated with that cell and calls `IsInside()` only on that bins. This reduces considerably the number of bins on which `IsInside()` is called and therefore speed up by a huge factor the filling compare to the brute force approach where `IsInside()` is called for all bins.
+The alternative is to divide the histogram into virtual rectangular regions called "cells". Each cell stores the pointers of the bins intersecting it. When a coordinate is to be filled, the method finds which cell the coordinate falls into. Since the cells are rectangular, this can be done very quickly. It then only loops over the bins associated with that cell and calls `IsInside()` only on that bins. This reduces considerably the number of bins on which `IsInside()` is called and therefore speed up by a huge factor the filling compare to the brute force approach where `IsInside()` is called for all bins.
 
 The addition of bins to the appropriate cells is done when the bin is added to the histogram. To do this, `AddBin()` calls the `AddBinToPartition()` method. This method adds the input bin to the partitioning matrix.
 
 The number of partition cells per axis can be specified in the constructor. If it is not specified, the default value of 25 along each axis will be assigned. This value was chosen because it is small enough to avoid slowing down [AddBin()](@ref), while being large enough to enhance [Fill()](@ref) by a considerable amount. Regardless of how it is initialized at construction time, it can be changed later with the `ChangePartition()` method. `ChangePartition()` deletes the old partition matrix and generates a new one with the specified number of cells on each axis.
 
-The optimum number of partition cells per axis changes with the number of times `Fill()` will be called. Although partitioning greatly speeds up filling, it also adds a constant time delay Int32o the code. When `Fill()` is to be called many times, it is more efficient to divide the histogram Int32o a large number cells. However, if the histogram is to be filled only a few times, it is better to divide Int32o a small number of cells.
+The optimum number of partition cells per axis changes with the number of times `Fill()` will be called. Although partitioning greatly speeds up filling, it also adds a constant time delay into the code. When `Fill()` is to be called many times, it is more efficient to divide the histogram into a large number cells. However, if the histogram is to be filled only a few times, it is better to divide into a small number of cells.
 
 Related functions: [`AddBin`](@ref), [`Add`](@ref), [`ChangePartition`](@ref), [`ClearBinContents`](@ref), [`Clone`](@ref), [`ComputeIntegral`](@ref), [`Copy`](@ref), [`CreateBin`](@ref), [`Divide`](@ref), [`FFT`](@ref), [`FillN`](@ref), [`Fill`](@ref), [`FindBin`](@ref), [`GetAsymmetry`](@ref), [`GetBinContentChanged`](@ref), [`GetBinContent`](@ref), [`GetBinError`](@ref), [`GetBinName`](@ref), [`GetBinTitle`](@ref), [`GetBins`](@ref), [`GetFloat`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNewBinAdded`](@ref), [`GetNumberOfBins`](@ref), [`GetStats`](@ref), [`Honeycomb`](@ref), [`Integral`](@ref), [`Interpolate`](@ref), [`IsInsideBin`](@ref), [`Merge`](@ref), [`Multiply`](@ref), [`Reset`](@ref), [`SavePrimitive`](@ref), [`Scale`](@ref), [`SetBinContentChanged`](@ref), [`SetBinContent`](@ref), [`SetBinError`](@ref), [`SetFloat`](@ref), [`SetNewBinAdded`](@ref), [`TH2Poly`](@ref), [`assign`](@ref)
 """ TH2Poly
@@ -7553,16 +7553,16 @@ The 3-D histogram classes derived from the 1-D histogram classes.
 All operations are supported (fill, fit). Drawing is currently restricted to one single option. A cloud of points is drawn. The number of points is proportional to cell content.
 
 - [TH3C](@ref) a 3-D histogram with one byte per cell (char). Maximum bin content = 127
-- [TH3S](@ref) a 3-D histogram with two bytes per cell (short Int32eger). Maximum bin content = 32767
-- [TH3I](@ref) a 3-D histogram with four bytes per cell (32 bit Int32eger). Maximum bin content = INT_MAX ([*](@ref))
-- [TH3L](@ref) a 3-D histogram with eight bytes per cell (64 bit Int32eger). Maximum bin content = LLONG_MAX ([**](@ref))
-- [TH3F](@ref) a 3-D histogram with four bytes per cell (float). Maximum precision 7 digits, maximum Int32eger bin content = +/-16777216 ([***](@ref))
-- [TH3D](@ref) a 3-D histogram with eight bytes per cell (double). Maximum precision 14 digits, maximum Int32eger bin content = +/-9007199254740992 ([****](@ref))
+- [TH3S](@ref) a 3-D histogram with two bytes per cell (short integer). Maximum bin content = 32767
+- [TH3I](@ref) a 3-D histogram with four bytes per cell (32 bit integer). Maximum bin content = INT_MAX ([*](@ref))
+- [TH3L](@ref) a 3-D histogram with eight bytes per cell (64 bit integer). Maximum bin content = LLONG_MAX ([**](@ref))
+- [TH3F](@ref) a 3-D histogram with four bytes per cell (float). Maximum precision 7 digits, maximum integer bin content = +/-16777216 ([***](@ref))
+- [TH3D](@ref) a 3-D histogram with eight bytes per cell (double). Maximum precision 14 digits, maximum integer bin content = +/-9007199254740992 ([****](@ref))
 
-<sup> (*) INT_MAX = 2147483647 is the [maximum value for a variable of type Int32.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-Int32eger-limits)<br/>
- (**) LLONG_MAX = 9223372036854775807 is the [maximum value for a variable of type long64.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-Int32eger-limits)<br/>
- (***) 2^24 = 16777216 is the [maximum Int32eger that can be properly represented by a float32 with 23-bit mantissa.](https://stackoverflow.com/a/3793950/7471760)<br/>
- (****) 2^53 = 9007199254740992 is the [maximum Int32eger that can be properly represented by a double64 with 52-bit mantissa.](https://stackoverflow.com/a/3793950/7471760) </sup>
+<sup> (*) INT_MAX = 2147483647 is the [maximum value for a variable of type int.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-integer-limits)<br/>
+ (**) LLONG_MAX = 9223372036854775807 is the [maximum value for a variable of type long64.](https://docs.microsoft.com/en-us/cpp/c-language/cpp-integer-limits)<br/>
+ (***) 2^24 = 16777216 is the [maximum integer that can be properly represented by a float32 with 23-bit mantissa.](https://stackoverflow.com/a/3793950/7471760)<br/>
+ (****) 2^53 = 9007199254740992 is the [maximum integer that can be properly represented by a double64 with 52-bit mantissa.](https://stackoverflow.com/a/3793950/7471760) </sup>
 
 Related functions: [`AddBinContent`](@ref), [`BufferEmpty`](@ref), [`Copy`](@ref), [`FillRandom`](@ref), [`Fill`](@ref), [`FitSlicesZ`](@ref), [`GetBinContent`](@ref), [`GetBinErrorLow`](@ref), [`GetBinErrorUp`](@ref), [`GetBinWithContent3`](@ref), [`GetBin`](@ref), [`GetCorrelationFactor`](@ref), [`GetCovariance`](@ref), [`GetRandom3`](@ref), [`GetStats`](@ref), [`IntegralAndError`](@ref), [`Integral`](@ref), [`Interpolate`](@ref), [`KolmogorovTest`](@ref), [`Project3DProfile`](@ref), [`Project3D`](@ref), [`ProjectionX`](@ref), [`ProjectionY`](@ref), [`ProjectionZ`](@ref), [`PutStats`](@ref), [`Rebin3D`](@ref), [`RebinX`](@ref), [`RebinY`](@ref), [`RebinZ`](@ref), [`Reset`](@ref), [`SetBinContent`](@ref), [`SetShowProjection`](@ref)
 """ TH3
@@ -7573,7 +7573,7 @@ Related functions: [`AddBinContent`](@ref), [`BufferEmpty`](@ref), [`Copy`](@ref
 
 Profile2D histograms are used to display the mean value of Z and its error for each cell in X,Y.
 
-Profile2D histograms are in many cases an elegant replacement of three-dimensional histograms : the Int32er-relation of three measured quantities X, Y and Z can always be visualized by a three-dimensional histogram or scatter-plot; its representation on the line-printer is not particularly satisfactory, except for sparse data. If Z is an unknown (but single-valued) approximate function of X,Y this function is displayed by a profile2D histogram with much better precision than by a scatter-plot.
+Profile2D histograms are in many cases an elegant replacement of three-dimensional histograms : the inter-relation of three measured quantities X, Y and Z can always be visualized by a three-dimensional histogram or scatter-plot; its representation on the line-printer is not particularly satisfactory, except for sparse data. If Z is an unknown (but single-valued) approximate function of X,Y this function is displayed by a profile2D histogram with much better precision than by a scatter-plot.
 
 The following formulae show the cumulated contents (capital letters) and the values displayed by the printing or plotting routines (small letters) of the elements for cell i, j. 
 
@@ -7594,7 +7594,7 @@ The following formulae show the cumulated contents (capital letters) and the val
        \thebegin{cases}
          e(i,j)                 &\text{if option="" (default). Error of the mean of all z values.} \\
          s(i,j)                 &\text{if option="s". Standard deviation of z values.} \\
-         \thebegin{cases} e(j) &\text{if } h(i,j) \ne 0 \\ 1/\sqrt{12 N} &\text{if } h(i,j)=0 \theend{cases}       &\text{if option="i". This is useful for storing Int32egers such as ADC counts.} \\
+         \thebegin{cases} e(j) &\text{if } h(i,j) \ne 0 \\ 1/\sqrt{12 N} &\text{if } h(i,j)=0 \theend{cases}       &\text{if option="i". This is useful for storing integers such as ADC counts.} \\
          1/\sqrt{W(i,j)}           &\text{if option="g". Error of a weighted mean when combining measurements with variances of } w. \\
        \theend{cases}
    \theend{align}``
@@ -7646,7 +7646,7 @@ Related functions: [`AddBinContent`](@ref), [`Copy`](@ref), [`Reset`](@ref), [`S
 @trydoc raw"""
     ROOT.TH3I
 
-3-D histogram with an Int32 per channel (see [TH1](@ref) documentation)
+3-D histogram with an int per channel (see [TH1](@ref) documentation)
 
 
 
@@ -7789,7 +7789,7 @@ THnF hn("hn", "hn", 2, bins, xmin, xmax);
 
 ## Filling
 
-A [THn](@ref) is filled just like a regular histogram, using THn!Fill(x, weight), where x is a n-dimensional Double_t value. To take errors Int32o account, [Sumw2()](@ref) must be called before filling the histogram. Storage is allocated when the first bin content is stored.
+A [THn](@ref) is filled just like a regular histogram, using THn!Fill(x, weight), where x is a n-dimensional Double_t value. To take errors into account, [Sumw2()](@ref) must be called before filling the histogram. Storage is allocated when the first bin content is stored.
 
 ## Projections
 
@@ -7811,7 +7811,7 @@ Related functions: [`AddBinContent`](@ref), [`AddBinError2`](@ref), [`CreateIter
 
 Multidimensional histogram base.
 
-Defines common functionality and Int32erfaces for [THn](@ref), [THnSparse](@ref).
+Defines common functionality and interfaces for [THn](@ref), [THnSparse](@ref).
 
 Related functions: [`AddBinContent`](@ref), [`AddBinError2`](@ref), [`Add`](@ref), [`Browse`](@ref), [`CalculateErrors`](@ref), [`ClassDefOverride`](@ref), [`ComputeIntegral`](@ref), [`CreateIter`](@ref), [`Divide`](@ref), [`FillBin`](@ref), [`Fill`](@ref), [`Fit`](@ref), [`GetAxis`](@ref), [`GetBinContent`](@ref), [`GetBinError2`](@ref), [`GetBinError`](@ref), [`GetBin`](@ref), [`GetCalculateErrors`](@ref), [`GetEntries`](@ref), [`GetListOfAxes`](@ref), [`GetListOfFunctions`](@ref), [`GetNbins`](@ref), [`GetNdimensions`](@ref), [`GetRandom`](@ref), [`GetSumw2`](@ref), [`GetSumw`](@ref), [`GetSumwx2`](@ref), [`GetSumwx`](@ref), [`GetWeightSum`](@ref), [`IsFolder`](@ref), [`IsInRange`](@ref), [`Merge`](@ref), [`Multiply`](@ref), [`PrintBin`](@ref), [`PrintEntries`](@ref), [`Print`](@ref), [`ProjectionND`](@ref), [`Projection`](@ref), [`RebinnedAdd`](@ref), [`Reset`](@ref), [`Scale`](@ref), [`SetBinContent`](@ref), [`SetBinEdges`](@ref), [`SetBinError2`](@ref), [`SetBinError`](@ref), [`SetEntries`](@ref), [`SetTitle`](@ref), [`Sumw2`](@ref)
 """ THnBase
@@ -7822,15 +7822,15 @@ Related functions: [`AddBinContent`](@ref), [`AddBinError2`](@ref), [`Add`](@ref
 
 A class to chain together multiple histograms.
 
-This class allows to chain together any `THnBase`-derived (`THn` or `THnSparse`) histograms from multiple files. Operations on the axes and projections are supported. The Int32ent is to allow convenient merging merging of projections of high-dimensional histograms.
+This class allows to chain together any `THnBase`-derived (`THn` or `THnSparse`) histograms from multiple files. Operations on the axes and projections are supported. The intent is to allow convenient merging merging of projections of high-dimensional histograms.
 
     // `file1.root` and `file2.root` contain a `THnSparse` named `hsparse`.
     THnChain hs("hsparse");
     hs.AddFile("file1.root");
     hs.AddFile("file2.root");
-    // Project out axis 0, Int32egrate over other axes.
+    // Project out axis 0, integrate over other axes.
     TH1* h0 = hs.Projection(0);
-    // Project out axis 0, Int32egrate over other axes in their active ranges.
+    // Project out axis 0, integrate over other axes in their active ranges.
     hs.GetAxis(1)->SetRangeUser(0, 0.1); // select a subrange
     TH1* h0 = hs.Projection(0);
 
@@ -7856,7 +7856,7 @@ Related functions: [`GetCoord`](@ref), [`HaveSkippedBin`](@ref), [`Next`](@ref),
 
 Templated implementation of the abstract base [THn](@ref).
 
-All functionality and the Int32erfaces to be used are in THn!
+All functionality and the interfaces to be used are in THn!
 
 [THn](@ref) does not know how to store any bin content itself. Instead, this is delegated to the derived, templated class: the template parameter decides what the format for the bin content is. The actual storage is delegated to TNDArrayT<T>.
 
@@ -7905,7 +7905,7 @@ THnSparseD hs("hs", "hs", 2, bins, xmin, xmax);
 
 ## Filling
 
-A [THnSparse](@ref) is filled just like a regular histogram, using THnSparse!Fill(x, weight), where x is a n-dimensional Double_t value. To take errors Int32o account, [Sumw2()](@ref) must be called before filling the histogram.
+A [THnSparse](@ref) is filled just like a regular histogram, using THnSparse!Fill(x, weight), where x is a n-dimensional Double_t value. To take errors into account, [Sumw2()](@ref) must be called before filling the histogram.
 
 Bins are allocated as needed; the status of the allocation can be observed by [GetSparseFractionBins()](@ref), [GetSparseFractionMem()](@ref).
 
@@ -7931,7 +7931,7 @@ THnSparse!GetAxis(12)->SetRange(from_bin, to_bin);
 
 ## Internal Representation
 
-An entry for a filled bin consists of its n-dimensional coordinates and its bin content. The coordinates are compacted to use as few bits as possible; e.g. a histogram with 10 bins in x and 20 bins in y will only use 4 bits for the x representation and 5 bits for the y representation. This is handled by the Int32ernal class [THnSparseCompactBinCoord](@ref). Bin data (content and coordinates) are allocated in chunks of size fChunkSize; this parameter can be set when constructing a [THnSparse](@ref). Each chunk is represented by an object of class [THnSparseArrayChunk](@ref).
+An entry for a filled bin consists of its n-dimensional coordinates and its bin content. The coordinates are compacted to use as few bits as possible; e.g. a histogram with 10 bins in x and 20 bins in y will only use 4 bits for the x representation and 5 bits for the y representation. This is handled by the internal class [THnSparseCompactBinCoord](@ref). Bin data (content and coordinates) are allocated in chunks of size fChunkSize; this parameter can be set when constructing a [THnSparse](@ref). Each chunk is represented by an object of class [THnSparseArrayChunk](@ref).
 
 Translation from an n-dimensional bin coordinate to the linear index within the chunks is done by [GetBin()](@ref). It creates a hash from the compacted bin coordinates (the hash of a bin coordinate is the compacted coordinate itself if it takes less than 8 bytes, the size of a Long64_t. This hash is used to lookup the linear index in the [TExMap](@ref) member fBins; the coordinates of the entry fBins points to is compared to the coordinates passed to [GetBin()](@ref). If they do not match, these two coordinates have the same hash - which is extremely unlikely but (for the case where the compact bin coordinates are larger than 4 bytes) possible. In this case, fBinsContinued contains a chain of linear indexes with the same hash. Iterating through this chain and comparing each bin coordinates with the one passed to [GetBin()](@ref) will retrieve the matching bin.
 
@@ -7944,7 +7944,7 @@ Related functions: [`AddBinContent`](@ref), [`AddBinError2`](@ref), [`ClassDefOv
 
 Templated implementation of the abstract base [THnSparse](@ref).
 
-All functionality and the Int32erfaces to be used are in THnSparse!
+All functionality and the interfaces to be used are in THnSparse!
 
 [THnSparse](@ref) does not know how to store any bin content itself. Instead, this is delegated to the derived, templated class: the template parameter decides what the format for the bin content is. In fact it even defines the array itself; possible implementations probably derive from [TArray](@ref).
 
@@ -7993,7 +7993,7 @@ The specific stack's drawing options are:
 
 - **NOSTACK** If option "nostack" is specified, histograms are all painted in the same pad as if the option "same" had been specified.
 - **NOSTACKB** If the option "nostackb" is specified histograms are all painted on the same pad next to each other as bar plots.
-- **PADS** if option "pads" is specified, the current pad/canvas is subdivided Int32o a number of pads equal to the number of histograms and each histogram is painted Int32o a separate pad.
+- **PADS** if option "pads" is specified, the current pad/canvas is subdivided into a number of pads equal to the number of histograms and each histogram is painted into a separate pad.
 - **NOCLEAR** By default the background of the histograms is erased before drawing the histograms. The option "noclear" avoids this behavior. This is useful when drawing a [THStack](@ref) on top of another plot. If the patterns used to draw the histograms in the stack are transparent, then the plot behind will be visible.
 
 See the [THistPainter](@ref) class for the list of valid histograms' painting options.
@@ -8050,7 +8050,7 @@ Physics. Computer Physics Communications 136:198-207,2001" - e-Print Archive: he
 
 The algorithm is briefly described in (4). A binned version is also implemented to address the performance issue due to its data size dependance.
 
-Related functions: [`Draw`](@ref), [`Fill`](@ref), [`GetAdaptiveWeights`](@ref), [`GetApproximateBias`](@ref), [`GetBias`](@ref), [`GetError`](@ref), [`GetFixedWeight`](@ref), [`GetFunction`](@ref), [`GetGraphWithErrors`](@ref), [`GetLowerFunction`](@ref), [`GetMean`](@ref), [`GetRAMISE`](@ref), [`GetSigma`](@ref), [`GetUpperFunction`](@ref), [`GetValue`](@ref), [`SetBinning`](@ref), [`SetIteration`](@ref), [`SetKernelType`](@ref), [`SetMirror`](@ref), [`SetNBins`](@ref), [`SetRange`](@ref), [`SetTuneFactor`](@ref), [`SetUseBinsNEvents`](@ref), [`TKDE`](@ref), [`paren`](@ref)
+Related functions: [`Draw`](@ref), [`Fill`](@ref), [`GetAdaptiveWeights`](@ref), [`GetApproximateBias`](@ref), [`GetBias`](@ref), [`GetError`](@ref), [`GetFixedWeight`](@ref), [`GetFunction`](@ref), [`GetGraphWithErrors`](@ref), [`GetLowerFunction`](@ref), [`GetMean`](@ref), [`GetRAMISE`](@ref), [`GetSigma`](@ref), [`GetUpperFunction`](@ref), [`GetValue`](@ref), [`SetBinning`](@ref), [`SetIteration`](@ref), [`SetKernelGetType`](@ref), [`SetMirror`](@ref), [`SetNBins`](@ref), [`SetRange`](@ref), [`SetTuneFactor`](@ref), [`SetUseBinsNEvents`](@ref), [`TKDE`](@ref), [`paren`](@ref)
 """ TKDE
 
 # Wrapper of TLimit
@@ -8065,7 +8065,7 @@ It takes signal, background and data histograms wrapped in a [TLimitDataSource](
 
 The class [TLimitDataSource](@ref) takes the signal, background and data histograms as well as different systematics sources to form the [TLimit](@ref) input.
 
-The class [TConfidenceLevel](@ref) represents the final result of the [TLimit](@ref) algorithm. It is created just after the time-consuming part and can be stored in a [TFile](@ref) for further processing. It contains light methods to return CLs, CLb and other Int32eresting quantities.
+The class [TConfidenceLevel](@ref) represents the final result of the [TLimit](@ref) algorithm. It is created just after the time-consuming part and can be stored in a [TFile](@ref) for further processing. It contains light methods to return CLs, CLb and other interesting quantities.
 
 The actual algorithm...
 
@@ -8126,11 +8126,11 @@ Multidimensional Fits in [ROOT](@ref).
 
 A common problem encountered in different fields of applied science is to find an expression for one physical quantity in terms of several others, which are directly measurable.
 
-An example in high energy physics is the evaluation of the momentum of a charged particle from the observation of its trajectory in a magnetic field. The problem is to relate the momentum of the particle to the observations, which may consists of positional measurements at Int32ervals along the particle trajectory.
+An example in high energy physics is the evaluation of the momentum of a charged particle from the observation of its trajectory in a magnetic field. The problem is to relate the momentum of the particle to the observations, which may consists of positional measurements at intervals along the particle trajectory.
 
 The exact functional relationship between the measured quantities (e.g., the space-points) and the dependent quantity (e.g., the momentum) is in general not known, but one possible way of solving the problem, is to find an expression which reliably approximates the dependence of the momentum on the observations.
 
-This explicit function of the observations can be obtained by a *least squares* fitting procedure applied to a representative sample of the data, for which the dependent quantity (e.g., momentum) and the independent observations are known. The function can then be used to compute the quantity of Int32erest for new observations of the independent variables.
+This explicit function of the observations can be obtained by a *least squares* fitting procedure applied to a representative sample of the data, for which the dependent quantity (e.g., momentum) and the independent observations are known. The function can then be used to compute the quantity of interest for new observations of the independent variables.
 
 This class `TMultiDimFit` implements such a procedure in [ROOT](@ref). It is largely based on the CERNLIB MUDIFI package [2](classTMultiDimFit.html#mudifi). Though the basic concepts are still sound, and therefore kept, a few implementation details have changed, and this class can take advantage of MINUIT [4](classTMultiDimFit.html#minuit) to improve the errors of the fitting, thanks to the class [TMinuit](@ref).
 
@@ -8140,7 +8140,7 @@ And example of usage is given in multidimfit.C.
 
 ## The Method
 
-Let $ D $ by the dependent quantity of Int32erest, which depends smoothly on the observable quantities $ x_1, \ldots, x_N $ which we'll denote by $\mathbf{x}$. Given a training sample of $ M$ tuples of the form, ([TMultiDimFit!AddRow](@ref))
+Let $ D $ by the dependent quantity of interest, which depends smoothly on the observable quantities $ x_1, \ldots, x_N $ which we'll denote by $\mathbf{x}$. Given a training sample of $ M$ tuples of the form, ([TMultiDimFit!AddRow](@ref))
 
 ``\left(\mathbf{x}_j, D_j, E_j\right)\quad,``
 
@@ -8208,7 +8208,7 @@ So we are let to consider an $ M\times L$ matrix $\mathsf{F}$, an element of whi
 
 ``a_l = \frac{\mathbf{D}_l\bullet\mathbf{w}_l}{\mathbf{w}_l^2}``
 
- Let $ S_j$ be the sum of squares of residuals when taking $ j$ functions Int32o account. Then 
+ Let $ S_j$ be the sum of squares of residuals when taking $ j$ functions into account. Then 
 
 ``S_l = \left[\mathbf{D} - \sum^l_{k=1} a_k\mathbf{w}_k\right]^2
    = \mathbf{D}^2 - 2\mathbf{D} \sum^l_{k=1} a_k\mathbf{w}_k
@@ -8231,7 +8231,7 @@ The sum of squares of residuals can be written as
 ``S_L = \textbf{D}^T\bullet\textbf{D} -
    \sum^L_{l=1}a^2_l\left(\textbf{w}_l^T\bullet\textbf{w}_l\right)``
 
- where the relation [9](classTMultiDimFit.html#eq:dS2) have been taken Int32o account. The contribution of the $L^{\mbox{th}}$ function to the reduction of S, is given by 
+ where the relation [9](classTMultiDimFit.html#eq:dS2) have been taken into account. The contribution of the $L^{\mbox{th}}$ function to the reduction of S, is given by 
 
 ``\Delta S_L = a^2_L\left(\textbf{w}_L^T\bullet\textbf{w}_L\right)``
 
@@ -8285,7 +8285,7 @@ The original model $\mathsf{F}\mathbf{c}$ is therefore identical with this if
 
 ## Considerations
 
-It's important to realize that the training sample should be representative of the problem at hand, in particular along the borders of the region of Int32erest. This is because the algorithm presented here, is a *Int32erpolation*, rather then a *extrapolation* [5](classTMultiDimFit.html#wind72).
+It's important to realize that the training sample should be representative of the problem at hand, in particular along the borders of the region of interest. This is because the algorithm presented here, is a *interpolation*, rather then a *extrapolation* [5](classTMultiDimFit.html#wind72).
 
 Also, the independent variables $ x_{i}$ need to be linear independent, since the procedure will perform poorly if they are not [5](classTMultiDimFit.html#wind72). One can find an linear transformation from ones original variables $ \xi_{i}$ to a set of linear independent variables $ x_{i}$, using a *Principal Components Analysis* (see [TPrincipal](@ref)), and then use the transformed variable as input to this class [5] [6](classTMultiDimFit.html#wind81).
 
@@ -8333,9 +8333,9 @@ Christian Holm
 - Gene H. Golub and Charles F. van Loan. *Matrix Computations*. John Hopkins University Press, Baltimore, 3 edition, 1996.
 - F. James. *Minuit*. Long writeup D506, CERN, 1998.
 - H. Wind. *Function parameterization*. Proceedings of the 1972 CERN Computing and Data Processing School, volume 72-21 of Yellow report. CERN, 1972.
-- H. Wind. 1. principal component analysis, 2. pattern recognition for track finding, 3. Int32erpolation and functional representation. Yellow report EP/81-12, CERN, 1981.
+- H. Wind. 1. principal component analysis, 2. pattern recognition for track finding, 3. interpolation and functional representation. Yellow report EP/81-12, CERN, 1981.
 
-Related functions: [`AddRow`](@ref), [`AddTestRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`EvalError`](@ref), [`Eval`](@ref), [`FindParameterization`](@ref), [`Fit`](@ref), [`GetChi2`](@ref), [`GetCoefficientsRMS`](@ref), [`GetCoefficients`](@ref), [`GetCorrelationMatrix`](@ref), [`GetError`](@ref), [`GetFunctionCodes`](@ref), [`GetFunctions`](@ref), [`GetHistograms`](@ref), [`GetMaxAngle`](@ref), [`GetMaxFunctions`](@ref), [`GetMaxPowers`](@ref), [`GetMaxQuantity`](@ref), [`GetMaxStudy`](@ref), [`GetMaxTerms`](@ref), [`GetMaxVariables`](@ref), [`GetMeanQuantity`](@ref), [`GetMeanVariables`](@ref), [`GetMinAngle`](@ref), [`GetMinQuantity`](@ref), [`GetMinRelativeError`](@ref), [`GetMinVariables`](@ref), [`GetNCoefficients`](@ref), [`GetNVariables`](@ref), [`GetPolyType`](@ref), [`GetPowerIndex`](@ref), [`GetPowerLimit`](@ref), [`GetPowers`](@ref), [`GetPrecision`](@ref), [`GetQuantity`](@ref), [`GetRMS`](@ref), [`GetResidualMaxRow`](@ref), [`GetResidualMax`](@ref), [`GetResidualMinRow`](@ref), [`GetResidualMin`](@ref), [`GetResidualSumSq`](@ref), [`GetSampleSize`](@ref), [`GetSqError`](@ref), [`GetSumSqAvgQuantity`](@ref), [`GetSumSqQuantity`](@ref), [`GetTestError`](@ref), [`GetTestPrecision`](@ref), [`GetTestQuantity`](@ref), [`GetTestSampleSize`](@ref), [`GetTestSqError`](@ref), [`GetTestVariables`](@ref), [`GetVariables`](@ref), [`IsFolder`](@ref), [`MakeChi2`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethod`](@ref), [`Print`](@ref), [`SetBinVarX`](@ref), [`SetBinVarY`](@ref), [`SetMaxAngle`](@ref), [`SetMaxFunctions`](@ref), [`SetMaxPowers`](@ref), [`SetMaxStudy`](@ref), [`SetMaxTerms`](@ref), [`SetMinAngle`](@ref), [`SetMinRelativeError`](@ref), [`SetPowerLimit`](@ref), [`SetPowers`](@ref), [`TMultiDimFit!Instance`](@ref), [`TMultiDimFit`](@ref)
+Related functions: [`AddRow`](@ref), [`AddTestRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`EvalError`](@ref), [`Eval`](@ref), [`FindParameterization`](@ref), [`Fit`](@ref), [`GetChi2`](@ref), [`GetCoefficientsRMS`](@ref), [`GetCoefficients`](@ref), [`GetCorrelationGetMatrix`](@ref), [`GetError`](@ref), [`GetFunctionCodes`](@ref), [`GetFunctions`](@ref), [`GetHistograms`](@ref), [`GetMaxAngle`](@ref), [`GetMaxFunctions`](@ref), [`GetMaxPowers`](@ref), [`GetMaxQuantity`](@ref), [`GetMaxStudy`](@ref), [`GetMaxTerms`](@ref), [`GetMaxVariables`](@ref), [`GetMeanQuantity`](@ref), [`GetMeanVariables`](@ref), [`GetMinAngle`](@ref), [`GetMinQuantity`](@ref), [`GetMinRelativeError`](@ref), [`GetMinVariables`](@ref), [`GetNCoefficients`](@ref), [`GetNVariables`](@ref), [`GetPolyGetType`](@ref), [`GetPowerIndex`](@ref), [`GetPowerLimit`](@ref), [`GetPowers`](@ref), [`GetPrecision`](@ref), [`GetQuantity`](@ref), [`GetRMS`](@ref), [`GetResidualMaxRow`](@ref), [`GetResidualMax`](@ref), [`GetResidualMinRow`](@ref), [`GetResidualMin`](@ref), [`GetResidualSumSq`](@ref), [`GetSampleSize`](@ref), [`GetSqError`](@ref), [`GetSumSqAvgQuantity`](@ref), [`GetSumSqQuantity`](@ref), [`GetTestError`](@ref), [`GetTestPrecision`](@ref), [`GetTestQuantity`](@ref), [`GetTestSampleSize`](@ref), [`GetTestSqError`](@ref), [`GetTestVariables`](@ref), [`GetVariables`](@ref), [`IsFolder`](@ref), [`MakeChi2`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethod`](@ref), [`Print`](@ref), [`SetBinVarX`](@ref), [`SetBinVarY`](@ref), [`SetMaxAngle`](@ref), [`SetMaxFunctions`](@ref), [`SetMaxPowers`](@ref), [`SetMaxStudy`](@ref), [`SetMaxTerms`](@ref), [`SetMinAngle`](@ref), [`SetMinRelativeError`](@ref), [`SetPowerLimit`](@ref), [`SetPowers`](@ref), [`TMultiDimFit!Instance`](@ref), [`TMultiDimFit`](@ref)
 """ TMultiDimFit
 
 # Wrapper of TMatrixT
@@ -8348,7 +8348,7 @@ Template class of a general matrix in the linear algebra package
 
 See the [Matrix Linear Algebra](@ref) page for the documentation of the linear algebra package
 
-Related functions: [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`Minus`](@ref), [`MultT`](@ref), [`Mult`](@ref), [`NormByColumn`](@ref), [`NormByRow`](@ref), [`Plus`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Similarity`](@ref), [`TMatrixT`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
+Related functions: [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetGetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`Minus`](@ref), [`MultT`](@ref), [`Mult`](@ref), [`NormByColumn`](@ref), [`NormByRow`](@ref), [`Plus`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Similarity`](@ref), [`TGetMatrixT`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
 """ TMatrixT
 
 # Wrapper of TMatrixTSym
@@ -8363,7 +8363,7 @@ See the [Matrix Linear Algebra](@ref) page for the documentation of the linear a
 
 Note that in this implementation both matrix element m[i][j] and m[j][i] are updated and stored in memory. However, when making the object persistent only the upper right triangle is stored.
 
-Related functions: [`Apply`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`IsSymmetric`](@ref), [`Minus`](@ref), [`Mult`](@ref), [`Plus`](@ref), [`RandomizePD`](@ref), [`Randomize`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetMatrixArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SimilarityT`](@ref), [`Similarity`](@ref), [`TMatrixTSym`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
+Related functions: [`Apply`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetGetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`IsSymmetric`](@ref), [`Minus`](@ref), [`Mult`](@ref), [`Plus`](@ref), [`RandomizePD`](@ref), [`Randomize`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetGetMatrixArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SimilarityT`](@ref), [`Similarity`](@ref), [`TGetMatrixTSym`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
 """ TMatrixTSym
 
 # Wrapper of TPolyMarker
@@ -8405,7 +8405,7 @@ Related functions: [`ClearStats`](@ref), [`GetEffectiveEntries`](@ref), [`GetEnt
 
 Profile3D histograms are used to display the mean value of T and its RMS for each cell in X,Y,Z.
 
-Profile3D histograms are in many cases an The Int32er-relation of three measured quantities X, Y, Z and T can always be visualized by a four-dimensional histogram or scatter-plot; its representation on the line-printer is not particularly satisfactory, except for sparse data. If T is an unknown (but single-valued) approximate function of X,Y,Z this function is displayed by a profile3D histogram with much better precision than by a scatter-plot.
+Profile3D histograms are in many cases an The inter-relation of three measured quantities X, Y, Z and T can always be visualized by a four-dimensional histogram or scatter-plot; its representation on the line-printer is not particularly satisfactory, except for sparse data. If T is an unknown (but single-valued) approximate function of X,Y,Z this function is displayed by a profile3D histogram with much better precision than by a scatter-plot.
 
 The following formulae show the cumulated contents (capital letters) and the values displayed by the printing or plotting routines (small letters) of the elements for cell I, J. 
 ```
@@ -8501,7 +8501,7 @@ Related functions: [`B`](@ref), [`C`](@ref), [`D`](@ref), [`Derivative`](@ref), 
 @trydoc raw"""
     ROOT.TSpline3
 
-Class to create third splines to Int32erpolate knots Arbitrary conditions can be Int32roduced for first and second derivatives at beginning and ending points.
+Class to create third splines to interpolate knots Arbitrary conditions can be introduced for first and second derivatives at beginning and ending points.
 
 
 
@@ -8512,9 +8512,9 @@ Related functions: [`Derivative`](@ref), [`Eval`](@ref), [`FindX`](@ref), [`GetC
 @trydoc raw"""
     ROOT.TSpline5
 
-Class to create quintic natural splines to Int32erpolate knots Arbitrary conditions can be Int32roduced for first and second derivatives using double knots (see BuildCoeff) for more on this.
+Class to create quintic natural splines to interpolate knots Arbitrary conditions can be introduced for first and second derivatives using double knots (see BuildCoeff) for more on this.
 
-Double knots are automatically Int32roduced at ending points
+Double knots are automatically introduced at ending points
 
 Related functions: [`Derivative`](@ref), [`Eval`](@ref), [`FindX`](@ref), [`GetCoeff`](@ref), [`GetKnot`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SetPointCoeff`](@ref), [`SetPoint`](@ref), [`TSpline5!Test`](@ref), [`TSpline5`](@ref), [`assign`](@ref)
 """ TSpline5
@@ -8555,14 +8555,14 @@ Covariance matrices on the measured spectrum (for either the total uncertainties
 
 See also the tutorial for a toy example.
 
-Related functions: [`ComputeChiSquared`](@ref), [`GetAdetCovMatrix`](@ref), [`GetBCov`](@ref), [`GetD`](@ref), [`GetKReg`](@ref), [`GetSV`](@ref), [`GetUnfoldCovMatrix`](@ref), [`GetXinv`](@ref), [`GetXtau`](@ref), [`SetNormalize`](@ref), [`TSVDUnfold`](@ref), [`Unfold`](@ref)
+Related functions: [`ComputeChiSquared`](@ref), [`GetAdetCovGetMatrix`](@ref), [`GetBCov`](@ref), [`GetD`](@ref), [`GetKReg`](@ref), [`GetSV`](@ref), [`GetUnfoldCovGetMatrix`](@ref), [`GetXinv`](@ref), [`GetXtau`](@ref), [`SetNormalize`](@ref), [`TSVDUnfold`](@ref), [`Unfold`](@ref)
 """ TSVDUnfold
 
 # Wrapper of TVirtualGraphPainter
 @trydoc raw"""
     ROOT.TVirtualGraphPainter
 
-Abstract Int32erface to a histogram painter.
+Abstract interface to a histogram painter.
 
 
 
@@ -8588,7 +8588,7 @@ This class is used in the process of reading and writing the GDML "matrix" tag.
 
 It represents a matrix with arbitrary number of rows and columns, storing elements in double precision.
 
-Related functions: [`GetCols`](@ref), [`GetMatrixAsString`](@ref), [`GetRows`](@ref), [`Get`](@ref), [`Print`](@ref), [`SetMatrixAsString`](@ref), [`Set`](@ref), [`TGDMLMatrix`](@ref), [`assign`](@ref)
+Related functions: [`GetCols`](@ref), [`GetGetMatrixAsGetString`](@ref), [`GetRows`](@ref), [`Get`](@ref), [`Print`](@ref), [`SetGetMatrixAsGetString`](@ref), [`Set`](@ref), [`TGDMLGetMatrix`](@ref), [`assign`](@ref)
 """ TGDMLMatrix
 
 # Wrapper of TGeoShape
@@ -8652,11 +8652,11 @@ returns director cosines of normal to the crossed shape surface from a given poi
 
 ### Dividing shapes
 
-Shapes can generally be divided along a given axis. Supported axis are X, Y, Z, Rxy, Phi, Rxyz. A given shape cannot be divided however on any axis. The general rule is that that divisions are possible on whatever axis that produces still known shapes as slices. The division of shapes should not be performed by [TGeoShape!Divide()](@ref) calls, but rather by [TGeoVolume!Divide()](@ref). The algorithm for dividing a specific shape is known by the shape object, but is always invoked in a generic way from the volume level. Details on how to do that can be found in [TGeoVolume](@ref) class. One can see how all division options are Int32erpreted and which is their result inside specific shape classes.
+Shapes can generally be divided along a given axis. Supported axis are X, Y, Z, Rxy, Phi, Rxyz. A given shape cannot be divided however on any axis. The general rule is that that divisions are possible on whatever axis that produces still known shapes as slices. The division of shapes should not be performed by [TGeoShape!Divide()](@ref) calls, but rather by [TGeoVolume!Divide()](@ref). The algorithm for dividing a specific shape is known by the shape object, but is always invoked in a generic way from the volume level. Details on how to do that can be found in [TGeoVolume](@ref) class. One can see how all division options are interpreted and which is their result inside specific shape classes.
 
 ![https://root.cern/doc/v636/geom_t_shape.png](https://root.cern/doc/v636/geom_t_shape.png)
 
-Related functions: [`AfterStreamer`](@ref), [`Capacity`](@ref), [`CheckShape`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetId`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetName`](@ref), [`GetNmeshVertices`](@ref), [`GetPointerName`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`InvertShapeBit`](@ref), [`IsAssembly`](@ref), [`IsComposite`](@ref), [`IsCylType`](@ref), [`IsReflected`](@ref), [`IsRunTimeShape`](@ref), [`IsValidBox`](@ref), [`IsValid`](@ref), [`IsVecGeom`](@ref), [`MakeBuffer3D`](@ref), [`Paint`](@ref), [`ResetShapeBit`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SetDimensions`](@ref), [`SetId`](@ref), [`SetPoints`](@ref), [`SetRuntime`](@ref), [`SetSegsAndPols`](@ref), [`SetShapeBit`](@ref), [`ShapeDistancetoPrimitive`](@ref), [`Sizeof3D`](@ref), [`TGeoShape!Big`](@ref), [`TGeoShape!ComputeEpsMch`](@ref), [`TGeoShape!DistToPhiMin`](@ref), [`TGeoShape!EpsMch`](@ref), [`TGeoShape!GetTransform`](@ref), [`TGeoShape!IsCloseToPhi`](@ref), [`TGeoShape!IsCrossingSemiplane`](@ref), [`TGeoShape!IsInPhiRange`](@ref), [`TGeoShape!IsSameWithinTolerance`](@ref), [`TGeoShape!IsSegCrossing`](@ref), [`TGeoShape!NormalPhi`](@ref), [`TGeoShape!SafetyPhi`](@ref), [`TGeoShape!SafetySeg`](@ref), [`TGeoShape!SetTransform`](@ref), [`TGeoShape!Tolerance`](@ref), [`TGeoShape`](@ref), [`TestShapeBit`](@ref), [`TestShapeBits`](@ref)
+Related functions: [`AfterStreamer`](@ref), [`Capacity`](@ref), [`CheckShape`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetId`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetName`](@ref), [`GetNmeshVertices`](@ref), [`GetPointerName`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`InvertShapeBit`](@ref), [`IsAssembly`](@ref), [`IsComposite`](@ref), [`IsCylGetType`](@ref), [`IsReflected`](@ref), [`IsRunTimeShape`](@ref), [`IsValidBox`](@ref), [`IsValid`](@ref), [`IsVecGeom`](@ref), [`MakeBuffer3D`](@ref), [`Paint`](@ref), [`ResetShapeBit`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SetDimensions`](@ref), [`SetId`](@ref), [`SetPoints`](@ref), [`SetRuntime`](@ref), [`SetSegsAndPols`](@ref), [`SetShapeBit`](@ref), [`ShapeDistancetoPrimitive`](@ref), [`Sizeof3D`](@ref), [`TGeoShape!Big`](@ref), [`TGeoShape!ComputeEpsMch`](@ref), [`TGeoShape!DistToPhiMin`](@ref), [`TGeoShape!EpsMch`](@ref), [`TGeoShape!GetTransform`](@ref), [`TGeoShape!IsCloseToPhi`](@ref), [`TGeoShape!IsCrossingSemiplane`](@ref), [`TGeoShape!IsInPhiRange`](@ref), [`TGeoShape!IsSameWithinTolerance`](@ref), [`TGeoShape!IsSegCrossing`](@ref), [`TGeoShape!NormalPhi`](@ref), [`TGeoShape!SafetyPhi`](@ref), [`TGeoShape!SafetySeg`](@ref), [`TGeoShape!SetTransform`](@ref), [`TGeoShape!Tolerance`](@ref), [`TGeoShape`](@ref), [`TestShapeBit`](@ref), [`TestShapeBits`](@ref)
 """ TGeoShape
 
 # Wrapper of TGeoMatrix
@@ -8714,7 +8714,7 @@ The disadvantage in using this approach is that computation for 4x4 matrices is 
 
 #### translation, rotation and scale getters. Every derived class stores only
 
-its specific data, e.g. a translation stores an array of 3 doubles and a rotation an array of 9. However, asking which is the rotation array of a [TGeoTranslation](@ref) through the base [TGeoMatrix](@ref) Int32erface is a legal operation. The answer in this case is a pointer to a global_ constant array representing an identity rotation.
+its specific data, e.g. a translation stores an array of 3 doubles and a rotation an array of 9. However, asking which is the rotation array of a [TGeoTranslation](@ref) through the base [TGeoMatrix](@ref) interface is a legal operation. The answer in this case is a pointer to a global_ constant array representing an identity rotation.
 
     Double_t *TGeoMatrix!GetTranslation()
     Double_t *TGeoMatrix!GetRotation()
@@ -8824,7 +8824,7 @@ Combined transformations including a scale. Not implemented.
 
 A generic singleton matrix representing a identity transformation NOTE: identified by the global_ variable gGeoIdentity.
 
-Related functions: [`GetByteCount`](@ref), [`GetHomogenousMatrix`](@ref), [`GetPointerName`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsCombi`](@ref), [`IsGeneral`](@ref), [`IsIdentity`](@ref), [`IsOwned`](@ref), [`IsReflection`](@ref), [`IsRegistered`](@ref), [`IsRotAboutZ`](@ref), [`IsRotation`](@ref), [`IsScale`](@ref), [`IsShared`](@ref), [`IsTranslation`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`Print`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SetDefaultName`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetShared`](@ref), [`TGeoMatrix!Normalize`](@ref), [`TGeoMatrix`](@ref)
+Related functions: [`GetByteCount`](@ref), [`GetHomogenousGetMatrix`](@ref), [`GetPointerName`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsCombi`](@ref), [`IsGeneral`](@ref), [`IsIdentity`](@ref), [`IsOwned`](@ref), [`IsReflection`](@ref), [`IsRegistered`](@ref), [`IsRotAboutZ`](@ref), [`IsRotation`](@ref), [`IsScale`](@ref), [`IsShared`](@ref), [`IsTranslation`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`Print`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SetDefaultName`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetShared`](@ref), [`TGeoGetMatrix`](@ref), [`TGeoMatrix!Normalize`](@ref)
 """ TGeoMatrix
 
 # Wrapper of TGeoVolume
@@ -8900,9 +8900,9 @@ Since we did not supplied the third argument, the wire will be positioned with a
 
 ### Overlapping volumes
 
-Positioning volumes that does not overlap their neighbours nor extrude their container is sometimes quite strong constraint. Some parts of the geometry might overlap naturally, e.g. two crossing tubes. The modeller supports such cases only if the overlapping nodes are declared by the user. In order to do that, one should use [TGeoVolume!AddNodeOverlap()](@ref) instead of [TGeoVolume!AddNode()](@ref). When 2 or more positioned volumes are overlapping, not all of them have to be declared so, but at least one. A point inside an overlapping region equally belongs to all overlapping nodes, but the way these are defined can enforce the modeler to give priorities. The general rule is that the deepest node in the hierarchy containing a point have the highest priority. For the same geometry level, non-overlapping is prioritised over overlapping. In order to illustrate this, we will consider few examples. We will designate non-overlapping nodes as ONLY and the others MANY as in GEANT3, where this concept was Int32roduced:
+Positioning volumes that does not overlap their neighbours nor extrude their container is sometimes quite strong constraint. Some parts of the geometry might overlap naturally, e.g. two crossing tubes. The modeller supports such cases only if the overlapping nodes are declared by the user. In order to do that, one should use [TGeoVolume!AddNodeOverlap()](@ref) instead of [TGeoVolume!AddNode()](@ref). When 2 or more positioned volumes are overlapping, not all of them have to be declared so, but at least one. A point inside an overlapping region equally belongs to all overlapping nodes, but the way these are defined can enforce the modeler to give priorities. The general rule is that the deepest node in the hierarchy containing a point have the highest priority. For the same geometry level, non-overlapping is prioritised over overlapping. In order to illustrate this, we will consider few examples. We will designate non-overlapping nodes as ONLY and the others MANY as in GEANT3, where this concept was introduced:
 
-1. The part of a MANY node B extruding its container A will never be "seen" during navigation, as if B was in fact the result of the Int32ersection of A and B.
+1. The part of a MANY node B extruding its container A will never be "seen" during navigation, as if B was in fact the result of the intersection of A and B.
 2. If we have two nodes A (ONLY) and B (MANY) inside the same container, all points in the overlapping region of A and B will be designated as belonging to A.
 3. If A an B in the above case were both MANY, points in the overlapping part will be designated to the one defined first. Both nodes must have the same medium.
 4. The slices of a divided MANY will be as well MANY.
@@ -8922,7 +8922,7 @@ The 2 nodes that we have created inside chamber will both point to a wire_co obj
 
 The way out when volumes can be arranged according to simple patterns is the usage of divisions. We will describe them in detail later on. Let's think now at a different situation : instead of 1000 chambers of the same type, we may have several types of chambers. Let's say all chambers are cylindrical and have a wire inside, but their dimensions are different. However, we would like all to be represented by a single volume family, since they have the same properties.
 
-Related functions: [`AddNodeOffset`](@ref), [`AddNodeOverlap`](@ref), [`AddNode`](@ref), [`Browse`](@ref), [`Capacity`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckShape`](@ref), [`CheckShapes`](@ref), [`CleanAll`](@ref), [`ClearNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`CloneNodesAndConnect`](@ref), [`CloneVolume`](@ref), [`Contains`](@ref), [`CountNodes`](@ref), [`CreateThreadData`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`DrawOnly`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindMatrixOfDaughterVolume`](@ref), [`FindNode`](@ref), [`FindOverlaps`](@ref), [`GetByteCount`](@ref), [`GetCurrentNodeIndex`](@ref), [`GetFWExtension`](@ref), [`GetField`](@ref), [`GetFinder`](@ref), [`GetGeoManager`](@ref), [`GetIconName`](@ref), [`GetIndex`](@ref), [`GetMaterial`](@ref), [`GetMedium`](@ref), [`GetNdaughters`](@ref), [`GetNextNodeIndex`](@ref), [`GetNodeIndex`](@ref), [`GetNode`](@ref), [`GetNodes`](@ref), [`GetNtotal`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOption`](@ref), [`GetPointerName`](@ref), [`GetRefCount`](@ref), [`GetShape`](@ref), [`GetTransparency`](@ref), [`GetUserExtension`](@ref), [`GetVoxels`](@ref), [`GrabFWExtension`](@ref), [`GrabFocus`](@ref), [`GrabUserExtension`](@ref), [`Grab`](@ref), [`Gsord`](@ref), [`InspectMaterial`](@ref), [`InspectShape`](@ref), [`InvisibleAll`](@ref), [`IsActiveDaughters`](@ref), [`IsActive`](@ref), [`IsAdded`](@ref), [`IsAllInvisible`](@ref), [`IsAssembly`](@ref), [`IsCylVoxels`](@ref), [`IsFolder`](@ref), [`IsOverlappingCandidate`](@ref), [`IsRaytracing`](@ref), [`IsReplicated`](@ref), [`IsRunTime`](@ref), [`IsSelected`](@ref), [`IsStyleDefault`](@ref), [`IsTopVolume`](@ref), [`IsValid`](@ref), [`IsVisContainers`](@ref), [`IsVisLeaves`](@ref), [`IsVisOnly`](@ref), [`IsVisibleDaughters`](@ref), [`IsVisible`](@ref), [`IsVolumeMulti`](@ref), [`IsXYZVoxels`](@ref), [`LegoPlot`](@ref), [`MakeCopyNodes`](@ref), [`MakeCopyVolume`](@ref), [`MakeReflectedVolume`](@ref), [`OptimizeVoxels`](@ref), [`Paint`](@ref), [`PrintNodes`](@ref), [`PrintVoxels`](@ref), [`Print`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`Raytrace`](@ref), [`RegisterYourself`](@ref), [`Release`](@ref), [`RemoveNode`](@ref), [`ReplaceNode`](@ref), [`ReplayCreation`](@ref), [`ResetTransparency`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SelectVolume`](@ref), [`SetActiveDaughters`](@ref), [`SetActivity`](@ref), [`SetAdded`](@ref), [`SetAsTopVolume`](@ref), [`SetAttVisibility`](@ref), [`SetCurrentPoint`](@ref), [`SetCylVoxels`](@ref), [`SetFWExtension`](@ref), [`SetField`](@ref), [`SetFinder`](@ref), [`SetInvisible`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetMedium`](@ref), [`SetNodes`](@ref), [`SetNtotal`](@ref), [`SetNumber`](@ref), [`SetOption`](@ref), [`SetOverlappingCandidate`](@ref), [`SetReplicated`](@ref), [`SetShape`](@ref), [`SetTransparency`](@ref), [`SetUserExtension`](@ref), [`SetVisContainers`](@ref), [`SetVisLeaves`](@ref), [`SetVisOnly`](@ref), [`SetVisibility`](@ref), [`SetVoxelFinder`](@ref), [`SortNodes`](@ref), [`TGeoVolume!CreateDummyMedium`](@ref), [`TGeoVolume!DummyMedium`](@ref), [`TGeoVolume!Import`](@ref), [`TGeoVolume`](@ref), [`UnmarkSaved`](@ref), [`Valid`](@ref), [`VisibleDaughters`](@ref), [`Voxelize`](@ref), [`WeightA`](@ref), [`Weight`](@ref), [`cd`](@ref)
+Related functions: [`AddNodeOffset`](@ref), [`AddNodeOverlap`](@ref), [`AddNode`](@ref), [`Browse`](@ref), [`Capacity`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckShape`](@ref), [`CheckShapes`](@ref), [`CleanAll`](@ref), [`ClearNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`CloneNodesAndConnect`](@ref), [`CloneVolume`](@ref), [`Contains`](@ref), [`CountNodes`](@ref), [`CreateThreadData`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`DrawOnly`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindGetMatrixOfDaughterVolume`](@ref), [`FindNode`](@ref), [`FindOverlaps`](@ref), [`GetByteCount`](@ref), [`GetCurrentNodeIndex`](@ref), [`GetFWExtension`](@ref), [`GetField`](@ref), [`GetFinder`](@ref), [`GetGeoManager`](@ref), [`GetIconName`](@ref), [`GetIndex`](@ref), [`GetMaterial`](@ref), [`GetMedium`](@ref), [`GetNdaughters`](@ref), [`GetNextNodeIndex`](@ref), [`GetNodeIndex`](@ref), [`GetNode`](@ref), [`GetNodes`](@ref), [`GetNtotal`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOption`](@ref), [`GetPointerName`](@ref), [`GetRefCount`](@ref), [`GetShape`](@ref), [`GetTransparency`](@ref), [`GetUserExtension`](@ref), [`GetVoxels`](@ref), [`GrabFWExtension`](@ref), [`GrabFocus`](@ref), [`GrabUserExtension`](@ref), [`Grab`](@ref), [`Gsord`](@ref), [`InspectMaterial`](@ref), [`InspectShape`](@ref), [`InvisibleAll`](@ref), [`IsActiveDaughters`](@ref), [`IsActive`](@ref), [`IsAdded`](@ref), [`IsAllInvisible`](@ref), [`IsAssembly`](@ref), [`IsCylVoxels`](@ref), [`IsFolder`](@ref), [`IsOverlappingCandidate`](@ref), [`IsRaytracing`](@ref), [`IsReplicated`](@ref), [`IsRunTime`](@ref), [`IsSelected`](@ref), [`IsStyleDefault`](@ref), [`IsTopVolume`](@ref), [`IsValid`](@ref), [`IsVisContainers`](@ref), [`IsVisLeaves`](@ref), [`IsVisOnly`](@ref), [`IsVisibleDaughters`](@ref), [`IsVisible`](@ref), [`IsVolumeMulti`](@ref), [`IsXYZVoxels`](@ref), [`LegoPlot`](@ref), [`MakeCopyNodes`](@ref), [`MakeCopyVolume`](@ref), [`MakeReflectedVolume`](@ref), [`OptimizeVoxels`](@ref), [`Paint`](@ref), [`PrintNodes`](@ref), [`PrintVoxels`](@ref), [`Print`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`Raytrace`](@ref), [`RegisterYourself`](@ref), [`Release`](@ref), [`RemoveNode`](@ref), [`ReplaceNode`](@ref), [`ReplayCreation`](@ref), [`ResetTransparency`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SelectVolume`](@ref), [`SetActiveDaughters`](@ref), [`SetActivity`](@ref), [`SetAdded`](@ref), [`SetAsTopVolume`](@ref), [`SetAttVisibility`](@ref), [`SetCurrentPoint`](@ref), [`SetCylVoxels`](@ref), [`SetFWExtension`](@ref), [`SetField`](@ref), [`SetFinder`](@ref), [`SetInvisible`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetMedium`](@ref), [`SetNodes`](@ref), [`SetNtotal`](@ref), [`SetNumber`](@ref), [`SetOption`](@ref), [`SetOverlappingCandidate`](@ref), [`SetReplicated`](@ref), [`SetShape`](@ref), [`SetTransparency`](@ref), [`SetUserExtension`](@ref), [`SetVisContainers`](@ref), [`SetVisLeaves`](@ref), [`SetVisOnly`](@ref), [`SetVisibility`](@ref), [`SetVoxelFinder`](@ref), [`SortNodes`](@ref), [`TGeoVolume!CreateDummyMedium`](@ref), [`TGeoVolume!DummyMedium`](@ref), [`TGeoVolume!Import`](@ref), [`TGeoVolume`](@ref), [`UnmarkSaved`](@ref), [`Valid`](@ref), [`VisibleDaughters`](@ref), [`Voxelize`](@ref), [`WeightA`](@ref), [`Weight`](@ref), [`cd`](@ref)
 """ TGeoVolume
 
 # Wrapper of TGeoBBox
@@ -8989,7 +8989,7 @@ Volumes having box shape can be divided with equal-length slices on X, Y or Z ax
 
 Both cases are supported by all shapes. See also class [TGeoShape](@ref) for utility methods provided by any particular shape.
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDX`](@ref), [`GetDY`](@ref), [`GetDZ`](@ref), [`GetFacetArea`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetOrigin`](@ref), [`GetPointsOnFacet`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`IsNullBox`](@ref), [`IsValidBox`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetBoxDimensions`](@ref), [`SetBoxPoints`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoBBox!AreOverlapping`](@ref), [`TGeoBBox!Contains`](@ref), [`TGeoBBox!DistFromInside`](@ref), [`TGeoBBox!DistFromOutside`](@ref), [`TGeoBBox`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDX`](@ref), [`GetDY`](@ref), [`GetDZ`](@ref), [`GetFacetArea`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetOrigin`](@ref), [`GetPointsOnFacet`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`IsNullBox`](@ref), [`IsValidBox`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetBoxDimensions`](@ref), [`SetBoxPoints`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoBBox!AreOverlapping`](@ref), [`TGeoBBox!Contains`](@ref), [`TGeoBBox!DistFromInside`](@ref), [`TGeoBBox!DistFromOutside`](@ref), [`TGeoBBox`](@ref)
 """ TGeoBBox
 
 # Wrapper of TGeoArb8
@@ -9011,7 +9011,7 @@ Vertices have to be defined clockwise in the XY pane, both at `+dz` and `-dz`. T
 
 ![https://root.cern/doc/v636/pict1_TGeoArb8_001.png](https://root.cern/doc/v636/pict1_TGeoArb8_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`ComputeTwist`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToPlane`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetClosestEdge`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetPointsOnFacet`](@ref), [`GetTwist`](@ref), [`GetVertices`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`IsTwisted`](@ref), [`SafetyToFace`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetDz`](@ref), [`SetPlaneVertices`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoArb8!GetPlaneNormal`](@ref), [`TGeoArb8!InsidePolygon`](@ref), [`TGeoArb8!IsSamePoint`](@ref), [`TGeoArb8`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`ComputeTwist`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToPlane`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetClosestEdge`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetPointsOnFacet`](@ref), [`GetTwist`](@ref), [`GetVertices`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`IsTwisted`](@ref), [`SafetyToFace`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetDz`](@ref), [`SetPlaneVertices`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoArb8!GetPlaneNormal`](@ref), [`TGeoArb8!InsidePolygon`](@ref), [`TGeoArb8!IsSamePoint`](@ref), [`TGeoArb8`](@ref)
 """ TGeoArb8
 
 # Wrapper of TGeoTrap
@@ -9077,9 +9077,9 @@ The positioned shape components may or may not be disjoint. The specific impleme
 
 - [TGeoUnion](@ref) - representing the Boolean union of two positioned shapes
 - [TGeoSubtraction](@ref) - representing the Boolean subtraction of two positioned shapes
-- [TGeoIntersection](@ref) - representing the Boolean Int32ersection of two positioned shapes
+- [TGeoIntersection](@ref) - representing the Boolean intersection of two positioned shapes
 
-Related functions: [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside`](@ref), [`DistFromOutside`](@ref), [`DistanceToPrimitive`](@ref), [`GetBooleanOperator`](@ref), [`GetLeftMatrix`](@ref), [`GetLeftShape`](@ref), [`GetNpoints`](@ref), [`GetRightMatrix`](@ref), [`GetRightShape`](@ref), [`GetThreadData`](@ref), [`MakeClone`](@ref), [`Paint`](@ref), [`RegisterMatrices`](@ref), [`ReplaceMatrix`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSelected`](@ref), [`Sizeof3D`](@ref), [`TGeoBoolNode`](@ref)
+Related functions: [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside`](@ref), [`DistFromOutside`](@ref), [`DistanceToPrimitive`](@ref), [`GetBooleanOperator`](@ref), [`GetLeftGetMatrix`](@ref), [`GetLeftShape`](@ref), [`GetNpoints`](@ref), [`GetRightGetMatrix`](@ref), [`GetRightShape`](@ref), [`GetThreadData`](@ref), [`MakeClone`](@ref), [`Paint`](@ref), [`RegisterMatrices`](@ref), [`ReplaceGetMatrix`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSelected`](@ref), [`Sizeof3D`](@ref), [`TGeoBoolNode`](@ref)
 """ TGeoBoolNode
 
 # Wrapper of TGeoUnion
@@ -9123,7 +9123,7 @@ Matrix class used for computing global_ transformations Should NOT be used for n
 
 An instance of this class is generally used to pile-up local_ transformations starting from the top level physical node, down to the current node.
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`CopyFrom`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`MultiplyLeft`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetScale`](@ref), [`SetTranslation`](@ref), [`TGeoHMatrix`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`CopyFrom`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`MultiplyLeft`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetScale`](@ref), [`SetTranslation`](@ref), [`TGeoHGetMatrix`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoHMatrix
 
 # Wrapper of TGeoTranslation
@@ -9134,7 +9134,7 @@ Class describing translations.
 
 A translation is basically an array of 3 doubles matching the positions 12, 13 and 14 in the homogenous matrix description.
 
-Related functions: [`Add`](@ref), [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetTranslation`](@ref), [`Subtract`](@ref), [`TGeoTranslation`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Add`](@ref), [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetTranslation`](@ref), [`Subtract`](@ref), [`TGeoTranslation`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoTranslation
 
 # Wrapper of TGeoRotation
@@ -9145,7 +9145,7 @@ Class describing rotations.
 
 A rotation is a 3*3 array Column vectors has to be orthogonal unit vectors.
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetAngles`](@ref), [`GetInverse`](@ref), [`GetPhiRotation`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsValid`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MultiplyBy`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetAngles`](@ref), [`SetMatrix`](@ref), [`SetRotation`](@ref), [`TGeoRotation`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetAngles`](@ref), [`GetInverse`](@ref), [`GetPhiRotation`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsValid`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MultiplyBy`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetAngles`](@ref), [`SetGetMatrix`](@ref), [`SetRotation`](@ref), [`TGeoRotation`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoRotation
 
 # Wrapper of TGeoScale
@@ -9156,7 +9156,7 @@ Class describing scale transformations.
 
 A scale is an array of 3 doubles (sx, sy, sz) multiplying elements 0, 5 and 10 of the homogenous matrix. A scale is normalized : sx*sy*sz = 1
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`SetScale`](@ref), [`TGeoScale`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`SetScale`](@ref), [`TGeoScale`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoScale
 
 # Wrapper of TGeoCombiTrans
@@ -9167,7 +9167,7 @@ Class describing rotation + translation.
 
 Most frequently used in the description of [TGeoNode](@ref) 's
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`GetRotationMatrix`](@ref), [`GetRotation`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetTranslation`](@ref), [`TGeoCombiTrans`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`GetRotationGetMatrix`](@ref), [`GetRotation`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetTranslation`](@ref), [`TGeoCombiTrans`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoCombiTrans
 
 # Wrapper of TGeoGenTrans
@@ -9189,7 +9189,7 @@ An identity transformation.
 
 It holds no data member and returns pointers to static null translation and identity transformations for rotation and scale
 
-Related functions: [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`SavePrimitive`](@ref), [`TGeoIdentity`](@ref)
+Related functions: [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`SavePrimitive`](@ref), [`TGeoIdentity`](@ref)
 """ TGeoIdentity
 
 # Wrapper of TGeoBranchArray
@@ -9209,7 +9209,7 @@ To setup an object of this type, one should use:
 
 The navigator can be updated to reflect this path array: `array->UpdateNavigator();`
 
-Related functions: [`AddLevel`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`CleanMatrix`](@ref), [`Compare`](@ref), [`CopyTo`](@ref), [`DataSize`](@ref), [`DataStart`](@ref), [`GetArray`](@ref), [`GetCurrentNode`](@ref), [`GetLevel`](@ref), [`GetMatrix`](@ref), [`GetMaxLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`InitFromNavigator`](@ref), [`Init`](@ref), [`IsOutside`](@ref), [`IsSortable`](@ref), [`Print`](@ref), [`SizeOf`](@ref), [`TGeoBranchArray!BinarySearch`](@ref), [`TGeoBranchArray!MakeCopyAt`](@ref), [`TGeoBranchArray!MakeCopy`](@ref), [`TGeoBranchArray!MakeInstanceAt`](@ref), [`TGeoBranchArray!MakeInstance`](@ref), [`TGeoBranchArray!ReleaseInstance`](@ref), [`TGeoBranchArray!SizeOfInstance`](@ref), [`TGeoBranchArray!SizeOf`](@ref), [`TGeoBranchArray!Sort`](@ref), [`TGeoBranchArray`](@ref), [`UpdateArray`](@ref), [`UpdateNavigator`](@ref), [`assign`](@ref)
+Related functions: [`AddLevel`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`CleanGetMatrix`](@ref), [`Compare`](@ref), [`CopyTo`](@ref), [`DataSize`](@ref), [`DataStart`](@ref), [`GetArray`](@ref), [`GetCurrentNode`](@ref), [`GetGetMatrix`](@ref), [`GetLevel`](@ref), [`GetMaxLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`InitFromNavigator`](@ref), [`Init`](@ref), [`IsOutside`](@ref), [`IsSortable`](@ref), [`Print`](@ref), [`SizeOf`](@ref), [`TGeoBranchArray!BinarySearch`](@ref), [`TGeoBranchArray!MakeCopyAt`](@ref), [`TGeoBranchArray!MakeCopy`](@ref), [`TGeoBranchArray!MakeInstanceAt`](@ref), [`TGeoBranchArray!MakeInstance`](@ref), [`TGeoBranchArray!ReleaseInstance`](@ref), [`TGeoBranchArray!SizeOfInstance`](@ref), [`TGeoBranchArray!SizeOf`](@ref), [`TGeoBranchArray!Sort`](@ref), [`TGeoBranchArray`](@ref), [`UpdateArray`](@ref), [`UpdateNavigator`](@ref), [`assign`](@ref)
 """ TGeoBranchArray
 
 # Wrapper of TGeoNode
@@ -9236,13 +9236,13 @@ The creation of overlapping nodes can be done with a similar prototype:
 
 (C++ version of the code)
 
-When closing the geometry, overlapping nodes perform a check of possible overlaps with their neighbours. These are stored and checked all the time during navigation, therefore navigation is slower when embedding such nodes Int32o geometry.
+When closing the geometry, overlapping nodes perform a check of possible overlaps with their neighbours. These are stored and checked all the time during navigation, therefore navigation is slower when embedding such nodes into geometry.
 
 Node have visualization attributes as volume have. When undefined by users, painting a node on a pad will take the corresponding volume attributes.
 
 ![https://root.cern/doc/v636/geom_t_node.png](https://root.cern/doc/v636/geom_t_node.png)
 
-Related functions: [`Browse`](@ref), [`CheckOverlaps`](@ref), [`CheckShapes`](@ref), [`CountDaughters`](@ref), [`DistancetoPrimitive`](@ref), [`DrawOnly`](@ref), [`DrawOverlaps`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`FillIdArray`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetColour`](@ref), [`GetDaughter`](@ref), [`GetFWExtension`](@ref), [`GetFinder`](@ref), [`GetIndex`](@ref), [`GetMatrix`](@ref), [`GetMedium`](@ref), [`GetMotherVolume`](@ref), [`GetNdaughters`](@ref), [`GetNodes`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOverlaps`](@ref), [`GetUserExtension`](@ref), [`GetVolume`](@ref), [`GrabFWExtension`](@ref), [`GrabUserExtension`](@ref), [`InspectNode`](@ref), [`IsCloned`](@ref), [`IsFolder`](@ref), [`IsOffset`](@ref), [`IsOnScreen`](@ref), [`IsOverlapping`](@ref), [`IsVirtual`](@ref), [`IsVisDaughters`](@ref), [`IsVisible`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeCopyNode`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MayOverlap`](@ref), [`Paint`](@ref), [`PrintCandidates`](@ref), [`PrintOverlaps`](@ref), [`Safety`](@ref), [`SaveAttributes`](@ref), [`SetAllInvisible`](@ref), [`SetCloned`](@ref), [`SetCurrentPoint`](@ref), [`SetFWExtension`](@ref), [`SetInvisible`](@ref), [`SetMotherVolume`](@ref), [`SetNumber`](@ref), [`SetOverlapping`](@ref), [`SetOverlaps`](@ref), [`SetUserExtension`](@ref), [`SetVirtual`](@ref), [`SetVisibility`](@ref), [`SetVolume`](@ref), [`TGeoNode`](@ref), [`VisibleDaughters`](@ref), [`cd`](@ref), [`ls`](@ref)
+Related functions: [`Browse`](@ref), [`CheckOverlaps`](@ref), [`CheckShapes`](@ref), [`CountDaughters`](@ref), [`DistancetoPrimitive`](@ref), [`DrawOnly`](@ref), [`DrawOverlaps`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`FillIdArray`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetColour`](@ref), [`GetDaughter`](@ref), [`GetFWExtension`](@ref), [`GetFinder`](@ref), [`GetGetMatrix`](@ref), [`GetIndex`](@ref), [`GetMedium`](@ref), [`GetMotherVolume`](@ref), [`GetNdaughters`](@ref), [`GetNodes`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOverlaps`](@ref), [`GetUserExtension`](@ref), [`GetVolume`](@ref), [`GrabFWExtension`](@ref), [`GrabUserExtension`](@ref), [`InspectNode`](@ref), [`IsCloned`](@ref), [`IsFolder`](@ref), [`IsOffset`](@ref), [`IsOnScreen`](@ref), [`IsOverlapping`](@ref), [`IsVirtual`](@ref), [`IsVisDaughters`](@ref), [`IsVisible`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeCopyNode`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MayOverlap`](@ref), [`Paint`](@ref), [`PrintCandidates`](@ref), [`PrintOverlaps`](@ref), [`Safety`](@ref), [`SaveAttributes`](@ref), [`SetAllInvisible`](@ref), [`SetCloned`](@ref), [`SetCurrentPoint`](@ref), [`SetFWExtension`](@ref), [`SetInvisible`](@ref), [`SetMotherVolume`](@ref), [`SetNumber`](@ref), [`SetOverlapping`](@ref), [`SetOverlaps`](@ref), [`SetUserExtension`](@ref), [`SetVirtual`](@ref), [`SetVisibility`](@ref), [`SetVolume`](@ref), [`TGeoNode`](@ref), [`VisibleDaughters`](@ref), [`cd`](@ref), [`ls`](@ref)
 """ TGeoNode
 
 # Wrapper of TGeoNavigator
@@ -9265,7 +9265,7 @@ Several instances are allowed for a single geometry. A default navigator is prov
 
 (C++ version of the code)
 
-Related functions: [`BuildCache`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckPath`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentVolume`](@ref), [`GetDivMatrix`](@ref), [`GetHMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLevel`](@ref), [`GetMotherMatrix`](@ref), [`GetMother`](@ref), [`GetNextDaughterIndex`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNormal`](@ref), [`GetPath`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetThreadId`](@ref), [`GetVirtualLevel`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCurrentOverlapping`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsSafeStep`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`ResetAll`](@ref), [`ResetState`](@ref), [`Safety`](@ref), [`SearchNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentPoint`](@ref), [`SetLastPoint`](@ref), [`SetLastSafetyForPoint`](@ref), [`SetOutside`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`Step`](@ref), [`TGeoNavigator`](@ref), [`TopToMaster`](@ref), [`cd`](@ref)
+Related functions: [`BuildCache`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckPath`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentGetMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentVolume`](@ref), [`GetDivGetMatrix`](@ref), [`GetHGetMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLevel`](@ref), [`GetMotherGetMatrix`](@ref), [`GetMother`](@ref), [`GetNextDaughterIndex`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNormal`](@ref), [`GetPath`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetThreadId`](@ref), [`GetVirtualLevel`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCurrentOverlapping`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsSafeStep`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`ResetAll`](@ref), [`ResetState`](@ref), [`Safety`](@ref), [`SearchNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentPoint`](@ref), [`SetLastPoint`](@ref), [`SetLastSafetyForPoint`](@ref), [`SetOutside`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`Step`](@ref), [`TGeoNavigator`](@ref), [`TopToMaster`](@ref), [`cd`](@ref)
 """ TGeoNavigator
 
 # Wrapper of TGeoBuilder
@@ -9278,7 +9278,7 @@ Utility class for creating geometry objects.These will be associated with the cu
 
 The geometry builder is a singleton that may be used to build one or more geometries.
 
-Related functions: [`AddMaterial`](@ref), [`AddShape`](@ref), [`AddTransformation`](@ref), [`Division`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`Material`](@ref), [`Matrix`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`Node`](@ref), [`RegisterMatrix`](@ref), [`TGeoBuilder!Instance`](@ref), [`Volume`](@ref)
+Related functions: [`AddMaterial`](@ref), [`AddShape`](@ref), [`AddTransformation`](@ref), [`Division`](@ref), [`GetMatrix`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`Material`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`Node`](@ref), [`RegisterGetMatrix`](@ref), [`TGeoBuilder!Instance`](@ref), [`Volume`](@ref)
 """ TGeoBuilder
 
 # Wrapper of TGeoManager
@@ -9287,11 +9287,11 @@ Related functions: [`AddMaterial`](@ref), [`AddShape`](@ref), [`AddTransformatio
 
 The manager class for any TGeo geometry.
 
-Provides user Int32erface for geometry creation, navigation, state querying, visualization, IO, geometry checking and other utilities.
+Provides user interface for geometry creation, navigation, state querying, visualization, IO, geometry checking and other utilities.
 
 ## General architecture
 
-The [ROOT](@ref) geometry package is a tool designed for building, browsing, tracking and visualizing a detector geometry. The code is independent from other external MC for simulation, therefore it does not contain any constraints related to physics. However, the package defines a number of hooks for tracking, such as media, materials, magnetic field or track state flags, in order to allow Int32erfacing to tracking MC's. The final goal is to be able to use the same geometry for several purposes, such as tracking, reconstruction or visualization, taking advantage of the [ROOT](@ref) features related to bookkeeping, I/O, histogramming, browsing and GUI's.
+The [ROOT](@ref) geometry package is a tool designed for building, browsing, tracking and visualizing a detector geometry. The code is independent from other external MC for simulation, therefore it does not contain any constraints related to physics. However, the package defines a number of hooks for tracking, such as media, materials, magnetic field or track state flags, in order to allow interfacing to tracking MC's. The final goal is to be able to use the same geometry for several purposes, such as tracking, reconstruction or visualization, taking advantage of the [ROOT](@ref) features related to bookkeeping, I/O, histogramming, browsing and GUI's.
 
 The geometrical modeler is the most important component of the package and it provides answers to the basic questions like "Where am I ?" or "How far
 from the next boundary ?", but also to more complex ones like "How far from
@@ -9307,13 +9307,13 @@ The structure defined in this way is a graph structure since volumes are replica
 
 A given volume can be positioned several times in the geometry. A volume can be divided according default or user-defined patterns, creating automatically the list of division nodes inside. The elementary volumes created during the dividing process follow the same scheme as usual volumes, therefore it is possible to position further geometrical structures inside or to divide them further more (see [TGeoVolume!Divide()](@ref)).
 
-The primitive shapes supported by the package are basically the GEANT3 shapes (see class [TGeoShape](@ref)), arbitrary wedges with eight vertices on two parallel planes. All basic primitives inherits from class [TGeoBBox](@ref) since the bounding box of a solid is essential for the tracking algorithms. They also implement the virtual methods defined in the virtual class [TGeoShape](@ref) (point and segment classification). User-defined primitives can be directly plugged Int32o the modeler provided that they override these methods. Composite shapes will be soon supported by the modeler. In order to build a [TGeoCompositeShape](@ref), one will have to define first the primitive components. The object that handle boolean operations among components is called TGeoBoolCombinator and it has to be constructed providing a string boolean expression between the components names.
+The primitive shapes supported by the package are basically the GEANT3 shapes (see class [TGeoShape](@ref)), arbitrary wedges with eight vertices on two parallel planes. All basic primitives inherits from class [TGeoBBox](@ref) since the bounding box of a solid is essential for the tracking algorithms. They also implement the virtual methods defined in the virtual class [TGeoShape](@ref) (point and segment classification). User-defined primitives can be directly plugged into the modeler provided that they override these methods. Composite shapes will be soon supported by the modeler. In order to build a [TGeoCompositeShape](@ref), one will have to define first the primitive components. The object that handle boolean operations among components is called TGeoBoolCombinator and it has to be constructed providing a string boolean expression between the components names.
 
 ## Example for building a simple geometry
 
 (C++ version of the code)
 
- End_Macro
+ ![https://root.cern/doc/v636/pict1_TGeoManager_001.png](https://root.cern/doc/v636/pict1_TGeoManager_001.png)
 
 ## TGeoManager - the manager class for the geometry package.
 
@@ -9323,15 +9323,15 @@ The primitive shapes supported by the package are basically the GEANT3 shapes (s
 
 ## Rules for building a valid geometry
 
-A given geometry can be built in various ways, but there are mandatory steps that have to be followed in order to be validated by the modeler. There are general rules : volumes needs media and shapes in order to be created, both container and containee volumes must be created before linking them together, and the relative transformation matrix must be provided. All branches must have an upper link point otherwise they will not be considered as part of the geometry. Visibility or tracking properties of volumes can be provided both at build time or after geometry is closed, but global_ visualization settings (see [TGeoPainter](@ref) class) should not be provided at build time, otherwise the drawing package will be loaded. There is also a list of specific rules : positioned daughters should not extrude their mother or Int32ersect with sisters unless this is specified (see [TGeoVolume!AddNodeOverlap()](@ref)), the top volume (containing all geometry tree) must be specified before closing the geometry and must not be positioned - it represents the global_ reference frame. After building the full geometry tree, the geometry must be closed (see [TGeoManager!CloseGeometry()](@ref)). Voxelization can be redone per volume after this process.
+A given geometry can be built in various ways, but there are mandatory steps that have to be followed in order to be validated by the modeler. There are general rules : volumes needs media and shapes in order to be created, both container and containee volumes must be created before linking them together, and the relative transformation matrix must be provided. All branches must have an upper link point otherwise they will not be considered as part of the geometry. Visibility or tracking properties of volumes can be provided both at build time or after geometry is closed, but global_ visualization settings (see [TGeoPainter](@ref) class) should not be provided at build time, otherwise the drawing package will be loaded. There is also a list of specific rules : positioned daughters should not extrude their mother or intersect with sisters unless this is specified (see [TGeoVolume!AddNodeOverlap()](@ref)), the top volume (containing all geometry tree) must be specified before closing the geometry and must not be positioned - it represents the global_ reference frame. After building the full geometry tree, the geometry must be closed (see [TGeoManager!CloseGeometry()](@ref)). Voxelization can be redone per volume after this process.
 
 Below is the general scheme of the manager class.
 
 ![https://root.cern/doc/v636/geom_mgr.jpg](https://root.cern/doc/v636/geom_mgr.jpg)
 
-## An Int32eractive session
+## An interactive session
 
-Provided that a geometry was successfully built and closed (for instance the previous example $ROOTSYS/tutorials/geom/rootgeom.C ), the manager class will register itself to [ROOT](@ref) and the logical/physical structures will become immediately browsable. The [ROOT](@ref) browser will display starting from the geometry folder : the list of transformations and media, the top volume and the top logical node. These last two can be fully expanded, any Int32ermediate volume/node in the browser being subject of direct access context menu operations (right mouse button click). All user utilities of classes [TGeoManager](@ref), [TGeoVolume](@ref) and [TGeoNode](@ref) can be called via the context menu.
+Provided that a geometry was successfully built and closed (for instance the previous example $ROOTSYS/tutorials/geom/rootgeom.C ), the manager class will register itself to [ROOT](@ref) and the logical/physical structures will become immediately browsable. The [ROOT](@ref) browser will display starting from the geometry folder : the list of transformations and media, the top volume and the top logical node. These last two can be fully expanded, any intermediate volume/node in the browser being subject of direct access context menu operations (right mouse button click). All user utilities of classes [TGeoManager](@ref), [TGeoVolume](@ref) and [TGeoNode](@ref) can be called via the context menu.
 
 ![https://root.cern/doc/v636/geom_browser.jpg](https://root.cern/doc/v636/geom_browser.jpg)
 
@@ -9389,11 +9389,11 @@ Can be called from [TGeoVolume!RandomPoints()](@ref) (context menu function) and
 
 #### Raytracing.
 
-Can be called from [TGeoVolume!RandomRays()](@ref) (context menu of volumes) and will shoot rays from a given point in the local_ reference frame with random directions. The Int32ersections with displayed nodes will appear as segments having the color of the touched node. Drawn geometry will be then made invisible in order to enhance rays.
+Can be called from [TGeoVolume!RandomRays()](@ref) (context menu of volumes) and will shoot rays from a given point in the local_ reference frame with random directions. The intersections with displayed nodes will appear as segments having the color of the touched node. Drawn geometry will be then made invisible in order to enhance rays.
 
 ![https://root.cern/doc/v636/geom_random2.jpg](https://root.cern/doc/v636/geom_random2.jpg)
 
-Related functions: [`AddBorderSurface`](@ref), [`AddGDMLMatrix`](@ref), [`AddMaterial`](@ref), [`AddNavigator`](@ref), [`AddOpticalSurface`](@ref), [`AddOverlap`](@ref), [`AddProperty`](@ref), [`AddRegion`](@ref), [`AddShape`](@ref), [`AddSkinSurface`](@ref), [`AddTrack`](@ref), [`AddTransformation`](@ref), [`AddVolume`](@ref), [`AnimateTracks`](@ref), [`BombTranslation`](@ref), [`Browse`](@ref), [`BuildDefaultMaterials`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckBoundaryErrors`](@ref), [`CheckBoundaryReference`](@ref), [`CheckGeometryFull`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckPath`](@ref), [`CheckPoint`](@ref), [`CheckShape`](@ref), [`CleanGarbage`](@ref), [`ClearAttributes`](@ref), [`ClearNavigators`](@ref), [`ClearOverlaps`](@ref), [`ClearPhysicalNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`ClearTracks`](@ref), [`CloseGeometry`](@ref), [`ConvertReflections`](@ref), [`CountLevels`](@ref), [`CountNodes`](@ref), [`CreateParallelWorld`](@ref), [`CreateThreadData`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DefaultAngles`](@ref), [`DefaultColors`](@ref), [`DisableInactiveVolumes`](@ref), [`Division`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`DrawCurrentPoint`](@ref), [`DrawPath`](@ref), [`DrawTracks`](@ref), [`Edit`](@ref), [`EnableInactiveVolumes`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindDuplicateMaterial`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`FindTrackWithId`](@ref), [`FindVolumeFast`](@ref), [`GetAlignableEntryByUID`](@ref), [`GetAlignableEntry`](@ref), [`GetBits`](@ref), [`GetBombFactors`](@ref), [`GetBombMode`](@ref), [`GetBorderSurface`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetByteCount`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetClippingShape`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentMatrix`](@ref), [`GetCurrentNavigator`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentTrack`](@ref), [`GetCurrentVolume`](@ref), [`GetElementTable`](@ref), [`GetGDMLMatrix`](@ref), [`GetGLMatrix`](@ref), [`GetGeomPainter`](@ref), [`GetHMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLastTrack`](@ref), [`GetLevel`](@ref), [`GetListOfBorderSurfaces`](@ref), [`GetListOfGDMLMatrices`](@ref), [`GetListOfGShapes`](@ref), [`GetListOfGVolumes`](@ref), [`GetListOfMaterials`](@ref), [`GetListOfMatrices`](@ref), [`GetListOfMedia`](@ref), [`GetListOfNavigators`](@ref), [`GetListOfNodes`](@ref), [`GetListOfOpticalSurfaces`](@ref), [`GetListOfOverlaps`](@ref), [`GetListOfPhysicalNodes`](@ref), [`GetListOfRegions`](@ref), [`GetListOfShapes`](@ref), [`GetListOfSkinSurfaces`](@ref), [`GetListOfTracks`](@ref), [`GetListOfUVolumes`](@ref), [`GetListOfVolumes`](@ref), [`GetMasterVolume`](@ref), [`GetMaterialIndex`](@ref), [`GetMaterial`](@ref), [`GetMaxLevel`](@ref), [`GetMaxThreads`](@ref), [`GetMaxVisNodes`](@ref), [`GetMedium`](@ref), [`GetMotherMatrix`](@ref), [`GetMother`](@ref), [`GetNAlignable`](@ref), [`GetNNodes`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetNormal`](@ref), [`GetNproperties`](@ref), [`GetNregions`](@ref), [`GetNsegments`](@ref), [`GetNtracks`](@ref), [`GetOpticalSurface`](@ref), [`GetPaintVolume`](@ref), [`GetPainter`](@ref), [`GetParallelWorld`](@ref), [`GetParentTrackOfId`](@ref), [`GetParticleName`](@ref), [`GetPath`](@ref), [`GetPdgName`](@ref), [`GetPhysicalNode`](@ref), [`GetProperty`](@ref), [`GetRTmode`](@ref), [`GetRegion`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetSkinSurface`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetTmax`](@ref), [`GetTminTmax`](@ref), [`GetTopNode`](@ref), [`GetTopVolume`](@ref), [`GetTrackIndex`](@ref), [`GetTrackOfId`](@ref), [`GetTrack`](@ref), [`GetUID`](@ref), [`GetUserPaintVolume`](@ref), [`GetVirtualLevel`](@ref), [`GetVisDensity`](@ref), [`GetVisLevel`](@ref), [`GetVisOption`](@ref), [`GetVolume`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsActivityEnabled`](@ref), [`IsAnimatingTracks`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCleaning`](@ref), [`IsClosed`](@ref), [`IsCurrentOverlapping`](@ref), [`IsDrawingExtra`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsFolder`](@ref), [`IsInPhiRange`](@ref), [`IsMatrixReflection`](@ref), [`IsMatrixTransform`](@ref), [`IsMultiThread`](@ref), [`IsNodeSelectable`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsParallelWorldNav`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`IsStreamingVoxels`](@ref), [`IsVisLeaves`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeAlignablePN`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakePhysicalNode`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrack`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`Material`](@ref), [`Matrix`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`ModifiedPad`](@ref), [`Node`](@ref), [`OptimizeVoxels`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PrintOverlaps`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`RefreshPhysicalNodes`](@ref), [`RegisterMatrix`](@ref), [`RemoveMaterial`](@ref), [`RemoveNavigator`](@ref), [`ReplaceVolume`](@ref), [`ResetState`](@ref), [`ResetUserData`](@ref), [`RestoreMasterVolume`](@ref), [`Safety`](@ref), [`SamplePoints`](@ref), [`SaveAttributes`](@ref), [`SearchNode`](@ref), [`SelectTrackingMedia`](@ref), [`SetAlignableEntry`](@ref), [`SetAllIndex`](@ref), [`SetAnimateTracks`](@ref), [`SetBombFactors`](@ref), [`SetCheckedNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetClippingShape`](@ref), [`SetClipping`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentNavigator`](@ref), [`SetCurrentPoint`](@ref), [`SetCurrentTrack`](@ref), [`SetDrawExtraPaths`](@ref), [`SetExplodedView`](@ref), [`SetLastPoint`](@ref), [`SetMatrixReflection`](@ref), [`SetMatrixTransform`](@ref), [`SetMaxThreads`](@ref), [`SetMaxVisNodes`](@ref), [`SetNmeshPoints`](@ref), [`SetNodeSelectable`](@ref), [`SetNsegments`](@ref), [`SetOutside`](@ref), [`SetPaintVolume`](@ref), [`SetParticleName`](@ref), [`SetPdgName`](@ref), [`SetPhiRange`](@ref), [`SetRTmode`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`SetTminTmax`](@ref), [`SetTopVisible`](@ref), [`SetTopVolume`](@ref), [`SetUseParallelWorldNav`](@ref), [`SetUserPaintVolume`](@ref), [`SetVisDensity`](@ref), [`SetVisLevel`](@ref), [`SetVisOption`](@ref), [`SetVisibility`](@ref), [`SetVolumeAttribute`](@ref), [`SizeOf`](@ref), [`SortOverlaps`](@ref), [`Step`](@ref), [`TGeoManager!ClearThreadsMap`](@ref), [`TGeoManager!GetDefaultUnits`](@ref), [`TGeoManager!GetExportPrecision`](@ref), [`TGeoManager!GetMaxDaughters`](@ref), [`TGeoManager!GetMaxLevels`](@ref), [`TGeoManager!GetMaxXtruVert`](@ref), [`TGeoManager!GetNumThreads`](@ref), [`TGeoManager!GetVerboseLevel`](@ref), [`TGeoManager!Import`](@ref), [`TGeoManager!IsLocked`](@ref), [`TGeoManager!LockDefaultUnits`](@ref), [`TGeoManager!LockGeometry`](@ref), [`TGeoManager!Parse`](@ref), [`TGeoManager!SetDefaultUnits`](@ref), [`TGeoManager!SetExportPrecision`](@ref), [`TGeoManager!SetNavigatorsLock`](@ref), [`TGeoManager!SetVerboseLevel`](@ref), [`TGeoManager!ThreadId`](@ref), [`TGeoManager!UnlockGeometry`](@ref), [`TGeoManager`](@ref), [`TestOverlaps`](@ref), [`Test`](@ref), [`TopToMaster`](@ref), [`TransformVolumeToAssembly`](@ref), [`UnbombTranslation`](@ref), [`ViewLeaves`](@ref), [`Volume`](@ref), [`Weight`](@ref), [`cd`](@ref)
+Related functions: [`AddBorderSurface`](@ref), [`AddGDMLGetMatrix`](@ref), [`AddMaterial`](@ref), [`AddNavigator`](@ref), [`AddOpticalSurface`](@ref), [`AddOverlap`](@ref), [`AddProperty`](@ref), [`AddRegion`](@ref), [`AddShape`](@ref), [`AddSkinSurface`](@ref), [`AddTrack`](@ref), [`AddTransformation`](@ref), [`AddVolume`](@ref), [`AnimateTracks`](@ref), [`BombTranslation`](@ref), [`Browse`](@ref), [`BuildDefaultMaterials`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckBoundaryErrors`](@ref), [`CheckBoundaryReference`](@ref), [`CheckGeometryFull`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckPath`](@ref), [`CheckPoint`](@ref), [`CheckShape`](@ref), [`CleanGarbage`](@ref), [`ClearAttributes`](@ref), [`ClearNavigators`](@ref), [`ClearOverlaps`](@ref), [`ClearPhysicalNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`ClearTracks`](@ref), [`CloseGeometry`](@ref), [`ConvertReflections`](@ref), [`CountLevels`](@ref), [`CountNodes`](@ref), [`CreateParallelWorld`](@ref), [`CreateThreadData`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DefaultAngles`](@ref), [`DefaultColors`](@ref), [`DisableInactiveVolumes`](@ref), [`Division`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`DrawCurrentPoint`](@ref), [`DrawPath`](@ref), [`DrawTracks`](@ref), [`Edit`](@ref), [`EnableInactiveVolumes`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindDuplicateMaterial`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`FindTrackWithId`](@ref), [`FindVolumeFast`](@ref), [`GetAlignableEntryByUID`](@ref), [`GetAlignableEntry`](@ref), [`GetBits`](@ref), [`GetBombFactors`](@ref), [`GetBombMode`](@ref), [`GetBorderSurface`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetByteCount`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetClippingShape`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentGetMatrix`](@ref), [`GetCurrentNavigator`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentTrack`](@ref), [`GetCurrentVolume`](@ref), [`GetElementTable`](@ref), [`GetGDMLGetMatrix`](@ref), [`GetGLGetMatrix`](@ref), [`GetGeomPainter`](@ref), [`GetHGetMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLastTrack`](@ref), [`GetLevel`](@ref), [`GetListOfBorderSurfaces`](@ref), [`GetListOfGDMLMatrices`](@ref), [`GetListOfGShapes`](@ref), [`GetListOfGVolumes`](@ref), [`GetListOfMaterials`](@ref), [`GetListOfMatrices`](@ref), [`GetListOfMedia`](@ref), [`GetListOfNavigators`](@ref), [`GetListOfNodes`](@ref), [`GetListOfOpticalSurfaces`](@ref), [`GetListOfOverlaps`](@ref), [`GetListOfPhysicalNodes`](@ref), [`GetListOfRegions`](@ref), [`GetListOfShapes`](@ref), [`GetListOfSkinSurfaces`](@ref), [`GetListOfTracks`](@ref), [`GetListOfUVolumes`](@ref), [`GetListOfVolumes`](@ref), [`GetMasterVolume`](@ref), [`GetMaterialIndex`](@ref), [`GetMaterial`](@ref), [`GetMatrix`](@ref), [`GetMaxLevel`](@ref), [`GetMaxThreads`](@ref), [`GetMaxVisNodes`](@ref), [`GetMedium`](@ref), [`GetMotherGetMatrix`](@ref), [`GetMother`](@ref), [`GetNAlignable`](@ref), [`GetNNodes`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetNormal`](@ref), [`GetNproperties`](@ref), [`GetNregions`](@ref), [`GetNsegments`](@ref), [`GetNtracks`](@ref), [`GetOpticalSurface`](@ref), [`GetPaintVolume`](@ref), [`GetPainter`](@ref), [`GetParallelWorld`](@ref), [`GetParentTrackOfId`](@ref), [`GetParticleName`](@ref), [`GetPath`](@ref), [`GetPdgName`](@ref), [`GetPhysicalNode`](@ref), [`GetProperty`](@ref), [`GetRTmode`](@ref), [`GetRegion`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetSkinSurface`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetTmax`](@ref), [`GetTminTmax`](@ref), [`GetTopNode`](@ref), [`GetTopVolume`](@ref), [`GetTrackIndex`](@ref), [`GetTrackOfId`](@ref), [`GetTrack`](@ref), [`GetUID`](@ref), [`GetUserPaintVolume`](@ref), [`GetVirtualLevel`](@ref), [`GetVisDensity`](@ref), [`GetVisLevel`](@ref), [`GetVisOption`](@ref), [`GetVolume`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsActivityEnabled`](@ref), [`IsAnimatingTracks`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCleaning`](@ref), [`IsClosed`](@ref), [`IsCurrentOverlapping`](@ref), [`IsDrawingExtra`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsFolder`](@ref), [`IsGetMatrixReflection`](@ref), [`IsGetMatrixTransform`](@ref), [`IsInPhiRange`](@ref), [`IsMultiThread`](@ref), [`IsNodeSelectable`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsParallelWorldNav`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`IsStreamingVoxels`](@ref), [`IsVisLeaves`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeAlignablePN`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakePhysicalNode`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrack`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`Material`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`ModifiedPad`](@ref), [`Node`](@ref), [`OptimizeVoxels`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PrintOverlaps`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`RefreshPhysicalNodes`](@ref), [`RegisterGetMatrix`](@ref), [`RemoveMaterial`](@ref), [`RemoveNavigator`](@ref), [`ReplaceVolume`](@ref), [`ResetState`](@ref), [`ResetUserData`](@ref), [`RestoreMasterVolume`](@ref), [`Safety`](@ref), [`SamplePoints`](@ref), [`SaveAttributes`](@ref), [`SearchNode`](@ref), [`SelectTrackingMedia`](@ref), [`SetAlignableEntry`](@ref), [`SetAllIndex`](@ref), [`SetAnimateTracks`](@ref), [`SetBombFactors`](@ref), [`SetCheckedNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetClippingShape`](@ref), [`SetClipping`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentNavigator`](@ref), [`SetCurrentPoint`](@ref), [`SetCurrentTrack`](@ref), [`SetDrawExtraPaths`](@ref), [`SetExplodedView`](@ref), [`SetGetMatrixReflection`](@ref), [`SetGetMatrixTransform`](@ref), [`SetLastPoint`](@ref), [`SetMaxThreads`](@ref), [`SetMaxVisNodes`](@ref), [`SetNmeshPoints`](@ref), [`SetNodeSelectable`](@ref), [`SetNsegments`](@ref), [`SetOutside`](@ref), [`SetPaintVolume`](@ref), [`SetParticleName`](@ref), [`SetPdgName`](@ref), [`SetPhiRange`](@ref), [`SetRTmode`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`SetTminTmax`](@ref), [`SetTopVisible`](@ref), [`SetTopVolume`](@ref), [`SetUseParallelWorldNav`](@ref), [`SetUserPaintVolume`](@ref), [`SetVisDensity`](@ref), [`SetVisLevel`](@ref), [`SetVisOption`](@ref), [`SetVisibility`](@ref), [`SetVolumeAttribute`](@ref), [`SizeOf`](@ref), [`SortOverlaps`](@ref), [`Step`](@ref), [`TGeoManager!ClearThreadsMap`](@ref), [`TGeoManager!GetDefaultUnits`](@ref), [`TGeoManager!GetExportPrecision`](@ref), [`TGeoManager!GetMaxDaughters`](@ref), [`TGeoManager!GetMaxLevels`](@ref), [`TGeoManager!GetMaxXtruVert`](@ref), [`TGeoManager!GetNumThreads`](@ref), [`TGeoManager!GetVerboseLevel`](@ref), [`TGeoManager!Import`](@ref), [`TGeoManager!IsLocked`](@ref), [`TGeoManager!LockDefaultUnits`](@ref), [`TGeoManager!LockGeometry`](@ref), [`TGeoManager!Parse`](@ref), [`TGeoManager!SetDefaultUnits`](@ref), [`TGeoManager!SetExportPrecision`](@ref), [`TGeoManager!SetNavigatorsLock`](@ref), [`TGeoManager!SetVerboseLevel`](@ref), [`TGeoManager!ThreadId`](@ref), [`TGeoManager!UnlockGeometry`](@ref), [`TGeoManager`](@ref), [`TestOverlaps`](@ref), [`Test`](@ref), [`TopToMaster`](@ref), [`TransformVolumeToAssembly`](@ref), [`UnbombTranslation`](@ref), [`ViewLeaves`](@ref), [`Volume`](@ref), [`Weight`](@ref), [`cd`](@ref)
 """ TGeoManager
 
 # Wrapper of TGeoMaterial
@@ -9404,7 +9404,7 @@ Base class describing materials.
 
 ## Important note about units
 
-Since **v6-17-02** the geometry package adopted a system of units, upon the request to support an in-memory material representation consistent with the one in Geant4. The adoption was done gradually and starting with **v6-19-02** (back-ported to **v6-18-02**) the package supports changing the default units to either [ROOT](@ref) (CGS) or Geant4 ones. In the same version the Geant4 units were set to be the default ones, changing the previous behavior and making material properties such as radiation and Int32eraction lengths having in memory values an order of magnitude lower. This behavior affected versions up to **v6-25-01**, after which the default units were restored to be the [ROOT](@ref) ones.
+Since **v6-17-02** the geometry package adopted a system of units, upon the request to support an in-memory material representation consistent with the one in Geant4. The adoption was done gradually and starting with **v6-19-02** (back-ported to **v6-18-02**) the package supports changing the default units to either [ROOT](@ref) (CGS) or Geant4 ones. In the same version the Geant4 units were set to be the default ones, changing the previous behavior and making material properties such as radiation and interaction lengths having in memory values an order of magnitude lower. This behavior affected versions up to **v6-25-01**, after which the default units were restored to be the [ROOT](@ref) ones.
 
 For users needing to restore the CGS behavior for material properties, the following sequence needs to be called before creating the [TGeoManager](@ref) instance: From **v6-18-02** to **v6-22-06**: 
 
@@ -9429,7 +9429,7 @@ Related functions: [`AddConstProperty`](@ref), [`AddProperty`](@ref), [`DecayMat
 
 Media are used to store properties related to tracking and which are useful only when using geometry with a particle transport MC package (via VMC).
 
-One may define several tracking media for a given material. The media ID are user defined values that are not used by the geometry package. In case geometry is used via VMC (in GEANT) these numbers are overwritten, so one can only rely on these values after gMC->FinishGeometry() is called. The media parameters are inspired from GEANT3 and the values defined make sense in context of GEANT (3 but also 4) or FLUKA Int32erfaces.
+One may define several tracking media for a given material. The media ID are user defined values that are not used by the geometry package. In case geometry is used via VMC (in GEANT) these numbers are overwritten, so one can only rely on these values after gMC->FinishGeometry() is called. The media parameters are inspired from GEANT3 and the values defined make sense in context of GEANT (3 but also 4) or FLUKA interfaces.
 
 Related functions: [`GetByteCount`](@ref), [`GetId`](@ref), [`GetMaterial`](@ref), [`GetParam`](@ref), [`GetPointerName`](@ref), [`SavePrimitive`](@ref), [`SetCerenkovProperties`](@ref), [`SetId`](@ref), [`SetMaterial`](@ref), [`SetParam`](@ref), [`TGeoMedium`](@ref)
 """ TGeoMedium
@@ -9508,7 +9508,7 @@ Another particular case where volume families are used is when we want that a vo
 
 (C++ version of the code)
 
-Note that the third parameter of PVOL is negative, which does not make sense as half-length on Z. This is Int32erpreted as: when positioned, create a box replacing all invalid parameters with the corresponding dimensions of the container. This is also Int32ernally handled by the [TGeoVolumeMulti](@ref) class, which does not need to be instantiated by users.
+Note that the third parameter of PVOL is negative, which does not make sense as half-length on Z. This is interpreted as: when positioned, create a box replacing all invalid parameters with the corresponding dimensions of the container. This is also internally handled by the [TGeoVolumeMulti](@ref) class, which does not need to be instantiated by users.
 
 ### Dividing volumes
 
@@ -9524,20 +9524,20 @@ where SLICE is the name of the new family representing all slices and 1 is the s
 
 (C++ version of the code)
 
-A check is always done on the resulting division range : if not fitting Int32o the container limits, an error message is posted. If we will browse the divided volume we will notice that it will contain N nodes starting with index 1 upto N. The first one has the lower X limit at START position, while the last one will have the upper X limit at START+N*STEP. The resulting slices cannot be positioned inside an other volume (they are by default positioned inside the divided one) but can be further divided and may contain other volumes:
+A check is always done on the resulting division range : if not fitting into the container limits, an error message is posted. If we will browse the divided volume we will notice that it will contain N nodes starting with index 1 upto N. The first one has the lower X limit at START position, while the last one will have the upper X limit at START+N*STEP. The resulting slices cannot be positioned inside an other volume (they are by default positioned inside the divided one) but can be further divided and may contain other volumes:
 
     TGeoVolume *slicey = slicex->Divide("SLICEY", 2, N1);
     slicey->AddNode(other_vol, index, some_matrix);
 
 (C++ version of the code)
 
-When doing that, we have to remember that SLICEY represents a family, therefore all members of the family will be divided on Y and the other volume will be added as node inside all. In the example above all the resulting slices had the same shape as the divided volume (box). This is not always the case. For instance, dividing a volume with TUBE shape on PHI axis will create equal slices having TUBESEG shape. Other divisions can also create slices having shapes with different dimensions, e.g. the division of a TRD1 volume on Z. When positioning volumes inside slices, one can do it using the generic volume family (e.g. slicey). This should be done as if the coordinate system of the generic slice was the same as the one of the divided volume. The generic slice in case of PHI division is centered with respect to X axis. If the family contains slices of different sizes, any volume positioned inside should fit Int32o the smallest one. Examples for specific divisions according to shape types can be found inside shape classes.
+When doing that, we have to remember that SLICEY represents a family, therefore all members of the family will be divided on Y and the other volume will be added as node inside all. In the example above all the resulting slices had the same shape as the divided volume (box). This is not always the case. For instance, dividing a volume with TUBE shape on PHI axis will create equal slices having TUBESEG shape. Other divisions can also create slices having shapes with different dimensions, e.g. the division of a TRD1 volume on Z. When positioning volumes inside slices, one can do it using the generic volume family (e.g. slicey). This should be done as if the coordinate system of the generic slice was the same as the one of the divided volume. The generic slice in case of PHI division is centered with respect to X axis. If the family contains slices of different sizes, any volume positioned inside should fit into the smallest one. Examples for specific divisions according to shape types can be found inside shape classes.
 
     TGeoVolume!Divide(N, Xmin, Xmax, "X");
 
 (C++ version of the code)
 
-The GEANT3 option MANY is supported by TGeoVolumeOverlap class. An overlapping volume is in fact a virtual container that does not represent a physical object. It contains a list of nodes that are not its daughters but that must be checked always before the container itself. This list must be defined by users and it is checked and resolved in a priority order. Note that the feature is non-standard to geometrical modelers and it was Int32roduced just to support conversions of GEANT3 geometries, therefore its extensive usage should be avoided.
+The GEANT3 option MANY is supported by TGeoVolumeOverlap class. An overlapping volume is in fact a virtual container that does not represent a physical object. It contains a list of nodes that are not its daughters but that must be checked always before the container itself. This list must be defined by users and it is checked and resolved in a priority order. Note that the feature is non-standard to geometrical modelers and it was introduced just to support conversions of GEANT3 geometries, therefore its extensive usage should be avoided.
 
 Related functions: [`AddNodeOverlap`](@ref), [`AddNode`](@ref), [`AddVolume`](@ref), [`Divide`](@ref), [`GetAxis`](@ref), [`GetLastShape`](@ref), [`GetNdiv`](@ref), [`GetNvolumes`](@ref), [`GetStart`](@ref), [`GetStep`](@ref), [`GetVolume`](@ref), [`IsVolumeMulti`](@ref), [`MakeCopyVolume`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetMedium`](@ref), [`SetVisibility`](@ref), [`TGeoVolumeMulti`](@ref)
 """ TGeoVolumeMulti
@@ -9626,7 +9626,7 @@ Related functions: [`GetBranch`](@ref), [`GetElement`](@ref), [`GetLevel`](@ref)
 
 ABC for user objects attached to [TGeoVolume](@ref) or [TGeoNode](@ref).
 
-Provides Int32erface for getting a reference (grab) and releasing the extension object (release), allowing for derived classes to implement reference counted sharing. The user who should attach extensions to logical volumes or nodes BEFORE applying misalignment information so that these will be available to all copies.
+Provides interface for getting a reference (grab) and releasing the extension object (release), allowing for derived classes to implement reference counted sharing. The user who should attach extensions to logical volumes or nodes BEFORE applying misalignment information so that these will be available to all copies.
 
 Related functions: [`Grab`](@ref), [`Release`](@ref)
 """ TGeoExtension
@@ -9664,7 +9664,7 @@ A pattern is specifying a division type which applies only to a given shape type
 - [TGeoPatternSphPhi](@ref) - a spherical phi divison pattern
 - [TGeoPatternHoneycomb](@ref) - a divison pattern specialized for honeycombs
 
-Related functions: [`CdNext`](@ref), [`ClearThreadData`](@ref), [`CreateMatrix`](@ref), [`CreateThreadData`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetCurrent`](@ref), [`GetDivAxis`](@ref), [`GetDivIndex`](@ref), [`GetEnd`](@ref), [`GetMatrix`](@ref), [`GetNdiv`](@ref), [`GetNext`](@ref), [`GetNodeOffset`](@ref), [`GetStart`](@ref), [`GetStep`](@ref), [`GetThreadData`](@ref), [`GetVolume`](@ref), [`IsOnBoundary`](@ref), [`IsReflected`](@ref), [`IsSpacedOut`](@ref), [`MakeCopy`](@ref), [`Reflect`](@ref), [`SetDivIndex`](@ref), [`SetNext`](@ref), [`SetRange`](@ref), [`SetSpacedOut`](@ref), [`SetVolume`](@ref), [`TGeoPatternFinder`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CdNext`](@ref), [`ClearThreadData`](@ref), [`CreateGetMatrix`](@ref), [`CreateThreadData`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetCurrent`](@ref), [`GetDivAxis`](@ref), [`GetDivIndex`](@ref), [`GetEnd`](@ref), [`GetGetMatrix`](@ref), [`GetNdiv`](@ref), [`GetNext`](@ref), [`GetNodeOffset`](@ref), [`GetStart`](@ref), [`GetStep`](@ref), [`GetThreadData`](@ref), [`GetVolume`](@ref), [`IsOnBoundary`](@ref), [`IsReflected`](@ref), [`IsSpacedOut`](@ref), [`MakeCopy`](@ref), [`Reflect`](@ref), [`SetDivIndex`](@ref), [`SetNext`](@ref), [`SetRange`](@ref), [`SetSpacedOut`](@ref), [`SetVolume`](@ref), [`TGeoPatternFinder`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternFinder
 
 # Wrapper of TGeoVoxelFinder
@@ -9690,7 +9690,7 @@ Related functions: [`DaughterToMother`](@ref), [`Efficiency`](@ref), [`FindOverl
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternX`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternX`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternX
 
 # Wrapper of TGeoPatternY
@@ -9701,7 +9701,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNod
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternY`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternY`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternY
 
 # Wrapper of TGeoPatternZ
@@ -9712,7 +9712,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNod
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternZ`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternZ`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternZ
 
 # Wrapper of TGeoPatternParaX
@@ -9723,7 +9723,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNod
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaX`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaX`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternParaX
 
 # Wrapper of TGeoPatternParaY
@@ -9734,7 +9734,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaY`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaY`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternParaY
 
 # Wrapper of TGeoPatternParaZ
@@ -9745,7 +9745,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaZ`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaZ`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternParaZ
 
 # Wrapper of TGeoPatternTrapZ
@@ -9756,7 +9756,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternTrapZ`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternTrapZ`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternTrapZ
 
 # Wrapper of TGeoPatternCylR
@@ -9767,7 +9767,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylR`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylR`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternCylR
 
 # Wrapper of TGeoPatternCylPhi
@@ -9778,7 +9778,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylPhi`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylPhi`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternCylPhi
 
 # Wrapper of TGeoPatternSphR
@@ -9789,7 +9789,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphR`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphR`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternSphR
 
 # Wrapper of TGeoPatternSphTheta
@@ -9800,7 +9800,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphTheta`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphTheta`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternSphTheta
 
 # Wrapper of TGeoPatternSphPhi
@@ -9811,7 +9811,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphPhi`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphPhi`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternSphPhi
 
 # Wrapper of TGeoPatternHoneycomb
@@ -9822,7 +9822,7 @@ Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@r
 
 
 
-Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`MakeCopy`](@ref), [`TGeoPatternHoneycomb`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`MakeCopy`](@ref), [`TGeoPatternHoneycomb`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternHoneycomb
 
 # Wrapper of TGeoNodeMatrix
@@ -9833,7 +9833,7 @@ A node containing local_ transformation.
 
 
 
-Related functions: [`GetByteCount`](@ref), [`GetMatrix`](@ref), [`GetOptimalVoxels`](@ref), [`IsFolder`](@ref), [`MakeCopyNode`](@ref), [`SetMatrix`](@ref), [`TGeoNodeMatrix`](@ref)
+Related functions: [`GetByteCount`](@ref), [`GetGetMatrix`](@ref), [`GetOptimalVoxels`](@ref), [`IsFolder`](@ref), [`MakeCopyNode`](@ref), [`SetGetMatrix`](@ref), [`TGeoNodeGetMatrix`](@ref)
 """ TGeoNodeMatrix
 
 # Wrapper of TGeoNodeOffset
@@ -9844,7 +9844,7 @@ Node containing an offset.
 
 
 
-Related functions: [`GetFinder`](@ref), [`GetIndex`](@ref), [`GetMatrix`](@ref), [`GetOffset`](@ref), [`MakeCopyNode`](@ref), [`SetFinder`](@ref), [`TGeoNodeOffset`](@ref), [`cd`](@ref)
+Related functions: [`GetFinder`](@ref), [`GetGetMatrix`](@ref), [`GetIndex`](@ref), [`GetOffset`](@ref), [`MakeCopyNode`](@ref), [`SetFinder`](@ref), [`TGeoNodeOffset`](@ref), [`cd`](@ref)
 """ TGeoNodeOffset
 
 # Wrapper of TGeoIterator
@@ -9924,7 +9924,7 @@ We want to find out a volume named "MyVol" in the hierarchy of TOP volume.
 
 (C++ version of the code)
 
-Related functions: [`GetCurrentMatrix`](@ref), [`GetIndex`](@ref), [`GetLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetTopVolume`](@ref), [`GetType`](@ref), [`GetUserPlugin`](@ref), [`Next`](@ref), [`Reset`](@ref), [`SetPluginAutoexec`](@ref), [`SetTopName`](@ref), [`SetType`](@ref), [`SetUserPlugin`](@ref), [`Skip`](@ref), [`TGeoIterator`](@ref), [`Up`](@ref), [`assign`](@ref), [`paren`](@ref)
+Related functions: [`GetCurrentGetMatrix`](@ref), [`GetGetType`](@ref), [`GetIndex`](@ref), [`GetLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetTopVolume`](@ref), [`GetUserPlugin`](@ref), [`Next`](@ref), [`Reset`](@ref), [`SetGetType`](@ref), [`SetPluginAutoexec`](@ref), [`SetTopName`](@ref), [`SetUserPlugin`](@ref), [`Skip`](@ref), [`TGeoIterator`](@ref), [`Up`](@ref), [`assign`](@ref), [`paren`](@ref)
 """ TGeoIterator
 
 # Wrapper of TGeoIteratorPlugin
@@ -9948,14 +9948,14 @@ The vertices have to be defined CLOCKWISE in the XY plane, making either a conve
 
 A polygon is a 2D shape defined by vertices in the XY plane. It is used by [TGeoXtru](@ref) class for computing [Contains()](@ref) and [Safety()](@ref). Only the pointers to the actual lists of XY values are used - these are not owned by the class.
 
-To check if a point in XY plane is contained by a polygon, this is split Int32o an outscribed convex polygon and the remaining polygons of its subtraction from the outscribed one. A point is INSIDE if it is contained by the outscribed polygon but NOT by the remaining ones. Since these can also be arbitrary polygons at their turn, a tree structure is formed:
+To check if a point in XY plane is contained by a polygon, this is split into an outscribed convex polygon and the remaining polygons of its subtraction from the outscribed one. A point is INSIDE if it is contained by the outscribed polygon but NOT by the remaining ones. Since these can also be arbitrary polygons at their turn, a tree structure is formed:
 
     P = Pconvex - (Pconvex-P)           where (-) means 'subtraction'
     Pconvex-P = P1 + P2 + ...           where (+) means 'union'
 
 (C++ version of the code)
 
-Note that P1, P2, ... do not Int32ersect each other and they are defined by subsets of the list of vertices of P. They can be split in the same way as P*
+Note that P1, P2, ... do not intersect each other and they are defined by subsets of the list of vertices of P. They can be split in the same way as P*
 
 Therefore, if C(P) represents the Boolean : 'does P contains a given point?', then:
 
@@ -9987,7 +9987,7 @@ Special pool of reusable nodes.
 
 
 
-Related functions: [`BuildIdArray`](@ref), [`BuildInfoBranch`](@ref), [`CdDown`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`FillIdBranch`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetBranch`](@ref), [`GetCurrentMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetIdBranch`](@ref), [`GetInfo`](@ref), [`GetLevel`](@ref), [`GetMakePWInfo`](@ref), [`GetMatrices`](@ref), [`GetMotherMatrix`](@ref), [`GetMother`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetStackLevel`](@ref), [`GetTopNode`](@ref), [`HasIdArray`](@ref), [`IsDummy`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`PopDummy`](@ref), [`PopState`](@ref), [`PushState`](@ref), [`Refresh`](@ref), [`ReleaseInfo`](@ref), [`RestoreState`](@ref), [`TGeoNodeCache`](@ref)
+Related functions: [`BuildIdArray`](@ref), [`BuildInfoBranch`](@ref), [`CdDown`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`FillIdBranch`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetBranch`](@ref), [`GetCurrentGetMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetIdBranch`](@ref), [`GetInfo`](@ref), [`GetLevel`](@ref), [`GetMakePWInfo`](@ref), [`GetMatrices`](@ref), [`GetMotherGetMatrix`](@ref), [`GetMother`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetStackLevel`](@ref), [`GetTopNode`](@ref), [`HasIdArray`](@ref), [`IsDummy`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`PopDummy`](@ref), [`PopState`](@ref), [`PushState`](@ref), [`Refresh`](@ref), [`ReleaseInfo`](@ref), [`RestoreState`](@ref), [`TGeoNodeCache`](@ref)
 """ TGeoNodeCache
 
 # Wrapper of TGeoCompositeShape
@@ -9996,9 +9996,9 @@ Related functions: [`BuildIdArray`](@ref), [`BuildInfoBranch`](@ref), [`CdDown`]
 
 Composite shapes are Boolean combinations of two or more shape components.
 
-The supported Boolean operations are union (+), Int32ersection (*) and subtraction(-). Composite shapes derive from the base `TGeoShape`** class, therefore providing all shape features: computation of bounding box, finding if a given point is inside or outside the combination, as well as computing the distance to entering/exiting. They can be directly used for creating volumes or used in the definition of other composite shapes.
+The supported Boolean operations are union (+), intersection (*) and subtraction(-). Composite shapes derive from the base `TGeoShape`** class, therefore providing all shape features: computation of bounding box, finding if a given point is inside or outside the combination, as well as computing the distance to entering/exiting. They can be directly used for creating volumes or used in the definition of other composite shapes.
 
-Composite shapes are provided in order to complement and extend the set of basic shape primitives. They have a binary tree Int32ernal structure, therefore all shape-related geometry queries are signals propagated from top level down to the final leaves, while the provided answers are assembled and Int32erpreted back at top. This `CSG` `(composite solid geometry)` hierarchy is effective for small number of components, while performance drops dramatically for large structures. Building a complete geometry in this style is virtually possible but highly not recommended.
+Composite shapes are provided in order to complement and extend the set of basic shape primitives. They have a binary tree internal structure, therefore all shape-related geometry queries are signals propagated from top level down to the final leaves, while the provided answers are assembled and interpreted back at top. This `CSG` `(composite solid geometry)` hierarchy is effective for small number of components, while performance drops dramatically for large structures. Building a complete geometry in this style is virtually possible but highly not recommended.
 
 #### The Structure of Composite Shapes
 
@@ -10006,7 +10006,7 @@ A composite shape can always be looked as the result of a Boolean operation betw
 
 ![https://root.cern/doc/v636/geom_composite_shape001.png](https://root.cern/doc/v636/geom_composite_shape001.png)
 
-Suppose that A, B, C and D represent basic shapes, we will illustrate how the Int32ernal representation of few combinations look like. We do this only for understanding how to create them in a proper way, since the user Int32erface for this purpose is in fact very simple. We will ignore for the time being the positioning of components. The definition of a composite shape takes an expression where the identifiers are shape names. The expression is parsed and decomposed in 2 sub-expressions and the top-level Boolean operator.
+Suppose that A, B, C and D represent basic shapes, we will illustrate how the internal representation of few combinations look like. We do this only for understanding how to create them in a proper way, since the user interface for this purpose is in fact very simple. We will ignore for the time being the positioning of components. The definition of a composite shape takes an expression where the identifiers are shape names. The expression is parsed and decomposed in 2 sub-expressions and the top-level Boolean operator.
 
 1. Union: `A+B+C`
 
@@ -10014,7 +10014,7 @@ Just to illustrate the Boolean expression parsing and the composite shape struct
 
 `A+B+C = (A+B)+C = A+(B+C)`
 
-The first`(+)` is taken as separator, hence the expression split in: `A` and `(B+C)`. A Boolean node of type **`TGeoUnion`**`("A","B+C")` is created. This tries to replace the 2 expressions by actual pointers to corresponding shapes. The first expression (A) contains no operators therefore is Int32erpreted as representing a shape. The shape named "A" is searched Int32o the list of shapes handled by the manager class and stored as the "left" shape in the Boolean union node. Since the second expression is not yet fully decomposed, the "right" shape in the combination is created as a new composite shape. This will split at its turn B+C Int32o B and C and create a **`TGeoUnion`**`("B","C")`. The B and C identifiers will be looked for and replaced by the pointers to the actual shapes Int32o the new node. Finally, the composite "`A+B+C`" will be represented as shown in Fig.17-23.**
+The first`(+)` is taken as separator, hence the expression split in: `A` and `(B+C)`. A Boolean node of type **`TGeoUnion`**`("A","B+C")` is created. This tries to replace the 2 expressions by actual pointers to corresponding shapes. The first expression (A) contains no operators therefore is interpreted as representing a shape. The shape named "A" is searched into the list of shapes handled by the manager class and stored as the "left" shape in the Boolean union node. Since the second expression is not yet fully decomposed, the "right" shape in the combination is created as a new composite shape. This will split at its turn B+C into B and C and create a **`TGeoUnion`**`("B","C")`. The B and C identifiers will be looked for and replaced by the pointers to the actual shapes into the new node. Finally, the composite "`A+B+C`" will be represented as shown in Fig.17-23.**
 
 ![https://root.cern/doc/v636/geom_composite_shape002.png](https://root.cern/doc/v636/geom_composite_shape002.png)
 
@@ -10037,7 +10037,7 @@ An identifier `shape:matrix` have the meaning: `shape` is translated or rotated 
 
 1. `(A:m1+B):m2-(C:m3*D:m4):m5`
 
-Let's try to understand the expression above. This expression means: subtract the Int32ersection of **C** and **D** from the union of **A** and B**. The usage of parenthesis to force the desired precedence is always recommended. One can see that not only the primitive shapes have some geometrical transformations, but also their Int32ermediate compositions.
+Let's try to understand the expression above. This expression means: subtract the intersection of **C** and **D** from the union of **A** and B**. The usage of parenthesis to force the desired precedence is always recommended. One can see that not only the primitive shapes have some geometrical transformations, but also their intermediate compositions.
 
 ![https://root.cern/doc/v636/geom_composite_shape003.png](https://root.cern/doc/v636/geom_composite_shape003.png)
 
@@ -10088,7 +10088,7 @@ One should have in mind that the same shape or matrix identifiers can be used ma
 
 Composite shapes can be subsequently used for defining volumes. Moreover, these volumes contain other volumes, following the general criteria. Volumes created based on composite shapes cannot be divided.
 
-Related functions: [`Capacity`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoolNode`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsComposite`](@ref), [`IsCylType`](@ref), [`MakeNode`](@ref), [`PaintComposite`](@ref), [`RegisterYourself`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoCompositeShape`](@ref)
+Related functions: [`Capacity`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoolNode`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsComposite`](@ref), [`IsCylGetType`](@ref), [`MakeNode`](@ref), [`PaintComposite`](@ref), [`RegisterYourself`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoCompositeShape`](@ref)
 """ TGeoCompositeShape
 
 # Wrapper of TGeoCone
@@ -10102,9 +10102,9 @@ TGeoCone(Double_t dz,Double_t rmin1,Double_t rmax1,
 
 (C++ version of the code)
 
-- `rmin1:` Int32ernal radius at Z is `-dz`
+- `rmin1:` internal radius at Z is `-dz`
 - `rmax1:` external radius at Z is `-dz`
-- `rmin2:` Int32ernal radius at Z is `+dz`
+- `rmin2:` internal radius at Z is `+dz`
 - `rmax2:` external radius at Z is `+dz`
 - `dz:` half length in Z (a cone ranges from `-dz` to +`dz`)
 
@@ -10112,7 +10112,7 @@ A cone has Z-axis as its symmetry axis.
 
 ![https://root.cern/doc/v636/pict1_TGeoCone_001.png](https://root.cern/doc/v636/pict1_TGeoCone_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax1`](@ref), [`GetRmax2`](@ref), [`GetRmin1`](@ref), [`GetRmin2`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetConeDimensions`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoCone!Capacity`](@ref), [`TGeoCone!ComputeNormalS`](@ref), [`TGeoCone!DistFromInsideS`](@ref), [`TGeoCone!DistFromOutsideS`](@ref), [`TGeoCone!DistToCone`](@ref), [`TGeoCone!SafetyS`](@ref), [`TGeoCone`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax1`](@ref), [`GetRmax2`](@ref), [`GetRmin1`](@ref), [`GetRmin2`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetConeDimensions`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoCone!Capacity`](@ref), [`TGeoCone!ComputeNormalS`](@ref), [`TGeoCone!DistFromInsideS`](@ref), [`TGeoCone!DistFromOutsideS`](@ref), [`TGeoCone!DistToCone`](@ref), [`TGeoCone!SafetyS`](@ref), [`TGeoCone`](@ref)
 """ TGeoCone
 
 # Wrapper of TGeoConeSeg
@@ -10153,7 +10153,7 @@ A tube has 3 parameters :
 
 ![https://root.cern/doc/v636/pict1_TGeoTube_001.png](https://root.cern/doc/v636/pict1_TGeoTube_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`HasRmin`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTubeDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoTube!Capacity`](@ref), [`TGeoTube!ComputeNormalS`](@ref), [`TGeoTube!DistFromInsideS`](@ref), [`TGeoTube!DistFromOutsideS`](@ref), [`TGeoTube!DistToTube`](@ref), [`TGeoTube!SafetyS`](@ref), [`TGeoTube`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`HasRmin`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTubeDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoTube!Capacity`](@ref), [`TGeoTube!ComputeNormalS`](@ref), [`TGeoTube!DistFromInsideS`](@ref), [`TGeoTube!DistFromOutsideS`](@ref), [`TGeoTube!DistToTube`](@ref), [`TGeoTube!SafetyS`](@ref), [`TGeoTube`](@ref)
 """ TGeoTube
 
 # Wrapper of TGeoTubeSeg
@@ -10212,7 +10212,7 @@ It ranges from `-dZ` to `+dZ` as all other tubes:
 
 ![https://root.cern/doc/v636/pict1_TGeoEltu_001.png](https://root.cern/doc/v636/pict1_TGeoEltu_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetA`](@ref), [`GetB`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetEltuDimensions`](@ref), [`SetPoints`](@ref), [`TGeoEltu`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetA`](@ref), [`GetB`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetEltuDimensions`](@ref), [`SetPoints`](@ref), [`TGeoEltu`](@ref)
 """ TGeoEltu
 
 # Wrapper of TGeoRCExtension
@@ -10325,7 +10325,7 @@ The point lies on the plane and the normal vector points outside the half space.
 
 (C++ version of the code)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNorm`](@ref), [`GetPoint`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoHalfSpace`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNorm`](@ref), [`GetPoint`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoHalfSpace`](@ref)
 """ TGeoHalfSpace
 
 # Wrapper of TGeoHelix
@@ -10400,7 +10400,7 @@ The input parameters for a hyperboloid represent:
 - `rout, stout:` minimum radius and stereo angle in degrees for the outer surface
 - `dz:` half length in Z (bounding planes positions at `+/-dz`)
 
-The following conditions are mandatory in order to avoid Int32ersections between the inner and outer hyperbolic surfaces in the range `+/-dz`:
+The following conditions are mandatory in order to avoid intersections between the inner and outer hyperbolic surfaces in the range `+/-dz`:
 
 - `rin < rout`
 - `rout > 0`
@@ -10411,7 +10411,7 @@ Particular cases:
 - `rin=0, stin0:` the inner surface is conical
 - `stin=0 / stout=0:` cylindrical surface(s)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToHype`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetStIn`](@ref), [`GetStOut`](@ref), [`HasInner`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`RadiusHypeSq`](@ref), [`SafetyToHype`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetHypeDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoHype`](@ref), [`ZHypeSq`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToHype`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetStIn`](@ref), [`GetStOut`](@ref), [`HasInner`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`RadiusHypeSq`](@ref), [`SafetyToHype`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetHypeDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoHype`](@ref), [`ZHypeSq`](@ref)
 """ TGeoHype
 
 # Wrapper of TGeoNavigatorArray
@@ -10475,7 +10475,7 @@ Such a symbolic link hides the complexity of the path to the align object and re
 
 For more details please read the [misalignment section](@ref).
 
-Related functions: [`GetGlobalOrig`](@ref), [`GetMatrixOrig`](@ref), [`GetMatrix`](@ref), [`GetPath`](@ref), [`GetPhysicalNode`](@ref), [`SetMatrix`](@ref), [`SetPhysicalNode`](@ref), [`TGeoPNEntry`](@ref)
+Related functions: [`GetGetMatrixOrig`](@ref), [`GetGetMatrix`](@ref), [`GetGlobalOrig`](@ref), [`GetPath`](@ref), [`GetPhysicalNode`](@ref), [`SetGetMatrix`](@ref), [`SetPhysicalNode`](@ref), [`TGeoPNEntry`](@ref)
 """ TGeoPNEntry
 
 # Wrapper of TGeoPhysicalNode
@@ -10496,7 +10496,7 @@ Once created, a physical node can be misaligned, meaning that its position or ev
 
 (C++ version of the code)
 
-Related functions: [`Align`](@ref), [`Draw`](@ref), [`GetLevel`](@ref), [`GetMatrix`](@ref), [`GetMother`](@ref), [`GetNode`](@ref), [`GetOriginalMatrix`](@ref), [`GetShape`](@ref), [`GetVolume`](@ref), [`IsAligned`](@ref), [`IsMatchingState`](@ref), [`IsVisibleFull`](@ref), [`IsVisible`](@ref), [`IsVolAttributes`](@ref), [`Paint`](@ref), [`Print`](@ref), [`Refresh`](@ref), [`SetIsVolAtt`](@ref), [`SetMatrixOrig`](@ref), [`SetVisibility`](@ref), [`SetVisibleFull`](@ref), [`TGeoPhysicalNode`](@ref), [`cd`](@ref)
+Related functions: [`Align`](@ref), [`Draw`](@ref), [`GetGetMatrix`](@ref), [`GetLevel`](@ref), [`GetMother`](@ref), [`GetNode`](@ref), [`GetOriginalGetMatrix`](@ref), [`GetShape`](@ref), [`GetVolume`](@ref), [`IsAligned`](@ref), [`IsMatchingState`](@ref), [`IsVisibleFull`](@ref), [`IsVisible`](@ref), [`IsVolAttributes`](@ref), [`Paint`](@ref), [`Print`](@ref), [`Refresh`](@ref), [`SetGetMatrixOrig`](@ref), [`SetIsVolAtt`](@ref), [`SetVisibility`](@ref), [`SetVisibleFull`](@ref), [`TGeoPhysicalNode`](@ref), [`cd`](@ref)
 """ TGeoPhysicalNode
 
 # Wrapper of TGeoOpticalSurface
@@ -10507,7 +10507,7 @@ This is a wrapper class to G4OpticalSurface.
 
 
 
-Related functions: [`AddConstProperty`](@ref), [`AddProperty`](@ref), [`GetConstProperties`](@ref), [`GetConstPropertyRef`](@ref), [`GetConstProperty`](@ref), [`GetFinish`](@ref), [`GetModel`](@ref), [`GetNconstProperties`](@ref), [`GetNproperties`](@ref), [`GetPolish`](@ref), [`GetProperties`](@ref), [`GetPropertyRef`](@ref), [`GetProperty`](@ref), [`GetSigmaAlpha`](@ref), [`GetType`](@ref), [`GetValue`](@ref), [`Print`](@ref), [`SetFinish`](@ref), [`SetModel`](@ref), [`SetPolish`](@ref), [`SetSigmaAlpha`](@ref), [`SetType`](@ref), [`SetValue`](@ref), [`TGeoOpticalSurface!FinishToString`](@ref), [`TGeoOpticalSurface!ModelToString`](@ref), [`TGeoOpticalSurface!StringToFinish`](@ref), [`TGeoOpticalSurface!StringToModel`](@ref), [`TGeoOpticalSurface!StringToType`](@ref), [`TGeoOpticalSurface!TypeToString`](@ref), [`TGeoOpticalSurface`](@ref)
+Related functions: [`AddConstProperty`](@ref), [`AddProperty`](@ref), [`GetConstProperties`](@ref), [`GetConstPropertyRef`](@ref), [`GetConstProperty`](@ref), [`GetFinish`](@ref), [`GetGetType`](@ref), [`GetModel`](@ref), [`GetNconstProperties`](@ref), [`GetNproperties`](@ref), [`GetPolish`](@ref), [`GetProperties`](@ref), [`GetPropertyRef`](@ref), [`GetProperty`](@ref), [`GetSigmaAlpha`](@ref), [`GetValue`](@ref), [`Print`](@ref), [`SetFinish`](@ref), [`SetGetType`](@ref), [`SetModel`](@ref), [`SetPolish`](@ref), [`SetSigmaAlpha`](@ref), [`SetValue`](@ref), [`TGeoOpticalSurface!FinishToGetString`](@ref), [`TGeoOpticalSurface!GetStringToFinish`](@ref), [`TGeoOpticalSurface!GetStringToGetType`](@ref), [`TGeoOpticalSurface!GetStringToModel`](@ref), [`TGeoOpticalSurface!GetTypeToGetString`](@ref), [`TGeoOpticalSurface!ModelToGetString`](@ref), [`TGeoOpticalSurface`](@ref)
 """ TGeoOpticalSurface
 
 # Wrapper of TGeoSkinSurface
@@ -10555,18 +10555,29 @@ A box is a particular parallelepiped having the parameters: `(dX,dY,dZ,0.,0.,0.)
 
 ![https://root.cern/doc/v636/pict1_TGeoPara_001.png](https://root.cern/doc/v636/pict1_TGeoPara_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAlpha`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi`](@ref), [`GetTheta`](@ref), [`GetTxy`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`GetX`](@ref), [`GetY`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoPara`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAlpha`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi`](@ref), [`GetTheta`](@ref), [`GetTxy`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`GetX`](@ref), [`GetY`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoPara`](@ref)
 """ TGeoPara
 
 # Wrapper of TGeoParaboloid
 @trydoc raw"""
     ROOT.TGeoParaboloid
 
+A paraboloid is defined by the revolution surface generated by a parabola and is bounded by two planes perpendicular to Z axis.
 
+The parabola equation is taken in the form: `z = a·r2 + b`, where: `r2 = x2 + y2`. Note the missing linear term (parabola symmetric with respect to Z axis).
 
+The coefficients a and b are computed from the input values which are the radii of the circular sections cut by the planes at `+/-dz`:
 
+- `-dz = a*r2low + b`
+- `dz = a*r2high + b`
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToParaboloid`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRhi`](@ref), [`GetRlo`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetParaboloidDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoParaboloid`](@ref)
+    TGeoParaboloid(Double_t rlo,Double_t rhi,Double_t dz);
+
+(C++ version of the code)
+
+![https://root.cern/doc/v636/pict1_TGeoParaboloid_001.png](https://root.cern/doc/v636/pict1_TGeoParaboloid_001.png)
+
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToParaboloid`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRhi`](@ref), [`GetRlo`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetParaboloidDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoParaboloid`](@ref)
 """ TGeoParaboloid
 
 # Wrapper of TGeoParallelWorld
@@ -10575,7 +10586,7 @@ Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`
 
 Base class for a flat parallel geometry.
 
-The parallel geometry can be composed by both normal volumes added using the AddNode Int32erface (not implemented yet) or by physical nodes which will use as position their actual global_ matrix with respect to the top volume of the main geometry.
+The parallel geometry can be composed by both normal volumes added using the AddNode interface (not implemented yet) or by physical nodes which will use as position their actual global_ matrix with respect to the top volume of the main geometry.
 
 All these nodes are added as daughters to the "top" volume of the parallel world which acts as a navigation helper in this parallel world. The parallel world has to be closed before calling any navigation method.
 
@@ -10623,7 +10634,7 @@ Note that the last section should be defined last, since it triggers the computa
 
 ![https://root.cern/doc/v636/pict1_TGeoPcon_001.png](https://root.cern/doc/v636/pict1_TGeoPcon_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DefineSection`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSegZ`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Dphi`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNsegments`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Phi1`](@ref), [`Rmax`](@ref), [`Rmin`](@ref), [`SafetyToSegment`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoPcon`](@ref), [`Z`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DefineSection`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSegZ`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Dphi`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNsegments`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Phi1`](@ref), [`Rmax`](@ref), [`Rmin`](@ref), [`SafetyToSegment`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoPcon`](@ref), [`Z`](@ref)
 """ TGeoPcon
 
 # Wrapper of TGeoPgon
@@ -10713,7 +10724,7 @@ A shape scaled by a [TGeoScale](@ref) transformation.
 
 ![https://root.cern/doc/v636/geom_scaledshape.png](https://root.cern/doc/v636/geom_scaledshape.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetScale`](@ref), [`GetShape`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylType`](@ref), [`IsReflected`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetScale`](@ref), [`SetSegsAndPols`](@ref), [`TGeoScaledShape!MakeScaledShape`](@ref), [`TGeoScaledShape`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetScale`](@ref), [`GetShape`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylGetType`](@ref), [`IsReflected`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetScale`](@ref), [`SetSegsAndPols`](@ref), [`TGeoScaledShape!MakeScaledShape`](@ref), [`TGeoScaledShape`](@ref)
 """ TGeoScaledShape
 
 # Wrapper of TGeoShapeAssembly
@@ -10724,14 +10735,14 @@ The shape encapsulating an assembly (union) of volumes.
 
 Automatically created by [TGeoVolumeAssembly](@ref) class
 
-Related functions: [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylType`](@ref), [`NeedsBBoxRecompute`](@ref), [`RecomputeBoxLast`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`TGeoShapeAssembly`](@ref)
+Related functions: [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylGetType`](@ref), [`NeedsBBoxRecompute`](@ref), [`RecomputeBoxLast`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`TGeoShapeAssembly`](@ref)
 """ TGeoShapeAssembly
 
 # Wrapper of TGeoSphere
 @trydoc raw"""
     ROOT.TGeoSphere
 
-[TGeoSphere](@ref) are not just balls having Int32ernal and external radii, but sectors of a sphere having defined theta and phi ranges.
+[TGeoSphere](@ref) are not just balls having internal and external radii, but sectors of a sphere having defined theta and phi ranges.
 
 The [TGeoSphere](@ref) class has the following constructor.
 
@@ -10742,12 +10753,12 @@ The [TGeoSphere](@ref) class has the following constructor.
 
 ![https://root.cern/doc/v636/pict1_TGeoSphere_001.png](https://root.cern/doc/v636/pict1_TGeoSphere_001.png)
 
-- `rmin:` Int32ernal radius of the spherical sector
+- `rmin:` internal radius of the spherical sector
 - `rmax:` external radius
 - `theta1:` starting theta value [0, 180) in degrees
 - `theta2:` ending theta value (0, 180] in degrees (`theta1<theta2`)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSphere`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNumberOfDivisions`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPhi2`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetTheta1`](@ref), [`GetTheta2`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`IsOnBoundary`](@ref), [`IsPointInside`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetNumberOfDivisions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetSphDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoSphere`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSphere`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNumberOfDivisions`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPhi2`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetTheta1`](@ref), [`GetTheta2`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`IsOnBoundary`](@ref), [`IsPointInside`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetNumberOfDivisions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetSphDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoSphere`](@ref)
 """ TGeoSphere
 
 # Wrapper of TGeoFacet
@@ -10793,7 +10804,7 @@ It may have a `phi`range:
 - `Phi1:` starting phi angle
 - `Dphi:` total phi range
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DDDaxis`](@ref), [`DDaxis`](@ref), [`Daxis`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetR`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTorusDimensions`](@ref), [`Sizeof3D`](@ref), [`SolveCubic`](@ref), [`SolveQuartic`](@ref), [`TGeoTorus`](@ref), [`ToBoundary`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DDDaxis`](@ref), [`DDaxis`](@ref), [`Daxis`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetR`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTorusDimensions`](@ref), [`Sizeof3D`](@ref), [`SolveCubic`](@ref), [`SolveQuartic`](@ref), [`TGeoTorus`](@ref), [`ToBoundary`](@ref)
 """ TGeoTorus
 
 # Wrapper of TGeoTrd1
@@ -10810,7 +10821,7 @@ It is defined by the half-length in Z, the half-length in X at the lowest and hi
 
 ![https://root.cern/doc/v636/pict1_TGeoTrd1_001.png](https://root.cern/doc/v636/pict1_TGeoTrd1_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd1`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd1`](@ref)
 """ TGeoTrd1
 
 # Wrapper of TGeoTrd2
@@ -10823,16 +10834,52 @@ It is defined by the half-length in Z, the half-length in X at the lowest and hi
 
 ![https://root.cern/doc/v636/pict1_TGeoTrd2_001.png](https://root.cern/doc/v636/pict1_TGeoTrd2_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy1`](@ref), [`GetDy2`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd2`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy1`](@ref), [`GetDy2`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd2`](@ref)
 """ TGeoTrd2
 
 # Wrapper of TGeoXtru
 @trydoc raw"""
     ROOT.TGeoXtru
 
+A [TGeoXtru](@ref) shape is represented by the extrusion of an arbitrary polygon with fixed outline between several Z sections.
 
+Each Z section is a scaled version of the same "blueprint" polygon. Different global_ XY translations are allowed from section to section. Corresponding polygon vertices from consecutive sections are connected.
 
+An extruded polygon can be created using the constructor:
 
+    TGeoXtru!TGeoXtru(Int_t nplanes);
+
+(C++ version of the code)
+
+- `nplanes:`number of Z sections (minimum 2)
+
+![https://root.cern/doc/v636/pict1_TGeoXtru_001.png](https://root.cern/doc/v636/pict1_TGeoXtru_001.png)
+
+The lists of X and Y positions for all vertices have to be provided for the "blueprint" polygon:
+
+    TGeoXtru!DefinePolygon (Int_t nvertices, Double_t *xv,
+    Double_t *yv);
+
+(C++ version of the code)
+
+- `nvertices:`number of vertices of the polygon
+- `xv,yv:`arrays of X and Y coordinates for polygon vertices
+
+The method creates an object of the class **`TGeoPolygon`** for which the convexity is automatically determined . The polygon is decomposed into convex polygons if needed.
+
+Next step is to define the Z positions for each section plane as well as the XY offset and scaling for the corresponding polygons.
+
+    TGeoXtru!DefineSection(Int_t snum,Double_t zsection,Double_t x0,
+    Double_t y0, Double_t scale);
+
+(C++ version of the code)
+
+- `snum:`Z section index (0, nplanes-1). The section with `snum = nplanes-1` must be defined last and triggers the computation of the bounding box for the whole shape
+- `zsection:`Z position of section `snum`. Sections must be defined in increasing order of Z (e.g. `snum=0` correspond to the minimum Z and `snum=nplanes-1` to the maximum one).
+- `x0,y0:`offset of section `snum` with respect to the local_ shape reference frame `T`
+- `scale:`factor that multiplies the X/Y coordinates of each vertex of the polygon at section `snum`:
+- `x[ivert] = x0 + scale*xv[ivert]`
+- `y[ivert] = y0 + scale*yv[ivert]`
 
 Related functions: [`Capacity`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DefinePolygon`](@ref), [`DefineSection`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`DrawPolygon`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNvert`](@ref), [`GetNz`](@ref), [`GetScale`](@ref), [`GetThreadData`](@ref), [`GetXOffset`](@ref), [`GetX`](@ref), [`GetYOffset`](@ref), [`GetY`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetCurrentVertices`](@ref), [`SetCurrentZ`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoXtru`](@ref), [`Z`](@ref)
 """ TGeoXtru
@@ -10852,7 +10899,7 @@ Set name and title to empty strings ("").
 # Wrapper of void TNamed::FillBuffer(char *&)
 @trydoc raw"""
     FillBuffer(this::ByRef1{TNamed}, buffer::ByPtr2{Int8})::Nothing
-Encode [TNamed](@ref) Int32o output buffer.
+Encode [TNamed](@ref) into output buffer.
 
 """ FillBuffer(this::ByRef1{TNamed}, buffer::ByPtr2{Int8})
 
@@ -10916,7 +10963,7 @@ Browse object. May be overridden for another default action.
 @trydoc raw"""
     CheckedHash(this::ByRef1{TObject})::UInt64
 Check and record whether this class has a consistent Hash/RecursiveRemove setup (*) and then return the regular Hash value for this object.
-The Int32ent is for this routine to be called instead of directly calling the function Hash during "insert" operations. See TObject!HasInconsistenTObjectHash();
+The intent is for this routine to be called instead of directly calling the function Hash during "insert" operations. See TObject!HasInconsistenTObjectHash();
 
 (*) The setup is consistent when all classes in the class hierarchy that overload [TObject!Hash](@ref) do call [ROOT!CallRecursiveRemoveIfNeeded](@ref) in their destructor. i.e. it is safe to call the Hash virtual function during the RecursiveRemove operation.
 """ CheckedHash(this::ByRef1{TObject})
@@ -10932,7 +10979,7 @@ The Int32ent is for this routine to be called instead of directly calling the fu
 @trydoc raw"""
     Delete(this::ByRef1{TObject}, option::ByCopy{String})::Nothing
 Delete this object.
-Typically called as a command via the Int32erpreter. Normally use "delete" operator when object has been allocated on the heap.
+Typically called as a command via the interpreter. Normally use "delete" operator when object has been allocated on the heap.
 """ Delete(this::ByRef1{TObject}, option::ByCopy{String})
 
 # Wrapper of Int_t TObject::DistancetoPrimitive(Int_t, Int_t)
@@ -10965,10 +11012,10 @@ This method must be overridden if an object can react to graphics events.
 
 # Wrapper of Bool_t TObject::HandleTimer(TTimer *)
 @trydoc raw"""
-    HandleTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})::Bool
+    HandleGetTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})::Bool
 Execute action in response of a timer timing out.
 This method must be overridden if an object has to react to timers.
-""" HandleTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})
+""" HandleGetTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})
 
 # Wrapper of void TObject::InvertBit(UInt_t)
 @trydoc raw"""
@@ -10983,7 +11030,7 @@ This method must be overridden if an object has to react to timers.
 This method must be overridden to handle object notification (the base implementation is no-op).
 Different objects in [ROOT](@ref) use the `Notify` method for different purposes, in coordination with other objects that call this method at the appropriate time.
 
-For example, `TLeaf` uses it to load class information; `TBranchRef` to load contents of referenced branches `TBranchRef`; most notably, based on `Notify`, `TChain` implements a callback mechanism to inform Int32erested parties when it switches to a new sub-tree.
+For example, `TLeaf` uses it to load class information; `TBranchRef` to load contents of referenced branches `TBranchRef`; most notably, based on `Notify`, `TChain` implements a callback mechanism to inform interested parties when it switches to a new sub-tree.
 """ Notify(this::ByRef1{TObject})
 
 # Wrapper of TObject & TObject::operator=(const TObject &)
@@ -11011,7 +11058,7 @@ I.e. it will be drawn last and on top of all other primitives.
 @trydoc raw"""
     Read(this::ByRef1{TObject}, name::ByCopy{String})::Int32
 Read contents of object with specified name from the current directory.
-First the key with the given name is searched in the current directory, next the key buffer is deserialized Int32o the object. The object must have been created before via the default constructor. See [TObject!Write()](@ref).
+First the key with the given name is searched in the current directory, next the key buffer is deserialized into the object. The object must have been created before via the default constructor. See [TObject!Write()](@ref).
 """ Read(this::ByRef1{TObject}, name::ByCopy{String})
 
 # Wrapper of void TObject::RecursiveRemove(TObject *)
@@ -11097,7 +11144,7 @@ If a name is specified, it will be the name of the key. If name is not given, th
 
 The option can be a combination of: kSingleKey, kOverwrite or kWriteDelete Using the kOverwrite option a previous key with the same name is overwritten. The previous key is deleted before writing the new object. Using the kWriteDelete option a previous key with the same name is deleted only after the new object has been written. This option is safer than kOverwrite but it is slower. NOTE: Neither kOverwrite nor kWriteDelete reduces the size of a [TFile](@ref)– the space is simply freed up to be overwritten; in the case of a [TTree](@ref), it is more complicated. If one opens a [TTree](@ref), appends some entries, then writes it out, the behaviour is effectively the same. If, however, one creates a new [TTree](@ref) and writes it out in this way, only the metadata is replaced, effectively making the old data invisible without deleting it. [TTree!Delete()](@ref) can be used to mark all disk space occupied by a [TTree](@ref) as free before overwriting its metadata this way. The kSingleKey option is only used by [TCollection!Write()](@ref) to write a container with a single key instead of each object in the container with its own key.
 
-An object is read from the file Int32o memory via [TKey!Read()](@ref) or via [TObject!Read()](@ref).
+An object is read from the file into memory via [TKey!Read()](@ref) or via [TObject!Read()](@ref).
 
 The function returns the total number of bytes written to the file. It returns 0 if the object cannot be written.
 """ Write(this::ByConstRef1{TObject}, name::ByCopy{String}, option::Int32, bufsize::Int32)
@@ -11229,10 +11276,10 @@ Assign the last selected object.
 
 # Wrapper of void TBrowser::SetStatusText(const char *, Int_t)
 @trydoc raw"""
-    SetStatusText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)::Nothing
+    SetStatusGetText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)::Nothing
 
 
-""" SetStatusText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)
+""" SetStatusGetText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)
 
 # Wrapper of void TBrowser::Show()
 @trydoc raw"""
@@ -11790,10 +11837,10 @@ Push a new data cache area onto the list of area to be used for temporarily stor
 
 # Wrapper of void TBuffer::ReadFastArrayString(Char_t *, Int_t)
 @trydoc raw"""
-    ReadFastArrayString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)::Nothing
+    ReadFastArrayGetString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)::Nothing
 
 
-""" ReadFastArrayString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)
+""" ReadFastArrayGetString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)
 
 # Wrapper of void TBuffer::ReadFastArrayWithFactor(Double_t *, Int_t, Double_t, Double_t)
 @trydoc raw"""
@@ -11951,17 +11998,17 @@ Return the current Process-ID.
 
 # Wrapper of char * TBuffer::ReadString(char *, Int_t)
 @trydoc raw"""
-    ReadString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)::ByCopy{Union{String, Vector{CxxChar}}}
+    ReadGetString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)::ByCopy{Union{String, Vector{CxxChar}}}
 
 
-""" ReadString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)
+""" ReadGetString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)
 
 # Wrapper of void TBuffer::ReadTString(TString &)
 @trydoc raw"""
-    ReadTString(this::ByRef1{TBuffer}, s::ByRef1{TString})::Nothing
+    ReadTGetString(this::ByRef1{TBuffer}, s::ByRef1{TString})::Nothing
 
 
-""" ReadTString(this::ByRef1{TBuffer}, s::ByRef1{TString})
+""" ReadTGetString(this::ByRef1{TBuffer}, s::ByRef1{TString})
 
 # Wrapper of void TBuffer::ReadUChar(UChar_t &)
 @trydoc raw"""
@@ -12408,10 +12455,10 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TBuffer::WriteFastArrayString(const Char_t *, Long64_t)
 @trydoc raw"""
-    WriteFastArrayString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)::Nothing
+    WriteFastArrayGetString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)::Nothing
 
 
-""" WriteFastArrayString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)
+""" WriteFastArrayGetString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)
 
 # Wrapper of void TBuffer::WriteFloat(Float_t)
 @trydoc raw"""
@@ -12471,17 +12518,17 @@ Always return 0 (current processID).
 
 # Wrapper of void TBuffer::WriteString(const char *)
 @trydoc raw"""
-    WriteString(this::ByRef1{TBuffer}, s::ByCopy{String})::Nothing
+    WriteGetString(this::ByRef1{TBuffer}, s::ByCopy{String})::Nothing
 
 
-""" WriteString(this::ByRef1{TBuffer}, s::ByCopy{String})
+""" WriteGetString(this::ByRef1{TBuffer}, s::ByCopy{String})
 
 # Wrapper of void TBuffer::WriteTString(const TString &)
 @trydoc raw"""
-    WriteTString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})::Nothing
+    WriteTGetString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})::Nothing
 
 
-""" WriteTString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})
+""" WriteTGetString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})
 
 # Wrapper of void TBuffer::WriteUChar(UChar_t)
 @trydoc raw"""
@@ -12564,7 +12611,7 @@ If b=0, there is no Browse call TObject!Browse(0) instead. This means [TObject!I
 @trydoc raw"""
     Delete(this::ByRef1{TCollection}, option::ByCopy{String})::Nothing
 Delete this object.
-Typically called as a command via the Int32erpreter. Normally use "delete" operator when object has been allocated on the heap.
+Typically called as a command via the interpreter. Normally use "delete" operator when object has been allocated on the heap.
 """ Delete(this::ByRef1{TCollection}, option::ByCopy{String})
 
 # Wrapper of void TCollection::Draw(Option_t *)
@@ -12655,12 +12702,12 @@ By default all objects in the collection are written individually (each object g
 
 # Wrapper of TString & TString::Append(char, Ssiz_t)
 @trydoc raw"""
-    Append(this::ByRef1{TString}, c::Int8, rep::ByCopy{Int32})::CxxRef1{TString}
+    Append(this::ByRef1{TString}, c::Int8, rep::ByCopy{int})::CxxRef1{TString}
 Append character c rep times to string.
 ###Warning
 
 If length+rep exceeds MaxSize(), then Fatal() is raised and only MaxSize()-length elements are added
-""" Append(this::ByRef1{TString}, c::Int8, rep::ByCopy{Int32})
+""" Append(this::ByRef1{TString}, c::Int8, rep::ByCopy{int})
 
 # Wrapper of TString & TString::Append(const char *)
 @trydoc raw"""
@@ -12671,10 +12718,10 @@ If length+rep exceeds MaxSize(), then Fatal() is raised and only MaxSize()-lengt
 
 # Wrapper of TString & TString::Append(const char *, Ssiz_t)
 @trydoc raw"""
-    Append(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{Int32})::CxxRef1{TString}
+    Append(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{int})::CxxRef1{TString}
 
 
-""" Append(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{Int32})
+""" Append(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{int})
 
 # Wrapper of TString & TString::Append(const TString &)
 @trydoc raw"""
@@ -12685,17 +12732,17 @@ If length+rep exceeds MaxSize(), then Fatal() is raised and only MaxSize()-lengt
 
 # Wrapper of TString & TString::Append(const TString &, Ssiz_t)
 @trydoc raw"""
-    Append(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{Int32})::CxxRef1{TString}
+    Append(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{int})::CxxRef1{TString}
 
 
-""" Append(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{Int32})
+""" Append(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{int})
 
 # Wrapper of Ssiz_t TString::Capacity(Ssiz_t)
 @trydoc raw"""
-    Capacity(this::ByRef1{TString}, n::ByCopy{Int32})::ByCopy{Int32}
+    Capacity(this::ByRef1{TString}, n::ByCopy{int})::ByCopy{int}
 Return string capacity.
 If nc != current capacity Clone() the string in a string with the desired capacity.
-""" Capacity(this::ByRef1{TString}, n::ByCopy{Int32})
+""" Capacity(this::ByRef1{TString}, n::ByCopy{int})
 
 # Wrapper of TString & TString::Chop()
 @trydoc raw"""
@@ -12720,38 +12767,38 @@ Remove the trailing `[\r]\n` if chop is true. Returns kTRUE if data was read.
 
 # Wrapper of TString & TString::Insert(Ssiz_t, const char *)
 @trydoc raw"""
-    Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByCopy{String})::CxxRef1{TString}
+    Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByCopy{String})::CxxRef1{TString}
 
 
-""" Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByCopy{String})
+""" Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByCopy{String})
 
 # Wrapper of TString & TString::Insert(Ssiz_t, const char *, Ssiz_t)
 @trydoc raw"""
-    Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByCopy{String}, extent::ByCopy{Int32})::CxxRef1{TString}
+    Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByCopy{String}, extent::ByCopy{int})::CxxRef1{TString}
 
 
-""" Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByCopy{String}, extent::ByCopy{Int32})
+""" Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByCopy{String}, extent::ByCopy{int})
 
 # Wrapper of TString & TString::Insert(Ssiz_t, const TString &)
 @trydoc raw"""
-    Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByConstRef1{TString})::CxxRef1{TString}
+    Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByConstRef1{TString})::CxxRef1{TString}
 
 
-""" Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByConstRef1{TString})
+""" Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByConstRef1{TString})
 
 # Wrapper of TString & TString::Insert(Ssiz_t, const TString &, Ssiz_t)
 @trydoc raw"""
-    Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByConstRef1{TString}, extent::ByCopy{Int32})::CxxRef1{TString}
+    Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByConstRef1{TString}, extent::ByCopy{int})::CxxRef1{TString}
 
 
-""" Insert(this::ByRef1{TString}, pos::ByCopy{Int32}, s::ByConstRef1{TString}, extent::ByCopy{Int32})
+""" Insert(this::ByRef1{TString}, pos::ByCopy{int}, s::ByConstRef1{TString}, extent::ByCopy{int})
 
 # Wrapper of char & TString::operator()(Ssiz_t)
 @trydoc raw"""
-    paren(this::ByRef1{TString}, i::ByCopy{Int32})::CxxRef2{Int8}
+    paren(this::ByRef1{TString}, i::ByCopy{int})::CxxRef2{Int8}
 
 
-""" paren(this::ByRef1{TString}, i::ByCopy{Int32})
+""" paren(this::ByRef1{TString}, i::ByCopy{int})
 
 # Wrapper of TString & TString::operator+=(char)
 @trydoc raw"""
@@ -12811,19 +12858,19 @@ Move-Assignment operator.
 
 # Wrapper of char & TString::operator[](Ssiz_t)
 @trydoc raw"""
-    Base.getindex(this::ByRef1{TString}, i::ByCopy{Int32})::CxxRef2{Int8}
+    Base.getindex(this::ByRef1{TString}, i::ByCopy{int})::CxxRef2{Int8}
 
 
-""" Base.getindex(this::ByRef1{TString}, i::ByCopy{Int32})
+""" Base.getindex(this::ByRef1{TString}, i::ByCopy{int})
 
 # Wrapper of TString & TString::Prepend(char, Ssiz_t)
 @trydoc raw"""
-    Prepend(this::ByRef1{TString}, c::Int8, rep::ByCopy{Int32})::CxxRef1{TString}
+    Prepend(this::ByRef1{TString}, c::Int8, rep::ByCopy{int})::CxxRef1{TString}
 Prepend character c rep times to string.
 ###Warning
 
 If length+rep exceeds MaxSize(), then Fatal() is raised and only MaxSize()-length elements are added
-""" Prepend(this::ByRef1{TString}, c::Int8, rep::ByCopy{Int32})
+""" Prepend(this::ByRef1{TString}, c::Int8, rep::ByCopy{int})
 
 # Wrapper of TString & TString::Prepend(const char *)
 @trydoc raw"""
@@ -12834,10 +12881,10 @@ If length+rep exceeds MaxSize(), then Fatal() is raised and only MaxSize()-lengt
 
 # Wrapper of TString & TString::Prepend(const char *, Ssiz_t)
 @trydoc raw"""
-    Prepend(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{Int32})::CxxRef1{TString}
+    Prepend(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{int})::CxxRef1{TString}
 
 
-""" Prepend(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{Int32})
+""" Prepend(this::ByRef1{TString}, cs::ByCopy{String}, n::ByCopy{int})
 
 # Wrapper of TString & TString::Prepend(const TString &)
 @trydoc raw"""
@@ -12848,10 +12895,10 @@ If length+rep exceeds MaxSize(), then Fatal() is raised and only MaxSize()-lengt
 
 # Wrapper of TString & TString::Prepend(const TString &, Ssiz_t)
 @trydoc raw"""
-    Prepend(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{Int32})::CxxRef1{TString}
+    Prepend(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{int})::CxxRef1{TString}
 
 
-""" Prepend(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{Int32})
+""" Prepend(this::ByRef1{TString}, s::ByConstRef1{TString}, n::ByCopy{int})
 
 # Wrapper of void TString::Puts(FILE *)
 @trydoc raw"""
@@ -12869,45 +12916,45 @@ Read string from I/O buffer.
 
 # Wrapper of TString & TString::Remove(Ssiz_t)
 @trydoc raw"""
-    Remove(this::ByRef1{TString}, pos::ByCopy{Int32})::CxxRef1{TString}
+    Remove(this::ByRef1{TString}, pos::ByCopy{int})::CxxRef1{TString}
 
 
-""" Remove(this::ByRef1{TString}, pos::ByCopy{Int32})
+""" Remove(this::ByRef1{TString}, pos::ByCopy{int})
 
 # Wrapper of TString & TString::Remove(Ssiz_t, Ssiz_t)
 @trydoc raw"""
-    Remove(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32})::CxxRef1{TString}
+    Remove(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int})::CxxRef1{TString}
 
 
-""" Remove(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32})
+""" Remove(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int})
 
 # Wrapper of TString & TString::Replace(Ssiz_t, Ssiz_t, const char *)
 @trydoc raw"""
-    Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32}, s::ByCopy{String})::CxxRef1{TString}
+    Replace(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int}, s::ByCopy{String})::CxxRef1{TString}
 
 
-""" Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32}, s::ByCopy{String})
+""" Replace(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int}, s::ByCopy{String})
 
 # Wrapper of TString & TString::Replace(Ssiz_t, Ssiz_t, const char *, Ssiz_t)
 @trydoc raw"""
-    Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32}, s::ByCopy{String}, ns::ByCopy{Int32})::CxxRef1{TString}
+    Replace(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int}, s::ByCopy{String}, ns::ByCopy{int})::CxxRef1{TString}
 Remove at most n1 characters from self beginning at pos, and replace them with the first n2 characters of cs.
 
-""" Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32}, s::ByCopy{String}, ns::ByCopy{Int32})
+""" Replace(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int}, s::ByCopy{String}, ns::ByCopy{int})
 
 # Wrapper of TString & TString::Replace(Ssiz_t, Ssiz_t, const TString &)
 @trydoc raw"""
-    Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32}, s::ByConstRef1{TString})::CxxRef1{TString}
+    Replace(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int}, s::ByConstRef1{TString})::CxxRef1{TString}
 
 
-""" Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n::ByCopy{Int32}, s::ByConstRef1{TString})
+""" Replace(this::ByRef1{TString}, pos::ByCopy{int}, n::ByCopy{int}, s::ByConstRef1{TString})
 
 # Wrapper of TString & TString::Replace(Ssiz_t, Ssiz_t, const TString &, Ssiz_t)
 @trydoc raw"""
-    Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n1::ByCopy{Int32}, s::ByConstRef1{TString}, n2::ByCopy{Int32})::CxxRef1{TString}
+    Replace(this::ByRef1{TString}, pos::ByCopy{int}, n1::ByCopy{int}, s::ByConstRef1{TString}, n2::ByCopy{int})::CxxRef1{TString}
 
 
-""" Replace(this::ByRef1{TString}, pos::ByCopy{Int32}, n1::ByCopy{Int32}, s::ByConstRef1{TString}, n2::ByCopy{Int32})
+""" Replace(this::ByRef1{TString}, pos::ByCopy{int}, n1::ByCopy{int}, s::ByConstRef1{TString}, n2::ByCopy{int})
 
 # Wrapper of TString & TString::ReplaceAll(const char *, const char *)
 @trydoc raw"""
@@ -12925,10 +12972,10 @@ Remove at most n1 characters from self beginning at pos, and replace them with t
 
 # Wrapper of TString & TString::ReplaceAll(const char *, Ssiz_t, const char *, Ssiz_t)
 @trydoc raw"""
-    ReplaceAll(this::ByRef1{TString}, s1::ByCopy{String}, ls1::ByCopy{Int32}, s2::ByCopy{String}, ls2::ByCopy{Int32})::CxxRef1{TString}
+    ReplaceAll(this::ByRef1{TString}, s1::ByCopy{String}, ls1::ByCopy{int}, s2::ByCopy{String}, ls2::ByCopy{int})::CxxRef1{TString}
 Find & Replace ls1 symbols of s1 with ls2 symbols of s2 if any.
 
-""" ReplaceAll(this::ByRef1{TString}, s1::ByCopy{String}, ls1::ByCopy{Int32}, s2::ByCopy{String}, ls2::ByCopy{Int32})
+""" ReplaceAll(this::ByRef1{TString}, s1::ByCopy{String}, ls1::ByCopy{int}, s2::ByCopy{String}, ls2::ByCopy{int})
 
 # Wrapper of TString & TString::ReplaceAll(const TString &, const char *)
 @trydoc raw"""
@@ -12953,10 +13000,10 @@ Result can be stored as string argument in [ROOT](@ref) macros. The content of [
 
 # Wrapper of void TString::Resize(Ssiz_t)
 @trydoc raw"""
-    Resize(this::ByRef1{TString}, n::ByCopy{Int32})::Nothing
+    Resize(this::ByRef1{TString}, n::ByCopy{int})::Nothing
 Resize the string. Truncate or add blanks as necessary.
 
-""" Resize(this::ByRef1{TString}, n::ByCopy{Int32})
+""" Resize(this::ByRef1{TString}, n::ByCopy{int})
 
 # Wrapper of void TString::Streamer(TBuffer &)
 @trydoc raw"""
@@ -12995,10 +13042,10 @@ Change string to upper case.
 
 # Wrapper of char & TSubString::operator()(Ssiz_t)
 @trydoc raw"""
-    paren(this::ByRef1{TSubString}, i::ByCopy{Int32})::CxxRef2{Int8}
+    paren(this::ByRef1{TSubString}, i::ByCopy{int})::CxxRef2{Int8}
 Return character at pos i from sub-string. No check on i.
 
-""" paren(this::ByRef1{TSubString}, i::ByCopy{Int32})
+""" paren(this::ByRef1{TSubString}, i::ByCopy{int})
 
 # Wrapper of TSubString & TSubString::operator=(const char *)
 @trydoc raw"""
@@ -13023,17 +13070,17 @@ Assign string to sub-string.
 
 # Wrapper of char & TSubString::operator[](Ssiz_t)
 @trydoc raw"""
-    Base.getindex(this::ByRef1{TSubString}, i::ByCopy{Int32})::CxxRef2{Int8}
+    Base.getindex(this::ByRef1{TSubString}, i::ByCopy{int})::CxxRef2{Int8}
 Return character at pos i from sub-string. Check validity of i.
 
-""" Base.getindex(this::ByRef1{TSubString}, i::ByCopy{Int32})
+""" Base.getindex(this::ByRef1{TSubString}, i::ByCopy{int})
 
 # Wrapper of TString & TSubString::String()
 @trydoc raw"""
-    String(this::ByRef1{TSubString})::CxxRef1{TString}
+    GetString(this::ByRef1{TSubString})::CxxRef1{TString}
 
 
-""" String(this::ByRef1{TSubString})
+""" GetString(this::ByRef1{TSubString})
 
 # Wrapper of void TSubString::ToLower()
 @trydoc raw"""
@@ -13671,7 +13718,7 @@ The recursive traversal is not performed for classes not deriving from [TQClass]
 Non-static method is used to connect from the signal of this object to the receiver slot.
 Warning! No check on consistency of sender/receiver classes/methods.
 
-This method makes possible to have connection/signals from Int32erpreted class. See also RQ_OBJECT.h.
+This method makes possible to have connection/signals from interpreted class. See also RQ_OBJECT.h.
 """ Connect(this::ByRef1{TQObject}, signal::ByCopy{String}, receiver_class::ByCopy{String}, receiver::ByPtr2{Nothing}, slot::ByCopy{String})
 
 # Wrapper of void TQObject::Connected(const char *)
@@ -13813,10 +13860,10 @@ Specific [TApplication](@ref) implementations may want something different here.
 
 # Wrapper of void TApplication::HandleIdleTimer()
 @trydoc raw"""
-    HandleIdleTimer(this::ByRef1{TApplication})::Nothing
+    HandleIdleGetTimer(this::ByRef1{TApplication})::Nothing
 Handle idle timeout.
 When this timer expires the registered idle command will be executed by this routine and a signal will be emitted.
-""" HandleIdleTimer(this::ByRef1{TApplication})
+""" HandleIdleGetTimer(this::ByRef1{TApplication})
 
 # Wrapper of Bool_t TApplication::HandleTermInput()
 @trydoc raw"""
@@ -13945,7 +13992,7 @@ Process a file containing a C++ macro.
 # Wrapper of Longptr_t TApplication::ProcessLine(const char *, Bool_t, Int_t *)
 @trydoc raw"""
     ProcessLine(this::ByRef1{TApplication}, line::ByCopy{String}, sync::Bool, error::ByPtr2{Int32})::Int64
-Process a single command line, either a C++ statement or an Int32erpreter command starting with a ".".
+Process a single command line, either a C++ statement or an interpreter command starting with a ".".
 Return the return value of the command cast to a long.
 """ ProcessLine(this::ByRef1{TApplication}, line::ByCopy{String}, sync::Bool, error::ByPtr2{Int32})
 
@@ -13958,9 +14005,9 @@ Return the return value of the command cast to a long.
 
 # Wrapper of void TApplication::RemoveIdleTimer()
 @trydoc raw"""
-    RemoveIdleTimer(this::ByRef1{TApplication})::Nothing
+    RemoveIdleGetTimer(this::ByRef1{TApplication})::Nothing
 Remove idle timer. Normally called via TROOT!Idle(0).
-""" RemoveIdleTimer(this::ByRef1{TApplication})
+""" RemoveIdleGetTimer(this::ByRef1{TApplication})
 
 # Wrapper of void TApplication::ReturnPressed(char *)
 @trydoc raw"""
@@ -13986,10 +14033,10 @@ Set console echo mode:
 
 # Wrapper of void TApplication::SetIdleTimer(UInt_t, const char *)
 @trydoc raw"""
-    SetIdleTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})::Nothing
+    SetIdleGetTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})::Nothing
 Set the command to be executed after the system has been idle for idleTimeInSec seconds.
 Normally called via TROOT!Idle(...).
-""" SetIdleTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})
+""" SetIdleGetTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})
 
 # Wrapper of void TApplication::SetReturnFromRun(Bool_t)
 @trydoc raw"""
@@ -14114,7 +14161,7 @@ The default value for all axis can be set with the static function `TGaxis!SetMa
 # Wrapper of void TAttAxis::SetNdivisions(Int_t, Int_t, Int_t, Bool_t)
 @trydoc raw"""
     SetNdivisions(this::ByRef1{TAttAxis}, n1::Int32, n2::Int32, n3::Int32, optim::Bool)::Nothing
-Set the number of divisions for this axis using one `Int32` per division level.
+Set the number of divisions for this axis using one `int` per division level.
 
 """ SetNdivisions(this::ByRef1{TAttAxis}, n1::Int32, n2::Int32, n3::Int32, optim::Bool)
 
@@ -14740,10 +14787,10 @@ Stream an object of class [TAttPad](@ref).
 
 # Wrapper of Float_t TAttText::GetTextSizePercent(Float_t)
 @trydoc raw"""
-    GetTextSizePercent(this::ByRef1{TAttText}, size::Float32)::Float32
+    GetGetTextSizePercent(this::ByRef1{TAttText}, size::Float32)::Float32
 Return the text in percent of the pad size.
-If the font precision is greater than 2, the text size returned is the size in pixel converted Int32o percent of the pad size, otherwise the size returned is the same as the size given as input parameter.
-""" GetTextSizePercent(this::ByRef1{TAttText}, size::Float32)
+If the font precision is greater than 2, the text size returned is the size in pixel converted into percent of the pad size, otherwise the size returned is the same as the size given as input parameter.
+""" GetGetTextSizePercent(this::ByRef1{TAttText}, size::Float32)
 
 # Wrapper of void TAttText::Modify()
 @trydoc raw"""
@@ -14754,42 +14801,42 @@ Change current text attributes if necessary.
 
 # Wrapper of void TAttText::ResetAttText(Option_t *)
 @trydoc raw"""
-    ResetAttText(this::ByRef1{TAttText}, toption::ByCopy{String})::Nothing
+    ResetAttGetText(this::ByRef1{TAttText}, toption::ByCopy{String})::Nothing
 Reset this text attributes to default values.
 
-""" ResetAttText(this::ByRef1{TAttText}, toption::ByCopy{String})
+""" ResetAttGetText(this::ByRef1{TAttText}, toption::ByCopy{String})
 
 # Wrapper of void TAttText::SetTextAlign(Short_t)
 @trydoc raw"""
-    SetTextAlign(this::ByRef1{TAttText}, align::Int16)::Nothing
+    SetGetTextAlign(this::ByRef1{TAttText}, align::Int16)::Nothing
 Set the text alignment.
 
-""" SetTextAlign(this::ByRef1{TAttText}, align::Int16)
+""" SetGetTextAlign(this::ByRef1{TAttText}, align::Int16)
 
 # Wrapper of void TAttText::SetTextAngle(Float_t)
 @trydoc raw"""
-    SetTextAngle(this::ByRef1{TAttText}, tangle::Float32)::Nothing
+    SetGetTextAngle(this::ByRef1{TAttText}, tangle::Float32)::Nothing
 Set the text angle.
 
-""" SetTextAngle(this::ByRef1{TAttText}, tangle::Float32)
+""" SetGetTextAngle(this::ByRef1{TAttText}, tangle::Float32)
 
 # Wrapper of void TAttText::SetTextAttributes()
 @trydoc raw"""
-    SetTextAttributes(this::ByRef1{TAttText})::Nothing
+    SetGetTextAttributes(this::ByRef1{TAttText})::Nothing
 Invoke the DialogCanvas Text attributes.
 
-""" SetTextAttributes(this::ByRef1{TAttText})
+""" SetGetTextAttributes(this::ByRef1{TAttText})
 
 # Wrapper of void TAttText::SetTextColor(Color_t)
 @trydoc raw"""
-    SetTextColor(this::ByRef1{TAttText}, tcolor::Int16)::Nothing
+    SetGetTextColor(this::ByRef1{TAttText}, tcolor::Int16)::Nothing
 Set the text color.
 
-""" SetTextColor(this::ByRef1{TAttText}, tcolor::Int16)
+""" SetGetTextColor(this::ByRef1{TAttText}, tcolor::Int16)
 
 # Wrapper of void TAttText::SetTextColorAlpha(Color_t, Float_t)
 @trydoc raw"""
-    SetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)::Nothing
+    SetGetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)::Nothing
 Set a transparent text color.
 ## Arguments
 
@@ -14803,30 +14850,30 @@ Set a transparent text color.
 ###Note
 
 talpha is ignored (treated as 1) if the TCanvas has no GL support activated.
-""" SetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)
+""" SetGetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)
 
 # Wrapper of void TAttText::SetTextFont(Font_t)
 @trydoc raw"""
-    SetTextFont(this::ByRef1{TAttText}, tfont::Int16)::Nothing
+    SetGetTextFont(this::ByRef1{TAttText}, tfont::Int16)::Nothing
 Set the text font.
 
-""" SetTextFont(this::ByRef1{TAttText}, tfont::Int16)
+""" SetGetTextFont(this::ByRef1{TAttText}, tfont::Int16)
 
 # Wrapper of void TAttText::SetTextSize(Float_t)
 @trydoc raw"""
-    SetTextSize(this::ByRef1{TAttText}, tsize::Float32)::Nothing
+    SetGetTextSize(this::ByRef1{TAttText}, tsize::Float32)::Nothing
 Set the text size.
 
-""" SetTextSize(this::ByRef1{TAttText}, tsize::Float32)
+""" SetGetTextSize(this::ByRef1{TAttText}, tsize::Float32)
 
 # Wrapper of void TAttText::SetTextSizePixels(Int_t)
 @trydoc raw"""
-    SetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)::Nothing
+    SetGetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)::Nothing
 Set the text size in pixel.
 Set the text size in pixels.
 
 If the font precision is greater than 2, the text size is set to npixels, otherwise the text size is computed as a percent of the pad size.
-""" SetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)
+""" SetGetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)
 
 # Wrapper of void TAttText::Streamer(TBuffer &)
 @trydoc raw"""
@@ -14958,7 +15005,7 @@ Stops Benchmark name and Prints results.
 @trydoc raw"""
     Start(this::ByRef1{TBenchmark}, name::ByCopy{String})::Nothing
 Starts Benchmark with the specified name.
-An independent timer (see class [TStopwatch](@ref)) is started. The name of the benchmark is entered Int32o the list of benchmarks. Benchmark can be stopped via [TBenchmark!Stop()](@ref). Results can be printed via [TBenchmark!Print()](@ref). [TBenchmark!Show()](@ref) can be used to stop benchmark and print results. If name is an already existing benchmark, timing will resume. A summary of all benchmarks can be seen via [TBenchmark!Summary()](@ref).
+An independent timer (see class [TStopwatch](@ref)) is started. The name of the benchmark is entered into the list of benchmarks. Benchmark can be stopped via [TBenchmark!Stop()](@ref). Results can be printed via [TBenchmark!Print()](@ref). [TBenchmark!Show()](@ref) can be used to stop benchmark and print results. If name is an already existing benchmark, timing will resume. A summary of all benchmarks can be seen via [TBenchmark!Summary()](@ref).
 """ Start(this::ByRef1{TBenchmark}, name::ByCopy{String})
 
 # Wrapper of void TBenchmark::Stop(const char *)
@@ -15253,14 +15300,14 @@ Expand or shrink the array to newSize elements.
 @trydoc raw"""
     ExpandCreate(this::ByRef1{TClonesArray}, n::Int32)::Nothing
 Expand or shrink the array to n elements and create the clone objects by calling their default ctor.
-If n is less than the current size the array is shrunk and the allocated space is freed. This routine is typically used to create a clonesarray Int32o which one can directly copy object data without going via the "new (arr[i]) MyObj()" (i.e. the vtbl is already set correctly).
+If n is less than the current size the array is shrunk and the allocated space is freed. This routine is typically used to create a clonesarray into which one can directly copy object data without going via the "new (arr[i]) MyObj()" (i.e. the vtbl is already set correctly).
 """ ExpandCreate(this::ByRef1{TClonesArray}, n::Int32)
 
 # Wrapper of void TClonesArray::ExpandCreateFast(Int_t)
 @trydoc raw"""
     ExpandCreateFast(this::ByRef1{TClonesArray}, n::Int32)::Nothing
 Expand or shrink the array to n elements and create the clone objects by calling their default ctor.
-If n is less than the current size the array is shrunk but the allocated space is *not* freed. This routine is typically used to create a clonesarray Int32o which one can directly copy object data without going via the "new (arr[i]) MyObj()" (i.e. the vtbl is already set correctly). This is a simplified version of ExpandCreate used in the [TTree](@ref) mechanism.
+If n is less than the current size the array is shrunk but the allocated space is *not* freed. This routine is typically used to create a clonesarray into which one can directly copy object data without going via the "new (arr[i]) MyObj()" (i.e. the vtbl is already set correctly). This is a simplified version of ExpandCreate used in the [TTree](@ref) mechanism.
 """ ExpandCreateFast(this::ByRef1{TClonesArray}, n::Int32)
 
 # Wrapper of void TClonesArray::MultiSort(Int_t, TClonesArray **, Int_t)
@@ -15443,7 +15490,7 @@ Stream an object of class [TObject](@ref).
 # Wrapper of void TDatime::FillBuffer(char *&)
 @trydoc raw"""
     FillBuffer(this::ByRef1{TDatime}, buffer::ByPtr2{Int8})::Nothing
-Encode Date/Time Int32o buffer, used by I/O system.
+Encode Date/Time into buffer, used by I/O system.
 
 """ FillBuffer(this::ByRef1{TDatime}, buffer::ByPtr2{Int8})
 
@@ -15465,7 +15512,7 @@ Decode Date/Time from output buffer, used by I/O system.
 @trydoc raw"""
     Set(this::ByRef1{TDatime})::Nothing
 Set Date/Time to current time as reported by the system.
-Date and Time are encoded Int32o one single unsigned 32 bit word. Date is stored with the origin being the 1st January 1995. Time has 1 second precision.
+Date and Time are encoded into one single unsigned 32 bit word. Date is stored with the origin being the 1st January 1995. Time has 1 second precision.
 """ Set(this::ByRef1{TDatime})
 
 # Wrapper of void TDatime::Set(const char *)
@@ -15481,7 +15528,7 @@ Expects as input a string in SQL date/time compatible format, like: yyyy-mm-dd h
 Set date and time.
 Data must be in format 980418 or 19980418 and time in 224512 (second precision). The date must be >= 950101.
 
-For years >= 2000, date can be given in the form 20001127 or 1001127 Int32ernally the date will be converted to 1001127
+For years >= 2000, date can be given in the form 20001127 or 1001127 internally the date will be converted to 1001127
 """ Set(this::ByRef1{TDatime}, date::Int32, time::Int32)
 
 # Wrapper of void TDatime::Set(Int_t, Int_t, Int_t, Int_t, Int_t, Int_t)
@@ -15515,7 +15562,7 @@ Stream a object of type [TDatime](@ref).
 # Wrapper of void TUUID::FillBuffer(char *&)
 @trydoc raw"""
     FillBuffer(this::ByRef1{TUUID}, buffer::ByPtr2{Int8})::Nothing
-Stream UUID Int32o output buffer.
+Stream UUID into output buffer.
 
 """ FillBuffer(this::ByRef1{TUUID}, buffer::ByPtr2{Int8})
 
@@ -16058,7 +16105,7 @@ Delete key buffer(s).
 # Wrapper of void TKey::FillBuffer(char *&)
 @trydoc raw"""
     FillBuffer(this::ByRef1{TKey}, buffer::ByPtr2{Int8})::Nothing
-Encode key header Int32o output buffer.
+Encode key header into output buffer.
 
 """ FillBuffer(this::ByRef1{TKey}, buffer::ByPtr2{Int8})
 
@@ -16080,7 +16127,7 @@ When the KEEP flag is set to 1 the object cannot be purged.
 @trydoc raw"""
     Read(this::ByRef1{TKey}, obj::ByPtr1{TObject})::Int32
 To read an object from the file.
-The object associated to this key is read from the file Int32o memory. Before invoking this function, obj has been created via the default constructor.
+The object associated to this key is read from the file into memory. Before invoking this function, obj has been created via the default constructor.
 """ Read(this::ByRef1{TKey}, obj::ByPtr1{TObject})
 
 # Wrapper of void TKey::ReadBuffer(char *&)
@@ -16108,7 +16155,7 @@ Decode input buffer.
 @trydoc raw"""
     ReadObj(this::ByRef1{TKey})::CxxPtr1{TObject}
 To read a TObject* from the file.
-The object associated to this key is read from the file Int32o memory Once the key structure is read (via Streamer) the class identifier of the object is known. Using the class identifier we find the [TClass](@ref) object for this class. A [TClass](@ref) object contains a full description (i.e. dictionary) of the associated class. In particular the [TClass](@ref) object can create a new object of the class type it describes. This new object now calls its Streamer function to rebuilt itself.
+The object associated to this key is read from the file into memory Once the key structure is read (via Streamer) the class identifier of the object is known. Using the class identifier we find the [TClass](@ref) object for this class. A [TClass](@ref) object contains a full description (i.e. dictionary) of the associated class. In particular the [TClass](@ref) object can create a new object of the class type it describes. This new object now calls its Streamer function to rebuilt itself.
 
 Use [TKey!ReadObjectAny](@ref) to read any object non-derived from [TObject](@ref)
 
@@ -16157,18 +16204,18 @@ So for example if the class Bottom inherits from Top and the object stored is of
 
 (C++ version of the code)
 
- The object associated to this key is read from the file Int32o memory. Once the key structure is read (via Streamer) the class identifier of the object is known. Using the class identifier we find the [TClass](@ref) object for this class. A [TClass](@ref) object contains a full description (i.e. dictionary) of the associated class. In particular the [TClass](@ref) object can create a new object of the class type it describes. This new object now calls its Streamer function to rebuilt itself.
+ The object associated to this key is read from the file into memory. Once the key structure is read (via Streamer) the class identifier of the object is known. Using the class identifier we find the [TClass](@ref) object for this class. A [TClass](@ref) object contains a full description (i.e. dictionary) of the associated class. In particular the [TClass](@ref) object can create a new object of the class type it describes. This new object now calls its Streamer function to rebuilt itself.
 """ ReadObjectAny(this::ByRef1{TKey}, expectedClass::ByConstPtr1{TClass})
 
 # Wrapper of TObject * TKey::ReadObjWithBuffer(char *)
 @trydoc raw"""
     ReadObjWithBuffer(this::ByRef1{TKey}, bufferRead::ByPtr2{Int8})::CxxPtr1{TObject}
 To read a TObject* from bufferRead.
-This function is identical to [TKey!ReadObj](@ref), but it reads directly from bufferRead instead of reading from a file. The object associated to this key is read from the buffer Int32o memory Using the class identifier we find the [TClass](@ref) object for this class. A [TClass](@ref) object contains a full description (i.e. dictionary) of the associated class. In particular the [TClass](@ref) object can create a new object of the class type it describes. This new object now calls its Streamer function to rebuilt itself.
+This function is identical to [TKey!ReadObj](@ref), but it reads directly from bufferRead instead of reading from a file. The object associated to this key is read from the buffer into memory Using the class identifier we find the [TClass](@ref) object for this class. A [TClass](@ref) object contains a full description (i.e. dictionary) of the associated class. In particular the [TClass](@ref) object can create a new object of the class type it describes. This new object now calls its Streamer function to rebuilt itself.
 
 ### Note
 
-This function is called only Int32ernally by [ROOT](@ref) classes. Although being public it is not supposed to be used outside [ROOT](@ref). If used, you must make sure that the bufferRead is large enough to accomodate the object being read.
+This function is called only internally by [ROOT](@ref) classes. Although being public it is not supposed to be used outside [ROOT](@ref). If used, you must make sure that the bufferRead is large enough to accomodate the object being read.
 """ ReadObjWithBuffer(this::ByRef1{TKey}, bufferRead::ByPtr2{Int8})
 
 # Wrapper of void TKey::SetBuffer()
@@ -16322,7 +16369,7 @@ Read the logical record header starting at a certain postion.
     read offset 
     
 - **`maxbytes`** [in] 
-    Bytes which are read Int32o buf. 
+    Bytes which are read into buf. 
     
 - **`nbytes`** [out] 
     Number of bytes in record if negative, this is a deleted record if 0, cannot read record, wrong value of argument first 
@@ -16374,7 +16421,7 @@ Using the list, one can access additional information, e.g.:
 @trydoc raw"""
     MakeFree(this::ByRef1{TFile}, first::Int64, last::Int64)::Nothing
 Mark unused bytes on the file.
-The list of free segments is in the fFree linked list. When an object is deleted from the file, the freed space is added Int32o the FREE linked list (fFree). The FREE list consists of a chain of consecutive free segments on the file. At the same time, the first 4 bytes of the freed record on the file are overwritten by GAPSIZE where GAPSIZE = -(Number of bytes occupied by the record).
+The list of free segments is in the fFree linked list. When an object is deleted from the file, the freed space is added into the FREE linked list (fFree). The FREE list consists of a chain of consecutive free segments on the file. At the same time, the first 4 bytes of the freed record on the file are overwritten by GAPSIZE where GAPSIZE = -(Number of bytes occupied by the record).
 """ MakeFree(this::ByRef1{TFile}, first::Int64, last::Int64)
 
 # Wrapper of void TFile::MakeProject(const char *, const char *, Option_t *)
@@ -16386,7 +16433,7 @@ Generate code in directory dirname for all classes specified in argument classes
 The code generated includes:
 
 - *dirnameProjectHeaders.h*, which contains one `#include` statement per generated header file
-- *dirnameProjectSource.cxx*,which contains all the constructors and destructors implementation. and one header per class that is not nested inside another class. The header file name is the fully qualified name of the class after all the special characters "<>,:" are replaced by underscored. For example for std!pair<edm!Vertex,Int32> the file name is pair_edm__Vertex_int_.h
+- *dirnameProjectSource.cxx*,which contains all the constructors and destructors implementation. and one header per class that is not nested inside another class. The header file name is the fully qualified name of the class after all the special characters "<>,:" are replaced by underscored. For example for std!pair<edm!Vertex,int> the file name is pair_edm__Vertex_int_.h
 
 In the generated classes, map, multimap when the first template parameter is a class are replaced by a vector of pair. set and multiset when the tempalte parameter is a class are replaced by a vector. This is required since we do not have the code needed to order and/or compare the object of the classes. This is a quick explanation of the options available: 
 | **Option**    | **Details**                                                                                                                                                                                                                          |
@@ -16410,7 +16457,7 @@ If, in addition to one of the 3 above options, the option "+" is specified, the 
 - creates the build script MAKEP
 - creates a LinkDef.h file
 - runs rootcint generating demoProjectDict.cxx
-- compiles demoProjectDict.cxx Int32o demoProjectDict.o
+- compiles demoProjectDict.cxx into demoProjectDict.o
 - generates a shared lib demo.so
 - dynamically links the shared lib demo.so to the executable If only the option "+" had been specified, one can still link the shared lib to the current executable themodule with: 
 ```
@@ -16548,7 +16595,7 @@ The function returns the number of keys that have been recovered. If no keys can
 If the file has been recovered, the bit kRecovered is set in the [TFile](@ref) object in memory. You can test if the file has been recovered with 
 ```
 if (f.TestBit(TFile!kRecovered)) {... the file has been recovered}
-```  When writing TTrees to a file, it is important to save the Tree header at regular Int32ervals (see [TTree!AutoSave](@ref)). If a file containing a Tree is recovered, the last Tree header written to the file will be used. In this case all the entries in all the branches written before writing the header are valid entries. One can disable the automatic recovery procedure by setting 
+```  When writing TTrees to a file, it is important to save the Tree header at regular intervals (see [TTree!AutoSave](@ref)). If a file containing a Tree is recovered, the last Tree header written to the file will be used. In this case all the entries in all the branches written before writing the header are valid entries. One can disable the automatic recovery procedure by setting 
 ```
 TFile.Recover 0
 ```  in the *system.rootrc* file.
@@ -16712,13 +16759,13 @@ Set or create a double resource value.
 @trydoc raw"""
     SetValue(this::ByRef1{TEnv}, name::ByCopy{String}, level::ByCopy{EEnvLevel})::Nothing
 Set the value of a resource or create a new resource.
-Use this method to set a resource like, "name=val". If just "name" is given it will be Int32erpreted as "name=1".
+Use this method to set a resource like, "name=val". If just "name" is given it will be interpreted as "name=1".
 """ SetValue(this::ByRef1{TEnv}, name::ByCopy{String}, level::ByCopy{EEnvLevel})
 
 # Wrapper of void TEnv::SetValue(const char *, Int_t)
 @trydoc raw"""
     SetValue(this::ByRef1{TEnv}, name::ByCopy{String}, value::Int32)::Nothing
-Set or create an Int32eger resource value.
+Set or create an integer resource value.
 
 """ SetValue(this::ByRef1{TEnv}, name::ByCopy{String}, value::Int32)
 
@@ -16871,7 +16918,7 @@ Return the previous state.
 Note: To test whether the usage is enabled do: collection->TestBit(TCollection!kUseRWLock);
 """ UseRWLock(this::ByRef1{THashList}, enable::Bool)
 
-# Wrapper of void TExceptionHandler::HandleException(Int32)
+# Wrapper of void TExceptionHandler::HandleException(int)
 @trydoc raw"""
     HandleException(this::ByRef1{TExceptionHandler}, sig::Int32)::Nothing
 
@@ -16983,7 +17030,7 @@ Creates a subset of the files that have the kStaged & !kCorrupted bit set.
 # Wrapper of Long64_t TFileCollection::Merge(TCollection *)
 @trydoc raw"""
     Merge(this::ByRef1{TFileCollection}, list::ByPtr1{TCollection})::Int64
-Merge all [TFileCollection](@ref) objects in li Int32o this [TFileCollection](@ref) object.
+Merge all [TFileCollection](@ref) objects in li into this [TFileCollection](@ref) object.
 Updates counters at the theend. Returns the number of merged collections or -1 in case of error.
 """ Merge(this::ByRef1{TFileCollection}, list::ByPtr1{TCollection})
 
@@ -17557,7 +17604,7 @@ When clicking in the browser, the following action is performed on this macro, d
 
 (C++ version of the code)
 
- By default [TMacro.Browse](@ref)="" -if [TMacro.Browse](@ref) ="" the macro is executed -if [TMacro.Browse](@ref) ="Print" the macro is printed in stdout -if [TMacro.Browse](@ref) is of the form "mymacro.C" the macro void mymacro.C(TMacro *m) is called where m=this macro An example of macro.C saving the macro Int32o a file and viewing it with emacs is shown below: 
+ By default [TMacro.Browse](@ref)="" -if [TMacro.Browse](@ref) ="" the macro is executed -if [TMacro.Browse](@ref) ="Print" the macro is printed in stdout -if [TMacro.Browse](@ref) is of the form "mymacro.C" the macro void mymacro.C(TMacro *m) is called where m=this macro An example of macro.C saving the macro into a file and viewing it with emacs is shown below: 
 
     void mymacro(TMacro *m) {
        m->SaveSource("xx.log");
@@ -17801,19 +17848,19 @@ Return date/time make was run.
 @trydoc raw"""
     GetListOfGlobalFunctions(this::ByRef1{TROOT}, load::Bool)::CxxPtr1{TCollection}
 Return list containing the TFunctions currently defined.
-Since functions are created and deleted during execution of the program, we need to update the list of functions every time we execute this method. However, when calling this function in a (tight) loop where no Int32erpreter symbols will be created you can set load=kFALSE (default).
+Since functions are created and deleted during execution of the program, we need to update the list of functions every time we execute this method. However, when calling this function in a (tight) loop where no interpreter symbols will be created you can set load=kFALSE (default).
 """ GetListOfGlobalFunctions(this::ByRef1{TROOT}, load::Bool)
 
 # Wrapper of TCollection * TROOT::GetListOfGlobals(Bool_t)
 @trydoc raw"""
     GetListOfGlobals(this::ByRef1{TROOT}, load::Bool)::CxxPtr1{TCollection}
 Return list containing the TGlobals currently defined.
-Since globals are created and deleted during execution of the program, we need to update the list of globals every time we execute this method. However, when calling this function in a (tight) loop where no Int32erpreter symbols will be created you can set load=kFALSE (default).
+Since globals are created and deleted during execution of the program, we need to update the list of globals every time we execute this method. However, when calling this function in a (tight) loop where no interpreter symbols will be created you can set load=kFALSE (default).
 """ GetListOfGlobals(this::ByRef1{TROOT}, load::Bool)
 
 # Wrapper of TCollection * TROOT::GetListOfTypes(Bool_t)
 @trydoc raw"""
-    GetListOfTypes(this::ByRef1{TROOT}, load::Bool)::CxxPtr1{TCollection}
+    GetListOfGetTypes(this::ByRef1{TROOT}, load::Bool)::CxxPtr1{TCollection}
 Return a dynamic list giving access to all TDataTypes (typedefs) currently defined.
 The list is populated on demand. Calling 
 
@@ -17830,7 +17877,7 @@ Calling
 (C++ version of the code)
 
  list only the typedefs that have been previously accessed through the list (plus the builtins types).
-""" GetListOfTypes(this::ByRef1{TROOT}, load::Bool)
+""" GetListOfGetTypes(this::ByRef1{TROOT}, load::Bool)
 
 # Wrapper of void TROOT::Idle(UInt_t, const char *)
 @trydoc raw"""
@@ -17849,21 +17896,21 @@ Return 1 if the name of the given include file corresponds to a class that is kn
 # Wrapper of Int_t TROOT::LoadClass(const char *, const char *, Bool_t)
 @trydoc raw"""
     LoadClass(this::ByRef1{TROOT}, classname::ByCopy{String}, libname::ByCopy{String}, check::Bool)::Int32
-Check if class "classname" is known to the Int32erpreter (in fact, this check is not needed anymore, so classname is ignored).
+Check if class "classname" is known to the interpreter (in fact, this check is not needed anymore, so classname is ignored).
 If not it will load library "libname". If the library couldn't be found with original libname and if the name was not prefixed with lib, try to prefix with "lib" and search again. If DynamicPathName still couldn't find the library, return -1. If check is true it will only check if libname exists and is readable. Returns 0 on successful loading, -1 in case libname does not exist or in case of error and -2 in case of version mismatch.
 """ LoadClass(this::ByRef1{TROOT}, classname::ByCopy{String}, libname::ByCopy{String}, check::Bool)
 
 # Wrapper of Int_t TROOT::LoadMacro(const char *, Int_t *, Bool_t)
 @trydoc raw"""
     LoadMacro(this::ByRef1{TROOT}, filename::ByCopy{String}, error::ByPtr2{Int32}, check::Bool)::Int32
-Load a macro in the Int32erpreter's memory.
+Load a macro in the interpreter's memory.
 Equivalent to the command line command ".L filename". If the filename has "+" or "++" appended the macro will be compiled by ACLiC. The filename must have the format: [path/]macro.C[+|++[g|O]]. The possible error codes are defined by [TInterpreter!EErrorCode](@ref). If check is true it will only check if filename exists and is readable. Returns 0 on successful loading and -1 in case filename does not exist or in case of error.
 """ LoadMacro(this::ByRef1{TROOT}, filename::ByCopy{String}, error::ByPtr2{Int32}, check::Bool)
 
 # Wrapper of Longptr_t TROOT::Macro(const char *, Int_t *, Bool_t)
 @trydoc raw"""
     Macro(this::ByRef1{TROOT}, filename::ByCopy{String}, error::ByPtr2{Int32}, padUpdate::Bool)::Int64
-Execute a macro in the Int32erpreter.
+Execute a macro in the interpreter.
 Equivalent to the command line command ".x filename". If the filename has "+" or "++" appended the macro will be compiled by ACLiC. The filename must have the format: [path/]macro.C[+|++[g|O]][(args)]. The possible error codes are defined by [TInterpreter!EErrorCode](@ref). If padUpdate is true (default) update the current pad. Returns the macro return value.
 """ Macro(this::ByRef1{TROOT}, filename::ByCopy{String}, error::ByPtr2{Int32}, padUpdate::Bool)
 
@@ -17877,22 +17924,22 @@ Process message id called by obj.
 # Wrapper of Longptr_t TROOT::ProcessLine(const char *, Int_t *)
 @trydoc raw"""
     ProcessLine(this::ByRef1{TROOT}, line::ByCopy{String}, error::ByPtr2{Int32})::Int64
-Process Int32erpreter command via [TApplication!ProcessLine()](@ref).
-On Win32 the line will be processed asynchronously by sending it to the CINT Int32erpreter thread. For explicit synchronous processing use [ProcessLineSync()](@ref). On non-Win32 platforms there is no difference between [ProcessLine()](@ref) and [ProcessLineSync()](@ref). The possible error codes are defined by [TInterpreter!EErrorCode](@ref). In particular, error will equal to [TInterpreter!kProcessing](@ref) until the CINT Int32erpreted thread has finished executing the line. Returns the result of the command, cast to a Longptr_t.
+Process interpreter command via [TApplication!ProcessLine()](@ref).
+On Win32 the line will be processed asynchronously by sending it to the CINT interpreter thread. For explicit synchronous processing use [ProcessLineSync()](@ref). On non-Win32 platforms there is no difference between [ProcessLine()](@ref) and [ProcessLineSync()](@ref). The possible error codes are defined by [TInterpreter!EErrorCode](@ref). In particular, error will equal to [TInterpreter!kProcessing](@ref) until the CINT interpreted thread has finished executing the line. Returns the result of the command, cast to a Longptr_t.
 """ ProcessLine(this::ByRef1{TROOT}, line::ByCopy{String}, error::ByPtr2{Int32})
 
 # Wrapper of Longptr_t TROOT::ProcessLineFast(const char *, Int_t *)
 @trydoc raw"""
     ProcessLineFast(this::ByRef1{TROOT}, line::ByCopy{String}, error::ByPtr2{Int32})::Int64
-Process Int32erpreter command directly via CINT Int32erpreter.
+Process interpreter command directly via CINT interpreter.
 Only executable statements are allowed (no variable declarations), In all other cases use [TROOT!ProcessLine()](@ref). The possible error codes are defined by [TInterpreter!EErrorCode](@ref).
 """ ProcessLineFast(this::ByRef1{TROOT}, line::ByCopy{String}, error::ByPtr2{Int32})
 
 # Wrapper of Longptr_t TROOT::ProcessLineSync(const char *, Int_t *)
 @trydoc raw"""
     ProcessLineSync(this::ByRef1{TROOT}, line::ByCopy{String}, error::ByPtr2{Int32})::Int64
-Process Int32erpreter command via [TApplication!ProcessLine()](@ref).
-On Win32 the line will be processed synchronously (i.e. it will only return when the CINT Int32erpreter thread has finished executing the line). On non-Win32 platforms there is no difference between [ProcessLine()](@ref) and [ProcessLineSync()](@ref). The possible error codes are defined by [TInterpreter!EErrorCode](@ref). Returns the result of the command, cast to a Longptr_t.
+Process interpreter command via [TApplication!ProcessLine()](@ref).
+On Win32 the line will be processed synchronously (i.e. it will only return when the CINT interpreter thread has finished executing the line). On non-Win32 platforms there is no difference between [ProcessLine()](@ref) and [ProcessLineSync()](@ref). The possible error codes are defined by [TInterpreter!EErrorCode](@ref). Returns the result of the command, cast to a Longptr_t.
 """ ProcessLineSync(this::ByRef1{TROOT}, line::ByCopy{String}, error::ByPtr2{Int32})
 
 # Wrapper of void TROOT::RecursiveRemove(TObject *)
@@ -17926,12 +17973,12 @@ This routine is deprecated, use [TClass!RemoveClass](@ref) directly.
 # Wrapper of void TROOT::Reset(Option_t *)
 @trydoc raw"""
     Reset(this::ByRef1{TROOT}, option::ByCopy{String})::Nothing
-Delete all global_ Int32erpreter objects created since the last call to Reset.
+Delete all global_ interpreter objects created since the last call to Reset.
 If option="a" is set reset to startup context (i.e. unload also all loaded files, classes, structs, typedefs, etc.).
 
 This function is typically used at the beginning (or theend) of an unnamed macro to clean the environment.
 
-IMPORTANT WARNING: Do not use this call from within any function (neither compiled nor Int32erpreted. This should only be used from a unnamed macro (which starts with a { (curly braces) ). For example, using [TROOT!Reset](@ref) from within an Int32erpreted function will lead to the unloading of the dictionary and source file, including the one defining the function being executed.
+IMPORTANT WARNING: Do not use this call from within any function (neither compiled nor interpreted. This should only be used from a unnamed macro (which starts with a { (curly braces) ). For example, using [TROOT!Reset](@ref) from within an interpreted function will lead to the unloading of the dictionary and source file, including the one defining the function being executed.
 """ Reset(this::ByRef1{TROOT}, option::ByCopy{String})
 
 # Wrapper of void TROOT::ResetClassSaved()
@@ -17944,7 +17991,7 @@ Reset the ClassSaved status of all classes.
 # Wrapper of void TROOT::SaveContext()
 @trydoc raw"""
     SaveContext(this::ByRef1{TROOT})::Nothing
-Save the current Int32erpreter context.
+Save the current interpreter context.
 
 """ SaveContext(this::ByRef1{TROOT})
 
@@ -17958,7 +18005,7 @@ Save the current Int32erpreter context.
 # Wrapper of void TROOT::SetBatch(Bool_t)
 @trydoc raw"""
     SetBatch(this::ByRef1{TROOT}, batch::Bool)::Nothing
-Set batch mode for [ROOT](@ref) If the argument evaluates to `true`, the session does not use Int32eractive graphics.
+Set batch mode for [ROOT](@ref) If the argument evaluates to `true`, the session does not use interactive graphics.
 If web graphics runs in server mode, the web widgets are still available via URL
 """ SetBatch(this::ByRef1{TROOT}, batch::Bool)
 
@@ -18073,18 +18120,18 @@ Change current style to style with name stylename.
 Specify where web graphics shall be rendered.
 The input parameter `webdisplay` defines where web graphics is rendered. `webdisplay` parameter may contain:
 
-- "firefox": select Mozilla Firefox browser for Int32eractive web display
-- "chrome": select Google Chrome browser for Int32eractive web display
-- "edge": select Microsoft Edge browser for Int32eractive web display
-- "native": select one of the natively-supported web browsers firefox/chrome/edge for Int32eractive web display
+- "firefox": select Mozilla Firefox browser for interactive web display
+- "chrome": select Google Chrome browser for interactive web display
+- "edge": select Microsoft Edge browser for interactive web display
+- "native": select one of the natively-supported web browsers firefox/chrome/edge for interactive web display
 - "qt5": uses QWebEngine from Qt5, no real http server started (requires `qt5web` component build for [ROOT](@ref))
 - "qt6": uses QWebEngine from Qt6, no real http server started (requires `qt6web` component build for [ROOT](@ref))
 - "cef": uses Chromium Embeded Framework, no real http server started (requires `cefweb` component build for [ROOT](@ref))
 - "local_": select on of available local_ (without http server) engines like qt5/qt6/cef
 - "default": system default web browser, invoked with `xdg-open` on Linux, `thestart` on Mac or `open` on Windows
 - "on": try "local_", then "native", then "default" option
-- "off": turns off the web display and comes back to normal graphics in Int32eractive mode.
-- "server:port": turns the web display Int32o server mode with specified port. Web widgets will not be displayed, only text message with window URL will be printed on standard output
+- "off": turns off the web display and comes back to normal graphics in interactive mode.
+- "server:port": turns the web display into server mode with specified port. Web widgets will not be displayed, only text message with window URL will be printed on standard output
 """ SetWebDisplay(this::ByRef1{TROOT}, webdisplay::ByCopy{String})
 
 # Wrapper of void TROOT::Streamer(TBuffer &)
@@ -18657,10 +18704,10 @@ The size is expressed as a percent of the pad height. axis specifies which axis 
 
 # Wrapper of void TStyle::SetLegendTextSize(Double_t)
 @trydoc raw"""
-    SetLegendTextSize(this::ByRef1{TStyle}, size::Float64)::Nothing
+    SetLegendGetTextSize(this::ByRef1{TStyle}, size::Float64)::Nothing
 
 
-""" SetLegendTextSize(this::ByRef1{TStyle}, size::Float64)
+""" SetLegendGetTextSize(this::ByRef1{TStyle}, size::Float64)
 
 # Wrapper of void TStyle::SetLegoInnerR(Float_t)
 @trydoc raw"""
@@ -18678,7 +18725,7 @@ The size is expressed as a percent of the pad height. axis specifies which axis 
 
 # Wrapper of void TStyle::SetLineStyleString(Int_t, const char *)
 @trydoc raw"""
-    SetLineStyleString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})::Nothing
+    SetLineStyleGetString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})::Nothing
 Set line style string using the PostScript convention.
 A line is a suite of segments, each segment is described by the number of pixels. The initial and alternating elements (second, fourth, and so on) are the dashes, and the others spaces between dashes.
 
@@ -18708,7 +18755,7 @@ Default fixed line styles are pre-defined as:
 - The opening and closing brackets may be omitted
 - It is recommended to use 4 as the smallest segment length and multiple of 4 for other lengths.
 - The line style 1 to 10 are predefined. 1 to 4 cannot be changed.
-""" SetLineStyleString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})
+""" SetLineStyleGetString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})
 
 # Wrapper of void TStyle::SetNdivisions(Int_t, Option_t *)
 @trydoc raw"""
@@ -18773,7 +18820,7 @@ The date text attributes can be changed with:
 
 (C++ version of the code)
 
- When the date option is active, a text object is created when the pad paint its list of primitives. The text object is named "DATE". The DATE attributes can also be edited Int32eractively (position and attributes) via the normal context menu.
+ When the date option is active, a text object is created when the pad paint its list of primitives. The text object is named "DATE". The DATE attributes can also be edited interactively (position and attributes) via the normal context menu.
 """ SetOptDate(this::ByRef1{TStyle}, datefl::Int32)
 
 # Wrapper of void TStyle::SetOptFile(Int_t)
@@ -18836,8 +18883,8 @@ The parameter mode can be = `ksiourmen`
 - k = 2; kurtosis and kurtosis error printed
 - s = 1; skewness printed
 - s = 2; skewness and skewness error printed
-- i = 1; Int32egral of bins printed
-- i = 2; Int32egral of bins with option "width" printed
+- i = 1; integral of bins printed
+- i = 2; integral of bins with option "width" printed
 - o = 1; number of overflows printed
 - u = 1; number of underflows printed
 - r = 1; rms printed
@@ -18864,8 +18911,8 @@ The parameter mode can be any combination of kKsSiourRmMen.
 - K : kurtosis and kurtosis error printed
 - s : skewness printed
 - S : skewness and skewness error printed
-- i : Int32egral of bins printed
-- I : Int32egral of bins with option "width" printed
+- i : integral of bins printed
+- I : integral of bins with option "width" printed
 - o : number of overflows printed
 - u : number of underflows printed
 - r : rms printed
@@ -18974,10 +19021,10 @@ Example: `gStyle->SetOptStat("ne");` print only name of histogram and number of 
 
 # Wrapper of void TStyle::SetPaintTextFormat(const char *)
 @trydoc raw"""
-    SetPaintTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})::Nothing
+    SetPaintGetTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})::Nothing
 
 
-""" SetPaintTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})
+""" SetPaintGetTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})
 
 # Wrapper of void TStyle::SetPalette(Int_t, Int_t *, Float_t)
 @trydoc raw"""
@@ -19059,10 +19106,10 @@ The paper size is specified in centimeters. Default is 20x26. See also [TPad!Pri
 
 # Wrapper of void TStyle::SetStatTextColor(Color_t)
 @trydoc raw"""
-    SetStatTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
+    SetStatGetTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
 
 
-""" SetStatTextColor(this::ByRef1{TStyle}, color::Int16)
+""" SetStatGetTextColor(this::ByRef1{TStyle}, color::Int16)
 
 # Wrapper of void TStyle::SetStatW(Float_t)
 @trydoc raw"""
@@ -19103,7 +19150,7 @@ axis specifies which axis ("x","y","z"), default = "x" if axis="xyz" set all 3 a
 @trydoc raw"""
     SetTimeOffset(this::ByRef1{TStyle}, toffset::Float64)::Nothing
 Change the time offset for time plotting.
-Times are expressed in seconds. The corresponding numbers usually have 9 digits (or more if one takes Int32o account fractions of seconds). Thus, since it is very inconvenient to plot very large numbers on a scale, one has to set an offset time that will be added to the axis beginning, in order to plot times correctly and conveniently. A convenient way to set the time offset is to use [TDatime!Convert()](@ref).
+Times are expressed in seconds. The corresponding numbers usually have 9 digits (or more if one takes into account fractions of seconds). Thus, since it is very inconvenient to plot very large numbers on a scale, one has to set an offset time that will be added to the axis beginning, in order to plot times correctly and conveniently. A convenient way to set the time offset is to use [TDatime!Convert()](@ref).
 
 By default the time offset is set to 788918400 which corresponds to 01/01/1995. This allows to have valid dates until 2072. The standard UNIX time offset in 1970 allows only valid dates until 2030.
 """ SetTimeOffset(this::ByRef1{TStyle}, toffset::Float64)
@@ -19209,10 +19256,10 @@ if axis="xyz" set all 3 axes
 
 # Wrapper of void TStyle::SetTitleTextColor(Color_t)
 @trydoc raw"""
-    SetTitleTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
+    SetTitleGetTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
 
 
-""" SetTitleTextColor(this::ByRef1{TStyle}, color::Int16)
+""" SetTitleGetTextColor(this::ByRef1{TStyle}, color::Int16)
 
 # Wrapper of void TStyle::SetTitleW(Float_t)
 @trydoc raw"""
@@ -19636,31 +19683,31 @@ The difference between [Paint()](@ref) and [Draw()](@ref) is that when a object 
 
 # Wrapper of void TVirtualPad::PaintText(Double_t, Double_t, const char *)
 @trydoc raw"""
-    PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})::Nothing
+    PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})::Nothing
 
 
-""" PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})
+""" PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})
 
-# Wrapper of void TVirtualPad::PaintText(Double_t, Double_t, const Int32 *)
+# Wrapper of void TVirtualPad::PaintText(Double_t, Double_t, const wchar_t *)
 @trydoc raw"""
-    PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{Int32})::Nothing
+    PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{wchar_t})::Nothing
 
 
-""" PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{Int32})
+""" PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{wchar_t})
 
 # Wrapper of void TVirtualPad::PaintTextNDC(Double_t, Double_t, const char *)
 @trydoc raw"""
-    PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})::Nothing
+    PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})::Nothing
 
 
-""" PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})
+""" PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})
 
-# Wrapper of void TVirtualPad::PaintTextNDC(Double_t, Double_t, const Int32 *)
+# Wrapper of void TVirtualPad::PaintTextNDC(Double_t, Double_t, const wchar_t *)
 @trydoc raw"""
-    PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{Int32})::Nothing
+    PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{wchar_t})::Nothing
 
 
-""" PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{Int32})
+""" PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{wchar_t})
 
 # Wrapper of Double_t TVirtualPad::PixeltoX(Int_t)
 @trydoc raw"""
@@ -19715,7 +19762,7 @@ Does nothing, unless you implement your own picking.
 @trydoc raw"""
     PushTopLevelSelectable(this::ByRef1{TVirtualPad}, top::ByPtr1{TObject})::Nothing
 Does nothing, unless you implement your own picking.
-When complex object containing sub-objects (which can be picked) is painted in a pad, this "top-level" object is pushed Int32o the selectables stack.
+When complex object containing sub-objects (which can be picked) is painted in a pad, this "top-level" object is pushed into the selectables stack.
 """ PushTopLevelSelectable(this::ByRef1{TVirtualPad}, top::ByPtr1{TObject})
 
 # Wrapper of void TVirtualPad::Range(Double_t, Double_t, Double_t, Double_t)
@@ -19804,10 +19851,10 @@ Typically implemented by classes that can contain multiple references to a same 
 
 # Wrapper of void TVirtualPad::SetAttTextPS(Int_t, Float_t, Color_t, Style_t, Float_t)
 @trydoc raw"""
-    SetAttTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)::Nothing
+    SetAttGetTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)::Nothing
 
 
-""" SetAttTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)
+""" SetAttGetTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)
 
 # Wrapper of void TVirtualPad::SetBatch(Bool_t)
 @trydoc raw"""
@@ -20000,10 +20047,10 @@ Typically implemented by classes that can contain multiple references to a same 
 
 # Wrapper of void TVirtualPad::SetToolTipText(const char *, Long_t)
 @trydoc raw"""
-    SetToolTipText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)::Nothing
+    SetToolTipGetText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)::Nothing
 
 
-""" SetToolTipText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)
+""" SetToolTipGetText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)
 
 # Wrapper of void TVirtualPad::SetVertical(Bool_t)
 @trydoc raw"""
@@ -20213,7 +20260,7 @@ Create a new canvas at a random position.
 @trydoc raw"""
     Delete(this::ByRef1{TCanvas}, option::ByCopy{String})::Nothing
 Delete this object.
-Typically called as a command via the Int32erpreter. Normally use "delete" operator when object has been allocated on the heap.
+Typically called as a command via the interpreter. Normally use "delete" operator when object has been allocated on the heap.
 """ Delete(this::ByRef1{TCanvas}, option::ByCopy{String})
 
 # Wrapper of void TCanvas::DeleteCanvasPainter()
@@ -20252,7 +20299,7 @@ If a canvas with the name is already on the screen, the canvas is repainted. Thi
 # Wrapper of TObject * TCanvas::DrawClonePad()
 @trydoc raw"""
     DrawClonePad(this::ByRef1{TCanvas})::CxxPtr1{TObject}
-Draw a clone of this canvas Int32o the current pad In an Int32eractive session, select the destination/current pad with the middle mouse button, then point to the canvas area to select the canvas context menu item DrawClonePad.
+Draw a clone of this canvas into the current pad In an interactive session, select the destination/current pad with the middle mouse button, then point to the canvas area to select the canvas context menu item DrawClonePad.
 Note that the original canvas may have subpads.
 """ DrawClonePad(this::ByRef1{TCanvas})
 
@@ -20266,7 +20313,7 @@ Get editor bar.
 # Wrapper of void TCanvas::EmbedInto(Int_t, Int_t, Int_t)
 @trydoc raw"""
     EmbedInto(this::ByRef1{TCanvas}, winid::Int32, ww::Int32, wh::Int32)::Nothing
-Embedded a canvas Int32o a [TRootEmbeddedCanvas](@ref).
+Embedded a canvas into a [TRootEmbeddedCanvas](@ref).
 This method is only called via [TRootEmbeddedCanvas!AdoptCanvas](@ref).
 """ EmbedInto(this::ByRef1{TCanvas}, winid::Int32, ww::Int32, wh::Int32)
 
@@ -20704,7 +20751,7 @@ Force a copy of current style for all objects in canvas.
 
 """ UseCurrentStyle(this::ByRef1{TCanvas})
 
-# Wrapper of Longptr_t TPluginHandler::ExecPlugin(Int32)
+# Wrapper of Longptr_t TPluginHandler::ExecPlugin(int)
 @trydoc raw"""
     ExecPlugin(this::ByRef1{TPluginHandler}, nargs::Int32)::Int64
 
@@ -20770,7 +20817,7 @@ Add Int_t c at position i. Check for out of bounds.
 # Wrapper of void TArrayI::Adopt(Int_t, Int_t *)
 @trydoc raw"""
     Adopt(this::ByRef1{TArrayI}, n::Int32, array::ByPtr2{Int32})::Nothing
-Adopt array arr Int32o [TArrayI](@ref), i.e.
+Adopt array arr into [TArrayI](@ref), i.e.
 don't copy arr but use it directly in [TArrayI](@ref). User may not delete arr, [TArrayI](@ref) dtor will do it.
 """ Adopt(this::ByRef1{TArrayI}, n::Int32, array::ByPtr2{Int32})
 
@@ -20812,14 +20859,14 @@ don't copy arr but use it directly in [TArrayI](@ref). User may not delete arr, 
 # Wrapper of void TArrayI::Set(Int_t)
 @trydoc raw"""
     Set(this::ByRef1{TArrayI}, n::Int32)::Nothing
-Set size of this array to n Int32s.
+Set size of this array to n ints.
 A new array is created, the old contents copied to the new array, then the old array is deleted. This function should not be called if the array was declared via Adopt.
 """ Set(this::ByRef1{TArrayI}, n::Int32)
 
 # Wrapper of void TArrayI::Set(Int_t, const Int_t *)
 @trydoc raw"""
     Set(this::ByRef1{TArrayI}, n::Int32, array::ByConstPtr2{Int32})::Nothing
-Set size of this array to n Int32s and set the contents.
+Set size of this array to n ints and set the contents.
 This function should not be called if the array was declared via Adopt.
 """ Set(this::ByRef1{TArrayI}, n::Int32, array::ByConstPtr2{Int32})
 
@@ -20860,7 +20907,7 @@ number of matches found
 # Wrapper of TString TPMERegexp::operator[](Int_t)
 @trydoc raw"""
     Base.getindex(this::ByRef1{TPMERegexp}, ::Int32)::ByCopy{TString}
-Returns the sub-string from the Int32ernal fMarkers vector.
+Returns the sub-string from the internal fMarkers vector.
 Requires having run match or split first.
 """ Base.getindex(this::ByRef1{TPMERegexp}, ::Int32)
 
@@ -20902,12 +20949,12 @@ This happens automatically when a new string is passed for matching. But be care
 # Wrapper of Int_t TPMERegexp::Split(const TString &, Int_t)
 @trydoc raw"""
     Split(this::ByRef1{TPMERegexp}, s::ByConstRef1{TString}, maxfields::Int32)::Int32
-Splits Int32o at most maxfields.
+Splits into at most maxfields.
 If maxfields is unspecified or 0, trailing empty matches are discarded. If maxfields is positive, no more than maxfields fields will be returned and trailing empty matches are preserved. If maxfields is empty, all fields (including trailing empty ones) are returned. This *should* be the same as the perl behaviour.
 
 If pattern produces sub-matches, these are also stored in the result.
 
-A pattern matching the null string will split the value of EXPR Int32o separate characters at each point it matches that way.
+A pattern matching the null string will split the value of EXPR into separate characters at each point it matches that way.
 
 ## Arguments
 
@@ -20943,7 +20990,7 @@ number of fields found
 Substitute matching part of s with r, dollar back-ref substitution is performed if doDollarSubst is true (default).
 Returns the number of substitutions made.
 
-After the substitution, another pass is made over the resulting string and the following special tokens are Int32erpreted:
+After the substitution, another pass is made over the resulting string and the following special tokens are interpreted:
 
 - `\l` lowercase next char,
 - `\u` uppercase next char,
@@ -21415,10 +21462,10 @@ Performs undo action. Move cursor position backward in history stack.
 
 # Wrapper of Bool_t TTimer::CheckTimer(const TTime &)
 @trydoc raw"""
-    CheckTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})::Bool
+    CheckGetTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})::Bool
 Check if timer timed out.
 
-""" CheckTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})
+""" CheckGetTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})
 
 # Wrapper of TObject * TTimer::GetObject()
 @trydoc raw"""
@@ -21429,10 +21476,10 @@ Check if timer timed out.
 
 # Wrapper of UInt_t TTimer::GetTimerID()
 @trydoc raw"""
-    GetTimerID(this::ByRef1{TTimer})::UInt32
+    GetGetTimerID(this::ByRef1{TTimer})::UInt32
 
 
-""" GetTimerID(this::ByRef1{TTimer})
+""" GetGetTimerID(this::ByRef1{TTimer})
 
 # Wrapper of Bool_t TTimer::IsRunning()
 @trydoc raw"""
@@ -21465,15 +21512,15 @@ Reset the timer.
 # Wrapper of void TTimer::SetCommand(const char *)
 @trydoc raw"""
     SetCommand(this::ByRef1{TTimer}, command::ByCopy{String})::Nothing
-Set the Int32erpreter command to be executed at time out.
+Set the interpreter command to be executed at time out.
 Removes the object to be notified (if it was set).
 """ SetCommand(this::ByRef1{TTimer}, command::ByCopy{String})
 
 # Wrapper of void TTimer::SetInterruptSyscalls(Bool_t)
 @trydoc raw"""
     SetInterruptSyscalls(this::ByRef1{TTimer}, set::Bool)::Nothing
-When the argument is true the a-synchronous timer (SIGALRM) signal handler is set so that Int32errupted syscalls will not be restarted by the kernel.
-This is typically used in case one wants to put a timeout on an I/O operation. By default Int32errupted syscalls will be restarted.
+When the argument is true the a-synchronous timer (SIGALRM) signal handler is set so that interrupted syscalls will not be restarted by the kernel.
+This is typically used in case one wants to put a timeout on an I/O operation. By default interrupted syscalls will be restarted.
 """ SetInterruptSyscalls(this::ByRef1{TTimer}, set::Bool)
 
 # Wrapper of void TTimer::SetObject(TObject *)
@@ -21492,16 +21539,16 @@ Removes the command to be executed (if it was set).
 
 # Wrapper of void TTimer::SetTimerID(UInt_t)
 @trydoc raw"""
-    SetTimerID(this::ByRef1{TTimer}, id::UInt32)::Nothing
+    SetGetTimerID(this::ByRef1{TTimer}, id::UInt32)::Nothing
 
 
-""" SetTimerID(this::ByRef1{TTimer}, id::UInt32)
+""" SetGetTimerID(this::ByRef1{TTimer}, id::UInt32)
 
 # Wrapper of void TTimer::Start(Long_t, Bool_t)
 @trydoc raw"""
     Start(this::ByRef1{TTimer}, milliSec::Int64, singleShot::Bool)::Nothing
 Starts the timer with a milliSec timeout.
-If milliSec is 0 then the timeout will be the minimum timeout (see TSystem!ESysConstants, i.e. 10 ms), if milliSec is -1 then the time Int32erval as previously specified (in ctor or [SetTime()](@ref)) will be used. If singleShot is kTRUE, the timer will be activated only once, otherwise it will continue until it is stopped. See also [TurnOn()](@ref), [Stop()](@ref), [TurnOff()](@ref).
+If milliSec is 0 then the timeout will be the minimum timeout (see TSystem!ESysConstants, i.e. 10 ms), if milliSec is -1 then the time interval as previously specified (in ctor or [SetTime()](@ref)) will be used. If singleShot is kTRUE, the timer will be activated only once, otherwise it will continue until it is stopped. See also [TurnOn()](@ref), [Stop()](@ref), [TurnOff()](@ref).
 """ Start(this::ByRef1{TTimer}, milliSec::Int64, singleShot::Bool)
 
 # Wrapper of void TTimer::Stop()
@@ -21552,14 +21599,14 @@ If a [TTimer](@ref) subclass has to be placed on another list, override [TurnOn(
 This method must be overridden to handle object notification (the base implementation is no-op).
 Different objects in [ROOT](@ref) use the `Notify` method for different purposes, in coordination with other objects that call this method at the appropriate time.
 
-For example, `TLeaf` uses it to load class information; `TBranchRef` to load contents of referenced branches `TBranchRef`; most notably, based on `Notify`, `TChain` implements a callback mechanism to inform Int32erested parties when it switches to a new sub-tree.
+For example, `TLeaf` uses it to load class information; `TBranchRef` to load contents of referenced branches `TBranchRef`; most notably, based on `Notify`, `TChain` implements a callback mechanism to inform interested parties when it switches to a new sub-tree.
 """ Notify(this::ByRef1{TProcessEventTimer})
 
 # Wrapper of Bool_t TProcessEventTimer::ProcessEvents()
 @trydoc raw"""
     ProcessEvents(this::ByRef1{TProcessEventTimer})::Bool
 Process events if timer did time out.
-Returns kTRUE if Int32errupt flag is set (by hitting a key in the canvas or selecting the Interrupt menu item in canvas or some other action).
+Returns kTRUE if interrupt flag is set (by hitting a key in the canvas or selecting the Interrupt menu item in canvas or some other action).
 """ ProcessEvents(this::ByRef1{TProcessEventTimer})
 
 # Wrapper of void TProcessEventTimer::Streamer(TBuffer &)
@@ -21576,14 +21623,14 @@ Stream an object of class [TObject](@ref).
 
 """ StreamerNVirtual(this::ByRef1{TProcessEventTimer}, ClassDef_StreamerNVirtual_b::ByRef1{TBuffer})
 
-# Wrapper of void TSystem::Abort(Int32)
+# Wrapper of void TSystem::Abort(int)
 @trydoc raw"""
     Abort(this::ByRef1{TSystem}, code::Int32)::Nothing
 Abort the application.
 
 """ Abort(this::ByRef1{TSystem}, code::Int32)
 
-# Wrapper of Int32 TSystem::AcceptConnection(Int32)
+# Wrapper of int TSystem::AcceptConnection(int)
 @trydoc raw"""
     AcceptConnection(this::ByRef1{TSystem}, sock::Int32)::Int32
 Accept a connection.
@@ -21623,7 +21670,7 @@ Add a directory to the already set include path.
 
 ###Note
 
-This Int32erface is mostly relevant for ACLiC and it does not inform gInterpreter for this include path. If the TInterpreter needs to know about the include path please use TInterpreter!AddIncludePath() . 
+This interface is mostly relevant for ACLiC and it does not inform gInterpreter for this include path. If the TInterpreter needs to know about the include path please use TInterpreter!AddIncludePath() . 
 
 ###Warning
 
@@ -21653,33 +21700,33 @@ Only adds the handler if it is not already in the list of exception handlers.
 
 # Wrapper of void TSystem::AddTimer(TTimer *)
 @trydoc raw"""
-    AddTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::Nothing
+    AddGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::Nothing
 Add timer to list of system timers.
 
-""" AddTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
+""" AddGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
 
-# Wrapper of Int32 TSystem::AnnounceTcpService(Int32, Bool_t, Int32, Int32)
+# Wrapper of int TSystem::AnnounceTcpService(int, Bool_t, int, int)
 @trydoc raw"""
     AnnounceTcpService(this::ByRef1{TSystem}, port::Int32, reuse::Bool, backlog::Int32, tcpwindowsize::Int32)::Int32
 Announce TCP/IP service.
 
 """ AnnounceTcpService(this::ByRef1{TSystem}, port::Int32, reuse::Bool, backlog::Int32, tcpwindowsize::Int32)
 
-# Wrapper of Int32 TSystem::AnnounceUdpService(Int32, Int32)
+# Wrapper of int TSystem::AnnounceUdpService(int, int)
 @trydoc raw"""
     AnnounceUdpService(this::ByRef1{TSystem}, port::Int32, backlog::Int32)::Int32
 Announce UDP service.
 
 """ AnnounceUdpService(this::ByRef1{TSystem}, port::Int32, backlog::Int32)
 
-# Wrapper of Int32 TSystem::AnnounceUnixService(const char *, Int32)
+# Wrapper of int TSystem::AnnounceUnixService(const char *, int)
 @trydoc raw"""
     AnnounceUnixService(this::ByRef1{TSystem}, sockpath::ByCopy{String}, backlog::Int32)::Int32
 Announce unix domain service.
 
 """ AnnounceUnixService(this::ByRef1{TSystem}, sockpath::ByCopy{String}, backlog::Int32)
 
-# Wrapper of Int32 TSystem::AnnounceUnixService(Int32, Int32)
+# Wrapper of int TSystem::AnnounceUnixService(int, int)
 @trydoc raw"""
     AnnounceUnixService(this::ByRef1{TSystem}, port::Int32, backlog::Int32)::Int32
 Announce unix domain service.
@@ -21714,7 +21761,7 @@ Change directory.
 
 """ ChangeDirectory(this::ByRef1{TSystem}, path::ByCopy{String})
 
-# Wrapper of Int32 TSystem::Chmod(const char *, UInt_t)
+# Wrapper of int TSystem::Chmod(const char *, UInt_t)
 @trydoc raw"""
     Chmod(this::ByRef1{TSystem}, file::ByCopy{String}, mode::UInt32)::Int32
 Set the file permission bits. Returns -1 in case or error, 0 otherwise.
@@ -21728,7 +21775,7 @@ Remove the shared libs produced by the [CompileMacro()](@ref) function, together
 
 """ CleanCompiledMacros(this::ByRef1{TSystem})
 
-# Wrapper of void TSystem::CloseConnection(Int32, Bool_t)
+# Wrapper of void TSystem::CloseConnection(int, Bool_t)
 @trydoc raw"""
     CloseConnection(this::ByRef1{TSystem}, sock::Int32, force::Bool)::Nothing
 Close socket connection.
@@ -21742,14 +21789,14 @@ Close connection to system log daemon.
 
 """ Closelog(this::ByRef1{TSystem})
 
-# Wrapper of Int32 TSystem::ClosePipe(FILE *)
+# Wrapper of int TSystem::ClosePipe(FILE *)
 @trydoc raw"""
     ClosePipe(this::ByRef1{TSystem}, pipe::ByPtr1{FILE})::Int32
 Close the pipe.
 
 """ ClosePipe(this::ByRef1{TSystem}, pipe::ByPtr1{FILE})
 
-# Wrapper of Int32 TSystem::CompileMacro(const char *, Option_t *, const char *, const char *, UInt_t)
+# Wrapper of int TSystem::CompileMacro(const char *, Option_t *, const char *, const char *, UInt_t)
 @trydoc raw"""
     CompileMacro(this::ByRef1{TSystem}, filename::ByCopy{String}, opt::ByCopy{String}, library_name::ByCopy{String}, build_dir::ByCopy{String}, dirmode::UInt32)::Int32
 This method compiles and loads a shared library containing the code from the file "filename".
@@ -21838,7 +21885,7 @@ Concatenate a directory and a file name. User must delete returned string.
 
 """ ConcatFileName(this::ByRef1{TSystem}, dir::ByCopy{String}, name::ByCopy{String})
 
-# Wrapper of Int32 TSystem::CopyFile(const char *, const char *, Bool_t)
+# Wrapper of int TSystem::CopyFile(const char *, const char *, Bool_t)
 @trydoc raw"""
     CopyFile(this::ByRef1{TSystem}, from::ByCopy{String}, to::ByCopy{String}, overwrite::Bool)::Int32
 Copy a file.
@@ -21873,7 +21920,7 @@ Execute a command.
 
 """ Exec(this::ByRef1{TSystem}, shellcmd::ByCopy{String})
 
-# Wrapper of void TSystem::Exit(Int32, Bool_t)
+# Wrapper of void TSystem::Exit(int, Bool_t)
 @trydoc raw"""
     Exit(this::ByRef1{TSystem}, code::Int32, mode::Bool)::Nothing
 Exit the application.
@@ -21992,7 +22039,7 @@ Execute command and return output in [TString](@ref).
 
 """ GetFromPipe(this::ByRef1{TSystem}, command::ByCopy{String})
 
-# Wrapper of Int32 TSystem::GetFsInfo(const char *, Long_t *, Long_t *, Long_t *, Long_t *)
+# Wrapper of int TSystem::GetFsInfo(const char *, Long_t *, Long_t *, Long_t *, Long_t *)
 @trydoc raw"""
     GetFsInfo(this::ByRef1{TSystem}, path::ByCopy{String}, id::ByPtr2{Int64}, bsize::ByPtr2{Int64}, blocks::ByPtr2{Int64}, bfree::ByPtr2{Int64})::Int32
 Get info about a file system: fs type, block size, number of blocks, number of free blocks.
@@ -22049,14 +22096,14 @@ Regexp is a wildcard expression, see TRegexp!MakeWildcard. This list is of a for
 - L: this option is ignored, and available for backward compatibility.
 """ GetLibraries(this::ByRef1{TSystem}, regexp::ByCopy{String}, option::ByCopy{String}, isRegexp::Bool)
 
-# Wrapper of Int32 TSystem::GetPathInfo(const char *, FileStat_t &)
+# Wrapper of int TSystem::GetPathInfo(const char *, FileStat_t &)
 @trydoc raw"""
     GetPathInfo(this::ByRef1{TSystem}, path::ByCopy{String}, buf::ByRef1{FileStat_t})::Int32
 Get info about a file.
 Info is returned in the form of a [FileStat_t](@ref) structure (see TSystem.h). The function returns 0 in case of success and 1 if the file could not be stat'ed.
 """ GetPathInfo(this::ByRef1{TSystem}, path::ByCopy{String}, buf::ByRef1{FileStat_t})
 
-# Wrapper of Int32 TSystem::GetPathInfo(const char *, Long_t *, Long_t *, Long_t *, Long_t *)
+# Wrapper of int TSystem::GetPathInfo(const char *, Long_t *, Long_t *, Long_t *, Long_t *)
 @trydoc raw"""
     GetPathInfo(this::ByRef1{TSystem}, path::ByCopy{String}, id::ByPtr2{Int64}, size::ByPtr2{Int64}, flags::ByPtr2{Int64}, modtime::ByPtr2{Int64})::Int32
 Get info about a file: id, size, flags, modification time.
@@ -22065,42 +22112,42 @@ Get info about a file: id, size, flags, modification time.
 - Flags is file type: 0 is regular file, bit 0 set executable, bit 1 set directory, bit 2 set special file (socket, fifo, pipe, etc.) Modtime is modification time. The function returns 0 in case of success and 1 if the file could not be stat'ed.
 """ GetPathInfo(this::ByRef1{TSystem}, path::ByCopy{String}, id::ByPtr2{Int64}, size::ByPtr2{Int64}, flags::ByPtr2{Int64}, modtime::ByPtr2{Int64})
 
-# Wrapper of TInetAddress TSystem::GetPeerName(Int32)
+# Wrapper of TInetAddress TSystem::GetPeerName(int)
 @trydoc raw"""
     GetPeerName(this::ByRef1{TSystem}, sock::Int32)::ByCopy{TInetAddress}
 Get Internet Protocol (IP) address of remote host and port #.
 
 """ GetPeerName(this::ByRef1{TSystem}, sock::Int32)
 
-# Wrapper of Int32 TSystem::GetPid()
+# Wrapper of int TSystem::GetPid()
 @trydoc raw"""
     GetPid(this::ByRef1{TSystem})::Int32
 Get process id.
 
 """ GetPid(this::ByRef1{TSystem})
 
-# Wrapper of Int32 TSystem::GetServiceByName(const char *)
+# Wrapper of int TSystem::GetServiceByName(const char *)
 @trydoc raw"""
     GetServiceByName(this::ByRef1{TSystem}, service::ByCopy{String})::Int32
-Get port # of Int32ernet service.
+Get port # of internet service.
 
 """ GetServiceByName(this::ByRef1{TSystem}, service::ByCopy{String})
 
-# Wrapper of char * TSystem::GetServiceByPort(Int32)
+# Wrapper of char * TSystem::GetServiceByPort(int)
 @trydoc raw"""
     GetServiceByPort(this::ByRef1{TSystem}, port::Int32)::ByCopy{Union{String, Vector{CxxChar}}}
-Get name of Int32ernet service.
+Get name of internet service.
 
 """ GetServiceByPort(this::ByRef1{TSystem}, port::Int32)
 
-# Wrapper of TInetAddress TSystem::GetSockName(Int32)
+# Wrapper of TInetAddress TSystem::GetSockName(int)
 @trydoc raw"""
     GetSockName(this::ByRef1{TSystem}, sock::Int32)::ByCopy{TInetAddress}
 Get Internet Protocol (IP) address of host and port #.
 
 """ GetSockName(this::ByRef1{TSystem}, sock::Int32)
 
-# Wrapper of Int32 TSystem::GetSockOpt(Int32, Int32, Int32 *)
+# Wrapper of int TSystem::GetSockOpt(int, int, int *)
 @trydoc raw"""
     GetSockOpt(this::ByRef1{TSystem}, sock::Int32, kind::Int32, val::ByPtr2{Int32})::Int32
 Get socket option.
@@ -22145,8 +22192,8 @@ Return the system's host name.
 # Wrapper of void TSystem::IgnoreInterrupt(Bool_t)
 @trydoc raw"""
     IgnoreInterrupt(this::ByRef1{TSystem}, ignore::Bool)::Nothing
-If ignore is true ignore the Int32errupt signal, else restore previous behaviour.
-Typically call ignore Int32errupt before writing to disk.
+If ignore is true ignore the interrupt signal, else restore previous behaviour.
+Typically call ignore interrupt before writing to disk.
 """ IgnoreInterrupt(this::ByRef1{TSystem}, ignore::Bool)
 
 # Wrapper of void TSystem::IgnoreSignal(ESignals, Bool_t)
@@ -22159,7 +22206,7 @@ If ignore is true ignore the specified signal, else restore previous behaviour.
 # Wrapper of Bool_t TSystem::Init()
 @trydoc raw"""
     Init(this::ByRef1{TSystem})::Bool
-Initialize the OS Int32erface.
+Initialize the OS interface.
 
 """ Init(this::ByRef1{TSystem})
 
@@ -22191,7 +22238,7 @@ Returns TRUE if the url in 'path' points to the local_ file system.
 This is used to avoid going through the NIC card for local_ operations.
 """ IsPathLocal(this::ByRef1{TSystem}, path::ByCopy{String})
 
-# Wrapper of Int32 TSystem::Link(const char *, const char *)
+# Wrapper of int TSystem::Link(const char *, const char *)
 @trydoc raw"""
     Link(this::ByRef1{TSystem}, from::ByCopy{String}, to::ByCopy{String})::Int32
 Create a link from file1 to file2.
@@ -22226,7 +22273,7 @@ List symbols in a shared library.
 
 """ ListSymbols(this::ByRef1{TSystem}, themodule::ByCopy{String}, re::ByCopy{String})
 
-# Wrapper of Int32 TSystem::Load(const char *, const char *, Bool_t)
+# Wrapper of int TSystem::Load(const char *, const char *, Bool_t)
 @trydoc raw"""
     Load(this::ByRef1{TSystem}, themodule::ByCopy{String}, entry::ByCopy{String}, system::Bool)::Int32
 Load a shared library.
@@ -22240,14 +22287,14 @@ Load all libraries known to [ROOT](@ref) via the rootmap system.
 Returns the number of top level libraries successfully loaded.
 """ LoadAllLibraries(this::ByRef1{TSystem})
 
-# Wrapper of Int32 TSystem::MakeDirectory(const char *)
+# Wrapper of int TSystem::MakeDirectory(const char *)
 @trydoc raw"""
     MakeDirectory(this::ByRef1{TSystem}, name::ByCopy{String})::Int32
 Make a directory.
 Returns 0 in case of success and -1 if the directory could not be created (either already exists or illegal path name).
 """ MakeDirectory(this::ByRef1{TSystem}, name::ByCopy{String})
 
-# Wrapper of Int32 TSystem::mkdir(const char *, Bool_t)
+# Wrapper of int TSystem::mkdir(const char *, Bool_t)
 @trydoc raw"""
     mkdir(this::ByRef1{TSystem}, name::ByCopy{String}, recursive::Bool)::Int32
 Make a file system directory.
@@ -22275,7 +22322,7 @@ Get current time in milliseconds since 0:00 Jan 1 1995.
 
 """ Now(this::ByRef1{TSystem})
 
-# Wrapper of Int32 TSystem::OpenConnection(const char *, Int32, Int32, const char *)
+# Wrapper of int TSystem::OpenConnection(const char *, int, int, const char *)
 @trydoc raw"""
     OpenConnection(this::ByRef1{TSystem}, server::ByCopy{String}, port::Int32, tcpwindowsize::Int32, protocol::ByCopy{String})::Int32
 Open a connection to another host.
@@ -22314,7 +22361,7 @@ Concatenate a directory and a file name.
 @trydoc raw"""
     ProcessEvents(this::ByRef1{TSystem})::Bool
 Process pending events (GUI, timers, sockets).
-Returns the result of [TROOT!IsInterrupted()](@ref). The Int32errupt flag ([TROOT!SetInterrupt()](@ref)) can be set during the handling of the events. This mechanism allows macros running in tight calculating loops to be Int32errupted by some GUI event (depending on the Int32erval with which this method is called). For example hitting ctrl-c in a canvas will set the Int32errupt flag.
+Returns the result of [TROOT!IsInterrupted()](@ref). The interrupt flag ([TROOT!SetInterrupt()](@ref)) can be set during the handling of the events. This mechanism allows macros running in tight calculating loops to be interrupted by some GUI event (depending on the interval with which this method is called). For example hitting ctrl-c in a canvas will set the interrupt flag.
 """ ProcessEvents(this::ByRef1{TSystem})
 
 # Wrapper of const char * TSystem::pwd()
@@ -22324,17 +22371,17 @@ Returns the result of [TROOT!IsInterrupted()](@ref). The Int32errupt flag ([TROO
 
 """ pwd(this::ByRef1{TSystem})
 
-# Wrapper of Int32 TSystem::RecvBuf(Int32, void *, Int32)
+# Wrapper of int TSystem::RecvBuf(int, void *, int)
 @trydoc raw"""
     RecvBuf(this::ByRef1{TSystem}, sock::Int32, buffer::ByPtr2{Nothing}, length::Int32)::Int32
 Receive a buffer headed by a length indicator.
 
 """ RecvBuf(this::ByRef1{TSystem}, sock::Int32, buffer::ByPtr2{Nothing}, length::Int32)
 
-# Wrapper of Int32 TSystem::RecvRaw(Int32, void *, Int32, Int32)
+# Wrapper of int TSystem::RecvRaw(int, void *, int, int)
 @trydoc raw"""
     RecvRaw(this::ByRef1{TSystem}, sock::Int32, buffer::ByPtr2{Nothing}, length::Int32, flag::Int32)::Int32
-Receive exactly length bytes Int32o buffer.
+Receive exactly length bytes into buffer.
 Use opt to receive out-of-band data or to have a peek at what is in the buffer (see [TSocket](@ref)).
 """ RecvRaw(this::ByRef1{TSystem}, sock::Int32, buffer::ByPtr2{Nothing}, length::Int32, flag::Int32)
 
@@ -22342,7 +22389,7 @@ Use opt to receive out-of-band data or to have a peek at what is in the buffer (
 @trydoc raw"""
     RedirectOutput(this::ByRef1{TSystem}, name::ByCopy{String}, mode::ByCopy{String}, h::ByPtr1{RedirectHandle_t})::Int32
 Redirect standard output (stdout, stderr) to the specified file.
-If the file argument is 0 the output is set again to stderr, stdout. The second argument specifies whether the output should be added to the file ("a", default) or the file be truncated before ("w"). The implementations of this function save Int32ernally the current state Int32o a static structure.
+If the file argument is 0 the output is set again to stderr, stdout. The second argument specifies whether the output should be added to the file ("a", default) or the file be truncated before ("w"). The implementations of this function save internally the current state into a static structure.
 
 The call can be made reentrant by specifying the opaque structure pointed by 'h', which is filled with the relevant information. The handle 'h' obtained on the first call must then be used in any subsequent call, included ShowOutput, to display the redirected output. Returns 0 on success, -1 in case of error.
 """ RedirectOutput(this::ByRef1{TSystem}, name::ByCopy{String}, mode::ByCopy{String}, h::ByPtr1{RedirectHandle_t})
@@ -22357,7 +22404,7 @@ Returns the handler or 0 if the handler was not in the list of file handlers.
 # Wrapper of void TSystem::RemoveOnExit(TObject *)
 @trydoc raw"""
     RemoveOnExit(this::ByRef1{TSystem}, obj::ByPtr1{TObject})::Nothing
-Objects that should be deleted on exit of the OS Int32erface.
+Objects that should be deleted on exit of the OS interface.
 
 """ RemoveOnExit(this::ByRef1{TSystem}, obj::ByPtr1{TObject})
 
@@ -22377,12 +22424,12 @@ Returns the handler or 0 if the handler was not in the list of exception handler
 
 # Wrapper of TTimer * TSystem::RemoveTimer(TTimer *)
 @trydoc raw"""
-    RemoveTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::CxxPtr1{TTimer}
+    RemoveGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::CxxPtr1{TTimer}
 Remove timer from list of system timers.
 Returns removed timer or 0 if timer was not active.
-""" RemoveTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
+""" RemoveGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
 
-# Wrapper of Int32 TSystem::Rename(const char *, const char *)
+# Wrapper of int TSystem::Rename(const char *, const char *)
 @trydoc raw"""
     Rename(this::ByRef1{TSystem}, from::ByCopy{String}, to::ByCopy{String})::Int32
 Rename a file.
@@ -22405,10 +22452,10 @@ Reset signals handlers to previous behaviour.
 
 # Wrapper of void TSystem::ResetTimer(TTimer *)
 @trydoc raw"""
-    ResetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})::Nothing
+    ResetGetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})::Nothing
 
 
-""" ResetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})
+""" ResetGetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})
 
 # Wrapper of void TSystem::Run()
 @trydoc raw"""
@@ -22431,14 +22478,14 @@ Select on active file descriptors (called by [TMonitor](@ref)).
 
 """ Select(this::ByRef1{TSystem}, active::ByPtr1{TList}, timeout::Int64)
 
-# Wrapper of Int32 TSystem::SendBuf(Int32, const void *, Int32)
+# Wrapper of int TSystem::SendBuf(int, const void *, int)
 @trydoc raw"""
     SendBuf(this::ByRef1{TSystem}, sock::Int32, buffer::ByConstPtr2{Nothing}, length::Int32)::Int32
 Send a buffer headed by a length indicator.
 
 """ SendBuf(this::ByRef1{TSystem}, sock::Int32, buffer::ByConstPtr2{Nothing}, length::Int32)
 
-# Wrapper of Int32 TSystem::SendRaw(Int32, const void *, Int32, Int32)
+# Wrapper of int TSystem::SendRaw(int, const void *, int, int)
 @trydoc raw"""
     SendRaw(this::ByRef1{TSystem}, sock::Int32, buffer::ByConstPtr2{Nothing}, length::Int32, flag::Int32)::Int32
 Send exactly length bytes from buffer.
@@ -22541,7 +22588,7 @@ It is used to expand $IncludePath in the directives given to [SetMakeSharedLib()
 @trydoc raw"""
     SetLinkdefSuffix(this::ByRef1{TSystem}, suffix::ByCopy{String})::Nothing
 The 'suffix' will be appended to the name of a script loaded by ACLiC and used to locate any eventual additional linkdef information that ACLiC should used to produce the dictionary.
-So by default, when doing .L MyScript.cxx, ACLiC will look for a file name MyScript_linkdef and having one of the .h (.hpp, etc.) extensions. If such a file exist, it will be added to the theend of the linkdef file used to created the ACLiC dictionary. This effectively enable the full customization of the creation of the dictionary. It should be noted that the file is Int32ended as a linkdef `fragment`, so usually you would not list the typical: 
+So by default, when doing .L MyScript.cxx, ACLiC will look for a file name MyScript_linkdef and having one of the .h (.hpp, etc.) extensions. If such a file exist, it will be added to the theend of the linkdef file used to created the ACLiC dictionary. This effectively enable the full customization of the creation of the dictionary. It should be noted that the file is intended as a linkdef `fragment`, so usually you would not list the typical: 
 
     #pragma link off ....
 
@@ -22628,7 +22675,7 @@ Set the application name (from command line, argv[0]) and copy it in gProgName.
 
 """ SetProgname(this::ByRef1{TSystem}, name::ByCopy{String})
 
-# Wrapper of Int32 TSystem::SetSockOpt(Int32, Int32, Int32)
+# Wrapper of int TSystem::SetSockOpt(int, int, int)
 @trydoc raw"""
     SetSockOpt(this::ByRef1{TSystem}, sock::Int32, kind::Int32, val::Int32)::Int32
 Set socket option.
@@ -22677,7 +22724,7 @@ Stream an object of class [TObject](@ref).
 
 """ StreamerNVirtual(this::ByRef1{TSystem}, ClassDef_StreamerNVirtual_b::ByRef1{TBuffer})
 
-# Wrapper of Int32 TSystem::Symlink(const char *, const char *)
+# Wrapper of int TSystem::Symlink(const char *, const char *)
 @trydoc raw"""
     Symlink(this::ByRef1{TSystem}, from::ByCopy{String}, to::ByCopy{String})::Int32
 Create a symbolic link from file1 to file2.
@@ -22698,7 +22745,7 @@ Create a secure temporary file by appending a unique 6 letter string to base.
 The file will be created in a standard (system) directory or in the directory provided in dir. Optionally one can provide suffix append to the final name - like extension ".txt" or ".html". The full filename is returned in base and a filepointer is returned for safely writing to the file (this avoids certain security problems). Returns 0 in case of error.
 """ TempFileName(this::ByRef1{TSystem}, base::ByRef1{TString}, dir::ByCopy{String}, suffix::ByCopy{String})
 
-# Wrapper of Int32 TSystem::Umask(Int_t)
+# Wrapper of int TSystem::Umask(Int_t)
 @trydoc raw"""
     Umask(this::ByRef1{TSystem}, mask::Int32)::Int32
 Set the process file creation mode mask.
@@ -22712,7 +22759,7 @@ Convert from a local_ pathname to a Unix pathname.
 E.g. from `\user\root` to `/user/root`.
 """ UnixPathName(this::ByRef1{TSystem}, unixpathname::ByCopy{String})
 
-# Wrapper of Int32 TSystem::Unlink(const char *)
+# Wrapper of int TSystem::Unlink(const char *)
 @trydoc raw"""
     Unlink(this::ByRef1{TSystem}, name::ByCopy{String})::Int32
 Unlink, i.e.
@@ -22735,7 +22782,7 @@ Unset environment variable.
 
 """ Unsetenv(this::ByRef1{TSystem}, name::ByCopy{String})
 
-# Wrapper of Int32 TSystem::Utime(const char *, Long_t, Long_t)
+# Wrapper of int TSystem::Utime(const char *, Long_t, Long_t)
 @trydoc raw"""
     Utime(this::ByRef1{TSystem}, file::ByCopy{String}, modtime::Int64, actime::Int64)::Int32
 Set the a files modification and access times.
@@ -22787,14 +22834,14 @@ Assign object to reference.
 # Wrapper of void TRef::SetAction(const char *)
 @trydoc raw"""
     SetAction(this::ByRef1{TRef}, name::ByCopy{String})::Nothing
-Store the exec number (in the [ROOT](@ref) list of Execs) Int32o the fBits of this [TRef](@ref).
+Store the exec number (in the [ROOT](@ref) list of Execs) into the fBits of this [TRef](@ref).
 
 """ SetAction(this::ByRef1{TRef}, name::ByCopy{String})
 
 # Wrapper of void TRef::SetAction(TObject *)
 @trydoc raw"""
     SetAction(this::ByRef1{TRef}, parent::ByPtr1{TObject})::Nothing
-Find the action to be executed in the dictionary of the parent class and store the corresponding exec number Int32o fBits.
+Find the action to be executed in the dictionary of the parent class and store the corresponding exec number into fBits.
 This function searches a data member in the class of parent with an offset corresponding to this. If a comment "TEXEC:" is found in the comment field of the data member, the function stores the exec identifier of the exec statement following this keyword.
 """ SetAction(this::ByRef1{TRef}, parent::ByPtr1{TObject})
 
@@ -22963,7 +23010,7 @@ delete this file
 @trydoc raw"""
     Delete(this::ByRef1{TSystemFile}, option::ByCopy{String})::Nothing
 Delete this object.
-Typically called as a command via the Int32erpreter. Normally use "delete" operator when object has been allocated on the heap.
+Typically called as a command via the interpreter. Normally use "delete" operator when object has been allocated on the heap.
 """ Delete(this::ByRef1{TSystemFile}, option::ByCopy{String})
 
 # Wrapper of void TSystemFile::Edit()
@@ -23054,7 +23101,7 @@ delete this file
 @trydoc raw"""
     Delete(this::ByRef1{TSystemDirectory}, option::ByCopy{String})::Nothing
 Delete this object.
-Typically called as a command via the Int32erpreter. Normally use "delete" operator when object has been allocated on the heap.
+Typically called as a command via the interpreter. Normally use "delete" operator when object has been allocated on the heap.
 """ Delete(this::ByRef1{TSystemDirectory}, option::ByCopy{String})
 
 # Wrapper of void TSystemDirectory::Edit()
@@ -23241,7 +23288,7 @@ No accounting for nanoseconds with std ANSI functions, ns part faked so that sub
 # Wrapper of void TTimeStamp::Set(Int_t, Int_t, Int_t, Bool_t, Int_t)
 @trydoc raw"""
     Set(this::ByRef1{TTimeStamp}, date::Int32, time::Int32, nsec::Int32, isUTC::Bool, secOffset::Int32)::Nothing
-Set date/time from Int32egers of the form [yy]YYMMDD and HHMMSS, assume UTC (UTC) components:
+Set date/time from integers of the form [yy]YYMMDD and HHMMSS, assume UTC (UTC) components:
 MM: 01=January .. 12=December
     DD: 01 .. 31
     HH: 00=midnight .. 23
@@ -23333,7 +23380,7 @@ authority   = [ userinfo "@" ] host [ ":" port ]
 
 (C++ version of the code)
 
-Split Int32o components {userinfo@, host, :port}, remember that according to the RFC, it is necessary to distinguish between missing component (no delimiter) and empty component (delimiter present).
+Split into components {userinfo@, host, :port}, remember that according to the RFC, it is necessary to distinguish between missing component (no delimiter) and empty component (delimiter present).
 """ SetAuthority(this::ByRef1{TUri}, authority::ByConstRef1{TString})
 
 # Wrapper of Bool_t TUri::SetFragment(const TString &)
@@ -23891,17 +23938,17 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TVirtualPadEditor::DrawText(Double_t, Double_t, const char *)
 @trydoc raw"""
-    DrawText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
+    DrawGetText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
 
 
-""" DrawText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
+""" DrawGetText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
 
 # Wrapper of void TVirtualPadEditor::DrawTextNDC(Double_t, Double_t, const char *)
 @trydoc raw"""
-    DrawTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
+    DrawGetTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
 
 
-""" DrawTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
+""" DrawGetTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
 
 # Wrapper of void TVirtualPadEditor::FillAttributes(Int_t, Int_t)
 @trydoc raw"""
@@ -23961,10 +24008,10 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TVirtualPadEditor::TextAttributes(Int_t, Float_t, Int_t, Int_t, Float_t)
 @trydoc raw"""
-    TextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)::Nothing
+    GetTextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)::Nothing
 
 
-""" TextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)
+""" GetTextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)
 
 # Wrapper of Bool_t TAxis::CanBeAlphanumeric()
 @trydoc raw"""
@@ -24076,7 +24123,7 @@ If orientation = "Y", the vertical axis of the pad will be used for ref.
 @trydoc raw"""
     Delete(this::ByRef1{TAxis}, option::ByCopy{String})::Nothing
 Delete this object.
-Typically called as a command via the Int32erpreter. Normally use "delete" operator when object has been allocated on the heap.
+Typically called as a command via the interpreter. Normally use "delete" operator when object has been allocated on the heap.
 """ Delete(this::ByRef1{TAxis}, option::ByCopy{String})
 
 # Wrapper of Int_t TAxis::DistancetoPrimitive(Int_t, Int_t)
@@ -24264,9 +24311,9 @@ Set the viewing range for the axis using bin numbers.
     Last bin of the range. To set a range using the axis coordinates, use [TAxis!SetRangeUser](@ref).
     
 
-If `first == last == 0` or if `first > last` or if the range specified does not Int32ersect at all with the maximum available range `[0, fNbins + 1]`, then the viewing range is reset by removing the bit [TAxis!kAxisRange](@ref). In this case, the functions [TAxis!GetFirst()](@ref) and [TAxis!GetLast()](@ref) will return 1 and fNbins.
+If `first == last == 0` or if `first > last` or if the range specified does not intersect at all with the maximum available range `[0, fNbins + 1]`, then the viewing range is reset by removing the bit [TAxis!kAxisRange](@ref). In this case, the functions [TAxis!GetFirst()](@ref) and [TAxis!GetLast()](@ref) will return 1 and fNbins.
 
-If the range specified partially Int32ersects with `[0, fNbins + 1]`, then the Int32ersection range is accepted. For instance, if `first == -2` and `last == fNbins`, the accepted range will be `[0, fNbins]` (`fFirst = 0` and `fLast = fNbins`).
+If the range specified partially intersects with `[0, fNbins + 1]`, then the intersection range is accepted. For instance, if `first == -2` and `last == fNbins`, the accepted range will be `[0, fNbins]` (`fFirst = 0` and `fLast = fNbins`).
 
 ###Note
 
@@ -24284,7 +24331,7 @@ To set a range using the axis bin numbers, use [TAxis!SetRange](@ref).
 @trydoc raw"""
     SetTicks(this::ByRef1{TAxis}, option::ByCopy{String})::Nothing
 Set ticks orientation.
-option = "+" ticks drawn on the "positive side" (default) option = "-" ticks drawn on the "negative side" option = "+-" ticks drawn on both sides option = "" ticks will be drawn as whatever is defined as default. No bit is set Int32ernally.
+option = "+" ticks drawn on the "positive side" (default) option = "-" ticks drawn on the "negative side" option = "+-" ticks drawn on both sides option = "" ticks will be drawn as whatever is defined as default. No bit is set internally.
 """ SetTicks(this::ByRef1{TAxis}, option::ByCopy{String})
 
 # Wrapper of void TAxis::SetTimeDisplay(Int_t)
@@ -24518,10 +24565,10 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TVirtualPadPainter::DrawPixels(const unsigned char *, UInt_t, UInt_t, Int_t, Int_t, Bool_t)
 @trydoc raw"""
-    DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr1{unsigned Int8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)::Nothing
+    DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr2{UInt8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)::Nothing
 
 
-""" DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr1{UInt8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)
+""" DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr2{UInt8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)
 
 # Wrapper of void TVirtualPadPainter::DrawPolyLine(Int_t, const Double_t *, const Double_t *)
 @trydoc raw"""
@@ -24630,45 +24677,45 @@ Empty definition.
 
 # Wrapper of void TVirtualPadPainter::SetTextAlign(Short_t)
 @trydoc raw"""
-    SetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)::Nothing
+    SetGetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)::Nothing
 
 
-""" SetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)
+""" SetGetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)
 
 # Wrapper of void TVirtualPadPainter::SetTextAngle(Float_t)
 @trydoc raw"""
-    SetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)::Nothing
+    SetGetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)::Nothing
 
 
-""" SetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)
+""" SetGetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)
 
 # Wrapper of void TVirtualPadPainter::SetTextColor(Color_t)
 @trydoc raw"""
-    SetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)::Nothing
+    SetGetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)::Nothing
 
 
-""" SetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)
+""" SetGetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)
 
 # Wrapper of void TVirtualPadPainter::SetTextFont(Font_t)
 @trydoc raw"""
-    SetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)::Nothing
+    SetGetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)::Nothing
 
 
-""" SetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)
+""" SetGetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)
 
 # Wrapper of void TVirtualPadPainter::SetTextSize(Float_t)
 @trydoc raw"""
-    SetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)::Nothing
+    SetGetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)::Nothing
 
 
-""" SetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)
+""" SetGetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)
 
 # Wrapper of void TVirtualPadPainter::SetTextSizePixels(Int_t)
 @trydoc raw"""
-    SetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)::Nothing
+    SetGetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)::Nothing
 
 
-""" SetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)
+""" SetGetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)
 
 # Wrapper of void TVirtualPadPainter::Streamer(TBuffer &)
 @trydoc raw"""
@@ -24866,7 +24913,7 @@ To insure that the baskets of each cluster are located close by in the file, whe
 # Wrapper of void TBranch::Browse(TBrowser *)
 @trydoc raw"""
     Browse(this::ByRef1{TBranch}, b::ByPtr1{TBrowser})::Nothing
-Browser Int32erface.
+Browser interface.
 
 """ Browse(this::ByRef1{TBranch}, b::ByPtr1{TBrowser})
 
@@ -24876,7 +24923,7 @@ Browser Int32erface.
 Loop on all branch baskets.
 If the file where branch buffers reside is writable, free the disk space associated to the baskets of the branch, then call [Reset()](@ref). If the option contains "all", delete also the baskets for the subbranches. The branch is reset.
 
-NOTE that this function must be used with extreme care. Deleting branch baskets fragments the file and may Int32roduce inefficiencies when adding new entries in the Tree or later on when reading the Tree.
+NOTE that this function must be used with extreme care. Deleting branch baskets fragments the file and may introduce inefficiencies when adding new entries in the Tree or later on when reading the Tree.
 """ DeleteBaskets(this::ByRef1{TBranch}, option::ByCopy{String})
 
 # Wrapper of void TBranch::DropBaskets(Option_t *)
@@ -24967,10 +25014,10 @@ Returns total number of bytes read.
 
 # Wrapper of Int_t TBranch::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedGetType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedGetType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of TFile * TBranch::GetFile(Int_t)
 @trydoc raw"""
@@ -25003,7 +25050,7 @@ If mode is 1 the branch buffer file is recreated.
 # Wrapper of Int_t TBranch::GetRow(Int_t)
 @trydoc raw"""
     GetRow(this::ByRef1{TBranch}, row::Int32)::Int32
-Return all elements of one row unpacked in Int32ernal array fValues [Actually just returns 1 (?)].
+Return all elements of one row unpacked in internal array fValues [Actually just returns 1 (?)].
 
 """ GetRow(this::ByRef1{TBranch}, row::Int32)
 
@@ -25080,7 +25127,7 @@ This bit is used by [TBranchObject!ReadBasket](@ref) to decide if an object refe
 
 If autodel is true, this existing object will be deleted, a new object created by the default constructor, then read from disk by the streamer.
 
-If autodel is false, the existing object is not deleted. Root assumes that the user is taking care of deleting any Int32ernal object or array (this can be done in the streamer).
+If autodel is false, the existing object is not deleted. Root assumes that the user is taking care of deleting any internal object or array (this can be done in the streamer).
 """ SetAutoDelete(this::ByRef1{TBranch}, autodel::Bool)
 
 # Wrapper of void TBranch::SetBasketSize(Int_t)
@@ -25323,10 +25370,10 @@ Output the string str in the output buffer.
 
 # Wrapper of void TVirtualPS::SetType(Int_t)
 @trydoc raw"""
-    SetType(this::ByRef1{TVirtualPS}, ::Int32)::Nothing
+    SetGetType(this::ByRef1{TVirtualPS}, ::Int32)::Nothing
 
 
-""" SetType(this::ByRef1{TVirtualPS}, ::Int32)
+""" SetGetType(this::ByRef1{TVirtualPS}, ::Int32)
 
 # Wrapper of void TVirtualPS::Streamer(TBuffer &)
 @trydoc raw"""
@@ -25344,24 +25391,24 @@ Output the string str in the output buffer.
 
 # Wrapper of void TVirtualPS::Text(Double_t, Double_t, const char *)
 @trydoc raw"""
-    Text(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByCopy{String})::Nothing
+    GetText(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByCopy{String})::Nothing
 
 
-""" Text(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByCopy{String})
+""" GetText(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByCopy{String})
 
-# Wrapper of void TVirtualPS::Text(Double_t, Double_t, const Int32 *)
+# Wrapper of void TVirtualPS::Text(Double_t, Double_t, const wchar_t *)
 @trydoc raw"""
-    Text(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByConstPtr1{Int32})::Nothing
+    GetText(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByConstPtr1{wchar_t})::Nothing
 
 
-""" Text(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByConstPtr1{Int32})
+""" GetText(this::ByRef1{TVirtualPS}, x::Float64, y::Float64, string::ByConstPtr1{wchar_t})
 
 # Wrapper of void TVirtualPS::WriteInteger(Int_t, Bool_t)
 @trydoc raw"""
-    WriteInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)::Nothing
+    WriteGetInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)::Nothing
 Write one Integer to the file.
-n: Integer to be written in the file. space: If TRUE, a space in written before the Int32eger.
-""" WriteInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)
+n: Integer to be written in the file. space: If TRUE, a space in written before the integer.
+""" WriteGetInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)
 
 # Wrapper of void TVirtualPS::WriteReal(Float_t, Bool_t)
 @trydoc raw"""
@@ -25407,10 +25454,10 @@ Write a Real number to the file.
 
 # Wrapper of const char * TVirtualTableInterface::GetValueAsString(UInt_t, UInt_t)
 @trydoc raw"""
-    GetValueAsString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)::ByCopy{String}
+    GetValueAsGetString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)::ByCopy{String}
 
 
-""" GetValueAsString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)
+""" GetValueAsGetString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)
 
 # Wrapper of void TVirtualTableInterface::Streamer(TBuffer &)
 @trydoc raw"""
@@ -25450,9 +25497,9 @@ Registers a window created by Qt as a [ROOT](@ref) window.
     the width and height, which define the window size
 """ AddWindow(this::ByRef1{TVirtualX}, qwid::UInt64, w::UInt32, h::UInt32)
 
-# Wrapper of Bool_t TVirtualX::AllocColor(UInt64, ColorStruct_t &)
+# Wrapper of Bool_t TVirtualX::AllocColor(Colormap_t, ColorStruct_t &)
 @trydoc raw"""
-    AllocColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, color::ByRef1{ColorStruct_t})::Bool
+    AllocColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, color::ByRef1{ColorStruct_t})::Bool
 Allocates a read-only colormap entry corresponding to the closest RGB value supported by the hardware.
 If no cell could be allocated it returns kFALSE, otherwise kTRUE.
 
@@ -25465,14 +25512,14 @@ The pixel value is set to default. Let system think we could allocate color.
     
 - **`color`** [in] 
     specifies and returns the values actually used in the cmap
-""" AllocColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, color::ByRef1{ColorStruct_t})
+""" AllocColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, color::ByRef1{ColorStruct_t})
 
-# Wrapper of void TVirtualX::BeginModalSessionFor(UInt64)
+# Wrapper of void TVirtualX::BeginModalSessionFor(Window_t)
 @trydoc raw"""
-    BeginModalSessionFor(this::ByRef1{TVirtualX}, window::ByCopy{UInt64})::Nothing
+    BeginModalSessionFor(this::ByRef1{TVirtualX}, window::ByCopy{Window_t})::Nothing
 Start a modal session for a dialog window.
 
-""" BeginModalSessionFor(this::ByRef1{TVirtualX}, window::ByCopy{UInt64})
+""" BeginModalSessionFor(this::ByRef1{TVirtualX}, window::ByCopy{Window_t})
 
 # Wrapper of void TVirtualX::Bell(Int_t)
 @trydoc raw"""
@@ -25481,16 +25528,16 @@ Sets the sound bell. Percent is loudness from -100% to 100%.
 
 """ Bell(this::ByRef1{TVirtualX}, percent::Int32)
 
-# Wrapper of void TVirtualX::ChangeActivePointerGrab(UInt64, UInt_t, Cursor_t)
+# Wrapper of void TVirtualX::ChangeActivePointerGrab(Window_t, UInt_t, Cursor_t)
 @trydoc raw"""
-    ChangeActivePointerGrab(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::UInt32, ::ByCopy{Cursor_t})::Nothing
+    ChangeActivePointerGrab(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::UInt32, ::ByCopy{Cursor_t})::Nothing
 Changes the specified dynamic parameters if the pointer is actively grabbed by the client and if the specified time is no earlier than the last-pointer-grab time and no later than the current X server time.
 
-""" ChangeActivePointerGrab(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::UInt32, ::ByCopy{Cursor_t})
+""" ChangeActivePointerGrab(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::UInt32, ::ByCopy{Cursor_t})
 
-# Wrapper of void TVirtualX::ChangeGC(UInt64, GCValues_t *)
+# Wrapper of void TVirtualX::ChangeGC(GContext_t, GCValues_t *)
 @trydoc raw"""
-    ChangeGC(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, gval::ByPtr1{GCValues_t})::Nothing
+    ChangeGC(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, gval::ByPtr1{GCValues_t})::Nothing
 Changes the components specified by the mask in gval for the specified GC.
 ## Arguments
 
@@ -25502,18 +25549,18 @@ Changes the components specified by the mask in gval for the specified GC.
     
 
 (see also the [GCValues_t](@ref) structure)
-""" ChangeGC(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, gval::ByPtr1{GCValues_t})
+""" ChangeGC(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, gval::ByPtr1{GCValues_t})
 
-# Wrapper of void TVirtualX::ChangeProperties(UInt64, Atom_t, Atom_t, Int_t, UChar_t *, Int_t)
+# Wrapper of void TVirtualX::ChangeProperties(Window_t, Atom_t, Atom_t, Int_t, UChar_t *, Int_t)
 @trydoc raw"""
-    ChangeProperties(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, format::Int32, data::ByPtr2{UInt8}, len::Int32)::Nothing
+    ChangeProperties(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, format::Int32, data::ByPtr2{UInt8}, len::Int32)::Nothing
 Alters the property for the specified window and causes the X server to generate a PropertyNotify event on that window.
 
-""" ChangeProperties(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, format::Int32, data::ByPtr2{UInt8}, len::Int32)
+""" ChangeProperties(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, format::Int32, data::ByPtr2{UInt8}, len::Int32)
 
-# Wrapper of void TVirtualX::ChangeProperty(UInt64, Atom_t, Atom_t, UChar_t *, Int_t)
+# Wrapper of void TVirtualX::ChangeProperty(Window_t, Atom_t, Atom_t, UChar_t *, Int_t)
 @trydoc raw"""
-    ChangeProperty(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, data::ByPtr2{UInt8}, len::Int32)::Nothing
+    ChangeProperty(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, data::ByPtr2{UInt8}, len::Int32)::Nothing
 Alters the property for the specified window and causes the X server to generate a PropertyNotify event on that window.
 ## Arguments
 
@@ -25524,32 +25571,32 @@ Alters the property for the specified window and causes the X server to generate
     specifies the property name 
     
 - **`type`** [in] 
-    the type of the property; the X server does not Int32erpret the type but simply passes it back to an application that might ask about the window properties 
+    the type of the property; the X server does not interpret the type but simply passes it back to an application that might ask about the window properties 
     
 - **`data`** [in] 
     the property data 
     
 - **`len`** [in] 
     the length of the specified data format
-""" ChangeProperty(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, data::ByPtr2{UInt8}, len::Int32)
+""" ChangeProperty(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, property::ByCopy{Atom_t}, type::ByCopy{Atom_t}, data::ByPtr2{UInt8}, len::Int32)
 
-# Wrapper of void TVirtualX::ChangeWindowAttributes(UInt64, SetWindowAttributes_t *)
+# Wrapper of void TVirtualX::ChangeWindowAttributes(Window_t, SetWindowAttributes_t *)
 @trydoc raw"""
-    ChangeWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, attr::ByPtr1{SetWindowAttributes_t})::Nothing
+    ChangeWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, attr::ByPtr1{SetWindowAttributes_t})::Nothing
 Changes the attributes of the specified window "id" according the values provided in "attr".
 The mask data member of "attr" specifies which window attributes are defined in the attributes argument. This mask is the bitwise inclusive OR of the valid attribute mask bits; if it is zero, the attributes are ignored.
-""" ChangeWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, attr::ByPtr1{SetWindowAttributes_t})
+""" ChangeWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, attr::ByPtr1{SetWindowAttributes_t})
 
-# Wrapper of Bool_t TVirtualX::CheckEvent(UInt64, EGEventType, Event_t &)
+# Wrapper of Bool_t TVirtualX::CheckEvent(Window_t, EGEventType, Event_t &)
 @trydoc raw"""
-    CheckEvent(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, type::ByCopy{EGEventType}, ev::ByRef1{Event_t})::Bool
+    CheckEvent(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, type::ByCopy{EGEventType}, ev::ByRef1{Event_t})::Bool
 Check if there is for window "id" an event of type "type".
 If there is it fills in the event structure and return true. If no such event return false.
-""" CheckEvent(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, type::ByCopy{EGEventType}, ev::ByRef1{Event_t})
+""" CheckEvent(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, type::ByCopy{EGEventType}, ev::ByRef1{Event_t})
 
-# Wrapper of void TVirtualX::ClearArea(UInt64, Int_t, Int_t, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::ClearArea(Window_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    ClearArea(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
+    ClearArea(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
 Paints a rectangular area in the specified window "id" according to the specified dimensions with the window's background pixel or pixmap.
 ## Arguments
 
@@ -25559,7 +25606,7 @@ Paints a rectangular area in the specified window "id" according to the specifie
     coordinates, which are relative to the origin 
     . 
     the width and height which define the rectangle dimensions
-""" ClearArea(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)
+""" ClearArea(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)
 
 # Wrapper of void TVirtualX::ClearWindow()
 @trydoc raw"""
@@ -25568,12 +25615,12 @@ Clears the entire area of the current window.
 
 """ ClearWindow(this::ByRef1{TVirtualX})
 
-# Wrapper of void TVirtualX::ClearWindow(UInt64)
+# Wrapper of void TVirtualX::ClearWindow(Window_t)
 @trydoc raw"""
-    ClearWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    ClearWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Clears the entire area in the specified window and it is equivalent to ClearArea(id, 0, 0, 0, 0)
 
-""" ClearWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" ClearWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
 # Wrapper of void TVirtualX::CloseDisplay()
 @trydoc raw"""
@@ -25596,23 +25643,23 @@ Deletes current window.
 
 """ CloseWindow(this::ByRef1{TVirtualX})
 
-# Wrapper of void TVirtualX::ConvertPrimarySelection(UInt64, Atom_t, Time_t)
+# Wrapper of void TVirtualX::ConvertPrimarySelection(Window_t, Atom_t, Time_t)
 @trydoc raw"""
-    ConvertPrimarySelection(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, clipboard::ByCopy{Atom_t}, when::ByCopy{Time_t})::Nothing
+    ConvertPrimarySelection(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, clipboard::ByCopy{Atom_t}, when::ByCopy{Time_t})::Nothing
 Causes a SelectionRequest event to be sent to the current primary selection owner.
-This event specifies the selection property (primary selection), the format Int32o which to convert that data before storing it (target = XA_STRING), the property in which the owner will place the information (sel_property), the window that wants the information (id), and the time of the conversion request (when). The selection owner responds by sending a SelectionNotify event, which confirms the selected atom and type.
-""" ConvertPrimarySelection(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, clipboard::ByCopy{Atom_t}, when::ByCopy{Time_t})
+This event specifies the selection property (primary selection), the format into which to convert that data before storing it (target = XA_STRING), the property in which the owner will place the information (sel_property), the window that wants the information (id), and the time of the conversion request (when). The selection owner responds by sending a SelectionNotify event, which confirms the selected atom and type.
+""" ConvertPrimarySelection(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, clipboard::ByCopy{Atom_t}, when::ByCopy{Time_t})
 
-# Wrapper of void TVirtualX::ConvertSelection(UInt64, Atom_t &, Atom_t &, Atom_t &, Time_t &)
+# Wrapper of void TVirtualX::ConvertSelection(Window_t, Atom_t &, Atom_t &, Atom_t &, Time_t &)
 @trydoc raw"""
-    ConvertSelection(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Time_t})::Nothing
+    ConvertSelection(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Time_t})::Nothing
 Requests that the specified selection be converted to the specified target type.
 
-""" ConvertSelection(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Time_t})
+""" ConvertSelection(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Atom_t}, ::ByRef1{Time_t})
 
-# Wrapper of void TVirtualX::CopyArea(UInt64, UInt64, UInt64, Int_t, Int_t, UInt_t, UInt_t, Int_t, Int_t)
+# Wrapper of void TVirtualX::CopyArea(Drawable_t, Drawable_t, GContext_t, Int_t, Int_t, UInt_t, UInt_t, Int_t, Int_t)
 @trydoc raw"""
-    CopyArea(this::ByRef1{TVirtualX}, src::ByCopy{UInt64}, dest::ByCopy{UInt64}, gc::ByCopy{UInt64}, src_x::Int32, src_y::Int32, width::UInt32, height::UInt32, dest_x::Int32, dest_y::Int32)::Nothing
+    CopyArea(this::ByRef1{TVirtualX}, src::ByCopy{Drawable_t}, dest::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, src_x::Int32, src_y::Int32, width::UInt32, height::UInt32, dest_x::Int32, dest_y::Int32)::Nothing
 Combines the specified rectangle of "src" with the specified rectangle of "dest" according to the "gc".
 ## Arguments
 
@@ -25631,14 +25678,14 @@ Combines the specified rectangle of "src" with the specified rectangle of "dest"
     
 
 GC components in use: function, plane-mask, subwindow-mode, graphics-exposure, clip-x-origin, clip-y-origin, and clip-mask. (see also the [GCValues_t](@ref) structure)
-""" CopyArea(this::ByRef1{TVirtualX}, src::ByCopy{UInt64}, dest::ByCopy{UInt64}, gc::ByCopy{UInt64}, src_x::Int32, src_y::Int32, width::UInt32, height::UInt32, dest_x::Int32, dest_y::Int32)
+""" CopyArea(this::ByRef1{TVirtualX}, src::ByCopy{Drawable_t}, dest::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, src_x::Int32, src_y::Int32, width::UInt32, height::UInt32, dest_x::Int32, dest_y::Int32)
 
-# Wrapper of void TVirtualX::CopyGC(UInt64, UInt64, Mask_t)
+# Wrapper of void TVirtualX::CopyGC(GContext_t, GContext_t, Mask_t)
 @trydoc raw"""
-    CopyGC(this::ByRef1{TVirtualX}, org::ByCopy{UInt64}, dest::ByCopy{UInt64}, mask::ByCopy{Mask_t})::Nothing
+    CopyGC(this::ByRef1{TVirtualX}, org::ByCopy{GContext_t}, dest::ByCopy{GContext_t}, mask::ByCopy{Mask_t})::Nothing
 Copies the specified components from the source GC "org" to the destination GC "dest".
 The "mask" defines which component to copy and it is a data member of [GCValues_t](@ref).
-""" CopyGC(this::ByRef1{TVirtualX}, org::ByCopy{UInt64}, dest::ByCopy{UInt64}, mask::ByCopy{Mask_t})
+""" CopyGC(this::ByRef1{TVirtualX}, org::ByCopy{GContext_t}, dest::ByCopy{GContext_t}, mask::ByCopy{Mask_t})
 
 # Wrapper of void TVirtualX::CopyPixmap(Int_t, Int_t, Int_t)
 @trydoc raw"""
@@ -25647,9 +25694,9 @@ Copies the pixmap "wid" at the position [xpos,ypos] in the current window.
 
 """ CopyPixmap(this::ByRef1{TVirtualX}, wid::Int32, xpos::Int32, ypos::Int32)
 
-# Wrapper of Pixmap_t TVirtualX::CreateBitmap(UInt64, const char *, UInt_t, UInt_t)
+# Wrapper of Pixmap_t TVirtualX::CreateBitmap(Drawable_t, const char *, UInt_t, UInt_t)
 @trydoc raw"""
-    CreateBitmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, bitmap::ByCopy{String}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
+    CreateBitmap(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, bitmap::ByCopy{String}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
 Creates a bitmap (i.e.
 pixmap with depth 1) from the bitmap data.
 
@@ -25661,7 +25708,7 @@ pixmap with depth 1) from the bitmap data.
     the data in bitmap format 
     . 
     define the dimensions of the pixmap
-""" CreateBitmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, bitmap::ByCopy{String}, width::UInt32, height::UInt32)
+""" CreateBitmap(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, bitmap::ByCopy{String}, width::UInt32, height::UInt32)
 
 # Wrapper of Cursor_t TVirtualX::CreateCursor(ECursor)
 @trydoc raw"""
@@ -25678,16 +25725,16 @@ Creates the specified cursor.
 (C++ version of the code)
 """ CreateCursor(this::ByRef1{TVirtualX}, cursor::ByCopy{ECursor})
 
-# Wrapper of UInt64 TVirtualX::CreateGC(UInt64, GCValues_t *)
+# Wrapper of GContext_t TVirtualX::CreateGC(Drawable_t, GCValues_t *)
 @trydoc raw"""
-    CreateGC(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gval::ByPtr1{GCValues_t})::ByCopy{UInt64}
+    CreateGC(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gval::ByPtr1{GCValues_t})::ByCopy{GContext_t}
 Creates a graphics context using the provided [GCValues_t](@ref) *gval structure.
-The mask data member of gval specifies which components in the GC are to be set using the information in the specified values structure. It returns a graphics context handle UInt64 that can be used with any destination drawable or O if the creation falls.
-""" CreateGC(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gval::ByPtr1{GCValues_t})
+The mask data member of gval specifies which components in the GC are to be set using the information in the specified values structure. It returns a graphics context handle GContext_t that can be used with any destination drawable or O if the creation falls.
+""" CreateGC(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gval::ByPtr1{GCValues_t})
 
-# Wrapper of UInt64 TVirtualX::CreateImage(UInt_t, UInt_t)
+# Wrapper of Drawable_t TVirtualX::CreateImage(UInt_t, UInt_t)
 @trydoc raw"""
-    CreateImage(this::ByRef1{TVirtualX}, width::UInt32, height::UInt32)::ByCopy{UInt64}
+    CreateImage(this::ByRef1{TVirtualX}, width::UInt32, height::UInt32)::ByCopy{Drawable_t}
 Allocates the memory needed for an drawable.
 ## Arguments
 
@@ -25705,30 +25752,30 @@ Creates OpenGL context for window "wid".
 
 """ CreateOpenGLContext(this::ByRef1{TVirtualX}, wid::Int32)
 
-# Wrapper of UInt64 TVirtualX::CreateOpenGLContext(UInt64, UInt64)
+# Wrapper of Handle_t TVirtualX::CreateOpenGLContext(Window_t, Handle_t)
 @trydoc raw"""
-    CreateOpenGLContext(this::ByRef1{TVirtualX}, windowID::ByCopy{UInt64}, sharedContext::ByCopy{UInt64})::ByCopy{UInt64}
+    CreateOpenGLContext(this::ByRef1{TVirtualX}, windowID::ByCopy{Window_t}, sharedContext::ByCopy{Handle_t})::ByCopy{Handle_t}
 Creates OpenGL context for window "windowID".
 
-""" CreateOpenGLContext(this::ByRef1{TVirtualX}, windowID::ByCopy{UInt64}, sharedContext::ByCopy{UInt64})
+""" CreateOpenGLContext(this::ByRef1{TVirtualX}, windowID::ByCopy{Window_t}, sharedContext::ByCopy{Handle_t})
 
-# Wrapper of Bool_t TVirtualX::CreatePictureFromData(UInt64, char **, Pixmap_t &, Pixmap_t &, PictureAttributes_t &)
+# Wrapper of Bool_t TVirtualX::CreatePictureFromData(Drawable_t, char **, Pixmap_t &, Pixmap_t &, PictureAttributes_t &)
 @trydoc raw"""
-    CreatePictureFromData(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, data::ByPtr2{Int8}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})::Bool
+    CreatePictureFromData(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, data::ByPtr2{Int8}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})::Bool
 Creates a picture pict from data in bitmap format.
 The picture attributes "attr" are used for input and output. Returns kTRUE in case of success, kFALSE otherwise. If the mask "pict_mask" does not exist it is set to kNone.
-""" CreatePictureFromData(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, data::ByPtr2{Int8}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})
+""" CreatePictureFromData(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, data::ByPtr2{Int8}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})
 
-# Wrapper of Bool_t TVirtualX::CreatePictureFromFile(UInt64, const char *, Pixmap_t &, Pixmap_t &, PictureAttributes_t &)
+# Wrapper of Bool_t TVirtualX::CreatePictureFromFile(Drawable_t, const char *, Pixmap_t &, Pixmap_t &, PictureAttributes_t &)
 @trydoc raw"""
-    CreatePictureFromFile(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, filename::ByCopy{String}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})::Bool
+    CreatePictureFromFile(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, filename::ByCopy{String}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})::Bool
 Creates a picture pict from data in file "filename".
 The picture attributes "attr" are used for input and output. Returns kTRUE in case of success, kFALSE otherwise. If the mask "pict_mask" does not exist it is set to kNone.
-""" CreatePictureFromFile(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, filename::ByCopy{String}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})
+""" CreatePictureFromFile(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, filename::ByCopy{String}, pict::ByRef1{Pixmap_t}, pict_mask::ByRef1{Pixmap_t}, attr::ByRef1{PictureAttributes_t})
 
-# Wrapper of Pixmap_t TVirtualX::CreatePixmap(UInt64, const char *, UInt_t, UInt_t, ULong_t, ULong_t, Int_t)
+# Wrapper of Pixmap_t TVirtualX::CreatePixmap(Drawable_t, const char *, UInt_t, UInt_t, ULong_t, ULong_t, Int_t)
 @trydoc raw"""
-    CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, bitmap::ByCopy{String}, width::UInt32, height::UInt32, forecolor::UInt64, backcolor::UInt64, depth::Int32)::ByCopy{Pixmap_t}
+    CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, bitmap::ByCopy{String}, width::UInt32, height::UInt32, forecolor::UInt64, backcolor::UInt64, depth::Int32)::ByCopy{Pixmap_t}
 Creates a pixmap from bitmap data of the width, height, and depth you specified and returns a pixmap that identifies it.
 The width and height arguments must be nonzero. The depth argument must be one of the depths supported by the screen of the specified drawable.
 
@@ -25746,18 +25793,18 @@ The width and height arguments must be nonzero. The depth argument must be one o
     the background pixel values to use 
     . 
     the depth of the pixmap
-""" CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, bitmap::ByCopy{String}, width::UInt32, height::UInt32, forecolor::UInt64, backcolor::UInt64, depth::Int32)
+""" CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, bitmap::ByCopy{String}, width::UInt32, height::UInt32, forecolor::UInt64, backcolor::UInt64, depth::Int32)
 
-# Wrapper of Pixmap_t TVirtualX::CreatePixmap(UInt64, UInt_t, UInt_t)
+# Wrapper of Pixmap_t TVirtualX::CreatePixmap(Drawable_t, UInt_t, UInt_t)
 @trydoc raw"""
-    CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, w::UInt32, h::UInt32)::ByCopy{Pixmap_t}
+    CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, w::UInt32, h::UInt32)::ByCopy{Pixmap_t}
 Creates a pixmap of the specified width and height and returns a pixmap ID that identifies it.
 
-""" CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, w::UInt32, h::UInt32)
+""" CreatePixmap(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, w::UInt32, h::UInt32)
 
 # Wrapper of Pixmap_t TVirtualX::CreatePixmapFromData(unsigned char *, UInt_t, UInt_t)
 @trydoc raw"""
-    CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr1{UInt8}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
+    CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr2{UInt8}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
 create pixmap from RGB data.
 RGB data is in format:
 
@@ -25766,18 +25813,18 @@ RGB data is in format:
 (C++ version of the code)
 
 Pixels are numbered from left to right and from top to bottom. Note that data must be 32-bit aligned
-""" CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr1{UInt8}, width::UInt32, height::UInt32)
+""" CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr2{UInt8}, width::UInt32, height::UInt32)
 
-# Wrapper of UInt64 TVirtualX::CreateRegion()
+# Wrapper of Region_t TVirtualX::CreateRegion()
 @trydoc raw"""
-    CreateRegion(this::ByRef1{TVirtualX})::ByCopy{UInt64}
+    CreateRegion(this::ByRef1{TVirtualX})::ByCopy{Region_t}
 Creates a new empty region.
 
 """ CreateRegion(this::ByRef1{TVirtualX})
 
-# Wrapper of UInt64 TVirtualX::CreateWindow(UInt64, Int_t, Int_t, UInt_t, UInt_t, UInt_t, Int_t, UInt_t, void *, SetWindowAttributes_t *, UInt_t)
+# Wrapper of Window_t TVirtualX::CreateWindow(Window_t, Int_t, Int_t, UInt_t, UInt_t, UInt_t, Int_t, UInt_t, void *, SetWindowAttributes_t *, UInt_t)
 @trydoc raw"""
-    CreateWindow(this::ByRef1{TVirtualX}, parent::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32, border::UInt32, depth::Int32, clss::UInt32, visual::ByPtr2{Nothing}, attr::ByPtr1{SetWindowAttributes_t}, wtype::UInt32)::ByCopy{UInt64}
+    CreateWindow(this::ByRef1{TVirtualX}, parent::ByCopy{Window_t}, x::Int32, y::Int32, w::UInt32, h::UInt32, border::UInt32, depth::Int32, clss::UInt32, visual::ByPtr2{Nothing}, attr::ByPtr1{SetWindowAttributes_t}, wtype::UInt32)::ByCopy{Window_t}
 Creates an unmapped subwindow for a specified parent window and returns the created window.
 The created window is placed on top in the stacking order with respect to siblings. The coordinate system has the X axis horizontal and the Y axis vertical with the origin [0,0] at the upper-left corner. Each window and pixmap has its own coordinate system.
 
@@ -25801,28 +25848,28 @@ The created window is placed on top in the stacking order with respect to siblin
     the structure from which the values are to be taken. 
     . 
     the window type
-""" CreateWindow(this::ByRef1{TVirtualX}, parent::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32, border::UInt32, depth::Int32, clss::UInt32, visual::ByPtr2{Nothing}, attr::ByPtr1{SetWindowAttributes_t}, wtype::UInt32)
+""" CreateWindow(this::ByRef1{TVirtualX}, parent::ByCopy{Window_t}, x::Int32, y::Int32, w::UInt32, h::UInt32, border::UInt32, depth::Int32, clss::UInt32, visual::ByPtr2{Nothing}, attr::ByPtr1{SetWindowAttributes_t}, wtype::UInt32)
 
-# Wrapper of void TVirtualX::DeleteFont(UInt64)
+# Wrapper of void TVirtualX::DeleteFont(FontStruct_t)
 @trydoc raw"""
-    DeleteFont(this::ByRef1{TVirtualX}, fs::ByCopy{UInt64})::Nothing
+    DeleteFont(this::ByRef1{TVirtualX}, fs::ByCopy{FontStruct_t})::Nothing
 Explicitly deletes the font structure "fs" obtained via [LoadQueryFont()](@ref).
 
-""" DeleteFont(this::ByRef1{TVirtualX}, fs::ByCopy{UInt64})
+""" DeleteFont(this::ByRef1{TVirtualX}, fs::ByCopy{FontStruct_t})
 
-# Wrapper of void TVirtualX::DeleteGC(UInt64)
+# Wrapper of void TVirtualX::DeleteGC(GContext_t)
 @trydoc raw"""
-    DeleteGC(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64})::Nothing
+    DeleteGC(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t})::Nothing
 Deletes the specified GC "gc".
 
-""" DeleteGC(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64})
+""" DeleteGC(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t})
 
-# Wrapper of void TVirtualX::DeleteImage(UInt64)
+# Wrapper of void TVirtualX::DeleteImage(Drawable_t)
 @trydoc raw"""
-    DeleteImage(this::ByRef1{TVirtualX}, img::ByCopy{UInt64})::Nothing
+    DeleteImage(this::ByRef1{TVirtualX}, img::ByCopy{Drawable_t})::Nothing
 Deallocates the memory associated with the image img.
 
-""" DeleteImage(this::ByRef1{TVirtualX}, img::ByCopy{UInt64})
+""" DeleteImage(this::ByRef1{TVirtualX}, img::ByCopy{Drawable_t})
 
 # Wrapper of void TVirtualX::DeleteOpenGLContext(Int_t)
 @trydoc raw"""
@@ -25845,33 +25892,33 @@ Explicitly deletes the pixmap resource "pmap".
 
 """ DeletePixmap(this::ByRef1{TVirtualX}, pmap::ByCopy{Pixmap_t})
 
-# Wrapper of void TVirtualX::DeleteProperty(UInt64, Atom_t &)
+# Wrapper of void TVirtualX::DeleteProperty(Window_t, Atom_t &)
 @trydoc raw"""
-    DeleteProperty(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByRef1{Atom_t})::Nothing
+    DeleteProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByRef1{Atom_t})::Nothing
 Deletes the specified property only if the property was defined on the specified window and causes the X server to generate a PropertyNotify event on the window unless the property does not exist.
 
-""" DeleteProperty(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByRef1{Atom_t})
+""" DeleteProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByRef1{Atom_t})
 
-# Wrapper of void TVirtualX::DestroyRegion(UInt64)
+# Wrapper of void TVirtualX::DestroyRegion(Region_t)
 @trydoc raw"""
-    DestroyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{UInt64})::Nothing
+    DestroyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{Region_t})::Nothing
 Destroys the region "reg".
 
-""" DestroyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{UInt64})
+""" DestroyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{Region_t})
 
-# Wrapper of void TVirtualX::DestroySubwindows(UInt64)
+# Wrapper of void TVirtualX::DestroySubwindows(Window_t)
 @trydoc raw"""
-    DestroySubwindows(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    DestroySubwindows(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 The DestroySubwindows function destroys all inferior windows of the specified window, in bottom-to-top stacking order.
 
-""" DestroySubwindows(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" DestroySubwindows(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
-# Wrapper of void TVirtualX::DestroyWindow(UInt64)
+# Wrapper of void TVirtualX::DestroyWindow(Window_t)
 @trydoc raw"""
-    DestroyWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    DestroyWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Destroys the window "id" as well as all of its subwindows.
 The window should never be referenced again. If the window specified by the "id" argument is mapped, it is unmapped automatically.
-""" DestroyWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" DestroyWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
 # Wrapper of void TVirtualX::DispatchClientMessage(UInt_t)
 @trydoc raw"""
@@ -25918,14 +25965,14 @@ Fills area described by the polygon.
     list of points. xy(2,n)
 """ DrawFillArea(this::ByRef1{TVirtualX}, n::Int32, xy::ByPtr1{TPoint})
 
-# Wrapper of void TVirtualX::DrawLine(UInt64, UInt64, Int_t, Int_t, Int_t, Int_t)
+# Wrapper of void TVirtualX::DrawLine(Drawable_t, GContext_t, Int_t, Int_t, Int_t, Int_t)
 @trydoc raw"""
-    DrawLine(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x1::Int32, y1::Int32, x2::Int32, y2::Int32)::Nothing
+    DrawLine(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x1::Int32, y1::Int32, x2::Int32, y2::Int32)::Nothing
 Uses the components of the specified GC to draw a line between the specified set of points (x1, y1) and (x2, y2).
 GC components in use: function, plane-mask, line-width, line-style, cap-style, fill-style, subwindow-mode, clip-x-origin, clip-y-origin, and clip-mask.
 
 GC mode-dependent components: foreground, background, tile, stipple, tile-stipple-x-origin, tile-stipple-y-origin, dash-offset, dash-list. (see also the [GCValues_t](@ref) structure)
-""" DrawLine(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x1::Int32, y1::Int32, x2::Int32, y2::Int32)
+""" DrawLine(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x1::Int32, y1::Int32, x2::Int32, y2::Int32)
 
 # Wrapper of void TVirtualX::DrawLine(Int_t, Int_t, Int_t, Int_t)
 @trydoc raw"""
@@ -25965,16 +26012,16 @@ Draws "n" markers with the current attributes at position [x,y].
     an array of x,y marker coordinates
 """ DrawPolyMarker(this::ByRef1{TVirtualX}, n::Int32, xy::ByPtr1{TPoint})
 
-# Wrapper of void TVirtualX::DrawRectangle(UInt64, UInt64, Int_t, Int_t, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::DrawRectangle(Drawable_t, GContext_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    DrawRectangle(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
+    DrawRectangle(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
 Draws rectangle outlines of [x,y] [x+w,y] [x+w,y+h] [x,y+h].
 GC components in use: function, plane-mask, line-width, line-style, cap-style, join-style, fill-style, subwindow-mode, clip-x-origin, clip-y-origin, clip-mask. GC mode-dependent components: foreground, background, tile, stipple, tile-stipple-x-origin, tile-stipple-y-origin, dash-offset, dash-list. (see also the [GCValues_t](@ref) structure)
-""" DrawRectangle(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)
+""" DrawRectangle(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)
 
-# Wrapper of void TVirtualX::DrawSegments(UInt64, UInt64, Segment_t *, Int_t)
+# Wrapper of void TVirtualX::DrawSegments(Drawable_t, GContext_t, Segment_t *, Int_t)
 @trydoc raw"""
-    DrawSegments(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, seg::ByPtr1{Segment_t}, nseg::Int32)::Nothing
+    DrawSegments(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, seg::ByPtr1{Segment_t}, nseg::Int32)::Nothing
 Draws multiple line segments.
 Each line is specified by a pair of points.
 
@@ -25996,11 +26043,11 @@ Each line is specified by a pair of points.
 GC components in use: function, plane-mask, line-width, line-style, cap-style, join-style, fill-style, subwindow-mode, clip-x-origin, clip-y-origin, clip-mask.
 
 GC mode-dependent components: foreground, background, tile, stipple, tile-stipple-x-origin, tile-stipple-y-origin, dash-offset, and dash-list. (see also the [GCValues_t](@ref) structure)
-""" DrawSegments(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, seg::ByPtr1{Segment_t}, nseg::Int32)
+""" DrawSegments(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, seg::ByPtr1{Segment_t}, nseg::Int32)
 
-# Wrapper of void TVirtualX::DrawString(UInt64, UInt64, Int_t, Int_t, const char *, Int_t)
+# Wrapper of void TVirtualX::DrawString(Drawable_t, GContext_t, Int_t, Int_t, const char *, Int_t)
 @trydoc raw"""
-    DrawString(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)::Nothing
+    DrawGetString(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)::Nothing
 Each character image, as defined by the font in the GC, is treated as an additional mask for a fill operation on the drawable.
 ## Arguments
 
@@ -26017,21 +26064,21 @@ Each character image, as defined by the font in the GC, is treated as an additio
     
 
 GC components in use: function, plane-mask, fill-style, font, subwindow-mode, clip-x-origin, clip-y-origin, and clip-mask. GC mode-dependent components: foreground, background, tile, stipple, tile-stipple-x-origin, and tile-stipple-y-origin. (see also the [GCValues_t](@ref) structure)
-""" DrawString(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)
+""" DrawGetString(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)
 
-# Wrapper of Bool_t TVirtualX::EmptyRegion(UInt64)
+# Wrapper of Bool_t TVirtualX::EmptyRegion(Region_t)
 @trydoc raw"""
-    EmptyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{UInt64})::Bool
+    EmptyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{Region_t})::Bool
 Returns kTRUE if the region reg is empty.
 
-""" EmptyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{UInt64})
+""" EmptyRegion(this::ByRef1{TVirtualX}, reg::ByCopy{Region_t})
 
-# Wrapper of Bool_t TVirtualX::EqualRegion(UInt64, UInt64)
+# Wrapper of Bool_t TVirtualX::EqualRegion(Region_t, Region_t)
 @trydoc raw"""
-    EqualRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64})::Bool
+    EqualRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t})::Bool
 Returns kTRUE if the two regions have the same offset, size, and shape.
 
-""" EqualRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64})
+""" EqualRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t})
 
 # Wrapper of Int_t TVirtualX::EventsPending()
 @trydoc raw"""
@@ -26040,9 +26087,9 @@ Returns the number of events that have been received from the X server but have 
 
 """ EventsPending(this::ByRef1{TVirtualX})
 
-# Wrapper of void TVirtualX::FillPolygon(UInt64, UInt64, Point_t *, Int_t)
+# Wrapper of void TVirtualX::FillPolygon(Window_t, GContext_t, Point_t *, Int_t)
 @trydoc raw"""
-    FillPolygon(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, points::ByPtr1{Point_t}, npnt::Int32)::Nothing
+    FillPolygon(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, gc::ByCopy{GContext_t}, points::ByPtr1{Point_t}, npnt::Int32)::Nothing
 Fills the region closed by the specified path.
 The path is closed automatically if the last point in the list does not coincide with the first point.
 
@@ -26062,37 +26109,37 @@ The path is closed automatically if the last point in the list does not coincide
     
 
 GC components in use: function, plane-mask, fill-style, fill-rule, subwindow-mode, clip-x-origin, clip-y-origin, and clip-mask. GC mode-dependent components: foreground, background, tile, stipple, tile-stipple-x-origin, and tile-stipple-y-origin. (see also the [GCValues_t](@ref) structure)
-""" FillPolygon(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, points::ByPtr1{Point_t}, npnt::Int32)
+""" FillPolygon(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, gc::ByCopy{GContext_t}, points::ByPtr1{Point_t}, npnt::Int32)
 
-# Wrapper of void TVirtualX::FillRectangle(UInt64, UInt64, Int_t, Int_t, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::FillRectangle(Drawable_t, GContext_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    FillRectangle(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
+    FillRectangle(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
 Fills the specified rectangle defined by [x,y] [x+w,y] [x+w,y+h] [x,y+h].
 using the GC you specify.
 
 GC components in use are: function, plane-mask, fill-style, subwindow-mode, clip-x-origin, clip-y-origin, clip-mask. GC mode-dependent components: foreground, background, tile, stipple, tile-stipple-x-origin, and tile-stipple-y-origin. (see also the [GCValues_t](@ref) structure)
-""" FillRectangle(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)
+""" FillRectangle(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)
 
-# Wrapper of UInt64 TVirtualX::FindRWindow(UInt64, UInt64, UInt64, Int32, Int32, Int32)
+# Wrapper of Window_t TVirtualX::FindRWindow(Window_t, Window_t, Window_t, int, int, int)
 @trydoc raw"""
-    FindRWindow(this::ByRef1{TVirtualX}, win::ByCopy{UInt64}, dragwin::ByCopy{UInt64}, input::ByCopy{UInt64}, x::Int32, y::Int32, maxd::Int32)::ByCopy{UInt64}
+    FindRWindow(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, dragwin::ByCopy{Window_t}, input::ByCopy{Window_t}, x::Int32, y::Int32, maxd::Int32)::ByCopy{Window_t}
 Recursively search in the children of Window for a Window which is at location x, y and is DND aware, with a maximum depth of maxd.
 
-""" FindRWindow(this::ByRef1{TVirtualX}, win::ByCopy{UInt64}, dragwin::ByCopy{UInt64}, input::ByCopy{UInt64}, x::Int32, y::Int32, maxd::Int32)
+""" FindRWindow(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, dragwin::ByCopy{Window_t}, input::ByCopy{Window_t}, x::Int32, y::Int32, maxd::Int32)
 
-# Wrapper of void TVirtualX::FlushOpenGLBuffer(UInt64)
+# Wrapper of void TVirtualX::FlushOpenGLBuffer(Handle_t)
 @trydoc raw"""
-    FlushOpenGLBuffer(this::ByRef1{TVirtualX}, ctx::ByCopy{UInt64})::Nothing
+    FlushOpenGLBuffer(this::ByRef1{TVirtualX}, ctx::ByCopy{Handle_t})::Nothing
 Flushes OpenGL buffer.
 
-""" FlushOpenGLBuffer(this::ByRef1{TVirtualX}, ctx::ByCopy{UInt64})
+""" FlushOpenGLBuffer(this::ByRef1{TVirtualX}, ctx::ByCopy{Handle_t})
 
-# Wrapper of void TVirtualX::FreeColor(UInt64, ULong_t)
+# Wrapper of void TVirtualX::FreeColor(Colormap_t, ULong_t)
 @trydoc raw"""
-    FreeColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, pixel::UInt64)::Nothing
+    FreeColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, pixel::UInt64)::Nothing
 Frees color cell with specified pixel value.
 
-""" FreeColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, pixel::UInt64)
+""" FreeColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, pixel::UInt64)
 
 # Wrapper of void TVirtualX::FreeFontNames(char **)
 @trydoc raw"""
@@ -26101,12 +26148,12 @@ Frees the specified the array of strings "fontlist".
 
 """ FreeFontNames(this::ByRef1{TVirtualX}, fontlist::ByPtr2{Int8})
 
-# Wrapper of void TVirtualX::FreeFontStruct(UInt64)
+# Wrapper of void TVirtualX::FreeFontStruct(FontStruct_t)
 @trydoc raw"""
-    FreeFontStruct(this::ByRef1{TVirtualX}, fs::ByCopy{UInt64})::Nothing
+    FreeFontStruct(this::ByRef1{TVirtualX}, fs::ByCopy{FontStruct_t})::Nothing
 Frees the font structure "fs".
 The font itself will be freed when no other resource references it.
-""" FreeFontStruct(this::ByRef1{TVirtualX}, fs::ByCopy{UInt64})
+""" FreeFontStruct(this::ByRef1{TVirtualX}, fs::ByCopy{FontStruct_t})
 
 # Wrapper of void TVirtualX::GetCharacterUp(Float_t &, Float_t &)
 @trydoc raw"""
@@ -26115,9 +26162,9 @@ Returns character up vector.
 
 """ GetCharacterUp(this::ByRef1{TVirtualX}, chupx::ByRef2{Float32}, chupy::ByRef2{Float32})
 
-# Wrapper of unsigned char * TVirtualX::GetColorBits(UInt64, Int_t, Int_t, UInt_t, UInt_t)
+# Wrapper of unsigned char * TVirtualX::GetColorBits(Drawable_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)::CxxPtr1{UInt8}
+    GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{Drawable_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::CxxPtr2{UInt8}
 Returns an array of pixels created from a part of drawable (defined by x, y, w, h) in format:
 b1, g1, r1, 0,  b2, g2, r2, 0 ... bn, gn, rn, 0 ..
 
@@ -26126,11 +26173,11 @@ b1, g1, r1, 0,  b2, g2, r2, 0 ... bn, gn, rn, 0 ..
 Pixels are numbered from left to right and from top to bottom. By default all pixels from the whole drawable are returned.
 
 Note that return array is 32-bit aligned
-""" GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)
+""" GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{Drawable_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)
 
-# Wrapper of UInt64 TVirtualX::GetCurrentOpenGLContext()
+# Wrapper of Handle_t TVirtualX::GetCurrentOpenGLContext()
 @trydoc raw"""
-    GetCurrentOpenGLContext(this::ByRef1{TVirtualX})::ByCopy{UInt64}
+    GetCurrentOpenGLContext(this::ByRef1{TVirtualX})::ByCopy{Handle_t}
 Asks OpenGL subsystem about the current OpenGL context.
 
 """ GetCurrentOpenGLContext(this::ByRef1{TVirtualX})
@@ -26142,40 +26189,40 @@ Queries the double buffer value for the window "wid".
 
 """ GetDoubleBuffer(this::ByRef1{TVirtualX}, wid::Int32)
 
-# Wrapper of UInt64 TVirtualX::GetFontHandle(UInt64)
+# Wrapper of FontH_t TVirtualX::GetFontHandle(FontStruct_t)
 @trydoc raw"""
-    GetFontHandle(this::ByRef1{TVirtualX}, fs::ByCopy{UInt64})::ByCopy{UInt64}
+    GetFontHandle(this::ByRef1{TVirtualX}, fs::ByCopy{FontStruct_t})::ByCopy{FontH_t}
 Returns the font handle of the specified font structure "fs".
 
-""" GetFontHandle(this::ByRef1{TVirtualX}, fs::ByCopy{UInt64})
+""" GetFontHandle(this::ByRef1{TVirtualX}, fs::ByCopy{FontStruct_t})
 
-# Wrapper of void TVirtualX::GetFontProperties(UInt64, Int_t &, Int_t &)
+# Wrapper of void TVirtualX::GetFontProperties(FontStruct_t, Int_t &, Int_t &)
 @trydoc raw"""
-    GetFontProperties(this::ByRef1{TVirtualX}, font::ByCopy{UInt64}, max_ascent::ByRef2{Int32}, max_descent::ByRef2{Int32})::Nothing
+    GetFontProperties(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, max_ascent::ByRef2{Int32}, max_descent::ByRef2{Int32})::Nothing
 Returns the font properties.
 
-""" GetFontProperties(this::ByRef1{TVirtualX}, font::ByCopy{UInt64}, max_ascent::ByRef2{Int32}, max_descent::ByRef2{Int32})
+""" GetFontProperties(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, max_ascent::ByRef2{Int32}, max_descent::ByRef2{Int32})
 
-# Wrapper of UInt64 TVirtualX::GetFontStruct(UInt64)
+# Wrapper of FontStruct_t TVirtualX::GetFontStruct(FontH_t)
 @trydoc raw"""
-    GetFontStruct(this::ByRef1{TVirtualX}, fh::ByCopy{UInt64})::ByCopy{UInt64}
+    GetFontStruct(this::ByRef1{TVirtualX}, fh::ByCopy{FontH_t})::ByCopy{FontStruct_t}
 Retrieves the associated font structure of the font specified font handle "fh".
-Free returned UInt64 using [FreeFontStruct()](@ref).
-""" GetFontStruct(this::ByRef1{TVirtualX}, fh::ByCopy{UInt64})
+Free returned FontStruct_t using [FreeFontStruct()](@ref).
+""" GetFontStruct(this::ByRef1{TVirtualX}, fh::ByCopy{FontH_t})
 
-# Wrapper of UInt64 TVirtualX::GetGCFont(UInt64)
+# Wrapper of FontStruct_t TVirtualX::GetGCFont(GContext_t)
 @trydoc raw"""
-    GetGCFont(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64})::ByCopy{UInt64}
+    GetGCFont(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t})::ByCopy{FontStruct_t}
 Return the font associated with the graphics context gc.
 
-""" GetGCFont(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64})
+""" GetGCFont(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t})
 
-# Wrapper of void TVirtualX::GetGCValues(UInt64, GCValues_t &)
+# Wrapper of void TVirtualX::GetGCValues(GContext_t, GCValues_t &)
 @trydoc raw"""
-    GetGCValues(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, gval::ByRef1{GCValues_t})::Nothing
+    GetGCValues(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, gval::ByRef1{GCValues_t})::Nothing
 Returns the components specified by the mask in "gval" for the specified GC "gc" (see also the [GCValues_t](@ref) structure)
 
-""" GetGCValues(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, gval::ByRef1{GCValues_t})
+""" GetGCValues(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, gval::ByRef1{GCValues_t})
 
 # Wrapper of void TVirtualX::GetGeometry(Int_t, Int_t &, Int_t &, UInt_t &, UInt_t &)
 @trydoc raw"""
@@ -26191,16 +26238,16 @@ Returns position and size of window "wid".
     returned window size
 """ GetGeometry(this::ByRef1{TVirtualX}, wid::Int32, x::ByRef2{Int32}, y::ByRef2{Int32}, w::ByRef2{UInt32}, h::ByRef2{UInt32})
 
-# Wrapper of void TVirtualX::GetImageSize(UInt64, UInt_t &, UInt_t &)
+# Wrapper of void TVirtualX::GetImageSize(Drawable_t, UInt_t &, UInt_t &)
 @trydoc raw"""
-    GetImageSize(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, width::ByRef2{UInt32}, height::ByRef2{UInt32})::Nothing
+    GetImageSize(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, width::ByRef2{UInt32}, height::ByRef2{UInt32})::Nothing
 Returns the width and height of the image id.
 
-""" GetImageSize(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, width::ByRef2{UInt32}, height::ByRef2{UInt32})
+""" GetImageSize(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, width::ByRef2{UInt32}, height::ByRef2{UInt32})
 
-# Wrapper of UInt64 TVirtualX::GetInputFocus()
+# Wrapper of Window_t TVirtualX::GetInputFocus()
 @trydoc raw"""
-    GetInputFocus(this::ByRef1{TVirtualX})::ByCopy{UInt64}
+    GetInputFocus(this::ByRef1{TVirtualX})::ByCopy{Window_t}
 Returns the window id of the window having the input focus.
 
 """ GetInputFocus(this::ByRef1{TVirtualX})
@@ -26212,12 +26259,12 @@ On a HiDPI resolution it can be > 1., this means glViewport should use scaled wi
 
 """ GetOpenGLScalingFactor(this::ByRef1{TVirtualX})
 
-# Wrapper of void TVirtualX::GetPasteBuffer(UInt64, Atom_t, TString &, Int_t &, Bool_t)
+# Wrapper of void TVirtualX::GetPasteBuffer(Window_t, Atom_t, TString &, Int_t &, Bool_t)
 @trydoc raw"""
-    GetPasteBuffer(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, atom::ByCopy{Atom_t}, text::ByRef1{TString}, nchar::ByRef2{Int32}, del::Bool)::Nothing
-Gets contents of the paste buffer "atom" Int32o the string "text".
+    GetPasteBuffer(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, atom::ByCopy{Atom_t}, text::ByRef1{TString}, nchar::ByRef2{Int32}, del::Bool)::Nothing
+Gets contents of the paste buffer "atom" into the string "text".
 (nchar = number of characters) If "del" is true deletes the paste buffer afterwards.
-""" GetPasteBuffer(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, atom::ByCopy{Atom_t}, text::ByRef1{TString}, nchar::ByRef2{Int32}, del::Bool)
+""" GetPasteBuffer(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, atom::ByCopy{Atom_t}, text::ByRef1{TString}, nchar::ByRef2{Int32}, del::Bool)
 
 # Wrapper of ULong_t TVirtualX::GetPixel(Color_t)
 @trydoc raw"""
@@ -26233,26 +26280,26 @@ Returns the maximum number of planes.
 
 """ GetPlanes(this::ByRef1{TVirtualX}, nplanes::ByRef2{Int32})
 
-# Wrapper of UInt64 TVirtualX::GetPrimarySelectionOwner()
+# Wrapper of Window_t TVirtualX::GetPrimarySelectionOwner()
 @trydoc raw"""
-    GetPrimarySelectionOwner(this::ByRef1{TVirtualX})::ByCopy{UInt64}
+    GetPrimarySelectionOwner(this::ByRef1{TVirtualX})::ByCopy{Window_t}
 Returns the window id of the current owner of the primary selection.
 That is the window in which, for example some text is selected.
 """ GetPrimarySelectionOwner(this::ByRef1{TVirtualX})
 
-# Wrapper of Int_t TVirtualX::GetProperty(UInt64, Atom_t, Long_t, Long_t, Bool_t, Atom_t, Atom_t *, Int_t *, ULong_t *, ULong_t *, unsigned char **)
+# Wrapper of Int_t TVirtualX::GetProperty(Window_t, Atom_t, Long_t, Long_t, Bool_t, Atom_t, Atom_t *, Int_t *, ULong_t *, ULong_t *, unsigned char **)
 @trydoc raw"""
-    GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr1{UInt8})::Int32
+    GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr2{UInt8})::Int32
 Returns the actual type of the property; the actual format of the property; the number of 8-bit, 16-bit, or 32-bit items transferred; the number of bytes remaining to be read in the property; and a pointer to the data actually returned.
 
-""" GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr1{UInt8})
+""" GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr2{UInt8})
 
-# Wrapper of void TVirtualX::GetRegionBox(UInt64, Rectangle_t *)
+# Wrapper of void TVirtualX::GetRegionBox(Region_t, Rectangle_t *)
 @trydoc raw"""
-    GetRegionBox(this::ByRef1{TVirtualX}, reg::ByCopy{UInt64}, rect::ByPtr1{Rectangle_t})::Nothing
+    GetRegionBox(this::ByRef1{TVirtualX}, reg::ByCopy{Region_t}, rect::ByPtr1{Rectangle_t})::Nothing
 Returns smallest enclosing rectangle.
 
-""" GetRegionBox(this::ByRef1{TVirtualX}, reg::ByCopy{UInt64}, rect::ByPtr1{Rectangle_t})
+""" GetRegionBox(this::ByRef1{TVirtualX}, reg::ByCopy{Region_t}, rect::ByPtr1{Rectangle_t})
 
 # Wrapper of void TVirtualX::GetRGB(Int_t, Float_t &, Float_t &, Float_t &)
 @trydoc raw"""
@@ -26263,7 +26310,7 @@ Returns RGB values for color "index".
 
 # Wrapper of void TVirtualX::GetTextExtent(UInt_t &, UInt_t &, char *)
 @trydoc raw"""
-    GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})::Nothing
+    GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})::Nothing
 Returns the size of the specified character string "mess".
 ## Arguments
 
@@ -26275,11 +26322,11 @@ Returns the size of the specified character string "mess".
     
 - **`mess`** [in] 
     the string
-""" GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})
+""" GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})
 
-# Wrapper of void TVirtualX::GetTextExtent(UInt_t &, UInt_t &, Int32 *)
+# Wrapper of void TVirtualX::GetTextExtent(UInt_t &, UInt_t &, wchar_t *)
 @trydoc raw"""
-    GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{Int32})::Nothing
+    GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{wchar_t})::Nothing
 Returns the size of the specified character string "mess".
 ## Arguments
 
@@ -26291,25 +26338,25 @@ Returns the size of the specified character string "mess".
     
 - **`mess`** [in] 
     the string
-""" GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{Int32})
+""" GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{wchar_t})
 
 # Wrapper of Float_t TVirtualX::GetTextMagnitude()
 @trydoc raw"""
-    GetTextMagnitude(this::ByRef1{TVirtualX})::Float32
+    GetGetTextMagnitude(this::ByRef1{TVirtualX})::Float32
 Returns the current font magnification factor.
 
-""" GetTextMagnitude(this::ByRef1{TVirtualX})
+""" GetGetTextMagnitude(this::ByRef1{TVirtualX})
 
-# Wrapper of void TVirtualX::GetWindowAttributes(UInt64, WindowAttributes_t &)
+# Wrapper of void TVirtualX::GetWindowAttributes(Window_t, WindowAttributes_t &)
 @trydoc raw"""
-    GetWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, attr::ByRef1{WindowAttributes_t})::Nothing
+    GetWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, attr::ByRef1{WindowAttributes_t})::Nothing
 The [WindowAttributes_t](@ref) structure is set to default.
 
-""" GetWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, attr::ByRef1{WindowAttributes_t})
+""" GetWindowAttributes(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, attr::ByRef1{WindowAttributes_t})
 
-# Wrapper of UInt64 TVirtualX::GetWindowID(Int_t)
+# Wrapper of Window_t TVirtualX::GetWindowID(Int_t)
 @trydoc raw"""
-    GetWindowID(this::ByRef1{TVirtualX}, wid::Int32)::ByCopy{UInt64}
+    GetWindowID(this::ByRef1{TVirtualX}, wid::Int32)::ByCopy{Window_t}
 Returns the X11 window identifier.
 ## Arguments
 
@@ -26317,9 +26364,9 @@ Returns the X11 window identifier.
     workstation identifier (input)
 """ GetWindowID(this::ByRef1{TVirtualX}, wid::Int32)
 
-# Wrapper of void TVirtualX::GetWindowSize(UInt64, Int_t &, Int_t &, UInt_t &, UInt_t &)
+# Wrapper of void TVirtualX::GetWindowSize(Drawable_t, Int_t &, Int_t &, UInt_t &, UInt_t &)
 @trydoc raw"""
-    GetWindowSize(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::ByRef2{Int32}, overridey::ByRef2{Int32}, w::ByRef2{UInt32}, h::ByRef2{UInt32})::Nothing
+    GetWindowSize(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, x::ByRef2{Int32}, overridey::ByRef2{Int32}, w::ByRef2{UInt32}, h::ByRef2{UInt32})::Nothing
 Returns the location and the size of window "id".
 ## Arguments
 
@@ -26329,18 +26376,18 @@ Returns the location and the size of window "id".
     coordinates of the upper-left outer corner relative to the parent window's origin 
     . 
     the inside size of the window, not including the border
-""" GetWindowSize(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::ByRef2{Int32}, overridey::ByRef2{Int32}, w::ByRef2{UInt32}, h::ByRef2{UInt32})
+""" GetWindowSize(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, x::ByRef2{Int32}, overridey::ByRef2{Int32}, w::ByRef2{UInt32}, h::ByRef2{UInt32})
 
-# Wrapper of void TVirtualX::GrabButton(UInt64, EMouseButton, UInt_t, UInt_t, UInt64, Cursor_t, Bool_t)
+# Wrapper of void TVirtualX::GrabButton(Window_t, EMouseButton, UInt_t, UInt_t, Window_t, Cursor_t, Bool_t)
 @trydoc raw"""
-    GrabButton(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, button::ByCopy{EMouseButton}, modifier::UInt32, evmask::UInt32, confine::ByCopy{UInt64}, cursor::ByCopy{Cursor_t}, grab::Bool)::Nothing
+    GrabButton(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, button::ByCopy{EMouseButton}, modifier::UInt32, evmask::UInt32, confine::ByCopy{Window_t}, cursor::ByCopy{Cursor_t}, grab::Bool)::Nothing
 Establishes a passive grab on a certain mouse button.
 That is, when a certain mouse button is hit while certain modifier's (Shift, Control, Meta, Alt) are active then the mouse will be grabbed for window id. When grab is false, ungrab the mouse button for this button and modifier.
-""" GrabButton(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, button::ByCopy{EMouseButton}, modifier::UInt32, evmask::UInt32, confine::ByCopy{UInt64}, cursor::ByCopy{Cursor_t}, grab::Bool)
+""" GrabButton(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, button::ByCopy{EMouseButton}, modifier::UInt32, evmask::UInt32, confine::ByCopy{Window_t}, cursor::ByCopy{Cursor_t}, grab::Bool)
 
-# Wrapper of void TVirtualX::GrabKey(UInt64, Int_t, UInt_t, Bool_t)
+# Wrapper of void TVirtualX::GrabKey(Window_t, Int_t, UInt_t, Bool_t)
 @trydoc raw"""
-    GrabKey(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, keycode::Int32, modifier::UInt32, grab::Bool)::Nothing
+    GrabKey(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, keycode::Int32, modifier::UInt32, grab::Bool)::Nothing
 Establishes a passive grab on the keyboard.
 In the future, the keyboard is actively grabbed, the last-keyboard-grab time is set to the time at which the key was pressed (as transmitted in the KeyPress event), and the KeyPress event is reported if all of the following conditions are true:
 
@@ -26361,21 +26408,21 @@ In the future, the keyboard is actively grabbed, the last-keyboard-grab time is 
     
 - **`grab`** [in] 
     a switch between grab/ungrab key grab = kTRUE grab the key and modifier grab = kFALSE ungrab the key and modifier
-""" GrabKey(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, keycode::Int32, modifier::UInt32, grab::Bool)
+""" GrabKey(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, keycode::Int32, modifier::UInt32, grab::Bool)
 
-# Wrapper of void TVirtualX::GrabPointer(UInt64, UInt_t, UInt64, Cursor_t, Bool_t, Bool_t)
+# Wrapper of void TVirtualX::GrabPointer(Window_t, UInt_t, Window_t, Cursor_t, Bool_t, Bool_t)
 @trydoc raw"""
-    GrabPointer(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, evmask::UInt32, confine::ByCopy{UInt64}, cursor::ByCopy{Cursor_t}, grab::Bool, owner_events::Bool)::Nothing
+    GrabPointer(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, evmask::UInt32, confine::ByCopy{Window_t}, cursor::ByCopy{Cursor_t}, grab::Bool, owner_events::Bool)::Nothing
 Establishes an active pointer grab.
 While an active pointer grab is in effect, further pointer events are only reported to the grabbing client window.
-""" GrabPointer(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, evmask::UInt32, confine::ByCopy{UInt64}, cursor::ByCopy{Cursor_t}, grab::Bool, owner_events::Bool)
+""" GrabPointer(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, evmask::UInt32, confine::ByCopy{Window_t}, cursor::ByCopy{Cursor_t}, grab::Bool, owner_events::Bool)
 
-# Wrapper of void TVirtualX::IconifyWindow(UInt64)
+# Wrapper of void TVirtualX::IconifyWindow(Window_t)
 @trydoc raw"""
-    IconifyWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    IconifyWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Iconifies the window "id".
 
-""" IconifyWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" IconifyWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
 # Wrapper of Bool_t TVirtualX::Init(void *)
 @trydoc raw"""
@@ -26398,24 +26445,24 @@ Returns the atom identifier associated with the specified "atom_name" string.
 If "only_if_exists" is False, the atom is created if it does not exist. If the atom name is not in the Host Portable Character Encoding, the result is implementation dependent. Uppercase and lowercase matter; the strings "thing", "Thing", and "thinG" all designate different atoms.
 """ InternAtom(this::ByRef1{TVirtualX}, atom_name::ByCopy{String}, only_if_exist::Bool)
 
-# Wrapper of void TVirtualX::IntersectRegion(UInt64, UInt64, UInt64)
+# Wrapper of void TVirtualX::IntersectRegion(Region_t, Region_t, Region_t)
 @trydoc raw"""
-    IntersectRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})::Nothing
-Computes the Int32ersection of two regions.
+    IntersectRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})::Nothing
+Computes the intersection of two regions.
 ## Arguments
 
 - **`rega`** [in], **`regb`** [in], **`result`** [in] 
     specify the two regions with which you want to perform the computation 
     . 
     returns the result of the computation
-""" IntersectRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})
+""" IntersectRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})
 
-# Wrapper of Bool_t TVirtualX::IsDNDAware(UInt64, Atom_t *)
+# Wrapper of Bool_t TVirtualX::IsDNDAware(Window_t, Atom_t *)
 @trydoc raw"""
-    IsDNDAware(this::ByRef1{TVirtualX}, win::ByCopy{UInt64}, typelist::ByPtr1{Atom_t})::Bool
+    IsDNDAware(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, typelist::ByPtr1{Atom_t})::Bool
 Checks if the Window is DND aware, and knows any of the DND formats passed in argument.
 
-""" IsDNDAware(this::ByRef1{TVirtualX}, win::ByCopy{UInt64}, typelist::ByPtr1{Atom_t})
+""" IsDNDAware(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, typelist::ByPtr1{Atom_t})
 
 # Wrapper of Int_t TVirtualX::KeysymToKeycode(UInt_t)
 @trydoc raw"""
@@ -26442,16 +26489,16 @@ The pattern string can contain any characters, but each asterisk (*) is a wildca
     returns the actual number of font names
 """ ListFonts(this::ByRef1{TVirtualX}, fontname::ByCopy{String}, max::Int32, count::ByRef2{Int32})
 
-# Wrapper of UInt64 TVirtualX::LoadQueryFont(const char *)
+# Wrapper of FontStruct_t TVirtualX::LoadQueryFont(const char *)
 @trydoc raw"""
-    LoadQueryFont(this::ByRef1{TVirtualX}, font_name::ByCopy{String})::ByCopy{UInt64}
-Provides the most common way for accessing a font: opens (loads) the specified font and returns a pointer to the appropriate UInt64 structure.
+    LoadQueryFont(this::ByRef1{TVirtualX}, font_name::ByCopy{String})::ByCopy{FontStruct_t}
+Provides the most common way for accessing a font: opens (loads) the specified font and returns a pointer to the appropriate FontStruct_t structure.
 If the font does not exist, it returns NULL.
 """ LoadQueryFont(this::ByRef1{TVirtualX}, font_name::ByCopy{String})
 
 # Wrapper of void TVirtualX::LookupString(Event_t *, char *, Int_t, UInt_t &)
 @trydoc raw"""
-    LookupString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})::Nothing
+    LookupGetString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})::Nothing
 Converts the keycode from the event structure to a key symbol (according to the modifiers specified in the event structure and the current keyboard mapping).
 In "buf" a null terminated ASCII string is returned representing the string that is currently mapped to the key code.
 
@@ -26468,53 +26515,53 @@ In "buf" a null terminated ASCII string is returned representing the string that
     
 - **`keysym`** [in] 
     returns the "keysym" computed from the event if this argument is not NULL
-""" LookupString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})
+""" LookupGetString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})
 
-# Wrapper of void TVirtualX::LowerWindow(UInt64)
+# Wrapper of void TVirtualX::LowerWindow(Window_t)
 @trydoc raw"""
-    LowerWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    LowerWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Lowers the specified window "id" to the bottom of the stack so that it does not obscure any sibling windows.
 
-""" LowerWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" LowerWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
-# Wrapper of Bool_t TVirtualX::MakeOpenGLContextCurrent(UInt64, UInt64)
+# Wrapper of Bool_t TVirtualX::MakeOpenGLContextCurrent(Handle_t, Window_t)
 @trydoc raw"""
-    MakeOpenGLContextCurrent(this::ByRef1{TVirtualX}, ctx::ByCopy{UInt64}, windowID::ByCopy{UInt64})::Bool
+    MakeOpenGLContextCurrent(this::ByRef1{TVirtualX}, ctx::ByCopy{Handle_t}, windowID::ByCopy{Window_t})::Bool
 Makes context ctx current OpenGL context.
 
-""" MakeOpenGLContextCurrent(this::ByRef1{TVirtualX}, ctx::ByCopy{UInt64}, windowID::ByCopy{UInt64})
+""" MakeOpenGLContextCurrent(this::ByRef1{TVirtualX}, ctx::ByCopy{Handle_t}, windowID::ByCopy{Window_t})
 
-# Wrapper of void TVirtualX::MapGCFont(UInt64, UInt64)
+# Wrapper of void TVirtualX::MapGCFont(GContext_t, FontStruct_t)
 @trydoc raw"""
-    MapGCFont(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByCopy{UInt64})::Nothing
+    MapGCFont(this::ByRef1{TVirtualX}, ::ByCopy{GContext_t}, ::ByCopy{FontStruct_t})::Nothing
 Map the XftFont with the Graphics Context using it.
 
-""" MapGCFont(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByCopy{UInt64})
+""" MapGCFont(this::ByRef1{TVirtualX}, ::ByCopy{GContext_t}, ::ByCopy{FontStruct_t})
 
-# Wrapper of void TVirtualX::MapRaised(UInt64)
+# Wrapper of void TVirtualX::MapRaised(Window_t)
 @trydoc raw"""
-    MapRaised(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    MapRaised(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Maps the window "id" and all of its subwindows that have had map requests on the screen and put this window on the top of of the stack of all windows.
 
-""" MapRaised(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" MapRaised(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
-# Wrapper of void TVirtualX::MapSubwindows(UInt64)
+# Wrapper of void TVirtualX::MapSubwindows(Window_t)
 @trydoc raw"""
-    MapSubwindows(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    MapSubwindows(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Maps all subwindows for the specified window "id" in top-to-bottom stacking order.
 
-""" MapSubwindows(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" MapSubwindows(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
-# Wrapper of void TVirtualX::MapWindow(UInt64)
+# Wrapper of void TVirtualX::MapWindow(Window_t)
 @trydoc raw"""
-    MapWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    MapWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Maps the window "id" and all of its subwindows that have had map requests.
 This function has no effect if the window is already mapped.
-""" MapWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" MapWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
-# Wrapper of void TVirtualX::MoveResizeWindow(UInt64, Int_t, Int_t, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::MoveResizeWindow(Window_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    MoveResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
+    MoveResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
 Changes the size and location of the specified window "id" without raising it.
 ## Arguments
 
@@ -26523,8 +26570,8 @@ Changes the size and location of the specified window "id" without raising it.
     . 
     coordinates, which define the new position of the window relative to its parent. 
     . 
-    the width and height, which define the Int32erior size of the window
-""" MoveResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, w::UInt32, h::UInt32)
+    the width and height, which define the interior size of the window
+""" MoveResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)
 
 # Wrapper of void TVirtualX::MoveWindow(Int_t, Int_t, Int_t)
 @trydoc raw"""
@@ -26564,7 +26611,7 @@ This method however, should never be called.
 @trydoc raw"""
     OpenDisplay(this::ByRef1{TVirtualX}, dpyName::ByCopy{String})::Int32
 Opens connection to display server (if such a thing exist on the current platform).
-The encoding and Int32erpretation of the display name.
+The encoding and interpretation of the display name.
 
 On X11 this method returns on success the X display socket descriptor >0, 0 in case of batch mode, and <0 in case of failure (cannot connect to display dpyName).
 """ OpenDisplay(this::ByRef1{TVirtualX}, dpyName::ByCopy{String})
@@ -26576,9 +26623,9 @@ Creates a pixmap of the width "w" and height "h" you specified.
 
 """ OpenPixmap(this::ByRef1{TVirtualX}, w::UInt32, h::UInt32)
 
-# Wrapper of Bool_t TVirtualX::ParseColor(UInt64, const char *, ColorStruct_t &)
+# Wrapper of Bool_t TVirtualX::ParseColor(Colormap_t, const char *, ColorStruct_t &)
 @trydoc raw"""
-    ParseColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, cname::ByCopy{String}, color::ByRef1{ColorStruct_t})::Bool
+    ParseColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, cname::ByCopy{String}, color::ByRef1{ColorStruct_t})::Bool
 Looks up the string name of a color "cname" with respect to the screen associated with the specified colormap.
 It returns the exact color value. If the color name is not in the Host Portable Character Encoding, the result is implementation dependent.
 
@@ -26595,18 +26642,18 @@ It returns the exact color value. If the color name is not in the Host Portable 
     
 
 The [ColorStruct_t](@ref) structure is set to default. Let system think we could parse color.
-""" ParseColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, cname::ByCopy{String}, color::ByRef1{ColorStruct_t})
+""" ParseColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, cname::ByCopy{String}, color::ByRef1{ColorStruct_t})
 
-# Wrapper of Bool_t TVirtualX::PointInRegion(Int_t, Int_t, UInt64)
+# Wrapper of Bool_t TVirtualX::PointInRegion(Int_t, Int_t, Region_t)
 @trydoc raw"""
-    PointInRegion(this::ByRef1{TVirtualX}, x::Int32, y::Int32, reg::ByCopy{UInt64})::Bool
+    PointInRegion(this::ByRef1{TVirtualX}, x::Int32, y::Int32, reg::ByCopy{Region_t})::Bool
 Returns kTRUE if the point [x, y] is contained in the region reg.
 
-""" PointInRegion(this::ByRef1{TVirtualX}, x::Int32, y::Int32, reg::ByCopy{UInt64})
+""" PointInRegion(this::ByRef1{TVirtualX}, x::Int32, y::Int32, reg::ByCopy{Region_t})
 
-# Wrapper of UInt64 TVirtualX::PolygonRegion(Point_t *, Int_t, Bool_t)
+# Wrapper of Region_t TVirtualX::PolygonRegion(Point_t *, Int_t, Bool_t)
 @trydoc raw"""
-    PolygonRegion(this::ByRef1{TVirtualX}, points::ByPtr1{Point_t}, np::Int32, winding::Bool)::ByCopy{UInt64}
+    PolygonRegion(this::ByRef1{TVirtualX}, points::ByPtr1{Point_t}, np::Int32, winding::Bool)::ByCopy{Region_t}
 Returns a region for the polygon defined by the points array.
 ## Arguments
 
@@ -26620,9 +26667,9 @@ Returns a region for the polygon defined by the points array.
     specifies the winding-rule is set (kTRUE) or not(kFALSE)
 """ PolygonRegion(this::ByRef1{TVirtualX}, points::ByPtr1{Point_t}, np::Int32, winding::Bool)
 
-# Wrapper of void TVirtualX::PutImage(UInt64, UInt64, UInt64, Int_t, Int_t, Int_t, Int_t, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::PutImage(Drawable_t, GContext_t, Drawable_t, Int_t, Int_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    PutImage(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, img::ByCopy{UInt64}, dx::Int32, dy::Int32, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
+    PutImage(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, img::ByCopy{Drawable_t}, dx::Int32, dy::Int32, x::Int32, y::Int32, w::UInt32, h::UInt32)::Nothing
 Combines an image with a rectangle of the specified drawable.
 The section of the image defined by the x, y, width, and height arguments is drawn on the specified part of the drawable.
 
@@ -26645,11 +26692,11 @@ The section of the image defined by the x, y, width, and height arguments is dra
     
 
 GC components in use: function, plane-mask, subwindow-mode, clip-x-origin, clip-y-origin, and clip-mask. GC mode-dependent components: foreground and background. (see also the [GCValues_t](@ref) structure)
-""" PutImage(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, gc::ByCopy{UInt64}, img::ByCopy{UInt64}, dx::Int32, dy::Int32, x::Int32, y::Int32, w::UInt32, h::UInt32)
+""" PutImage(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, img::ByCopy{Drawable_t}, dx::Int32, dy::Int32, x::Int32, y::Int32, w::UInt32, h::UInt32)
 
-# Wrapper of void TVirtualX::PutPixel(UInt64, Int_t, Int_t, ULong_t)
+# Wrapper of void TVirtualX::PutPixel(Drawable_t, Int_t, Int_t, ULong_t)
 @trydoc raw"""
-    PutPixel(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, pixel::UInt64)::Nothing
+    PutPixel(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, x::Int32, y::Int32, pixel::UInt64)::Nothing
 Overwrites the pixel in the image with the specified pixel value.
 The image must contain the x and y coordinates.
 
@@ -26661,11 +26708,11 @@ The image must contain the x and y coordinates.
     coordinates 
     . 
     the new pixel value
-""" PutPixel(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, pixel::UInt64)
+""" PutPixel(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, x::Int32, y::Int32, pixel::UInt64)
 
-# Wrapper of void TVirtualX::QueryColor(UInt64, ColorStruct_t &)
+# Wrapper of void TVirtualX::QueryColor(Colormap_t, ColorStruct_t &)
 @trydoc raw"""
-    QueryColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, color::ByRef1{ColorStruct_t})::Nothing
+    QueryColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, color::ByRef1{ColorStruct_t})::Nothing
 Returns the current RGB value for the pixel in the "color" structure.
 The color components are set to default.
 
@@ -26676,7 +26723,7 @@ The color components are set to default.
     
 - **`color`** [in] 
     specifies and returns the RGB values for the pixel specified in the structure
-""" QueryColor(this::ByRef1{TVirtualX}, cmap::ByCopy{UInt64}, color::ByRef1{ColorStruct_t})
+""" QueryColor(this::ByRef1{TVirtualX}, cmap::ByCopy{Colormap_t}, color::ByRef1{ColorStruct_t})
 
 # Wrapper of void TVirtualX::QueryPointer(Int_t &, Int_t &)
 @trydoc raw"""
@@ -26685,9 +26732,9 @@ Returns the pointer position.
 
 """ QueryPointer(this::ByRef1{TVirtualX}, ix::ByRef2{Int32}, iy::ByRef2{Int32})
 
-# Wrapper of void TVirtualX::QueryPointer(UInt64, UInt64 &, UInt64 &, Int_t &, Int_t &, Int_t &, Int_t &, UInt_t &)
+# Wrapper of void TVirtualX::QueryPointer(Window_t, Window_t &, Window_t &, Int_t &, Int_t &, Int_t &, Int_t &, UInt_t &)
 @trydoc raw"""
-    QueryPointer(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, rootw::ByRef1{UInt64}, childw::ByRef1{UInt64}, root_x::ByRef2{Int32}, root_y::ByRef2{Int32}, win_x::ByRef2{Int32}, win_y::ByRef2{Int32}, mask::ByRef2{UInt32})::Nothing
+    QueryPointer(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, rootw::ByRef1{Window_t}, childw::ByRef1{Window_t}, root_x::ByRef2{Int32}, root_y::ByRef2{Int32}, win_x::ByRef2{Int32}, win_y::ByRef2{Int32}, mask::ByRef2{UInt32})::Nothing
 Returns the root window the pointer is logically on and the pointer coordinates relative to the root window's origin.
 ## Arguments
 
@@ -26703,21 +26750,21 @@ Returns the root window the pointer is logically on and the pointer coordinates 
     the pointer coordinates relative to the specified window "id" 
     . 
     the current state of the modifier keys and pointer buttons
-""" QueryPointer(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, rootw::ByRef1{UInt64}, childw::ByRef1{UInt64}, root_x::ByRef2{Int32}, root_y::ByRef2{Int32}, win_x::ByRef2{Int32}, win_y::ByRef2{Int32}, mask::ByRef2{UInt32})
+""" QueryPointer(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, rootw::ByRef1{Window_t}, childw::ByRef1{Window_t}, root_x::ByRef2{Int32}, root_y::ByRef2{Int32}, win_x::ByRef2{Int32}, win_y::ByRef2{Int32}, mask::ByRef2{UInt32})
 
-# Wrapper of void TVirtualX::RaiseWindow(UInt64)
+# Wrapper of void TVirtualX::RaiseWindow(Window_t)
 @trydoc raw"""
-    RaiseWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    RaiseWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Raises the specified window to the top of the stack so that no sibling window obscures it.
 
-""" RaiseWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" RaiseWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
-# Wrapper of Pixmap_t TVirtualX::ReadGIF(Int_t, Int_t, const char *, UInt64)
+# Wrapper of Pixmap_t TVirtualX::ReadGIF(Int_t, Int_t, const char *, Window_t)
 @trydoc raw"""
-    ReadGIF(this::ByRef1{TVirtualX}, x0::Int32, y0::Int32, file::ByCopy{String}, id::ByCopy{UInt64})::ByCopy{Pixmap_t}
+    ReadGIF(this::ByRef1{TVirtualX}, x0::Int32, y0::Int32, file::ByCopy{String}, id::ByCopy{Window_t})::ByCopy{Pixmap_t}
 If id is NULL - loads the specified gif file at position [x0,y0] in the current window.
 Otherwise creates pixmap from gif file
-""" ReadGIF(this::ByRef1{TVirtualX}, x0::Int32, y0::Int32, file::ByCopy{String}, id::ByCopy{UInt64})
+""" ReadGIF(this::ByRef1{TVirtualX}, x0::Int32, y0::Int32, file::ByCopy{String}, id::ByCopy{Window_t})
 
 # Wrapper of Bool_t TVirtualX::ReadPictureDataFromFile(const char *, char ***)
 @trydoc raw"""
@@ -26733,12 +26780,12 @@ Removes the created by Qt window "qwid".
 
 """ RemoveWindow(this::ByRef1{TVirtualX}, qwid::UInt64)
 
-# Wrapper of void TVirtualX::ReparentWindow(UInt64, UInt64, Int_t, Int_t)
+# Wrapper of void TVirtualX::ReparentWindow(Window_t, Window_t, Int_t, Int_t)
 @trydoc raw"""
-    ReparentWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, pid::ByCopy{UInt64}, x::Int32, y::Int32)::Nothing
+    ReparentWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, pid::ByCopy{Window_t}, x::Int32, y::Int32)::Nothing
 If the specified window is mapped, ReparentWindow automatically performs an UnmapWindow request on it, removes it from its current position in the hierarchy, and inserts it as the child of the specified parent.
 The window is placed in the stacking order on top with respect to sibling windows.
-""" ReparentWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, pid::ByCopy{UInt64}, x::Int32, y::Int32)
+""" ReparentWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, pid::ByCopy{Window_t}, x::Int32, y::Int32)
 
 # Wrapper of Int_t TVirtualX::RequestLocator(Int_t, Int_t, Int_t &, Int_t &)
 @trydoc raw"""
@@ -26785,7 +26832,7 @@ else = keycode (keyboard is pressed)
 
 # Wrapper of Int_t TVirtualX::RequestString(Int_t, Int_t, char *)
 @trydoc raw"""
-    RequestString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})::Int32
+    RequestGetString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})::Int32
 Requests string: text is displayed and can be edited with Emacs-like keybinding.
 Returns termination code (0 for ESC, 1 for RETURN)
 
@@ -26795,7 +26842,7 @@ Returns termination code (0 for ESC, 1 for RETURN)
     position where text is displayed 
     . 
     displayed text (as input), edited text (as output)
-""" RequestString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})
+""" RequestGetString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})
 
 # Wrapper of void TVirtualX::RescaleWindow(Int_t, UInt_t, UInt_t)
 @trydoc raw"""
@@ -26832,9 +26879,9 @@ Resizes the window "wid" if necessary.
 
 """ ResizeWindow(this::ByRef1{TVirtualX}, wid::Int32)
 
-# Wrapper of void TVirtualX::ResizeWindow(UInt64, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::ResizeWindow(Window_t, UInt_t, UInt_t)
 @trydoc raw"""
-    ResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, w::UInt32, h::UInt32)::Nothing
+    ResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, w::UInt32, h::UInt32)::Nothing
 Changes the width and height of the specified window "id", not including its borders.
 This function does not change the window's upper-left coordinate.
 
@@ -26843,15 +26890,15 @@ This function does not change the window's upper-left coordinate.
 - **`id`** [in], **`w`** [in], **`h`** [in] 
     window identifier 
     . 
-    the width and height, which are the Int32erior dimensions of the window after the call completes.
-""" ResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, w::UInt32, h::UInt32)
+    the width and height, which are the interior dimensions of the window after the call completes.
+""" ResizeWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, w::UInt32, h::UInt32)
 
-# Wrapper of void TVirtualX::SelectInput(UInt64, UInt_t)
+# Wrapper of void TVirtualX::SelectInput(Window_t, UInt_t)
 @trydoc raw"""
-    SelectInput(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, evmask::UInt32)::Nothing
-Defines which input events the window is Int32erested in.
+    SelectInput(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, evmask::UInt32)::Nothing
+Defines which input events the window is interested in.
 By default events are propagated up the window stack. This mask can also be set at window creation time via the [SetWindowAttributes_t!fEventMask](@ref) attribute.
-""" SelectInput(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, evmask::UInt32)
+""" SelectInput(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, evmask::UInt32)
 
 # Wrapper of void TVirtualX::SelectPixmap(Int_t)
 @trydoc raw"""
@@ -26867,12 +26914,12 @@ Selects the window "wid" to which subsequent output is directed.
 
 """ SelectWindow(this::ByRef1{TVirtualX}, wid::Int32)
 
-# Wrapper of void TVirtualX::SendEvent(UInt64, Event_t *)
+# Wrapper of void TVirtualX::SendEvent(Window_t, Event_t *)
 @trydoc raw"""
-    SendEvent(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, ev::ByPtr1{Event_t})::Nothing
+    SendEvent(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, ev::ByPtr1{Event_t})::Nothing
 Specifies the event "ev" is to be sent to the window "id".
 This function requires you to pass an event mask.
-""" SendEvent(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, ev::ByPtr1{Event_t})
+""" SendEvent(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, ev::ByPtr1{Event_t})
 
 # Wrapper of void TVirtualX::SetCharacterUp(Float_t, Float_t)
 @trydoc raw"""
@@ -26881,12 +26928,12 @@ Sets character up vector.
 
 """ SetCharacterUp(this::ByRef1{TVirtualX}, chupx::Float32, chupy::Float32)
 
-# Wrapper of void TVirtualX::SetClassHints(UInt64, char *, char *)
+# Wrapper of void TVirtualX::SetClassHints(Window_t, char *, char *)
 @trydoc raw"""
-    SetClassHints(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, className::ByPtr2{Int8}, resourceName::ByPtr2{Int8})::Nothing
+    SetClassHints(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, className::ByPtr2{Int8}, resourceName::ByPtr2{Int8})::Nothing
 Sets the windows class and resource name.
 
-""" SetClassHints(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, className::ByPtr2{Int8}, resourceName::ByPtr2{Int8})
+""" SetClassHints(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, className::ByPtr2{Int8}, resourceName::ByPtr2{Int8})
 
 # Wrapper of void TVirtualX::SetClipOFF(Int_t)
 @trydoc raw"""
@@ -26895,12 +26942,12 @@ Turns off the clipping for the window "wid".
 
 """ SetClipOFF(this::ByRef1{TVirtualX}, wid::Int32)
 
-# Wrapper of void TVirtualX::SetClipRectangles(UInt64, Int_t, Int_t, Rectangle_t *, Int_t)
+# Wrapper of void TVirtualX::SetClipRectangles(GContext_t, Int_t, Int_t, Rectangle_t *, Int_t)
 @trydoc raw"""
-    SetClipRectangles(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, x::Int32, y::Int32, recs::ByPtr1{Rectangle_t}, n::Int32)::Nothing
+    SetClipRectangles(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, recs::ByPtr1{Rectangle_t}, n::Int32)::Nothing
 Sets clipping rectangles in graphics context.
 [x,y] specify the origin of the rectangles. "recs" specifies an array of rectangles that define the clipping mask and "n" is the number of rectangles. (see also the [GCValues_t](@ref) structure)
-""" SetClipRectangles(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, x::Int32, y::Int32, recs::ByPtr1{Rectangle_t}, n::Int32)
+""" SetClipRectangles(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, recs::ByPtr1{Rectangle_t}, n::Int32)
 
 # Wrapper of void TVirtualX::SetClipRegion(Int_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
@@ -26923,9 +26970,9 @@ The cursor "cursor" will be used when the pointer is in the window "wid".
 
 """ SetCursor(this::ByRef1{TVirtualX}, win::Int32, cursor::ByCopy{ECursor})
 
-# Wrapper of void TVirtualX::SetDashes(UInt64, Int_t, const char *, Int_t)
+# Wrapper of void TVirtualX::SetDashes(GContext_t, Int_t, const char *, Int_t)
 @trydoc raw"""
-    SetDashes(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, offset::Int32, dash_list::ByCopy{String}, n::Int32)::Nothing
+    SetDashes(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, offset::Int32, dash_list::ByCopy{String}, n::Int32)::Nothing
 Sets the dash-offset and dash-list attributes for dashed line styles in the specified GC.
 There must be at least one element in the specified dash_list. The initial and alternating elements (second, fourth, and so on) of the dash_list are the even dashes, and the others are the odd dashes. Each element in the "dash_list" array specifies the length (in pixels) of a segment of the pattern.
 
@@ -26942,14 +26989,14 @@ There must be at least one element in the specified dash_list. The initial and a
     
 - **`n`** [in] 
     the number of elements in dash_list (see also the [GCValues_t](@ref) structure)
-""" SetDashes(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, offset::Int32, dash_list::ByCopy{String}, n::Int32)
+""" SetDashes(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, offset::Int32, dash_list::ByCopy{String}, n::Int32)
 
-# Wrapper of void TVirtualX::SetDNDAware(UInt64, Atom_t *)
+# Wrapper of void TVirtualX::SetDNDAware(Window_t, Atom_t *)
 @trydoc raw"""
-    SetDNDAware(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByPtr1{Atom_t})::Nothing
+    SetDNDAware(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByPtr1{Atom_t})::Nothing
 Add XdndAware property and the list of drag and drop types to the Window win.
 
-""" SetDNDAware(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByPtr1{Atom_t})
+""" SetDNDAware(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByPtr1{Atom_t})
 
 # Wrapper of void TVirtualX::SetDoubleBuffer(Int_t, Int_t)
 @trydoc raw"""
@@ -26998,14 +27045,14 @@ Sets fill area style.
 ## Arguments
 
 - **`style`** [in] 
-    compound fill area Int32erior style
+    compound fill area interior style
     
-    - style = 1000 * Int32eriorstyle + styleindex
+    - style = 1000 * interiorstyle + styleindex
 """ SetFillStyle(this::ByRef1{TVirtualX}, style::Int16)
 
-# Wrapper of void TVirtualX::SetForeground(UInt64, ULong_t)
+# Wrapper of void TVirtualX::SetForeground(GContext_t, ULong_t)
 @trydoc raw"""
-    SetForeground(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, foreground::UInt64)::Nothing
+    SetForeground(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, foreground::UInt64)::Nothing
 Sets the foreground color for the specified GC (shortcut for ChangeGC with only foreground mask set).
 ## Arguments
 
@@ -27017,28 +27064,28 @@ Sets the foreground color for the specified GC (shortcut for ChangeGC with only 
     
 
 (see also the [GCValues_t](@ref) structure)
-""" SetForeground(this::ByRef1{TVirtualX}, gc::ByCopy{UInt64}, foreground::UInt64)
+""" SetForeground(this::ByRef1{TVirtualX}, gc::ByCopy{GContext_t}, foreground::UInt64)
 
-# Wrapper of void TVirtualX::SetIconName(UInt64, char *)
+# Wrapper of void TVirtualX::SetIconName(Window_t, char *)
 @trydoc raw"""
-    SetIconName(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, name::ByPtr2{Int8})::Nothing
+    SetIconName(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, name::ByPtr2{Int8})::Nothing
 Sets the window icon name.
 
-""" SetIconName(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, name::ByPtr2{Int8})
+""" SetIconName(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, name::ByPtr2{Int8})
 
-# Wrapper of void TVirtualX::SetIconPixmap(UInt64, Pixmap_t)
+# Wrapper of void TVirtualX::SetIconPixmap(Window_t, Pixmap_t)
 @trydoc raw"""
-    SetIconPixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, pix::ByCopy{Pixmap_t})::Nothing
+    SetIconPixmap(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, pix::ByCopy{Pixmap_t})::Nothing
 Sets the icon name pixmap.
 
-""" SetIconPixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, pix::ByCopy{Pixmap_t})
+""" SetIconPixmap(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, pix::ByCopy{Pixmap_t})
 
-# Wrapper of void TVirtualX::SetInputFocus(UInt64)
+# Wrapper of void TVirtualX::SetInputFocus(Window_t)
 @trydoc raw"""
-    SetInputFocus(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    SetInputFocus(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Changes the input focus to specified window "id".
 
-""" SetInputFocus(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" SetInputFocus(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
 # Wrapper of void TVirtualX::SetKeyAutoRepeat(Bool_t)
 @trydoc raw"""
@@ -27071,7 +27118,7 @@ Sets the line style.
 
 # Wrapper of void TVirtualX::SetLineType(Int_t, Int_t *)
 @trydoc raw"""
-    SetLineType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})::Nothing
+    SetLineGetType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})::Nothing
 Sets the line type.
 ## Arguments
 
@@ -27084,7 +27131,7 @@ Sets the line type.
     
 - **`dash`** [in] 
     dash segment lengths
-""" SetLineType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})
+""" SetLineGetType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})
 
 # Wrapper of void TVirtualX::SetLineWidth(Width_t)
 @trydoc raw"""
@@ -27120,12 +27167,12 @@ Sets marker style.
 
 """ SetMarkerStyle(this::ByRef1{TVirtualX}, markerstyle::Int16)
 
-# Wrapper of void TVirtualX::SetMWMHints(UInt64, UInt_t, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::SetMWMHints(Window_t, UInt_t, UInt_t, UInt_t)
 @trydoc raw"""
-    SetMWMHints(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, value::UInt32, funcs::UInt32, input::UInt32)::Nothing
+    SetMWMHints(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, value::UInt32, funcs::UInt32, input::UInt32)::Nothing
 Sets decoration style.
 
-""" SetMWMHints(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, value::UInt32, funcs::UInt32, input::UInt32)
+""" SetMWMHints(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, value::UInt32, funcs::UInt32, input::UInt32)
 
 # Wrapper of void TVirtualX::SetOpacity(Int_t)
 @trydoc raw"""
@@ -27134,35 +27181,35 @@ Sets opacity of the current window.
 This image manipulation routine works by adding to a percent amount of neutral to each pixels RGB. Since it requires quite some additional color map entries is it only supported on displays with more than > 8 color planes (> 256 colors).
 """ SetOpacity(this::ByRef1{TVirtualX}, percent::Int32)
 
-# Wrapper of void TVirtualX::SetPrimarySelectionOwner(UInt64)
+# Wrapper of void TVirtualX::SetPrimarySelectionOwner(Window_t)
 @trydoc raw"""
-    SetPrimarySelectionOwner(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    SetPrimarySelectionOwner(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Makes the window "id" the current owner of the primary selection.
 That is the window in which, for example some text is selected.
-""" SetPrimarySelectionOwner(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" SetPrimarySelectionOwner(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
 # Wrapper of void TVirtualX::SetRGB(Int_t, Float_t, Float_t, Float_t)
 @trydoc raw"""
     SetRGB(this::ByRef1{TVirtualX}, cindex::Int32, r::Float32, g::Float32, b::Float32)::Nothing
-Sets color Int32ensities the specified color index "cindex".
+Sets color intensities the specified color index "cindex".
 ## Arguments
 
 - **`cindex`** [in], **`r`** [in], **`g`** [in], **`b`** [in] 
     color index 
     . 
-    the red, green, blue Int32ensities between 0.0 and 1.0
+    the red, green, blue intensities between 0.0 and 1.0
 """ SetRGB(this::ByRef1{TVirtualX}, cindex::Int32, r::Float32, g::Float32, b::Float32)
 
-# Wrapper of Bool_t TVirtualX::SetSelectionOwner(UInt64, Atom_t &)
+# Wrapper of Bool_t TVirtualX::SetSelectionOwner(Window_t, Atom_t &)
 @trydoc raw"""
-    SetSelectionOwner(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByRef1{Atom_t})::Bool
+    SetSelectionOwner(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByRef1{Atom_t})::Bool
 Changes the owner and last-change time for the specified selection.
 
-""" SetSelectionOwner(this::ByRef1{TVirtualX}, ::ByCopy{UInt64}, ::ByRef1{Atom_t})
+""" SetSelectionOwner(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByRef1{Atom_t})
 
 # Wrapper of void TVirtualX::SetTextAlign(Short_t)
 @trydoc raw"""
-    SetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)::Nothing
+    SetGetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)::Nothing
 Sets the text alignment.
 ## Arguments
 
@@ -27171,74 +27218,74 @@ Sets the text alignment.
     
     - talign = txalh horizontal text alignment
     - talign = txalv vertical text alignment
-""" SetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)
+""" SetGetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)
 
 # Wrapper of void TVirtualX::SetTextColor(Color_t)
 @trydoc raw"""
-    SetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)::Nothing
+    SetGetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)::Nothing
 Sets the color index "cindex" for text.
 
-""" SetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)
+""" SetGetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)
 
 # Wrapper of void TVirtualX::SetTextFont(Font_t)
 @trydoc raw"""
-    SetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)::Nothing
+    SetGetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)::Nothing
 Sets the current text font number.
 
-""" SetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)
+""" SetGetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)
 
 # Wrapper of void TVirtualX::SetTextMagnitude(Float_t)
 @trydoc raw"""
-    SetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)::Nothing
+    SetGetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)::Nothing
 Sets the current text magnification factor to "mgn".
 
-""" SetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)
+""" SetGetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)
 
 # Wrapper of void TVirtualX::SetTextSize(Float_t)
 @trydoc raw"""
-    SetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)::Nothing
+    SetGetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)::Nothing
 Sets the current text size to "textsize".
 
-""" SetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)
+""" SetGetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)
 
-# Wrapper of void TVirtualX::SetTypeList(UInt64, Atom_t, Atom_t *)
+# Wrapper of void TVirtualX::SetTypeList(Window_t, Atom_t, Atom_t *)
 @trydoc raw"""
-    SetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{UInt64}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})::Nothing
+    SetGetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})::Nothing
 Add the list of drag and drop types to the Window win.
 
-""" SetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{UInt64}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})
+""" SetGetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})
 
-# Wrapper of void TVirtualX::SetWindowBackground(UInt64, ULong_t)
+# Wrapper of void TVirtualX::SetWindowBackground(Window_t, ULong_t)
 @trydoc raw"""
-    SetWindowBackground(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, color::UInt64)::Nothing
+    SetWindowBackground(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, color::UInt64)::Nothing
 Sets the background of the window "id" to the specified color value "color".
 Changing the background does not cause the window contents to be changed.
-""" SetWindowBackground(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, color::UInt64)
+""" SetWindowBackground(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, color::UInt64)
 
-# Wrapper of void TVirtualX::SetWindowBackgroundPixmap(UInt64, Pixmap_t)
+# Wrapper of void TVirtualX::SetWindowBackgroundPixmap(Window_t, Pixmap_t)
 @trydoc raw"""
-    SetWindowBackgroundPixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, pxm::ByCopy{Pixmap_t})::Nothing
+    SetWindowBackgroundPixmap(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, pxm::ByCopy{Pixmap_t})::Nothing
 Sets the background pixmap of the window "id" to the specified pixmap "pxm".
 
-""" SetWindowBackgroundPixmap(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, pxm::ByCopy{Pixmap_t})
+""" SetWindowBackgroundPixmap(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, pxm::ByCopy{Pixmap_t})
 
-# Wrapper of void TVirtualX::SetWindowName(UInt64, char *)
+# Wrapper of void TVirtualX::SetWindowName(Window_t, char *)
 @trydoc raw"""
-    SetWindowName(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, name::ByPtr2{Int8})::Nothing
+    SetWindowName(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, name::ByPtr2{Int8})::Nothing
 Sets the window name.
 
-""" SetWindowName(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, name::ByPtr2{Int8})
+""" SetWindowName(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, name::ByPtr2{Int8})
 
-# Wrapper of void TVirtualX::SetWMPosition(UInt64, Int_t, Int_t)
+# Wrapper of void TVirtualX::SetWMPosition(Window_t, Int_t, Int_t)
 @trydoc raw"""
-    SetWMPosition(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32)::Nothing
+    SetWMPosition(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32)::Nothing
 Tells the window manager the desired position [x,y] of window "id".
 
-""" SetWMPosition(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32)
+""" SetWMPosition(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32)
 
-# Wrapper of void TVirtualX::SetWMSize(UInt64, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::SetWMSize(Window_t, UInt_t, UInt_t)
 @trydoc raw"""
-    SetWMSize(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, w::UInt32, h::UInt32)::Nothing
+    SetWMSize(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, w::UInt32, h::UInt32)::Nothing
 Tells window manager the desired size of window "id".
 ## Arguments
 
@@ -27250,11 +27297,11 @@ Tells window manager the desired size of window "id".
     
 - **`h`** [in] 
     the height
-""" SetWMSize(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, w::UInt32, h::UInt32)
+""" SetWMSize(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, w::UInt32, h::UInt32)
 
-# Wrapper of void TVirtualX::SetWMSizeHints(UInt64, UInt_t, UInt_t, UInt_t, UInt_t, UInt_t, UInt_t)
+# Wrapper of void TVirtualX::SetWMSizeHints(Window_t, UInt_t, UInt_t, UInt_t, UInt_t, UInt_t, UInt_t)
 @trydoc raw"""
-    SetWMSizeHints(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, wmin::UInt32, hmin::UInt32, wmax::UInt32, hmax::UInt32, winc::UInt32, hinc::UInt32)::Nothing
+    SetWMSizeHints(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, wmin::UInt32, hmin::UInt32, wmax::UInt32, hmax::UInt32, winc::UInt32, hinc::UInt32)::Nothing
 Gives the window manager minimum and maximum size hints of the window "id".
 Also specify via "winc" and "hinc" the resize increments.
 
@@ -27267,29 +27314,29 @@ Also specify via "winc" and "hinc" the resize increments.
     . 
     specify the maximum window size 
     . 
-    define an arithmetic progression of sizes Int32o which the window to be resized (minimum to maximum)
-""" SetWMSizeHints(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, wmin::UInt32, hmin::UInt32, wmax::UInt32, hmax::UInt32, winc::UInt32, hinc::UInt32)
+    define an arithmetic progression of sizes into which the window to be resized (minimum to maximum)
+""" SetWMSizeHints(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, wmin::UInt32, hmin::UInt32, wmax::UInt32, hmax::UInt32, winc::UInt32, hinc::UInt32)
 
-# Wrapper of void TVirtualX::SetWMState(UInt64, EInitialState)
+# Wrapper of void TVirtualX::SetWMState(Window_t, EInitialState)
 @trydoc raw"""
-    SetWMState(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, state::ByCopy{EInitialState})::Nothing
+    SetWMState(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, state::ByCopy{EInitialState})::Nothing
 Sets the initial state of the window "id": either kNormalState or kIconicState.
 
-""" SetWMState(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, state::ByCopy{EInitialState})
+""" SetWMState(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, state::ByCopy{EInitialState})
 
-# Wrapper of void TVirtualX::SetWMTransientHint(UInt64, UInt64)
+# Wrapper of void TVirtualX::SetWMTransientHint(Window_t, Window_t)
 @trydoc raw"""
-    SetWMTransientHint(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, main_id::ByCopy{UInt64})::Nothing
+    SetWMTransientHint(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, main_id::ByCopy{Window_t})::Nothing
 Tells window manager that the window "id" is a transient window of the window "main_id".
 A window manager may decide not to decorate a transient window or may treat it differently in other ways.
-""" SetWMTransientHint(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, main_id::ByCopy{UInt64})
+""" SetWMTransientHint(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, main_id::ByCopy{Window_t})
 
-# Wrapper of void TVirtualX::ShapeCombineMask(UInt64, Int_t, Int_t, Pixmap_t)
+# Wrapper of void TVirtualX::ShapeCombineMask(Window_t, Int_t, Int_t, Pixmap_t)
 @trydoc raw"""
-    ShapeCombineMask(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, mask::ByCopy{Pixmap_t})::Nothing
+    ShapeCombineMask(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32, mask::ByCopy{Pixmap_t})::Nothing
 The Non-rectangular Window Shape Extension adds non-rectangular windows to the System.
 This allows for making shaped (partially transparent) windows
-""" ShapeCombineMask(this::ByRef1{TVirtualX}, id::ByCopy{UInt64}, x::Int32, y::Int32, mask::ByCopy{Pixmap_t})
+""" ShapeCombineMask(this::ByRef1{TVirtualX}, id::ByCopy{Window_t}, x::Int32, y::Int32, mask::ByCopy{Pixmap_t})
 
 # Wrapper of void TVirtualX::Streamer(TBuffer &)
 @trydoc raw"""
@@ -27305,12 +27352,12 @@ This allows for making shaped (partially transparent) windows
 
 """ StreamerNVirtual(this::ByRef1{TVirtualX}, ClassDef_StreamerNVirtual_b::ByRef1{TBuffer})
 
-# Wrapper of void TVirtualX::SubtractRegion(UInt64, UInt64, UInt64)
+# Wrapper of void TVirtualX::SubtractRegion(Region_t, Region_t, Region_t)
 @trydoc raw"""
-    SubtractRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})::Nothing
+    SubtractRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})::Nothing
 Subtracts regb from rega and stores the results in result.
 
-""" SubtractRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})
+""" SubtractRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})
 
 # Wrapper of void TVirtualX::Sync(Int_t)
 @trydoc raw"""
@@ -27325,16 +27372,16 @@ Set synchronisation on or off.
     - mode<>0 off
 """ Sync(this::ByRef1{TVirtualX}, mode::Int32)
 
-# Wrapper of Int_t TVirtualX::TextWidth(UInt64, const char *, Int_t)
+# Wrapper of Int_t TVirtualX::TextWidth(FontStruct_t, const char *, Int_t)
 @trydoc raw"""
-    TextWidth(this::ByRef1{TVirtualX}, font::ByCopy{UInt64}, s::ByCopy{String}, len::Int32)::Int32
+    GetTextWidth(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, s::ByCopy{String}, len::Int32)::Int32
 Return length of the string "s" in pixels. Size depends on font.
 
-""" TextWidth(this::ByRef1{TVirtualX}, font::ByCopy{UInt64}, s::ByCopy{String}, len::Int32)
+""" GetTextWidth(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, s::ByCopy{String}, len::Int32)
 
-# Wrapper of void TVirtualX::TranslateCoordinates(UInt64, UInt64, Int_t, Int_t, Int_t &, Int_t &, UInt64 &)
+# Wrapper of void TVirtualX::TranslateCoordinates(Window_t, Window_t, Int_t, Int_t, Int_t &, Int_t &, Window_t &)
 @trydoc raw"""
-    TranslateCoordinates(this::ByRef1{TVirtualX}, src::ByCopy{UInt64}, dest::ByCopy{UInt64}, src_x::Int32, src_y::Int32, dest_x::ByRef2{Int32}, dest_y::ByRef2{Int32}, child::ByRef1{UInt64})::Nothing
+    TranslateCoordinates(this::ByRef1{TVirtualX}, src::ByCopy{Window_t}, dest::ByCopy{Window_t}, src_x::Int32, src_y::Int32, dest_x::ByRef2{Int32}, dest_y::ByRef2{Int32}, child::ByRef1{Window_t})::Nothing
 Translates coordinates in one window to the coordinate space of another window.
 It takes the "src_x" and "src_y" coordinates relative to the source window's origin and returns these coordinates to "dest_x" and "dest_y" relative to the destination window's origin.
 
@@ -27350,11 +27397,11 @@ It takes the "src_x" and "src_y" coordinates relative to the source window's ori
     coordinates within the destination window 
     . 
     returns the child of "dest" if the coordinates are contained in a mapped child of the destination window; otherwise, child is set to 0
-""" TranslateCoordinates(this::ByRef1{TVirtualX}, src::ByCopy{UInt64}, dest::ByCopy{UInt64}, src_x::Int32, src_y::Int32, dest_x::ByRef2{Int32}, dest_y::ByRef2{Int32}, child::ByRef1{UInt64})
+""" TranslateCoordinates(this::ByRef1{TVirtualX}, src::ByCopy{Window_t}, dest::ByCopy{Window_t}, src_x::Int32, src_y::Int32, dest_x::ByRef2{Int32}, dest_y::ByRef2{Int32}, child::ByRef1{Window_t})
 
-# Wrapper of void TVirtualX::UnionRectWithRegion(Rectangle_t *, UInt64, UInt64)
+# Wrapper of void TVirtualX::UnionRectWithRegion(Rectangle_t *, Region_t, Region_t)
 @trydoc raw"""
-    UnionRectWithRegion(this::ByRef1{TVirtualX}, rect::ByPtr1{Rectangle_t}, src::ByCopy{UInt64}, dest::ByCopy{UInt64})::Nothing
+    UnionRectWithRegion(this::ByRef1{TVirtualX}, rect::ByPtr1{Rectangle_t}, src::ByCopy{Region_t}, dest::ByCopy{Region_t})::Nothing
 Updates the destination region from a union of the specified rectangle and the specified source region.
 ## Arguments
 
@@ -27366,11 +27413,11 @@ Updates the destination region from a union of the specified rectangle and the s
     
 - **`dest`** [in] 
     returns the destination region
-""" UnionRectWithRegion(this::ByRef1{TVirtualX}, rect::ByPtr1{Rectangle_t}, src::ByCopy{UInt64}, dest::ByCopy{UInt64})
+""" UnionRectWithRegion(this::ByRef1{TVirtualX}, rect::ByPtr1{Rectangle_t}, src::ByCopy{Region_t}, dest::ByCopy{Region_t})
 
-# Wrapper of void TVirtualX::UnionRegion(UInt64, UInt64, UInt64)
+# Wrapper of void TVirtualX::UnionRegion(Region_t, Region_t, Region_t)
 @trydoc raw"""
-    UnionRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})::Nothing
+    UnionRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})::Nothing
 Computes the union of two regions.
 ## Arguments
 
@@ -27378,14 +27425,14 @@ Computes the union of two regions.
     specify the two regions with which you want to perform the computation 
     . 
     returns the result of the computation
-""" UnionRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})
+""" UnionRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})
 
-# Wrapper of void TVirtualX::UnmapWindow(UInt64)
+# Wrapper of void TVirtualX::UnmapWindow(Window_t)
 @trydoc raw"""
-    UnmapWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    UnmapWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Unmaps the specified window "id".
 If the specified window is already unmapped, this function has no effect. Any child window will no longer be visible (but they are still mapped) until another map call is made on the parent.
-""" UnmapWindow(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" UnmapWindow(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
 # Wrapper of void TVirtualX::Update(Int_t)
 @trydoc raw"""
@@ -27409,9 +27456,9 @@ according to "mode".
     - mode = 0 sync
 """ UpdateWindow(this::ByRef1{TVirtualX}, mode::Int32)
 
-# Wrapper of void TVirtualX::Warp(Int_t, Int_t, UInt64)
+# Wrapper of void TVirtualX::Warp(Int_t, Int_t, Window_t)
 @trydoc raw"""
-    Warp(this::ByRef1{TVirtualX}, ix::Int32, iy::Int32, id::ByCopy{UInt64})::Nothing
+    Warp(this::ByRef1{TVirtualX}, ix::Int32, iy::Int32, id::ByCopy{Window_t})::Nothing
 Sets the pointer position.
 ## Arguments
 
@@ -27426,19 +27473,19 @@ Sets the pointer position.
     
 
 Coordinates are relative to the origin of the window id or to the origin of the current window if id == 0.
-""" Warp(this::ByRef1{TVirtualX}, ix::Int32, iy::Int32, id::ByCopy{UInt64})
+""" Warp(this::ByRef1{TVirtualX}, ix::Int32, iy::Int32, id::ByCopy{Window_t})
 
-# Wrapper of void TVirtualX::WMDeleteNotify(UInt64)
+# Wrapper of void TVirtualX::WMDeleteNotify(Window_t)
 @trydoc raw"""
-    WMDeleteNotify(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})::Nothing
+    WMDeleteNotify(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})::Nothing
 Tells WM to send message when window is closed via WM.
 
-""" WMDeleteNotify(this::ByRef1{TVirtualX}, id::ByCopy{UInt64})
+""" WMDeleteNotify(this::ByRef1{TVirtualX}, id::ByCopy{Window_t})
 
 # Wrapper of Int_t TVirtualX::WriteGIF(char *)
 @trydoc raw"""
     WriteGIF(this::ByRef1{TVirtualX}, name::ByPtr2{Int8})::Int32
-Writes the current window Int32o GIF file.
+Writes the current window into GIF file.
 Returns 1 in case of success, 0 otherwise.
 """ WriteGIF(this::ByRef1{TVirtualX}, name::ByPtr2{Int8})
 
@@ -27456,19 +27503,19 @@ Writes the pixmap "wid" in the bitmap file "pxname".
     the file name
 """ WritePixmap(this::ByRef1{TVirtualX}, wid::Int32, w::UInt32, h::UInt32, pxname::ByPtr2{Int8})
 
-# Wrapper of void TVirtualX::XorRegion(UInt64, UInt64, UInt64)
+# Wrapper of void TVirtualX::XorRegion(Region_t, Region_t, Region_t)
 @trydoc raw"""
-    XorRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})::Nothing
-Calculates the difference between the union and Int32ersection of two regions.
+    XorRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})::Nothing
+Calculates the difference between the union and intersection of two regions.
 ## Arguments
 
 - **`rega`** [in], **`regb`** [in], **`result`** [in] 
     specify the two regions with which you want to perform the computation 
     . 
     returns the result of the computation
-""" XorRegion(this::ByRef1{TVirtualX}, rega::ByCopy{UInt64}, regb::ByCopy{UInt64}, result::ByCopy{UInt64})
+""" XorRegion(this::ByRef1{TVirtualX}, rega::ByCopy{Region_t}, regb::ByCopy{Region_t}, result::ByCopy{Region_t})
 
-# Wrapper of Int32 TClassTable::Classes()
+# Wrapper of int TClassTable::Classes()
 @trydoc raw"""
     Classes(this::ByRef1{TClassTable})::Int32
 
@@ -27485,7 +27532,7 @@ Add long c at position i. Check for out of bounds.
 # Wrapper of void TArrayL::Adopt(Int_t, Long_t *)
 @trydoc raw"""
     Adopt(this::ByRef1{TArrayL}, n::Int32, array::ByPtr2{Int64})::Nothing
-Adopt array arr Int32o [TArrayL](@ref), i.e.
+Adopt array arr into [TArrayL](@ref), i.e.
 don't copy arr but use it directly in [TArrayL](@ref). User may not delete arr, [TArrayL](@ref) dtor will do it.
 """ Adopt(this::ByRef1{TArrayL}, n::Int32, array::ByPtr2{Int64})
 
@@ -27712,7 +27759,7 @@ This should never create a full node that is, it is not used anywhere where THIS
 
 """ AppendFrom(this::ByRef1{TBtInnerNode}, src::ByPtr1{TBtInnerNode}, thestart::Int32, stop::Int32)
 
-# Wrapper of void TBtInnerNode::BalanceWith(TBtInnerNode *, Int32)
+# Wrapper of void TBtInnerNode::BalanceWith(TBtInnerNode *, int)
 @trydoc raw"""
     BalanceWith(this::ByRef1{TBtInnerNode}, n::ByPtr1{TBtInnerNode}, idx::Int32)::Nothing
 PINDX is the index of the parent item whose key will change when keys are shifted from one InnerNode to the other.
@@ -27819,7 +27866,7 @@ Merge the 2 part of the tree.
 # Wrapper of void TBtInnerNode::PushLeft(Int_t, TBtInnerNode *, Int_t)
 @trydoc raw"""
     PushLeft(this::ByRef1{TBtInnerNode}, cnt::Int32, leftsib::ByPtr1{TBtInnerNode}, parentIdx::Int32)::Nothing
-noFromThis==1 => moves the parent item Int32o the leftsib, and the first item in this's array Int32o the parent item.
+noFromThis==1 => moves the parent item into the leftsib, and the first item in this's array into the parent item.
 
 """ PushLeft(this::ByRef1{TBtInnerNode}, cnt::Int32, leftsib::ByPtr1{TBtInnerNode}, parentIdx::Int32)
 
@@ -27828,7 +27875,7 @@ noFromThis==1 => moves the parent item Int32o the leftsib, and the first item in
     PushRight(this::ByRef1{TBtInnerNode}, cnt::Int32, rightsib::ByPtr1{TBtInnerNode}, parentIdx::Int32)::Nothing
 The operation is three steps:
 - Step I. Make room for the incoming keys in RIGHTSIB.
-- Step II. Move the items from THIS Int32o RIGHTSIB.
+- Step II. Move the items from THIS into RIGHTSIB.
 - Step III. Update the length of THIS.
 """ PushRight(this::ByRef1{TBtInnerNode}, cnt::Int32, rightsib::ByPtr1{TBtInnerNode}, parentIdx::Int32)
 
@@ -27940,7 +27987,7 @@ Never called from anywhere where it might fill up THIS does NOT handle nofKeys.
 # Wrapper of void TBtLeafNode::AppendFrom(TBtLeafNode *, Int_t, Int_t)
 @trydoc raw"""
     AppendFrom(this::ByRef1{TBtLeafNode}, src::ByPtr1{TBtLeafNode}, thestart::Int32, stop::Int32)::Nothing
-A convenience function, does not worry about the element in the parent, simply moves elements from SRC[thestart] to SRC[stop] Int32o the current array.
+A convenience function, does not worry about the element in the parent, simply moves elements from SRC[thestart] to SRC[stop] into the current array.
 This should never create a full node. That is, it is not used anywhere where THIS could possibly be near full. Does NOT handle nofKeys.
 """ AppendFrom(this::ByRef1{TBtLeafNode}, src::ByPtr1{TBtLeafNode}, thestart::Int32, stop::Int32)
 
@@ -28003,14 +28050,14 @@ Merge.
 # Wrapper of void TBtLeafNode::PushLeft(Int_t, TBtLeafNode *, Int_t)
 @trydoc raw"""
     PushLeft(this::ByRef1{TBtLeafNode}, cnt::Int32, l::ByPtr1{TBtLeafNode}, parentIndex::Int32)::Nothing
-noFromThis==1 => moves the parent item Int32o the leftsib, and the first item in this's array Int32o the parent item.
+noFromThis==1 => moves the parent item into the leftsib, and the first item in this's array into the parent item.
 
 """ PushLeft(this::ByRef1{TBtLeafNode}, cnt::Int32, l::ByPtr1{TBtLeafNode}, parentIndex::Int32)
 
 # Wrapper of void TBtLeafNode::PushRight(Int_t, TBtLeafNode *, Int_t)
 @trydoc raw"""
     PushRight(this::ByRef1{TBtLeafNode}, cnt::Int32, r::ByPtr1{TBtLeafNode}, parentIndex::Int32)::Nothing
-noFromThis==1 => moves the parent item Int32o the rightsib, and the last item in this's array Int32o the parent item.
+noFromThis==1 => moves the parent item into the rightsib, and the last item in this's array into the parent item.
 
 """ PushRight(this::ByRef1{TBtLeafNode}, cnt::Int32, r::ByPtr1{TBtLeafNode}, parentIndex::Int32)
 
@@ -28094,7 +28141,7 @@ Check for out of bounds. Warning: the name of the method is misleading, it actua
 # Wrapper of void TArrayD::Adopt(Int_t, Double_t *)
 @trydoc raw"""
     Adopt(this::ByRef1{TArrayD}, n::Int32, array::ByPtr2{Float64})::Nothing
-Adopt array arr Int32o [TArrayD](@ref), i.e.
+Adopt array arr into [TArrayD](@ref), i.e.
 don't copy arr but use it directly in [TArrayD](@ref). User may not delete arr, [TArrayD](@ref) dtor will do it.
 """ Adopt(this::ByRef1{TArrayD}, n::Int32, array::ByPtr2{Float64})
 
@@ -28164,7 +28211,7 @@ Add float c at position i. Check for out of bounds.
 # Wrapper of void TArrayF::Adopt(Int_t, Float_t *)
 @trydoc raw"""
     Adopt(this::ByRef1{TArrayF}, n::Int32, array::ByPtr2{Float32})::Nothing
-Adopt array arr Int32o [TArrayF](@ref), i.e.
+Adopt array arr into [TArrayF](@ref), i.e.
 don't copy arr but use it directly in [TArrayF](@ref). User may not delete arr, [TArrayF](@ref) dtor will do it.
 """ Adopt(this::ByRef1{TArrayF}, n::Int32, array::ByPtr2{Float32})
 
@@ -28304,7 +28351,7 @@ Remove empty slots from array.
 # Wrapper of void TRefArray::Delete(Option_t *)
 @trydoc raw"""
     Delete(this::ByRef1{TRefArray}, option::ByCopy{String})::Nothing
-Remove all objects from the array and free the Int32ernal memory.
+Remove all objects from the array and free the internal memory.
 
 """ Delete(this::ByRef1{TRefArray}, option::ByCopy{String})
 
@@ -28388,7 +28435,7 @@ Add char c at position i. Check for out of bounds.
 # Wrapper of void TArrayC::Adopt(Int_t, Char_t *)
 @trydoc raw"""
     Adopt(this::ByRef1{TArrayC}, n::Int32, array::ByPtr2{Int8})::Nothing
-Adopt array arr Int32o [TArrayC](@ref), i.e.
+Adopt array arr into [TArrayC](@ref), i.e.
 don't copy arr but use it directly in [TArrayC](@ref). User may not delete arr, [TArrayC](@ref) dtor will do it.
 """ Adopt(this::ByRef1{TArrayC}, n::Int32, array::ByPtr2{Int8})
 
@@ -28578,7 +28625,7 @@ Add short c at position i. Check for out of bounds.
 # Wrapper of void TArrayS::Adopt(Int_t, Short_t *)
 @trydoc raw"""
     Adopt(this::ByRef1{TArrayS}, n::Int32, array::ByPtr2{Int16})::Nothing
-Adopt array arr Int32o [TArrayS](@ref), i.e.
+Adopt array arr into [TArrayS](@ref), i.e.
 don't copy arr but use it directly in [TArrayS](@ref). User may not delete arr, [TArrayS](@ref) dtor will do it.
 """ Adopt(this::ByRef1{TArrayS}, n::Int32, array::ByPtr2{Int16})
 
@@ -28669,7 +28716,7 @@ Commits pending elements in a staging area (see [Allocate()](@ref) for more info
 # Wrapper of void TVirtualCollectionProxy::Insert(const void *, void *, size_t)
 @trydoc raw"""
     Insert(this::ByRef1{TVirtualCollectionProxy}, data::ByConstPtr2{Nothing}, container::ByPtr2{Nothing}, size::Int64)::Nothing
-Insert elements Int32o the proxied container.
+Insert elements into the proxied container.
 `data` is a C-style array of the value type of the given `size`. For associative containers, e.g. `std!map`, the data type should be `std!pair<Key_t, Value_t>`.
 """ Insert(this::ByRef1{TVirtualCollectionProxy}, data::ByConstPtr2{Nothing}, container::ByPtr2{Nothing}, size::Int64)
 
@@ -28816,7 +28863,7 @@ Add long64 c at position i. Check for out of bounds.
 # Wrapper of void TArrayL64::Adopt(Int_t, Long64_t *)
 @trydoc raw"""
     Adopt(this::ByRef1{TArrayL64}, n::Int32, array::ByPtr2{Int64})::Nothing
-Adopt array arr Int32o [TArrayL64](@ref), i.e.
+Adopt array arr into [TArrayL64](@ref), i.e.
 don't copy arr but use it directly in [TArrayL64](@ref). User may not delete arr, [TArrayL64](@ref) dtor will do it.
 """ Adopt(this::ByRef1{TArrayL64}, n::Int32, array::ByPtr2{Int64})
 
@@ -29191,16 +29238,16 @@ By default the branch buffers are stored in the same file as the Tree. use [TBra
 
     Arrays of values are supported with the following syntax:
 
-    - If leaf name has the form var[nelem], where nelem is alphanumeric, then if nelem is a leaf name, it is used as the variable size of the array, otherwise return 0. The leaf referred to by nelem **MUST** be an Int32 (/I),
-    - If leaf name has the form var[nelem], where nelem is a non-negative Int32eger, then it is used as the fixed size of the array.
-    - If leaf name has the form of a multi-dimensional array (e.g. var[nelem][nelem2]) where nelem and nelem2 are non-negative Int32eger) then it is used as a 2 dimensional array of fixed size.
+    - If leaf name has the form var[nelem], where nelem is alphanumeric, then if nelem is a leaf name, it is used as the variable size of the array, otherwise return 0. The leaf referred to by nelem **MUST** be an int (/I),
+    - If leaf name has the form var[nelem], where nelem is a non-negative integer, then it is used as the fixed size of the array.
+    - If leaf name has the form of a multi-dimensional array (e.g. var[nelem][nelem2]) where nelem and nelem2 are non-negative integer) then it is used as a 2 dimensional array of fixed size.
     - In case of the truncated floating point types (Float16_t and Double32_t) you can furthermore specify the range in the style [xmin,xmax] or [xmin,xmax,nbits] after the type character. See `TStreamerElement!GetRange()` for further information.
 
     Any of other form is not supported.
 
 Note that the [TTree](@ref) will assume that all the item are contiguous in memory. On some platform, this is not always true of the member of a struct or a class, due to padding and alignment. Sorting your data member in order of decreasing sizeof usually leads to their being contiguous in memory.
 
-- bufsize is the buffer size in bytes for this branch The default value is 32000 bytes and should be ok for most cases. You can specify a larger value (e.g. 256000) if your Tree is not split and each entry is large (Megabytes) A small value for bufsize is optimum if you Int32end to access the entries in the Tree randomly and your Tree is in split mode.
+- bufsize is the buffer size in bytes for this branch The default value is 32000 bytes and should be ok for most cases. You can specify a larger value (e.g. 256000) if your Tree is not split and each entry is large (Megabytes) A small value for bufsize is optimum if you intend to access the entries in the Tree randomly and your Tree is in split mode.
 """ Branch(this::ByRef1{TTree}, name::ByCopy{String}, address::ByPtr2{Nothing}, leaflist::ByCopy{String}, bufsize::Int32)
 
 # Wrapper of Int_t TTree::Branch(TCollection *, Int_t, Int_t, const char *)
@@ -29292,7 +29339,7 @@ And in general, in case two or more master branches contain subbranches with ide
 
  if MyClass has 3 members a,b,c, the two instructions above will generate subbranches called B1.a, B1.b ,B1.c, B2.a, B2.b, B2.c
 
-bufsize is the buffer size in bytes for this branch The default value is 32000 bytes and should be ok for most cases. You can specify a larger value (e.g. 256000) if your Tree is not split and each entry is large (Megabytes) A small value for bufsize is optimum if you Int32end to access the entries in the Tree randomly and your Tree is in split mode.
+bufsize is the buffer size in bytes for this branch The default value is 32000 bytes and should be ok for most cases. You can specify a larger value (e.g. 256000) if your Tree is not split and each entry is large (Megabytes) A small value for bufsize is optimum if you intend to access the entries in the Tree randomly and your Tree is in split mode.
 """ BranchOld(this::ByRef1{TTree}, name::ByCopy{String}, classname::ByCopy{String}, addobj::ByPtr2{Nothing}, bufsize::Int32, splitlevel::Int32)
 
 # Wrapper of TBranch * TTree::BranchRef()
@@ -29310,7 +29357,7 @@ At each Tree!Fill, the branch numbers containing the referenced objects are save
 Create a new [TTree](@ref) BranchElement.
 ## WARNING about this new function
 
-This function is designed to replace the Int32ernal implementation of the old [TTree!Branch](@ref) (whose implementation has been moved to BranchOld).
+This function is designed to replace the internal implementation of the old [TTree!Branch](@ref) (whose implementation has been moved to BranchOld).
 
 NOTE: The 'Bronch' method supports only one possible calls signature (where the object type has to be specified explicitly and the address must be the address of a pointer). For more flexibility use 'Branch'. Use Bronch only in (rare) cases (likely to be legacy cases) where both the new and old implementation of Branch needs to be used at the same time.
 
@@ -29337,7 +29384,7 @@ And in general, in case two or more master branches contain subbranches with ide
 
  if MyClass has 3 members a,b,c, the two instructions above will generate subbranches called B1.a, B1.b ,B1.c, B2.a, B2.b, B2.c
 
-bufsize is the buffer size in bytes for this branch The default value is 32000 bytes and should be ok for most cases. You can specify a larger value (e.g. 256000) if your Tree is not split and each entry is large (Megabytes) A small value for bufsize is optimum if you Int32end to access the entries in the Tree randomly and your Tree is in split mode.
+bufsize is the buffer size in bytes for this branch The default value is 32000 bytes and should be ok for most cases. You can specify a larger value (e.g. 256000) if your Tree is not split and each entry is large (Megabytes) A small value for bufsize is optimum if you intend to access the entries in the Tree randomly and your Tree is in split mode.
 
 Use splitlevel < 0 instead of splitlevel=0 when the class has a custom Streamer
 
@@ -29462,7 +29509,7 @@ If undo is true, reset the branch addresses instead of copying them. This ensure
 @trydoc raw"""
     CopyEntries(this::ByRef1{TTree}, tree::ByPtr1{TTree}, nentries::Int64, option::ByCopy{String}, needCopyAddresses::Bool)::Int64
 Copy nentries from given tree to this tree.
-This routines assumes that the branches that Int32ended to be copied are already connected. The typical case is that this tree was created using tree->CloneTree(0).
+This routines assumes that the branches that intended to be copied are already connected. The typical case is that this tree was created using tree->CloneTree(0).
 
 By default copy all entries.
 
@@ -29714,7 +29761,7 @@ In all cases `htemp` can be retrieved by calling:
 
 (C++ version of the code)
 
-In the two dimensional case (`Draw("e1;e2")`), with the default drawing option, the data is filled Int32o a [TGraph](@ref) named `Graph`. This [TGraph](@ref) can be retrieved by calling
+In the two dimensional case (`Draw("e1;e2")`), with the default drawing option, the data is filled into a [TGraph](@ref) named `Graph`. This [TGraph](@ref) can be retrieved by calling
 
     auto graph = (TGraph*)gPad->GetPrimitive("Graph");
 
@@ -29921,7 +29968,7 @@ For example draw px using the file hsimple.root (generated by the hsimple.C tuto
 
 (C++ version of the code)
 
- MakeProxy can then be used indirectly via the [TTree!Draw](@ref) Int32erface as follow: 
+ MakeProxy can then be used indirectly via the [TTree!Draw](@ref) interface as follow: 
 
     new TFile("hsimple.root")
     ntuple->Draw("hsimple.cxx");
@@ -29971,7 +30018,7 @@ When option contains "norm" the output histogram is normalized to 1.
 
 (C++ version of the code)
 
- will create a [TEventList](@ref) object named "yplus" in the current directory. In an Int32eractive session, one can type (after [TTree!Draw](@ref)) 
+ will create a [TEventList](@ref) object named "yplus" in the current directory. In an interactive session, one can type (after [TTree!Draw](@ref)) 
 
     yplus.Print("all")
 
@@ -30102,9 +30149,9 @@ Important note: By default [TTree!Draw](@ref) creates the arrays obtained with G
 
 You can use the option "goff" to turn off the graphics output of [TTree!Draw](@ref) in the above example.
 
-### Automatic Int32erface to TTree::Draw via the TTreeViewer
+### Automatic interface to TTree::Draw via the TTreeViewer
 
-A complete graphical Int32erface to this function is implemented in the class [TTreeViewer](@ref). To thestart the [TTreeViewer](@ref), three possibilities:
+A complete graphical interface to this function is implemented in the class [TTreeViewer](@ref). To thestart the [TTreeViewer](@ref), three possibilities:
 
 - select [TTree](@ref) context menu item "StartViewer"
 - type the command "TTreeViewer TV(treeName)"
@@ -30171,7 +30218,7 @@ Return true if there is a cache attached to the `TTree` (either pre-exisiting or
 Fill all branches.
 This function loops on all the branches of this tree. For each branch, it copies to the branch buffer (basket) the current values of the leaves data types. If a leaf is a simple data type, a simple conversion to a machine independent format has to be done.
 
-This machine independent version of the data is copied Int32o a basket (each branch has its own basket). When a basket is full (32k worth of data by default), it is then optionally compressed and written to disk (this operation is also called committing or 'flushing' the basket). The committed baskets are then immediately removed from memory.
+This machine independent version of the data is copied into a basket (each branch has its own basket). When a basket is full (32k worth of data by default), it is then optionally compressed and written to disk (this operation is also called committing or 'flushing' the basket). The committed baskets are then immediately removed from memory.
 
 The function returns the number of bytes committed to the individual branches.
 
@@ -30179,9 +30226,9 @@ If a write error occurs, the number of bytes returned is -1.
 
 If no data are written, because, e.g., the branch is disabled, the number of bytes returned is 0.
 
-**The baskets are flushed and the Tree header saved at regular Int32ervals**
+**The baskets are flushed and the Tree header saved at regular intervals**
 
-At regular Int32ervals, when the amount of data written so far is greater than fAutoFlush (see SetAutoFlush) all the baskets are flushed to disk. This makes future reading faster as it guarantees that baskets belonging to nearby entries will be on the same disk region. When the first call to flush the baskets happen, we also take this opportunity to optimize the baskets buffers. We also check if the amount of data written is greater than fAutoSave (see SetAutoSave). In this case we also write the Tree header. This makes the Tree recoverable up to this point in case the program writing the Tree crashes. The decisions to FlushBaskets and Auto Save can be made based either on the number of bytes written (fAutoFlush and fAutoSave negative) or on the number of entries written (fAutoFlush and fAutoSave positive). Note that the user can decide to call FlushBaskets and AutoSave in her event loop base on the number of events written instead of the number of bytes written.
+At regular intervals, when the amount of data written so far is greater than fAutoFlush (see SetAutoFlush) all the baskets are flushed to disk. This makes future reading faster as it guarantees that baskets belonging to nearby entries will be on the same disk region. When the first call to flush the baskets happen, we also take this opportunity to optimize the baskets buffers. We also check if the amount of data written is greater than fAutoSave (see SetAutoSave). In this case we also write the Tree header. This makes the Tree recoverable up to this point in case the program writing the Tree crashes. The decisions to FlushBaskets and Auto Save can be made based either on the number of bytes written (fAutoFlush and fAutoSave negative) or on the number of entries written (fAutoFlush and fAutoSave positive). Note that the user can decide to call FlushBaskets and AutoSave in her event loop base on the number of events written instead of the number of bytes written.
 
 ###Note
 
@@ -30264,7 +30311,7 @@ The function returns the number of bytes read from the input buffer. If entry do
 
 If the Tree has friends, also read the friends entry.
 
-To activate/deactivate one or more branches, use TBranch!SetBranchStatus For example, if you have a Tree with several hundred branches, and you are Int32erested only by branches named "a" and "b", do 
+To activate/deactivate one or more branches, use TBranch!SetBranchStatus For example, if you have a Tree with several hundred branches, and you are interested only by branches named "a" and "b", do 
 
     mytree.SetBranchStatus("*",0); //disable all branches
     mytree.SetBranchStatus("a",1);
@@ -30322,7 +30369,7 @@ Consider the example in $ROOTSYS/test/Event.h The top level branch in the tree T
 
 (C++ version of the code)
 
- The default (recommended). At the first entry an object of the class Event will be created and pointed by event. At the following entries, event will be overwritten by the new data. All Int32ernal members that are TObject* are automatically deleted. It is important that these members be in a valid state when GetEntry is called. Pointers must be correctly initialized. However these Int32ernal members will not be deleted if the characters "->" are specified as the first characters in the comment field of the data member declaration.
+ The default (recommended). At the first entry an object of the class Event will be created and pointed by event. At the following entries, event will be overwritten by the new data. All internal members that are TObject* are automatically deleted. It is important that these members be in a valid state when GetEntry is called. Pointers must be correctly initialized. However these internal members will not be deleted if the characters "->" are specified as the first characters in the comment field of the data member declaration.
 
 If "->" is specified, the pointer member is read via pointer->Streamer(buf). In this case, it is assumed that the pointer is never null (case of pointer [TClonesArray](@ref) *fTracks in the Event example). If "->" is not specified, the pointer member is read via buf >> pointer. In this case the pointer may be null. Note that the option with "->" is faster to read or write and it also consumes less space in the file.
 
@@ -30354,7 +30401,7 @@ The option AutoDelete is set
 
 (C++ version of the code)
 
- It is strongly recommended to use the default option 1. It has the additional advantage that functions like [TTree!Draw](@ref) (Int32ernally calling [TTree!GetEntry](@ref)) will be functional even when the classes in the file are not available.
+ It is strongly recommended to use the default option 1. It has the additional advantage that functions like [TTree!Draw](@ref) (internally calling [TTree!GetEntry](@ref)) will be functional even when the classes in the file are not available.
 
 Note: See the comments in [TBranchElement!SetAddress()](@ref) for the object ownership policy of the underlying (user) data.
 """ GetEntry(this::ByRef1{TTree}, entry::Int64, getall::Int32)
@@ -30572,7 +30619,7 @@ If new and old directory are in the same file, the data is untouched, this "just
 @trydoc raw"""
     LoadBaskets(this::ByRef1{TTree}, maxmemory::Int64)::Int32
 Read in memory all baskets from all branches up to the limit of maxmemory bytes.
-If maxmemory is non null and positive SetMaxVirtualSize is called with this value. Default for maxmemory is 2000000000 (2 Gigabytes). The function returns the total number of baskets read Int32o memory if negative an error occurred while loading the branches. This method may be called to force branch baskets in memory when random access to branch entries is required. If random access to only a few branches is required, you should call directly [TBranch!LoadBaskets](@ref).
+If maxmemory is non null and positive SetMaxVirtualSize is called with this value. Default for maxmemory is 2000000000 (2 Gigabytes). The function returns the total number of baskets read into memory if negative an error occurred while loading the branches. This method may be called to force branch baskets in memory when random access to branch entries is required. If random access to only a few branches is required, you should call directly [TBranch!LoadBaskets](@ref).
 """ LoadBaskets(this::ByRef1{TTree}, maxmemory::Int64)
 
 # Wrapper of Long64_t TTree::LoadTree(Long64_t)
@@ -30764,7 +30811,7 @@ To draw px using the file hsimple.root (generated by the hsimple.C tutorial), we
 
 (C++ version of the code)
 
- MakeProxy can then be used indirectly via the [TTree!Draw](@ref) Int32erface as follow: 
+ MakeProxy can then be used indirectly via the [TTree!Draw](@ref) interface as follow: 
 
     new TFile("hsimple.root")
     ntuple->Draw("hsimple.cxx");
@@ -30831,7 +30878,7 @@ Check if adding nbytes to memory we are still below MaxVirtualsize.
 # Wrapper of Long64_t TTree::Merge(TCollection *, Option_t *)
 @trydoc raw"""
     Merge(this::ByRef1{TTree}, list::ByPtr1{TCollection}, option::ByCopy{String})::Int64
-Merge the trees in the [TList](@ref) Int32o this tree.
+Merge the trees in the [TList](@ref) into this tree.
 Returns the total number of entries in the merged tree.
 """ Merge(this::ByRef1{TTree}, list::ByPtr1{TCollection}, option::ByCopy{String})
 
@@ -30886,7 +30933,7 @@ The created object is named "principal" and a reference to it is added to the li
 Process this tree executing the [TSelector](@ref) code in the specified filename.
 The return value is -1 in case of error and [TSelector!GetStatus()](@ref) in in case of success.
 
-The code in filename is loaded (Int32erpreted or compiled, see below), filename must contain a valid class implementation derived from [TSelector](@ref), where [TSelector](@ref) has the following member functions:
+The code in filename is loaded (interpreted or compiled, see below), filename must contain a valid class implementation derived from [TSelector](@ref), where [TSelector](@ref) has the following member functions:
 
 - `Begin()`: called every time a loop on the tree starts, a convenient place to create your histograms.
 - `SlaveBegin()`: called after [Begin()](@ref), when on PROOF called only on the slave servers.
@@ -30894,7 +30941,7 @@ The code in filename is loaded (Int32erpreted or compiled, see below), filename 
 - `SlaveTerminate`: called at the theend of the loop on the tree, when on PROOF called only on the slave servers.
 - `Terminate()`: called at the theend of the loop on the tree, a convenient place to draw/fit your histograms.
 
-If filename is of the form file.C, the file will be Int32erpreted.
+If filename is of the form file.C, the file will be interpreted.
 
 If filename is of the form file.C++, the file file.C will be compiled and dynamically loaded.
 
@@ -30902,7 +30949,7 @@ If filename is of the form file.C+, the file file.C will be compiled and dynamic
 
 ## NOTE1
 
-It may be more Int32eresting to invoke directly the other Process function accepting a TSelector* as argument.eg 
+It may be more interesting to invoke directly the other Process function accepting a TSelector* as argument.eg 
 
     MySelector *selector = (MySelector*)TSelector!GetSelector(filename);
     selector->CallSomeFunction(..);
@@ -31085,7 +31132,7 @@ autof is the number of consecutive entries after which [TTree!Fill](@ref) will f
 
 When filling the Tree the branch buffers will be flushed to disk when more than autof bytes have been written to the file. At the first FlushBaskets [TTree!Fill](@ref) will replace fAutoFlush by the current value of fEntries.
 
-Calling this function with autof<0 is Int32eresting when it is hard to estimate the size of one entry. This value is also independent of the Tree.
+Calling this function with autof<0 is interesting when it is hard to estimate the size of one entry. This value is also independent of the Tree.
 
 The Tree is initialized with fAutoFlush=-30000000, ie that, by default, the first AutoFlush will be done when 30 MBytes of data are written to the file.
 
@@ -31093,7 +31140,7 @@ The Tree is initialized with fAutoFlush=-30000000, ie that, by default, the firs
 
 The AutoFlush mechanism is disabled.
 
-Flushing the buffers at regular Int32ervals optimize the location of consecutive entries on the disk by creating clusters of baskets.
+Flushing the buffers at regular intervals optimize the location of consecutive entries on the disk by creating clusters of baskets.
 
 A cluster of baskets is a set of baskets that contains all the data for a (consecutive) set of entries and that is stored consecutively on the disk. When reading all the branches, this is the minimum set of baskets that the [TTreeCache](@ref) will read.
 """ SetAutoFlush(this::ByRef1{TTree}, autof::Int64)
@@ -31171,7 +31218,7 @@ Assume a tree T with sub-branches a,b,c,d,e,f,g,etc.. when doing T.GetEntry(i) a
 
 (C++ version of the code)
 
- bname is Int32erpreted as a wild-carded [TRegexp](@ref) (see TRegexp!MakeWildcard). Thus, "a*b" or "a.*b" matches branches starting with "a" and ending with "b", but not any other branch with an "a" followed at some point by a "b". For this second behavior, use "*a*b*". Note that TRegExp does not support '|', and so you cannot select, e.g. track and shower branches with "track|shower".
+ bname is interpreted as a wild-carded [TRegexp](@ref) (see TRegexp!MakeWildcard). Thus, "a*b" or "a.*b" matches branches starting with "a" and ending with "b", but not any other branch with an "a" followed at some point by a "b". For this second behavior, use "*a*b*". Note that TRegExp does not support '|', and so you cannot select, e.g. track and shower branches with "track|shower".
 
 **WARNING! WARNING! WARNING!**
 
@@ -31191,7 +31238,7 @@ I.e If your Tree has been created in split mode with a parent branch "parent." (
 
  Without the trailing dot in the branch creation you have no choice but to call SetBranchStatus explicitly for each of the sub branches.
 
-An alternative to this function is to read directly and only the Int32eresting branches. Example: 
+An alternative to this function is to read directly and only the interesting branches. Example: 
 
     TBranch *brc = T.GetBranch("c");
     TBranch *bre = T.GetBranch("e");
@@ -31206,7 +31253,7 @@ An alternative to this function is to read directly and only the Int32eresting b
 # Wrapper of Int_t TTree::SetCacheEntryRange(Long64_t, Long64_t)
 @trydoc raw"""
     SetCacheEntryRange(this::ByRef1{TTree}, first::Int64, last::Int64)::Int32
-Int32erface to [TTreeCache](@ref) to set the cache entry range
+interface to [TTreeCache](@ref) to set the cache entry range
 Returns:
 
 - 0 entry range set
@@ -31248,7 +31295,7 @@ if maxEntries > 0 a maximum of maxEntries is kept in one buffer/basket per branc
 
 #### NOTE 1:
 
-Circular Trees are Int32eresting in online real time environments to store the results of the last maxEntries events. #### NOTE 2:
+Circular Trees are interesting in online real time environments to store the results of the last maxEntries events. #### NOTE 2:
 
 Calling SetCircular with maxEntries <= 0 is necessary before merging circular Trees that have been saved on files. #### NOTE 3:
 
@@ -31407,10 +31454,10 @@ Set perf stats.
 
 # Wrapper of void TTree::SetTimerInterval(Int_t)
 @trydoc raw"""
-    SetTimerInterval(this::ByRef1{TTree}, msec::Int32)::Nothing
+    SetGetTimerInterval(this::ByRef1{TTree}, msec::Int32)::Nothing
 
 
-""" SetTimerInterval(this::ByRef1{TTree}, msec::Int32)
+""" SetGetTimerInterval(this::ByRef1{TTree}, msec::Int32)
 
 # Wrapper of void TTree::SetUpdate(Int_t)
 @trydoc raw"""
@@ -31510,7 +31557,7 @@ Note that you are not forced to fix the limits for all parameters. For example, 
 
 For the fit to be meaningful, the function must be self-normalized.
 
-i.e. It must have the same Int32egral regardless of the parameter settings. Otherwise the fit will effectively just maximize the area.
+i.e. It must have the same integral regardless of the parameter settings. Otherwise the fit will effectively just maximize the area.
 
 It is mandatory to have a normalization variable which is fixed for the fit. e.g. 
 
@@ -31691,7 +31738,7 @@ Add 2 entry lists.
 
 ###Note
 
-If you are creating a TEntryList for a TChain and you would like to have a one to one mapping between the sub lists of the TEntryList and the sub trees in the TChain, please do not call this function but use TEntryList!AddSubList instead and pair it with a call to TChain!SetEntryList with option "sync". See the AddSubList function documentation for an example usage. This helps for example in a testing or benchmark scenario where a TChain holds multiple times the same tree in the same file. In that case, this function would not be be able to distinguish different sub entry lists that refer to the same treename and filename. Instead it would create a union of all the sub entry lists Int32o one list.
+If you are creating a TEntryList for a TChain and you would like to have a one to one mapping between the sub lists of the TEntryList and the sub trees in the TChain, please do not call this function but use TEntryList!AddSubList instead and pair it with a call to TChain!SetEntryList with option "sync". See the AddSubList function documentation for an example usage. This helps for example in a testing or benchmark scenario where a TChain holds multiple times the same tree in the same file. In that case, this function would not be be able to distinguish different sub entry lists that refer to the same treename and filename. Instead it would create a union of all the sub entry lists into one list.
 """ Add(this::ByRef1{TEntryList}, elist::ByConstPtr1{TEntryList})
 
 # Wrapper of void TEntryList::AddSubList(TEntryList *)
@@ -31939,7 +31986,7 @@ Note also that adding histogram with labels is not supported, histogram will be 
 
 SPECIAL CASE (Average/Efficiency histograms) For histograms representing averages or efficiencies, one should compute the average of the two histograms and not the sum. One can mark a histogram to be an average histogram by setting its bit kIsAverage with myhist.SetBit(TH1!kIsAverage); Note that the two histograms must have their kIsAverage bit set
 
-IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Add](@ref)
+IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Add](@ref)
 
 IMPORTANT NOTE2: You should be careful about the statistics of the returned histogram, whose statistics may be binned or unbinned, depending on whether c1 is negative, whether [TAxis!kAxisRange](@ref) is true, and whether [TH1!ResetStats](@ref) has been called on either this or h1. See [TH1!GetStats](@ref).
 
@@ -31958,7 +32005,7 @@ Note also that adding histogram with labels is not supported, histogram will be 
 
 SPECIAL CASE (Average/Efficiency histograms) For histograms representing averages or efficiencies, one should compute the average of the two histograms and not the sum. One can mark a histogram to be an average histogram by setting its bit kIsAverage with myhist.SetBit(TH1!kIsAverage); Note that the two histograms must have their kIsAverage bit set
 
-IMPORTANT NOTE1: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Add](@ref)
+IMPORTANT NOTE1: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Add](@ref)
 
 IMPORTANT NOTE2: if h1 has a normalisation factor, the normalisation factor is used , ie this = this + c1*factor*h1 Use the other [TH1!Add](@ref) function if you do not want this feature
 
@@ -31971,11 +32018,11 @@ The function return kFALSE if the Add operation failed
 @trydoc raw"""
     Add(this::ByRef1{TH1}, h1::ByPtr1{TF1}, c1::Float64, option::ByCopy{String})::Bool
 Performs the operation: `this = this + c1*f1` if errors are defined (see [TH1!Sumw2](@ref)), errors are also recalculated.
-By default, the function is computed at the centre of the bin. if option "I" is specified (1-d histogram only), the Int32egral of the function in each bin is used instead of the value of the function at the centre of the bin.
+By default, the function is computed at the centre of the bin. if option "I" is specified (1-d histogram only), the integral of the function in each bin is used instead of the value of the function at the centre of the bin.
 
 Only bins inside the function range are recomputed.
 
-IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Add](@ref)
+IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Add](@ref)
 
 The function return kFALSE if the Add operation failed
 """ Add(this::ByRef1{TH1}, h1::ByPtr1{TF1}, c1::Float64, option::ByCopy{String})
@@ -32020,12 +32067,12 @@ Remove all the content from the underflow and overflow bins, without changing th
 # Wrapper of Double_t TH1::ComputeIntegral(Bool_t)
 @trydoc raw"""
     ComputeIntegral(this::ByRef1{TH1}, onlyPositive::Bool)::Float64
-Compute Int32egral (normalized cumulative sum of bins) w/o under/overflows The result is stored in fIntegral and used by the GetRandom functions.
-This function is automatically called by GetRandom when the fIntegral array does not exist or when the number of entries in the histogram has changed since the previous call to GetRandom. The resulting Int32egral is normalized to 1. If the routine is called with the onlyPositive flag set an error will be produced in case of negative bin content and a NaN value returned 
+Compute integral (normalized cumulative sum of bins) w/o under/overflows The result is stored in fIntegral and used by the GetRandom functions.
+This function is automatically called by GetRandom when the fIntegral array does not exist or when the number of entries in the histogram has changed since the previous call to GetRandom. The resulting integral is normalized to 1. If the routine is called with the onlyPositive flag set an error will be produced in case of negative bin content and a NaN value returned 
 
 ###Return
 
-1 if success, 0 if Int32egral is zero, NAN if onlyPositive-test fails
+1 if success, 0 if integral is zero, NAN if onlyPositive-test fails
 """ ComputeIntegral(this::ByRef1{TH1}, onlyPositive::Bool)
 
 # Wrapper of void TH1::DirectoryAutoAdd(TDirectory *)
@@ -32052,7 +32099,7 @@ Currently, this simple model computes the distance from the mouse to the histogr
 Divide this histogram by h1.
 `this = this/h1` if errors are defined (see [TH1!Sumw2](@ref)), errors are also recalculated. Note that if h1 has Sumw2 set, Sumw2 is automatically called for this if not already set. The resulting errors are calculated assuming uncorrelated histograms. See the other [TH1!Divide](@ref) that gives the possibility to optionally compute binomial errors.
 
-IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Scale](@ref)
+IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Scale](@ref)
 
 The function return kFALSE if the divide operation failed
 """ Divide(this::ByRef1{TH1}, h1::ByConstPtr1{TH1})
@@ -32065,7 +32112,7 @@ Replace contents of this histogram by the division of h1 by h2.
 
 If errors are defined (see [TH1!Sumw2](@ref)), errors are also recalculated Note that if h1 or h2 have Sumw2 set, Sumw2 is automatically called for this if not already set. The resulting errors are calculated assuming uncorrelated histograms. However, if option ="B" is specified, Binomial errors are computed. In this case c1 and c2 do not make real sense and they are ignored.
 
-IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Divide](@ref)
+IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Divide](@ref)
 
 Please note also that in the binomial case errors are calculated using standard binomial statistics, which means when b1 = b2, the error is zero. If you prefer to have efficiency errors not going to zero when the efficiency is 1, you must use the function [TGraphAsymmErrors!BayesDivide](@ref), which will return an asymmetric and non-zero lower error for the case b1=b2.
 
@@ -32076,7 +32123,7 @@ The function return kFALSE if the divide operation failed
 @trydoc raw"""
     Divide(this::ByRef1{TH1}, f1::ByPtr1{TF1}, c1::Float64)::Bool
 Performs the operation: `this = this/(c1*f1)` if errors are defined (see [TH1!Sumw2](@ref)), errors are also recalculated.
-Only bins inside the function range are recomputed. IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Divide](@ref)
+Only bins inside the function range are recomputed. IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Divide](@ref)
 
 The function return kFALSE if the divide operation failed
 """ Divide(this::ByRef1{TH1}, f1::ByPtr1{TF1}, c1::Float64)
@@ -32123,7 +32170,7 @@ If Left button clicked on the bin top value, then the content of this bin is mod
 @trydoc raw"""
     ExtendAxis(this::ByRef1{TH1}, x::Float64, axis::ByPtr1{TAxis})::Nothing
 Histogram is resized along axis such that x is in the axis range.
-The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the extended histogram. Takes Int32o account errors (Sumw2) if any. The algorithm works for 1-d, 2-D and 3-D histograms. The axis must be extendable before invoking this function. Ex:
+The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the extended histogram. Takes into account errors (Sumw2) if any. The algorithm works for 1-d, 2-D and 3-D histograms. The axis must be extendable before invoking this function. Ex:
 
     h->GetXaxis()->SetCanExtend(kTRUE);
 
@@ -32250,12 +32297,12 @@ Fill histogram following distribution in function fname.
     : (optional) Random number generator used to sample
     
 
-The distribution contained in the function fname ([TF1](@ref)) is Int32egrated over the channel contents for the bin range of this histogram. It is normalized to 1.
+The distribution contained in the function fname ([TF1](@ref)) is integrated over the channel contents for the bin range of this histogram. It is normalized to 1.
 
 Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Fill histogram channel ntimes random numbers are generated
 
 One can also call [TF1!GetRandom](@ref) to get a random variate from a function.
@@ -32277,15 +32324,15 @@ Fill histogram following distribution in histogram h.
     : (optional) Random number generator used for sampling
     
 
-The distribution contained in the histogram h ([TH1](@ref)) is Int32egrated over the channel contents for the bin range of this histogram. It is normalized to 1.
+The distribution contained in the histogram h ([TH1](@ref)) is integrated over the channel contents for the bin range of this histogram. It is normalized to 1.
 
 Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Fill histogram channel ntimes random numbers are generated
 
-SPECIAL CASE when the target histogram has the same binning as the source. in this case we simply use a poisson distribution where the mean value per bin = bincontent/Int32egral.
+SPECIAL CASE when the target histogram has the same binning as the source. in this case we simply use a poisson distribution where the mean value per bin = bincontent/integral.
 """ FillRandom(this::ByRef1{TH1}, h::ByPtr1{TH1}, ntimes::Int32, rng::ByPtr1{TRandom})
 
 # Wrapper of Int_t TH1::FindBin(Double_t, Double_t, Double_t)
@@ -32356,7 +32403,7 @@ Here is the full list of fit options that can be given in the parameter `option`
 | "MULTI"       | Uses Loglikelihood method based on multi-nomial distribution. In this case the function must be normalized and one fits only the function shape.                                                                                                |
 | "W"           | Fit using the chi-square method and ignoring the bin uncertainties and skip empty bins.                                                                                                                                                         |
 | "WW"          | Fit using the chi-square method and ignoring the bin uncertainties and include the empty bins.                                                                                                                                                  |
-| "I"           | Uses the Int32egral of function in the bin instead of the default bin center value.                                                                                                                                                               |
+| "I"           | Uses the integral of function in the bin instead of the default bin center value.                                                                                                                                                               |
 | "F"           | Uses the default minimizer (e.g. Minuit) when fitting a linear function (e.g. polN) instead of the linear fitter.                                                                                                                               |
 | "U"           | Uses a user specified objective function (e.g. user providedlikelihood function) defined using `TVirtualFitter!SetFCN`                                                                                                                          |
 | "E"           | Performs a better parameter errors estimation using the Minos technique for all fit parameters.                                                                                                                                                 |
@@ -32407,7 +32454,7 @@ By default a chi-square (least-square) fit is performed on the histogram. The so
 
 ``Chi2 = \sum_{i}{ \left(\frac{y(i) - f(x(i) | p )}{e(i)} \right)^2 }``
 
-where `y(i)` is the bin content for each bin `i`, `x(i)` is the bin center and `e(i)` is the bin error (`sqrt(y(i)` for an un-weighted histogram). Bins with zero errors are excluded from the fit. See also later the note on the treatment of empty bins. When using option "I" the residual is computed not using the function value at the bin center, `f(x(i)|p)`, but the Int32egral of the function in the bin, Integral{ f(x|p)dx }, divided by the bin volume. When using option `P` (Pearson chi2), the expected error computed as `e(i) = sqrt(f(x(i)|p))` is used. In this case empty bins are considered in the fit. Both chi-square methods should not be used when the bin content represent counts, especially in case of low bin statistics, because they could return a biased result.
+where `y(i)` is the bin content for each bin `i`, `x(i)` is the bin center and `e(i)` is the bin error (`sqrt(y(i)` for an un-weighted histogram). Bins with zero errors are excluded from the fit. See also later the note on the treatment of empty bins. When using option "I" the residual is computed not using the function value at the bin center, `f(x(i)|p)`, but the integral of the function in the bin, Integral{ f(x|p)dx }, divided by the bin volume. When using option `P` (Pearson chi2), the expected error computed as `e(i) = sqrt(f(x(i)|p))` is used. In this case empty bins are considered in the fit. Both chi-square methods should not be used when the bin content represent counts, especially in case of low bin statistics, because they could return a biased result.
 
 ### Likelihood Fits
 
@@ -32419,7 +32466,7 @@ When using option "L" a likelihood fit is used instead of the default chi-square
 
 ``NLL = \sum_{i}{( f(x(i) | p ) + y(i)\log(y(i)/ f(x(i) | p )) - y(i)) }``
 
- By using this formulation, `2*NLL` can be Int32erpreted as the chi-square resulting from the fit.
+ By using this formulation, `2*NLL` can be interpreted as the chi-square resulting from the fit.
 
 This method should be always used when the bin content represents counts (i.e. errors are sqrt(N) ). The likelihood method has the advantage of treating correctly bins with low statistics. In case of high statistics/bin the distribution of the bin content becomes a normal distribution and the likelihood and the chi2 fit give the same result.
 
@@ -32427,7 +32474,7 @@ The likelihood method, although a bit slower, it is therefore the recommended me
 
 ### Fit Result
 
-The function returns a [TFitResultPtr](@ref) which can hold a pointer to a [TFitResult](@ref) object. By default the [TFitResultPtr](@ref) contains only the status of the fit which is return by an automatic conversion of the [TFitResultPtr](@ref) to an Int32eger. One can write in this case directly:
+The function returns a [TFitResultPtr](@ref) which can hold a pointer to a [TFitResult](@ref) object. By default the [TFitResultPtr](@ref) contains only the status of the fit which is return by an automatic conversion of the [TFitResultPtr](@ref) to an integer. One can write in this case directly:
 
     Int_t fitStatus =  h->Fit(myFunc);
 
@@ -32465,7 +32512,7 @@ One or more object ( can be added to the list of functions (fFunctions) associat
 
 ### Fit status
 
-The status of the fit is obtained converting the [TFitResultPtr](@ref) to an Int32eger independently if the fit option "S" is used or not:
+The status of the fit is obtained converting the [TFitResultPtr](@ref) to an integer independently if the fit option "S" is used or not:
 
     TFitResultPtr r = h->Fit(myFunc,opt);
     Int_t fitStatus = r;
@@ -32483,7 +32530,7 @@ The status of the fit is obtained converting the [TFitResultPtr](@ref) to an Int
 In order to fit in a sub-range of the histogram you have two options:
 
 - pass to this function the lower (`xxmin`) and upper (`xxmax`) values for the fitting range;
-- define a specific range in the fitted function and use the fitting option "R". For example, if your histogram has a defined range between -4 and 4 and you want to fit a gaussian only in the Int32erval 1 to 3, you can do:
+- define a specific range in the fitted function and use the fitting option "R". For example, if your histogram has a defined range between -4 and 4 and you want to fit a gaussian only in the interval 1 to 3, you can do:
 
     TF1 *f1 = new TF1("f1", "gaus", 1, 3);
     histo->Fit("f1", "R");
@@ -32588,7 +32635,7 @@ example: assuming 'h1' and 'h2' are already filled
 
 (C++ version of the code)
 
-then 'h3' is created and filled with the asymmetry between 'h1' and 'h2'; h1 and h2 are left Int32act.
+then 'h3' is created and filled with the asymmetry between 'h1' and 'h2'; h1 and h2 are left intact.
 
 Note that it is the user's responsibility to manage the created histogram. The name of the returned histogram will be `Asymmetry_nameOfh1-nameOfh2`
 
@@ -32600,15 +32647,15 @@ clone the histograms so top and bottom will have the correct dimensions: Sumw2 j
 # Wrapper of Int_t TH1::GetContour(Double_t *)
 @trydoc raw"""
     GetContour(this::ByRef1{TH1}, levels::ByPtr2{Float64})::Int32
-Return contour values Int32o array levels if pointer levels is non zero.
+Return contour values into array levels if pointer levels is non zero.
 The function returns the number of contour levels. see GetContourLevel to return one contour only
 """ GetContour(this::ByRef1{TH1}, levels::ByPtr2{Float64})
 
 # Wrapper of Double_t * TH1::GetIntegral()
 @trydoc raw"""
     GetIntegral(this::ByRef1{TH1})::CxxPtr2{Float64}
-Return a pointer to the array of bins Int32egral.
-if the pointer fIntegral is null, [TH1!ComputeIntegral](@ref) is called The array dimension is the number of bins in the histograms including underflow and overflow (fNCells) the last value Int32egral[fNCells] is set to the number of entries of the histogram
+Return a pointer to the array of bins integral.
+if the pointer fIntegral is null, [TH1!ComputeIntegral](@ref) is called The array dimension is the number of bins in the histograms including underflow and overflow (fNCells) the last value integral[fNCells] is set to the number of entries of the histogram
 """ GetIntegral(this::ByRef1{TH1})
 
 # Wrapper of TVirtualHistPainter * TH1::GetPainter(Option_t *)
@@ -32642,7 +32689,7 @@ code from Eddy Offermann, Renaissance
 - **`probSum`** [in] 
     array of positions where quantiles will be computed.
     
-    - if probSum is null, probSum will be computed Int32ernally and will have a size = number of bins + 1 in h. it will correspond to the quantiles calculated at the lowest edge of the histogram (quantile=0) and all the upper edges of the bins.
+    - if probSum is null, probSum will be computed internally and will have a size = number of bins + 1 in h. it will correspond to the quantiles calculated at the lowest edge of the histogram (quantile=0) and all the upper edges of the bins.
     - if probSum is not null, it is assumed to contain at least nprobSum values. 
     
     
@@ -32654,7 +32701,7 @@ code from Eddy Offermann, Renaissance
 
 value nq (<=nprobSum) with the number of quantiles computed
 
-Note that the Integral of the histogram is automatically recomputed if the number of entries is different of the number of entries when the Int32egral was computed last time. In case you do not use the Fill functions to fill your histogram, but SetBinContent, you must call [TH1!ComputeIntegral](@ref) before calling this function.
+Note that the Integral of the histogram is automatically recomputed if the number of entries is different of the number of entries when the integral was computed last time. In case you do not use the Fill functions to fill your histogram, but SetBinContent, you must call [TH1!ComputeIntegral](@ref) before calling this function.
 
 Getting quantiles q from two histograms and storing results in a [TGraph](@ref), a so-called QQ-plot
 
@@ -32807,7 +32854,7 @@ Multiply this histogram by h1.
 
 If errors of this are available ([TH1!Sumw2](@ref)), errors are recalculated. Note that if h1 has Sumw2 set, Sumw2 is automatically called for this if not already set.
 
-IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Multiply](@ref)
+IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Multiply](@ref)
 
 The function return kFALSE if the Multiply operation failed
 """ Multiply(this::ByRef1{TH1}, h1::ByConstPtr1{TH1})
@@ -32820,7 +32867,7 @@ Replace contents of this histogram by multiplication of h1 by h2.
 
 If errors of this are available ([TH1!Sumw2](@ref)), errors are recalculated. Note that if h1 or h2 have Sumw2 set, Sumw2 is automatically called for this if not already set.
 
-IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Multiply](@ref)
+IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Multiply](@ref)
 
 The function return kFALSE if the Multiply operation failed
 """ Multiply(this::ByRef1{TH1}, h1::ByConstPtr1{TH1}, h2::ByConstPtr1{TH1}, c1::Float64, c2::Float64, option::ByCopy{String})
@@ -32833,7 +32880,7 @@ Performs the operation:
 
 If errors are defined (see [TH1!Sumw2](@ref)), errors are also recalculated.
 
-Only bins inside the function range are recomputed. IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Multiply](@ref)
+Only bins inside the function range are recomputed. IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after [TH1!Multiply](@ref)
 
 The function return kFALSE if the Multiply operation failed
 """ Multiply(this::ByRef1{TH1}, f1::ByPtr1{TF1}, c1::Float64)
@@ -32862,7 +32909,7 @@ If newname is blank (default), the current histogram is modified and a pointer t
 
 If newname is not blank, the current histogram is not modified, and a new histogram is returned which is a Clone of the current histogram with its name set to newname.
 
-The parameter ngroup indicates how many bins of this have to be merged Int32o one bin of the result.
+The parameter ngroup indicates how many bins of this have to be merged into one bin of the result.
 
 If the original histogram has errors stored (via Sumw2), the resulting histograms has new errors correctly calculated.
 
@@ -32948,9 +32995,9 @@ Multiply this histogram by a constant c1.
 
 Note that both contents and errors (if any) are scaled. This function uses the services of [TH1!Add](@ref)
 
-IMPORTANT NOTE: [Sumw2()](@ref) is called automatically when scaling. If you are not Int32erested in the histogram statistics you can call Sumw2(kFALSE) or use the option "nosw2"
+IMPORTANT NOTE: [Sumw2()](@ref) is called automatically when scaling. If you are not interested in the histogram statistics you can call Sumw2(kFALSE) or use the option "nosw2"
 
-One can scale a histogram such that the bins Int32egral is equal to the normalization parameter via TH1!Scale(Double_t norm), where norm is the desired normalization divided by the Int32egral of the histogram.
+One can scale a histogram such that the bins integral is equal to the normalization parameter via TH1!Scale(Double_t norm), where norm is the desired normalization divided by the integral of the histogram.
 
 If option contains "width" the bin contents and errors are divided by the bin width.
 """ Scale(this::ByRef1{TH1}, c1::Float64, option::ByCopy{String})
@@ -33446,7 +33493,7 @@ The Covariance matrix and mean values of the input data is calculated on the fly
 
 since this is a really fast method, with no rounding errors (please refer to CERN 72-21 pp. 54-106).
 
-The data is stored Int32ernally in a `TVector{Float64}`, in the following way:
+The data is stored internally in a `TVectorD`, in the following way:
 
 ``\mathbf{x} = \left[\left(x_{0_0},\ldots,x_{{P-1}_0}\right),\ldots,
     \left(x_{0_i},\ldots,x_{{P-1}_i}\right), \ldots\right]``
@@ -33565,7 +33612,7 @@ The minimal class definition is:
 Perform the principal components analysis.
 This is done in several stages in the [TMatrix!EigenVectors](@ref) method:
 
-- Transform the covariance matrix Int32o a tridiagonal matrix.
+- Transform the covariance matrix into a tridiagonal matrix.
 - Find the eigenvalues and vectors of the tridiagonal matrix.
 """ MakePrincipals(this::ByRef1{TPrincipal})
 
@@ -33637,14 +33684,14 @@ Export element from local_ leaf buffer to a ClonesArray.
 # Wrapper of void TLeafB::FillBasket(TBuffer &)
 @trydoc raw"""
     FillBasket(this::ByRef1{TLeafB}, b::ByRef1{TBuffer})::Nothing
-Pack leaf elements Int32o Basket output buffer.
+Pack leaf elements into Basket output buffer.
 
 """ FillBasket(this::ByRef1{TLeafB}, b::ByRef1{TBuffer})
 
 # Wrapper of void TLeafB::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafB}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafB}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -33714,7 +33761,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafC::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafC}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafC}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -33777,7 +33824,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafD::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafD}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafD}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -33826,7 +33873,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafD32::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafD32}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafD32}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -33917,10 +33964,10 @@ See IMPORTANT REMARKS in [TTree!GetEntry](@ref).
 
 # Wrapper of Int_t TBranchElement::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedGetType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedGetType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of TClass * TBranchElement::GetTargetClass()
 @trydoc raw"""
@@ -33935,7 +33982,7 @@ Fill expectedClass and expectedType with information on the data type of the obj
 This method must be overridden to handle object notification (the base implementation is no-op).
 Different objects in [ROOT](@ref) use the `Notify` method for different purposes, in coordination with other objects that call this method at the appropriate time.
 
-For example, `TLeaf` uses it to load class information; `TBranchRef` to load contents of referenced branches `TBranchRef`; most notably, based on `Notify`, `TChain` implements a callback mechanism to inform Int32erested parties when it switches to a new sub-tree.
+For example, `TLeaf` uses it to load class information; `TBranchRef` to load contents of referenced branches `TBranchRef`; most notably, based on `Notify`, `TChain` implements a callback mechanism to inform interested parties when it switches to a new sub-tree.
 """ Notify(this::ByRef1{TBranchElement})
 
 # Wrapper of void TBranchElement::Reset(Option_t *)
@@ -33956,7 +34003,7 @@ Set branch address to zero and free all allocated memory.
 @trydoc raw"""
     ResetDeleteObject(this::ByRef1{TBranchElement})::Nothing
 Release ownership of any allocated objects.
-Note: This Int32erface was added so that clone trees could be told they do not own the allocated objects.
+Note: This interface was added so that clone trees could be told they do not own the allocated objects.
 """ ResetDeleteObject(this::ByRef1{TBranchElement})
 
 # Wrapper of void TBranchElement::ResetInitInfo(bool)
@@ -33977,7 +34024,7 @@ For a sub-branch, addr is a pointer to the branch object.
 
 For a top-level branch the meaning of addr is as follows:
 
-If addr is zero, then we allocate a branch object Int32ernally and the branch is the owner of the allocated object, not the caller. However the caller may obtain a pointer to the branch object with [GetObject()](@ref). The pointer is reset to zero (nullptr) when the relevant branch object is destroyed.
+If addr is zero, then we allocate a branch object internally and the branch is the owner of the allocated object, not the caller. However the caller may obtain a pointer to the branch object with [GetObject()](@ref). The pointer is reset to zero (nullptr) when the relevant branch object is destroyed.
 
 Example: 
 
@@ -34138,16 +34185,16 @@ Set offset of the object (to which the data member represented by this branch be
 # Wrapper of void TBranchElement::SetTargetClass(const char *)
 @trydoc raw"""
     SetTargetClass(this::ByRef1{TBranchElement}, name::ByCopy{String})::Nothing
-Set the name of the class of the in-memory object Int32o which the data will loaded.
+Set the name of the class of the in-memory object into which the data will loaded.
 
 """ SetTargetClass(this::ByRef1{TBranchElement}, name::ByCopy{String})
 
 # Wrapper of void TBranchElement::SetType(Int_t)
 @trydoc raw"""
-    SetType(this::ByRef1{TBranchElement}, btype::Int32)::Nothing
+    SetGetType(this::ByRef1{TBranchElement}, btype::Int32)::Nothing
 
 
-""" SetType(this::ByRef1{TBranchElement}, btype::Int32)
+""" SetGetType(this::ByRef1{TBranchElement}, btype::Int32)
 
 # Wrapper of void TBranchElement::SetupAddresses()
 @trydoc raw"""
@@ -34159,7 +34206,7 @@ This is required to be done in order for GetOffset to be correct and for GetEntr
 # Wrapper of void TBranchElement::Unroll(const char *, TClass *, TStreamerInfo *, char *, Int_t, Int_t)
 @trydoc raw"""
     Unroll(this::ByRef1{TBranchElement}, name::ByCopy{String}, cl::ByPtr1{TClass}, sinfo::ByPtr1{TStreamerInfo}, objptr::ByPtr2{Int8}, bufsize::Int32, splitlevel::Int32)::Nothing
-Split class cl Int32o sub-branches of this branch.
+Split class cl into sub-branches of this branch.
 This version of Unroll was formerly embedded in [TTree!BronchExec](@ref) It is moved here so we can make sure to call SetReadActionSequence.
 """ Unroll(this::ByRef1{TBranchElement}, name::ByCopy{String}, cl::ByPtr1{TClass}, sinfo::ByPtr1{TStreamerInfo}, objptr::ByPtr2{Int8}, bufsize::Int32, splitlevel::Int32)
 
@@ -34229,7 +34276,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafF::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafF}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafF}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -34278,7 +34325,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafF16::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafF16}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafF16}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -34320,7 +34367,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafG::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafG}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafG}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -34390,7 +34437,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafI::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafI}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafI}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -34460,7 +34507,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafL::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafL}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafL}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -34530,7 +34577,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafO::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafO}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafO}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -34656,7 +34703,7 @@ Pack leaf elements in Basket output buffer.
 # Wrapper of void TLeafS::Import(TClonesArray *, Int_t)
 @trydoc raw"""
     Import(this::ByRef1{TLeafS}, list::ByPtr1{TClonesArray}, n::Int32)::Nothing
-Import element from ClonesArray Int32o local_ leaf buffer.
+Import element from ClonesArray into local_ leaf buffer.
 
 """ Import(this::ByRef1{TLeafS}, list::ByPtr1{TClonesArray}, n::Int32)
 
@@ -34731,10 +34778,10 @@ The function returns the number of bytes read from the input buffer.
 
 # Wrapper of Int_t TBranchObject::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedGetType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedGetType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of const char * TBranchObject::GetObjClassName()
 @trydoc raw"""
@@ -34765,7 +34812,7 @@ Set the AutoDelete bit.
 This function can be used to instruct Root in [TBranchObject!ReadBasket](@ref) to not delete the object referenced by a branchobject before reading a new entry. By default, the object is deleted.
 
 - If autodel is true, this existing object will be deleted, a new object created by the default constructor, then object->Streamer called.
-- If autodel is false, the existing object is not deleted. Root assumes that the user is taking care of deleting any Int32ernal object or array This can be done in Streamer itself.
+- If autodel is false, the existing object is not deleted. Root assumes that the user is taking care of deleting any internal object or array This can be done in Streamer itself.
 - If this branch has sub-branches, the function sets autodel for these branches as well. We STRONGLY suggest to activate this option by default when you create the top level branch. This will make the read phase more efficient because it minimizes the numbers of new/delete operations. Once this option has been set and the Tree is written to a file, it is not necessary to specify the option again when reading, unless you want to set the opposite mode.
 """ SetAutoDelete(this::ByRef1{TBranchObject}, autodel::Bool)
 
@@ -34806,10 +34853,10 @@ Get entry.
 
 # Wrapper of Int_t TBranchSTL::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedGetType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedGetType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of void TBranchSTL::SetAddress(void *)
 @trydoc raw"""
@@ -34889,7 +34936,7 @@ Equivalent to [Get()](@ref).
 # Wrapper of Int_t TRandom::Binomial(Int_t, Double_t)
 @trydoc raw"""
     Binomial(this::ByRef1{TRandom}, ntot::Int32, prob::Float64)::Int32
-Generates a random Int32eger N according to the binomial law.
+Generates a random integer N according to the binomial law.
 Coded from Los Alamos report LA-5061-MS.
 
 N is binomially distributed between 0 and ntot inclusive with mean prob*ntot and prob is between 0 and 1.
@@ -34933,10 +34980,10 @@ Implementation taken from UNURAN (c) 2000 W. Hoermann & J. Leydold, Institut f. 
 
 # Wrapper of UInt_t TRandom::Integer(UInt_t)
 @trydoc raw"""
-    Integer(this::ByRef1{TRandom}, imax::UInt32)::UInt32
-Returns a random Int32eger uniformly distributed on the Int32erval [ 0, imax-1 ].
-Note that the Int32erval contains the values of 0 and imax-1 but not imax.
-""" Integer(this::ByRef1{TRandom}, imax::UInt32)
+    GetInteger(this::ByRef1{TRandom}, imax::UInt32)::UInt32
+Returns a random integer uniformly distributed on the interval [ 0, imax-1 ].
+Note that the interval contains the values of 0 and imax-1 but not imax.
+""" GetInteger(this::ByRef1{TRandom}, imax::UInt32)
 
 # Wrapper of Double_t TRandom::Landau(Double_t, Double_t)
 @trydoc raw"""
@@ -34950,10 +34997,10 @@ The Landau random number generation is implemented using the function landau_qua
 # Wrapper of ULong64_t TRandom::Poisson(Double_t)
 @trydoc raw"""
     Poisson(this::ByRef1{TRandom}, mean::Float64)::UInt64
-Generates a random Int32eger N according to a Poisson law.
+Generates a random integer N according to a Poisson law.
 Prob(N) = exp(-mean)*mean^N/Factorial(N)
 
-Use a different procedure according to the mean value. The algorithm is the same used by CLHEP. For lower value (mean < 25) use the rejection method based on the exponential. For higher values use a rejection method comparing with a Lorentzian distribution, as suggested by several authors. This routine returns now an unsigned 64 bit Int32eger For large values, larger than 1.84e+19, we print an error message advising to use the Trandom!PoissonD for such large values, and return the max value UINT64_MAX
+Use a different procedure according to the mean value. The algorithm is the same used by CLHEP. For lower value (mean < 25) use the rejection method based on the exponential. For higher values use a rejection method comparing with a Lorentzian distribution, as suggested by several authors. This routine returns now an unsigned 64 bit integer For large values, larger than 1.84e+19, we print an error message advising to use the Trandom!PoissonD for such large values, and return the max value UINT64_MAX
 """ Poisson(this::ByRef1{TRandom}, mean::Float64)
 
 # Wrapper of Double_t TRandom::PoissonD(Double_t)
@@ -34962,7 +35009,7 @@ Use a different procedure according to the mean value. The algorithm is the same
 Generates a random number according to a Poisson law.
 Prob(N) = exp(-mean)*mean^N/Factorial(N)
 
-This function is a variant of [TRandom!Poisson](@ref) returning a double instead of an Int32eger.
+This function is a variant of [TRandom!Poisson](@ref) returning a double instead of an integer.
 """ PoissonD(this::ByRef1{TRandom}, mean::Float64)
 
 # Wrapper of void TRandom::Rannor(Double_t &, Double_t &)
@@ -35031,14 +35078,14 @@ Input : r = sphere radius Output: x,y,z a random 3-d vector of length r Method: 
 # Wrapper of Double_t TRandom::Uniform(Double_t, Double_t)
 @trydoc raw"""
     Uniform(this::ByRef1{TRandom}, x1::Float64, x2::Float64)::Float64
-Returns a uniform deviate on the Int32erval (x1, x2).
+Returns a uniform deviate on the interval (x1, x2).
 
 """ Uniform(this::ByRef1{TRandom}, x1::Float64, x2::Float64)
 
 # Wrapper of Double_t TRandom::Uniform(Double_t)
 @trydoc raw"""
     Uniform(this::ByRef1{TRandom}, x1::Float64)::Float64
-Returns a uniform deviate on the Int32erval (0, x1).
+Returns a uniform deviate on the interval (0, x1).
 
 """ Uniform(this::ByRef1{TRandom}, x1::Float64)
 
@@ -35146,7 +35193,7 @@ mydir.Delete("C\\+\\+"));
 # Wrapper of void TDirectoryFile::FillBuffer(char *&)
 @trydoc raw"""
     FillBuffer(this::ByRef1{TDirectoryFile}, buffer::ByPtr2{Int8})::Nothing
-Encode directory header Int32o output buffer.
+Encode directory header into output buffer.
 
 """ FillBuffer(this::ByRef1{TDirectoryFile}, buffer::ByPtr2{Int8})
 
@@ -35277,7 +35324,7 @@ By default, only the highest cycle of a key is kept. Keys for which the "KEEP" f
 # Wrapper of void TDirectoryFile::ReadAll(Option_t *)
 @trydoc raw"""
     ReadAll(this::ByRef1{TDirectoryFile}, option::ByCopy{String})::Nothing
-Read objects from a [ROOT](@ref) file directory Int32o memory.
+Read objects from a [ROOT](@ref) file directory into memory.
 If an object is already in memory, the memory copy is deleted and the object is again read from the file. If opt=="dirs", only subdirectories will be read If opt=="dirs*" complete directory tree will be read
 """ ReadAll(this::ByRef1{TDirectoryFile}, option::ByCopy{String})
 
@@ -35287,7 +35334,7 @@ If an object is already in memory, the memory copy is deleted and the object is 
 Read the linked list of keys.
 Every directory has a linked list (fKeys). This linked list has been written on the file via WriteKeys as a single data record.
 
-It is Int32eresting to call this function in the following situation. Assume another process1 is connecting this directory in Update mode
+It is interesting to call this function in the following situation. Assume another process1 is connecting this directory in Update mode
 
 - Process1 is adding/updating objects in this directory
 - You want to see the latest status from process1. Example Process1: 
@@ -35313,7 +35360,7 @@ Example Process2:
 @trydoc raw"""
     ReadTObject(this::ByRef1{TDirectoryFile}, obj::ByPtr1{TObject}, keyname::ByCopy{String})::Int32
 Read object with keyname from the current directory.
-Read contents of object with specified name from the current directory. First the key with keyname is searched in the current directory, next the key buffer is deserialized Int32o the object. The object must have been created before via the default constructor. See [TObject!Write()](@ref).
+Read contents of object with specified name from the current directory. First the key with keyname is searched in the current directory, next the key buffer is deserialized into the object. The object must have been created before via the default constructor. See [TObject!Write()](@ref).
 """ ReadTObject(this::ByRef1{TDirectoryFile}, obj::ByPtr1{TObject}, keyname::ByCopy{String})
 
 # Wrapper of void TDirectoryFile::rmdir(const char *)
@@ -35369,7 +35416,7 @@ See also [TDirectoryFile!GetBufferSize](@ref)
 # Wrapper of void TDirectoryFile::SetTRefAction(TObject *, TObject *)
 @trydoc raw"""
     SetTRefAction(this::ByRef1{TDirectoryFile}, ref::ByPtr1{TObject}, parent::ByPtr1{TObject})::Nothing
-Find the action to be executed in the dictionary of the parent class and store the corresponding exec number Int32o fBits.
+Find the action to be executed in the dictionary of the parent class and store the corresponding exec number into fBits.
 This function searches a data member in the class of parent with an offset corresponding to this. If a comment "TEXEC:" is found in the comment field of the data member, the function stores the exec identifier of the exec statement following this keyword.
 """ SetTRefAction(this::ByRef1{TDirectoryFile}, ref::ByPtr1{TObject}, parent::ByPtr1{TObject})
 
@@ -35484,14 +35531,14 @@ Return kTRUE if this async request matches the open request specified by 'url'.
 
 """ Matches(this::ByRef1{TFileOpenHandle}, name::ByCopy{String})
 
-# Wrapper of bool TFitResult::Contour(UInt32, UInt32, TGraph *, double)
+# Wrapper of bool TFitResult::Contour(unsigned int, unsigned int, TGraph *, double)
 @trydoc raw"""
     Contour(this::ByRef1{TFitResult}, ipar::UInt32, jpar::UInt32, gr::ByPtr1{TGraph}, confLevel::Float64)::Bool
 Create a 2D contour around the minimum for the parameter ipar and jpar if a minimum does not exist or is invalid it will return false on exit a [TGraph](@ref) is filled with the contour points the number of contour points is determined by the size of the [TGraph](@ref).
 if the size is zero a default number of points = 20 is used pass optionally the confidence level, default is 0.683 it is assumed that ErrorDef() defines the right error definition (i.e 1 sigma error for one parameter). If not the confidence level are scaled to new level
 """ Contour(this::ByRef1{TFitResult}, ipar::UInt32, jpar::UInt32, gr::ByPtr1{TGraph}, confLevel::Float64)
 
-# Wrapper of bool TFitResult::Scan(UInt32, TGraph *, double, double)
+# Wrapper of bool TFitResult::Scan(unsigned int, TGraph *, double, double)
 @trydoc raw"""
     Scan(this::ByRef1{TFitResult}, ipar::UInt32, gr::ByPtr1{TGraph}, xmin::Float64, xmax::Float64)::Bool
 Scan parameter ipar between value of xmin and xmax A graph must be given which will be on return filled with the scan resul If the graph size is zero, a default size n = 40 will be used.
@@ -35575,10 +35622,10 @@ NB. You must use DrawCopy if you want to draw several times the same function in
 @trydoc raw"""
     DrawDerivative(this::ByRef1{TF1}, option::ByCopy{String})::CxxPtr1{TObject}
 Draw derivative of this function.
-An Int32ermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
+An intermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
 ```
 TGraph *g = (TGraph*)myfunc.DrawDerivative(option);
-```  The resulting graph will be drawn Int32o the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
+```  The resulting graph will be drawn into the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
 """ DrawDerivative(this::ByRef1{TF1}, option::ByCopy{String})
 
 # Wrapper of void TF1::DrawF1(Double_t, Double_t, Option_t *)
@@ -35591,20 +35638,20 @@ Draw function between xmin and xmax.
 # Wrapper of TObject * TF1::DrawIntegral(Option_t *)
 @trydoc raw"""
     DrawIntegral(this::ByRef1{TF1}, option::ByCopy{String})::CxxPtr1{TObject}
-Draw Int32egral of this function.
-An Int32ermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
+Draw integral of this function.
+An intermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
 ```
 TGraph *g = (TGraph*)myfunc.DrawIntegral(option);
-```  The resulting graph will be drawn Int32o the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
+```  The resulting graph will be drawn into the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
 """ DrawIntegral(this::ByRef1{TF1}, option::ByCopy{String})
 
 # Wrapper of Double_t TF1::EvalPar(const Double_t *, const Double_t *)
 @trydoc raw"""
     EvalPar(this::ByRef1{TF1}, x::ByConstPtr2{Float64}, params::ByConstPtr2{Float64})::Float64
 Evaluate function with given coordinates and parameters.
-Compute the value of this function at point defined by array x and current values of parameters in array params. If argument params is omitted or equal 0, the Int32ernal values of parameters (array fParams) will be used instead. For a 1-D function only x[0] must be given. In case of a multi-dimensional function, the arrays x must be filled with the corresponding number of dimensions.
+Compute the value of this function at point defined by array x and current values of parameters in array params. If argument params is omitted or equal 0, the internal values of parameters (array fParams) will be used instead. For a 1-D function only x[0] must be given. In case of a multi-dimensional function, the arrays x must be filled with the corresponding number of dimensions.
 
-WARNING. In case of an Int32erpreted function (fType=2), it is the user's responsibility to initialize the parameters via InitArgs before calling this function. InitArgs should be called at least once to specify the addresses of the arguments x and params. InitArgs should be called every time these addresses change.
+WARNING. In case of an interpreted function (fType=2), it is the user's responsibility to initialize the parameters via InitArgs before calling this function. InitArgs should be called at least once to specify the addresses of the arguments x and params. InitArgs should be called every time these addresses change.
 """ EvalPar(this::ByRef1{TF1}, x::ByConstPtr2{Float64}, params::ByConstPtr2{Float64})
 
 # Wrapper of void TF1::ExecuteEvent(Int_t, Int_t, Int_t)
@@ -35641,7 +35688,7 @@ See [TH1!Fit(TF1*, Option_t *, Option_t *, Double_t, Double_t)](@ref) for the fi
 Compute Quantiles for density distribution of this function.
 Quantile x_q of a probability distribution Function F is defined as 
 
-``F(x_{q}) = \Int32_{xmin}^{x_{q}} f dx = q with 0 <= q <= 1.``
+``F(x_{q}) = \int_{xmin}^{x_{q}} f dx = q with 0 <= q <= 1.``
 
  For instance the median $ x_{\frac{1}{2}} $ of a distribution is defined as that value of the random variable for which the distribution function equals 0.5: 
 
@@ -35680,10 +35727,10 @@ Eddy Offermann
 @trydoc raw"""
     GetRandom(this::ByRef1{TF1}, xmin::Float64, xmax::Float64, rng::ByPtr1{TRandom}, opt::ByCopy{String})::Float64
 Return a random number following this function shape in [xmin,xmax].
-The distribution contained in the function fname ([TF1](@ref)) is Int32egrated over the channel contents. It is normalized to 1. For each bin the Int32egral is approximated by a parabola. The parabola coefficients are stored as non persistent data members Getting one random number implies:
+The distribution contained in the function fname ([TF1](@ref)) is integrated over the channel contents. It is normalized to 1. For each bin the integral is approximated by a parabola. The parabola coefficients are stored as non persistent data members Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Evaluate the parabolic curve in the selected bin to find the corresponding X value.
 
 The parabolic approximation is very good as soon as the number of bins is greater than 50.
@@ -35700,12 +35747,12 @@ The parabolic approximation is very good as soon as the number of bins is greate
     (optional) random number generator pointer 
     
 - **`option`** 
-    (optional) : `LOG` or `LIN` to force the usage of a log or linear scale for computing the cumulative Int32egral table
+    (optional) : `LOG` or `LIN` to force the usage of a log or linear scale for computing the cumulative integral table
     
 
 IMPORTANT NOTE
 
-The Int32egral of the function is computed at fNpx points. If the function has sharp peaks, you should increase the number of points (SetNpx) such that the peak is correctly tabulated at several points.
+The integral of the function is computed at fNpx points. If the function has sharp peaks, you should increase the number of points (SetNpx) such that the peak is correctly tabulated at several points.
 """ GetRandom(this::ByRef1{TF1}, xmin::Float64, xmax::Float64, rng::ByPtr1{TRandom}, opt::ByCopy{String})
 
 # Wrapper of Double_t TF1::GetRandom(TRandom *, Option_t *)
@@ -35718,22 +35765,22 @@ Return a random number following this function shape.
     Random number generator. By default (or when passing a nullptr) the global_ gRandom is used 
     
 - **`option`** 
-    Option string which controls the binning used to compute the Int32egral. Default mode is automatic depending of xmax, xmin and Npx (function points). Possible values are:
+    Option string which controls the binning used to compute the integral. Default mode is automatic depending of xmax, xmin and Npx (function points). Possible values are:
     
-    - "LOG" to force usage of log scale for tabulating the Int32egral
-    - "LIN" to force usage of linear scale when tabulating the Int32egral
+    - "LOG" to force usage of log scale for tabulating the integral
+    - "LIN" to force usage of linear scale when tabulating the integral
     
     
 
-The distribution contained in the function fname ([TF1](@ref)) is Int32egrated over the channel contents. It is normalized to 1. For each bin the Int32egral is approximated by a parabola. The parabola coefficients are stored as non persistent data members Getting one random number implies:
+The distribution contained in the function fname ([TF1](@ref)) is integrated over the channel contents. It is normalized to 1. For each bin the integral is approximated by a parabola. The parabola coefficients are stored as non persistent data members Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Evaluate the parabolic curve in the selected bin to find the corresponding X value.
 
 The user can provide as optional parameter a Random number generator. By default gRandom is used
 
-If the ratio fXmax/fXmin > fNpx the Int32egral is tabulated in log scale in x A log scale for the Int32ergral is also always used if a user specifies the "LOG" option Instead if a user requestes a "LIN" option the Int32egral binning is never done in log scale whatever the fXmax/fXmin ratio is
+If the ratio fXmax/fXmin > fNpx the integral is tabulated in log scale in x A log scale for the intergral is also always used if a user specifies the "LOG" option Instead if a user requestes a "LIN" option the integral binning is never done in log scale whatever the fXmax/fXmin ratio is
 
 Note that the parabolic approximation is very good as soon as the number of bins is greater than 50.
 """ GetRandom(this::ByRef1{TF1}, rng::ByPtr1{TRandom}, opt::ByCopy{String})
@@ -35804,7 +35851,7 @@ Initialize parameters addresses.
 # Wrapper of Double_t TF1::Integral(Double_t, Double_t, Double_t)
 @trydoc raw"""
     Integral(this::ByRef1{TF1}, a::Float64, b::Float64, epsrel::Float64)::Float64
-IntegralOneDim or analytical Int32egral.
+IntegralOneDim or analytical integral.
 
 """ Integral(this::ByRef1{TF1}, a::Float64, b::Float64, epsrel::Float64)
 
@@ -35812,7 +35859,7 @@ IntegralOneDim or analytical Int32egral.
 @trydoc raw"""
     IntegralError(this::ByRef1{TF1}, a::Float64, b::Float64, params::ByConstPtr2{Float64}, covmat::ByConstPtr2{Float64}, epsilon::Float64)::Float64
 Return Error on Integral of a parametric function between a and b due to the parameter uncertainties and their covariance matrix from the fit.
-In addition to the Int32egral limits, this method takes as input a pointer to the fitted parameter values and a pointer the covariance matrix from the fit. These pointers should be retrieved from the previously performed fit using the [TFitResult](@ref) class. Note that to get the [TFitResult](@ref), te fit should be done using the fit option `S`. Example: 
+In addition to the integral limits, this method takes as input a pointer to the fitted parameter values and a pointer the covariance matrix from the fit. These pointers should be retrieved from the previously performed fit using the [TFitResult](@ref) class. Note that to get the [TFitResult](@ref), te fit should be done using the fit option `S`. Example: 
 
     TFitResultPtr r = histo->Fit(func, "S");
     func->IntegralError(x1,x2,r->GetParams(), r->GetCovarianceMatrix()->GetMatrixArray() );
@@ -35821,7 +35868,7 @@ In addition to the Int32egral limits, this method takes as input a pointer to th
 
 IMPORTANT NOTE1:
 
-A null pointer to the parameter values vector and to the covariance matrix can be passed. In this case, when the parameter values pointer is null, the parameter values stored in this [TF1](@ref) function object are used in the Int32egral error computation. When the poassed pointer to the covariance matrix is null, a covariance matrix from the last fit is retrieved from a global_ fitter instance when it exists. Note that the global_ fitter instance esists only when [ROOT](@ref) is not running with multi-threading enabled ([ROOT!IsImplicitMTEnabled()](@ref) == True). When the ovariance matrix from the last fit cannot be retrieved, an error message is printed and a zero value is returned.
+A null pointer to the parameter values vector and to the covariance matrix can be passed. In this case, when the parameter values pointer is null, the parameter values stored in this [TF1](@ref) function object are used in the integral error computation. When the poassed pointer to the covariance matrix is null, a covariance matrix from the last fit is retrieved from a global_ fitter instance when it exists. Note that the global_ fitter instance esists only when [ROOT](@ref) is not running with multi-threading enabled ([ROOT!IsImplicitMTEnabled()](@ref) == True). When the ovariance matrix from the last fit cannot be retrieved, an error message is printed and a zero value is returned.
 
 IMPORTANT NOTE2:
 
@@ -35836,9 +35883,9 @@ The user must pass a pointer to the elements of the full covariance matrix dimen
 @trydoc raw"""
     IntegralError(this::ByRef1{TF1}, n::Int32, a::ByConstPtr2{Float64}, b::ByConstPtr2{Float64}, params::ByConstPtr2{Float64}, covmat::ByConstPtr2{Float64}, epsilon::Float64)::Float64
 Return Error on Integral of a parametric function with dimension larger than one between a[] and b[] due to the parameters uncertainties.
-For a [TF1](@ref) with dimension larger than 1 (for example a [TF2](@ref) or [TF3](@ref)) [TF1!IntegralMultiple](@ref) is used for the Int32egral calculation
+For a [TF1](@ref) with dimension larger than 1 (for example a [TF2](@ref) or [TF3](@ref)) [TF1!IntegralMultiple](@ref) is used for the integral calculation
 
-In addition to the Int32egral limits, this method takes as input a pointer to the fitted parameter values and a pointer the covariance matrix from the fit. These pointers should be retrieved from the previously performed fit using the [TFitResult](@ref) class. Note that to get the [TFitResult](@ref), te fit should be done using the fit option `S`. Example: 
+In addition to the integral limits, this method takes as input a pointer to the fitted parameter values and a pointer the covariance matrix from the fit. These pointers should be retrieved from the previously performed fit using the [TFitResult](@ref) class. Note that to get the [TFitResult](@ref), te fit should be done using the fit option `S`. Example: 
 
     TFitResultPtr r = histo2d->Fit(func2, "S");
     func2->IntegralError(a,b,r->GetParams(), r->GetCovarianceMatrix()->GetMatrixArray() );
@@ -35847,7 +35894,7 @@ In addition to the Int32egral limits, this method takes as input a pointer to th
 
 IMPORTANT NOTE1:
 
-A null pointer to the parameter values vector and to the covariance matrix can be passed. In this case, when the parameter values pointer is null, the parameter values stored in this [TF1](@ref) function object are used in the Int32egral error computation. When the poassed pointer to the covariance matrix is null, a covariance matrix from the last fit is retrieved from a global_ fitter instance when it exists. Note that the global_ fitter instance esists only when [ROOT](@ref) is not running with multi-threading enabled ([ROOT!IsImplicitMTEnabled()](@ref) == True). When the ovariance matrix from the last fit cannot be retrieved, an error message is printed and a zero value is returned.
+A null pointer to the parameter values vector and to the covariance matrix can be passed. In this case, when the parameter values pointer is null, the parameter values stored in this [TF1](@ref) function object are used in the integral error computation. When the poassed pointer to the covariance matrix is null, a covariance matrix from the last fit is retrieved from a global_ fitter instance when it exists. Note that the global_ fitter instance esists only when [ROOT](@ref) is not running with multi-threading enabled ([ROOT!IsImplicitMTEnabled()](@ref) == True). When the ovariance matrix from the last fit cannot be retrieved, an error message is printed and a zero value is returned.
 
 IMPORTANT NOTE2:
 
@@ -35861,7 +35908,7 @@ The user must pass a pointer to the elements of the full covariance matrix dimen
 # Wrapper of Double_t TF1::IntegralFast(Int_t, Double_t *, Double_t *, Double_t, Double_t, Double_t *, Double_t)
 @trydoc raw"""
     IntegralFast(this::ByRef1{TF1}, num::Int32, x::ByPtr2{Float64}, w::ByPtr2{Float64}, a::Float64, b::Float64, params::ByPtr2{Float64}, epsilon::Float64)::Float64
-Gauss-Legendre Int32egral, see CalcGaussLegendreSamplingPoints.
+Gauss-Legendre integral, see CalcGaussLegendreSamplingPoints.
 
 """ IntegralFast(this::ByRef1{TF1}, num::Int32, x::ByPtr2{Float64}, w::ByPtr2{Float64}, a::Float64, b::Float64, params::ByPtr2{Float64}, epsilon::Float64)
 
@@ -35869,25 +35916,25 @@ Gauss-Legendre Int32egral, see CalcGaussLegendreSamplingPoints.
 @trydoc raw"""
     IntegralMultiple(this::ByRef1{TF1}, n::Int32, a::ByConstPtr2{Float64}, b::ByConstPtr2{Float64}, epsrel::Float64, relerr::ByRef2{Float64})::Float64
 See more general prototype below.
-This Int32erface kept for back compatibility It is recommended to use the other Int32erface where one can specify also epsabs and the maximum number of points
+This interface kept for back compatibility It is recommended to use the other interface where one can specify also epsabs and the maximum number of points
 """ IntegralMultiple(this::ByRef1{TF1}, n::Int32, a::ByConstPtr2{Float64}, b::ByConstPtr2{Float64}, epsrel::Float64, relerr::ByRef2{Float64})
 
 # Wrapper of Double_t TF1::IntegralMultiple(Int_t, const Double_t *, const Double_t *, Int_t, Double_t, Double_t, Double_t &, Int_t &, Int_t &)
 @trydoc raw"""
     IntegralMultiple(this::ByRef1{TF1}, n::Int32, a::ByConstPtr2{Float64}, b::ByConstPtr2{Float64}, maxpts::Int32, epsrel::Float64, epsabs::Float64, relerr::ByRef2{Float64}, nfnevl::ByRef2{Int32}, ifail::ByRef2{Int32})::Float64
-This function computes, to an attempted specified accuracy, the value of the Int32egral.
+This function computes, to an attempted specified accuracy, the value of the integral.
 ## Arguments
 
 - **`n`** [in], **`a`** [in], **`b`** [in], **`maxpts`** [in], **`epsrel`** [in], **`epsabs`** [in], **`relerr`** [out], **`nfnevl`** [out], **`ifail`** [out] 
     Number of dimensions [2,15] 
     . 
-    One-dimensional arrays of length >= N . On entry A[i], and B[i], contain the lower and upper limits of Int32egration, respectively. 
+    One-dimensional arrays of length >= N . On entry A[i], and B[i], contain the lower and upper limits of integration, respectively. 
     . 
     Maximum number of function evaluations to be allowed. maxpts >= 2^n +2*n*(n+1) +1 if maxpts<minpts, maxpts is set to 10*minpts 
     . 
     Specified relative accuracy. 
     . 
-    Specified absolute accuracy. The Int32egration algorithm will attempt to reach either the relative or the absolute accuracy. In case the maximum function called is reached the algorithm will stop earlier without having reached the desired accuracy
+    Specified absolute accuracy. The integration algorithm will attempt to reach either the relative or the absolute accuracy. In case the maximum function called is reached the algorithm will stop earlier without having reached the desired accuracy
     . 
     Contains, on exit, an estimation of the relative accuracy of the result. 
     . 
@@ -35905,7 +35952,7 @@ Method:
 
 The default method used is the Genz-Mallik adaptive multidimensional algorithm using the class [ROOT!Math!AdaptiveIntegratorMultiDim](@ref) (see the reference documentation of the class)
 
-Other methods can be used by setting [ROOT!Math!IntegratorMultiDimOptions!SetDefaultIntegrator()](@ref) to different Int32egrators. Other possible Int32egrators are MC Int32egrators based on the [ROOT!Math!GSLMCIntegrator](@ref) class Possible methods are : Vegas, Miser or Plain IN case of MC Int32egration the accuracy is determined by the number of function calls, one should be careful not to use a too large value of maxpts
+Other methods can be used by setting [ROOT!Math!IntegratorMultiDimOptions!SetDefaultIntegrator()](@ref) to different integrators. Other possible integrators are MC integrators based on the [ROOT!Math!GSLMCIntegrator](@ref) class Possible methods are : Vegas, Miser or Plain IN case of MC integration the accuracy is determined by the number of function calls, one should be careful not to use a too large value of maxpts
 """ IntegralMultiple(this::ByRef1{TF1}, n::Int32, a::ByConstPtr2{Float64}, b::ByConstPtr2{Float64}, maxpts::Int32, epsrel::Float64, epsabs::Float64, relerr::ByRef2{Float64}, nfnevl::ByRef2{Int32}, ifail::ByRef2{Int32})
 
 # Wrapper of Double_t TF1::IntegralMultiple(Int_t, const Double_t *, const Double_t *, Int_t, Int_t, Double_t, Double_t &, Int_t &, Int_t &)
@@ -35919,7 +35966,7 @@ Other methods can be used by setting [ROOT!Math!IntegratorMultiDimOptions!SetDef
 @trydoc raw"""
     IntegralOneDim(this::ByRef1{TF1}, a::Float64, b::Float64, epsrel::Float64, epsabs::Float64, err::ByRef2{Float64})::Float64
 Return Integral of function between a and b using the given parameter values and relative and absolute tolerance.
-The default Int32egrator defined in [ROOT!Math!IntegratorOneDimOptions!DefaultIntegrator()](@ref) is used If [ROOT](@ref) contains the MathMore library the default Int32egrator is set to be the adaptive [ROOT!Math!GSLIntegrator](@ref) (based on QUADPACK) or otherwise the [ROOT!Math!GaussIntegrator](@ref) is used See the reference documentation of these classes for more information about the Int32egration algorithms To change Int32egration algorithm just do : ROOT!Math!IntegratorOneDimOptions!SetDefaultIntegrator(IntegratorName); Valid Int32egrator names are:
+The default integrator defined in [ROOT!Math!IntegratorOneDimOptions!DefaultIntegrator()](@ref) is used If [ROOT](@ref) contains the MathMore library the default integrator is set to be the adaptive [ROOT!Math!GSLIntegrator](@ref) (based on QUADPACK) or otherwise the [ROOT!Math!GaussIntegrator](@ref) is used See the reference documentation of these classes for more information about the integration algorithms To change integration algorithm just do : ROOT!Math!IntegratorOneDimOptions!SetDefaultIntegrator(IntegratorName); Valid integrator names are:
 
 - Gauss : for [ROOT!Math!GaussIntegrator](@ref)
 - GaussLegendre : for [ROOT!Math!GaussLegendreIntegrator](@ref)
@@ -35927,11 +35974,11 @@ The default Int32egrator defined in [ROOT!Math!IntegratorOneDimOptions!DefaultIn
 - AdaptiveSingular : for [ROOT!Math!GSLIntegrator](@ref) adaptive singular method (QAGS)
 - NonAdaptive : for [ROOT!Math!GSLIntegrator](@ref) non adaptive (QNG)
 
-In order to use the GSL Int32egrators one needs to have the MathMore library installed
+In order to use the GSL integrators one needs to have the MathMore library installed
 
 Note 1:
 
-Values of the function [f(x)](@ref) at the Int32erval theend-points A and B are not required. The subprogram may therefore be used when these values are undefined.
+Values of the function [f(x)](@ref) at the interval theend-points A and B are not required. The subprogram may therefore be used when these values are undefined.
 
 Note 2:
 
@@ -35940,8 +35987,8 @@ Instead of [TF1!Integral](@ref), you may want to use the combination of [TF1!Cal
     void gint() {
        TF1 *g = new TF1("g","gaus",-5,5);
        g->SetParameters(1,0,1);
-       //default gaus Int32egration method uses 6 points
-       //not suitable to Int32egrate on a large domain
+       //default gaus integration method uses 6 points
+       //not suitable to integrate on a large domain
        double r1 = g->Integral(0,5);
        double r2 = g->Integral(0,1000);
        //try with user directives computing more points
@@ -36295,7 +36342,7 @@ If graph capacity is less than newsize points then make array sizes equal to lea
 @trydoc raw"""
     Fit(this::ByRef1{TGraph}, formula::ByCopy{String}, option::ByCopy{String}, goption::ByCopy{String}, xmin::Float64, xmax::Float64)::ByCopy{TFitResultPtr}
 Fit this graph with function with name `fname`.
-This is a different Int32erface to [TGraph](@ref) fitting using [TGraph!Fit(TF1 *f1,Option_t *, Option_t *, Axis_t, Axis_t)](@ref) See there for the details about fitting a [TGraph](@ref).
+This is a different interface to [TGraph](@ref) fitting using [TGraph!Fit(TF1 *f1,Option_t *, Option_t *, Axis_t, Axis_t)](@ref) See there for the details about fitting a [TGraph](@ref).
 
 The parameter `fname` is the name of an already predefined function created by [TF1](@ref) or [TF2](@ref) Predefined functions such as gaus, expo and poln are automatically created by [ROOT](@ref).
 
@@ -36376,7 +36423,7 @@ TF1 *f1 = new TF1("f1", "x++sin(x)", xmin, xmax);
 1. By using the "effective variance" method a simple linear regression becomes a non-linear case, which takes several iterations instead of 0 as in the linear case.
 2. The effective variance technique assumes that there is no correlation between the x and y coordinate.
 3. The standard chi2 (least square) method without error in the coordinates (x) can be forced by using option "EX0"
-4. The linear fitter doesn't take Int32o account the errors in x. When fitting a [TGraphErrors](@ref) with a linear functions the errors in x will not be considered. If errors in x are important, use option "F" for linear function fitting.
+4. The linear fitter doesn't take into account the errors in x. When fitting a [TGraphErrors](@ref) with a linear functions the errors in x will not be considered. If errors in x are important, use option "F" for linear function fitting.
 5. When fitting a [TGraph](@ref) (i.e. no errors associated with each point), a correction is applied to the errors on the parameters with the following formula: `parameter_error *= sqrt(chisquare/(ndf-1))`
 
 ### General Fitting documentation
@@ -36667,7 +36714,7 @@ Set current style settings in this graph This function is called when either [TC
 @trydoc raw"""
     Zero(this::ByRef1{TGraph}, k::ByRef2{Int32}, AZ::Float64, BZ::Float64, E2::Float64, X::ByRef2{Float64}, Y::ByRef2{Float64}, maxiterations::Int32)::Nothing
 Find zero of a continuous function.
-This function finds a real zero of the continuous real function Y(X) in a given Int32erval (A,B). See accompanying notes for details of the argument list and calling sequence
+This function finds a real zero of the continuous real function Y(X) in a given interval (A,B). See accompanying notes for details of the argument list and calling sequence
 """ Zero(this::ByRef1{TGraph}, k::ByRef2{Int32}, AZ::Float64, BZ::Float64, E2::Float64, X::ByRef2{Float64}, Y::ByRef2{Float64}, maxiterations::Int32)
 
 # Wrapper of void TGraph2D::AddPoint(Double_t, Double_t, Double_t)
@@ -36721,7 +36768,7 @@ Specific drawing options can be used to paint a [TGraph2D](@ref):
 
 A [TGraph2D](@ref) can be also drawn with ANY options valid to draw a 2D histogram.
 
-When a [TGraph2D](@ref) is drawn with one of the 2D histogram drawing option, a Int32ermediate 2D histogram is filled using the Delaunay triangles technique to Int32erpolate the data set.
+When a [TGraph2D](@ref) is drawn with one of the 2D histogram drawing option, a intermediate 2D histogram is filled using the Delaunay triangles technique to interpolate the data set.
 """ Draw(this::ByRef1{TGraph2D}, option::ByCopy{String})
 
 # Wrapper of void TGraph2D::ExecuteEvent(Int_t, Int_t, Int_t)
@@ -36765,17 +36812,17 @@ A contour level may consist in several parts not connected to each other. This f
 @trydoc raw"""
     GetHistogram(this::ByRef1{TGraph2D}, option::ByCopy{String})::CxxPtr1{TH2D}
 By default returns a pointer to the Delaunay histogram.
-If fHistogram doesn't exist, books the 2D histogram fHistogram with a margin around the hull. Calls [TGraphDelaunay!Interpolate](@ref) at each bin centre to build up an Int32erpolated 2D histogram.
+If fHistogram doesn't exist, books the 2D histogram fHistogram with a margin around the hull. Calls [TGraphDelaunay!Interpolate](@ref) at each bin centre to build up an interpolated 2D histogram.
 
 If the "empty" option is selected, returns an empty histogram booked with the limits of fX, fY and fZ. This option is used when the data set is drawn with markers only. In that particular case there is no need to find the Delaunay triangles.
 
-By default use the new Int32erpolation routine based on Triangles If the option "old" the old Int32erpolation is used
+By default use the new interpolation routine based on Triangles If the option "old" the old interpolation is used
 """ GetHistogram(this::ByRef1{TGraph2D}, option::ByCopy{String})
 
 # Wrapper of Double_t TGraph2D::Interpolate(Double_t, Double_t)
 @trydoc raw"""
     Interpolate(this::ByRef1{TGraph2D}, x::Float64, y::Float64)::Float64
-Finds the z value at the position (x,y) thanks to the Delaunay Int32erpolation.
+Finds the z value at the position (x,y) thanks to the Delaunay interpolation.
 
 """ Interpolate(this::ByRef1{TGraph2D}, x::Float64, y::Float64)
 
@@ -36835,13 +36882,13 @@ If the 2D graph needs to be save in a [TFile](@ref) the following set should be 
 6. Call g->SetHistogram(h) again
 7. Carry on as normal
 
-By default use the new Int32erpolation routine based on Triangles If the option "old" the old Int32erpolation is used
+By default use the new interpolation routine based on Triangles If the option "old" the old interpolation is used
 """ SetHistogram(this::ByRef1{TGraph2D}, h::ByPtr1{TH2}, option::ByCopy{String})
 
 # Wrapper of void TGraph2D::SetMargin(Double_t)
 @trydoc raw"""
     SetMargin(this::ByRef1{TGraph2D}, m::Float64)::Nothing
-Sets the extra space (in %) around Int32erpolated area for the 2D histogram.
+Sets the extra space (in %) around interpolated area for the 2D histogram.
 
 """ SetMargin(this::ByRef1{TGraph2D}, m::Float64)
 
@@ -37029,10 +37076,10 @@ Set modified label size.
 
 # Wrapper of void TAxisModLab::SetText(TString)
 @trydoc raw"""
-    SetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})::Nothing
+    SetGetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})::Nothing
 Set modified label text.
 
-""" SetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})
+""" SetGetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})
 
 # Wrapper of void TVirtualFitter::Clear(Option_t *)
 @trydoc raw"""
@@ -37058,14 +37105,14 @@ Set name and title to empty strings ("").
 # Wrapper of void TVirtualFitter::GetConfidenceIntervals(Int_t, Int_t, const Double_t *, Double_t *, Double_t)
 @trydoc raw"""
     GetConfidenceIntervals(this::ByRef1{TVirtualFitter}, n::Int32, ndim::Int32, x::ByConstPtr2{Float64}, ci::ByPtr2{Float64}, cl::Float64)::Nothing
-return confidence Int32ervals in array x of dimension ndim implemented in [TFitter](@ref) and [TLinearFitter](@ref)
+return confidence intervals in array x of dimension ndim implemented in [TFitter](@ref) and [TLinearFitter](@ref)
 
 """ GetConfidenceIntervals(this::ByRef1{TVirtualFitter}, n::Int32, ndim::Int32, x::ByConstPtr2{Float64}, ci::ByPtr2{Float64}, cl::Float64)
 
 # Wrapper of void TVirtualFitter::GetConfidenceIntervals(TObject *, Double_t)
 @trydoc raw"""
     GetConfidenceIntervals(this::ByRef1{TVirtualFitter}, obj::ByPtr1{TObject}, cl::Float64)::Nothing
-return confidence Int32ervals in [TObject](@ref) obj implemented in [TFitter](@ref) and [TLinearFitter](@ref)
+return confidence intervals in [TObject](@ref) obj implemented in [TFitter](@ref) and [TLinearFitter](@ref)
 
 """ GetConfidenceIntervals(this::ByRef1{TVirtualFitter}, obj::ByPtr1{TObject}, cl::Float64)
 
@@ -37174,7 +37221,7 @@ Clear resources for consecutive fits.
 
 """ Clear(this::ByRef1{TBackCompFitter}, option::ByCopy{String})
 
-# Wrapper of bool TBackCompFitter::Contour(UInt32, UInt32, TGraph *, double)
+# Wrapper of bool TBackCompFitter::Contour(unsigned int, unsigned int, TGraph *, double)
 @trydoc raw"""
     Contour(this::ByRef1{TBackCompFitter}, ipar::UInt32, jpar::UInt32, gr::ByPtr1{TGraph}, confLevel::Float64)::Bool
 Create a 2D contour around the minimum for the parameter ipar and jpar if a minimum does not exist or is invalid it will return false on exit a [TGraph](@ref) is filled with the contour points the number of contour points is determined by the size of the [TGraph](@ref).
@@ -37184,7 +37231,7 @@ if the size is zero a default number of points = 20 is used pass optionally the 
 # Wrapper of Int_t TBackCompFitter::ExecuteCommand(const char *, Double_t *, Int_t)
 @trydoc raw"""
     ExecuteCommand(this::ByRef1{TBackCompFitter}, command::ByCopy{String}, args::ByPtr2{Float64}, nargs::Int32)::Int32
-Execute the command (Fortran Minuit compatible Int32erface)
+Execute the command (Fortran Minuit compatible interface)
 
 """ ExecuteCommand(this::ByRef1{TBackCompFitter}, command::ByCopy{String}, args::ByPtr2{Float64}, nargs::Int32)
 
@@ -37198,7 +37245,7 @@ Fix the parameter.
 # Wrapper of void TBackCompFitter::GetConfidenceIntervals(Int_t, Int_t, const Double_t *, Double_t *, Double_t)
 @trydoc raw"""
     GetConfidenceIntervals(this::ByRef1{TBackCompFitter}, n::Int32, ndim::Int32, x::ByConstPtr2{Float64}, ci::ByPtr2{Float64}, cl::Float64)::Nothing
-Computes point-by-point confidence Int32ervals for the fitted function.
+Computes point-by-point confidence intervals for the fitted function.
 ## Arguments
 
 - **`n`** 
@@ -37208,23 +37255,23 @@ Computes point-by-point confidence Int32ervals for the fitted function.
     dimensions of points 
     
 - **`x`** 
-    points, at which to compute the Int32ervals, for ndim > 1 should be in order: (x0,y0, x1, y1, ... xn, yn) 
+    points, at which to compute the intervals, for ndim > 1 should be in order: (x0,y0, x1, y1, ... xn, yn) 
     
 - **`ci`** 
-    computed Int32ervals are returned in this array 
+    computed intervals are returned in this array 
     
 - **`cl`** 
     confidence level, default=0.95
     
 
-NOTE, that the Int32ervals are approximate for nonlinear(in parameters) models
+NOTE, that the intervals are approximate for nonlinear(in parameters) models
 """ GetConfidenceIntervals(this::ByRef1{TBackCompFitter}, n::Int32, ndim::Int32, x::ByConstPtr2{Float64}, ci::ByPtr2{Float64}, cl::Float64)
 
 # Wrapper of void TBackCompFitter::GetConfidenceIntervals(TObject *, Double_t)
 @trydoc raw"""
     GetConfidenceIntervals(this::ByRef1{TBackCompFitter}, obj::ByPtr1{TObject}, cl::Float64)::Nothing
-Computes confidence Int32ervals at level cl.
-Default is 0.95 The [TObject](@ref) parameter can be a [TGraphErrors](@ref), a [TGraph2DErrors](@ref) or a [TH1](@ref),2,3. For Graphs, confidence Int32ervals are computed for each point, the value of the graph at that point is set to the function value at that point, and the graph y-errors (or z-errors) are set to the value of the confidence Int32erval at that point. For Histograms, confidence Int32ervals are computed for each bin center The bin content of this bin is then set to the function value at the bin center, and the bin error is set to the confidence Int32erval value. NOTE: confidence Int32ervals are approximate for nonlinear models!
+Computes confidence intervals at level cl.
+Default is 0.95 The [TObject](@ref) parameter can be a [TGraphErrors](@ref), a [TGraph2DErrors](@ref) or a [TH1](@ref),2,3. For Graphs, confidence intervals are computed for each point, the value of the graph at that point is set to the function value at that point, and the graph y-errors (or z-errors) are set to the value of the confidence interval at that point. For Histograms, confidence intervals are computed for each bin center The bin content of this bin is then set to the function value at the bin center, and the bin error is set to the confidence interval value. NOTE: confidence intervals are approximate for nonlinear models!
 
 Allowed combinations:
 
@@ -37260,7 +37307,7 @@ Release a fit parameter.
 
 """ ReleaseParameter(this::ByRef1{TBackCompFitter}, ipar::Int32)
 
-# Wrapper of bool TBackCompFitter::Scan(UInt32, TGraph *, double, double)
+# Wrapper of bool TBackCompFitter::Scan(unsigned int, TGraph *, double, double)
 @trydoc raw"""
     Scan(this::ByRef1{TBackCompFitter}, ipar::UInt32, gr::ByPtr1{TGraph}, xmin::Float64, xmax::Float64)::Bool
 Scan parameter ipar between value of xmin and xmax A graph must be given which will be on return filled with the scan resul If the graph size is zero, a default size n = 40 will be used.
@@ -37277,7 +37324,7 @@ According to the method the appropriate FCN function will be created
 # Wrapper of void TBackCompFitter::SetMethodCall(TMethodCall *)
 @trydoc raw"""
     SetMethodCall(this::ByRef1{TBackCompFitter}, m::ByPtr1{TMethodCall})::Nothing
-For using Int32erpreted function passed by the user.
+For using interpreted function passed by the user.
 
 """ SetMethodCall(this::ByRef1{TBackCompFitter}, m::ByPtr1{TMethodCall})
 
@@ -37320,7 +37367,7 @@ Initialize with a new set of inputs.
 # Wrapper of void TBinomialEfficiencyFitter::SetPrecision(Double_t)
 @trydoc raw"""
     SetPrecision(this::ByRef1{TBinomialEfficiencyFitter}, epsilon::Float64)::Nothing
-Set the required Int32egration precision, see [TF1!Integral()](@ref)
+Set the required integration precision, see [TF1!Integral()](@ref)
 """ SetPrecision(this::ByRef1{TBinomialEfficiencyFitter}, epsilon::Float64)
 
 # Wrapper of void TConfidenceLevel::Draw(const Option_t *)
@@ -37429,7 +37476,7 @@ Draws the current [TEfficiency](@ref) object.
 
 Specific [TEfficiency](@ref) drawing options:
 
-- E0 - plot bins where the total number of passed events is zero (the error Int32erval will be [0,1] )
+- E0 - plot bins where the total number of passed events is zero (the error interval will be [0,1] )
 """ Draw(this::ByRef1{TEfficiency}, opt::ByCopy{String})
 
 # Wrapper of void TEfficiency::ExecuteEvent(Int_t, Int_t, Int_t)
@@ -37660,7 +37707,7 @@ Notes: - If the given directory is 0, the [TEfficiency](@ref) object does not be
 @trydoc raw"""
     SetName(this::ByRef1{TEfficiency}, name::ByCopy{String})::Nothing
 Sets the name.
-Note: The names of the Int32ernal histograms are set to "name + _total" and "name + _passed" respectively.
+Note: The names of the internal histograms are set to "name + _total" and "name + _passed" respectively.
 """ SetName(this::ByRef1{TEfficiency}, name::ByCopy{String})
 
 # Wrapper of Bool_t TEfficiency::SetPassedEvents(Int_t, Int_t)
@@ -37676,7 +37723,7 @@ Note: - requires: 0 <= events <= fTotalHistogram->GetBinContent(bin)
 @trydoc raw"""
     SetPassedHistogram(this::ByRef1{TEfficiency}, rPassed::ByConstRef1{TH1}, opt::ByCopy{String})::Bool
 Sets the histogram containing the passed events.
-The given histogram is cloned and stored Int32ernally as histogram containing the passed events. The given histogram has to be consistent with the current fTotalHistogram (see CheckConsistency(const TH1&,const TH1&)). The method returns whether the fPassedHistogram has been replaced (true) or not (false).
+The given histogram is cloned and stored internally as histogram containing the passed events. The given histogram has to be consistent with the current fTotalHistogram (see CheckConsistency(const TH1&,const TH1&)). The method returns whether the fPassedHistogram has been replaced (true) or not (false).
 
 Note: The list of associated functions fFunctions is cleared.
 
@@ -37712,7 +37759,7 @@ Option:
 Sets the title.
 Notes:
 
-- The titles of the Int32ernal histograms are set to "title + (total)" or "title + (passed)" respectively.
+- The titles of the internal histograms are set to "title + (total)" or "title + (passed)" respectively.
 - It is possible to label the axis of the histograms as usual (see [TH1!SetTitle](@ref)).
 
 Example: Setting the title to "My Efficiency" and label the axis pEff->SetTitle("My Efficiency;x label;eff");
@@ -37731,7 +37778,7 @@ Note: - requires: fPassedHistogram->GetBinContent(bin) <= events
 @trydoc raw"""
     SetTotalHistogram(this::ByRef1{TEfficiency}, rTotal::ByConstRef1{TH1}, opt::ByCopy{String})::Bool
 Sets the histogram containing all events.
-The given histogram is cloned and stored Int32ernally as histogram containing all events. The given histogram has to be consistent with the current fPassedHistogram (see CheckConsistency(const TH1&,const TH1&)). The method returns whether the fTotalHistogram has been replaced (true) or not (false).
+The given histogram is cloned and stored internally as histogram containing all events. The given histogram has to be consistent with the current fPassedHistogram (see CheckConsistency(const TH1&,const TH1&)). The method returns whether the fTotalHistogram has been replaced (true) or not (false).
 
 Note: The list of associated functions fFunctions is cleared.
 
@@ -37792,11 +37839,11 @@ If the denominator becomes 0 or pass > total, the corresponding bin is skipped.
 
 ### 2) calculating ratios of two Poisson means (option 'pois'):
 
-The two histograms are Int32erpreted as independent Poisson processes and the ratio 
+The two histograms are interpreted as independent Poisson processes and the ratio 
 
 ``\tau = \frac{n_{1}}{n_{2}} = \frac{\varepsilon}{1 - \varepsilon}``
 
- with $\varepsilon = \frac{n_{1}}{n_{1} + n_{2}}$. The histogram 'pass' is Int32erpreted as $n_{1}$ and the total histogram is used for $n_{2}$.
+ with $\varepsilon = \frac{n_{1}}{n_{1} + n_{2}}$. The histogram 'pass' is interpreted as $n_{1}$ and the total histogram is used for $n_{2}$.
 
 The (asymmetric) uncertainties of the Poisson ratio are linked to the uncertainties of efficiency by a parameter transformation: 
 
@@ -37808,20 +37855,20 @@ Options:
 
 - v : verbose mode: prints information about the number of used bins and calculated efficiencies with their errors
 - cl=x : determine the used confidence level (0<x<1) (default is 0.683)
-- cp : Clopper-Pearson Int32erval (see [TEfficiency!ClopperPearson](@ref))
-- w : Wilson Int32erval (see [TEfficiency!Wilson](@ref))
+- cp : Clopper-Pearson interval (see [TEfficiency!ClopperPearson](@ref))
+- w : Wilson interval (see [TEfficiency!Wilson](@ref))
 - n : normal approximation propagation (see [TEfficiency!Normal](@ref))
-- ac : Agresti-Coull Int32erval (see [TEfficiency!AgrestiCoull](@ref))
-- fc : Feldman-Cousins Int32erval (see [TEfficiency!FeldmanCousinsInterval](@ref))
-- midp : Lancaster mid-P Int32erval (see [TEfficiency!MidPInterval](@ref))
-- [b(a,b)](@ref): bayesian Int32erval using a prior probability ~Beta(a,b); a,b > 0 (see [TEfficiency!Bayesian](@ref))
-- mode : use mode of posterior for Bayesian Int32erval (default is mean)
-- shortest: use shortest Int32erval (done by default if mode is set)
-- central: use central Int32erval (done by default if mode is NOT set)
-- pois: Int32erpret histograms as poisson ratio instead of efficiency
-- e0 : plot efficiency and Int32erval for bins where total=0 (default is to skip them)
+- ac : Agresti-Coull interval (see [TEfficiency!AgrestiCoull](@ref))
+- fc : Feldman-Cousins interval (see [TEfficiency!FeldmanCousinsInterval](@ref))
+- midp : Lancaster mid-P interval (see [TEfficiency!MidPInterval](@ref))
+- [b(a,b)](@ref): bayesian interval using a prior probability ~Beta(a,b); a,b > 0 (see [TEfficiency!Bayesian](@ref))
+- mode : use mode of posterior for Bayesian interval (default is mean)
+- shortest: use shortest interval (done by default if mode is set)
+- central: use central interval (done by default if mode is NOT set)
+- pois: interpret histograms as poisson ratio instead of efficiency
+- e0 : plot efficiency and interval for bins where total=0 (default is to skip them)
 
-Note: Unfortunately there is no straightforward approach for determining a confidence Int32erval for a given confidence level. The actual coverage probability of the confidence Int32erval oscillates significantly according to the total number of events and the true efficiency. In order to decrease the impact of this oscillation on the actual coverage probability a couple of approximations and methodes has been developed. For a detailed discussion, please have a look at this statistical paper: [http://www-stat.wharton.upenn.edu/~tcai/paper/Binomial-StatSci.pdf](http://www-stat.wharton.upenn.edu/~tcai/paper/Binomial-StatSci.pdf)
+Note: Unfortunately there is no straightforward approach for determining a confidence interval for a given confidence level. The actual coverage probability of the confidence interval oscillates significantly according to the total number of events and the true efficiency. In order to decrease the impact of this oscillation on the actual coverage probability a couple of approximations and methodes has been developed. For a detailed discussion, please have a look at this statistical paper: [http://www-stat.wharton.upenn.edu/~tcai/paper/Binomial-StatSci.pdf](http://www-stat.wharton.upenn.edu/~tcai/paper/Binomial-StatSci.pdf)
 """ Divide(this::ByRef1{TGraphAsymmErrors}, pass::ByConstPtr1{TH1}, total::ByConstPtr1{TH1}, opt::ByCopy{String})
 
 # Wrapper of Int_t TGraphAsymmErrors::Merge(TCollection *)
@@ -38077,10 +38124,10 @@ Fill histogram following distribution in function fname.
     : (optional) Random number generator used to sample
     
 
-The distribution contained in the function fname ([TF2](@ref)) is Int32egrated over the channel contents. It is normalized to 1. Getting one random number implies:
+The distribution contained in the function fname ([TF2](@ref)) is integrated over the channel contents. It is normalized to 1. Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Fill histogram channel ntimes random numbers are generated
 
 One can also call [TF2!GetRandom2](@ref) to get a random variate from a function.
@@ -38102,10 +38149,10 @@ Fill histogram following distribution in histogram h.
     : (optional) Random number generator used for sampling
     
 
-The distribution contained in the histogram h ([TH2](@ref)) is Int32egrated over the channel contents. It is normalized to 1. Getting one random number implies:
+The distribution contained in the histogram h ([TH2](@ref)) is integrated over the channel contents. It is normalized to 1. Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Fill histogram channel ntimes random numbers are generated
 """ FillRandom(this::ByRef1{TH2}, h::ByPtr1{TH1}, ntimes::Int32, rng::ByPtr1{TRandom})
 
@@ -38113,7 +38160,7 @@ The distribution contained in the histogram h ([TH2](@ref)) is Int32egrated over
 @trydoc raw"""
     FitSlicesX(this::ByRef1{TH2}, f1::ByPtr1{TF1}, firstybin::Int32, lastybin::Int32, cut::Int32, option::ByCopy{String}, arr::ByPtr1{TObjArray})::Nothing
 Project slices along X in case of a 2-D histogram, then fit each slice with function f1 and make a histogram for each fit parameter Only bins along Y between firstybin and lastybin are considered.
-By default (firstybin == 0, lastybin == -1), all bins in y including over- and underflows are taken Int32o account. If f1=0, a gaussian is assumed Before invoking this function, one can set a subrange to be fitted along X via f1->SetRange(xmin,xmax) The argument option (default="QNR") can be used to change the fit options.
+By default (firstybin == 0, lastybin == -1), all bins in y including over- and underflows are taken into account. If f1=0, a gaussian is assumed Before invoking this function, one can set a subrange to be fitted along X via f1->SetRange(xmin,xmax) The argument option (default="QNR") can be used to change the fit options.
 
 - "Q" means Quiet mode
 - "N" means do not show the result of the fit
@@ -38161,7 +38208,7 @@ Example: Assume a 2-d histogram h2
 @trydoc raw"""
     FitSlicesY(this::ByRef1{TH2}, f1::ByPtr1{TF1}, firstxbin::Int32, lastxbin::Int32, cut::Int32, option::ByCopy{String}, arr::ByPtr1{TObjArray})::Nothing
 Project slices along Y in case of a 2-D histogram, then fit each slice with function f1 and make a histogram for each fit parameter Only bins along X between firstxbin and lastxbin are considered.
-By default (firstxbin == 0, lastxbin == -1), all bins in x including over- and underflows are taken Int32o account. If f1=0, a gaussian is assumed Before invoking this function, one can set a subrange to be fitted along Y via f1->SetRange(ymin,ymax) The argument option (default="QNR") can be used to change the fit options.
+By default (firstxbin == 0, lastxbin == -1), all bins in x including over- and underflows are taken into account. If f1=0, a gaussian is assumed Before invoking this function, one can set a subrange to be fitted along Y via f1->SetRange(ymin,ymax) The argument option (default="QNR") can be used to change the fit options.
 
 - "Q" means Quiet mode
 - "N" means do not show the result of the fit
@@ -38257,7 +38304,7 @@ Override [TH1!Rebin](@ref) as [TH2!RebinX](@ref) Rebinning in variable binning a
 @trydoc raw"""
     Rebin2D(this::ByRef1{TH2}, nxgroup::Int32, nygroup::Int32, newname::ByCopy{String})::CxxPtr1{TH2}
 Rebin this histogram grouping nxgroup/nygroup bins along the xaxis/yaxis together.
-if newname is not blank a new temporary histogram hnew is created. else the current histogram is modified (default) The parameter nxgroup/nygroup indicate how many bins along the xaxis/yaxis of this have to me merged Int32o one bin of hnew If the original histogram has errors stored (via Sumw2), the resulting histograms has new errors correctly calculated.
+if newname is not blank a new temporary histogram hnew is created. else the current histogram is modified (default) The parameter nxgroup/nygroup indicate how many bins along the xaxis/yaxis of this have to me merged into one bin of hnew If the original histogram has errors stored (via Sumw2), the resulting histograms has new errors correctly calculated.
 
 examples: if hpxpy is an existing [TH2](@ref) histogram with 40 x 40 bins 
 
@@ -38612,20 +38659,20 @@ NB. You must use DrawCopy if you want to draw several times the same function in
 @trydoc raw"""
     DrawDerivative(this::ByRef1{TF2}, option::ByCopy{String})::CxxPtr1{TObject}
 Draw derivative of this function.
-An Int32ermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
+An intermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
 ```
 TGraph *g = (TGraph*)myfunc.DrawDerivative(option);
-```  The resulting graph will be drawn Int32o the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
+```  The resulting graph will be drawn into the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
 """ DrawDerivative(this::ByRef1{TF2}, option::ByCopy{String})
 
 # Wrapper of TObject * TF2::DrawIntegral(Option_t *)
 @trydoc raw"""
     DrawIntegral(this::ByRef1{TF2}, option::ByCopy{String})::CxxPtr1{TObject}
-Draw Int32egral of this function.
-An Int32ermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
+Draw integral of this function.
+An intermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
 ```
 TGraph *g = (TGraph*)myfunc.DrawIntegral(option);
-```  The resulting graph will be drawn Int32o the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
+```  The resulting graph will be drawn into the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
 """ DrawIntegral(this::ByRef1{TF2}, option::ByCopy{String})
 
 # Wrapper of void TF2::ExecuteEvent(Int_t, Int_t, Int_t)
@@ -38638,7 +38685,7 @@ This member function is called when a F2 is clicked with the locator
 # Wrapper of Int_t TF2::GetContour(Double_t *)
 @trydoc raw"""
     GetContour(this::ByRef1{TF2}, levels::ByPtr2{Float64})::Int32
-Return contour values Int32o array levels.
+Return contour values into array levels.
 The number of contour levels can be returned by getContourLevel
 """ GetContour(this::ByRef1{TF2}, levels::ByPtr2{Float64})
 
@@ -38660,15 +38707,15 @@ Return a random number following this function shape.
 @trydoc raw"""
     GetRandom2(this::ByRef1{TF2}, xrandom::ByRef2{Float64}, yrandom::ByRef2{Float64}, rng::ByPtr1{TRandom})::Nothing
 Return 2 random numbers following this function shape.
-The distribution contained in this [TF2](@ref) function is Int32egrated over the cell contents. It is normalized to 1. Getting the two random numbers implies:
+The distribution contained in this [TF2](@ref) function is integrated over the cell contents. It is normalized to 1. Getting the two random numbers implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which cell in the normalized Int32egral r1 corresponds to
-- make a linear Int32erpolation in the returned cell
+- Look in which cell in the normalized integral r1 corresponds to
+- make a linear interpolation in the returned cell
 
 IMPORTANT NOTE
 
-The Int32egral of the function is computed at fNpx * fNpy points. If the function has sharp peaks, you should increase the number of points (SetNpx, SetNpy) such that the peak is correctly tabulated at several points.
+The integral of the function is computed at fNpx * fNpy points. If the function has sharp peaks, you should increase the number of points (SetNpx, SetNpy) such that the peak is correctly tabulated at several points.
 """ GetRandom2(this::ByRef1{TF2}, xrandom::ByRef2{Float64}, yrandom::ByRef2{Float64}, rng::ByPtr1{TRandom})
 
 # Wrapper of Double_t TF2::GetSave(const Double_t *)
@@ -38791,7 +38838,7 @@ Initialize the upper and lower bounds to draw the function-.
 @trydoc raw"""
     EvalPar(this::ByRef1{TF12}, x::ByConstPtr2{Float64}, params::ByConstPtr2{Float64})::Float64
 Evaluate this function at point x[0].
-x[0] is the value along X if fCase =0, the value along Y if fCase=1 if params is non null, the array will be used instead of the Int32ernal [TF2](@ref) parameters
+x[0] is the value along X if fCase =0, the value along Y if fCase=1 if params is non null, the array will be used instead of the internal [TF2](@ref) parameters
 """ EvalPar(this::ByRef1{TF12}, x::ByConstPtr2{Float64}, params::ByConstPtr2{Float64})
 
 # Wrapper of void TF12::SetXY(Double_t)
@@ -39010,20 +39057,20 @@ Draw this function with its current attributes.
 @trydoc raw"""
     DrawDerivative(this::ByRef1{TF3}, option::ByCopy{String})::CxxPtr1{TObject}
 Draw derivative of this function.
-An Int32ermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
+An intermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
 ```
 TGraph *g = (TGraph*)myfunc.DrawDerivative(option);
-```  The resulting graph will be drawn Int32o the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
+```  The resulting graph will be drawn into the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
 """ DrawDerivative(this::ByRef1{TF3}, option::ByCopy{String})
 
 # Wrapper of TObject * TF3::DrawIntegral(Option_t *)
 @trydoc raw"""
     DrawIntegral(this::ByRef1{TF3}, option::ByCopy{String})::CxxPtr1{TObject}
-Draw Int32egral of this function.
-An Int32ermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
+Draw integral of this function.
+An intermediate [TGraph](@ref) object is built and drawn with option. The function returns a pointer to the [TGraph](@ref) object. Do: 
 ```
 TGraph *g = (TGraph*)myfunc.DrawIntegral(option);
-```  The resulting graph will be drawn Int32o the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
+```  The resulting graph will be drawn into the current pad. If this function is used via the context menu, it recommended to create a new canvas/pad before invoking this function.
 """ DrawIntegral(this::ByRef1{TF3}, option::ByCopy{String})
 
 # Wrapper of void TF3::ExecuteEvent(Int_t, Int_t, Int_t)
@@ -39046,7 +39093,7 @@ Return the function value at the maximum. See [TF3!GetMinimumXYZ](@ref)
 Compute the X, Y and Z values corresponding to the minimum value of the function on its range.
 Returns the function value at the minimum. To find the minimum on a subrange, use the [SetRange()](@ref) function first.
 
-Method: First, a grid search is performed to find the initial estimate of the minimum location. The range of the function is divided Int32o fNpx,fNpy and fNpz sub-ranges. If the function is "good" (or "bad"), these values can be changed by [SetNpx()](@ref), [SetNpy()](@ref) and [SetNpz()](@ref) functions. Then, Minuit minimization is used with starting values found by the grid search
+Method: First, a grid search is performed to find the initial estimate of the minimum location. The range of the function is divided into fNpx,fNpy and fNpz sub-ranges. If the function is "good" (or "bad"), these values can be changed by [SetNpx()](@ref), [SetNpy()](@ref) and [SetNpz()](@ref) functions. Then, Minuit minimization is used with starting values found by the grid search
 
 Note that this method will always do first a grid search in contrast to GetMinimum
 """ GetMinimumXYZ(this::ByRef1{TF3}, x::ByRef2{Float64}, y::ByRef2{Float64}, z::ByRef2{Float64})
@@ -39055,15 +39102,15 @@ Note that this method will always do first a grid search in contrast to GetMinim
 @trydoc raw"""
     GetRandom3(this::ByRef1{TF3}, xrandom::ByRef2{Float64}, yrandom::ByRef2{Float64}, zrandom::ByRef2{Float64}, rng::ByPtr1{TRandom})::Nothing
 Return 3 random numbers following this function shape.
-The distribution contained in this [TF3](@ref) function is Int32egrated over the cell contents. It is normalized to 1. Getting the three random numbers implies:
+The distribution contained in this [TF3](@ref) function is integrated over the cell contents. It is normalized to 1. Getting the three random numbers implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which cell in the normalized Int32egral r1 corresponds to
-- make a linear Int32erpolation in the returned cell
+- Look in which cell in the normalized integral r1 corresponds to
+- make a linear interpolation in the returned cell
 
 IMPORTANT NOTE
 
-The Int32egral of the function is computed at fNpx * fNpy * fNpz points. If the function has sharp peaks, you should increase the number of points (SetNpx, SetNpy, SetNpz) such that the peak is correctly tabulated at several points.
+The integral of the function is computed at fNpx * fNpy * fNpz points. If the function has sharp peaks, you should increase the number of points (SetNpx, SetNpy, SetNpz) such that the peak is correctly tabulated at several points.
 """ GetRandom3(this::ByRef1{TF3}, xrandom::ByRef2{Float64}, yrandom::ByRef2{Float64}, zrandom::ByRef2{Float64}, rng::ByPtr1{TRandom})
 
 # Wrapper of Double_t TF3::GetSave(const Double_t *)
@@ -39232,7 +39279,7 @@ The value returned is the minimisation status.
 # Wrapper of TH1 * TFractionFitter::GetPlot()
 @trydoc raw"""
     GetPlot(this::ByRef1{TFractionFitter})::CxxPtr1{TH1}
-Return the "template prediction" corresponding to the fit result (this is not the same as the weighted sum of template distributions, as template statistical uncertainties are taken Int32o account).
+Return the "template prediction" corresponding to the fit result (this is not the same as the weighted sum of template distributions, as template statistical uncertainties are taken into account).
 Note that the name of this histogram will simply be the same as that of the "data" histogram, prefixed with the string "Fraction fit to hist: ". Note also that the histogram is managed by the [TFractionFitter](@ref) class, so the returned pointer will be invalid if the class is deleted
 """ GetPlot(this::ByRef1{TFractionFitter})
 
@@ -39288,7 +39335,7 @@ Notes:
 @trydoc raw"""
     SetRangeX(this::ByRef1{TFractionFitter}, low::Int32, high::Int32)::Nothing
 Set the X range of the histogram to be used in the fit.
-Use [ReleaseRangeX()](@ref) to go back to fitting the full histogram. The consistency check ensures that no empty fit range occurs (and also recomputes the bin content Int32egrals). ## Arguments
+Use [ReleaseRangeX()](@ref) to go back to fitting the full histogram. The consistency check ensures that no empty fit range occurs (and also recomputes the bin content integrals). ## Arguments
 
 - **`low`** [in] 
     lower X bin number 
@@ -39301,7 +39348,7 @@ Use [ReleaseRangeX()](@ref) to go back to fitting the full histogram. The consis
 @trydoc raw"""
     SetRangeY(this::ByRef1{TFractionFitter}, low::Int32, high::Int32)::Nothing
 Set the Y range of the histogram to be used in the fit (2D or 3D histograms only).
-Use [ReleaseRangeY()](@ref) to go back to fitting the full histogram. The consistency check ensures that no empty fit range occurs (and also recomputes the bin content Int32egrals). ## Arguments
+Use [ReleaseRangeY()](@ref) to go back to fitting the full histogram. The consistency check ensures that no empty fit range occurs (and also recomputes the bin content integrals). ## Arguments
 
 - **`low`** [in] 
     lower X bin number 
@@ -39314,7 +39361,7 @@ Use [ReleaseRangeY()](@ref) to go back to fitting the full histogram. The consis
 @trydoc raw"""
     SetRangeZ(this::ByRef1{TFractionFitter}, low::Int32, high::Int32)::Nothing
 Set the Z range of the histogram to be used in the fit (3D histograms only).
-Use [ReleaseRangeY()](@ref) to go back to fitting the full histogram. The consistency check ensures that no empty fit range occurs (and also recomputes the bin content Int32egrals). ## Arguments
+Use [ReleaseRangeY()](@ref) to go back to fitting the full histogram. The consistency check ensures that no empty fit range occurs (and also recomputes the bin content integrals). ## Arguments
 
 - **`low`** [in] 
     lower X bin number 
@@ -39477,7 +39524,7 @@ It is not guaranteed that it will fully succeed, and no check is made that it ha
 # Wrapper of Double_t TGraphDelaunay::Interpolate(Double_t, Double_t)
 @trydoc raw"""
     Interpolate(this::ByRef1{TGraphDelaunay}, x::Float64, y::Float64)::Float64
-Finds the Delaunay triangle that the point (xi,yi) sits in (if any) and calculate a z-value for it by linearly Int32erpolating the z-values that make up that triangle.
+Finds the Delaunay triangle that the point (xi,yi) sits in (if any) and calculate a z-value for it by linearly interpolating the z-values that make up that triangle.
 
 """ Interpolate(this::ByRef1{TGraphDelaunay}, x::Float64, y::Float64)
 
@@ -39776,16 +39823,16 @@ Approximate data points.
 ## Arguments
 
 - **`grin`** [in] 
-    graph giving the coordinates of the points to be Int32erpolated. Alternatively a single plotting structure can be specified: 
+    graph giving the coordinates of the points to be interpolated. Alternatively a single plotting structure can be specified: 
     
 - **`option`** [in] 
-    specifies the Int32erpolation method to be used. Choices are "linear" (iKind = 1) or "constant" (iKind = 2). 
+    specifies the interpolation method to be used. Choices are "linear" (iKind = 1) or "constant" (iKind = 2). 
     
 - **`nout`** [in] 
-    If xout is not specified, Int32erpolation takes place at n equally spaced points spanning the Int32erval [min(x), max(x)], where nout = max(nout, number of input data). 
+    If xout is not specified, interpolation takes place at n equally spaced points spanning the interval [min(x), max(x)], where nout = max(nout, number of input data). 
     
 - **`xout`** [in] 
-    an optional set of values specifying where Int32erpolation is to take place. 
+    an optional set of values specifying where interpolation is to take place. 
     
 - **`yleft`** [in] 
     the value to be returned when input x values less than min(x). The default is defined by the value of rule given below. 
@@ -39794,13 +39841,13 @@ Approximate data points.
     the value to be returned when input x values greater than max(x). The default is defined by the value of rule given below. 
     
 - **`rule`** [in] 
-    an Int32eger describing how Int32erpolation is to take place outside the Int32erval [min(x), max(x)]. If rule is 0 then the given yleft and yright values are returned, if it is 1 then 0 is returned for such points and if it is 2, the value at the closest data extreme is used. 
+    an integer describing how interpolation is to take place outside the interval [min(x), max(x)]. If rule is 0 then the given yleft and yright values are returned, if it is 1 then 0 is returned for such points and if it is 2, the value at the closest data extreme is used. 
     
 - **`f`** [in] 
     For method="constant" a number between 0 and 1 inclusive, indicating a compromise between left- and right-continuous step functions. If y0 and y1 are the values to the left and right of the point then the value is y0*f+y1*(1-f) so that f=0 is right-continuous and f=1 is left-continuous 
     
 - **`ties`** [in] 
-    Handling of tied x values. An Int32eger describing a function with a single vector argument returning a single number result:
+    Handling of tied x values. An integer describing a function with a single vector argument returning a single number result:
     
     - ties = "ordered" (iTies = 0): input x are "ordered"
     - ties = "mean" (iTies = 1): function "mean"
@@ -39811,11 +39858,11 @@ Approximate data points.
 
 Details:
 
-At least two complete (x, y) pairs are required. If there are duplicated (tied) x values and ties is a function it is applied to the y values for each distinct x value. Useful functions in this context include mean, min, and max. If ties="ordered" the x values are assumed to be already ordered. The first y value will be used for Int32erpolation to the left and the last one for Int32erpolation to the right.
+At least two complete (x, y) pairs are required. If there are duplicated (tied) x values and ties is a function it is applied to the y values for each distinct x value. Useful functions in this context include mean, min, and max. If ties="ordered" the x values are assumed to be already ordered. The first y value will be used for interpolation to the left and the last one for interpolation to the right.
 
 Value:
 
-approx returns a graph with components x and y, containing n coordinates which Int32erpolate the given data points according to the method (and rule) desired.
+approx returns a graph with components x and y, containing n coordinates which interpolate the given data points according to the method (and rule) desired.
 """ Approx(this::ByRef1{TGraphSmooth}, grin::ByPtr1{TGraph}, option::ByCopy{String}, nout::Int32, xout::ByPtr2{Float64}, yleft::Float64, yright::Float64, rule::Int32, f::Float64, ties::ByCopy{String})
 
 # Wrapper of void TGraphSmooth::Approxin(TGraph *, Int_t, Double_t &, Double_t &, Int_t, Int_t)
@@ -39857,7 +39904,7 @@ Smooth grin with the Nadaraya-Watson kernel regression estimate.
     the bandwidth. The kernels are scaled so that their quartiles (viewed as probability densities) are at +/- 0.25*bandwidth. 
     
 - **`nout`** [in] 
-    If xout is not specified, Int32erpolation takes place at equally spaced points spanning the Int32erval [min(x), max(x)], where nout = max(nout, number of input data). 
+    If xout is not specified, interpolation takes place at equally spaced points spanning the interval [min(x), max(x)], where nout = max(nout, number of input data). 
     
 - **`xout`** [in] 
     an optional set of values at which to evaluate the fit
@@ -39924,7 +39971,7 @@ Details:
 
 supsmu is a running lines smoother which chooses between three spans for the lines. The running lines smoothers are symmetric, with k/2 data points each side of the predicted point, and values of k as 0.5 * n, 0.2 * n and 0.05 * n, where n is the number of data points. If span is specified, a single smoother with span span * n is used.
 
-The best of the three smoothers is chosen by cross-validation for each prediction. The best spans are then smoothed by a running lines smoother and the final prediction chosen by linear Int32erpolation.
+The best of the three smoothers is chosen by cross-validation for each prediction. The best spans are then smoothed by a running lines smoother and the final prediction chosen by linear interpolation.
 
 The FORTRAN code says: ``For small samples (n < 40) or if there are substantial serial correlations between observations close in x - value, then a prespecified fixed span smoother (span > 0) should be used. Reasonable span values are 0.2 to 0.4.''
 
@@ -40337,14 +40384,14 @@ Set Profile histogram structure and options.
     
     - ' ' (Default) the bin errors are the standard error on the mean of Y = S(Y)/SQRT(N) where S(Y) is the standard deviation (RMS) of the Y data in the bin and N is the number of bin entries (from TProfile!GetBinEntries(ibin) ) (i.e the errors are the standard error on the bin content of the profile)
     - 's' Errors are the standard deviation of Y, S(Y)
-    - 'i' Errors are S(Y)/SQRT(N) (standard error on the mean as in the default) The only difference is only when the standard deviation in Y is zero. In this case the error a standard deviation = 1/SQRT(12) is assumed and the error is 1./SQRT(12*N). This approximation assumes that the Y values are Int32eger (e.g. ADC counts) and have an implicit uncertainty of y +/- 0.5. With the assumption that the probability that y takes any value between y-0.5 and y+0.5 is uniform, its standard error is 1/SQRT(12)
+    - 'i' Errors are S(Y)/SQRT(N) (standard error on the mean as in the default) The only difference is only when the standard deviation in Y is zero. In this case the error a standard deviation = 1/SQRT(12) is assumed and the error is 1./SQRT(12*N). This approximation assumes that the Y values are integer (e.g. ADC counts) and have an implicit uncertainty of y +/- 0.5. With the assumption that the probability that y takes any value between y-0.5 and y+0.5 is uniform, its standard error is 1/SQRT(12)
     - 'g' Errors are 1./SQRT(W) where W is the sum of the weights for the bin j W is obtained as from TProfile!GetBinEntries(ibin) This errors corresponds to the standard deviation of weighted mean where each measurement Y is uncorrelated and has an error sigma, which is expressed in the weight used to fill the Profile: w = 1/sigma^2 The resulting error in [TProfile](@ref) is then 1./SQRT( Sum(1./sigma^2) )
     
     
 
 In the case of Profile filled weights and with [TProfile!Sumw2()](@ref) called, STD(Y) is the standard deviation of the weighted sample Y and N is in this case the number of effective entries (TProfile!GetBinEffectiveEntries(ibin) )
 
-If a bin has N data points all with the same value Y (especially possible when dealing with Int32egers), the spread in Y for that bin is zero, and the uncertainty assigned is also zero, and the bin is ignored in making subsequent fits. To avoid this problem one can use an approximation for the standard deviation S(Y), by using the average of all the S(Y) of the other Profile bins. To use this approximation one must call before [TProfile!Approximate](@ref) This approximation applies only for the default and the 's' options
+If a bin has N data points all with the same value Y (especially possible when dealing with integers), the spread in Y for that bin is zero, and the uncertainty assigned is also zero, and the bin is ignored in making subsequent fits. To avoid this problem one can use an approximation for the standard deviation S(Y), by using the average of all the S(Y) of the other Profile bins. To use this approximation one must call before [TProfile!Approximate](@ref) This approximation applies only for the default and the 's' options
 """ BuildOptions(this::ByRef1{TProfile}, ymin::Float64, ymax::Float64, option::ByCopy{String})
 
 # Wrapper of Bool_t TProfile::Divide(const TH1 *)
@@ -40378,7 +40425,7 @@ This function is not implemented for the [TProfile](@ref)
 @trydoc raw"""
     ExtendAxis(this::ByRef1{TProfile}, x::Float64, axis::ByPtr1{TAxis})::Nothing
 Profile histogram is resized along x axis such that x is in the axis range.
-The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the extended histogram. Takes Int32o account errors (Sumw2) if any. The axis must be extendable before invoking this function.
+The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the extended histogram. Takes into account errors (Sumw2) if any. The axis must be extendable before invoking this function.
 
 Ex: `h->GetXaxis()->SetCanExtend(kTRUE)`
 """ ExtendAxis(this::ByRef1{TProfile}, x::Float64, axis::ByPtr1{TAxis})
@@ -40504,7 +40551,7 @@ Replace current statistics with the values in array stats.
 Rebin this profile grouping ngroup bins together.
 ## case 1  xbins=0
 
-if newname is not blank a new temporary profile hnew is created. else the current profile is modified (default) The parameter ngroup indicates how many bins of this have to me merged Int32o one bin of hnew If the original profile has errors stored (via Sumw2), the resulting profile has new errors correctly calculated.
+if newname is not blank a new temporary profile hnew is created. else the current profile is modified (default) The parameter ngroup indicates how many bins of this have to me merged into one bin of hnew If the original profile has errors stored (via Sumw2), the resulting profile has new errors correctly calculated.
 
 examples: if hp is an existing [TProfile](@ref) histogram with 100 bins
 
@@ -41292,13 +41339,13 @@ Fill histogram following distribution in function fname.
     : (optional) Random number generator used to sample
     
 
-The distribution contained in the function fname ([TF1](@ref)) is Int32egrated over the channel contents. It is normalized to 1. Getting one random number implies:
+The distribution contained in the function fname ([TF1](@ref)) is integrated over the channel contents. It is normalized to 1. Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Fill histogram channel ntimes random numbers are generated
 
-N.B. By dfault this methods approximates the Int32egral of the function in each bin with the function value at the center of the bin, mutiplied by the bin width
+N.B. By dfault this methods approximates the integral of the function in each bin with the function value at the center of the bin, mutiplied by the bin width
 
 One can also call [TF1!GetRandom](@ref) to get a random variate from a function.
 """ FillRandom(this::ByRef1{TH3}, fname::ByCopy{String}, ntimes::Int32, rng::ByPtr1{TRandom})
@@ -41319,10 +41366,10 @@ Fill histogram following distribution in histogram h.
     : (optional) Random number generator used for sampling
     
 
-The distribution contained in the histogram h ([TH3](@ref)) is Int32egrated over the channel contents. It is normalized to 1. Getting one random number implies:
+The distribution contained in the histogram h ([TH3](@ref)) is integrated over the channel contents. It is normalized to 1. Getting one random number implies:
 
 - Generating a random number between 0 and 1 (say r1)
-- Look in which bin in the normalized Int32egral r1 corresponds to
+- Look in which bin in the normalized integral r1 corresponds to
 - Fill histogram channel ntimes random numbers are generated
 """ FillRandom(this::ByRef1{TH3}, h::ByPtr1{TH1}, ntimes::Int32, rng::ByPtr1{TRandom})
 
@@ -41385,7 +41432,7 @@ Replace current statistics with the values in array stats.
 @trydoc raw"""
     Rebin3D(this::ByRef1{TH3}, nxgroup::Int32, nygroup::Int32, nzgroup::Int32, newname::ByCopy{String})::CxxPtr1{TH3}
 Rebin this histogram grouping nxgroup/nygroup/nzgroup bins along the xaxis/yaxis/zaxis together.
-if newname is not blank a new temporary histogram hnew is created. else the current histogram is modified (default) The parameter nxgroup/nygroup indicate how many bins along the xaxis/yaxis of this have to me merged Int32o one bin of hnew If the original histogram has errors stored (via Sumw2), the resulting histograms has new errors correctly calculated.
+if newname is not blank a new temporary histogram hnew is created. else the current histogram is modified (default) The parameter nxgroup/nygroup indicate how many bins along the xaxis/yaxis of this have to me merged into one bin of hnew If the original histogram has errors stored (via Sumw2), the resulting histograms has new errors correctly calculated.
 
 examples: if hpxpy is an existing [TH3](@ref) histogram with 40 x 40 x 40 bins hpxpypz->[Rebin3D()](@ref); // merges two bins along the xaxis and yaxis in one in hpxpypz // Carefull: previous contents of hpxpy are lost hpxpypz->RebinX(5); //merges five bins along the xaxis in one in hpxpypz [TH3](@ref) *hnew = hpxpypz->RebinY(5,"hnew"); // creates a new histogram hnew // merging 5 bins of h1 along the yaxis in one bin
 
@@ -41445,7 +41492,7 @@ Set bin content.
 @trydoc raw"""
     SetShowProjection(this::ByRef1{TH3}, option::ByCopy{String}, nbins::Int32)::Nothing
 When the mouse is moved in a pad containing a 3-d view of this histogram a second canvas shows a projection type given as option.
-To stop the generation of the projections, delete the canvas containing the projection. option may contain a combination of the characters x,y,z,e option = "x" return the x projection Int32o a [TH1D](@ref) histogram option = "y" return the y projection Int32o a [TH1D](@ref) histogram option = "z" return the z projection Int32o a [TH1D](@ref) histogram option = "xy" return the x versus y projection Int32o a [TH2D](@ref) histogram option = "yx" return the y versus x projection Int32o a [TH2D](@ref) histogram option = "xz" return the x versus z projection Int32o a [TH2D](@ref) histogram option = "zx" return the z versus x projection Int32o a [TH2D](@ref) histogram option = "yz" return the y versus z projection Int32o a [TH2D](@ref) histogram option = "zy" return the z versus y projection Int32o a [TH2D](@ref) histogram option can also include the drawing option for the projection, eg to draw the xy projection using the draw option "box" do myhist.SetShowProjection("xy box"); This function is typically called from the context menu. NB: the notation "a vs b" means "a" vertical and "b" horizontal
+To stop the generation of the projections, delete the canvas containing the projection. option may contain a combination of the characters x,y,z,e option = "x" return the x projection into a [TH1D](@ref) histogram option = "y" return the y projection into a [TH1D](@ref) histogram option = "z" return the z projection into a [TH1D](@ref) histogram option = "xy" return the x versus y projection into a [TH2D](@ref) histogram option = "yx" return the y versus x projection into a [TH2D](@ref) histogram option = "xz" return the x versus z projection into a [TH2D](@ref) histogram option = "zx" return the z versus x projection into a [TH2D](@ref) histogram option = "yz" return the y versus z projection into a [TH2D](@ref) histogram option = "zy" return the z versus y projection into a [TH2D](@ref) histogram option can also include the drawing option for the projection, eg to draw the xy projection using the draw option "box" do myhist.SetShowProjection("xy box"); This function is typically called from the context menu. NB: the notation "a vs b" means "a" vertical and "b" horizontal
 """ SetShowProjection(this::ByRef1{TH3}, option::ByCopy{String}, nbins::Int32)
 
 # Wrapper of Bool_t TProfile2D::Add(const TH1 *, const TH1 *, Double_t, Double_t)
@@ -41518,7 +41565,7 @@ This function is not implemented
 @trydoc raw"""
     ExtendAxis(this::ByRef1{TProfile2D}, x::Float64, axis::ByPtr1{TAxis})::Nothing
 Profile histogram is resized along axis such that x is in the axis range.
-The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the extended histogram. Takes Int32o account errors (Sumw2) if any. The axis must be extendable before invoking this function.
+The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the extended histogram. Takes into account errors (Sumw2) if any. The axis must be extendable before invoking this function.
 
 Ex: `h->GetXaxis()->SetCanExtend(kTRUE)`
 """ ExtendAxis(this::ByRef1{TProfile2D}, x::Float64, axis::ByPtr1{TAxis})
@@ -41690,7 +41737,7 @@ Replace current statistics with the values in array stats.
 @trydoc raw"""
     Rebin2D(this::ByRef1{TProfile2D}, nxgroup::Int32, nygroup::Int32, newname::ByCopy{String})::CxxPtr1{TProfile2D}
 Rebin this histogram grouping nxgroup/nygroup bins along the xaxis/yaxis together.
-if newname is not blank a new profile hnew is created. else the current histogram is modified (default) The parameter nxgroup/nygroup indicate how many bins along the xaxis/yaxis of this have to be merged Int32o one bin of hnew If the original profile has errors stored (via Sumw2), the resulting profile has new errors correctly calculated.
+if newname is not blank a new profile hnew is created. else the current histogram is modified (default) The parameter nxgroup/nygroup indicate how many bins along the xaxis/yaxis of this have to be merged into one bin of hnew If the original profile has errors stored (via Sumw2), the resulting profile has new errors correctly calculated.
 
 examples: if hpxpy is an existing [TProfile2D](@ref) profile with 40 x 40 bins 
 
@@ -42099,7 +42146,7 @@ Set total number of bins including under/overflow Reallocate bin contents array.
 
 """ SetBinsLength(this::ByRef1{TH3D}, n::Int32)
 
-# Wrapper of Int32 & TBinIterator::operator*()
+# Wrapper of int & TBinIterator::operator*()
 @trydoc raw"""
     Base.getindex(this::ByRef1{TBinIterator})::CxxRef2{Int32}
 
@@ -42113,7 +42160,7 @@ Set total number of bins including under/overflow Reallocate bin contents array.
 
 """ inc!(this::ByRef1{TBinIterator})
 
-# Wrapper of TBinIterator TBinIterator::operator++(Int32)
+# Wrapper of TBinIterator TBinIterator::operator++(int)
 @trydoc raw"""
     inc!(this::ByRef1{TBinIterator}, ::Int32)::ByCopy{TBinIterator}
 
@@ -42307,12 +42354,12 @@ Calculate errors (or not if "calc" == kFALSE)
 # Wrapper of Double_t THnBase::ComputeIntegral()
 @trydoc raw"""
     ComputeIntegral(this::ByRef1{THnBase})::Float64
-Compute Int32egral (normalized cumulative sum of bins) w/o under/overflows The result is stored in fIntegral and used by the GetRandom functions.
-This function is automatically called by GetRandom when the fIntegral array does not exist or when the number of entries in the histogram has changed since the previous call to GetRandom. The resulting Int32egral is normalized to 1. 
+Compute integral (normalized cumulative sum of bins) w/o under/overflows The result is stored in fIntegral and used by the GetRandom functions.
+This function is automatically called by GetRandom when the fIntegral array does not exist or when the number of entries in the histogram has changed since the previous call to GetRandom. The resulting integral is normalized to 1. 
 
 ###Return
 
-1 if success, 0 if Int32egral is zero
+1 if success, 0 if integral is zero
 """ ComputeIntegral(this::ByRef1{THnBase})
 
 # Wrapper of void THnBase::Divide(const THnBase *)
@@ -42351,7 +42398,7 @@ since the data is sparse by default a likelihood fit is performed merging all th
 
 Since the [THnSparse](@ref) is not drawn no graphics options are passed Here is the list of possible options 
 ```
-          = "I"  Use Int32egral of function in bin instead of value at bin center
+          = "I"  Use integral of function in bin instead of value at bin center
           = "X"  Use chi2 method (default is log-likelihood method)
           = "U"  Use a User specified fitting algorithm (via SetFCN)
           = "Q"  Quiet mode (minimum printing)
@@ -42417,7 +42464,7 @@ Multiply this histogram by histogram h this = this * h Note that if h has Sumw2 
 @trydoc raw"""
     Multiply(this::ByRef1{THnBase}, f::ByPtr1{TF1}, c::Float64)::Nothing
 Performs the operation: this = this*c*f1 if errors are defined, errors are also recalculated.
-Only bins inside the function range are recomputed. IMPORTANT NOTE: If you Int32end to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after calling [Multiply()](@ref)
+Only bins inside the function range are recomputed. IMPORTANT NOTE: If you intend to use the errors of this histogram later you should call Sumw2 before making this operation. This is particularly important if you fit the histogram after calling [Multiply()](@ref)
 """ Multiply(this::ByRef1{THnBase}, f::ByPtr1{TF1}, c::Float64)
 
 # Wrapper of void THnBase::RebinnedAdd(const THnBase *, Double_t)
@@ -42789,12 +42836,12 @@ Adds a channel with signal, background and data given as input.
 
 """ AddChannel(this::ByRef1{TLimitDataSource}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TH1})
 
-# Wrapper of void TLimitDataSource::AddChannel(TH1 *, TH1 *, TH1 *, TVector{Float64} *, TVector{Float64} *, TObjArray *)
+# Wrapper of void TLimitDataSource::AddChannel(TH1 *, TH1 *, TH1 *, TVectorD *, TVectorD *, TObjArray *)
 @trydoc raw"""
-    AddChannel(this::ByRef1{TLimitDataSource}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TVector{Float64}}, ::ByPtr1{TVector{Float64}}, ::ByPtr1{TObjArray})::Nothing
+    AddChannel(this::ByRef1{TLimitDataSource}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TVectorD}, ::ByPtr1{TVectorD}, ::ByPtr1{TObjArray})::Nothing
 Adds a channel with signal, background and data given as input.
 In addition, error sources are defined. [TH1](@ref) are here used for convenience: each bin has to be seen as an error source (relative). names is an array of strings containing the names of the sources. Sources with the same name are correlated.
-""" AddChannel(this::ByRef1{TLimitDataSource}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TVector{Float64}}, ::ByPtr1{TVector{Float64}}, ::ByPtr1{TObjArray})
+""" AddChannel(this::ByRef1{TLimitDataSource}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TH1}, ::ByPtr1{TVectorD}, ::ByPtr1{TVectorD}, ::ByPtr1{TObjArray})
 
 # Wrapper of TObjArray * TLimitDataSource::GetBackground()
 @trydoc raw"""
@@ -42869,7 +42916,7 @@ Browse the [TMultiDimFit](@ref) object in the [TBrowser](@ref).
 # Wrapper of void TMultiDimFit::Clear(Option_t *)
 @trydoc raw"""
     Clear(this::ByRef1{TMultiDimFit}, option::ByCopy{String})::Nothing
-Clear Int32ernal structures and variables.
+Clear internal structures and variables.
 
 """ Clear(this::ByRef1{TMultiDimFit}, option::ByCopy{String})
 
@@ -43303,7 +43350,7 @@ This function is not implemented
 @trydoc raw"""
     ExtendAxis(this::ByRef1{TProfile3D}, x::Float64, axis::ByPtr1{TAxis})::Nothing
 Profile histogram is resized along axis such that x is in the axis range.
-The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the rebinned histogram. Takes Int32o account errors (Sumw2) if any. The axis must be rebinnable before invoking this function. Ex: `h->GetXaxis()->SetCanExtend(kTRUE)`
+The new axis limits are recomputed by doubling iteratively the current axis range until the specified value x is within the limits. The algorithm makes a copy of the histogram, then loops on all bins of the old histogram to fill the rebinned histogram. Takes into account errors (Sumw2) if any. The axis must be rebinnable before invoking this function. Ex: `h->GetXaxis()->SetCanExtend(kTRUE)`
 """ ExtendAxis(this::ByRef1{TProfile3D}, x::Float64, axis::ByPtr1{TAxis})
 
 # Wrapper of Int_t TProfile3D::Fill(Double_t, Double_t, Double_t, Double_t)
@@ -43653,17 +43700,17 @@ Helper routine to compute chi-squared between distributions using the computed i
 
 # Wrapper of TH2D * TSVDUnfold::GetAdetCovMatrix(Int_t, Int_t)
 @trydoc raw"""
-    GetAdetCovMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
+    GetAdetCovGetMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
 Determine covariance matrix of unfolded spectrum from finite statistics in response matrix using pseudo experiments "ntoys" - number of pseudo experiments used for the propagation "seed" - seed for pseudo experiments.
 
-""" GetAdetCovMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)
+""" GetAdetCovGetMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)
 
 # Wrapper of TH2D * TSVDUnfold::GetUnfoldCovMatrix(const TH2D *, Int_t, Int_t)
 @trydoc raw"""
-    GetUnfoldCovMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
+    GetUnfoldCovGetMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
 Determine for given input error matrix covariance matrix of unfolded spectrum from toy simulation given the passed covariance matrix on measured spectrum "cov" - covariance matrix on the measured spectrum, to be propagated "ntoys" - number of pseudo experiments used for the propagation "seed" - seed for pseudo experiments Note that this covariance matrix will contain effects of forced normalisation if spectrum is normalised to unit area.
 
-""" GetUnfoldCovMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)
+""" GetUnfoldCovGetMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)
 
 # Wrapper of void TSVDUnfold::SetNormalize(Bool_t)
 @trydoc raw"""
@@ -43765,10 +43812,10 @@ Perform the unfolding with regularisation parameter kreg.
 
 # Wrapper of void TGDMLMatrix::SetMatrixAsString(const char *)
 @trydoc raw"""
-    SetMatrixAsString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})::Nothing
+    SetGetMatrixAsGetString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})::Nothing
 
 
-""" SetMatrixAsString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})
+""" SetGetMatrixAsGetString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})
 
 # Wrapper of void TGeoShape::AfterStreamer()
 @trydoc raw"""
@@ -44326,7 +44373,7 @@ Set the current tracking point.
 Connect framework defined extension to the volume.
 The volume "grabs" a copy, so the original object can be released by the producer. Release the previously connected extension if any.
 
-NOTE: This Int32erface is Int32ended for the use by TGeo and the users should NOT connect extensions using this method
+NOTE: This interface is intended for the use by TGeo and the users should NOT connect extensions using this method
 """ SetFWExtension(this::ByRef1{TGeoVolume}, ext::ByPtr1{TGeoExtension})
 
 # Wrapper of void TGeoVolume::SetInvisible()
@@ -44426,7 +44473,7 @@ set the shape associated with this volume
 Connect user-defined extension to the volume.
 The volume "grabs" a copy, so the original object can be released by the producer. Release the previously connected extension if any.
 
-NOTE: This Int32erface is Int32ended for user extensions and is guaranteed not to be used by TGeo
+NOTE: This interface is intended for user extensions and is guaranteed not to be used by TGeo
 """ SetUserExtension(this::ByRef1{TGeoVolume}, ext::ByPtr1{TGeoExtension})
 
 # Wrapper of void TGeoVolume::SetVisContainers(Bool_t)
@@ -44530,7 +44577,7 @@ Compute closest distance from point px,py to each corner.
 # Wrapper of TGeoVolume * TGeoBBox::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoBBox}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this box shape belonging to volume "voldiv" Int32o ndiv equal volumes called divname, from thestart position with the given step.
+Divide this box shape belonging to volume "voldiv" into ndiv equal volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume. In case a wrong division axis is supplied, returns pointer to volume to be divided.
 """ Divide(this::ByRef1{TGeoBBox}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -44614,7 +44661,7 @@ Set values for a given vertex.
 # Wrapper of TGeoVolume * TGeoTrap::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoTrap}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this trapezoid shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this trapezoid shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Only Z divisions are supported. For Z divisions just return the pointer to the volume to be divided. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoTrap}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -44809,10 +44856,10 @@ Register all matrices of the boolean node and descendents.
 
 # Wrapper of Bool_t TGeoBoolNode::ReplaceMatrix(TGeoMatrix *, TGeoMatrix *)
 @trydoc raw"""
-    ReplaceMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})::Bool
+    ReplaceGetMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})::Bool
 Replace one of the matrices.
 Does not work with [TGeoIdentity](@ref). Returns true if replacement was successful.
-""" ReplaceMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})
+""" ReplaceGetMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoBoolNode::SetSelected(Int_t)
 @trydoc raw"""
@@ -44859,7 +44906,7 @@ Paint method.
 # Wrapper of void TGeoIntersection::ComputeBBox(Double_t &, Double_t &, Double_t &, Double_t *)
 @trydoc raw"""
     ComputeBBox(this::ByRef1{TGeoIntersection}, dx::ByRef2{Float64}, dy::ByRef2{Float64}, dz::ByRef2{Float64}, origin::ByPtr2{Float64})::Nothing
-Compute bounding box corresponding to a Int32ersection of two shapes.
+Compute bounding box corresponding to a intersection of two shapes.
 
 """ ComputeBBox(this::ByRef1{TGeoIntersection}, dx::ByRef2{Float64}, dy::ByRef2{Float64}, dz::ByRef2{Float64}, origin::ByPtr2{Float64})
 
@@ -44880,7 +44927,7 @@ Compute minimum distance to shape vertices.
 # Wrapper of Int_t TGeoIntersection::GetNpoints()
 @trydoc raw"""
     GetNpoints(this::ByRef1{TGeoIntersection})::Int32
-Returns number of vertices for the composite shape described by this Int32ersection.
+Returns number of vertices for the composite shape described by this intersection.
 
 """ GetNpoints(this::ByRef1{TGeoIntersection})
 
@@ -44949,10 +44996,10 @@ Perform a rotation about Z having the sine/cosine of the rotation angle.
 
 # Wrapper of Double_t * TGeoHMatrix::GetRotationMatrix()
 @trydoc raw"""
-    GetRotationMatrix(this::ByRef1{TGeoHMatrix})::CxxPtr2{Float64}
+    GetRotationGetMatrix(this::ByRef1{TGeoHMatrix})::CxxPtr2{Float64}
 
 
-""" GetRotationMatrix(this::ByRef1{TGeoHMatrix})
+""" GetRotationGetMatrix(this::ByRef1{TGeoHMatrix})
 
 # Wrapper of Double_t * TGeoHMatrix::GetScale()
 @trydoc raw"""
@@ -45300,10 +45347,10 @@ Set matrix elements in the GEANT3 way.
 
 # Wrapper of void TGeoRotation::SetMatrix(const Double_t *)
 @trydoc raw"""
-    SetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})::Nothing
+    SetGetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})::Nothing
 
 
-""" SetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})
+""" SetGetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})
 
 # Wrapper of void TGeoRotation::SetRotation(const TGeoMatrix &)
 @trydoc raw"""
@@ -45545,10 +45592,10 @@ Add and extra daughter to the current path array. No validity check performed !
 
 # Wrapper of void TGeoBranchArray::CleanMatrix()
 @trydoc raw"""
-    CleanMatrix(this::ByRef1{TGeoBranchArray})::Nothing
+    CleanGetMatrix(this::ByRef1{TGeoBranchArray})::Nothing
 Garbage collect the stored matrix.
 
-""" CleanMatrix(this::ByRef1{TGeoBranchArray})
+""" CleanGetMatrix(this::ByRef1{TGeoBranchArray})
 
 # Wrapper of void TGeoBranchArray::CopyTo(TGeoBranchArray *)
 @trydoc raw"""
@@ -45581,7 +45628,7 @@ Assignment. Not valid anymore. Use [TGeoBranchArray!MakeCopy](@ref) instead.
 # Wrapper of void TGeoBranchArray::UpdateArray(size_t)
 @trydoc raw"""
     UpdateArray(this::ByRef1{TGeoBranchArray}, nobj::Int64)::Nothing
-Updates the Int32ernal addresses for n contiguous objects which have the same fMaxLevel Updates the Int32ernal addresses for n contiguous objects which have the same fMaxLevel.
+Updates the internal addresses for n contiguous objects which have the same fMaxLevel Updates the internal addresses for n contiguous objects which have the same fMaxLevel.
 
 """ UpdateArray(this::ByRef1{TGeoBranchArray}, nobj::Int64)
 
@@ -45689,7 +45736,7 @@ Paint this node and its content according to visualization settings.
 Connect framework defined extension to the node.
 The node "grabs" a copy, so the original object can be released by the producer. Release the previously connected extension if any.
 
-NOTE: This Int32erface is Int32ended for the use by TGeo and the users should NOT connect extensions using this method
+NOTE: This interface is intended for the use by TGeo and the users should NOT connect extensions using this method
 """ SetFWExtension(this::ByRef1{TGeoNode}, ext::ByPtr1{TGeoExtension})
 
 # Wrapper of void TGeoNode::SetInvisible()
@@ -45733,7 +45780,7 @@ set the list of overlaps for this node (ovlp must be created with operator new)
 Connect user-defined extension to the node.
 The node "grabs" a copy, so the original object can be released by the producer. Release the previously connected extension if any.
 
-NOTE: This Int32erface is Int32ended for user extensions and is guaranteed not to be used by TGeo
+NOTE: This interface is intended for user extensions and is guaranteed not to be used by TGeo
 """ SetUserExtension(this::ByRef1{TGeoNode}, ext::ByPtr1{TGeoExtension})
 
 # Wrapper of void TGeoNode::SetVirtual()
@@ -45894,10 +45941,10 @@ Works only after calling FindNextBoundary.
 
 # Wrapper of TGeoHMatrix * TGeoNavigator::GetHMatrix()
 @trydoc raw"""
-    GetHMatrix(this::ByRef1{TGeoNavigator})::CxxPtr1{TGeoHMatrix}
+    GetHGetMatrix(this::ByRef1{TGeoNavigator})::CxxPtr1{TGeoHMatrix}
 Return stored current matrix (global_ matrix of the next touched node).
 
-""" GetHMatrix(this::ByRef1{TGeoNavigator})
+""" GetHGetMatrix(this::ByRef1{TGeoNavigator})
 
 # Wrapper of Int_t TGeoNavigator::GetVirtualLevel()
 @trydoc raw"""
@@ -46127,7 +46174,7 @@ Add a matrix to the list. Returns index of the matrix in list.
 @trydoc raw"""
     Division(this::ByRef1{TGeoBuilder}, name::ByCopy{String}, mother::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64, numed::Int32, option::ByCopy{String})::CxxPtr1{TGeoVolume}
 Create a new volume by dividing an existing one (GEANT3 like)
-Divides MOTHER Int32o NDIV divisions called NAME along axis IAXIS starting at coordinate value START and having size STEP. The created volumes will have tracking media ID=NUMED (if NUMED=0 -> same media as MOTHER) The behavior of the division operation can be triggered using OPTION (case insensitive):
+Divides MOTHER into NDIV divisions called NAME along axis IAXIS starting at coordinate value START and having size STEP. The created volumes will have tracking media ID=NUMED (if NUMED=0 -> same media as MOTHER) The behavior of the division operation can be triggered using OPTION (case insensitive):
 
 - N - divide all range in NDIV cells (same effect as STEP<=0) (GSDVN in G3)
 - NX - divide range starting with START in NDIV cells (GSDVN2 in G3)
@@ -46291,14 +46338,14 @@ Make a TGeoXtru-shaped volume with nz planes.
 
 # Wrapper of TGeoMaterial * TGeoBuilder::Material(const char *, Double_t, Double_t, Double_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
-    Material(this::ByRef1{TGeoBuilder}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, Int32len::Float64)::CxxPtr1{TGeoMaterial}
+    Material(this::ByRef1{TGeoBuilder}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, intlen::Float64)::CxxPtr1{TGeoMaterial}
 Create material with given A, Z and density, having an unique id.
 
-""" Material(this::ByRef1{TGeoBuilder}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, Int32len::Float64)
+""" Material(this::ByRef1{TGeoBuilder}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, intlen::Float64)
 
 # Wrapper of void TGeoBuilder::Matrix(Int_t, Double_t, Double_t, Double_t, Double_t, Double_t, Double_t)
 @trydoc raw"""
-    Matrix(this::ByRef1{TGeoBuilder}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)::Nothing
+    GetMatrix(this::ByRef1{TGeoBuilder}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)::Nothing
 Create rotation matrix named 'mat<index>'.
 - index rotation matrix number
 - theta1 polar angle for axis X
@@ -46307,7 +46354,7 @@ Create rotation matrix named 'mat<index>'.
 - phi2 azimuthal angle for axis Y
 - theta3 polar angle for axis Z
 - phi3 azimuthal angle for axis Z
-""" Matrix(this::ByRef1{TGeoBuilder}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)
+""" GetMatrix(this::ByRef1{TGeoBuilder}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)
 
 # Wrapper of TGeoMedium * TGeoBuilder::Medium(const char *, Int_t, Int_t, Int_t, Int_t, Double_t, Double_t, Double_t, Double_t, Double_t, Double_t)
 @trydoc raw"""
@@ -46376,10 +46423,10 @@ The relative matrix is made of : a translation (x,y,z) and a rotation matrix nam
 
 # Wrapper of void TGeoBuilder::RegisterMatrix(TGeoMatrix *)
 @trydoc raw"""
-    RegisterMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})::Nothing
+    RegisterGetMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})::Nothing
 Register a matrix to the list of matrices.
 It will be cleaned-up at the destruction [TGeoManager](@ref).
-""" RegisterMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})
+""" RegisterGetMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})
 
 # Wrapper of TGeoVolume * TGeoBuilder::Volume(const char *, const char *, Int_t, Double_t *, Int_t)
 @trydoc raw"""
@@ -46412,10 +46459,10 @@ Add border surface;.
 
 # Wrapper of void TGeoManager::AddGDMLMatrix(TGDMLMatrix *)
 @trydoc raw"""
-    AddGDMLMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})::Nothing
+    AddGDMLGetMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})::Nothing
 Add GDML matrix;.
 
-""" AddGDMLMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})
+""" AddGDMLGetMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})
 
 # Wrapper of Int_t TGeoManager::AddMaterial(const TGeoMaterial *)
 @trydoc raw"""
@@ -46746,7 +46793,7 @@ Set default volume colors according to A of material.
 @trydoc raw"""
     Division(this::ByRef1{TGeoManager}, name::ByCopy{String}, mother::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64, numed::Int32, option::ByCopy{String})::CxxPtr1{TGeoVolume}
 Create a new volume by dividing an existing one (GEANT3 like)
-Divides MOTHER Int32o NDIV divisions called NAME along axis IAXIS starting at coordinate value START and having size STEP. The created volumes will have tracking media ID=NUMED (if NUMED=0 -> same media as MOTHER) The behavior of the division operation can be triggered using OPTION :
+Divides MOTHER into NDIV divisions called NAME along axis IAXIS starting at coordinate value START and having size STEP. The created volumes will have tracking media ID=NUMED (if NUMED=0 -> same media as MOTHER) The behavior of the division operation can be triggered using OPTION :
 
 OPTION (case insensitive) :
 
@@ -46921,10 +46968,10 @@ Make a default painter if none present. Returns pointer to it.
 
 # Wrapper of TGeoHMatrix * TGeoManager::GetHMatrix()
 @trydoc raw"""
-    GetHMatrix(this::ByRef1{TGeoManager})::CxxPtr1{TGeoHMatrix}
+    GetHGetMatrix(this::ByRef1{TGeoManager})::CxxPtr1{TGeoHMatrix}
 Return stored current matrix (global_ matrix of the next touched node).
 
-""" GetHMatrix(this::ByRef1{TGeoManager})
+""" GetHGetMatrix(this::ByRef1{TGeoManager})
 
 # Wrapper of TVirtualGeoTrack * TGeoManager::GetLastTrack()
 @trydoc raw"""
@@ -46961,7 +47008,7 @@ Return stored current matrix (global_ matrix of the next touched node).
 
 """ GetNNodes(this::ByRef1{TGeoManager})
 
-# Wrapper of TGeoRegion * TGeoManager::GetRegion(Int32)
+# Wrapper of TGeoRegion * TGeoManager::GetRegion(int)
 @trydoc raw"""
     GetRegion(this::ByRef1{TGeoManager}, i::Int32)::CxxPtr1{TGeoRegion}
 
@@ -47194,14 +47241,14 @@ Make a TGeoXtru-shaped volume with nz planes.
 
 # Wrapper of TGeoMaterial * TGeoManager::Material(const char *, Double_t, Double_t, Double_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
-    Material(this::ByRef1{TGeoManager}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, Int32len::Float64)::CxxPtr1{TGeoMaterial}
+    Material(this::ByRef1{TGeoManager}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, intlen::Float64)::CxxPtr1{TGeoMaterial}
 Create material with given A, Z and density, having an unique id.
 
-""" Material(this::ByRef1{TGeoManager}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, Int32len::Float64)
+""" Material(this::ByRef1{TGeoManager}, name::ByCopy{String}, a::Float64, z::Float64, dens::Float64, uid::Int32, radlen::Float64, intlen::Float64)
 
 # Wrapper of void TGeoManager::Matrix(Int_t, Double_t, Double_t, Double_t, Double_t, Double_t, Double_t)
 @trydoc raw"""
-    Matrix(this::ByRef1{TGeoManager}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)::Nothing
+    GetMatrix(this::ByRef1{TGeoManager}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)::Nothing
 Create rotation matrix named 'mat<index>'.
 - index rotation matrix number
 - theta1 polar angle for axis X
@@ -47210,7 +47257,7 @@ Create rotation matrix named 'mat<index>'.
 - phi2 azimuthal angle for axis Y
 - theta3 polar angle for axis Z
 - phi3 azimuthal angle for axis Z
-""" Matrix(this::ByRef1{TGeoManager}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)
+""" GetMatrix(this::ByRef1{TGeoManager}, index::Int32, theta1::Float64, phi1::Float64, theta2::Float64, phi2::Float64, theta3::Float64, phi3::Float64)
 
 # Wrapper of TGeoMedium * TGeoManager::Medium(const char *, Int_t, Int_t, Int_t, Int_t, Double_t, Double_t, Double_t, Double_t, Double_t, Double_t)
 @trydoc raw"""
@@ -47343,7 +47390,7 @@ Draw random points in the bounding box of a volume.
 # Wrapper of void TGeoManager::RandomRays(Int_t, Double_t, Double_t, Double_t, const char *, Bool_t)
 @trydoc raw"""
     RandomRays(this::ByRef1{TGeoManager}, nrays::Int32, startx::Float64, starty::Float64, startz::Float64, target_vol::ByCopy{String}, check_norm::Bool)::Nothing
-Randomly shoot nrays and plot Int32ersections with surfaces for current top node.
+Randomly shoot nrays and plot intersections with surfaces for current top node.
 
 """ RandomRays(this::ByRef1{TGeoManager}, nrays::Int32, startx::Float64, starty::Float64, startz::Float64, target_vol::ByCopy{String}, check_norm::Bool)
 
@@ -47356,10 +47403,10 @@ Optionally locks physical nodes (default).
 
 # Wrapper of void TGeoManager::RegisterMatrix(const TGeoMatrix *)
 @trydoc raw"""
-    RegisterMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
+    RegisterGetMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
 Register a matrix to the list of matrices.
 It will be cleaned-up at the destruction [TGeoManager](@ref).
-""" RegisterMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})
+""" RegisterGetMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoManager::RemoveMaterial(Int_t)
 @trydoc raw"""
@@ -47572,17 +47619,17 @@ Set type of exploding view (see [TGeoPainter!SetExplodedView()](@ref))
 
 # Wrapper of void TGeoManager::SetMatrixReflection(Bool_t)
 @trydoc raw"""
-    SetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)::Nothing
+    SetGetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)::Nothing
 
 
-""" SetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)
+""" SetGetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)
 
 # Wrapper of void TGeoManager::SetMatrixTransform(Bool_t)
 @trydoc raw"""
-    SetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)::Nothing
+    SetGetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)::Nothing
 
 
-""" SetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)
+""" SetGetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)
 
 # Wrapper of void TGeoManager::SetMaxThreads(Int_t)
 @trydoc raw"""
@@ -47678,7 +47725,7 @@ Change raytracing mode.
 # Wrapper of void TGeoManager::SetTminTmax(Double_t, Double_t)
 @trydoc raw"""
     SetTminTmax(this::ByRef1{TGeoManager}, tmin::Float64, tmax::Float64)::Nothing
-Set time cut Int32erval for drawing tracks.
+Set time cut interval for drawing tracks.
 If called with no arguments, time cut will be disabled.
 """ SetTminTmax(this::ByRef1{TGeoManager}, tmin::Float64, tmax::Float64)
 
@@ -47851,14 +47898,14 @@ Option can be "v" - verbose (default)
 @trydoc raw"""
     DecayMaterial(this::ByRef1{TGeoMaterial}, time::Float64, precision::Float64)::CxxPtr1{TGeoMaterial}
 Create the material representing the decay product of this material at a given time.
-The precision represent the minimum cumulative branching ratio for which decay products are still taken Int32o account.
+The precision represent the minimum cumulative branching ratio for which decay products are still taken into account.
 """ DecayMaterial(this::ByRef1{TGeoMaterial}, time::Float64, precision::Float64)
 
 # Wrapper of void TGeoMaterial::FillMaterialEvolution(TObjArray *, Double_t)
 @trydoc raw"""
     FillMaterialEvolution(this::ByRef1{TGeoMaterial}, population::ByPtr1{TObjArray}, precision::Float64)::Nothing
 Fills a user array with all the elements deriving from the possible decay of the top element composing the mixture.
-Each element contained by `<population>` may be a radionuclide having a Bateman solution attached. The precision represent the minimum cumulative branching ratio for which decay products are still taken Int32o account. To visualize the time evolution of each decay product one can use: 
+Each element contained by `<population>` may be a radionuclide having a Bateman solution attached. The precision represent the minimum cumulative branching ratio for which decay products are still taken into account. To visualize the time evolution of each decay product one can use: 
 
     TGeoElement *elem = population->At(index);
     TGeoElementRN *elemrn = 0;
@@ -47882,7 +47929,7 @@ Each element contained by `<population>` may be a radionuclide having a Bateman 
 # Wrapper of void TGeoMaterial::GetElementProp(Double_t &, Double_t &, Double_t &, Int_t)
 @trydoc raw"""
     GetElementProp(this::ByRef1{TGeoMaterial}, a::ByRef2{Float64}, z::ByRef2{Float64}, w::ByRef2{Float64}, i::Int32)::Nothing
-Single Int32erface to get element properties.
+Single interface to get element properties.
 
 """ GetElementProp(this::ByRef1{TGeoMaterial}, a::ByRef2{Float64}, z::ByRef2{Float64}, w::ByRef2{Float64}, i::Int32)
 
@@ -47920,7 +47967,7 @@ Retrieve material index in the list of materials.
 Connect framework defined extension to the material.
 The material "grabs" a copy, so the original object can be released by the producer. Release the previously connected extension if any.
 
-NOTE: This Int32erface is Int32ended for the use by TGeo and the users should NOT connect extensions using this method
+NOTE: This interface is intended for the use by TGeo and the users should NOT connect extensions using this method
 """ SetFWExtension(this::ByRef1{TGeoMaterial}, ext::ByPtr1{TGeoExtension})
 
 # Wrapper of void TGeoMaterial::SetIndex(Int_t)
@@ -47939,10 +47986,10 @@ NOTE: This Int32erface is Int32ended for the use by TGeo and the users should NO
 
 # Wrapper of void TGeoMaterial::SetRadLen(Double_t, Double_t)
 @trydoc raw"""
-    SetRadLen(this::ByRef1{TGeoMaterial}, radlen::Float64, Int32len::Float64)::Nothing
+    SetRadLen(this::ByRef1{TGeoMaterial}, radlen::Float64, intlen::Float64)::Nothing
 Set radiation/absorption lengths.
 If the values are negative, their absolute value is taken, otherwise radlen is recomputed using G3 formula.
-""" SetRadLen(this::ByRef1{TGeoMaterial}, radlen::Float64, Int32len::Float64)
+""" SetRadLen(this::ByRef1{TGeoMaterial}, radlen::Float64, intlen::Float64)
 
 # Wrapper of void TGeoMaterial::SetTemperature(Double_t)
 @trydoc raw"""
@@ -47971,7 +48018,7 @@ If the values are negative, their absolute value is taken, otherwise radlen is r
 Connect user-defined extension to the material.
 The material "grabs" a copy, so the original object can be released by the producer. Release the previously connected extension if any.
 
-NOTE: This Int32erface is Int32ended for user extensions and is guaranteed not to be used by TGeo
+NOTE: This interface is intended for user extensions and is guaranteed not to be used by TGeo
 """ SetUserExtension(this::ByRef1{TGeoMaterial}, ext::ByPtr1{TGeoExtension})
 
 # Wrapper of void TGeoMaterial::SetZ(Double_t)
@@ -48251,7 +48298,7 @@ Adds a proportion ratio to the existing one.
 @trydoc raw"""
     FillPopulation(this::ByRef1{TGeoElementRN}, population::ByPtr1{TObjArray}, precision::Float64, factor::Float64)::Nothing
 Fills the input array with the set of RN elements resulting from the decay of this one.
-All element in the list will contain the time evolution of their proportion by number with respect to this element. The proportion can be retrieved via the method [TGeoElementRN!Ratio()](@ref). The precision represent the minimum cumulative branching ratio for which decay products are still taken Int32o account.
+All element in the list will contain the time evolution of their proportion by number with respect to this element. The proportion can be retrieved via the method [TGeoElementRN!Ratio()](@ref). The precision represent the minimum cumulative branching ratio for which decay products are still taken into account.
 """ FillPopulation(this::ByRef1{TGeoElementRN}, population::ByPtr1{TObjArray}, precision::Float64, factor::Float64)
 
 # Wrapper of void TGeoElementRN::ResetRatio()
@@ -48419,7 +48466,7 @@ Compute Radiation Length based on Geant4 formula.
 @trydoc raw"""
     DecayMaterial(this::ByRef1{TGeoMixture}, time::Float64, precision::Float64)::CxxPtr1{TGeoMaterial}
 Create the mixture representing the decay product of this material at a given time.
-The precision represent the minimum cumulative branching ratio for which decay products are still taken Int32o account.
+The precision represent the minimum cumulative branching ratio for which decay products are still taken into account.
 """ DecayMaterial(this::ByRef1{TGeoMixture}, time::Float64, precision::Float64)
 
 # Wrapper of void TGeoMixture::DefineElement(Int_t, Double_t, Double_t, Double_t)
@@ -48447,7 +48494,7 @@ Define the mixture element at index iel by number of atoms in the chemical formu
 @trydoc raw"""
     FillMaterialEvolution(this::ByRef1{TGeoMixture}, population::ByPtr1{TObjArray}, precision::Float64)::Nothing
 Fills a user array with all the elements deriving from the possible decay of the top elements composing the mixture.
-Each element contained by `<population>` may be a radionuclide having a Bateman solution attached. The precision represent the minimum cumulative branching ratio for which decay products are still taken Int32o account. To visualize the time evolution of each decay product one can use: 
+Each element contained by `<population>` may be a radionuclide having a Bateman solution attached. The precision represent the minimum cumulative branching ratio for which decay products are still taken into account. To visualize the time evolution of each decay product one can use: 
 
     TGeoElement *elem = population->At(index);
     TGeoElementRN *elemrn = 0;
@@ -48471,7 +48518,7 @@ Each element contained by `<population>` may be a radionuclide having a Bateman 
 # Wrapper of void TGeoMixture::GetElementProp(Double_t &, Double_t &, Double_t &, Int_t)
 @trydoc raw"""
     GetElementProp(this::ByRef1{TGeoMixture}, a::ByRef2{Float64}, z::ByRef2{Float64}, w::ByRef2{Float64}, i::Int32)::Nothing
-Single Int32erface to get element properties.
+Single interface to get element properties.
 
 """ GetElementProp(this::ByRef1{TGeoMixture}, a::ByRef2{Float64}, z::ByRef2{Float64}, w::ByRef2{Float64}, i::Int32)
 
@@ -48547,10 +48594,10 @@ Return current index.
 
 # Wrapper of TGeoMatrix * TGeoPatternFinder::GetMatrix()
 @trydoc raw"""
-    GetMatrix(this::ByRef1{TGeoPatternFinder})::CxxPtr1{TGeoMatrix}
+    GetGetMatrix(this::ByRef1{TGeoPatternFinder})::CxxPtr1{TGeoMatrix}
 Return current matrix.
 
-""" GetMatrix(this::ByRef1{TGeoPatternFinder})
+""" GetGetMatrix(this::ByRef1{TGeoPatternFinder})
 
 # Wrapper of TGeoNode * TGeoPatternFinder::GetNodeOffset(Int_t)
 @trydoc raw"""
@@ -49114,10 +49161,10 @@ find the node containing the query point
 
 # Wrapper of void TGeoNodeMatrix::SetMatrix(const TGeoMatrix *)
 @trydoc raw"""
-    SetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
+    SetGetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
 Matrix setter.
 
-""" SetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})
+""" SetGetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoNodeOffset::SetFinder(TGeoPatternFinder *)
 @trydoc raw"""
@@ -49170,10 +49217,10 @@ Set the top name for path.
 
 # Wrapper of void TGeoIterator::SetType(Int_t)
 @trydoc raw"""
-    SetType(this::ByRef1{TGeoIterator}, type::Int32)::Nothing
+    SetGetType(this::ByRef1{TGeoIterator}, type::Int32)::Nothing
 
 
-""" SetType(this::ByRef1{TGeoIterator}, type::Int32)
+""" SetGetType(this::ByRef1{TGeoIterator}, type::Int32)
 
 # Wrapper of void TGeoIterator::SetUserPlugin(TGeoIteratorPlugin *)
 @trydoc raw"""
@@ -49367,7 +49414,7 @@ Pop next state/point from heap and restore matrices starting from LEVEL.
 # Wrapper of Int_t TGeoNodeCache::PushState(Bool_t, Int_t, Int_t, Double_t *)
 @trydoc raw"""
     PushState(this::ByRef1{TGeoNodeCache}, ovlp::Bool, ntmany::Int32, startlevel::Int32, point::ByPtr2{Float64})::Int32
-Push current state Int32o heap.
+Push current state into heap.
 
 """ PushState(this::ByRef1{TGeoNodeCache}, ovlp::Bool, ntmany::Int32, startlevel::Int32, point::ByPtr2{Float64})
 
@@ -49486,7 +49533,7 @@ compute closest distance from point px,py to each corner
 # Wrapper of TGeoVolume * TGeoCone::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoCone}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this cone shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this cone shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume in case of Z divisions. For Z division creates all volumes with different shapes and returns pointer to volume that was divided. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoCone}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -49542,7 +49589,7 @@ compute closest distance from point px,py to each corner
 # Wrapper of TGeoVolume * TGeoConeSeg::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoConeSeg}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this cone segment shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this cone segment shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume in case of Z divisions. For Z division creates all volumes with different shapes and returns pointer to volume that was divided. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoConeSeg}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -49591,7 +49638,7 @@ compute closest distance from point px,py to each corner
 # Wrapper of TGeoVolume * TGeoTube::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoTube}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this tube shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this tube shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume in case of Z divisions. For radial division creates all volumes with different shapes and returns pointer to volume that was divided. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoTube}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -49647,7 +49694,7 @@ compute closest distance from point px,py to each corner
 # Wrapper of TGeoVolume * TGeoTubeSeg::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoTubeSeg}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this tube segment shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this tube segment shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume in case of Z divisions. For radialdivision creates all volumes with different shapes and returns pointer to volume that was divided. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoTubeSeg}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -50572,10 +50619,10 @@ The difference between [Paint()](@ref) and [Draw()](@ref) is that when a object 
 
 # Wrapper of void TGeoPNEntry::SetMatrix(const TGeoHMatrix *)
 @trydoc raw"""
-    SetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})::Nothing
+    SetGetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})::Nothing
 Set the additional matrix for this node entry.
 The matrix will be deleted by this class unless registered by the user to gGeoManager
-""" SetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})
+""" SetGetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})
 
 # Wrapper of void TGeoPNEntry::SetPhysicalNode(TGeoPhysicalNode *)
 @trydoc raw"""
@@ -50624,10 +50671,10 @@ Called for all registered physical nodes after an [Align()](@ref) call.
 
 # Wrapper of void TGeoPhysicalNode::SetMatrixOrig(const TGeoMatrix *)
 @trydoc raw"""
-    SetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})::Nothing
+    SetGetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})::Nothing
 Allows PN entries (or users) to preset the local_ original matrix for the last node pointed by the path.
 
-""" SetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})
+""" SetGetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoPhysicalNode::SetVisibility(Bool_t)
 @trydoc raw"""
@@ -50709,7 +50756,7 @@ Compute the normal for an array o points so that norm.dot.dir is positive Input:
 # Wrapper of TGeoVolume * TGeoPara::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoPara}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this parallelepiped shape belonging to volume "voldiv" Int32o ndiv equal volumes called divname, from thestart position with the given step.
+Divide this parallelepiped shape belonging to volume "voldiv" into ndiv equal volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume. In case a wrong division axis is supplied, returns pointer to volume to be divided.
 """ Divide(this::ByRef1{TGeoPara}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -50723,14 +50770,14 @@ Set dimensions starting from an array.
 # Wrapper of void TGeoParaboloid::ComputeBBox()
 @trydoc raw"""
     ComputeBBox(this::ByRef1{TGeoParaboloid})::Nothing
-Compute bounding box - nothing to do in this case.
+compute bounding box of the tube
 
 """ ComputeBBox(this::ByRef1{TGeoParaboloid})
 
 # Wrapper of void TGeoParaboloid::ComputeNormal(const Double_t *, const Double_t *, Double_t *)
 @trydoc raw"""
     ComputeNormal(this::ByRef1{TGeoParaboloid}, point::ByConstPtr2{Float64}, dir::ByConstPtr2{Float64}, norm::ByPtr2{Float64})::Nothing
-Computes normal to closest surface from POINT.
+Compute normal to closest surface from POINT.
 
 """ ComputeNormal(this::ByRef1{TGeoParaboloid}, point::ByConstPtr2{Float64}, dir::ByConstPtr2{Float64}, norm::ByPtr2{Float64})
 
@@ -50744,28 +50791,28 @@ Compute the normal for an array o points so that norm.dot.dir is positive Input:
 # Wrapper of Int_t TGeoParaboloid::DistancetoPrimitive(Int_t, Int_t)
 @trydoc raw"""
     DistancetoPrimitive(this::ByRef1{TGeoParaboloid}, px::Int32, py::Int32)::Int32
-Compute closest distance from point px,py to each corner.
+compute closest distance from point px,py to each vertex
 
 """ DistancetoPrimitive(this::ByRef1{TGeoParaboloid}, px::Int32, py::Int32)
 
 # Wrapper of TGeoVolume * TGeoParaboloid::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoParaboloid}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this box shape belonging to volume "voldiv" Int32o ndiv equal volumes called divname, from thestart position with the given step.
-Returns pointer to created division cell volume. In case a wrong division axis is supplied, returns pointer to volume to be divided.
+Divide the paraboloid along one axis.
+
 """ Divide(this::ByRef1{TGeoParaboloid}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
 # Wrapper of void TGeoParaboloid::SetDimensions(Double_t *)
 @trydoc raw"""
     SetDimensions(this::ByRef1{TGeoParaboloid}, param::ByPtr2{Float64})::Nothing
-Set dimensions based on the array of parameters param[0] - half-length in x param[1] - half-length in y param[2] - half-length in z.
+Set paraboloid dimensions starting from an array.
 
 """ SetDimensions(this::ByRef1{TGeoParaboloid}, param::ByPtr2{Float64})
 
 # Wrapper of void TGeoParaboloid::SetParaboloidDimensions(Double_t, Double_t, Double_t)
 @trydoc raw"""
     SetParaboloidDimensions(this::ByRef1{TGeoParaboloid}, rlo::Float64, rhi::Float64, dz::Float64)::Nothing
-
+Set paraboloid dimensions.
 
 """ SetParaboloidDimensions(this::ByRef1{TGeoParaboloid}, rlo::Float64, rhi::Float64, dz::Float64)
 
@@ -50863,7 +50910,7 @@ compute closest distance from point px,py to each corner
 # Wrapper of TGeoVolume * TGeoPcon::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoPcon}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this polycone shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this polycone shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume in case of Z divisions. Z divisions can be performed if the divided range is in between two consecutive Z planes. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoPcon}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -50947,7 +50994,7 @@ compute closest distance from point px,py to each corner
 # Wrapper of TGeoVolume * TGeoPgon::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoPgon}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this polygone shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this polygone shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume in case of Z divisions. Phi divisions are allowed only if nedgesndiv=0 and create polygone "segments" with nedges/ndiv edges. Z divisions can be performed if the divided range is in between two consecutive Z planes. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoPgon}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -51094,7 +51141,7 @@ compute closest distance from point px,py to each corner
 # Wrapper of TGeoVolume * TGeoSphere::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoSphere}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this box shape belonging to volume "voldiv" Int32o ndiv equal volumes called divname, from thestart position with the given step.
+Divide this box shape belonging to volume "voldiv" into ndiv equal volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume. In case a wrong division axis is supplied, returns pointer to volume to be divided.
 """ Divide(this::ByRef1{TGeoSphere}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -51133,14 +51180,14 @@ Set spherical segment dimensions.
 
 """ Flip(this::ByRef1{TGeoFacet})
 
-# Wrapper of bool TGeoTessellated::AddFacet(Int32, Int32, Int32)
+# Wrapper of bool TGeoTessellated::AddFacet(int, int, int)
 @trydoc raw"""
     AddFacet(this::ByRef1{TGeoTessellated}, i1::Int32, i2::Int32, i3::Int32)::Bool
 Adding a triangular facet from indices of vertices.
 
 """ AddFacet(this::ByRef1{TGeoTessellated}, i1::Int32, i2::Int32, i3::Int32)
 
-# Wrapper of bool TGeoTessellated::AddFacet(Int32, Int32, Int32, Int32)
+# Wrapper of bool TGeoTessellated::AddFacet(int, int, int, int)
 @trydoc raw"""
     AddFacet(this::ByRef1{TGeoTessellated}, i1::Int32, i2::Int32, i3::Int32, i4::Int32)::Bool
 Adding a quadrilateral facet from indices of vertices.
@@ -51168,7 +51215,7 @@ Compute bounding box.
 
 """ ComputeBBox(this::ByRef1{TGeoTessellated})
 
-# Wrapper of Int32 TGeoTessellated::DistancetoPrimitive(Int32, Int32)
+# Wrapper of int TGeoTessellated::DistancetoPrimitive(int, int)
 @trydoc raw"""
     DistancetoPrimitive(this::ByRef1{TGeoTessellated}, px::Int32, py::Int32)::Int32
 Compute closest distance from point px,py to each corner.
@@ -51220,7 +51267,7 @@ Compute closest distance from point px,py to each vertex.
 # Wrapper of TGeoVolume * TGeoTorus::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoTorus}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this torus shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this torus shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 
 """ Divide(this::ByRef1{TGeoTorus}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -51262,7 +51309,7 @@ Compute the normal for an array o points so that norm.dot.dir is positive Input:
 # Wrapper of TGeoVolume * TGeoTrd1::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoTrd1}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this trd1 shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this trd1 shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Returns pointer to created division cell volume in case of Y divisions. For Z divisions just return the pointer to the volume to be divided. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoTrd1}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -51297,7 +51344,7 @@ Compute the normal for an array o points so that norm.dot.dir is positive Input:
 # Wrapper of TGeoVolume * TGeoTrd2::Divide(TGeoVolume *, const char *, Int_t, Int_t, Double_t, Double_t)
 @trydoc raw"""
     Divide(this::ByRef1{TGeoTrd2}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)::CxxPtr1{TGeoVolume}
-Divide this trd2 shape belonging to volume "voldiv" Int32o ndiv volumes called divname, from thestart position with the given step.
+Divide this trd2 shape belonging to volume "voldiv" into ndiv volumes called divname, from thestart position with the given step.
 Only Z divisions are supported. For Z divisions just return the pointer to the volume to be divided. In case a wrong division axis is supplied, returns pointer to volume that was divided.
 """ Divide(this::ByRef1{TGeoTrd2}, voldiv::ByPtr1{TGeoVolume}, divname::ByCopy{String}, iaxis::Int32, ndiv::Int32, thestart::Float64, step::Float64)
 
@@ -51311,14 +51358,14 @@ set arb8 params in one step :
 # Wrapper of void TGeoXtru::ComputeBBox()
 @trydoc raw"""
     ComputeBBox(this::ByRef1{TGeoXtru})::Nothing
-Compute bounding box - nothing to do in this case.
+compute bounding box of the pcon
 
 """ ComputeBBox(this::ByRef1{TGeoXtru})
 
 # Wrapper of void TGeoXtru::ComputeNormal(const Double_t *, const Double_t *, Double_t *)
 @trydoc raw"""
     ComputeNormal(this::ByRef1{TGeoXtru}, point::ByConstPtr2{Float64}, dir::ByConstPtr2{Float64}, norm::ByPtr2{Float64})::Nothing
-Computes normal to closest surface from POINT.
+Compute normal to closest surface from POINT.
 
 """ ComputeNormal(this::ByRef1{TGeoXtru}, point::ByConstPtr2{Float64}, dir::ByConstPtr2{Float64}, norm::ByPtr2{Float64})
 
@@ -51332,57 +51379,69 @@ Compute the normal for an array o points so that norm.dot.dir is positive Input:
 # Wrapper of void TGeoXtru::CreateThreadData(Int_t)
 @trydoc raw"""
     CreateThreadData(this::ByRef1{TGeoXtru}, nthreads::Int32)::Nothing
-
+Create thread data for n threads max.
 
 """ CreateThreadData(this::ByRef1{TGeoXtru}, nthreads::Int32)
 
 # Wrapper of Bool_t TGeoXtru::DefinePolygon(Int_t, const Double_t *, const Double_t *)
 @trydoc raw"""
     DefinePolygon(this::ByRef1{TGeoXtru}, nvert::Int32, xv::ByConstPtr2{Float64}, yv::ByConstPtr2{Float64})::Bool
+Creates the polygon representing the blueprint of any Xtru section.
+- nvert = number of vertices >2
+- xv[nvert] = array of X vertex positions
+- yv[nvert] = array of Y vertex positions
 
-
+*NOTE* should be called before DefineSection or ctor with 'param'
 """ DefinePolygon(this::ByRef1{TGeoXtru}, nvert::Int32, xv::ByConstPtr2{Float64}, yv::ByConstPtr2{Float64})
 
 # Wrapper of void TGeoXtru::DefineSection(Int_t, Double_t, Double_t, Double_t, Double_t)
 @trydoc raw"""
     DefineSection(this::ByRef1{TGeoXtru}, snum::Int32, z::Float64, x0::Float64, y0::Float64, scale::Float64)::Nothing
-
+defines z position of a section plane, rmin and rmax at this z.
 
 """ DefineSection(this::ByRef1{TGeoXtru}, snum::Int32, z::Float64, x0::Float64, y0::Float64, scale::Float64)
 
 # Wrapper of Int_t TGeoXtru::DistancetoPrimitive(Int_t, Int_t)
 @trydoc raw"""
     DistancetoPrimitive(this::ByRef1{TGeoXtru}, px::Int32, py::Int32)::Int32
-Compute closest distance from point px,py to each corner.
+compute closest distance from point px,py to each corner
 
 """ DistancetoPrimitive(this::ByRef1{TGeoXtru}, px::Int32, py::Int32)
 
 # Wrapper of void TGeoXtru::DrawPolygon(Option_t *)
 @trydoc raw"""
     DrawPolygon(this::ByRef1{TGeoXtru}, option::ByCopy{String})::Nothing
-
+Draw the section polygon.
 
 """ DrawPolygon(this::ByRef1{TGeoXtru}, option::ByCopy{String})
 
 # Wrapper of void TGeoXtru::SetCurrentVertices(Double_t, Double_t, Double_t)
 @trydoc raw"""
     SetCurrentVertices(this::ByRef1{TGeoXtru}, x0::Float64, y0::Float64, scale::Float64)::Nothing
-
+Set current vertex coordinates according X0, Y0 and SCALE.
 
 """ SetCurrentVertices(this::ByRef1{TGeoXtru}, x0::Float64, y0::Float64, scale::Float64)
 
 # Wrapper of void TGeoXtru::SetCurrentZ(Double_t, Int_t)
 @trydoc raw"""
     SetCurrentZ(this::ByRef1{TGeoXtru}, z::Float64, iz::Int32)::Nothing
-
+Recompute current section vertices for a given Z position within range of section iz.
 
 """ SetCurrentZ(this::ByRef1{TGeoXtru}, z::Float64, iz::Int32)
 
 # Wrapper of void TGeoXtru::SetDimensions(Double_t *)
 @trydoc raw"""
     SetDimensions(this::ByRef1{TGeoXtru}, param::ByPtr2{Float64})::Nothing
-Set dimensions based on the array of parameters param[0] - half-length in x param[1] - half-length in y param[2] - half-length in z.
 
+- param[0] = nz // number of z planes
+- param[1] = z1 // Z position of first plane
+- param[2] = x1 // X position of first plane
+- param[3] = y1 // Y position of first plane
+- param[4] = scale1 // scale factor for first plane ...
+- param[4*(nz-1]+1] = zn
+- param[4*(nz-1)+2] = xn
+- param[4*(nz-1)+3] = yn
+- param[4*(nz-1)+4] = scalen
 """ SetDimensions(this::ByRef1{TGeoXtru}, param::ByPtr2{Float64})
 
 # Wrapper of Double_t & TGeoXtru::Z(Int_t)
