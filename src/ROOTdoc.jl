@@ -126,7 +126,7 @@ In order to retrieve a [TClass](@ref) instance from the type system, a query can
 
 The name of classes is crucial for [ROOT](@ref). A careful procedure of *name normalization* is carried out for each and every class. A *normalized name* is a valid C++ class name. In order to access the name of a class within the [ROOT](@ref) type system, the method [TClass!GetName()](@ref) can be used.
 
-Related functions: [`AddImplFile`](@ref), [`AddInstance`](@ref), [`AdoptMemberStreamer`](@ref), [`AdoptReferenceProxy`](@ref), [`AdoptSchemaRules`](@ref), [`AdoptStreamer`](@ref), [`Browse`](@ref), [`BuildEmulatedRealData`](@ref), [`BuildRealData`](@ref), [`CalculateStreamerOffset`](@ref), [`CallShowMembers`](@ref), [`CanIgnoreTObjectStreamer`](@ref), [`CanSplit`](@ref), [`ClassProperty`](@ref), [`Clone`](@ref), [`CopyCollectionProxy`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`DynamicCast`](@ref), [`EscapeChars`](@ref), [`FindConversionStreamerInfo`](@ref), [`FindStreamerInfoAbstractEmulated`](@ref), [`FindStreamerInfo`](@ref), [`ForceReload`](@ref), [`GetActualClass`](@ref), [`GetBaseClassOffset`](@ref), [`GetBaseClass`](@ref), [`GetBaseDataMember`](@ref), [`GetCheckSum`](@ref), [`GetClassInfo`](@ref), [`GetClassMethodWithPrototype`](@ref), [`GetClassMethod`](@ref), [`GetClassSize`](@ref), [`GetClassVersion`](@ref), [`GetCollectionGetType`](@ref), [`GetCollectionProxy`](@ref), [`GetContextMenuTitle`](@ref), [`GetConvStreamerFunc`](@ref), [`GetConversionStreamerInfo`](@ref), [`GetCurrentStreamerInfo`](@ref), [`GetDataMemberOffset`](@ref), [`GetDataMember`](@ref), [`GetDeclFileLine`](@ref), [`GetDeclFileName`](@ref), [`GetDeleteArray`](@ref), [`GetDelete`](@ref), [`GetDestructor`](@ref), [`GetDirectoryAutoAdd`](@ref), [`GetFunctionTemplate`](@ref), [`GetGetTypeInfo`](@ref), [`GetHeapInstanceCount`](@ref), [`GetImplFileLine`](@ref), [`GetImplFileName`](@ref), [`GetInstanceCount`](@ref), [`GetIsAProxy`](@ref), [`GetLastReadInfo`](@ref), [`GetListOfAllPublicDataMembers`](@ref), [`GetListOfAllPublicMethods`](@ref), [`GetListOfBases`](@ref), [`GetListOfDataMembers`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfMethodOverloads`](@ref), [`GetListOfMethods`](@ref), [`GetListOfRealData`](@ref), [`GetListOfUsingDataMembers`](@ref), [`GetMenuItems`](@ref), [`GetMenuList`](@ref), [`GetMerge`](@ref), [`GetMethodAllAny`](@ref), [`GetMethodAny`](@ref), [`GetMethodWithPrototype`](@ref), [`GetMethod`](@ref), [`GetMissingDictionaries`](@ref), [`GetNdata`](@ref), [`GetNewArray`](@ref), [`GetNew`](@ref), [`GetNmethods`](@ref), [`GetPersistentRef`](@ref), [`GetRealData`](@ref), [`GetReferenceProxy`](@ref), [`GetResetAfterMerge`](@ref), [`GetSchemaRules`](@ref), [`GetSharedLibs`](@ref), [`GetShowMembersWrapper`](@ref), [`GetState`](@ref), [`GetStreamerFunc`](@ref), [`GetStreamerInfoAbstractEmulated`](@ref), [`GetStreamerInfo`](@ref), [`GetStreamerInfos`](@ref), [`GetStreamer`](@ref), [`HasConsistentHashMember`](@ref), [`HasCustomStreamerMember`](@ref), [`HasDataMemberInfo`](@ref), [`HasDefaultConstructor`](@ref), [`HasDictionary`](@ref), [`HasInterpreterInfoInMemory`](@ref), [`HasInterpreterInfo`](@ref), [`HasLocalHashMember`](@ref), [`IgnoreTObjectStreamer`](@ref), [`InheritsFrom`](@ref), [`InterpretedShowMembers`](@ref), [`IsFolder`](@ref), [`IsForeign`](@ref), [`IsLoaded`](@ref), [`IsStartingWithTObject`](@ref), [`IsSyntheticPair`](@ref), [`IsTObject`](@ref), [`IsVersioned`](@ref), [`MakeCustomMenuList`](@ref), [`MatchLegacyCheckSum`](@ref), [`Move`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PostLoadCheck`](@ref), [`Property`](@ref), [`ReadBuffer`](@ref), [`RegisterStreamerInfo`](@ref), [`RemoveStreamerInfo`](@ref), [`ReplaceWith`](@ref), [`ResetCaches`](@ref), [`ResetClassInfo`](@ref), [`ResetInstanceCount`](@ref), [`ResetMenuList`](@ref), [`SetCanSplit`](@ref), [`SetCollectionProxy`](@ref), [`SetContextMenuTitle`](@ref), [`SetConvStreamerFunc`](@ref), [`SetCurrentStreamerInfo`](@ref), [`SetDeclFile`](@ref), [`SetDeleteArray`](@ref), [`SetDelete`](@ref), [`SetDestructor`](@ref), [`SetDirectoryAutoAdd`](@ref), [`SetGlobalIsA`](@ref), [`SetImplFileName`](@ref), [`SetLastReadInfo`](@ref), [`SetMemberStreamer`](@ref), [`SetMerge`](@ref), [`SetNewArray`](@ref), [`SetNew`](@ref), [`SetResetAfterMerge`](@ref), [`SetStreamerFunc`](@ref), [`SetStreamerInfo`](@ref), [`SetUnloaded`](@ref), [`Size`](@ref), [`Store`](@ref), [`Streamer`](@ref), [`TClass!AddClassToDeclIdMap`](@ref), [`TClass!AddClass`](@ref), [`TClass!AddRule`](@ref), [`TClass!AutoBrowse`](@ref), [`TClass!GetClass`](@ref), [`TClass!GetDict`](@ref), [`TClass!HasDictionarySelection`](@ref), [`TClass!IsCallingNew`](@ref), [`TClass!LoadClass`](@ref), [`TClass!Load`](@ref), [`TClass!ReadRules`](@ref), [`TClass!RemoveClassDeclId`](@ref), [`TClass!RemoveClass`](@ref), [`TClass`](@ref), [`WriteBuffer`](@ref), [`ls`](@ref)
+Related functions: [`AddImplFile`](@ref), [`AddInstance`](@ref), [`AdoptMemberStreamer`](@ref), [`AdoptReferenceProxy`](@ref), [`AdoptSchemaRules`](@ref), [`AdoptStreamer`](@ref), [`Browse`](@ref), [`BuildEmulatedRealData`](@ref), [`BuildRealData`](@ref), [`CalculateStreamerOffset`](@ref), [`CallShowMembers`](@ref), [`CanIgnoreTObjectStreamer`](@ref), [`CanSplit`](@ref), [`ClassProperty`](@ref), [`Clone`](@ref), [`CopyCollectionProxy`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`DynamicCast`](@ref), [`EscapeChars`](@ref), [`FindConversionStreamerInfo`](@ref), [`FindStreamerInfoAbstractEmulated`](@ref), [`FindStreamerInfo`](@ref), [`ForceReload`](@ref), [`GetActualClass`](@ref), [`GetBaseClassOffset`](@ref), [`GetBaseClass`](@ref), [`GetBaseDataMember`](@ref), [`GetCheckSum`](@ref), [`GetClassInfo`](@ref), [`GetClassMethodWithPrototype`](@ref), [`GetClassMethod`](@ref), [`GetClassSize`](@ref), [`GetClassVersion`](@ref), [`GetCollectionProxy`](@ref), [`GetCollectionType`](@ref), [`GetContextMenuTitle`](@ref), [`GetConvStreamerFunc`](@ref), [`GetConversionStreamerInfo`](@ref), [`GetCurrentStreamerInfo`](@ref), [`GetDataMemberOffset`](@ref), [`GetDataMember`](@ref), [`GetDeclFileLine`](@ref), [`GetDeclFileName`](@ref), [`GetDeleteArray`](@ref), [`GetDelete`](@ref), [`GetDestructor`](@ref), [`GetDirectoryAutoAdd`](@ref), [`GetFunctionTemplate`](@ref), [`GetHeapInstanceCount`](@ref), [`GetImplFileLine`](@ref), [`GetImplFileName`](@ref), [`GetInstanceCount`](@ref), [`GetIsAProxy`](@ref), [`GetLastReadInfo`](@ref), [`GetListOfAllPublicDataMembers`](@ref), [`GetListOfAllPublicMethods`](@ref), [`GetListOfBases`](@ref), [`GetListOfDataMembers`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfMethodOverloads`](@ref), [`GetListOfMethods`](@ref), [`GetListOfRealData`](@ref), [`GetListOfUsingDataMembers`](@ref), [`GetMenuItems`](@ref), [`GetMenuList`](@ref), [`GetMerge`](@ref), [`GetMethodAllAny`](@ref), [`GetMethodAny`](@ref), [`GetMethodWithPrototype`](@ref), [`GetMethod`](@ref), [`GetMissingDictionaries`](@ref), [`GetNdata`](@ref), [`GetNewArray`](@ref), [`GetNew`](@ref), [`GetNmethods`](@ref), [`GetPersistentRef`](@ref), [`GetRealData`](@ref), [`GetReferenceProxy`](@ref), [`GetResetAfterMerge`](@ref), [`GetSchemaRules`](@ref), [`GetSharedLibs`](@ref), [`GetShowMembersWrapper`](@ref), [`GetState`](@ref), [`GetStreamerFunc`](@ref), [`GetStreamerInfoAbstractEmulated`](@ref), [`GetStreamerInfo`](@ref), [`GetStreamerInfos`](@ref), [`GetStreamer`](@ref), [`GetTypeInfo`](@ref), [`HasConsistentHashMember`](@ref), [`HasCustomStreamerMember`](@ref), [`HasDataMemberInfo`](@ref), [`HasDefaultConstructor`](@ref), [`HasDictionary`](@ref), [`HasInterpreterInfoInMemory`](@ref), [`HasInterpreterInfo`](@ref), [`HasLocalHashMember`](@ref), [`IgnoreTObjectStreamer`](@ref), [`InheritsFrom`](@ref), [`InterpretedShowMembers`](@ref), [`IsFolder`](@ref), [`IsForeign`](@ref), [`IsLoaded`](@ref), [`IsStartingWithTObject`](@ref), [`IsSyntheticPair`](@ref), [`IsTObject`](@ref), [`IsVersioned`](@ref), [`MakeCustomMenuList`](@ref), [`MatchLegacyCheckSum`](@ref), [`Move`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PostLoadCheck`](@ref), [`Property`](@ref), [`ReadBuffer`](@ref), [`RegisterStreamerInfo`](@ref), [`RemoveStreamerInfo`](@ref), [`ReplaceWith`](@ref), [`ResetCaches`](@ref), [`ResetClassInfo`](@ref), [`ResetInstanceCount`](@ref), [`ResetMenuList`](@ref), [`SetCanSplit`](@ref), [`SetCollectionProxy`](@ref), [`SetContextMenuTitle`](@ref), [`SetConvStreamerFunc`](@ref), [`SetCurrentStreamerInfo`](@ref), [`SetDeclFile`](@ref), [`SetDeleteArray`](@ref), [`SetDelete`](@ref), [`SetDestructor`](@ref), [`SetDirectoryAutoAdd`](@ref), [`SetGlobalIsA`](@ref), [`SetImplFileName`](@ref), [`SetLastReadInfo`](@ref), [`SetMemberStreamer`](@ref), [`SetMerge`](@ref), [`SetNewArray`](@ref), [`SetNew`](@ref), [`SetResetAfterMerge`](@ref), [`SetStreamerFunc`](@ref), [`SetStreamerInfo`](@ref), [`SetUnloaded`](@ref), [`Size`](@ref), [`Store`](@ref), [`Streamer`](@ref), [`TClass!AddClassToDeclIdMap`](@ref), [`TClass!AddClass`](@ref), [`TClass!AddRule`](@ref), [`TClass!AutoBrowse`](@ref), [`TClass!GetClass`](@ref), [`TClass!GetDict`](@ref), [`TClass!HasDictionarySelection`](@ref), [`TClass!IsCallingNew`](@ref), [`TClass!LoadClass`](@ref), [`TClass!Load`](@ref), [`TClass!ReadRules`](@ref), [`TClass!RemoveClassDeclId`](@ref), [`TClass!RemoveClass`](@ref), [`TClass`](@ref), [`WriteBuffer`](@ref), [`ls`](@ref)
 """ TClass
 
 # Wrapper of TVirtualIsAProxy
@@ -172,7 +172,7 @@ The [TObject](@ref) class provides default behaviour and protocol for all object
 
 [TObject](@ref)'s bits can be used as flags, bits 0 - 13 and 24-31 are reserved as global_ bits while bits 14 - 23 can be used in different class hierarchies (watch out for overlaps).
 
-Related functions: [`AbstractMethod`](@ref), [`AppendPad`](@ref), [`Browse`](@ref), [`CheckedHash`](@ref), [`ClassName`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`Compare`](@ref), [`Copy`](@ref), [`Delete`](@ref), [`DistancetoPrimitive`](@ref), [`DrawClass`](@ref), [`DrawClone`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`Error`](@ref), [`ExecuteEvent`](@ref), [`Execute`](@ref), [`Fatal`](@ref), [`FindObject`](@ref), [`GetDrawOption`](@ref), [`GetIconName`](@ref), [`GetName`](@ref), [`GetObjectInfo`](@ref), [`GetOption`](@ref), [`GetTitle`](@ref), [`GetUniqueID`](@ref), [`HandleGetTimer`](@ref), [`HasInconsistentHash`](@ref), [`Hash`](@ref), [`Info`](@ref), [`InheritsFrom`](@ref), [`Inspect`](@ref), [`InvertBit`](@ref), [`IsA`](@ref), [`IsDestructed`](@ref), [`IsEqual`](@ref), [`IsFolder`](@ref), [`IsOnHeap`](@ref), [`IsSortable`](@ref), [`IsZombie`](@ref), [`MayNotUse`](@ref), [`Notify`](@ref), [`Obsolete`](@ref), [`Paint`](@ref), [`Pop`](@ref), [`Print`](@ref), [`Read`](@ref), [`RecursiveRemove`](@ref), [`ResetBit`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SetBit`](@ref), [`SetDrawOption`](@ref), [`SetUniqueID`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SysError`](@ref), [`TObject!Class_Name`](@ref), [`TObject!Class_Version`](@ref), [`TObject!Class`](@ref), [`TObject!DeclFileName`](@ref), [`TObject!GetDtorOnly`](@ref), [`TObject!GetObjectStat`](@ref), [`TObject!SetDtorOnly`](@ref), [`TObject!SetObjectStat`](@ref), [`TObject`](@ref), [`TestBit`](@ref), [`TestBits`](@ref), [`UseCurrentStyle`](@ref), [`Warning`](@ref), [`Write`](@ref), [`assign`](@ref), [`delete`](@ref), [`deletearray`](@ref), [`ls`](@ref), [`new`](@ref), [`newarray`](@ref)
+Related functions: [`AbstractMethod`](@ref), [`AppendPad`](@ref), [`Browse`](@ref), [`CheckedHash`](@ref), [`ClassName`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`Compare`](@ref), [`Copy`](@ref), [`Delete`](@ref), [`DistancetoPrimitive`](@ref), [`DrawClass`](@ref), [`DrawClone`](@ref), [`Draw`](@ref), [`Dump`](@ref), [`Error`](@ref), [`ExecuteEvent`](@ref), [`Execute`](@ref), [`Fatal`](@ref), [`FindObject`](@ref), [`GetDrawOption`](@ref), [`GetIconName`](@ref), [`GetName`](@ref), [`GetObjectInfo`](@ref), [`GetOption`](@ref), [`GetTitle`](@ref), [`GetUniqueID`](@ref), [`HandleTimer`](@ref), [`HasInconsistentHash`](@ref), [`Hash`](@ref), [`Info`](@ref), [`InheritsFrom`](@ref), [`Inspect`](@ref), [`InvertBit`](@ref), [`IsA`](@ref), [`IsDestructed`](@ref), [`IsEqual`](@ref), [`IsFolder`](@ref), [`IsOnHeap`](@ref), [`IsSortable`](@ref), [`IsZombie`](@ref), [`MayNotUse`](@ref), [`Notify`](@ref), [`Obsolete`](@ref), [`Paint`](@ref), [`Pop`](@ref), [`Print`](@ref), [`Read`](@ref), [`RecursiveRemove`](@ref), [`ResetBit`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SetBit`](@ref), [`SetDrawOption`](@ref), [`SetUniqueID`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SysError`](@ref), [`TObject!Class_Name`](@ref), [`TObject!Class_Version`](@ref), [`TObject!Class`](@ref), [`TObject!DeclFileName`](@ref), [`TObject!GetDtorOnly`](@ref), [`TObject!GetObjectStat`](@ref), [`TObject!SetDtorOnly`](@ref), [`TObject!SetObjectStat`](@ref), [`TObject`](@ref), [`TestBit`](@ref), [`TestBits`](@ref), [`UseCurrentStyle`](@ref), [`Warning`](@ref), [`Write`](@ref), [`assign`](@ref), [`delete`](@ref), [`deletearray`](@ref), [`ls`](@ref), [`new`](@ref), [`newarray`](@ref)
 """ TObject
 
 # Wrapper of TBrowser
@@ -195,7 +195,7 @@ ROOT version 6.24/00
 
 (C++ version of the code)
 
-Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObject`](@ref), [`CheckObjectItem`](@ref), [`Create`](@ref), [`Destructor`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowserImp`](@ref), [`GetContextMenu`](@ref), [`GetDrawOption`](@ref), [`GetRefreshFlag`](@ref), [`GetSelected`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowserImp`](@ref), [`SetDrawOption`](@ref), [`SetRefreshFlag`](@ref), [`SetSelected`](@ref), [`SetStatusGetText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowser`](@ref)
+Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObject`](@ref), [`CheckObjectItem`](@ref), [`Create`](@ref), [`Destructor`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowserImp`](@ref), [`GetContextMenu`](@ref), [`GetDrawOption`](@ref), [`GetRefreshFlag`](@ref), [`GetSelected`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowserImp`](@ref), [`SetDrawOption`](@ref), [`SetRefreshFlag`](@ref), [`SetSelected`](@ref), [`SetStatusText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowser`](@ref)
 """ TBrowser
 
 # Wrapper of TObjArray
@@ -242,7 +242,7 @@ Buffer base class used for serializing objects.
 
 
 
-Related functions: [`ApplySequenceVecPtr`](@ref), [`ApplySequence`](@ref), [`AutoExpand`](@ref), [`BufferSize`](@ref), [`Buffer`](@ref), [`ByteSwapBuffer`](@ref), [`CheckByteCount`](@ref), [`CheckObject`](@ref), [`ClassBegin`](@ref), [`ClassEnd`](@ref), [`ClassMember`](@ref), [`DecrementLevel`](@ref), [`DetachBuffer`](@ref), [`Expand`](@ref), [`ForceWriteInfoClones`](@ref), [`ForceWriteInfo`](@ref), [`GetBufferDisplacement`](@ref), [`GetBufferVersion`](@ref), [`GetCurrent`](@ref), [`GetInfo`](@ref), [`GetLastProcessID`](@ref), [`GetMapCount`](@ref), [`GetMappedObject`](@ref), [`GetParent`](@ref), [`GetPidOffset`](@ref), [`GetReAllocFunc`](@ref), [`GetTRefExecId`](@ref), [`GetVersionOwner`](@ref), [`IncrementLevel`](@ref), [`InitMap`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`IsWriting`](@ref), [`Length`](@ref), [`MapObject`](@ref), [`PeekDataCache`](@ref), [`PopDataCache`](@ref), [`PushDataCache`](@ref), [`ReadArrayDouble32`](@ref), [`ReadArrayFloat16`](@ref), [`ReadArray`](@ref), [`ReadBool`](@ref), [`ReadBuf`](@ref), [`ReadCharP`](@ref), [`ReadCharStar`](@ref), [`ReadChar`](@ref), [`ReadClassBuffer`](@ref), [`ReadClassEmulated`](@ref), [`ReadClass`](@ref), [`ReadClones`](@ref), [`ReadDouble32`](@ref), [`ReadDouble`](@ref), [`ReadFastArrayDouble32`](@ref), [`ReadFastArrayFloat16`](@ref), [`ReadFastArrayGetString`](@ref), [`ReadFastArrayWithFactor`](@ref), [`ReadFastArrayWithNbits`](@ref), [`ReadFastArray`](@ref), [`ReadFloat16`](@ref), [`ReadFloat`](@ref), [`ReadGetString`](@ref), [`ReadInt`](@ref), [`ReadLong64`](@ref), [`ReadLong`](@ref), [`ReadObjectAny`](@ref), [`ReadObject`](@ref), [`ReadProcessID`](@ref), [`ReadShort`](@ref), [`ReadStaticArrayDouble32`](@ref), [`ReadStaticArrayFloat16`](@ref), [`ReadStaticArray`](@ref), [`ReadStdGetString`](@ref), [`ReadTGetString`](@ref), [`ReadUChar`](@ref), [`ReadUInt`](@ref), [`ReadULong64`](@ref), [`ReadULong`](@ref), [`ReadUShort`](@ref), [`ReadVersionForMemberWise`](@ref), [`ReadVersionNoCheckSum`](@ref), [`ReadVersion`](@ref), [`ReadWithFactor`](@ref), [`ReadWithNbits`](@ref), [`ResetMap`](@ref), [`Reset`](@ref), [`SetBufferDisplacement`](@ref), [`SetBufferOffset`](@ref), [`SetBuffer`](@ref), [`SetByteCount`](@ref), [`SetParent`](@ref), [`SetPidOffset`](@ref), [`SetReAllocFunc`](@ref), [`SetReadMode`](@ref), [`SetReadParam`](@ref), [`SetStreamerElementNumber`](@ref), [`SetWriteMode`](@ref), [`SetWriteParam`](@ref), [`SkipObjectAny`](@ref), [`SkipVersion`](@ref), [`StreamObject`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer!Class_Name`](@ref), [`TBuffer!Class_Version`](@ref), [`TBuffer!Class`](@ref), [`TBuffer!DeclFileName`](@ref), [`TBuffer!GetClass`](@ref), [`TBuffer`](@ref), [`TagStreamerInfo`](@ref), [`WriteArrayDouble32`](@ref), [`WriteArrayFloat16`](@ref), [`WriteArray`](@ref), [`WriteBool`](@ref), [`WriteBuf`](@ref), [`WriteCharP`](@ref), [`WriteCharStar`](@ref), [`WriteChar`](@ref), [`WriteClassBuffer`](@ref), [`WriteClass`](@ref), [`WriteClones`](@ref), [`WriteDouble32`](@ref), [`WriteDouble`](@ref), [`WriteFastArrayDouble32`](@ref), [`WriteFastArrayFloat16`](@ref), [`WriteFastArrayGetString`](@ref), [`WriteFastArray`](@ref), [`WriteFloat16`](@ref), [`WriteFloat`](@ref), [`WriteGetString`](@ref), [`WriteInt`](@ref), [`WriteLong64`](@ref), [`WriteLong`](@ref), [`WriteObjectAny`](@ref), [`WriteObject`](@ref), [`WriteProcessID`](@ref), [`WriteShort`](@ref), [`WriteStdGetString`](@ref), [`WriteTGetString`](@ref), [`WriteUChar`](@ref), [`WriteUInt`](@ref), [`WriteULong64`](@ref), [`WriteULong`](@ref), [`WriteUShort`](@ref), [`WriteVersionMemberWise`](@ref), [`WriteVersion`](@ref)
+Related functions: [`ApplySequenceVecPtr`](@ref), [`ApplySequence`](@ref), [`AutoExpand`](@ref), [`BufferSize`](@ref), [`Buffer`](@ref), [`ByteSwapBuffer`](@ref), [`CheckByteCount`](@ref), [`CheckObject`](@ref), [`ClassBegin`](@ref), [`ClassEnd`](@ref), [`ClassMember`](@ref), [`DecrementLevel`](@ref), [`DetachBuffer`](@ref), [`Expand`](@ref), [`ForceWriteInfoClones`](@ref), [`ForceWriteInfo`](@ref), [`GetBufferDisplacement`](@ref), [`GetBufferVersion`](@ref), [`GetCurrent`](@ref), [`GetInfo`](@ref), [`GetLastProcessID`](@ref), [`GetMapCount`](@ref), [`GetMappedObject`](@ref), [`GetParent`](@ref), [`GetPidOffset`](@ref), [`GetReAllocFunc`](@ref), [`GetTRefExecId`](@ref), [`GetVersionOwner`](@ref), [`IncrementLevel`](@ref), [`InitMap`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`IsWriting`](@ref), [`Length`](@ref), [`MapObject`](@ref), [`PeekDataCache`](@ref), [`PopDataCache`](@ref), [`PushDataCache`](@ref), [`ReadArrayDouble32`](@ref), [`ReadArrayFloat16`](@ref), [`ReadArray`](@ref), [`ReadBool`](@ref), [`ReadBuf`](@ref), [`ReadCharP`](@ref), [`ReadCharStar`](@ref), [`ReadChar`](@ref), [`ReadClassBuffer`](@ref), [`ReadClassEmulated`](@ref), [`ReadClass`](@ref), [`ReadClones`](@ref), [`ReadDouble32`](@ref), [`ReadDouble`](@ref), [`ReadFastArrayDouble32`](@ref), [`ReadFastArrayFloat16`](@ref), [`ReadFastArrayString`](@ref), [`ReadFastArrayWithFactor`](@ref), [`ReadFastArrayWithNbits`](@ref), [`ReadFastArray`](@ref), [`ReadFloat16`](@ref), [`ReadFloat`](@ref), [`ReadInt`](@ref), [`ReadLong64`](@ref), [`ReadLong`](@ref), [`ReadObjectAny`](@ref), [`ReadObject`](@ref), [`ReadProcessID`](@ref), [`ReadShort`](@ref), [`ReadStaticArrayDouble32`](@ref), [`ReadStaticArrayFloat16`](@ref), [`ReadStaticArray`](@ref), [`ReadStdString`](@ref), [`ReadString`](@ref), [`ReadTString`](@ref), [`ReadUChar`](@ref), [`ReadUInt`](@ref), [`ReadULong64`](@ref), [`ReadULong`](@ref), [`ReadUShort`](@ref), [`ReadVersionForMemberWise`](@ref), [`ReadVersionNoCheckSum`](@ref), [`ReadVersion`](@ref), [`ReadWithFactor`](@ref), [`ReadWithNbits`](@ref), [`ResetMap`](@ref), [`Reset`](@ref), [`SetBufferDisplacement`](@ref), [`SetBufferOffset`](@ref), [`SetBuffer`](@ref), [`SetByteCount`](@ref), [`SetParent`](@ref), [`SetPidOffset`](@ref), [`SetReAllocFunc`](@ref), [`SetReadMode`](@ref), [`SetReadParam`](@ref), [`SetStreamerElementNumber`](@ref), [`SetWriteMode`](@ref), [`SetWriteParam`](@ref), [`SkipObjectAny`](@ref), [`SkipVersion`](@ref), [`StreamObject`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer!Class_Name`](@ref), [`TBuffer!Class_Version`](@ref), [`TBuffer!Class`](@ref), [`TBuffer!DeclFileName`](@ref), [`TBuffer!GetClass`](@ref), [`TBuffer`](@ref), [`TagStreamerInfo`](@ref), [`WriteArrayDouble32`](@ref), [`WriteArrayFloat16`](@ref), [`WriteArray`](@ref), [`WriteBool`](@ref), [`WriteBuf`](@ref), [`WriteCharP`](@ref), [`WriteCharStar`](@ref), [`WriteChar`](@ref), [`WriteClassBuffer`](@ref), [`WriteClass`](@ref), [`WriteClones`](@ref), [`WriteDouble32`](@ref), [`WriteDouble`](@ref), [`WriteFastArrayDouble32`](@ref), [`WriteFastArrayFloat16`](@ref), [`WriteFastArrayString`](@ref), [`WriteFastArray`](@ref), [`WriteFloat16`](@ref), [`WriteFloat`](@ref), [`WriteInt`](@ref), [`WriteLong64`](@ref), [`WriteLong`](@ref), [`WriteObjectAny`](@ref), [`WriteObject`](@ref), [`WriteProcessID`](@ref), [`WriteShort`](@ref), [`WriteStdString`](@ref), [`WriteString`](@ref), [`WriteTString`](@ref), [`WriteUChar`](@ref), [`WriteUInt`](@ref), [`WriteULong64`](@ref), [`WriteULong`](@ref), [`WriteUShort`](@ref), [`WriteVersionMemberWise`](@ref), [`WriteVersion`](@ref)
 """ TBuffer
 
 # Wrapper of TVectorT
@@ -265,7 +265,7 @@ Note that Constructors/assignments exists for all different matrix views
 
 For usage examples see `$ROOTSYS/test/stressLinear.cxx`
 
-Related functions: [`Abs`](@ref), [`AddSomeConstant`](@ref), [`Add`](@ref), [`Apply`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`GetGetMatrixArray`](@ref), [`GetLwb`](@ref), [`GetNoElements`](@ref), [`GetNrows`](@ref), [`GetSub`](@ref), [`GetUpb`](@ref), [`Invalidate`](@ref), [`Invert`](@ref), [`IsOwner`](@ref), [`IsValid`](@ref), [`MakeValid`](@ref), [`MatchesNonZeroPattern`](@ref), [`Max`](@ref), [`Min`](@ref), [`NonZeros`](@ref), [`Norm1`](@ref), [`Norm2Sqr`](@ref), [`NormInf`](@ref), [`Print`](@ref), [`Randomize`](@ref), [`ResizeTo`](@ref), [`SelectNonZeros`](@ref), [`SetElements`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SomePositive`](@ref), [`Sqr`](@ref), [`Sqrt`](@ref), [`Sum`](@ref), [`TVectorT`](@ref), [`Use`](@ref), [`Zero`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
+Related functions: [`Abs`](@ref), [`AddSomeConstant`](@ref), [`Add`](@ref), [`Apply`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`GetLwb`](@ref), [`GetMatrixArray`](@ref), [`GetNoElements`](@ref), [`GetNrows`](@ref), [`GetSub`](@ref), [`GetUpb`](@ref), [`Invalidate`](@ref), [`Invert`](@ref), [`IsOwner`](@ref), [`IsValid`](@ref), [`MakeValid`](@ref), [`MatchesNonZeroPattern`](@ref), [`Max`](@ref), [`Min`](@ref), [`NonZeros`](@ref), [`Norm1`](@ref), [`Norm2Sqr`](@ref), [`NormInf`](@ref), [`Print`](@ref), [`Randomize`](@ref), [`ResizeTo`](@ref), [`SelectNonZeros`](@ref), [`SetElements`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SomePositive`](@ref), [`Sqr`](@ref), [`Sqrt`](@ref), [`Sum`](@ref), [`TVectorT`](@ref), [`Use`](@ref), [`Zero`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
 """ TVectorT
 
 # Wrapper of TCollection
@@ -304,7 +304,7 @@ Substring operations are provided by the [TSubString](@ref) class, which holds a
 
 (C++ version of the code)
 
-Related functions: [`Append`](@ref), [`Atof`](@ref), [`Atoi`](@ref), [`Atoll`](@ref), [`Base.getindex`](@ref), [`BeginsWith`](@ref), [`Capacity`](@ref), [`Chop`](@ref), [`Clear`](@ref), [`CompareTo`](@ref), [`Contains`](@ref), [`Copy`](@ref), [`CountChar`](@ref), [`Data`](@ref), [`EndsWith`](@ref), [`EqualTo`](@ref), [`FillBuffer`](@ref), [`First`](@ref), [`Form`](@ref), [`GetSubString`](@ref), [`Gets`](@ref), [`Hash`](@ref), [`Index`](@ref), [`Insert`](@ref), [`IsA`](@ref), [`IsAlnum`](@ref), [`IsAlpha`](@ref), [`IsAscii`](@ref), [`IsBin`](@ref), [`IsDec`](@ref), [`IsDigit`](@ref), [`IsFloat`](@ref), [`IsHex`](@ref), [`IsInBaseN`](@ref), [`IsNull`](@ref), [`IsOct`](@ref), [`IsWhitespace`](@ref), [`Last`](@ref), [`Length`](@ref), [`MD5`](@ref), [`MaybeRegexp`](@ref), [`MaybeWildcard`](@ref), [`Prepend`](@ref), [`Puts`](@ref), [`ReadBuffer`](@ref), [`ReadFile`](@ref), [`ReadGetString`](@ref), [`ReadLine`](@ref), [`ReadToDelim`](@ref), [`ReadToken`](@ref), [`Remove`](@ref), [`ReplaceAll`](@ref), [`ReplaceSpecialCppChars`](@ref), [`Replace`](@ref), [`Resize`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Strip`](@ref), [`Swap`](@ref), [`TGetString`](@ref), [`TString!BaseConvert`](@ref), [`TString!Class_Name`](@ref), [`TString!Class_Version`](@ref), [`TString!Class`](@ref), [`TString!DeclFileName`](@ref), [`TString!Format`](@ref), [`TString!GetInitialCapacity`](@ref), [`TString!GetMaxWaste`](@ref), [`TString!GetResizeIncrement`](@ref), [`TString!Hash`](@ref), [`TString!InitialCapacity`](@ref), [`TString!Itoa`](@ref), [`TString!LLtoa`](@ref), [`TString!MaxWaste`](@ref), [`TString!ReadGetString`](@ref), [`TString!ResizeIncrement`](@ref), [`TString!UItoa`](@ref), [`TString!ULLtoa`](@ref), [`TString!WriteGetString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`Tokenize`](@ref), [`View`](@ref), [`add!`](@ref), [`assign`](@ref), [`const char *`](@ref), [`paren`](@ref)
+Related functions: [`Append`](@ref), [`Atof`](@ref), [`Atoi`](@ref), [`Atoll`](@ref), [`Base.getindex`](@ref), [`BeginsWith`](@ref), [`Capacity`](@ref), [`Chop`](@ref), [`Clear`](@ref), [`CompareTo`](@ref), [`Contains`](@ref), [`Copy`](@ref), [`CountChar`](@ref), [`Data`](@ref), [`EndsWith`](@ref), [`EqualTo`](@ref), [`FillBuffer`](@ref), [`First`](@ref), [`Form`](@ref), [`GetSubString`](@ref), [`Gets`](@ref), [`Hash`](@ref), [`Index`](@ref), [`Insert`](@ref), [`IsA`](@ref), [`IsAlnum`](@ref), [`IsAlpha`](@ref), [`IsAscii`](@ref), [`IsBin`](@ref), [`IsDec`](@ref), [`IsDigit`](@ref), [`IsFloat`](@ref), [`IsHex`](@ref), [`IsInBaseN`](@ref), [`IsNull`](@ref), [`IsOct`](@ref), [`IsWhitespace`](@ref), [`Last`](@ref), [`Length`](@ref), [`MD5`](@ref), [`MaybeRegexp`](@ref), [`MaybeWildcard`](@ref), [`Prepend`](@ref), [`Puts`](@ref), [`ReadBuffer`](@ref), [`ReadFile`](@ref), [`ReadLine`](@ref), [`ReadString`](@ref), [`ReadToDelim`](@ref), [`ReadToken`](@ref), [`Remove`](@ref), [`ReplaceAll`](@ref), [`ReplaceSpecialCppChars`](@ref), [`Replace`](@ref), [`Resize`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Strip`](@ref), [`Swap`](@ref), [`TString!BaseConvert`](@ref), [`TString!Class_Name`](@ref), [`TString!Class_Version`](@ref), [`TString!Class`](@ref), [`TString!DeclFileName`](@ref), [`TString!Format`](@ref), [`TString!GetInitialCapacity`](@ref), [`TString!GetMaxWaste`](@ref), [`TString!GetResizeIncrement`](@ref), [`TString!Hash`](@ref), [`TString!InitialCapacity`](@ref), [`TString!Itoa`](@ref), [`TString!LLtoa`](@ref), [`TString!MaxWaste`](@ref), [`TString!ReadString`](@ref), [`TString!ResizeIncrement`](@ref), [`TString!UItoa`](@ref), [`TString!ULLtoa`](@ref), [`TString!WriteString`](@ref), [`TString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`Tokenize`](@ref), [`View`](@ref), [`add!`](@ref), [`assign`](@ref), [`const char *`](@ref), [`paren`](@ref)
 """ TString
 
 # Wrapper of TSubString
@@ -317,7 +317,7 @@ It can thestart at any character. It is considered to be "pointing" to just befo
 
 A "null" substring is a zero length substring that starts with the nonsense index kNPOS. It can be detected with the member function [IsNull()](@ref).
 
-Related functions: [`Base.:!`](@ref), [`Base.getindex`](@ref), [`Data`](@ref), [`GetString`](@ref), [`IsNull`](@ref), [`Length`](@ref), [`Start`](@ref), [`TGetSubString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`assign`](@ref), [`paren`](@ref)
+Related functions: [`Base.:!`](@ref), [`Base.getindex`](@ref), [`Data`](@ref), [`GetString`](@ref), [`IsNull`](@ref), [`Length`](@ref), [`Start`](@ref), [`TSubString`](@ref), [`ToLower`](@ref), [`ToUpper`](@ref), [`assign`](@ref), [`paren`](@ref)
 """ TSubString
 
 # Wrapper of TRegexp
@@ -609,7 +609,7 @@ This class creates the [ROOT](@ref) Application Environment that interfaces to t
 
 This class must be instantiated exactly once in any given application. Normally the specific application class inherits from [TApplication](@ref) (see [TRint](@ref)).
 
-Related functions: [`ApplicationName`](@ref), [`Argc`](@ref), [`Argv`](@ref), [`ClearInputFiles`](@ref), [`ExitOnException`](@ref), [`GetAppRemote`](@ref), [`GetApplicationImp`](@ref), [`GetIdleCommand`](@ref), [`GetOptions`](@ref), [`GetSetup`](@ref), [`GetSignalHandler`](@ref), [`HandleException`](@ref), [`HandleIdleGetTimer`](@ref), [`HandleTermInput`](@ref), [`Hide`](@ref), [`Iconify`](@ref), [`Init`](@ref), [`InitializeGraphics`](@ref), [`InputFiles`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsRunning`](@ref), [`KeyPressed`](@ref), [`LineProcessed`](@ref), [`Lower`](@ref), [`NoLogOpt`](@ref), [`NoLogoOpt`](@ref), [`OpenForumTopic`](@ref), [`OpenGitHubIssue`](@ref), [`OpenInBrowser`](@ref), [`OpenReferenceGuideFor`](@ref), [`Open`](@ref), [`ProcessFile`](@ref), [`ProcessLine`](@ref), [`QuitOpt`](@ref), [`Raise`](@ref), [`RemoveIdleGetTimer`](@ref), [`ReturnFromRun`](@ref), [`ReturnPressed`](@ref), [`Run`](@ref), [`SetEchoMode`](@ref), [`SetIdleGetTimer`](@ref), [`SetReturnFromRun`](@ref), [`Show`](@ref), [`StartIdleing`](@ref), [`StopIdleing`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TApplication!Class_Name`](@ref), [`TApplication!Class_Version`](@ref), [`TApplication!Class`](@ref), [`TApplication!CreateApplication`](@ref), [`TApplication!DeclFileName`](@ref), [`TApplication!ExecuteFile`](@ref), [`TApplication!GetApplications`](@ref), [`TApplication!NeedGraphicsLibs`](@ref), [`TApplication`](@ref), [`TabCompletionHook`](@ref), [`Terminate`](@ref), [`WorkingDirectory`](@ref), [`ls`](@ref)
+Related functions: [`ApplicationName`](@ref), [`Argc`](@ref), [`Argv`](@ref), [`ClearInputFiles`](@ref), [`ExitOnException`](@ref), [`GetAppRemote`](@ref), [`GetApplicationImp`](@ref), [`GetIdleCommand`](@ref), [`GetOptions`](@ref), [`GetSetup`](@ref), [`GetSignalHandler`](@ref), [`HandleException`](@ref), [`HandleIdleTimer`](@ref), [`HandleTermInput`](@ref), [`Hide`](@ref), [`Iconify`](@ref), [`Init`](@ref), [`InitializeGraphics`](@ref), [`InputFiles`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsRunning`](@ref), [`KeyPressed`](@ref), [`LineProcessed`](@ref), [`Lower`](@ref), [`NoLogOpt`](@ref), [`NoLogoOpt`](@ref), [`OpenForumTopic`](@ref), [`OpenGitHubIssue`](@ref), [`OpenInBrowser`](@ref), [`OpenReferenceGuideFor`](@ref), [`Open`](@ref), [`ProcessFile`](@ref), [`ProcessLine`](@ref), [`QuitOpt`](@ref), [`Raise`](@ref), [`RemoveIdleTimer`](@ref), [`ReturnFromRun`](@ref), [`ReturnPressed`](@ref), [`Run`](@ref), [`SetEchoMode`](@ref), [`SetIdleTimer`](@ref), [`SetReturnFromRun`](@ref), [`Show`](@ref), [`StartIdleing`](@ref), [`StopIdleing`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TApplication!Class_Name`](@ref), [`TApplication!Class_Version`](@ref), [`TApplication!Class`](@ref), [`TApplication!CreateApplication`](@ref), [`TApplication!DeclFileName`](@ref), [`TApplication!ExecuteFile`](@ref), [`TApplication!GetApplications`](@ref), [`TApplication!NeedGraphicsLibs`](@ref), [`TApplication`](@ref), [`TabCompletionHook`](@ref), [`Terminate`](@ref), [`WorkingDirectory`](@ref), [`ls`](@ref)
 """ TApplication
 
 # Wrapper of TSignalHandler
@@ -1182,7 +1182,7 @@ On screen, text is rendered using free [TTF](@ref) fonts similar to the PDF ones
 
 ![https://root.cern/doc/v636/pict1_TAttText_004.png](https://root.cern/doc/v636/pict1_TAttText_004.png)
 
-Related functions: [`Copy`](@ref), [`GetGetTextAlign`](@ref), [`GetGetTextAngle`](@ref), [`GetGetTextColor`](@ref), [`GetGetTextFont`](@ref), [`GetGetTextSizePercent`](@ref), [`GetGetTextSize`](@ref), [`IsA`](@ref), [`Modify`](@ref), [`ResetAttGetText`](@ref), [`SaveGetTextAttributes`](@ref), [`SetGetTextAlign`](@ref), [`SetGetTextAngle`](@ref), [`SetGetTextAttributes`](@ref), [`SetGetTextColorAlpha`](@ref), [`SetGetTextColor`](@ref), [`SetGetTextFont`](@ref), [`SetGetTextSizePixels`](@ref), [`SetGetTextSize`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TAttGetText`](@ref), [`TAttText!Class_Name`](@ref), [`TAttText!Class_Version`](@ref), [`TAttText!Class`](@ref), [`TAttText!DeclFileName`](@ref)
+Related functions: [`Copy`](@ref), [`GetTextAlign`](@ref), [`GetTextAngle`](@ref), [`GetTextColor`](@ref), [`GetTextFont`](@ref), [`GetTextSizePercent`](@ref), [`GetTextSize`](@ref), [`IsA`](@ref), [`Modify`](@ref), [`ResetAttText`](@ref), [`SaveTextAttributes`](@ref), [`SetTextAlign`](@ref), [`SetTextAngle`](@ref), [`SetTextAttributes`](@ref), [`SetTextColorAlpha`](@ref), [`SetTextColor`](@ref), [`SetTextFont`](@ref), [`SetTextSizePixels`](@ref), [`SetTextSize`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TAttText!Class_Name`](@ref), [`TAttText!Class_Version`](@ref), [`TAttText!Class`](@ref), [`TAttText!DeclFileName`](@ref), [`TAttText`](@ref)
 """ TAttText
 
 # Wrapper of TBase64
@@ -1344,7 +1344,7 @@ In many geometries there is a rigid containment hierarchy, and so if the viewer 
 
 Once add AddObject() has been called, the contents are copied to the viewer internally. You are free to destroy this object, or recycle it for the next object if suitable.
 
-Related functions: [`ClearSectionsValid`](@ref), [`GetSections`](@ref), [`GetType`](@ref), [`IsA`](@ref), [`NbPnts`](@ref), [`NbPols`](@ref), [`NbSegs`](@ref), [`SectionsValid`](@ref), [`SetAABoundingBox`](@ref), [`SetLocalMasterIdentity`](@ref), [`SetRawSizes`](@ref), [`SetSectionsValid`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer3D!Class_Name`](@ref), [`TBuffer3D!Class_Version`](@ref), [`TBuffer3D!Class`](@ref), [`TBuffer3D!DecCSLevel`](@ref), [`TBuffer3D!DeclFileName`](@ref), [`TBuffer3D!GetCSLevel`](@ref), [`TBuffer3D!IncCSLevel`](@ref), [`TBuffer3D`](@ref)
+Related functions: [`ClearSectionsValid`](@ref), [`GetSections`](@ref), [`IsA`](@ref), [`NbPnts`](@ref), [`NbPols`](@ref), [`NbSegs`](@ref), [`SectionsValid`](@ref), [`SetAABoundingBox`](@ref), [`SetLocalMasterIdentity`](@ref), [`SetRawSizes`](@ref), [`SetSectionsValid`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TBuffer3D!Class_Name`](@ref), [`TBuffer3D!Class_Version`](@ref), [`TBuffer3D!Class`](@ref), [`TBuffer3D!DecCSLevel`](@ref), [`TBuffer3D!DeclFileName`](@ref), [`TBuffer3D!GetCSLevel`](@ref), [`TBuffer3D!IncCSLevel`](@ref), [`TBuffer3D`](@ref), [`Type`](@ref)
 """ TBuffer3D
 
 # Wrapper of TBuffer3DSphere
@@ -1836,7 +1836,7 @@ The following macro gives an example of transparency usage:
 
  ![https://root.cern/doc/v636/pict1_TColor_071.png](https://root.cern/doc/v636/pict1_TColor_071.png)
 
-Related functions: [`AsHexGetString`](@ref), [`Copy`](@ref), [`GetAlpha`](@ref), [`GetBlue`](@ref), [`GetGrayscale`](@ref), [`GetGreen`](@ref), [`GetHLS`](@ref), [`GetHue`](@ref), [`GetLight`](@ref), [`GetNumber`](@ref), [`GetPixel`](@ref), [`GetRGB`](@ref), [`GetRed`](@ref), [`GetSaturation`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetAlpha`](@ref), [`SetRGB`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColor!Class_Name`](@ref), [`TColor!Class_Version`](@ref), [`TColor!Class`](@ref), [`TColor!CreateColorTableFromFile`](@ref), [`TColor!CreateColorWheel`](@ref), [`TColor!CreateColorsCircle`](@ref), [`TColor!CreateColorsGray`](@ref), [`TColor!CreateColorsRectangle`](@ref), [`TColor!CreateGradientColorTable`](@ref), [`TColor!DeclFileName`](@ref), [`TColor!DefinedColors`](@ref), [`TColor!GetColorBright`](@ref), [`TColor!GetColorByName`](@ref), [`TColor!GetColorDark`](@ref), [`TColor!GetColorPalette`](@ref), [`TColor!GetColorTransparent`](@ref), [`TColor!GetColor`](@ref), [`TColor!GetFreeColorIndex`](@ref), [`TColor!GetLinearGradient`](@ref), [`TColor!GetNumberOfColors`](@ref), [`TColor!GetPalette`](@ref), [`TColor!GetRadialGradient`](@ref), [`TColor!HLS2RGB`](@ref), [`TColor!HLStoRGB`](@ref), [`TColor!HSV2RGB`](@ref), [`TColor!InitializeColors`](@ref), [`TColor!InvertPalette`](@ref), [`TColor!IsGrayscale`](@ref), [`TColor!ListColors`](@ref), [`TColor!Number2Pixel`](@ref), [`TColor!Pixel2RGB`](@ref), [`TColor!PixelAsHexGetString`](@ref), [`TColor!RGB2HLS`](@ref), [`TColor!RGB2HSV`](@ref), [`TColor!RGB2Pixel`](@ref), [`TColor!RGBtoHLS`](@ref), [`TColor!SaveColor`](@ref), [`TColor!SetColorThreshold`](@ref), [`TColor!SetGrayscale`](@ref), [`TColor!SetPalette`](@ref), [`TColor`](@ref), [`assign`](@ref), [`ls`](@ref)
+Related functions: [`AsHexString`](@ref), [`Copy`](@ref), [`GetAlpha`](@ref), [`GetBlue`](@ref), [`GetGrayscale`](@ref), [`GetGreen`](@ref), [`GetHLS`](@ref), [`GetHue`](@ref), [`GetLight`](@ref), [`GetNumber`](@ref), [`GetPixel`](@ref), [`GetRGB`](@ref), [`GetRed`](@ref), [`GetSaturation`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetAlpha`](@ref), [`SetRGB`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColor!Class_Name`](@ref), [`TColor!Class_Version`](@ref), [`TColor!Class`](@ref), [`TColor!CreateColorTableFromFile`](@ref), [`TColor!CreateColorWheel`](@ref), [`TColor!CreateColorsCircle`](@ref), [`TColor!CreateColorsGray`](@ref), [`TColor!CreateColorsRectangle`](@ref), [`TColor!CreateGradientColorTable`](@ref), [`TColor!DeclFileName`](@ref), [`TColor!DefinedColors`](@ref), [`TColor!GetColorBright`](@ref), [`TColor!GetColorByName`](@ref), [`TColor!GetColorDark`](@ref), [`TColor!GetColorPalette`](@ref), [`TColor!GetColorTransparent`](@ref), [`TColor!GetColor`](@ref), [`TColor!GetFreeColorIndex`](@ref), [`TColor!GetLinearGradient`](@ref), [`TColor!GetNumberOfColors`](@ref), [`TColor!GetPalette`](@ref), [`TColor!GetRadialGradient`](@ref), [`TColor!HLS2RGB`](@ref), [`TColor!HLStoRGB`](@ref), [`TColor!HSV2RGB`](@ref), [`TColor!InitializeColors`](@ref), [`TColor!InvertPalette`](@ref), [`TColor!IsGrayscale`](@ref), [`TColor!ListColors`](@ref), [`TColor!Number2Pixel`](@ref), [`TColor!Pixel2RGB`](@ref), [`TColor!PixelAsHexString`](@ref), [`TColor!RGB2HLS`](@ref), [`TColor!RGB2HSV`](@ref), [`TColor!RGB2Pixel`](@ref), [`TColor!RGBtoHLS`](@ref), [`TColor!SaveColor`](@ref), [`TColor!SetColorThreshold`](@ref), [`TColor!SetGrayscale`](@ref), [`TColor!SetPalette`](@ref), [`TColor`](@ref), [`assign`](@ref), [`ls`](@ref)
 """ TColor
 
 # Wrapper of TColorGradient
@@ -1871,7 +1871,7 @@ Related functions: [`GetEnd`](@ref), [`GetStart`](@ref), [`IsA`](@ref), [`SetSta
 
 
 
-Related functions: [`GetCenter`](@ref), [`GetEnd`](@ref), [`GetGradientGetType`](@ref), [`GetR1`](@ref), [`GetR2`](@ref), [`GetRadius`](@ref), [`GetStart`](@ref), [`IsA`](@ref), [`SetRadialGradient`](@ref), [`SetStartEndR1R2`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColorGradient`](@ref), [`TRadialGradient!Class_Name`](@ref), [`TRadialGradient!Class_Version`](@ref), [`TRadialGradient!Class`](@ref), [`TRadialGradient!DeclFileName`](@ref), [`TRadialGradient`](@ref)
+Related functions: [`GetCenter`](@ref), [`GetEnd`](@ref), [`GetGradientType`](@ref), [`GetR1`](@ref), [`GetR2`](@ref), [`GetRadius`](@ref), [`GetStart`](@ref), [`IsA`](@ref), [`SetRadialGradient`](@ref), [`SetStartEndR1R2`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TColorGradient`](@ref), [`TRadialGradient!Class_Name`](@ref), [`TRadialGradient!Class_Version`](@ref), [`TRadialGradient!Class`](@ref), [`TRadialGradient!DeclFileName`](@ref), [`TRadialGradient`](@ref)
 """ TRadialGradient
 
 # Wrapper of TDatime
@@ -1884,7 +1884,7 @@ The date is stored with the origin being the 1st January 1995.
 
 This class has no support for time zones. The time is assumed to be in the local_ time of the machine where the object was created. As a result, [TDatime](@ref) objects are not portable between machines operating in different time zones and unsuitable for storing the date/time of data taking events and the like. If absolute time is required, use [TTimeStamp](@ref).
 
-Related functions: [`AsGetString`](@ref), [`AsSQLGetString`](@ref), [`Convert`](@ref), [`Copy`](@ref), [`FillBuffer`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDay`](@ref), [`GetHour`](@ref), [`GetMinute`](@ref), [`GetMonth`](@ref), [`GetSecond`](@ref), [`GetTime`](@ref), [`GetYear`](@ref), [`Get`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`Set`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TDatime!Class_Name`](@ref), [`TDatime!Class_Version`](@ref), [`TDatime!Class`](@ref), [`TDatime!DeclFileName`](@ref), [`TDatime!GetDateFromGlobalDay`](@ref), [`TDatime!GetDateTime`](@ref), [`TDatime!GetGlobalDayFromDate`](@ref), [`TDatime!GetLegalGlobalDayFromDate`](@ref), [`TDatime`](@ref), [`assign`](@ref)
+Related functions: [`AsSQLString`](@ref), [`AsString`](@ref), [`Convert`](@ref), [`Copy`](@ref), [`FillBuffer`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDay`](@ref), [`GetHour`](@ref), [`GetMinute`](@ref), [`GetMonth`](@ref), [`GetSecond`](@ref), [`GetTime`](@ref), [`GetYear`](@ref), [`Get`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`Set`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TDatime!Class_Name`](@ref), [`TDatime!Class_Version`](@ref), [`TDatime!Class`](@ref), [`TDatime!DeclFileName`](@ref), [`TDatime!GetDateFromGlobalDay`](@ref), [`TDatime!GetDateTime`](@ref), [`TDatime!GetGlobalDayFromDate`](@ref), [`TDatime!GetLegalGlobalDayFromDate`](@ref), [`TDatime`](@ref), [`assign`](@ref)
 """ TDatime
 
 # Wrapper of TUUID
@@ -1954,7 +1954,7 @@ UUIDs may be created at a rate greater than the system clock resolution. Therefo
 
 The 100-nanosecond granularity of time should prove sufficient even for bursts of UUID production in the next generation of high-performance multiprocessors. If a system overruns the clock adjustment by requesting too many UUIDs within a single system clock tick, the UUID generator will stall until the system clock catches up.
 
-Related functions: [`AsGetString`](@ref), [`Compare`](@ref), [`FillBuffer`](@ref), [`GetHostAddress`](@ref), [`GetTime`](@ref), [`GetUUIDNumber`](@ref), [`GetUUID`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`SetUUIDNumber`](@ref), [`SetUUID`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`StreamerV1`](@ref), [`Streamer`](@ref), [`TUUID!Class_Name`](@ref), [`TUUID!Class_Version`](@ref), [`TUUID!Class`](@ref), [`TUUID!DeclFileName`](@ref), [`TUUID`](@ref)
+Related functions: [`AsString`](@ref), [`Compare`](@ref), [`FillBuffer`](@ref), [`GetHostAddress`](@ref), [`GetTime`](@ref), [`GetUUIDNumber`](@ref), [`GetUUID`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`Print`](@ref), [`ReadBuffer`](@ref), [`SetUUIDNumber`](@ref), [`SetUUID`](@ref), [`Sizeof`](@ref), [`StreamerNVirtual`](@ref), [`StreamerV1`](@ref), [`Streamer`](@ref), [`TUUID!Class_Name`](@ref), [`TUUID!Class_Version`](@ref), [`TUUID!Class`](@ref), [`TUUID!DeclFileName`](@ref), [`TUUID`](@ref)
 """ TUUID
 
 # Wrapper of TInetAddress
@@ -2076,7 +2076,7 @@ The key structure is as follows; if a key is located past the 32 bit file limit 
 
 The structure of a directory is shown in TDirectoryFile!TDirectoryFile
 
-Related functions: [`Close`](@ref), [`Copy`](@ref), [`Cp`](@ref), [`CreateKey`](@ref), [`Delete`](@ref), [`DrawMap`](@ref), [`Draw`](@ref), [`FillBuffer`](@ref), [`Flush`](@ref), [`GetArchiveOffset`](@ref), [`GetArchive`](@ref), [`GetBestBuffer`](@ref), [`GetBytesReadExtra`](@ref), [`GetBytesRead`](@ref), [`GetBytesToPrefetch`](@ref), [`GetBytesWritten`](@ref), [`GetCacheRead`](@ref), [`GetCacheWrite`](@ref), [`GetClassIndex`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionFactor`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetEND`](@ref), [`GetEndpointUrl`](@ref), [`GetErrno`](@ref), [`GetFd`](@ref), [`GetListOfFree`](@ref), [`GetListOfProcessIDs`](@ref), [`GetNProcessIDs`](@ref), [`GetNbytesFree`](@ref), [`GetNbytesInfo`](@ref), [`GetNewUrl`](@ref), [`GetNfree`](@ref), [`GetOption`](@ref), [`GetReadCalls`](@ref), [`GetRecordHeader`](@ref), [`GetRelOffset`](@ref), [`GetSeekFree`](@ref), [`GetSeekInfo`](@ref), [`GetSize`](@ref), [`GetStreamerInfoCache`](@ref), [`GetStreamerInfoList`](@ref), [`GetVersion`](@ref), [`IncrementProcessIDs`](@ref), [`IsArchive`](@ref), [`IsBinary`](@ref), [`IsOpen`](@ref), [`IsRaw`](@ref), [`MakeFree`](@ref), [`MakeProject`](@ref), [`Map`](@ref), [`Matches`](@ref), [`MustFlush`](@ref), [`Paint`](@ref), [`Print`](@ref), [`ReOpen`](@ref), [`ReadBufferAsync`](@ref), [`ReadBuffer`](@ref), [`ReadBuffers`](@ref), [`ReadFree`](@ref), [`ReadProcessID`](@ref), [`ReadStreamerInfo`](@ref), [`Recover`](@ref), [`ResetErrno`](@ref), [`Seek`](@ref), [`SetCacheRead`](@ref), [`SetCacheWrite`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEND`](@ref), [`SetOffset`](@ref), [`SetOption`](@ref), [`SetReadCalls`](@ref), [`ShowStreamerInfo`](@ref), [`Sizeof`](@ref), [`SumBuffer`](@ref), [`TFile!AsyncOpen`](@ref), [`TFile!Cp`](@ref), [`TFile!CurrentFile`](@ref), [`TFile!GetAsyncOpenStatus`](@ref), [`TFile!GetCacheFileDir`](@ref), [`TFile!GetEndpointUrl`](@ref), [`TFile!GetFileBytesRead`](@ref), [`TFile!GetFileBytesWritten`](@ref), [`TFile!GetFileCounter`](@ref), [`TFile!GetFileReadCalls`](@ref), [`TFile!GetGetType`](@ref), [`TFile!GetOnlyStaged`](@ref), [`TFile!GetOpenTimeout`](@ref), [`TFile!GetReadStreamerInfo`](@ref), [`TFile!GetReadaheadSize`](@ref), [`TFile!IncrementFileCounter`](@ref), [`TFile!Open`](@ref), [`TFile!SetCacheFileDir`](@ref), [`TFile!SetFileBytesRead`](@ref), [`TFile!SetFileBytesWritten`](@ref), [`TFile!SetFileReadCalls`](@ref), [`TFile!SetOnlyStaged`](@ref), [`TFile!SetOpenTimeout`](@ref), [`TFile!SetReadStreamerInfo`](@ref), [`TFile!SetReadaheadSize`](@ref), [`TFile!ShrinkCacheFileDir`](@ref), [`TFile`](@ref), [`WriteBuffer`](@ref), [`WriteFree`](@ref), [`WriteHeader`](@ref), [`WriteProcessID`](@ref), [`WriteStreamerInfo`](@ref), [`Write`](@ref), [`ls`](@ref)
+Related functions: [`Close`](@ref), [`Copy`](@ref), [`Cp`](@ref), [`CreateKey`](@ref), [`Delete`](@ref), [`DrawMap`](@ref), [`Draw`](@ref), [`FillBuffer`](@ref), [`Flush`](@ref), [`GetArchiveOffset`](@ref), [`GetArchive`](@ref), [`GetBestBuffer`](@ref), [`GetBytesReadExtra`](@ref), [`GetBytesRead`](@ref), [`GetBytesToPrefetch`](@ref), [`GetBytesWritten`](@ref), [`GetCacheRead`](@ref), [`GetCacheWrite`](@ref), [`GetClassIndex`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionFactor`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetEND`](@ref), [`GetEndpointUrl`](@ref), [`GetErrno`](@ref), [`GetFd`](@ref), [`GetListOfFree`](@ref), [`GetListOfProcessIDs`](@ref), [`GetNProcessIDs`](@ref), [`GetNbytesFree`](@ref), [`GetNbytesInfo`](@ref), [`GetNewUrl`](@ref), [`GetNfree`](@ref), [`GetOption`](@ref), [`GetReadCalls`](@ref), [`GetRecordHeader`](@ref), [`GetRelOffset`](@ref), [`GetSeekFree`](@ref), [`GetSeekInfo`](@ref), [`GetSize`](@ref), [`GetStreamerInfoCache`](@ref), [`GetStreamerInfoList`](@ref), [`GetVersion`](@ref), [`IncrementProcessIDs`](@ref), [`IsArchive`](@ref), [`IsBinary`](@ref), [`IsOpen`](@ref), [`IsRaw`](@ref), [`MakeFree`](@ref), [`MakeProject`](@ref), [`Map`](@ref), [`Matches`](@ref), [`MustFlush`](@ref), [`Paint`](@ref), [`Print`](@ref), [`ReOpen`](@ref), [`ReadBufferAsync`](@ref), [`ReadBuffer`](@ref), [`ReadBuffers`](@ref), [`ReadFree`](@ref), [`ReadProcessID`](@ref), [`ReadStreamerInfo`](@ref), [`Recover`](@ref), [`ResetErrno`](@ref), [`Seek`](@ref), [`SetCacheRead`](@ref), [`SetCacheWrite`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEND`](@ref), [`SetOffset`](@ref), [`SetOption`](@ref), [`SetReadCalls`](@ref), [`ShowStreamerInfo`](@ref), [`Sizeof`](@ref), [`SumBuffer`](@ref), [`TFile!AsyncOpen`](@ref), [`TFile!Cp`](@ref), [`TFile!CurrentFile`](@ref), [`TFile!GetAsyncOpenStatus`](@ref), [`TFile!GetCacheFileDir`](@ref), [`TFile!GetEndpointUrl`](@ref), [`TFile!GetFileBytesRead`](@ref), [`TFile!GetFileBytesWritten`](@ref), [`TFile!GetFileCounter`](@ref), [`TFile!GetFileReadCalls`](@ref), [`TFile!GetOnlyStaged`](@ref), [`TFile!GetOpenTimeout`](@ref), [`TFile!GetReadStreamerInfo`](@ref), [`TFile!GetReadaheadSize`](@ref), [`TFile!GetType`](@ref), [`TFile!IncrementFileCounter`](@ref), [`TFile!Open`](@ref), [`TFile!SetCacheFileDir`](@ref), [`TFile!SetFileBytesRead`](@ref), [`TFile!SetFileBytesWritten`](@ref), [`TFile!SetFileReadCalls`](@ref), [`TFile!SetOnlyStaged`](@ref), [`TFile!SetOpenTimeout`](@ref), [`TFile!SetReadStreamerInfo`](@ref), [`TFile!SetReadaheadSize`](@ref), [`TFile!ShrinkCacheFileDir`](@ref), [`TFile`](@ref), [`WriteBuffer`](@ref), [`WriteFree`](@ref), [`WriteHeader`](@ref), [`WriteProcessID`](@ref), [`WriteStreamerInfo`](@ref), [`Write`](@ref), [`ls`](@ref)
 """ TFile
 
 # Wrapper of TEnv
@@ -2133,7 +2133,7 @@ Related functions: [`Defined`](@ref), [`GetRcName`](@ref), [`GetTable`](@ref), [
 
 
 
-Related functions: [`GetGetType`](@ref), [`GetLevel`](@ref), [`GetName`](@ref), [`GetValue`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TEnvRec!Class_Name`](@ref), [`TEnvRec!Class_Version`](@ref), [`TEnvRec!Class`](@ref), [`TEnvRec!DeclFileName`](@ref), [`TEnvRec`](@ref)
+Related functions: [`GetLevel`](@ref), [`GetName`](@ref), [`GetType`](@ref), [`GetValue`](@ref), [`Hash`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TEnvRec!Class_Name`](@ref), [`TEnvRec!Class_Version`](@ref), [`TEnvRec!Class`](@ref), [`TEnvRec!DeclFileName`](@ref), [`TEnvRec`](@ref)
 """ TEnvRec
 
 # Wrapper of THashList
@@ -2292,7 +2292,7 @@ Equivalent code is available from RSA Data Security, Inc. This code has been tes
 
 To compute the message digest of a chunk of bytes, create an [TMD5](@ref) object, call [Update()](@ref) as needed on buffers full of bytes, and then call [Final()](@ref), which will, optionally, fill a supplied 16-byte array with the digest.
 
-Related functions: [`AsGetString`](@ref), [`Final`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetDigest`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TMD5!Class_Name`](@ref), [`TMD5!Class_Version`](@ref), [`TMD5!Class`](@ref), [`TMD5!DeclFileName`](@ref), [`TMD5!FileChecksum`](@ref), [`TMD5!ReadChecksum`](@ref), [`TMD5!WriteChecksum`](@ref), [`TMD5`](@ref), [`Update`](@ref), [`assign`](@ref)
+Related functions: [`AsString`](@ref), [`Final`](@ref), [`IsA`](@ref), [`Print`](@ref), [`SetDigest`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TMD5!Class_Name`](@ref), [`TMD5!Class_Version`](@ref), [`TMD5!Class`](@ref), [`TMD5!DeclFileName`](@ref), [`TMD5!FileChecksum`](@ref), [`TMD5!ReadChecksum`](@ref), [`TMD5!WriteChecksum`](@ref), [`TMD5`](@ref), [`Update`](@ref), [`assign`](@ref)
 """ TMD5
 
 # Wrapper of TFolder
@@ -2485,7 +2485,7 @@ The [ROOT](@ref) object must be created as a static object. An example of a main
 
 (C++ version of the code)
 
-Related functions: [`AddClassGenerator`](@ref), [`AddClass`](@ref), [`Append`](@ref), [`Browse`](@ref), [`ClassSaved`](@ref), [`CloseFiles`](@ref), [`EndOfProcessCleanups`](@ref), [`FindObjectAnyFile`](@ref), [`FindObjectAny`](@ref), [`FindObjectClassName`](@ref), [`FindObjectPathName`](@ref), [`FindObject`](@ref), [`FindSTLClass`](@ref), [`FindSpecialObject`](@ref), [`ForceStyle`](@ref), [`FromPopUp`](@ref), [`GetApplication`](@ref), [`GetBuiltDate`](@ref), [`GetBuiltTime`](@ref), [`GetClass`](@ref), [`GetClipboard`](@ref), [`GetColor`](@ref), [`GetConfigFeatures`](@ref), [`GetConfigOptions`](@ref), [`GetCutClassName`](@ref), [`GetDefCanvasName`](@ref), [`GetEditHistograms`](@ref), [`GetEditorMode`](@ref), [`GetFile`](@ref), [`GetForceStyle`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunction`](@ref), [`GetGeometry`](@ref), [`GetGetType`](@ref), [`GetGitBranch`](@ref), [`GetGitCommit`](@ref), [`GetGitDate`](@ref), [`GetGlobalFunctionWithPrototype`](@ref), [`GetGlobalFunction`](@ref), [`GetGlobal`](@ref), [`GetInterpreter`](@ref), [`GetListOfBrowsables`](@ref), [`GetListOfBrowsers`](@ref), [`GetListOfCanvases`](@ref), [`GetListOfClassGenerators`](@ref), [`GetListOfClasses`](@ref), [`GetListOfCleanups`](@ref), [`GetListOfClosedObjects`](@ref), [`GetListOfColors`](@ref), [`GetListOfDataSets`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFiles`](@ref), [`GetListOfFunctionOverloads`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfFunctions`](@ref), [`GetListOfGeometries`](@ref), [`GetListOfGetTypes`](@ref), [`GetListOfGlobalFunctions`](@ref), [`GetListOfGlobals`](@ref), [`GetListOfMappedFiles`](@ref), [`GetListOfMessageHandlers`](@ref), [`GetListOfProofs`](@ref), [`GetListOfSecContexts`](@ref), [`GetListOfSockets`](@ref), [`GetListOfSpecials`](@ref), [`GetListOfStreamerInfo`](@ref), [`GetListOfStyles`](@ref), [`GetListOfTasks`](@ref), [`GetNclasses`](@ref), [`GetNtypes`](@ref), [`GetPluginManager`](@ref), [`GetRootFolder`](@ref), [`GetSelectedPad`](@ref), [`GetSelectedPrimitive`](@ref), [`GetStyle`](@ref), [`GetTimer`](@ref), [`GetUUIDs`](@ref), [`GetVersionCode`](@ref), [`GetVersionDate`](@ref), [`GetVersionInt`](@ref), [`GetVersionTime`](@ref), [`GetVersion`](@ref), [`GetWebDisplay`](@ref), [`Idle`](@ref), [`IgnoreInclude`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsEscaped`](@ref), [`IsExecutingMacro`](@ref), [`IsFolder`](@ref), [`IsInterrupted`](@ref), [`IsLineProcessing`](@ref), [`IsProofServ`](@ref), [`IsRootFile`](@ref), [`IsWebDisplayBatch`](@ref), [`IsWebDisplay`](@ref), [`LoadClass`](@ref), [`LoadMacro`](@ref), [`Macro`](@ref), [`MakeDefCanvas`](@ref), [`Message`](@ref), [`MustClean`](@ref), [`ProcessLineFast`](@ref), [`ProcessLineSync`](@ref), [`ProcessLine`](@ref), [`ReadingObject`](@ref), [`RecursiveRemove`](@ref), [`RefreshBrowsers`](@ref), [`RemoveClass`](@ref), [`Remove`](@ref), [`ResetClassSaved`](@ref), [`Reset`](@ref), [`SaveContext`](@ref), [`SetApplication`](@ref), [`SetBatch`](@ref), [`SetCutClassName`](@ref), [`SetDefCanvasName`](@ref), [`SetEditHistograms`](@ref), [`SetEditorMode`](@ref), [`SetEscape`](@ref), [`SetExecutingMacro`](@ref), [`SetFromPopUp`](@ref), [`SetInterrupt`](@ref), [`SetLineHasBeenProcessed`](@ref), [`SetLineIsProcessing`](@ref), [`SetMustClean`](@ref), [`SetReadingObject`](@ref), [`SetSelectedPad`](@ref), [`SetSelectedPrimitive`](@ref), [`SetStyle`](@ref), [`SetWebDisplay`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TROOT!AddExtraInterpreterArgs`](@ref), [`TROOT!Class_Name`](@ref), [`TROOT!Class_Version`](@ref), [`TROOT!Class`](@ref), [`TROOT!ConvertVersionCode2Int`](@ref), [`TROOT!ConvertVersionInt2Code`](@ref), [`TROOT!DeclFileName`](@ref), [`TROOT!DecreaseDirLevel`](@ref), [`TROOT!GetBinDir`](@ref), [`TROOT!GetDataDir`](@ref), [`TROOT!GetDirLevel`](@ref), [`TROOT!GetDocDir`](@ref), [`TROOT!GetEtcDir`](@ref), [`TROOT!GetExtraInterpreterArgs`](@ref), [`TROOT!GetIconPath`](@ref), [`TROOT!GetIncludeDir`](@ref), [`TROOT!GetLibDir`](@ref), [`TROOT!GetMacroDir`](@ref), [`TROOT!GetMacroPath`](@ref), [`TROOT!GetRootSys`](@ref), [`TROOT!GetSharedLibDir`](@ref), [`TROOT!GetSourceDir`](@ref), [`TROOT!GetTTFFontDir`](@ref), [`TROOT!GetTutorialDir`](@ref), [`TROOT!GetTutorialsDir`](@ref), [`TROOT!IncreaseDirLevel`](@ref), [`TROOT!IndentLevel`](@ref), [`TROOT!Initialize`](@ref), [`TROOT!Initialized`](@ref), [`TROOT!RegisterModule`](@ref), [`TROOT!RootVersionCode`](@ref), [`TROOT!SetDirLevel`](@ref), [`TROOT!SetMacroPath`](@ref), [`TROOT!ShutDown`](@ref), [`TROOT`](@ref), [`Time`](@ref), [`ls`](@ref)
+Related functions: [`AddClassGenerator`](@ref), [`AddClass`](@ref), [`Append`](@ref), [`Browse`](@ref), [`ClassSaved`](@ref), [`CloseFiles`](@ref), [`EndOfProcessCleanups`](@ref), [`FindObjectAnyFile`](@ref), [`FindObjectAny`](@ref), [`FindObjectClassName`](@ref), [`FindObjectPathName`](@ref), [`FindObject`](@ref), [`FindSTLClass`](@ref), [`FindSpecialObject`](@ref), [`ForceStyle`](@ref), [`FromPopUp`](@ref), [`GetApplication`](@ref), [`GetBuiltDate`](@ref), [`GetBuiltTime`](@ref), [`GetClass`](@ref), [`GetClipboard`](@ref), [`GetColor`](@ref), [`GetConfigFeatures`](@ref), [`GetConfigOptions`](@ref), [`GetCutClassName`](@ref), [`GetDefCanvasName`](@ref), [`GetEditHistograms`](@ref), [`GetEditorMode`](@ref), [`GetFile`](@ref), [`GetForceStyle`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunction`](@ref), [`GetGeometry`](@ref), [`GetGitBranch`](@ref), [`GetGitCommit`](@ref), [`GetGitDate`](@ref), [`GetGlobalFunctionWithPrototype`](@ref), [`GetGlobalFunction`](@ref), [`GetGlobal`](@ref), [`GetInterpreter`](@ref), [`GetListOfBrowsables`](@ref), [`GetListOfBrowsers`](@ref), [`GetListOfCanvases`](@ref), [`GetListOfClassGenerators`](@ref), [`GetListOfClasses`](@ref), [`GetListOfCleanups`](@ref), [`GetListOfClosedObjects`](@ref), [`GetListOfColors`](@ref), [`GetListOfDataSets`](@ref), [`GetListOfEnums`](@ref), [`GetListOfFiles`](@ref), [`GetListOfFunctionOverloads`](@ref), [`GetListOfFunctionTemplates`](@ref), [`GetListOfFunctions`](@ref), [`GetListOfGeometries`](@ref), [`GetListOfGlobalFunctions`](@ref), [`GetListOfGlobals`](@ref), [`GetListOfMappedFiles`](@ref), [`GetListOfMessageHandlers`](@ref), [`GetListOfProofs`](@ref), [`GetListOfSecContexts`](@ref), [`GetListOfSockets`](@ref), [`GetListOfSpecials`](@ref), [`GetListOfStreamerInfo`](@ref), [`GetListOfStyles`](@ref), [`GetListOfTasks`](@ref), [`GetListOfTypes`](@ref), [`GetNclasses`](@ref), [`GetNtypes`](@ref), [`GetPluginManager`](@ref), [`GetRootFolder`](@ref), [`GetSelectedPad`](@ref), [`GetSelectedPrimitive`](@ref), [`GetStyle`](@ref), [`GetTimer`](@ref), [`GetType`](@ref), [`GetUUIDs`](@ref), [`GetVersionCode`](@ref), [`GetVersionDate`](@ref), [`GetVersionInt`](@ref), [`GetVersionTime`](@ref), [`GetVersion`](@ref), [`GetWebDisplay`](@ref), [`Idle`](@ref), [`IgnoreInclude`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsEscaped`](@ref), [`IsExecutingMacro`](@ref), [`IsFolder`](@ref), [`IsInterrupted`](@ref), [`IsLineProcessing`](@ref), [`IsProofServ`](@ref), [`IsRootFile`](@ref), [`IsWebDisplayBatch`](@ref), [`IsWebDisplay`](@ref), [`LoadClass`](@ref), [`LoadMacro`](@ref), [`Macro`](@ref), [`MakeDefCanvas`](@ref), [`Message`](@ref), [`MustClean`](@ref), [`ProcessLineFast`](@ref), [`ProcessLineSync`](@ref), [`ProcessLine`](@ref), [`ReadingObject`](@ref), [`RecursiveRemove`](@ref), [`RefreshBrowsers`](@ref), [`RemoveClass`](@ref), [`Remove`](@ref), [`ResetClassSaved`](@ref), [`Reset`](@ref), [`SaveContext`](@ref), [`SetApplication`](@ref), [`SetBatch`](@ref), [`SetCutClassName`](@ref), [`SetDefCanvasName`](@ref), [`SetEditHistograms`](@ref), [`SetEditorMode`](@ref), [`SetEscape`](@ref), [`SetExecutingMacro`](@ref), [`SetFromPopUp`](@ref), [`SetInterrupt`](@ref), [`SetLineHasBeenProcessed`](@ref), [`SetLineIsProcessing`](@ref), [`SetMustClean`](@ref), [`SetReadingObject`](@ref), [`SetSelectedPad`](@ref), [`SetSelectedPrimitive`](@ref), [`SetStyle`](@ref), [`SetWebDisplay`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TROOT!AddExtraInterpreterArgs`](@ref), [`TROOT!Class_Name`](@ref), [`TROOT!Class_Version`](@ref), [`TROOT!Class`](@ref), [`TROOT!ConvertVersionCode2Int`](@ref), [`TROOT!ConvertVersionInt2Code`](@ref), [`TROOT!DeclFileName`](@ref), [`TROOT!DecreaseDirLevel`](@ref), [`TROOT!GetBinDir`](@ref), [`TROOT!GetDataDir`](@ref), [`TROOT!GetDirLevel`](@ref), [`TROOT!GetDocDir`](@ref), [`TROOT!GetEtcDir`](@ref), [`TROOT!GetExtraInterpreterArgs`](@ref), [`TROOT!GetIconPath`](@ref), [`TROOT!GetIncludeDir`](@ref), [`TROOT!GetLibDir`](@ref), [`TROOT!GetMacroDir`](@ref), [`TROOT!GetMacroPath`](@ref), [`TROOT!GetRootSys`](@ref), [`TROOT!GetSharedLibDir`](@ref), [`TROOT!GetSourceDir`](@ref), [`TROOT!GetTTFFontDir`](@ref), [`TROOT!GetTutorialDir`](@ref), [`TROOT!GetTutorialsDir`](@ref), [`TROOT!IncreaseDirLevel`](@ref), [`TROOT!IndentLevel`](@ref), [`TROOT!Initialize`](@ref), [`TROOT!Initialized`](@ref), [`TROOT!RegisterModule`](@ref), [`TROOT!RootVersionCode`](@ref), [`TROOT!SetDirLevel`](@ref), [`TROOT!SetMacroPath`](@ref), [`TROOT!ShutDown`](@ref), [`TROOT`](@ref), [`Time`](@ref), [`ls`](@ref)
 """ TROOT
 
 # Wrapper of TPluginManager
@@ -2543,7 +2543,7 @@ This class defines an abstract interface to a generic command line interpreter.
 
 
 
-Related functions: [`AddAvailableIndentifiers`](@ref), [`AddIncludePath`](@ref), [`AutoLoad`](@ref), [`AutoParse`](@ref), [`BaseClassInfo_ClassInfo`](@ref), [`BaseClassInfo_Delete`](@ref), [`BaseClassInfo_Factory`](@ref), [`BaseClassInfo_FullName`](@ref), [`BaseClassInfo_Name`](@ref), [`BaseClassInfo_Next`](@ref), [`BaseClassInfo_Offset`](@ref), [`BaseClassInfo_Property`](@ref), [`BaseClassInfo_Tagnum`](@ref), [`BaseClassInfo_TmpltName`](@ref), [`Calc`](@ref), [`CallFunc_Delete`](@ref), [`CallFunc_ExecDouble`](@ref), [`CallFunc_ExecInt64`](@ref), [`CallFunc_ExecInt`](@ref), [`CallFunc_ExecWithArgsAndReturn`](@ref), [`CallFunc_ExecWithReturn`](@ref), [`CallFunc_Exec`](@ref), [`CallFunc_FactoryCopy`](@ref), [`CallFunc_FactoryMethod`](@ref), [`CallFunc_Factory`](@ref), [`CallFunc_GetWrapperCode`](@ref), [`CallFunc_IFacePtr`](@ref), [`CallFunc_IgnoreExtraArgs`](@ref), [`CallFunc_Init`](@ref), [`CallFunc_IsValid`](@ref), [`CallFunc_ResetArg`](@ref), [`CallFunc_SetArgArray`](@ref), [`CallFunc_SetArgImpl`](@ref), [`CallFunc_SetArgRef`](@ref), [`CallFunc_SetArg`](@ref), [`CallFunc_SetArgs`](@ref), [`CallFunc_SetArguments`](@ref), [`CallFunc_SetFuncProto`](@ref), [`CallFunc_SetFunc`](@ref), [`CheckClassInfo`](@ref), [`CheckClassTemplate`](@ref), [`ClassInfo_ClassProperty`](@ref), [`ClassInfo_Contains`](@ref), [`ClassInfo_DeleteArray`](@ref), [`ClassInfo_Delete`](@ref), [`ClassInfo_Destruct`](@ref), [`ClassInfo_Factory`](@ref), [`ClassInfo_FileName`](@ref), [`ClassInfo_FullName`](@ref), [`ClassInfo_GetBaseOffset`](@ref), [`ClassInfo_GetMethodNArg`](@ref), [`ClassInfo_GetUnderlyingGetType`](@ref), [`ClassInfo_HasDefaultConstructor`](@ref), [`ClassInfo_HasMethod`](@ref), [`ClassInfo_Init`](@ref), [`ClassInfo_IsBase`](@ref), [`ClassInfo_IsEnum`](@ref), [`ClassInfo_IsLoaded`](@ref), [`ClassInfo_IsScopedEnum`](@ref), [`ClassInfo_IsValidMethod`](@ref), [`ClassInfo_IsValid`](@ref), [`ClassInfo_Name`](@ref), [`ClassInfo_New`](@ref), [`ClassInfo_Next`](@ref), [`ClassInfo_Property`](@ref), [`ClassInfo_Size`](@ref), [`ClassInfo_Tagnum`](@ref), [`ClassInfo_Title`](@ref), [`ClassInfo_TmpltName`](@ref), [`ClearFileBusy`](@ref), [`ClearStack`](@ref), [`CodeComplete`](@ref), [`CreateEnum`](@ref), [`CreateListOfBaseClasses`](@ref), [`CreateListOfDataMembers`](@ref), [`CreateListOfMethodArgs`](@ref), [`CreateListOfMethods`](@ref), [`CreateTemporary`](@ref), [`DataMemberInfo_ArrayDim`](@ref), [`DataMemberInfo_Delete`](@ref), [`DataMemberInfo_FactoryCopy`](@ref), [`DataMemberInfo_Factory`](@ref), [`DataMemberInfo_GetTypeName`](@ref), [`DataMemberInfo_GetTypeProperty`](@ref), [`DataMemberInfo_GetTypeSize`](@ref), [`DataMemberInfo_GetTypeTrueName`](@ref), [`DataMemberInfo_IsValid`](@ref), [`DataMemberInfo_MaxIndex`](@ref), [`DataMemberInfo_Name`](@ref), [`DataMemberInfo_Next`](@ref), [`DataMemberInfo_Offset`](@ref), [`DataMemberInfo_Property`](@ref), [`DataMemberInfo_Title`](@ref), [`DataMemberInfo_ValidArrayIndex`](@ref), [`Declare`](@ref), [`DeleteGlobal`](@ref), [`DeleteVariable`](@ref), [`DiagnoseIfInterpreterException`](@ref), [`DisplayClass`](@ref), [`DisplayIncludePath`](@ref), [`EndOfLineAction`](@ref), [`Evaluate`](@ref), [`ExecuteMacro`](@ref), [`ExecuteWithArgsAndReturn`](@ref), [`Execute`](@ref), [`FindSym`](@ref), [`ForgetMutexState`](@ref), [`FuncTempInfo_Delete`](@ref), [`FuncTempInfo_ExtraProperty`](@ref), [`FuncTempInfo_FactoryCopy`](@ref), [`FuncTempInfo_Factory`](@ref), [`FuncTempInfo_IsValid`](@ref), [`FuncTempInfo_Name`](@ref), [`FuncTempInfo_Property`](@ref), [`FuncTempInfo_TemplateMinReqArgs`](@ref), [`FuncTempInfo_TemplateNargs`](@ref), [`FuncTempInfo_Title`](@ref), [`FunctionDeclId_IsMethod`](@ref), [`GenerateDictionary`](@ref), [`GenerateTClass`](@ref), [`GenericError`](@ref), [`GetAutoLoadCallBack`](@ref), [`GetClassSharedLibs`](@ref), [`GetClass`](@ref), [`GetCurrentMacroName`](@ref), [`GetDataMemberAtAddr`](@ref), [`GetDataMemberWithValue`](@ref), [`GetDataMember`](@ref), [`GetDeclId`](@ref), [`GetEnum`](@ref), [`GetExecByteCode`](@ref), [`GetExitCode`](@ref), [`GetFunctionOverloads`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunctionWithPrototype`](@ref), [`GetFunctionWithValues`](@ref), [`GetFunction`](@ref), [`GetIncludePath`](@ref), [`GetInterfaceMethodWithPrototype`](@ref), [`GetInterfaceMethod`](@ref), [`GetInterpreterGetTypeName`](@ref), [`GetInterpreterStateMarker`](@ref), [`GetMangledNameWithPrototype`](@ref), [`GetMangledName`](@ref), [`GetMapfile`](@ref), [`GetMore`](@ref), [`GetPrompt`](@ref), [`GetRootMapFiles`](@ref), [`GetSTLIncludePath`](@ref), [`GetSecurityError`](@ref), [`GetSharedLibDeps`](@ref), [`GetSharedLibs`](@ref), [`GetTopLevelMacroName`](@ref), [`GetTypeInfo_Delete`](@ref), [`GetTypeInfo_FactoryCopy`](@ref), [`GetTypeInfo_Factory`](@ref), [`GetTypeInfo_Init`](@ref), [`GetTypeInfo_IsValid`](@ref), [`GetTypeInfo_Name`](@ref), [`GetTypeInfo_Property`](@ref), [`GetTypeInfo_QualGetTypePtr`](@ref), [`GetTypeInfo_RefGetType`](@ref), [`GetTypeInfo_Size`](@ref), [`GetTypeInfo_TrueName`](@ref), [`GetTypeName`](@ref), [`GetTypedefInfo_Delete`](@ref), [`GetTypedefInfo_FactoryCopy`](@ref), [`GetTypedefInfo_Factory`](@ref), [`GetTypedefInfo_Init`](@ref), [`GetTypedefInfo_IsValid`](@ref), [`GetTypedefInfo_Name`](@ref), [`GetTypedefInfo_Next`](@ref), [`GetTypedefInfo_Property`](@ref), [`GetTypedefInfo_Size`](@ref), [`GetTypedefInfo_Title`](@ref), [`GetTypedefInfo_TrueName`](@ref), [`GetUsingNamespaces`](@ref), [`HasPCMForLibrary`](@ref), [`Initialize`](@ref), [`InspectMembers`](@ref), [`IsAutoParsingSuspended`](@ref), [`IsErrorMessagesEnabled`](@ref), [`IsFloatingGetType`](@ref), [`IsGetIntegerGetType`](@ref), [`IsLibraryLoaded`](@ref), [`IsLoaded`](@ref), [`IsPointerGetType`](@ref), [`IsProcessLineLocked`](@ref), [`IsSameGetType`](@ref), [`IsSignedGetIntegerGetType`](@ref), [`IsUnsignedGetIntegerGetType`](@ref), [`IsVoidPointerGetType`](@ref), [`LoadEnums`](@ref), [`LoadFile`](@ref), [`LoadFunctionTemplates`](@ref), [`LoadGetText`](@ref), [`LoadLibraryMap`](@ref), [`LoadMacro`](@ref), [`Load`](@ref), [`MakeInterpreterValue`](@ref), [`MapCppName`](@ref), [`MethodArgInfo_DefaultValue`](@ref), [`MethodArgInfo_Delete`](@ref), [`MethodArgInfo_FactoryCopy`](@ref), [`MethodArgInfo_Factory`](@ref), [`MethodArgInfo_GetTypeInfo`](@ref), [`MethodArgInfo_GetTypeName`](@ref), [`MethodArgInfo_GetTypeNormalizedName`](@ref), [`MethodArgInfo_IsValid`](@ref), [`MethodArgInfo_Name`](@ref), [`MethodArgInfo_Next`](@ref), [`MethodArgInfo_Property`](@ref), [`MethodCallReturnGetType`](@ref), [`MethodInfo_CreateSignature`](@ref), [`MethodInfo_Delete`](@ref), [`MethodInfo_ExtraProperty`](@ref), [`MethodInfo_FactoryCopy`](@ref), [`MethodInfo_Factory`](@ref), [`MethodInfo_GetMangledName`](@ref), [`MethodInfo_GetPrototype`](@ref), [`MethodInfo_GetTypeName`](@ref), [`MethodInfo_GetTypeNormalizedName`](@ref), [`MethodInfo_GetType`](@ref), [`MethodInfo_InterfaceMethod`](@ref), [`MethodInfo_IsValid`](@ref), [`MethodInfo_MethodCallReturnGetType`](@ref), [`MethodInfo_NArg`](@ref), [`MethodInfo_NDefaultArg`](@ref), [`MethodInfo_Name`](@ref), [`MethodInfo_Next`](@ref), [`MethodInfo_Property`](@ref), [`MethodInfo_Title`](@ref), [`PrintIntro`](@ref), [`ProcessLineSynch`](@ref), [`ProcessLine`](@ref), [`RegisterModule`](@ref), [`RegisterPrebuiltModulePath`](@ref), [`RegisterTClassUpdate`](@ref), [`ReloadAllSharedLibraryMaps`](@ref), [`ReportDiagnosticsToErrorHandler`](@ref), [`RescanLibraryMap`](@ref), [`ResetAll`](@ref), [`ResetGlobalVar`](@ref), [`ResetGlobals`](@ref), [`Reset`](@ref), [`RewindDictionary`](@ref), [`SaveContext`](@ref), [`SaveGlobalsContext`](@ref), [`SetAlloclockfunc`](@ref), [`SetAllocunlockfunc`](@ref), [`SetAutoLoadCallBack`](@ref), [`SetClassAutoLoading`](@ref), [`SetClassAutoloading`](@ref), [`SetClassAutoparsing`](@ref), [`SetClassInfo`](@ref), [`SetClassSharedLibs`](@ref), [`SetDeclAttr`](@ref), [`SetErrmsgcallback`](@ref), [`SetErrorMessages`](@ref), [`SetGetline`](@ref), [`SetProcessLineLock`](@ref), [`SetTempLevel`](@ref), [`ShutDown`](@ref), [`SnapshotMutexState`](@ref), [`TInterpreter!Instance`](@ref), [`TInterpreter`](@ref), [`ToGetString`](@ref), [`UnRegisterTClassUpdate`](@ref), [`UnloadAllSharedLibraryMaps`](@ref), [`UnloadFile`](@ref), [`UnloadLibraryMap`](@ref), [`UpdateEnumConstants`](@ref), [`UpdateListOfGetTypes`](@ref), [`UpdateListOfGlobalFunctions`](@ref), [`UpdateListOfGlobals`](@ref), [`UpdateListOfMethods`](@ref)
+Related functions: [`AddAvailableIndentifiers`](@ref), [`AddIncludePath`](@ref), [`AutoLoad`](@ref), [`AutoParse`](@ref), [`BaseClassInfo_ClassInfo`](@ref), [`BaseClassInfo_Delete`](@ref), [`BaseClassInfo_Factory`](@ref), [`BaseClassInfo_FullName`](@ref), [`BaseClassInfo_Name`](@ref), [`BaseClassInfo_Next`](@ref), [`BaseClassInfo_Offset`](@ref), [`BaseClassInfo_Property`](@ref), [`BaseClassInfo_Tagnum`](@ref), [`BaseClassInfo_TmpltName`](@ref), [`Calc`](@ref), [`CallFunc_Delete`](@ref), [`CallFunc_ExecDouble`](@ref), [`CallFunc_ExecInt64`](@ref), [`CallFunc_ExecInt`](@ref), [`CallFunc_ExecWithArgsAndReturn`](@ref), [`CallFunc_ExecWithReturn`](@ref), [`CallFunc_Exec`](@ref), [`CallFunc_FactoryCopy`](@ref), [`CallFunc_FactoryMethod`](@ref), [`CallFunc_Factory`](@ref), [`CallFunc_GetWrapperCode`](@ref), [`CallFunc_IFacePtr`](@ref), [`CallFunc_IgnoreExtraArgs`](@ref), [`CallFunc_Init`](@ref), [`CallFunc_IsValid`](@ref), [`CallFunc_ResetArg`](@ref), [`CallFunc_SetArgArray`](@ref), [`CallFunc_SetArgImpl`](@ref), [`CallFunc_SetArgRef`](@ref), [`CallFunc_SetArg`](@ref), [`CallFunc_SetArgs`](@ref), [`CallFunc_SetArguments`](@ref), [`CallFunc_SetFuncProto`](@ref), [`CallFunc_SetFunc`](@ref), [`CheckClassInfo`](@ref), [`CheckClassTemplate`](@ref), [`ClassInfo_ClassProperty`](@ref), [`ClassInfo_Contains`](@ref), [`ClassInfo_DeleteArray`](@ref), [`ClassInfo_Delete`](@ref), [`ClassInfo_Destruct`](@ref), [`ClassInfo_Factory`](@ref), [`ClassInfo_FileName`](@ref), [`ClassInfo_FullName`](@ref), [`ClassInfo_GetBaseOffset`](@ref), [`ClassInfo_GetMethodNArg`](@ref), [`ClassInfo_GetUnderlyingType`](@ref), [`ClassInfo_HasDefaultConstructor`](@ref), [`ClassInfo_HasMethod`](@ref), [`ClassInfo_Init`](@ref), [`ClassInfo_IsBase`](@ref), [`ClassInfo_IsEnum`](@ref), [`ClassInfo_IsLoaded`](@ref), [`ClassInfo_IsScopedEnum`](@ref), [`ClassInfo_IsValidMethod`](@ref), [`ClassInfo_IsValid`](@ref), [`ClassInfo_Name`](@ref), [`ClassInfo_New`](@ref), [`ClassInfo_Next`](@ref), [`ClassInfo_Property`](@ref), [`ClassInfo_Size`](@ref), [`ClassInfo_Tagnum`](@ref), [`ClassInfo_Title`](@ref), [`ClassInfo_TmpltName`](@ref), [`ClearFileBusy`](@ref), [`ClearStack`](@ref), [`CodeComplete`](@ref), [`CreateEnum`](@ref), [`CreateListOfBaseClasses`](@ref), [`CreateListOfDataMembers`](@ref), [`CreateListOfMethodArgs`](@ref), [`CreateListOfMethods`](@ref), [`CreateTemporary`](@ref), [`DataMemberInfo_ArrayDim`](@ref), [`DataMemberInfo_Delete`](@ref), [`DataMemberInfo_FactoryCopy`](@ref), [`DataMemberInfo_Factory`](@ref), [`DataMemberInfo_IsValid`](@ref), [`DataMemberInfo_MaxIndex`](@ref), [`DataMemberInfo_Name`](@ref), [`DataMemberInfo_Next`](@ref), [`DataMemberInfo_Offset`](@ref), [`DataMemberInfo_Property`](@ref), [`DataMemberInfo_Title`](@ref), [`DataMemberInfo_TypeName`](@ref), [`DataMemberInfo_TypeProperty`](@ref), [`DataMemberInfo_TypeSize`](@ref), [`DataMemberInfo_TypeTrueName`](@ref), [`DataMemberInfo_ValidArrayIndex`](@ref), [`Declare`](@ref), [`DeleteGlobal`](@ref), [`DeleteVariable`](@ref), [`DiagnoseIfInterpreterException`](@ref), [`DisplayClass`](@ref), [`DisplayIncludePath`](@ref), [`EndOfLineAction`](@ref), [`Evaluate`](@ref), [`ExecuteMacro`](@ref), [`ExecuteWithArgsAndReturn`](@ref), [`Execute`](@ref), [`FindSym`](@ref), [`ForgetMutexState`](@ref), [`FuncTempInfo_Delete`](@ref), [`FuncTempInfo_ExtraProperty`](@ref), [`FuncTempInfo_FactoryCopy`](@ref), [`FuncTempInfo_Factory`](@ref), [`FuncTempInfo_IsValid`](@ref), [`FuncTempInfo_Name`](@ref), [`FuncTempInfo_Property`](@ref), [`FuncTempInfo_TemplateMinReqArgs`](@ref), [`FuncTempInfo_TemplateNargs`](@ref), [`FuncTempInfo_Title`](@ref), [`FunctionDeclId_IsMethod`](@ref), [`GenerateDictionary`](@ref), [`GenerateTClass`](@ref), [`GenericError`](@ref), [`GetAutoLoadCallBack`](@ref), [`GetClassSharedLibs`](@ref), [`GetClass`](@ref), [`GetCurrentMacroName`](@ref), [`GetDataMemberAtAddr`](@ref), [`GetDataMemberWithValue`](@ref), [`GetDataMember`](@ref), [`GetDeclId`](@ref), [`GetEnum`](@ref), [`GetExecByteCode`](@ref), [`GetExitCode`](@ref), [`GetFunctionOverloads`](@ref), [`GetFunctionTemplate`](@ref), [`GetFunctionWithPrototype`](@ref), [`GetFunctionWithValues`](@ref), [`GetFunction`](@ref), [`GetIncludePath`](@ref), [`GetInterfaceMethodWithPrototype`](@ref), [`GetInterfaceMethod`](@ref), [`GetInterpreterStateMarker`](@ref), [`GetInterpreterTypeName`](@ref), [`GetMangledNameWithPrototype`](@ref), [`GetMangledName`](@ref), [`GetMapfile`](@ref), [`GetMore`](@ref), [`GetPrompt`](@ref), [`GetRootMapFiles`](@ref), [`GetSTLIncludePath`](@ref), [`GetSecurityError`](@ref), [`GetSharedLibDeps`](@ref), [`GetSharedLibs`](@ref), [`GetTopLevelMacroName`](@ref), [`GetUsingNamespaces`](@ref), [`HasPCMForLibrary`](@ref), [`Initialize`](@ref), [`InspectMembers`](@ref), [`IsAutoParsingSuspended`](@ref), [`IsErrorMessagesEnabled`](@ref), [`IsFloatingType`](@ref), [`IsIntegerType`](@ref), [`IsLibraryLoaded`](@ref), [`IsLoaded`](@ref), [`IsPointerType`](@ref), [`IsProcessLineLocked`](@ref), [`IsSameType`](@ref), [`IsSignedIntegerType`](@ref), [`IsUnsignedIntegerType`](@ref), [`IsVoidPointerType`](@ref), [`LoadEnums`](@ref), [`LoadFile`](@ref), [`LoadFunctionTemplates`](@ref), [`LoadLibraryMap`](@ref), [`LoadMacro`](@ref), [`LoadText`](@ref), [`Load`](@ref), [`MakeInterpreterValue`](@ref), [`MapCppName`](@ref), [`MethodArgInfo_DefaultValue`](@ref), [`MethodArgInfo_Delete`](@ref), [`MethodArgInfo_FactoryCopy`](@ref), [`MethodArgInfo_Factory`](@ref), [`MethodArgInfo_IsValid`](@ref), [`MethodArgInfo_Name`](@ref), [`MethodArgInfo_Next`](@ref), [`MethodArgInfo_Property`](@ref), [`MethodArgInfo_TypeInfo`](@ref), [`MethodArgInfo_TypeName`](@ref), [`MethodArgInfo_TypeNormalizedName`](@ref), [`MethodCallReturnType`](@ref), [`MethodInfo_CreateSignature`](@ref), [`MethodInfo_Delete`](@ref), [`MethodInfo_ExtraProperty`](@ref), [`MethodInfo_FactoryCopy`](@ref), [`MethodInfo_Factory`](@ref), [`MethodInfo_GetMangledName`](@ref), [`MethodInfo_GetPrototype`](@ref), [`MethodInfo_InterfaceMethod`](@ref), [`MethodInfo_IsValid`](@ref), [`MethodInfo_MethodCallReturnType`](@ref), [`MethodInfo_NArg`](@ref), [`MethodInfo_NDefaultArg`](@ref), [`MethodInfo_Name`](@ref), [`MethodInfo_Next`](@ref), [`MethodInfo_Property`](@ref), [`MethodInfo_Title`](@ref), [`MethodInfo_TypeName`](@ref), [`MethodInfo_TypeNormalizedName`](@ref), [`MethodInfo_Type`](@ref), [`PrintIntro`](@ref), [`ProcessLineSynch`](@ref), [`ProcessLine`](@ref), [`RegisterModule`](@ref), [`RegisterPrebuiltModulePath`](@ref), [`RegisterTClassUpdate`](@ref), [`ReloadAllSharedLibraryMaps`](@ref), [`ReportDiagnosticsToErrorHandler`](@ref), [`RescanLibraryMap`](@ref), [`ResetAll`](@ref), [`ResetGlobalVar`](@ref), [`ResetGlobals`](@ref), [`Reset`](@ref), [`RewindDictionary`](@ref), [`SaveContext`](@ref), [`SaveGlobalsContext`](@ref), [`SetAlloclockfunc`](@ref), [`SetAllocunlockfunc`](@ref), [`SetAutoLoadCallBack`](@ref), [`SetClassAutoLoading`](@ref), [`SetClassAutoloading`](@ref), [`SetClassAutoparsing`](@ref), [`SetClassInfo`](@ref), [`SetClassSharedLibs`](@ref), [`SetDeclAttr`](@ref), [`SetErrmsgcallback`](@ref), [`SetErrorMessages`](@ref), [`SetGetline`](@ref), [`SetProcessLineLock`](@ref), [`SetTempLevel`](@ref), [`ShutDown`](@ref), [`SnapshotMutexState`](@ref), [`TInterpreter!Instance`](@ref), [`TInterpreter`](@ref), [`ToString`](@ref), [`TypeInfo_Delete`](@ref), [`TypeInfo_FactoryCopy`](@ref), [`TypeInfo_Factory`](@ref), [`TypeInfo_Init`](@ref), [`TypeInfo_IsValid`](@ref), [`TypeInfo_Name`](@ref), [`TypeInfo_Property`](@ref), [`TypeInfo_QualTypePtr`](@ref), [`TypeInfo_RefType`](@ref), [`TypeInfo_Size`](@ref), [`TypeInfo_TrueName`](@ref), [`TypeName`](@ref), [`TypedefInfo_Delete`](@ref), [`TypedefInfo_FactoryCopy`](@ref), [`TypedefInfo_Factory`](@ref), [`TypedefInfo_Init`](@ref), [`TypedefInfo_IsValid`](@ref), [`TypedefInfo_Name`](@ref), [`TypedefInfo_Next`](@ref), [`TypedefInfo_Property`](@ref), [`TypedefInfo_Size`](@ref), [`TypedefInfo_Title`](@ref), [`TypedefInfo_TrueName`](@ref), [`UnRegisterTClassUpdate`](@ref), [`UnloadAllSharedLibraryMaps`](@ref), [`UnloadFile`](@ref), [`UnloadLibraryMap`](@ref), [`UpdateEnumConstants`](@ref), [`UpdateListOfGlobalFunctions`](@ref), [`UpdateListOfGlobals`](@ref), [`UpdateListOfMethods`](@ref), [`UpdateListOfTypes`](@ref)
 """ TInterpreter
 
 # Wrapper of TDataType
@@ -2554,7 +2554,7 @@ Basic data type descriptor (datatype information is obtained from CINT).
 
 This class describes the attributes of type definitions (typedef's). The [TROOT](@ref) class contains a list of all currently defined types (accessible via [TROOT!GetListOfTypes()](@ref)).
 
-Related functions: [`AsGetString`](@ref), [`GetFullGetTypeName`](@ref), [`GetGetTypeName`](@ref), [`GetGetType`](@ref), [`Property`](@ref), [`Size`](@ref), [`TDataGetType`](@ref), [`TDataType!AddBuiltins`](@ref), [`TDataType!GetDataGetType`](@ref), [`TDataType!GetGetTypeName`](@ref), [`TDataType!GetGetType`](@ref)
+Related functions: [`AsString`](@ref), [`GetFullTypeName`](@ref), [`GetTypeName`](@ref), [`GetType`](@ref), [`Property`](@ref), [`Size`](@ref), [`TDataType!AddBuiltins`](@ref), [`TDataType!GetDataType`](@ref), [`TDataType!GetTypeName`](@ref), [`TDataType!GetType`](@ref), [`TDataType`](@ref)
 """ TDataType
 
 # Wrapper of TStyle
@@ -2648,7 +2648,7 @@ The description of the style functions should be clear from the name of the [TSt
 - [TStyle](@ref):SetPalette to change the colors palette.
 - [TStyle](@ref):SetTitleOffset.
 
-Related functions: [`AxisChoice`](@ref), [`Browse`](@ref), [`Copy`](@ref), [`DistancetoPrimitive`](@ref), [`GetAttDate`](@ref), [`GetAxisColor`](@ref), [`GetAxisMaxDigits`](@ref), [`GetBarOffset`](@ref), [`GetBarWidth`](@ref), [`GetCandleBoxRange`](@ref), [`GetCandleScaled`](@ref), [`GetCandleWhiskerRange`](@ref), [`GetCanvasBorderMode`](@ref), [`GetCanvasBorderSize`](@ref), [`GetCanvasColor`](@ref), [`GetCanvasDefH`](@ref), [`GetCanvasDefW`](@ref), [`GetCanvasDefX`](@ref), [`GetCanvasDefY`](@ref), [`GetCanvasPreferGL`](@ref), [`GetCapLinePS`](@ref), [`GetColorModelPS`](@ref), [`GetColorPalette`](@ref), [`GetDateX`](@ref), [`GetDateY`](@ref), [`GetDrawBorder`](@ref), [`GetEndErrorSize`](@ref), [`GetErrorX`](@ref), [`GetExponentOffset`](@ref), [`GetFitFormat`](@ref), [`GetFrameBorderMode`](@ref), [`GetFrameBorderSize`](@ref), [`GetFrameFillColor`](@ref), [`GetFrameFillStyle`](@ref), [`GetFrameLineColor`](@ref), [`GetFrameLineStyle`](@ref), [`GetFrameLineWidth`](@ref), [`GetFuncColor`](@ref), [`GetFuncStyle`](@ref), [`GetFuncWidth`](@ref), [`GetGridColor`](@ref), [`GetGridStyle`](@ref), [`GetGridWidth`](@ref), [`GetHatchesLineWidth`](@ref), [`GetHatchesSpacing`](@ref), [`GetHeaderPS`](@ref), [`GetHistFillColor`](@ref), [`GetHistFillStyle`](@ref), [`GetHistLineColor`](@ref), [`GetHistLineStyle`](@ref), [`GetHistLineWidth`](@ref), [`GetHistMinimumZero`](@ref), [`GetHistTopMargin`](@ref), [`GetImageScaling`](@ref), [`GetJoinLinePS`](@ref), [`GetLabelColor`](@ref), [`GetLabelFont`](@ref), [`GetLabelOffset`](@ref), [`GetLabelSize`](@ref), [`GetLegendBorderSize`](@ref), [`GetLegendFillColor`](@ref), [`GetLegendFont`](@ref), [`GetLegendGetTextSize`](@ref), [`GetLegoInnerR`](@ref), [`GetLineScalePS`](@ref), [`GetLineStyleGetString`](@ref), [`GetNdivisions`](@ref), [`GetNumberContours`](@ref), [`GetNumberOfColors`](@ref), [`GetOptDate`](@ref), [`GetOptFile`](@ref), [`GetOptFit`](@ref), [`GetOptLogx`](@ref), [`GetOptLogy`](@ref), [`GetOptLogz`](@ref), [`GetOptStat`](@ref), [`GetOptTitle`](@ref), [`GetOrthoCamera`](@ref), [`GetPadBorderMode`](@ref), [`GetPadBorderSize`](@ref), [`GetPadBottomMargin`](@ref), [`GetPadColor`](@ref), [`GetPadGridX`](@ref), [`GetPadGridY`](@ref), [`GetPadLeftMargin`](@ref), [`GetPadRightMargin`](@ref), [`GetPadTickX`](@ref), [`GetPadTickY`](@ref), [`GetPadTopMargin`](@ref), [`GetPaintGetTextFormat`](@ref), [`GetPaperSize`](@ref), [`GetScreenFactor`](@ref), [`GetShowEditor`](@ref), [`GetShowEventStatus`](@ref), [`GetShowToolBar`](@ref), [`GetStatBorderSize`](@ref), [`GetStatColor`](@ref), [`GetStatFontSize`](@ref), [`GetStatFont`](@ref), [`GetStatFormat`](@ref), [`GetStatGetTextColor`](@ref), [`GetStatH`](@ref), [`GetStatStyle`](@ref), [`GetStatW`](@ref), [`GetStatX`](@ref), [`GetStatY`](@ref), [`GetStripDecimals`](@ref), [`GetTickLength`](@ref), [`GetTimeOffset`](@ref), [`GetTitleAlign`](@ref), [`GetTitleBorderSize`](@ref), [`GetTitleColor`](@ref), [`GetTitleFillColor`](@ref), [`GetTitleFontSize`](@ref), [`GetTitleFont`](@ref), [`GetTitleGetTextColor`](@ref), [`GetTitleH`](@ref), [`GetTitleOffset`](@ref), [`GetTitlePS`](@ref), [`GetTitleSize`](@ref), [`GetTitleStyle`](@ref), [`GetTitleW`](@ref), [`GetTitleXOffset`](@ref), [`GetTitleXSize`](@ref), [`GetTitleX`](@ref), [`GetTitleYOffset`](@ref), [`GetTitleYSize`](@ref), [`GetTitleY`](@ref), [`GetViolinScaled`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`Paint`](@ref), [`Reset`](@ref), [`SavePrimitive`](@ref), [`SaveSource`](@ref), [`SetAxisColor`](@ref), [`SetAxisMaxDigits`](@ref), [`SetBarOffset`](@ref), [`SetBarWidth`](@ref), [`SetCandleBoxRange`](@ref), [`SetCandleScaled`](@ref), [`SetCandleWhiskerRange`](@ref), [`SetCanvasBorderMode`](@ref), [`SetCanvasBorderSize`](@ref), [`SetCanvasColor`](@ref), [`SetCanvasDefH`](@ref), [`SetCanvasDefW`](@ref), [`SetCanvasDefX`](@ref), [`SetCanvasDefY`](@ref), [`SetCanvasPreferGL`](@ref), [`SetCapLinePS`](@ref), [`SetColorModelPS`](@ref), [`SetDateX`](@ref), [`SetDateY`](@ref), [`SetDrawBorder`](@ref), [`SetEndErrorSize`](@ref), [`SetErrorX`](@ref), [`SetExponentOffset`](@ref), [`SetFitFormat`](@ref), [`SetFrameBorderMode`](@ref), [`SetFrameBorderSize`](@ref), [`SetFrameFillColor`](@ref), [`SetFrameFillStyle`](@ref), [`SetFrameLineColor`](@ref), [`SetFrameLineStyle`](@ref), [`SetFrameLineWidth`](@ref), [`SetFuncColor`](@ref), [`SetFuncStyle`](@ref), [`SetFuncWidth`](@ref), [`SetGridColor`](@ref), [`SetGridStyle`](@ref), [`SetGridWidth`](@ref), [`SetHatchesLineWidth`](@ref), [`SetHatchesSpacing`](@ref), [`SetHeaderPS`](@ref), [`SetHistFillColor`](@ref), [`SetHistFillStyle`](@ref), [`SetHistLineColor`](@ref), [`SetHistLineStyle`](@ref), [`SetHistLineWidth`](@ref), [`SetHistMinimumZero`](@ref), [`SetHistTopMargin`](@ref), [`SetImageScaling`](@ref), [`SetIsReading`](@ref), [`SetJoinLinePS`](@ref), [`SetLabelColor`](@ref), [`SetLabelFont`](@ref), [`SetLabelOffset`](@ref), [`SetLabelSize`](@ref), [`SetLegendBorderSize`](@ref), [`SetLegendFillColor`](@ref), [`SetLegendFont`](@ref), [`SetLegendGetTextSize`](@ref), [`SetLegoInnerR`](@ref), [`SetLineScalePS`](@ref), [`SetLineStyleGetString`](@ref), [`SetNdivisions`](@ref), [`SetNumberContours`](@ref), [`SetOptDate`](@ref), [`SetOptFile`](@ref), [`SetOptFit`](@ref), [`SetOptLogx`](@ref), [`SetOptLogy`](@ref), [`SetOptLogz`](@ref), [`SetOptStat`](@ref), [`SetOptTitle`](@ref), [`SetOrthoCamera`](@ref), [`SetPadBorderMode`](@ref), [`SetPadBorderSize`](@ref), [`SetPadBottomMargin`](@ref), [`SetPadColor`](@ref), [`SetPadGridX`](@ref), [`SetPadGridY`](@ref), [`SetPadLeftMargin`](@ref), [`SetPadRightMargin`](@ref), [`SetPadTickX`](@ref), [`SetPadTickY`](@ref), [`SetPadTopMargin`](@ref), [`SetPaintGetTextFormat`](@ref), [`SetPalette`](@ref), [`SetPaperSize`](@ref), [`SetScreenFactor`](@ref), [`SetStatBorderSize`](@ref), [`SetStatColor`](@ref), [`SetStatFontSize`](@ref), [`SetStatFont`](@ref), [`SetStatFormat`](@ref), [`SetStatGetTextColor`](@ref), [`SetStatH`](@ref), [`SetStatStyle`](@ref), [`SetStatW`](@ref), [`SetStatX`](@ref), [`SetStatY`](@ref), [`SetStripDecimals`](@ref), [`SetTickLength`](@ref), [`SetTimeOffset`](@ref), [`SetTitleAlign`](@ref), [`SetTitleBorderSize`](@ref), [`SetTitleColor`](@ref), [`SetTitleFillColor`](@ref), [`SetTitleFontSize`](@ref), [`SetTitleFont`](@ref), [`SetTitleGetTextColor`](@ref), [`SetTitleH`](@ref), [`SetTitleOffset`](@ref), [`SetTitlePS`](@ref), [`SetTitleSize`](@ref), [`SetTitleStyle`](@ref), [`SetTitleW`](@ref), [`SetTitleXOffset`](@ref), [`SetTitleXSize`](@ref), [`SetTitleX`](@ref), [`SetTitleYOffset`](@ref), [`SetTitleYSize`](@ref), [`SetTitleY`](@ref), [`SetViolinScaled`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TStyle!BuildStyles`](@ref), [`TStyle!Class_Name`](@ref), [`TStyle!Class_Version`](@ref), [`TStyle!Class`](@ref), [`TStyle!DeclFileName`](@ref), [`TStyle`](@ref), [`ToggleEditor`](@ref), [`ToggleEventStatus`](@ref), [`ToggleToolBar`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`AxisChoice`](@ref), [`Browse`](@ref), [`Copy`](@ref), [`DistancetoPrimitive`](@ref), [`GetAttDate`](@ref), [`GetAxisColor`](@ref), [`GetAxisMaxDigits`](@ref), [`GetBarOffset`](@ref), [`GetBarWidth`](@ref), [`GetCandleBoxRange`](@ref), [`GetCandleScaled`](@ref), [`GetCandleWhiskerRange`](@ref), [`GetCanvasBorderMode`](@ref), [`GetCanvasBorderSize`](@ref), [`GetCanvasColor`](@ref), [`GetCanvasDefH`](@ref), [`GetCanvasDefW`](@ref), [`GetCanvasDefX`](@ref), [`GetCanvasDefY`](@ref), [`GetCanvasPreferGL`](@ref), [`GetCapLinePS`](@ref), [`GetColorModelPS`](@ref), [`GetColorPalette`](@ref), [`GetDateX`](@ref), [`GetDateY`](@ref), [`GetDrawBorder`](@ref), [`GetEndErrorSize`](@ref), [`GetErrorX`](@ref), [`GetExponentOffset`](@ref), [`GetFitFormat`](@ref), [`GetFrameBorderMode`](@ref), [`GetFrameBorderSize`](@ref), [`GetFrameFillColor`](@ref), [`GetFrameFillStyle`](@ref), [`GetFrameLineColor`](@ref), [`GetFrameLineStyle`](@ref), [`GetFrameLineWidth`](@ref), [`GetFuncColor`](@ref), [`GetFuncStyle`](@ref), [`GetFuncWidth`](@ref), [`GetGridColor`](@ref), [`GetGridStyle`](@ref), [`GetGridWidth`](@ref), [`GetHatchesLineWidth`](@ref), [`GetHatchesSpacing`](@ref), [`GetHeaderPS`](@ref), [`GetHistFillColor`](@ref), [`GetHistFillStyle`](@ref), [`GetHistLineColor`](@ref), [`GetHistLineStyle`](@ref), [`GetHistLineWidth`](@ref), [`GetHistMinimumZero`](@ref), [`GetHistTopMargin`](@ref), [`GetImageScaling`](@ref), [`GetJoinLinePS`](@ref), [`GetLabelColor`](@ref), [`GetLabelFont`](@ref), [`GetLabelOffset`](@ref), [`GetLabelSize`](@ref), [`GetLegendBorderSize`](@ref), [`GetLegendFillColor`](@ref), [`GetLegendFont`](@ref), [`GetLegendTextSize`](@ref), [`GetLegoInnerR`](@ref), [`GetLineScalePS`](@ref), [`GetLineStyleString`](@ref), [`GetNdivisions`](@ref), [`GetNumberContours`](@ref), [`GetNumberOfColors`](@ref), [`GetOptDate`](@ref), [`GetOptFile`](@ref), [`GetOptFit`](@ref), [`GetOptLogx`](@ref), [`GetOptLogy`](@ref), [`GetOptLogz`](@ref), [`GetOptStat`](@ref), [`GetOptTitle`](@ref), [`GetOrthoCamera`](@ref), [`GetPadBorderMode`](@ref), [`GetPadBorderSize`](@ref), [`GetPadBottomMargin`](@ref), [`GetPadColor`](@ref), [`GetPadGridX`](@ref), [`GetPadGridY`](@ref), [`GetPadLeftMargin`](@ref), [`GetPadRightMargin`](@ref), [`GetPadTickX`](@ref), [`GetPadTickY`](@ref), [`GetPadTopMargin`](@ref), [`GetPaintTextFormat`](@ref), [`GetPaperSize`](@ref), [`GetScreenFactor`](@ref), [`GetShowEditor`](@ref), [`GetShowEventStatus`](@ref), [`GetShowToolBar`](@ref), [`GetStatBorderSize`](@ref), [`GetStatColor`](@ref), [`GetStatFontSize`](@ref), [`GetStatFont`](@ref), [`GetStatFormat`](@ref), [`GetStatH`](@ref), [`GetStatStyle`](@ref), [`GetStatTextColor`](@ref), [`GetStatW`](@ref), [`GetStatX`](@ref), [`GetStatY`](@ref), [`GetStripDecimals`](@ref), [`GetTickLength`](@ref), [`GetTimeOffset`](@ref), [`GetTitleAlign`](@ref), [`GetTitleBorderSize`](@ref), [`GetTitleColor`](@ref), [`GetTitleFillColor`](@ref), [`GetTitleFontSize`](@ref), [`GetTitleFont`](@ref), [`GetTitleH`](@ref), [`GetTitleOffset`](@ref), [`GetTitlePS`](@ref), [`GetTitleSize`](@ref), [`GetTitleStyle`](@ref), [`GetTitleTextColor`](@ref), [`GetTitleW`](@ref), [`GetTitleXOffset`](@ref), [`GetTitleXSize`](@ref), [`GetTitleX`](@ref), [`GetTitleYOffset`](@ref), [`GetTitleYSize`](@ref), [`GetTitleY`](@ref), [`GetViolinScaled`](@ref), [`IsA`](@ref), [`IsReading`](@ref), [`Paint`](@ref), [`Reset`](@ref), [`SavePrimitive`](@ref), [`SaveSource`](@ref), [`SetAxisColor`](@ref), [`SetAxisMaxDigits`](@ref), [`SetBarOffset`](@ref), [`SetBarWidth`](@ref), [`SetCandleBoxRange`](@ref), [`SetCandleScaled`](@ref), [`SetCandleWhiskerRange`](@ref), [`SetCanvasBorderMode`](@ref), [`SetCanvasBorderSize`](@ref), [`SetCanvasColor`](@ref), [`SetCanvasDefH`](@ref), [`SetCanvasDefW`](@ref), [`SetCanvasDefX`](@ref), [`SetCanvasDefY`](@ref), [`SetCanvasPreferGL`](@ref), [`SetCapLinePS`](@ref), [`SetColorModelPS`](@ref), [`SetDateX`](@ref), [`SetDateY`](@ref), [`SetDrawBorder`](@ref), [`SetEndErrorSize`](@ref), [`SetErrorX`](@ref), [`SetExponentOffset`](@ref), [`SetFitFormat`](@ref), [`SetFrameBorderMode`](@ref), [`SetFrameBorderSize`](@ref), [`SetFrameFillColor`](@ref), [`SetFrameFillStyle`](@ref), [`SetFrameLineColor`](@ref), [`SetFrameLineStyle`](@ref), [`SetFrameLineWidth`](@ref), [`SetFuncColor`](@ref), [`SetFuncStyle`](@ref), [`SetFuncWidth`](@ref), [`SetGridColor`](@ref), [`SetGridStyle`](@ref), [`SetGridWidth`](@ref), [`SetHatchesLineWidth`](@ref), [`SetHatchesSpacing`](@ref), [`SetHeaderPS`](@ref), [`SetHistFillColor`](@ref), [`SetHistFillStyle`](@ref), [`SetHistLineColor`](@ref), [`SetHistLineStyle`](@ref), [`SetHistLineWidth`](@ref), [`SetHistMinimumZero`](@ref), [`SetHistTopMargin`](@ref), [`SetImageScaling`](@ref), [`SetIsReading`](@ref), [`SetJoinLinePS`](@ref), [`SetLabelColor`](@ref), [`SetLabelFont`](@ref), [`SetLabelOffset`](@ref), [`SetLabelSize`](@ref), [`SetLegendBorderSize`](@ref), [`SetLegendFillColor`](@ref), [`SetLegendFont`](@ref), [`SetLegendTextSize`](@ref), [`SetLegoInnerR`](@ref), [`SetLineScalePS`](@ref), [`SetLineStyleString`](@ref), [`SetNdivisions`](@ref), [`SetNumberContours`](@ref), [`SetOptDate`](@ref), [`SetOptFile`](@ref), [`SetOptFit`](@ref), [`SetOptLogx`](@ref), [`SetOptLogy`](@ref), [`SetOptLogz`](@ref), [`SetOptStat`](@ref), [`SetOptTitle`](@ref), [`SetOrthoCamera`](@ref), [`SetPadBorderMode`](@ref), [`SetPadBorderSize`](@ref), [`SetPadBottomMargin`](@ref), [`SetPadColor`](@ref), [`SetPadGridX`](@ref), [`SetPadGridY`](@ref), [`SetPadLeftMargin`](@ref), [`SetPadRightMargin`](@ref), [`SetPadTickX`](@ref), [`SetPadTickY`](@ref), [`SetPadTopMargin`](@ref), [`SetPaintTextFormat`](@ref), [`SetPalette`](@ref), [`SetPaperSize`](@ref), [`SetScreenFactor`](@ref), [`SetStatBorderSize`](@ref), [`SetStatColor`](@ref), [`SetStatFontSize`](@ref), [`SetStatFont`](@ref), [`SetStatFormat`](@ref), [`SetStatH`](@ref), [`SetStatStyle`](@ref), [`SetStatTextColor`](@ref), [`SetStatW`](@ref), [`SetStatX`](@ref), [`SetStatY`](@ref), [`SetStripDecimals`](@ref), [`SetTickLength`](@ref), [`SetTimeOffset`](@ref), [`SetTitleAlign`](@ref), [`SetTitleBorderSize`](@ref), [`SetTitleColor`](@ref), [`SetTitleFillColor`](@ref), [`SetTitleFontSize`](@ref), [`SetTitleFont`](@ref), [`SetTitleH`](@ref), [`SetTitleOffset`](@ref), [`SetTitlePS`](@ref), [`SetTitleSize`](@ref), [`SetTitleStyle`](@ref), [`SetTitleTextColor`](@ref), [`SetTitleW`](@ref), [`SetTitleXOffset`](@ref), [`SetTitleXSize`](@ref), [`SetTitleX`](@ref), [`SetTitleYOffset`](@ref), [`SetTitleYSize`](@ref), [`SetTitleY`](@ref), [`SetViolinScaled`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TStyle!BuildStyles`](@ref), [`TStyle!Class_Name`](@ref), [`TStyle!Class_Version`](@ref), [`TStyle!Class`](@ref), [`TStyle!DeclFileName`](@ref), [`TStyle`](@ref), [`ToggleEditor`](@ref), [`ToggleEventStatus`](@ref), [`ToggleToolBar`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TStyle
 
 # Wrapper of TVirtualPad
@@ -2659,7 +2659,7 @@ Related functions: [`AxisChoice`](@ref), [`Browse`](@ref), [`Copy`](@ref), [`Dis
 
 
 
-Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`Clip`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`ExecuteEventAxis`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsBeingResized`](@ref), [`IsEditable`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadInHighlightMode`](@ref), [`PadInSelectionMode`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBorderPS`](@ref), [`PaintBox`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintGetTextNDC`](@ref), [`PaintGetText`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`Paint`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`PopTopLevelSelectable`](@ref), [`Pop`](@ref), [`Print`](@ref), [`PushSelectableObject`](@ref), [`PushTopLevelSelectable`](@ref), [`RangeAxisChanged`](@ref), [`RangeAxis`](@ref), [`Range`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttGetTextPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetBatch`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetEditable`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipGetText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPad!Class_Name`](@ref), [`TVirtualPad!Class_Version`](@ref), [`TVirtualPad!Class`](@ref), [`TVirtualPad!DeclFileName`](@ref), [`TVirtualPad!Pad`](@ref), [`TVirtualPad`](@ref), [`UnZoomed`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref)
+Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`Clip`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`ExecuteEventAxis`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsA`](@ref), [`IsBatch`](@ref), [`IsBeingResized`](@ref), [`IsEditable`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadInHighlightMode`](@ref), [`PadInSelectionMode`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBorderPS`](@ref), [`PaintBox`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`PaintTextNDC`](@ref), [`PaintText`](@ref), [`Paint`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`PopTopLevelSelectable`](@ref), [`Pop`](@ref), [`Print`](@ref), [`PushSelectableObject`](@ref), [`PushTopLevelSelectable`](@ref), [`RangeAxisChanged`](@ref), [`RangeAxis`](@ref), [`Range`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetAttTextPS`](@ref), [`SetBatch`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetEditable`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPad!Class_Name`](@ref), [`TVirtualPad!Class_Version`](@ref), [`TVirtualPad!Class`](@ref), [`TVirtualPad!DeclFileName`](@ref), [`TVirtualPad!Pad`](@ref), [`TVirtualPad`](@ref), [`UnZoomed`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref)
 """ TVirtualPad
 
 # Wrapper of TProcessUUID
@@ -2812,7 +2812,7 @@ Provides iteration through tokens of a given string.
 
 Current token is stored in the [TString](@ref) base-class. During construction no match is done, use [NextToken()](@ref) to get the first and all subsequent tokens.
 
-Related functions: [`AtEnd`](@ref), [`IsA`](@ref), [`NextToken`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TGetStringToken`](@ref), [`TStringToken!Class_Name`](@ref), [`TStringToken!Class_Version`](@ref), [`TStringToken!Class`](@ref), [`TStringToken!DeclFileName`](@ref)
+Related functions: [`AtEnd`](@ref), [`IsA`](@ref), [`NextToken`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TStringToken!Class_Name`](@ref), [`TStringToken!Class_Version`](@ref), [`TStringToken!Class`](@ref), [`TStringToken!DeclFileName`](@ref), [`TStringToken`](@ref)
 """ TStringToken
 
 # Wrapper of TBits
@@ -2958,7 +2958,7 @@ Basic time type with millisecond precision.
 
 
 
-Related functions: [`AsGetString`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTime!Class_Name`](@ref), [`TTime!Class_Version`](@ref), [`TTime!Class`](@ref), [`TTime!DeclFileName`](@ref), [`TTime`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`long long`](@ref), [`long`](@ref), [`mult!`](@ref), [`sub!`](@ref), [`unsigned long long`](@ref), [`unsigned long`](@ref)
+Related functions: [`AsString`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTime!Class_Name`](@ref), [`TTime!Class_Version`](@ref), [`TTime!Class`](@ref), [`TTime!DeclFileName`](@ref), [`TTime`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`long long`](@ref), [`long`](@ref), [`mult!`](@ref), [`sub!`](@ref), [`unsigned long long`](@ref), [`unsigned long`](@ref)
 """ TTime
 
 # Wrapper of TTimer
@@ -2994,7 +2994,7 @@ Signal/slots example:
 
 (C++ version of the code)
 
-Related functions: [`Add`](@ref), [`CheckGetTimer`](@ref), [`GetAbsTime`](@ref), [`GetCommand`](@ref), [`GetGetTimerID`](@ref), [`GetObject`](@ref), [`GetTime`](@ref), [`HasTimedOut`](@ref), [`IsA`](@ref), [`IsAsync`](@ref), [`IsInterruptingSyscalls`](@ref), [`IsRunning`](@ref), [`IsSync`](@ref), [`Notify`](@ref), [`Remove`](@ref), [`Reset`](@ref), [`SetCommand`](@ref), [`SetGetTimerID`](@ref), [`SetInterruptSyscalls`](@ref), [`SetObject`](@ref), [`SetTime`](@ref), [`Start`](@ref), [`Stop`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TGetTimer`](@ref), [`TTimer!Class_Name`](@ref), [`TTimer!Class_Version`](@ref), [`TTimer!Class`](@ref), [`TTimer!DeclFileName`](@ref), [`TTimer!SingleShot`](@ref), [`Timeout`](@ref), [`TurnOff`](@ref), [`TurnOn`](@ref)
+Related functions: [`Add`](@ref), [`CheckTimer`](@ref), [`GetAbsTime`](@ref), [`GetCommand`](@ref), [`GetObject`](@ref), [`GetTime`](@ref), [`GetTimerID`](@ref), [`HasTimedOut`](@ref), [`IsA`](@ref), [`IsAsync`](@ref), [`IsInterruptingSyscalls`](@ref), [`IsRunning`](@ref), [`IsSync`](@ref), [`Notify`](@ref), [`Remove`](@ref), [`Reset`](@ref), [`SetCommand`](@ref), [`SetInterruptSyscalls`](@ref), [`SetObject`](@ref), [`SetTime`](@ref), [`SetTimerID`](@ref), [`Start`](@ref), [`Stop`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTimer!Class_Name`](@ref), [`TTimer!Class_Version`](@ref), [`TTimer!Class`](@ref), [`TTimer!DeclFileName`](@ref), [`TTimer!SingleShot`](@ref), [`TTimer`](@ref), [`Timeout`](@ref), [`TurnOff`](@ref), [`TurnOn`](@ref)
 """ TTimer
 
 # Wrapper of TProcessEventTimer
@@ -3005,7 +3005,7 @@ Related functions: [`Add`](@ref), [`CheckGetTimer`](@ref), [`GetAbsTime`](@ref),
 
 
 
-Related functions: [`IsA`](@ref), [`Notify`](@ref), [`ProcessEvents`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TProcessEventGetTimer`](@ref), [`TProcessEventTimer!Class_Name`](@ref), [`TProcessEventTimer!Class_Version`](@ref), [`TProcessEventTimer!Class`](@ref), [`TProcessEventTimer!DeclFileName`](@ref)
+Related functions: [`IsA`](@ref), [`Notify`](@ref), [`ProcessEvents`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TProcessEventTimer!Class_Name`](@ref), [`TProcessEventTimer!Class_Version`](@ref), [`TProcessEventTimer!Class`](@ref), [`TProcessEventTimer!DeclFileName`](@ref), [`TProcessEventTimer`](@ref)
 """ TProcessEventTimer
 
 # Wrapper of TSystem
@@ -3016,7 +3016,7 @@ Abstract base class defining a generic interface to the underlying Operating Sys
 
 This is not an ABC in the strict sense of the (C++) word. For every member function there is an implementation (often not more than a call to [AbstractMethod()](@ref) which prints a warning saying that the method should be overridden in a derived class), which allows a simple partial implementation for new OS'es.
 
-Related functions: [`Abort`](@ref), [`AcceptConnection`](@ref), [`AccessPathName`](@ref), [`AddDynamicPath`](@ref), [`AddFileHandler`](@ref), [`AddGetTimer`](@ref), [`AddIncludePath`](@ref), [`AddLinkedLibs`](@ref), [`AddSignalHandler`](@ref), [`AddStdExceptionHandler`](@ref), [`AnnounceTcpService`](@ref), [`AnnounceUdpService`](@ref), [`AnnounceUnixService`](@ref), [`BaseName`](@ref), [`Beep`](@ref), [`ChangeDirectory`](@ref), [`Chmod`](@ref), [`CleanCompiledMacros`](@ref), [`CloseConnection`](@ref), [`ClosePipe`](@ref), [`Closelog`](@ref), [`CompileMacro`](@ref), [`ConcatFileName`](@ref), [`CopyFile`](@ref), [`DirName`](@ref), [`DispatchOneEvent`](@ref), [`DynFindSymbol`](@ref), [`DynamicPathName`](@ref), [`Exec`](@ref), [`ExitLoop`](@ref), [`Exit`](@ref), [`ExpandPathName`](@ref), [`FindDynamicLibrary`](@ref), [`FindFile`](@ref), [`FreeDirectory`](@ref), [`GetAclicMode`](@ref), [`GetAclicProperties`](@ref), [`GetBeepDefaults`](@ref), [`GetBuildArch`](@ref), [`GetBuildCompilerVersionStr`](@ref), [`GetBuildCompilerVersion`](@ref), [`GetBuildCompiler`](@ref), [`GetBuildDir`](@ref), [`GetBuildNode`](@ref), [`GetCpuInfo`](@ref), [`GetCryptoRandom`](@ref), [`GetDirEntry`](@ref), [`GetDirName`](@ref), [`GetDirPtr`](@ref), [`GetDynamicPath`](@ref), [`GetEffectiveGid`](@ref), [`GetEffectiveUid`](@ref), [`GetErrorStr`](@ref), [`GetError`](@ref), [`GetFPEMask`](@ref), [`GetFlagsDebug`](@ref), [`GetFlagsOpt`](@ref), [`GetFromPipe`](@ref), [`GetFsInfo`](@ref), [`GetGid`](@ref), [`GetGroupInfo`](@ref), [`GetHomeDirectory`](@ref), [`GetHostByName`](@ref), [`GetIncludePath`](@ref), [`GetLibraries`](@ref), [`GetLinkdefSuffix`](@ref), [`GetLinkedLibs`](@ref), [`GetListOfFileHandlers`](@ref), [`GetListOfGetTimers`](@ref), [`GetListOfSignalHandlers`](@ref), [`GetListOfStdExceptionHandlers`](@ref), [`GetMakeExe`](@ref), [`GetMakeSharedLib`](@ref), [`GetMemInfo`](@ref), [`GetObjExt`](@ref), [`GetPathInfo`](@ref), [`GetPeerName`](@ref), [`GetPid`](@ref), [`GetProcInfo`](@ref), [`GetServiceByName`](@ref), [`GetServiceByPort`](@ref), [`GetSoExt`](@ref), [`GetSockName`](@ref), [`GetSockOpt`](@ref), [`GetSysInfo`](@ref), [`GetUid`](@ref), [`GetUserInfo`](@ref), [`GetVolumes`](@ref), [`GetWorkingDirectory`](@ref), [`Getenv`](@ref), [`HomeDirectory`](@ref), [`HostName`](@ref), [`IgnoreInterrupt`](@ref), [`IgnoreSignal`](@ref), [`InControl`](@ref), [`Init`](@ref), [`InnerLoop`](@ref), [`IsA`](@ref), [`IsAbsoluteFileName`](@ref), [`IsFileInIncludePath`](@ref), [`IsPathLocal`](@ref), [`Link`](@ref), [`ListLibraries`](@ref), [`ListSymbols`](@ref), [`LoadAllLibraries`](@ref), [`Load`](@ref), [`MakeDirectory`](@ref), [`NextTimeOut`](@ref), [`NotifyApplicationCreated`](@ref), [`Now`](@ref), [`OpenConnection`](@ref), [`OpenDirectory`](@ref), [`OpenPipe`](@ref), [`Openlog`](@ref), [`PrependPathName`](@ref), [`ProcessEvents`](@ref), [`RecvBuf`](@ref), [`RecvRaw`](@ref), [`RedirectOutput`](@ref), [`RemoveFileHandler`](@ref), [`RemoveGetTimer`](@ref), [`RemoveOnExit`](@ref), [`RemoveSignalHandler`](@ref), [`RemoveStdExceptionHandler`](@ref), [`Rename`](@ref), [`ResetGetTimer`](@ref), [`ResetSignal`](@ref), [`ResetSignals`](@ref), [`Run`](@ref), [`Select`](@ref), [`SendBuf`](@ref), [`SendRaw`](@ref), [`SetAclicMode`](@ref), [`SetBuildDir`](@ref), [`SetDisplay`](@ref), [`SetDynamicPath`](@ref), [`SetErrorStr`](@ref), [`SetFPEMask`](@ref), [`SetFlagsDebug`](@ref), [`SetFlagsOpt`](@ref), [`SetIncludePath`](@ref), [`SetLinkdefSuffix`](@ref), [`SetLinkedLibs`](@ref), [`SetMakeExe`](@ref), [`SetMakeSharedLib`](@ref), [`SetObjExt`](@ref), [`SetProgname`](@ref), [`SetSoExt`](@ref), [`SetSockOpt`](@ref), [`Setenv`](@ref), [`ShowOutput`](@ref), [`Sleep`](@ref), [`SplitAclicMode`](@ref), [`StackTrace`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Symlink`](@ref), [`Syslog`](@ref), [`TSystem!Class_Name`](@ref), [`TSystem!Class_Version`](@ref), [`TSystem!Class`](@ref), [`TSystem!DeclFileName`](@ref), [`TSystem!GetErrno`](@ref), [`TSystem!ResetErrno`](@ref), [`TSystem`](@ref), [`TempDirectory`](@ref), [`TempFileName`](@ref), [`Umask`](@ref), [`UnixPathName`](@ref), [`Unlink`](@ref), [`Unload`](@ref), [`Unsetenv`](@ref), [`Utime`](@ref), [`Which`](@ref), [`WorkingDirectory`](@ref), [`cd`](@ref), [`mkdir`](@ref), [`pwd`](@ref)
+Related functions: [`Abort`](@ref), [`AcceptConnection`](@ref), [`AccessPathName`](@ref), [`AddDynamicPath`](@ref), [`AddFileHandler`](@ref), [`AddIncludePath`](@ref), [`AddLinkedLibs`](@ref), [`AddSignalHandler`](@ref), [`AddStdExceptionHandler`](@ref), [`AddTimer`](@ref), [`AnnounceTcpService`](@ref), [`AnnounceUdpService`](@ref), [`AnnounceUnixService`](@ref), [`BaseName`](@ref), [`Beep`](@ref), [`ChangeDirectory`](@ref), [`Chmod`](@ref), [`CleanCompiledMacros`](@ref), [`CloseConnection`](@ref), [`ClosePipe`](@ref), [`Closelog`](@ref), [`CompileMacro`](@ref), [`ConcatFileName`](@ref), [`CopyFile`](@ref), [`DirName`](@ref), [`DispatchOneEvent`](@ref), [`DynFindSymbol`](@ref), [`DynamicPathName`](@ref), [`Exec`](@ref), [`ExitLoop`](@ref), [`Exit`](@ref), [`ExpandPathName`](@ref), [`FindDynamicLibrary`](@ref), [`FindFile`](@ref), [`FreeDirectory`](@ref), [`GetAclicMode`](@ref), [`GetAclicProperties`](@ref), [`GetBeepDefaults`](@ref), [`GetBuildArch`](@ref), [`GetBuildCompilerVersionStr`](@ref), [`GetBuildCompilerVersion`](@ref), [`GetBuildCompiler`](@ref), [`GetBuildDir`](@ref), [`GetBuildNode`](@ref), [`GetCpuInfo`](@ref), [`GetCryptoRandom`](@ref), [`GetDirEntry`](@ref), [`GetDirName`](@ref), [`GetDirPtr`](@ref), [`GetDynamicPath`](@ref), [`GetEffectiveGid`](@ref), [`GetEffectiveUid`](@ref), [`GetErrorStr`](@ref), [`GetError`](@ref), [`GetFPEMask`](@ref), [`GetFlagsDebug`](@ref), [`GetFlagsOpt`](@ref), [`GetFromPipe`](@ref), [`GetFsInfo`](@ref), [`GetGid`](@ref), [`GetGroupInfo`](@ref), [`GetHomeDirectory`](@ref), [`GetHostByName`](@ref), [`GetIncludePath`](@ref), [`GetLibraries`](@ref), [`GetLinkdefSuffix`](@ref), [`GetLinkedLibs`](@ref), [`GetListOfFileHandlers`](@ref), [`GetListOfSignalHandlers`](@ref), [`GetListOfStdExceptionHandlers`](@ref), [`GetListOfTimers`](@ref), [`GetMakeExe`](@ref), [`GetMakeSharedLib`](@ref), [`GetMemInfo`](@ref), [`GetObjExt`](@ref), [`GetPathInfo`](@ref), [`GetPeerName`](@ref), [`GetPid`](@ref), [`GetProcInfo`](@ref), [`GetServiceByName`](@ref), [`GetServiceByPort`](@ref), [`GetSoExt`](@ref), [`GetSockName`](@ref), [`GetSockOpt`](@ref), [`GetSysInfo`](@ref), [`GetUid`](@ref), [`GetUserInfo`](@ref), [`GetVolumes`](@ref), [`GetWorkingDirectory`](@ref), [`Getenv`](@ref), [`HomeDirectory`](@ref), [`HostName`](@ref), [`IgnoreInterrupt`](@ref), [`IgnoreSignal`](@ref), [`InControl`](@ref), [`Init`](@ref), [`InnerLoop`](@ref), [`IsA`](@ref), [`IsAbsoluteFileName`](@ref), [`IsFileInIncludePath`](@ref), [`IsPathLocal`](@ref), [`Link`](@ref), [`ListLibraries`](@ref), [`ListSymbols`](@ref), [`LoadAllLibraries`](@ref), [`Load`](@ref), [`MakeDirectory`](@ref), [`NextTimeOut`](@ref), [`NotifyApplicationCreated`](@ref), [`Now`](@ref), [`OpenConnection`](@ref), [`OpenDirectory`](@ref), [`OpenPipe`](@ref), [`Openlog`](@ref), [`PrependPathName`](@ref), [`ProcessEvents`](@ref), [`RecvBuf`](@ref), [`RecvRaw`](@ref), [`RedirectOutput`](@ref), [`RemoveFileHandler`](@ref), [`RemoveOnExit`](@ref), [`RemoveSignalHandler`](@ref), [`RemoveStdExceptionHandler`](@ref), [`RemoveTimer`](@ref), [`Rename`](@ref), [`ResetSignal`](@ref), [`ResetSignals`](@ref), [`ResetTimer`](@ref), [`Run`](@ref), [`Select`](@ref), [`SendBuf`](@ref), [`SendRaw`](@ref), [`SetAclicMode`](@ref), [`SetBuildDir`](@ref), [`SetDisplay`](@ref), [`SetDynamicPath`](@ref), [`SetErrorStr`](@ref), [`SetFPEMask`](@ref), [`SetFlagsDebug`](@ref), [`SetFlagsOpt`](@ref), [`SetIncludePath`](@ref), [`SetLinkdefSuffix`](@ref), [`SetLinkedLibs`](@ref), [`SetMakeExe`](@ref), [`SetMakeSharedLib`](@ref), [`SetObjExt`](@ref), [`SetProgname`](@ref), [`SetSoExt`](@ref), [`SetSockOpt`](@ref), [`Setenv`](@ref), [`ShowOutput`](@ref), [`Sleep`](@ref), [`SplitAclicMode`](@ref), [`StackTrace`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`Symlink`](@ref), [`Syslog`](@ref), [`TSystem!Class_Name`](@ref), [`TSystem!Class_Version`](@ref), [`TSystem!Class`](@ref), [`TSystem!DeclFileName`](@ref), [`TSystem!GetErrno`](@ref), [`TSystem!ResetErrno`](@ref), [`TSystem`](@ref), [`TempDirectory`](@ref), [`TempFileName`](@ref), [`Umask`](@ref), [`UnixPathName`](@ref), [`Unlink`](@ref), [`Unload`](@ref), [`Unsetenv`](@ref), [`Utime`](@ref), [`Which`](@ref), [`WorkingDirectory`](@ref), [`cd`](@ref), [`mkdir`](@ref), [`pwd`](@ref)
 """ TSystem
 
 # Wrapper of TFileHandler
@@ -3376,7 +3376,7 @@ Due to ROOT/CINT limitations [TTimeStamp](@ref) does not explicitly hold a times
 
 NOTE: the use of time_t (and its default implementation as a 32 int) implies overflow conditions occurs somewhere around `Jan 18, 19:14:07, 2038`. If this experiment is still going when it becomes significant someone will have to deal with it.
 
-Related functions: [`Add`](@ref), [`AsDouble`](@ref), [`AsGAST`](@ref), [`AsGMST`](@ref), [`AsGetString`](@ref), [`AsJulianDate`](@ref), [`AsLAST`](@ref), [`AsLMST`](@ref), [`Copy`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDayOfYear`](@ref), [`GetMonth`](@ref), [`GetNanoSec`](@ref), [`GetSec`](@ref), [`GetTimeSpec`](@ref), [`GetTime`](@ref), [`GetWeek`](@ref), [`IsA`](@ref), [`IsLeapYear`](@ref), [`Print`](@ref), [`SetNanoSec`](@ref), [`SetSec`](@ref), [`Set`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTimeStamp!Class_Name`](@ref), [`TTimeStamp!Class_Version`](@ref), [`TTimeStamp!Class`](@ref), [`TTimeStamp!DeclFileName`](@ref), [`TTimeStamp!DumpTMStruct`](@ref), [`TTimeStamp!GetDayOfWeek`](@ref), [`TTimeStamp!GetDayOfYear`](@ref), [`TTimeStamp!GetWeek`](@ref), [`TTimeStamp!GetZoneOffset`](@ref), [`TTimeStamp!IsLeapYear`](@ref), [`TTimeStamp!MktimeFromUTC`](@ref), [`TTimeStamp`](@ref), [`double`](@ref)
+Related functions: [`Add`](@ref), [`AsDouble`](@ref), [`AsGAST`](@ref), [`AsGMST`](@ref), [`AsJulianDate`](@ref), [`AsLAST`](@ref), [`AsLMST`](@ref), [`AsString`](@ref), [`Copy`](@ref), [`GetDate`](@ref), [`GetDayOfWeek`](@ref), [`GetDayOfYear`](@ref), [`GetMonth`](@ref), [`GetNanoSec`](@ref), [`GetSec`](@ref), [`GetTimeSpec`](@ref), [`GetTime`](@ref), [`GetWeek`](@ref), [`IsA`](@ref), [`IsLeapYear`](@ref), [`Print`](@ref), [`SetNanoSec`](@ref), [`SetSec`](@ref), [`Set`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TTimeStamp!Class_Name`](@ref), [`TTimeStamp!Class_Version`](@ref), [`TTimeStamp!Class`](@ref), [`TTimeStamp!DeclFileName`](@ref), [`TTimeStamp!DumpTMStruct`](@ref), [`TTimeStamp!GetDayOfWeek`](@ref), [`TTimeStamp!GetDayOfYear`](@ref), [`TTimeStamp!GetWeek`](@ref), [`TTimeStamp!GetZoneOffset`](@ref), [`TTimeStamp!IsLeapYear`](@ref), [`TTimeStamp!MktimeFromUTC`](@ref), [`TTimeStamp`](@ref), [`double`](@ref)
 """ TTimeStamp
 
 # Wrapper of TUri
@@ -3463,7 +3463,7 @@ Call to the static function FFT returns a pointer to a fast Fourier transform wi
 
  Different options are explained in the function comments
 
-Related functions: [`GetGetType`](@ref), [`GetN`](@ref), [`GetNdim`](@ref), [`GetPointComplex`](@ref), [`GetPointReal`](@ref), [`GetPointsComplex`](@ref), [`GetPointsReal`](@ref), [`GetPoints`](@ref), [`GetSign`](@ref), [`GetTransformFlag`](@ref), [`Init`](@ref), [`IsA`](@ref), [`IsInplace`](@ref), [`SetPointComplex`](@ref), [`SetPoint`](@ref), [`SetPointsComplex`](@ref), [`SetPoints`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualFFT!Class_Name`](@ref), [`TVirtualFFT!Class_Version`](@ref), [`TVirtualFFT!Class`](@ref), [`TVirtualFFT!DeclFileName`](@ref), [`TVirtualFFT!FFT`](@ref), [`TVirtualFFT!GetCurrentTransform`](@ref), [`TVirtualFFT!GetDefaultFFT`](@ref), [`TVirtualFFT!SetDefaultFFT`](@ref), [`TVirtualFFT!SetTransform`](@ref), [`TVirtualFFT!SineCosine`](@ref), [`TVirtualFFT`](@ref), [`Transform`](@ref)
+Related functions: [`GetN`](@ref), [`GetNdim`](@ref), [`GetPointComplex`](@ref), [`GetPointReal`](@ref), [`GetPointsComplex`](@ref), [`GetPointsReal`](@ref), [`GetPoints`](@ref), [`GetSign`](@ref), [`GetTransformFlag`](@ref), [`GetType`](@ref), [`Init`](@ref), [`IsA`](@ref), [`IsInplace`](@ref), [`SetPointComplex`](@ref), [`SetPoint`](@ref), [`SetPointsComplex`](@ref), [`SetPoints`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualFFT!Class_Name`](@ref), [`TVirtualFFT!Class_Version`](@ref), [`TVirtualFFT!Class`](@ref), [`TVirtualFFT!DeclFileName`](@ref), [`TVirtualFFT!FFT`](@ref), [`TVirtualFFT!GetCurrentTransform`](@ref), [`TVirtualFFT!GetDefaultFFT`](@ref), [`TVirtualFFT!SetDefaultFFT`](@ref), [`TVirtualFFT!SetTransform`](@ref), [`TVirtualFFT!SineCosine`](@ref), [`TVirtualFFT`](@ref), [`Transform`](@ref)
 """ TVirtualFFT
 
 # Wrapper of TVirtualMapFile
@@ -3553,7 +3553,7 @@ Abstract base class used by [ROOT](@ref) graphics editor.
 
 
 
-Related functions: [`Build`](@ref), [`DeleteEditors`](@ref), [`DrawGetTextNDC`](@ref), [`DrawGetText`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`FillAttributes`](@ref), [`GetCanvas`](@ref), [`GetTextAttributes`](@ref), [`Hide`](@ref), [`IsA`](@ref), [`IsGlobal`](@ref), [`LineAttributes`](@ref), [`MarkerAttributes`](@ref), [`SetGlobal`](@ref), [`Show`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadEditor!Class_Name`](@ref), [`TVirtualPadEditor!Class_Version`](@ref), [`TVirtualPadEditor!Class`](@ref), [`TVirtualPadEditor!DeclFileName`](@ref), [`TVirtualPadEditor!GetEditorName`](@ref), [`TVirtualPadEditor!GetPadEditor`](@ref), [`TVirtualPadEditor!HideEditor`](@ref), [`TVirtualPadEditor!LoadEditor`](@ref), [`TVirtualPadEditor!SetPadEditorName`](@ref), [`TVirtualPadEditor!ShowEditor`](@ref), [`TVirtualPadEditor!Terminate`](@ref), [`TVirtualPadEditor!UpdateFillAttributes`](@ref), [`TVirtualPadEditor!UpdateGetTextAttributes`](@ref), [`TVirtualPadEditor!UpdateLineAttributes`](@ref), [`TVirtualPadEditor!UpdateMarkerAttributes`](@ref), [`TVirtualPadEditor`](@ref)
+Related functions: [`Build`](@ref), [`DeleteEditors`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`DrawTextNDC`](@ref), [`DrawText`](@ref), [`FillAttributes`](@ref), [`GetCanvas`](@ref), [`Hide`](@ref), [`IsA`](@ref), [`IsGlobal`](@ref), [`LineAttributes`](@ref), [`MarkerAttributes`](@ref), [`SetGlobal`](@ref), [`Show`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadEditor!Class_Name`](@ref), [`TVirtualPadEditor!Class_Version`](@ref), [`TVirtualPadEditor!Class`](@ref), [`TVirtualPadEditor!DeclFileName`](@ref), [`TVirtualPadEditor!GetEditorName`](@ref), [`TVirtualPadEditor!GetPadEditor`](@ref), [`TVirtualPadEditor!HideEditor`](@ref), [`TVirtualPadEditor!LoadEditor`](@ref), [`TVirtualPadEditor!SetPadEditorName`](@ref), [`TVirtualPadEditor!ShowEditor`](@ref), [`TVirtualPadEditor!Terminate`](@ref), [`TVirtualPadEditor!UpdateFillAttributes`](@ref), [`TVirtualPadEditor!UpdateLineAttributes`](@ref), [`TVirtualPadEditor!UpdateMarkerAttributes`](@ref), [`TVirtualPadEditor!UpdateTextAttributes`](@ref), [`TVirtualPadEditor`](@ref), [`TextAttributes`](@ref)
 """ TVirtualPadEditor
 
 # Wrapper of TAxis
@@ -3748,7 +3748,7 @@ To make it possible to use GL for 2D graphic in a TPad/TCanvas.
 
 [TVirtualPadPainter](@ref) interface must be used instead of [TVirtualX](@ref). Internally, non-GL implementation *should* delegate all calls to gVirtualX, GL implementation will delegate part of calls to gVirtualX, and has to implement some of the calls from the scratch.
 
-Related functions: [`ClearDrawable`](@ref), [`CopyDrawable`](@ref), [`CreateDrawable`](@ref), [`DestroyDrawable`](@ref), [`DrawBox`](@ref), [`DrawFillArea`](@ref), [`DrawGetTextNDC`](@ref), [`DrawGetText`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`DrawPixels`](@ref), [`DrawPolyLineNDC`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`GetFillColor`](@ref), [`GetFillStyle`](@ref), [`GetGetTextAlign`](@ref), [`GetGetTextAngle`](@ref), [`GetGetTextColor`](@ref), [`GetGetTextFont`](@ref), [`GetGetTextMagnitude`](@ref), [`GetGetTextSize`](@ref), [`GetLineColor`](@ref), [`GetLineStyle`](@ref), [`GetLineWidth`](@ref), [`InitPainter`](@ref), [`InvalidateCS`](@ref), [`IsA`](@ref), [`IsTransparent`](@ref), [`LockPainter`](@ref), [`SaveImage`](@ref), [`SelectDrawable`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetGetTextAlign`](@ref), [`SetGetTextAngle`](@ref), [`SetGetTextColor`](@ref), [`SetGetTextFont`](@ref), [`SetGetTextSizePixels`](@ref), [`SetGetTextSize`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetOpacity`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadPainter!Class_Name`](@ref), [`TVirtualPadPainter!Class_Version`](@ref), [`TVirtualPadPainter!Class`](@ref), [`TVirtualPadPainter!DeclFileName`](@ref), [`TVirtualPadPainter!PadPainter`](@ref)
+Related functions: [`ClearDrawable`](@ref), [`CopyDrawable`](@ref), [`CreateDrawable`](@ref), [`DestroyDrawable`](@ref), [`DrawBox`](@ref), [`DrawFillArea`](@ref), [`DrawLineNDC`](@ref), [`DrawLine`](@ref), [`DrawPixels`](@ref), [`DrawPolyLineNDC`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`DrawTextNDC`](@ref), [`DrawText`](@ref), [`GetFillColor`](@ref), [`GetFillStyle`](@ref), [`GetLineColor`](@ref), [`GetLineStyle`](@ref), [`GetLineWidth`](@ref), [`GetTextAlign`](@ref), [`GetTextAngle`](@ref), [`GetTextColor`](@ref), [`GetTextFont`](@ref), [`GetTextMagnitude`](@ref), [`GetTextSize`](@ref), [`InitPainter`](@ref), [`InvalidateCS`](@ref), [`IsA`](@ref), [`IsTransparent`](@ref), [`LockPainter`](@ref), [`SaveImage`](@ref), [`SelectDrawable`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetOpacity`](@ref), [`SetTextAlign`](@ref), [`SetTextAngle`](@ref), [`SetTextColor`](@ref), [`SetTextFont`](@ref), [`SetTextSizePixels`](@ref), [`SetTextSize`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPadPainter!Class_Name`](@ref), [`TVirtualPadPainter!Class_Version`](@ref), [`TVirtualPadPainter!Class`](@ref), [`TVirtualPadPainter!DeclFileName`](@ref), [`TVirtualPadPainter!PadPainter`](@ref)
 """ TVirtualPadPainter
 
 # Wrapper of TPickerStackGuard
@@ -3770,7 +3770,7 @@ Provides the interface for the PROOF internal performance measurement and event 
 
 
 
-Related functions: [`FileEvent`](@ref), [`FileOpenEvent`](@ref), [`FileReadEvent`](@ref), [`GetBytesRead`](@ref), [`GetNumEvents`](@ref), [`IsA`](@ref), [`PacketEvent`](@ref), [`PrintBasketInfo`](@ref), [`RateEvent`](@ref), [`SetBytesRead`](@ref), [`SetLoadedMiss`](@ref), [`SetLoaded`](@ref), [`SetMissed`](@ref), [`SetNumEvents`](@ref), [`SetUsed`](@ref), [`SimpleEvent`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPerfStats!Class_Name`](@ref), [`TVirtualPerfStats!Class_Version`](@ref), [`TVirtualPerfStats!Class`](@ref), [`TVirtualPerfStats!CurrentPerfStats`](@ref), [`TVirtualPerfStats!DeclFileName`](@ref), [`TVirtualPerfStats!EventGetType`](@ref), [`UnzipEvent`](@ref), [`UpdateBranchIndices`](@ref)
+Related functions: [`FileEvent`](@ref), [`FileOpenEvent`](@ref), [`FileReadEvent`](@ref), [`GetBytesRead`](@ref), [`GetNumEvents`](@ref), [`IsA`](@ref), [`PacketEvent`](@ref), [`PrintBasketInfo`](@ref), [`RateEvent`](@ref), [`SetBytesRead`](@ref), [`SetLoadedMiss`](@ref), [`SetLoaded`](@ref), [`SetMissed`](@ref), [`SetNumEvents`](@ref), [`SetUsed`](@ref), [`SimpleEvent`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPerfStats!Class_Name`](@ref), [`TVirtualPerfStats!Class_Version`](@ref), [`TVirtualPerfStats!Class`](@ref), [`TVirtualPerfStats!CurrentPerfStats`](@ref), [`TVirtualPerfStats!DeclFileName`](@ref), [`TVirtualPerfStats!EventType`](@ref), [`UnzipEvent`](@ref), [`UpdateBranchIndices`](@ref)
 """ TVirtualPerfStats
 
 # Wrapper of TBranch
@@ -3791,7 +3791,7 @@ See also specialized branches:
 - [TBranchObject](@ref) in case the branch is one object
 - [TBranchClones](@ref) in case the branch is an array of clone objects
 
-Related functions: [`AddBasket`](@ref), [`AddLastBasket`](@ref), [`BackFill`](@ref), [`Browse`](@ref), [`ClassDefOverride`](@ref), [`DeleteBaskets`](@ref), [`DropBaskets`](@ref), [`ExpandBasketArrays`](@ref), [`FillImpl`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`FlushBaskets`](@ref), [`FlushOneBasket`](@ref), [`GetAddress`](@ref), [`GetBasketBytes`](@ref), [`GetBasketEntry`](@ref), [`GetBasketSeek`](@ref), [`GetBasketSize`](@ref), [`GetBasket`](@ref), [`GetBrowsables`](@ref), [`GetBulkRead`](@ref), [`GetClassName`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetDirectory`](@ref), [`GetEntries`](@ref), [`GetEntryExport`](@ref), [`GetEntryNumber`](@ref), [`GetEntryOffsetLen`](@ref), [`GetEntry`](@ref), [`GetEvent`](@ref), [`GetExpectedGetType`](@ref), [`GetFileName`](@ref), [`GetFile`](@ref), [`GetFirstEntry`](@ref), [`GetFullName`](@ref), [`GetIOFeatures`](@ref), [`GetIconName`](@ref), [`GetLeaf`](@ref), [`GetListOfBaskets`](@ref), [`GetListOfBranches`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxBaskets`](@ref), [`GetMother`](@ref), [`GetNleaves`](@ref), [`GetOffset`](@ref), [`GetReadBasket`](@ref), [`GetReadEntry`](@ref), [`GetRow`](@ref), [`GetSplitLevel`](@ref), [`GetSubBranch`](@ref), [`GetTotBytes`](@ref), [`GetTotalSize`](@ref), [`GetTransientBuffer`](@ref), [`GetTree`](@ref), [`GetWriteBasket`](@ref), [`GetZipBytes`](@ref), [`IsAutoDelete`](@ref), [`IsFolder`](@ref), [`KeepCircular`](@ref), [`LoadBaskets`](@ref), [`PrintCacheInfo`](@ref), [`Print`](@ref), [`ReadBasket`](@ref), [`Refresh`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetReadEntry`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetBufferAddress`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEntries`](@ref), [`SetEntryOffsetLen`](@ref), [`SetFile`](@ref), [`SetFirstEntry`](@ref), [`SetIOFeatures`](@ref), [`SetMakeClass`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetStatus`](@ref), [`SetTree`](@ref), [`SetupAddresses`](@ref), [`SupportsBulkRead`](@ref), [`TBranch!ResetCount`](@ref), [`TBranch`](@ref), [`UpdateAddress`](@ref), [`UpdateFile`](@ref)
+Related functions: [`AddBasket`](@ref), [`AddLastBasket`](@ref), [`BackFill`](@ref), [`Browse`](@ref), [`ClassDefOverride`](@ref), [`DeleteBaskets`](@ref), [`DropBaskets`](@ref), [`ExpandBasketArrays`](@ref), [`FillImpl`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`FlushBaskets`](@ref), [`FlushOneBasket`](@ref), [`GetAddress`](@ref), [`GetBasketBytes`](@ref), [`GetBasketEntry`](@ref), [`GetBasketSeek`](@ref), [`GetBasketSize`](@ref), [`GetBasket`](@ref), [`GetBrowsables`](@ref), [`GetBulkRead`](@ref), [`GetClassName`](@ref), [`GetCompressionAlgorithm`](@ref), [`GetCompressionLevel`](@ref), [`GetCompressionSettings`](@ref), [`GetDirectory`](@ref), [`GetEntries`](@ref), [`GetEntryExport`](@ref), [`GetEntryNumber`](@ref), [`GetEntryOffsetLen`](@ref), [`GetEntry`](@ref), [`GetEvent`](@ref), [`GetExpectedType`](@ref), [`GetFileName`](@ref), [`GetFile`](@ref), [`GetFirstEntry`](@ref), [`GetFullName`](@ref), [`GetIOFeatures`](@ref), [`GetIconName`](@ref), [`GetLeaf`](@ref), [`GetListOfBaskets`](@ref), [`GetListOfBranches`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxBaskets`](@ref), [`GetMother`](@ref), [`GetNleaves`](@ref), [`GetOffset`](@ref), [`GetReadBasket`](@ref), [`GetReadEntry`](@ref), [`GetRow`](@ref), [`GetSplitLevel`](@ref), [`GetSubBranch`](@ref), [`GetTotBytes`](@ref), [`GetTotalSize`](@ref), [`GetTransientBuffer`](@ref), [`GetTree`](@ref), [`GetWriteBasket`](@ref), [`GetZipBytes`](@ref), [`IsAutoDelete`](@ref), [`IsFolder`](@ref), [`KeepCircular`](@ref), [`LoadBaskets`](@ref), [`PrintCacheInfo`](@ref), [`Print`](@ref), [`ReadBasket`](@ref), [`Refresh`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetReadEntry`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetBufferAddress`](@ref), [`SetCompressionAlgorithm`](@ref), [`SetCompressionLevel`](@ref), [`SetCompressionSettings`](@ref), [`SetEntries`](@ref), [`SetEntryOffsetLen`](@ref), [`SetFile`](@ref), [`SetFirstEntry`](@ref), [`SetIOFeatures`](@ref), [`SetMakeClass`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetStatus`](@ref), [`SetTree`](@ref), [`SetupAddresses`](@ref), [`SupportsBulkRead`](@ref), [`TBranch!ResetCount`](@ref), [`TBranch`](@ref), [`UpdateAddress`](@ref), [`UpdateFile`](@ref)
 """ TBranch
 
 # Wrapper of TVirtualPS
@@ -3802,7 +3802,7 @@ Related functions: [`AddBasket`](@ref), [`AddLastBasket`](@ref), [`BackFill`](@r
 
 TeX etc... drivers
 
-Related functions: [`CellArrayBegin`](@ref), [`CellArrayEnd`](@ref), [`CellArrayFill`](@ref), [`Close`](@ref), [`DrawBox`](@ref), [`DrawFrame`](@ref), [`DrawPS`](@ref), [`DrawPolyMarker`](@ref), [`GetGetType`](@ref), [`GetStream`](@ref), [`GetText`](@ref), [`IsA`](@ref), [`NewPage`](@ref), [`Open`](@ref), [`PrintFast`](@ref), [`PrintRaw`](@ref), [`PrintStr`](@ref), [`SetColor`](@ref), [`SetGetType`](@ref), [`SetStream`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPS!Class_Name`](@ref), [`TVirtualPS!Class_Version`](@ref), [`TVirtualPS!Class`](@ref), [`TVirtualPS!DeclFileName`](@ref), [`TVirtualPS`](@ref), [`WriteGetInteger`](@ref), [`WriteReal`](@ref)
+Related functions: [`CellArrayBegin`](@ref), [`CellArrayEnd`](@ref), [`CellArrayFill`](@ref), [`Close`](@ref), [`DrawBox`](@ref), [`DrawFrame`](@ref), [`DrawPS`](@ref), [`DrawPolyMarker`](@ref), [`GetStream`](@ref), [`GetText`](@ref), [`GetType`](@ref), [`IsA`](@ref), [`NewPage`](@ref), [`Open`](@ref), [`PrintFast`](@ref), [`PrintRaw`](@ref), [`PrintStr`](@ref), [`SetColor`](@ref), [`SetStream`](@ref), [`SetType`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualPS!Class_Name`](@ref), [`TVirtualPS!Class_Version`](@ref), [`TVirtualPS!Class`](@ref), [`TVirtualPS!DeclFileName`](@ref), [`TVirtualPS`](@ref), [`WriteInteger`](@ref), [`WriteReal`](@ref)
 """ TVirtualPS
 
 # Wrapper of TVirtualTableInterface
@@ -3813,7 +3813,7 @@ Related functions: [`CellArrayBegin`](@ref), [`CellArrayEnd`](@ref), [`CellArray
 
 
 
-Related functions: [`GetColumnHeader`](@ref), [`GetNColumns`](@ref), [`GetNRows`](@ref), [`GetRowHeader`](@ref), [`GetValueAsGetString`](@ref), [`GetValue`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualTableInterface!Class_Name`](@ref), [`TVirtualTableInterface!Class_Version`](@ref), [`TVirtualTableInterface!Class`](@ref), [`TVirtualTableInterface!DeclFileName`](@ref), [`TVirtualTableInterface`](@ref)
+Related functions: [`GetColumnHeader`](@ref), [`GetNColumns`](@ref), [`GetNRows`](@ref), [`GetRowHeader`](@ref), [`GetValueAsString`](@ref), [`GetValue`](@ref), [`IsA`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`TVirtualTableInterface!Class_Name`](@ref), [`TVirtualTableInterface!Class_Version`](@ref), [`TVirtualTableInterface!Class`](@ref), [`TVirtualTableInterface!DeclFileName`](@ref), [`TVirtualTableInterface`](@ref)
 """ TVirtualTableInterface
 
 # Wrapper of TVirtualX
@@ -3824,7 +3824,7 @@ Semi-Abstract base class defining a generic interface to the underlying, low lev
 
 An instance of [TVirtualX](@ref) itself defines a batch interface to the graphics system.
 
-Related functions: [`AddPixmap`](@ref), [`AddWindow`](@ref), [`AllocColor`](@ref), [`BeginModalSessionFor`](@ref), [`Bell`](@ref), [`ChangeActivePointerGrab`](@ref), [`ChangeGC`](@ref), [`ChangeProperties`](@ref), [`ChangeProperty`](@ref), [`ChangeWindowAttributes`](@ref), [`CheckEvent`](@ref), [`ClearArea`](@ref), [`ClearWindow`](@ref), [`CloseDisplay`](@ref), [`ClosePixmap`](@ref), [`CloseWindow`](@ref), [`ConvertPrimarySelection`](@ref), [`ConvertSelection`](@ref), [`CopyArea`](@ref), [`CopyGC`](@ref), [`CopyPixmap`](@ref), [`CreateBitmap`](@ref), [`CreateCursor`](@ref), [`CreateGC`](@ref), [`CreateImage`](@ref), [`CreateOpenGLContext`](@ref), [`CreateOpenGLWindow`](@ref), [`CreatePictureFromData`](@ref), [`CreatePictureFromFile`](@ref), [`CreatePixmapFromData`](@ref), [`CreatePixmap`](@ref), [`CreateRegion`](@ref), [`CreateWindow`](@ref), [`DeleteFont`](@ref), [`DeleteGC`](@ref), [`DeleteImage`](@ref), [`DeleteOpenGLContext`](@ref), [`DeletePictureData`](@ref), [`DeletePixmap`](@ref), [`DeleteProperty`](@ref), [`DestroyRegion`](@ref), [`DestroySubwindows`](@ref), [`DestroyWindow`](@ref), [`DispatchClientMessage`](@ref), [`DisplayName`](@ref), [`DrawBox`](@ref), [`DrawCellArray`](@ref), [`DrawFillArea`](@ref), [`DrawGetString`](@ref), [`DrawGetText`](@ref), [`DrawLine`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`DrawRectangle`](@ref), [`DrawSegments`](@ref), [`EmptyRegion`](@ref), [`EqualRegion`](@ref), [`EventsPending`](@ref), [`ExecCommand`](@ref), [`FillPolygon`](@ref), [`FillRectangle`](@ref), [`FindRWindow`](@ref), [`FlushOpenGLBuffer`](@ref), [`FreeColor`](@ref), [`FreeFontNames`](@ref), [`FreeFontStruct`](@ref), [`GetCharacterUp`](@ref), [`GetColorBits`](@ref), [`GetColormap`](@ref), [`GetCurrentOpenGLContext`](@ref), [`GetCurrentWindow`](@ref), [`GetDefaultRootWindow`](@ref), [`GetDepth`](@ref), [`GetDisplay`](@ref), [`GetDoubleBuffer`](@ref), [`GetDrawMode`](@ref), [`GetFontAscent`](@ref), [`GetFontDescent`](@ref), [`GetFontHandle`](@ref), [`GetFontProperties`](@ref), [`GetFontStruct`](@ref), [`GetGCFont`](@ref), [`GetGCValues`](@ref), [`GetGeometry`](@ref), [`GetGetTextExtent`](@ref), [`GetGetTextMagnitude`](@ref), [`GetImageSize`](@ref), [`GetInputFocus`](@ref), [`GetNativeEvent`](@ref), [`GetOpenGLScalingFactor`](@ref), [`GetParent`](@ref), [`GetPasteBuffer`](@ref), [`GetPixel`](@ref), [`GetPlanes`](@ref), [`GetPrimarySelectionOwner`](@ref), [`GetProperty`](@ref), [`GetRGB`](@ref), [`GetRegionBox`](@ref), [`GetScreen`](@ref), [`GetTextWidth`](@ref), [`GetVisual`](@ref), [`GetWindowAttributes`](@ref), [`GetWindowID`](@ref), [`GetWindowSize`](@ref), [`GrabButton`](@ref), [`GrabKey`](@ref), [`GrabPointer`](@ref), [`HasTTFonts`](@ref), [`IconifyWindow`](@ref), [`InitWindow`](@ref), [`Init`](@ref), [`InternAtom`](@ref), [`IntersectRegion`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsDNDAware`](@ref), [`KeysymToKeycode`](@ref), [`ListFonts`](@ref), [`LoadQueryFont`](@ref), [`LookupGetString`](@ref), [`LowerWindow`](@ref), [`MakeOpenGLContextCurrent`](@ref), [`MapGCFont`](@ref), [`MapRaised`](@ref), [`MapSubwindows`](@ref), [`MapWindow`](@ref), [`MoveResizeWindow`](@ref), [`MoveWindow`](@ref), [`NeedRedraw`](@ref), [`NextEvent`](@ref), [`OpenDisplay`](@ref), [`OpenPixmap`](@ref), [`ParseColor`](@ref), [`PointInRegion`](@ref), [`PolygonRegion`](@ref), [`PutImage`](@ref), [`PutPixel`](@ref), [`QueryColor`](@ref), [`QueryPointer`](@ref), [`RaiseWindow`](@ref), [`ReadGIF`](@ref), [`ReadPictureDataFromFile`](@ref), [`RemoveWindow`](@ref), [`ReparentWindow`](@ref), [`RequestGetString`](@ref), [`RequestLocator`](@ref), [`RescaleWindow`](@ref), [`ResizePixmap`](@ref), [`ResizeWindow`](@ref), [`ScreenWidthMM`](@ref), [`SelectInput`](@ref), [`SelectPixmap`](@ref), [`SelectWindow`](@ref), [`SendEvent`](@ref), [`SetCharacterUp`](@ref), [`SetClassHints`](@ref), [`SetClipOFF`](@ref), [`SetClipRectangles`](@ref), [`SetClipRegion`](@ref), [`SetCursor`](@ref), [`SetDNDAware`](@ref), [`SetDashes`](@ref), [`SetDoubleBufferOFF`](@ref), [`SetDoubleBufferON`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawMode`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetForeground`](@ref), [`SetGetTextAlign`](@ref), [`SetGetTextColor`](@ref), [`SetGetTextFont`](@ref), [`SetGetTextMagnitude`](@ref), [`SetGetTextSize`](@ref), [`SetGetTypeList`](@ref), [`SetIconName`](@ref), [`SetIconPixmap`](@ref), [`SetInputFocus`](@ref), [`SetKeyAutoRepeat`](@ref), [`SetLineColor`](@ref), [`SetLineGetType`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetMWMHints`](@ref), [`SetMarkerColor`](@ref), [`SetMarkerSize`](@ref), [`SetMarkerStyle`](@ref), [`SetOpacity`](@ref), [`SetPrimarySelectionOwner`](@ref), [`SetRGB`](@ref), [`SetSelectionOwner`](@ref), [`SetWMPosition`](@ref), [`SetWMSizeHints`](@ref), [`SetWMSize`](@ref), [`SetWMState`](@ref), [`SetWMTransientHint`](@ref), [`SetWindowBackgroundPixmap`](@ref), [`SetWindowBackground`](@ref), [`SetWindowName`](@ref), [`ShapeCombineMask`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SubtractRegion`](@ref), [`SupportsExtension`](@ref), [`Sync`](@ref), [`TVirtualX!Class_Name`](@ref), [`TVirtualX!Class_Version`](@ref), [`TVirtualX!Class`](@ref), [`TVirtualX!DeclFileName`](@ref), [`TVirtualX!Instance`](@ref), [`TVirtualX`](@ref), [`TranslateCoordinates`](@ref), [`UnionRectWithRegion`](@ref), [`UnionRegion`](@ref), [`UnmapWindow`](@ref), [`UpdateWindow`](@ref), [`Update`](@ref), [`WMDeleteNotify`](@ref), [`Warp`](@ref), [`WriteGIF`](@ref), [`WritePixmap`](@ref), [`XorRegion`](@ref)
+Related functions: [`AddPixmap`](@ref), [`AddWindow`](@ref), [`AllocColor`](@ref), [`BeginModalSessionFor`](@ref), [`Bell`](@ref), [`ChangeActivePointerGrab`](@ref), [`ChangeGC`](@ref), [`ChangeProperties`](@ref), [`ChangeProperty`](@ref), [`ChangeWindowAttributes`](@ref), [`CheckEvent`](@ref), [`ClearArea`](@ref), [`ClearWindow`](@ref), [`CloseDisplay`](@ref), [`ClosePixmap`](@ref), [`CloseWindow`](@ref), [`ConvertPrimarySelection`](@ref), [`ConvertSelection`](@ref), [`CopyArea`](@ref), [`CopyGC`](@ref), [`CopyPixmap`](@ref), [`CreateBitmap`](@ref), [`CreateCursor`](@ref), [`CreateGC`](@ref), [`CreateImage`](@ref), [`CreateOpenGLContext`](@ref), [`CreateOpenGLWindow`](@ref), [`CreatePictureFromData`](@ref), [`CreatePictureFromFile`](@ref), [`CreatePixmapFromData`](@ref), [`CreatePixmap`](@ref), [`CreateRegion`](@ref), [`CreateWindow`](@ref), [`DeleteFont`](@ref), [`DeleteGC`](@ref), [`DeleteImage`](@ref), [`DeleteOpenGLContext`](@ref), [`DeletePictureData`](@ref), [`DeletePixmap`](@ref), [`DeleteProperty`](@ref), [`DestroyRegion`](@ref), [`DestroySubwindows`](@ref), [`DestroyWindow`](@ref), [`DispatchClientMessage`](@ref), [`DisplayName`](@ref), [`DrawBox`](@ref), [`DrawCellArray`](@ref), [`DrawFillArea`](@ref), [`DrawLine`](@ref), [`DrawPolyLine`](@ref), [`DrawPolyMarker`](@ref), [`DrawRectangle`](@ref), [`DrawSegments`](@ref), [`DrawString`](@ref), [`DrawText`](@ref), [`EmptyRegion`](@ref), [`EqualRegion`](@ref), [`EventsPending`](@ref), [`ExecCommand`](@ref), [`FillPolygon`](@ref), [`FillRectangle`](@ref), [`FindRWindow`](@ref), [`FlushOpenGLBuffer`](@ref), [`FreeColor`](@ref), [`FreeFontNames`](@ref), [`FreeFontStruct`](@ref), [`GetCharacterUp`](@ref), [`GetColorBits`](@ref), [`GetColormap`](@ref), [`GetCurrentOpenGLContext`](@ref), [`GetCurrentWindow`](@ref), [`GetDefaultRootWindow`](@ref), [`GetDepth`](@ref), [`GetDisplay`](@ref), [`GetDoubleBuffer`](@ref), [`GetDrawMode`](@ref), [`GetFontAscent`](@ref), [`GetFontDescent`](@ref), [`GetFontHandle`](@ref), [`GetFontProperties`](@ref), [`GetFontStruct`](@ref), [`GetGCFont`](@ref), [`GetGCValues`](@ref), [`GetGeometry`](@ref), [`GetImageSize`](@ref), [`GetInputFocus`](@ref), [`GetNativeEvent`](@ref), [`GetOpenGLScalingFactor`](@ref), [`GetParent`](@ref), [`GetPasteBuffer`](@ref), [`GetPixel`](@ref), [`GetPlanes`](@ref), [`GetPrimarySelectionOwner`](@ref), [`GetProperty`](@ref), [`GetRGB`](@ref), [`GetRegionBox`](@ref), [`GetScreen`](@ref), [`GetTextExtent`](@ref), [`GetTextMagnitude`](@ref), [`GetVisual`](@ref), [`GetWindowAttributes`](@ref), [`GetWindowID`](@ref), [`GetWindowSize`](@ref), [`GrabButton`](@ref), [`GrabKey`](@ref), [`GrabPointer`](@ref), [`HasTTFonts`](@ref), [`IconifyWindow`](@ref), [`InitWindow`](@ref), [`Init`](@ref), [`InternAtom`](@ref), [`IntersectRegion`](@ref), [`IsA`](@ref), [`IsCmdThread`](@ref), [`IsDNDAware`](@ref), [`KeysymToKeycode`](@ref), [`ListFonts`](@ref), [`LoadQueryFont`](@ref), [`LookupString`](@ref), [`LowerWindow`](@ref), [`MakeOpenGLContextCurrent`](@ref), [`MapGCFont`](@ref), [`MapRaised`](@ref), [`MapSubwindows`](@ref), [`MapWindow`](@ref), [`MoveResizeWindow`](@ref), [`MoveWindow`](@ref), [`NeedRedraw`](@ref), [`NextEvent`](@ref), [`OpenDisplay`](@ref), [`OpenPixmap`](@ref), [`ParseColor`](@ref), [`PointInRegion`](@ref), [`PolygonRegion`](@ref), [`PutImage`](@ref), [`PutPixel`](@ref), [`QueryColor`](@ref), [`QueryPointer`](@ref), [`RaiseWindow`](@ref), [`ReadGIF`](@ref), [`ReadPictureDataFromFile`](@ref), [`RemoveWindow`](@ref), [`ReparentWindow`](@ref), [`RequestLocator`](@ref), [`RequestString`](@ref), [`RescaleWindow`](@ref), [`ResizePixmap`](@ref), [`ResizeWindow`](@ref), [`ScreenWidthMM`](@ref), [`SelectInput`](@ref), [`SelectPixmap`](@ref), [`SelectWindow`](@ref), [`SendEvent`](@ref), [`SetCharacterUp`](@ref), [`SetClassHints`](@ref), [`SetClipOFF`](@ref), [`SetClipRectangles`](@ref), [`SetClipRegion`](@ref), [`SetCursor`](@ref), [`SetDNDAware`](@ref), [`SetDashes`](@ref), [`SetDoubleBufferOFF`](@ref), [`SetDoubleBufferON`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawMode`](@ref), [`SetFillColor`](@ref), [`SetFillStyle`](@ref), [`SetForeground`](@ref), [`SetIconName`](@ref), [`SetIconPixmap`](@ref), [`SetInputFocus`](@ref), [`SetKeyAutoRepeat`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineType`](@ref), [`SetLineWidth`](@ref), [`SetMWMHints`](@ref), [`SetMarkerColor`](@ref), [`SetMarkerSize`](@ref), [`SetMarkerStyle`](@ref), [`SetOpacity`](@ref), [`SetPrimarySelectionOwner`](@ref), [`SetRGB`](@ref), [`SetSelectionOwner`](@ref), [`SetTextAlign`](@ref), [`SetTextColor`](@ref), [`SetTextFont`](@ref), [`SetTextMagnitude`](@ref), [`SetTextSize`](@ref), [`SetTypeList`](@ref), [`SetWMPosition`](@ref), [`SetWMSizeHints`](@ref), [`SetWMSize`](@ref), [`SetWMState`](@ref), [`SetWMTransientHint`](@ref), [`SetWindowBackgroundPixmap`](@ref), [`SetWindowBackground`](@ref), [`SetWindowName`](@ref), [`ShapeCombineMask`](@ref), [`StreamerNVirtual`](@ref), [`Streamer`](@ref), [`SubtractRegion`](@ref), [`SupportsExtension`](@ref), [`Sync`](@ref), [`TVirtualX!Class_Name`](@ref), [`TVirtualX!Class_Version`](@ref), [`TVirtualX!Class`](@ref), [`TVirtualX!DeclFileName`](@ref), [`TVirtualX!Instance`](@ref), [`TVirtualX`](@ref), [`TextWidth`](@ref), [`TranslateCoordinates`](@ref), [`UnionRectWithRegion`](@ref), [`UnionRegion`](@ref), [`UnmapWindow`](@ref), [`UpdateWindow`](@ref), [`Update`](@ref), [`WMDeleteNotify`](@ref), [`Warp`](@ref), [`WriteGIF`](@ref), [`WritePixmap`](@ref), [`XorRegion`](@ref)
 """ TVirtualX
 
 # Wrapper of TClassTable
@@ -4191,7 +4191,7 @@ Defines a common interface to inspect/change the contents of an object that repr
 
 Specifically, an object of a class that derives from [TVirtualCollectionProxy](@ref) relays accesses to any object that matches the proxied collection type. The interface provides two families of functions: (i) for direct manipulation, e.g. `Insert()` or `At()`; and (ii) iterator-based, e.g. `GetFunctionCreateIterators()` or `GetFunctionNext()`. [TVirtualCollectionProxy](@ref) objects are stateful; in particular, many functions require to set the object to operate on via `PushProxy()` / `PopProxy()`. The `TPushPop` RAII class is provided for convenience. A collection proxy for a given class can be permanently set using `TClass!CopyCollectionProxy()`. The `Generate()` function should be overridden in derived classes to return a clean object of the most-derived class.
 
-Related functions: [`Allocate`](@ref), [`At`](@ref), [`Base.getindex`](@ref), [`Clear`](@ref), [`Commit`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Generate`](@ref), [`GetCollectionClass`](@ref), [`GetCollectionGetType`](@ref), [`GetConversionReadMemberWiseActions`](@ref), [`GetFunctionCopyIterator`](@ref), [`GetFunctionCreateIterators`](@ref), [`GetFunctionDeleteIterator`](@ref), [`GetFunctionDeleteTwoIterators`](@ref), [`GetFunctionNext`](@ref), [`GetGetType`](@ref), [`GetIncrement`](@ref), [`GetProperties`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetValueClass`](@ref), [`GetWriteMemberWiseActions`](@ref), [`HasPointers`](@ref), [`Insert`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PopProxy`](@ref), [`PushProxy`](@ref), [`Reset`](@ref), [`Size`](@ref), [`Sizeof`](@ref), [`TVirtualCollectionProxy`](@ref)
+Related functions: [`Allocate`](@ref), [`At`](@ref), [`Base.getindex`](@ref), [`Clear`](@ref), [`Commit`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`Generate`](@ref), [`GetCollectionClass`](@ref), [`GetCollectionType`](@ref), [`GetConversionReadMemberWiseActions`](@ref), [`GetFunctionCopyIterator`](@ref), [`GetFunctionCreateIterators`](@ref), [`GetFunctionDeleteIterator`](@ref), [`GetFunctionDeleteTwoIterators`](@ref), [`GetFunctionNext`](@ref), [`GetIncrement`](@ref), [`GetProperties`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetType`](@ref), [`GetValueClass`](@ref), [`GetWriteMemberWiseActions`](@ref), [`HasPointers`](@ref), [`Insert`](@ref), [`NewArray`](@ref), [`NewObjectArray`](@ref), [`NewObject`](@ref), [`New`](@ref), [`PopProxy`](@ref), [`PushProxy`](@ref), [`Reset`](@ref), [`Size`](@ref), [`Sizeof`](@ref), [`TVirtualCollectionProxy`](@ref)
 """ TVirtualCollectionProxy
 
 # Wrapper of TOrdCollection
@@ -4317,7 +4317,7 @@ ABC describing GUI independent browser implementation protocol.
 
 
 
-Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObj`](@ref), [`Browser`](@ref), [`CheckObjectItem`](@ref), [`CloseTabs`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowser`](@ref), [`GetDrawOption`](@ref), [`GetMainFrame`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowser`](@ref), [`SetDrawOption`](@ref), [`SetStatusGetText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowserImp`](@ref)
+Related functions: [`AddCheckBox`](@ref), [`Add`](@ref), [`BrowseObj`](@ref), [`Browser`](@ref), [`CheckObjectItem`](@ref), [`CloseTabs`](@ref), [`ExecPlugin`](@ref), [`ExecuteDefaultAction`](@ref), [`GetBrowser`](@ref), [`GetDrawOption`](@ref), [`GetMainFrame`](@ref), [`Iconify`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RemoveCheckBox`](@ref), [`SetBrowser`](@ref), [`SetDrawOption`](@ref), [`SetStatusText`](@ref), [`Show`](@ref), [`StartEmbedding`](@ref), [`StopEmbedding`](@ref), [`TBrowserImp`](@ref)
 """ TBrowserImp
 
 # Wrapper of TTree
@@ -4584,7 +4584,7 @@ You may want to add a branch to an existing tree. For example, if one variable i
 
 (C++ version of the code)
 
-Related functions: [`AddAllocationCount`](@ref), [`AddBranchToCache`](@ref), [`AddClone`](@ref), [`AddFriend`](@ref), [`AddTotBytes`](@ref), [`AddZipBytes`](@ref), [`AutoSave`](@ref), [`BranchOld`](@ref), [`BranchRef`](@ref), [`Branch`](@ref), [`Bronch`](@ref), [`Browse`](@ref), [`BuildIndex`](@ref), [`BuildStreamerInfo`](@ref), [`ChangeFile`](@ref), [`CloneTree`](@ref), [`CopyAddresses`](@ref), [`CopyEntries`](@ref), [`CopyTree`](@ref), [`CreateBasket`](@ref), [`Debug`](@ref), [`Delete`](@ref), [`DirectoryAutoAdd`](@ref), [`Draw`](@ref), [`DropBaskets`](@ref), [`DropBranchFromCache`](@ref), [`DropBuffers`](@ref), [`EnableCache`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`Fit`](@ref), [`FlushBaskets`](@ref), [`GetAlias`](@ref), [`GetAllocationCount`](@ref), [`GetAutoFlush`](@ref), [`GetAutoSave`](@ref), [`GetBranchRef`](@ref), [`GetBranchStatus`](@ref), [`GetBranch`](@ref), [`GetCacheSize`](@ref), [`GetChainEntryNumber`](@ref), [`GetChainOffset`](@ref), [`GetClusterIterator`](@ref), [`GetClusterPrefetch`](@ref), [`GetCurrentFile`](@ref), [`GetDebugMax`](@ref), [`GetDebugMin`](@ref), [`GetDefaultEntryOffsetLen`](@ref), [`GetDirectory`](@ref), [`GetEntriesFast`](@ref), [`GetEntriesFriend`](@ref), [`GetEntries`](@ref), [`GetEntryList`](@ref), [`GetEntryNumberWithBestIndex`](@ref), [`GetEntryNumberWithIndex`](@ref), [`GetEntryNumber`](@ref), [`GetEntryWithIndex`](@ref), [`GetEntry`](@ref), [`GetEstimate`](@ref), [`GetEventList`](@ref), [`GetEvent`](@ref), [`GetFileNumber`](@ref), [`GetFriendAlias`](@ref), [`GetFriend`](@ref), [`GetGetTimerInterval`](@ref), [`GetHistogram`](@ref), [`GetIOFeatures`](@ref), [`GetImplicitMT`](@ref), [`GetIndexValues`](@ref), [`GetIndex`](@ref), [`GetIteratorOnAllLeaves`](@ref), [`GetLeaf`](@ref), [`GetListOfAliases`](@ref), [`GetListOfBranches`](@ref), [`GetListOfClones`](@ref), [`GetListOfFriends`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxEntryLoop`](@ref), [`GetMaxVirtualSize`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNbranches`](@ref), [`GetNotify`](@ref), [`GetPacketSize`](@ref), [`GetPerfStats`](@ref), [`GetPlayer`](@ref), [`GetReadCache`](@ref), [`GetReadEntry`](@ref), [`GetReadEvent`](@ref), [`GetScanField`](@ref), [`GetSelect`](@ref), [`GetSelectedRows`](@ref), [`GetTargetMemoryRatio`](@ref), [`GetTotBytes`](@ref), [`GetTransientBuffer`](@ref), [`GetTreeIndex`](@ref), [`GetTreeNumber`](@ref), [`GetTree`](@ref), [`GetUpdate`](@ref), [`GetUserInfo`](@ref), [`GetV1`](@ref), [`GetV2`](@ref), [`GetV3`](@ref), [`GetV4`](@ref), [`GetVal`](@ref), [`GetVar1`](@ref), [`GetVar2`](@ref), [`GetVar3`](@ref), [`GetVar4`](@ref), [`GetVar`](@ref), [`GetW`](@ref), [`GetWeight`](@ref), [`GetZipBytes`](@ref), [`InPlaceClone`](@ref), [`IncrementTotalBuffers`](@ref), [`IsFolder`](@ref), [`LoadBaskets`](@ref), [`LoadTreeFriend`](@ref), [`LoadTree`](@ref), [`MakeClass`](@ref), [`MakeCode`](@ref), [`MakeProxy`](@ref), [`MakeSelector`](@ref), [`MemoryFull`](@ref), [`Merge`](@ref), [`Notify`](@ref), [`OptimizeBaskets`](@ref), [`Principal`](@ref), [`PrintCacheStats`](@ref), [`Print`](@ref), [`Process`](@ref), [`Project`](@ref), [`Query`](@ref), [`ReadFile`](@ref), [`ReadStream`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RegisterExternalFriend`](@ref), [`RemoveExternalFriend`](@ref), [`RemoveFriend`](@ref), [`ResetAfterMerge`](@ref), [`ResetBranchAddress`](@ref), [`ResetBranchAddresses`](@ref), [`Reset`](@ref), [`Scan`](@ref), [`SetAlias`](@ref), [`SetAutoFlush`](@ref), [`SetAutoSave`](@ref), [`SetBasketSize`](@ref), [`SetBranchAddress`](@ref), [`SetBranchStatus`](@ref), [`SetCacheEntryRange`](@ref), [`SetCacheLearnEntries`](@ref), [`SetCacheSize`](@ref), [`SetChainOffset`](@ref), [`SetCircular`](@ref), [`SetClusterPrefetch`](@ref), [`SetDebug`](@ref), [`SetDefaultEntryOffsetLen`](@ref), [`SetDirectory`](@ref), [`SetEntries`](@ref), [`SetEntryList`](@ref), [`SetEstimate`](@ref), [`SetEventList`](@ref), [`SetFileNumber`](@ref), [`SetGetTimerInterval`](@ref), [`SetIOFeatures`](@ref), [`SetImplicitMT`](@ref), [`SetMakeClass`](@ref), [`SetMaxEntryLoop`](@ref), [`SetMaxVirtualSize`](@ref), [`SetName`](@ref), [`SetNotify`](@ref), [`SetObject`](@ref), [`SetParallelUnzip`](@ref), [`SetPerfStats`](@ref), [`SetScanField`](@ref), [`SetTargetMemoryRatio`](@ref), [`SetTreeIndex`](@ref), [`SetUpdate`](@ref), [`SetWeight`](@ref), [`Show`](@ref), [`StartViewer`](@ref), [`StopCacheLearningPhase`](@ref), [`TTree!GetBranchStyle`](@ref), [`TTree!GetMaxTreeSize`](@ref), [`TTree!MergeTrees`](@ref), [`TTree!SetBranchStyle`](@ref), [`TTree!SetMaxTreeSize`](@ref), [`TTree`](@ref), [`UnbinnedFit`](@ref), [`UseCurrentStyle`](@ref), [`Write`](@ref), [`assign`](@ref)
+Related functions: [`AddAllocationCount`](@ref), [`AddBranchToCache`](@ref), [`AddClone`](@ref), [`AddFriend`](@ref), [`AddTotBytes`](@ref), [`AddZipBytes`](@ref), [`AutoSave`](@ref), [`BranchOld`](@ref), [`BranchRef`](@ref), [`Branch`](@ref), [`Bronch`](@ref), [`Browse`](@ref), [`BuildIndex`](@ref), [`BuildStreamerInfo`](@ref), [`ChangeFile`](@ref), [`CloneTree`](@ref), [`CopyAddresses`](@ref), [`CopyEntries`](@ref), [`CopyTree`](@ref), [`CreateBasket`](@ref), [`Debug`](@ref), [`Delete`](@ref), [`DirectoryAutoAdd`](@ref), [`Draw`](@ref), [`DropBaskets`](@ref), [`DropBranchFromCache`](@ref), [`DropBuffers`](@ref), [`EnableCache`](@ref), [`Fill`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`Fit`](@ref), [`FlushBaskets`](@ref), [`GetAlias`](@ref), [`GetAllocationCount`](@ref), [`GetAutoFlush`](@ref), [`GetAutoSave`](@ref), [`GetBranchRef`](@ref), [`GetBranchStatus`](@ref), [`GetBranch`](@ref), [`GetCacheSize`](@ref), [`GetChainEntryNumber`](@ref), [`GetChainOffset`](@ref), [`GetClusterIterator`](@ref), [`GetClusterPrefetch`](@ref), [`GetCurrentFile`](@ref), [`GetDebugMax`](@ref), [`GetDebugMin`](@ref), [`GetDefaultEntryOffsetLen`](@ref), [`GetDirectory`](@ref), [`GetEntriesFast`](@ref), [`GetEntriesFriend`](@ref), [`GetEntries`](@ref), [`GetEntryList`](@ref), [`GetEntryNumberWithBestIndex`](@ref), [`GetEntryNumberWithIndex`](@ref), [`GetEntryNumber`](@ref), [`GetEntryWithIndex`](@ref), [`GetEntry`](@ref), [`GetEstimate`](@ref), [`GetEventList`](@ref), [`GetEvent`](@ref), [`GetFileNumber`](@ref), [`GetFriendAlias`](@ref), [`GetFriend`](@ref), [`GetHistogram`](@ref), [`GetIOFeatures`](@ref), [`GetImplicitMT`](@ref), [`GetIndexValues`](@ref), [`GetIndex`](@ref), [`GetIteratorOnAllLeaves`](@ref), [`GetLeaf`](@ref), [`GetListOfAliases`](@ref), [`GetListOfBranches`](@ref), [`GetListOfClones`](@ref), [`GetListOfFriends`](@ref), [`GetListOfLeaves`](@ref), [`GetMakeClass`](@ref), [`GetMaxEntryLoop`](@ref), [`GetMaxVirtualSize`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNbranches`](@ref), [`GetNotify`](@ref), [`GetPacketSize`](@ref), [`GetPerfStats`](@ref), [`GetPlayer`](@ref), [`GetReadCache`](@ref), [`GetReadEntry`](@ref), [`GetReadEvent`](@ref), [`GetScanField`](@ref), [`GetSelect`](@ref), [`GetSelectedRows`](@ref), [`GetTargetMemoryRatio`](@ref), [`GetTimerInterval`](@ref), [`GetTotBytes`](@ref), [`GetTransientBuffer`](@ref), [`GetTreeIndex`](@ref), [`GetTreeNumber`](@ref), [`GetTree`](@ref), [`GetUpdate`](@ref), [`GetUserInfo`](@ref), [`GetV1`](@ref), [`GetV2`](@ref), [`GetV3`](@ref), [`GetV4`](@ref), [`GetVal`](@ref), [`GetVar1`](@ref), [`GetVar2`](@ref), [`GetVar3`](@ref), [`GetVar4`](@ref), [`GetVar`](@ref), [`GetW`](@ref), [`GetWeight`](@ref), [`GetZipBytes`](@ref), [`InPlaceClone`](@ref), [`IncrementTotalBuffers`](@ref), [`IsFolder`](@ref), [`LoadBaskets`](@ref), [`LoadTreeFriend`](@ref), [`LoadTree`](@ref), [`MakeClass`](@ref), [`MakeCode`](@ref), [`MakeProxy`](@ref), [`MakeSelector`](@ref), [`MemoryFull`](@ref), [`Merge`](@ref), [`Notify`](@ref), [`OptimizeBaskets`](@ref), [`Principal`](@ref), [`PrintCacheStats`](@ref), [`Print`](@ref), [`Process`](@ref), [`Project`](@ref), [`Query`](@ref), [`ReadFile`](@ref), [`ReadStream`](@ref), [`RecursiveRemove`](@ref), [`Refresh`](@ref), [`RegisterExternalFriend`](@ref), [`RemoveExternalFriend`](@ref), [`RemoveFriend`](@ref), [`ResetAfterMerge`](@ref), [`ResetBranchAddress`](@ref), [`ResetBranchAddresses`](@ref), [`Reset`](@ref), [`Scan`](@ref), [`SetAlias`](@ref), [`SetAutoFlush`](@ref), [`SetAutoSave`](@ref), [`SetBasketSize`](@ref), [`SetBranchAddress`](@ref), [`SetBranchStatus`](@ref), [`SetCacheEntryRange`](@ref), [`SetCacheLearnEntries`](@ref), [`SetCacheSize`](@ref), [`SetChainOffset`](@ref), [`SetCircular`](@ref), [`SetClusterPrefetch`](@ref), [`SetDebug`](@ref), [`SetDefaultEntryOffsetLen`](@ref), [`SetDirectory`](@ref), [`SetEntries`](@ref), [`SetEntryList`](@ref), [`SetEstimate`](@ref), [`SetEventList`](@ref), [`SetFileNumber`](@ref), [`SetIOFeatures`](@ref), [`SetImplicitMT`](@ref), [`SetMakeClass`](@ref), [`SetMaxEntryLoop`](@ref), [`SetMaxVirtualSize`](@ref), [`SetName`](@ref), [`SetNotify`](@ref), [`SetObject`](@ref), [`SetParallelUnzip`](@ref), [`SetPerfStats`](@ref), [`SetScanField`](@ref), [`SetTargetMemoryRatio`](@ref), [`SetTimerInterval`](@ref), [`SetTreeIndex`](@ref), [`SetUpdate`](@ref), [`SetWeight`](@ref), [`Show`](@ref), [`StartViewer`](@ref), [`StopCacheLearningPhase`](@ref), [`TTree!GetBranchStyle`](@ref), [`TTree!GetMaxTreeSize`](@ref), [`TTree!MergeTrees`](@ref), [`TTree!SetBranchStyle`](@ref), [`TTree!SetMaxTreeSize`](@ref), [`TTree`](@ref), [`UnbinnedFit`](@ref), [`UseCurrentStyle`](@ref), [`Write`](@ref), [`assign`](@ref)
 """ TTree
 
 # Wrapper of TLeaf
@@ -4605,7 +4605,7 @@ Note options (2) and (3) can combined - if fLeafCount says an entry has 3 elemen
 
 Additionally, `fNdata` is transient and generated on read to determine the necessary size of a buffer to hold event data; depending on the call-site, it may be sized larger than the number of elements
 
-Related functions: [`Browse`](@ref), [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArray`](@ref), [`GetBranch`](@ref), [`GetDeserializeGetType`](@ref), [`GetFullName`](@ref), [`GetGetTypeName`](@ref), [`GetGetTypedValue`](@ref), [`GetLeafCountValues`](@ref), [`GetLeafCount`](@ref), [`GetLeafCounter`](@ref), [`GetLenGetType`](@ref), [`GetLenStatic`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNdata`](@ref), [`GetOffset`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`IsRange`](@ref), [`IsUnsigned`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasketSerialized`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`ResetAddress`](@ref), [`SetAddress`](@ref), [`SetBranch`](@ref), [`SetLeafCount`](@ref), [`SetLen`](@ref), [`SetOffset`](@ref), [`SetRange`](@ref), [`SetUnsigned`](@ref), [`TLeaf`](@ref)
+Related functions: [`Browse`](@ref), [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArray`](@ref), [`GetBranch`](@ref), [`GetDeserializeType`](@ref), [`GetFullName`](@ref), [`GetLeafCountValues`](@ref), [`GetLeafCount`](@ref), [`GetLeafCounter`](@ref), [`GetLenStatic`](@ref), [`GetLenType`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetNdata`](@ref), [`GetOffset`](@ref), [`GetTypeName`](@ref), [`GetTypedValue`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`IsRange`](@ref), [`IsUnsigned`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasketSerialized`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`ResetAddress`](@ref), [`SetAddress`](@ref), [`SetBranch`](@ref), [`SetLeafCount`](@ref), [`SetLen`](@ref), [`SetOffset`](@ref), [`SetRange`](@ref), [`SetUnsigned`](@ref), [`TLeaf`](@ref)
 """ TLeaf
 
 # Wrapper of TStreamerInfo
@@ -4623,7 +4623,7 @@ A [ROOT](@ref) file contains the list of [TStreamerInfo](@ref) objects for all t
 
  A [TStreamerInfo](@ref) is a list of [TStreamerElement](@ref) objects (one per data member or base class). When streaming an object, the system ([TClass](@ref)) loops on all the [TStreamerElement](@ref) objects and calls the appropriate function for each element type.
 
-Related functions: [`BuildCheck`](@ref), [`BuildEmulated`](@ref), [`BuildFor`](@ref), [`BuildOld`](@ref), [`Build`](@ref), [`CallShowMembers`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`CompareContent`](@ref), [`Compile`](@ref), [`ComputeSize`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`ForceWriteInfo`](@ref), [`GenEmulatedClassStreamer`](@ref), [`GenEmulatedProxy`](@ref), [`GenExplicitClassStreamer`](@ref), [`GenExplicitProxy`](@ref), [`GenerateHeaderFile`](@ref), [`GenerateInfoForPair`](@ref), [`GetActualClass`](@ref), [`GetCheckSum`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetDataMemberOffset`](@ref), [`GetElem`](@ref), [`GetElementOffset`](@ref), [`GetElement`](@ref), [`GetElements`](@ref), [`GetGetType`](@ref), [`GetGetTypedValueClones`](@ref), [`GetGetTypedValueSTLP`](@ref), [`GetGetTypedValueSTL`](@ref), [`GetGetTypedValue`](@ref), [`GetLength`](@ref), [`GetMethod`](@ref), [`GetNdata`](@ref), [`GetNelement`](@ref), [`GetNewGetType`](@ref), [`GetNumber`](@ref), [`GetOffset`](@ref), [`GetOldVersion`](@ref), [`GetOnFileClassVersion`](@ref), [`GetReadGetTextActions`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetReadObjectWiseActions`](@ref), [`GetSizeElements`](@ref), [`GetSize`](@ref), [`GetStreamerElementReal`](@ref), [`GetStreamerElement`](@ref), [`GetValueClones`](@ref), [`GetValueSTLP`](@ref), [`GetValueSTL`](@ref), [`GetValue`](@ref), [`GetWriteGetTextActions`](@ref), [`GetWriteMemberWiseActions`](@ref), [`GetWriteObjectWiseActions`](@ref), [`MatchLegacyCheckSum`](@ref), [`NewArray`](@ref), [`NewInfo`](@ref), [`New`](@ref), [`PrintValueClones`](@ref), [`PrintValueSTL`](@ref), [`PrintValue`](@ref), [`ReadBufferArtificial`](@ref), [`ReadBufferClones`](@ref), [`ReadBufferConv`](@ref), [`ReadBufferSTL`](@ref), [`ReadBufferSkip`](@ref), [`ReadBuffer`](@ref), [`SetCheckSum`](@ref), [`SetClassVersion`](@ref), [`SetClass`](@ref), [`SetOnFileClassVersion`](@ref), [`TStreamerInfo!GetCurrentElement`](@ref), [`TStreamerInfo`](@ref), [`TagFile`](@ref), [`Update`](@ref), [`WriteBufferAux`](@ref), [`ls`](@ref)
+Related functions: [`BuildCheck`](@ref), [`BuildEmulated`](@ref), [`BuildFor`](@ref), [`BuildOld`](@ref), [`Build`](@ref), [`CallShowMembers`](@ref), [`Clear`](@ref), [`Clone`](@ref), [`CompareContent`](@ref), [`Compile`](@ref), [`ComputeSize`](@ref), [`DeleteArray`](@ref), [`Destructor`](@ref), [`ForceWriteInfo`](@ref), [`GenEmulatedClassStreamer`](@ref), [`GenEmulatedProxy`](@ref), [`GenExplicitClassStreamer`](@ref), [`GenExplicitProxy`](@ref), [`GenerateHeaderFile`](@ref), [`GenerateInfoForPair`](@ref), [`GetActualClass`](@ref), [`GetCheckSum`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetDataMemberOffset`](@ref), [`GetElem`](@ref), [`GetElementOffset`](@ref), [`GetElement`](@ref), [`GetElements`](@ref), [`GetLength`](@ref), [`GetMethod`](@ref), [`GetNdata`](@ref), [`GetNelement`](@ref), [`GetNewType`](@ref), [`GetNumber`](@ref), [`GetOffset`](@ref), [`GetOldVersion`](@ref), [`GetOnFileClassVersion`](@ref), [`GetReadMemberWiseActions`](@ref), [`GetReadObjectWiseActions`](@ref), [`GetReadTextActions`](@ref), [`GetSizeElements`](@ref), [`GetSize`](@ref), [`GetStreamerElementReal`](@ref), [`GetStreamerElement`](@ref), [`GetType`](@ref), [`GetTypedValueClones`](@ref), [`GetTypedValueSTLP`](@ref), [`GetTypedValueSTL`](@ref), [`GetTypedValue`](@ref), [`GetValueClones`](@ref), [`GetValueSTLP`](@ref), [`GetValueSTL`](@ref), [`GetValue`](@ref), [`GetWriteMemberWiseActions`](@ref), [`GetWriteObjectWiseActions`](@ref), [`GetWriteTextActions`](@ref), [`MatchLegacyCheckSum`](@ref), [`NewArray`](@ref), [`NewInfo`](@ref), [`New`](@ref), [`PrintValueClones`](@ref), [`PrintValueSTL`](@ref), [`PrintValue`](@ref), [`ReadBufferArtificial`](@ref), [`ReadBufferClones`](@ref), [`ReadBufferConv`](@ref), [`ReadBufferSTL`](@ref), [`ReadBufferSkip`](@ref), [`ReadBuffer`](@ref), [`SetCheckSum`](@ref), [`SetClassVersion`](@ref), [`SetClass`](@ref), [`SetOnFileClassVersion`](@ref), [`TStreamerInfo!GetCurrentElement`](@ref), [`TStreamerInfo`](@ref), [`TagFile`](@ref), [`Update`](@ref), [`WriteBufferAux`](@ref), [`ls`](@ref)
 """ TStreamerInfo
 
 # Wrapper of TEntryList
@@ -5297,7 +5297,7 @@ The transformation matrix to go from the pattern space to the feature space cons
 
 Christian Holm August 2000, CERN
 
-Related functions: [`AddRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`GetCovarianceGetMatrix`](@ref), [`GetEigenValues`](@ref), [`GetEigenVectors`](@ref), [`GetHistograms`](@ref), [`GetMeanValues`](@ref), [`GetRow`](@ref), [`GetSigmas`](@ref), [`GetUserData`](@ref), [`IsFolder`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethods`](@ref), [`MakePrincipals`](@ref), [`P2X`](@ref), [`Print`](@ref), [`SumOfSquareResiduals`](@ref), [`TPrincipal`](@ref), [`Test`](@ref), [`X2P`](@ref)
+Related functions: [`AddRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`GetCovarianceMatrix`](@ref), [`GetEigenValues`](@ref), [`GetEigenVectors`](@ref), [`GetHistograms`](@ref), [`GetMeanValues`](@ref), [`GetRow`](@ref), [`GetSigmas`](@ref), [`GetUserData`](@ref), [`IsFolder`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethods`](@ref), [`MakePrincipals`](@ref), [`P2X`](@ref), [`Print`](@ref), [`SumOfSquareResiduals`](@ref), [`TPrincipal`](@ref), [`Test`](@ref), [`X2P`](@ref)
 """ TPrincipal
 
 # Wrapper of TTreeFriendLeafIter
@@ -5319,7 +5319,7 @@ A [TLeaf](@ref) for an 8 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafB`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafB`](@ref)
 """ TLeafB
 
 # Wrapper of TLeafC
@@ -5330,7 +5330,7 @@ A [TLeaf](@ref) for a variable length string.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValueGetString`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafC`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValueString`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafC`](@ref)
 """ TLeafC
 
 # Wrapper of TLeafD
@@ -5341,7 +5341,7 @@ A [TLeaf](@ref) for a 64 bit floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD`](@ref)
 """ TLeafD
 
 # Wrapper of TLeafD32
@@ -5352,7 +5352,7 @@ A [TLeaf](@ref) for a 24 bit truncated floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD32`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafD32`](@ref)
 """ TLeafD32
 
 # Wrapper of TBranchElement
@@ -5363,7 +5363,7 @@ A Branch for the case of an object.
 
 
 
-Related functions: [`Browse`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`GetAddress`](@ref), [`GetBranchCount2`](@ref), [`GetBranchCount`](@ref), [`GetBranchOffset`](@ref), [`GetCheckSum`](@ref), [`GetClassName`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetClonesName`](@ref), [`GetCollectionProxy`](@ref), [`GetCurrentClass`](@ref), [`GetEntry`](@ref), [`GetExpectedGetType`](@ref), [`GetFullName`](@ref), [`GetGetTypeName`](@ref), [`GetGetType`](@ref), [`GetGetTypedValue`](@ref), [`GetID`](@ref), [`GetIconName`](@ref), [`GetInfo`](@ref), [`GetMakeClass`](@ref), [`GetMaximum`](@ref), [`GetNdata`](@ref), [`GetObject`](@ref), [`GetOnfileObject`](@ref), [`GetParentName`](@ref), [`GetStreamerGetType`](@ref), [`GetTargetClass`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IsBranchFolder`](@ref), [`IsFolder`](@ref), [`IsObjectOwner`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`Print`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetDeleteObject`](@ref), [`ResetInitInfo`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetBasketSize`](@ref), [`SetBranchFolder`](@ref), [`SetClassName`](@ref), [`SetGetType`](@ref), [`SetMakeClass`](@ref), [`SetMissing`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetParentClass`](@ref), [`SetParentName`](@ref), [`SetTargetClass`](@ref), [`SetupAddresses`](@ref), [`TBranchElement`](@ref), [`Unroll`](@ref), [`UpdateFile`](@ref)
+Related functions: [`Browse`](@ref), [`FindBranch`](@ref), [`FindLeaf`](@ref), [`GetAddress`](@ref), [`GetBranchCount2`](@ref), [`GetBranchCount`](@ref), [`GetBranchOffset`](@ref), [`GetCheckSum`](@ref), [`GetClassName`](@ref), [`GetClassVersion`](@ref), [`GetClass`](@ref), [`GetClonesName`](@ref), [`GetCollectionProxy`](@ref), [`GetCurrentClass`](@ref), [`GetEntry`](@ref), [`GetExpectedType`](@ref), [`GetFullName`](@ref), [`GetID`](@ref), [`GetIconName`](@ref), [`GetInfo`](@ref), [`GetMakeClass`](@ref), [`GetMaximum`](@ref), [`GetNdata`](@ref), [`GetObject`](@ref), [`GetOnfileObject`](@ref), [`GetParentName`](@ref), [`GetStreamerType`](@ref), [`GetTargetClass`](@ref), [`GetTypeName`](@ref), [`GetType`](@ref), [`GetTypedValue`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IsBranchFolder`](@ref), [`IsFolder`](@ref), [`IsObjectOwner`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`Print`](@ref), [`ResetAddress`](@ref), [`ResetAfterMerge`](@ref), [`ResetDeleteObject`](@ref), [`ResetInitInfo`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetBasketSize`](@ref), [`SetBranchFolder`](@ref), [`SetClassName`](@ref), [`SetMakeClass`](@ref), [`SetMissing`](@ref), [`SetObject`](@ref), [`SetOffset`](@ref), [`SetParentClass`](@ref), [`SetParentName`](@ref), [`SetTargetClass`](@ref), [`SetType`](@ref), [`SetupAddresses`](@ref), [`TBranchElement`](@ref), [`Unroll`](@ref), [`UpdateFile`](@ref)
 """ TBranchElement
 
 # Wrapper of TLeafElement
@@ -5374,7 +5374,7 @@ A [TLeaf](@ref) for the general case when using the branches created via a [TStr
 
 using [TBranchElement](@ref)).
 
-Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetDeserializeGetType`](@ref), [`GetFullName`](@ref), [`GetGetTypeName`](@ref), [`GetGetTypedValueSubArray`](@ref), [`GetID`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMethodCall`](@ref), [`GetNdata`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`PrintValue`](@ref), [`ReadBasketFast`](@ref), [`SetLeafCount`](@ref), [`TLeafElement`](@ref)
+Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetDeserializeType`](@ref), [`GetFullName`](@ref), [`GetID`](@ref), [`GetLen`](@ref), [`GetMaximum`](@ref), [`GetMethodCall`](@ref), [`GetNdata`](@ref), [`GetTypeName`](@ref), [`GetTypedValueSubArray`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`IncludeRange`](@ref), [`IsOnTerminalBranch`](@ref), [`PrintValue`](@ref), [`ReadBasketFast`](@ref), [`SetLeafCount`](@ref), [`TLeafElement`](@ref)
 """ TLeafElement
 
 # Wrapper of TMethodCall
@@ -5387,7 +5387,7 @@ Objects of this class contain the (CINT) environment to call a global_ function 
 
 A limitation is known with the present implementation: failures can occur if parameters involve temporary object construction.
 
-Related functions: [`CallDtorOnly`](@ref), [`Clone`](@ref), [`Execute`](@ref), [`GetCallFunc`](@ref), [`GetMethodName`](@ref), [`GetMethod`](@ref), [`GetParams`](@ref), [`GetProto`](@ref), [`InitWithPrototype`](@ref), [`Init`](@ref), [`IsValid`](@ref), [`ResetParam`](@ref), [`ReturnGetType`](@ref), [`SetParamPtrs`](@ref), [`SetParam`](@ref), [`SetParams`](@ref), [`TMethodCall`](@ref), [`assign`](@ref)
+Related functions: [`CallDtorOnly`](@ref), [`Clone`](@ref), [`Execute`](@ref), [`GetCallFunc`](@ref), [`GetMethodName`](@ref), [`GetMethod`](@ref), [`GetParams`](@ref), [`GetProto`](@ref), [`InitWithPrototype`](@ref), [`Init`](@ref), [`IsValid`](@ref), [`ResetParam`](@ref), [`ReturnType`](@ref), [`SetParamPtrs`](@ref), [`SetParam`](@ref), [`SetParams`](@ref), [`TMethodCall`](@ref), [`assign`](@ref)
 """ TMethodCall
 
 # Wrapper of TLeafF
@@ -5398,7 +5398,7 @@ A [TLeaf](@ref) for a 32 bit floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF`](@ref)
 """ TLeafF
 
 # Wrapper of TLeafF16
@@ -5409,7 +5409,7 @@ A [TLeaf](@ref) for a 24 bit truncated floating point data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF16`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`TLeafF16`](@ref)
 """ TLeafF16
 
 # Wrapper of TLeafG
@@ -5420,7 +5420,7 @@ A [TLeaf](@ref) for a 64 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafG`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafG`](@ref)
 """ TLeafG
 
 # Wrapper of TLeafI
@@ -5431,7 +5431,7 @@ A [TLeaf](@ref) for an Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafI`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafI`](@ref)
 """ TLeafI
 
 # Wrapper of TLeafL
@@ -5442,7 +5442,7 @@ A [TLeaf](@ref) for a 64 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafL`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValueLong64`](@ref), [`GetValueLongDouble`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafL`](@ref)
 """ TLeafL
 
 # Wrapper of TLeafO
@@ -5453,7 +5453,7 @@ A [TLeaf](@ref) for a bool data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafO`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafO`](@ref)
 """ TLeafO
 
 # Wrapper of TLeafObject
@@ -5464,7 +5464,7 @@ A [TLeaf](@ref) for a general object derived from [TObject](@ref).
 
 
 
-Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetClass`](@ref), [`GetGetTypeName`](@ref), [`GetMethodCall`](@ref), [`GetObject`](@ref), [`GetValuePointer`](@ref), [`IsOnTerminalBranch`](@ref), [`IsVirtual`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`ReadBasket`](@ref), [`SetAddress`](@ref), [`SetVirtual`](@ref), [`TLeafObject`](@ref)
+Related functions: [`CanGenerateOffsetArray`](@ref), [`ClassDefOverride`](@ref), [`FillBasket`](@ref), [`GenerateOffsetArrayBase`](@ref), [`GetClass`](@ref), [`GetMethodCall`](@ref), [`GetObject`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`IsOnTerminalBranch`](@ref), [`IsVirtual`](@ref), [`Notify`](@ref), [`PrintValue`](@ref), [`ReadBasket`](@ref), [`SetAddress`](@ref), [`SetVirtual`](@ref), [`TLeafObject`](@ref)
 """ TLeafObject
 
 # Wrapper of TLeafS
@@ -5475,7 +5475,7 @@ A [TLeaf](@ref) for a 16 bit Integer data type.
 
 
 
-Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeGetType`](@ref), [`GetGetTypeName`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafS`](@ref)
+Related functions: [`ClassDefOverride`](@ref), [`Export`](@ref), [`FillBasket`](@ref), [`GetDeserializeType`](@ref), [`GetMaximum`](@ref), [`GetMinimum`](@ref), [`GetTypeName`](@ref), [`GetValuePointer`](@ref), [`GetValue`](@ref), [`Import`](@ref), [`IncludeRange`](@ref), [`PrintValue`](@ref), [`ReadBasketExport`](@ref), [`ReadBasketFast`](@ref), [`ReadBasket`](@ref), [`ReadValue`](@ref), [`SetAddress`](@ref), [`SetMaximum`](@ref), [`SetMinimum`](@ref), [`TLeafS`](@ref)
 """ TLeafS
 
 # Wrapper of TBranchObject
@@ -5486,7 +5486,7 @@ A Branch for the case of an object.
 
 
 
-Related functions: [`Browse`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedGetType`](@ref), [`GetObjClassName`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`ResetAfterMerge`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetupAddresses`](@ref), [`TBranchObject`](@ref), [`UpdateAddress`](@ref)
+Related functions: [`Browse`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedType`](@ref), [`GetObjClassName`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`ResetAfterMerge`](@ref), [`Reset`](@ref), [`SetAddress`](@ref), [`SetAutoDelete`](@ref), [`SetBasketSize`](@ref), [`SetupAddresses`](@ref), [`TBranchObject`](@ref), [`UpdateAddress`](@ref)
 """ TBranchObject
 
 # Wrapper of TBranchSTL
@@ -5497,7 +5497,7 @@ A Branch handling STL collection of pointers (vectors, lists, queues, sets and m
 
 
 
-Related functions: [`Browse`](@ref), [`FillImpl`](@ref), [`FillLeavesImpl`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedGetType`](@ref), [`GetInfo`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`SetAddress`](@ref), [`TBranchSTL`](@ref)
+Related functions: [`Browse`](@ref), [`FillImpl`](@ref), [`FillLeavesImpl`](@ref), [`GetClassName`](@ref), [`GetEntry`](@ref), [`GetExpectedType`](@ref), [`GetInfo`](@ref), [`IsFolder`](@ref), [`Print`](@ref), [`SetAddress`](@ref), [`TBranchSTL`](@ref)
 """ TBranchSTL
 
 # Wrapper of TTreeReader
@@ -5695,7 +5695,7 @@ For examples of DistancetoPrimitive and ExecuteEvent functions, see classes
 
  A Pad supports linear and log scales coordinate systems. The transformation coefficients are explained in [TPad!ResizePad](@ref).
 
-Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoXY`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`AutoExec`](@ref), [`Browse`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`ClipPolygon`](@ref), [`Clip`](@ref), [`ClippingCode`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`Closed`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`DivideSquare`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawCollideGrid`](@ref), [`DrawCrosshair`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`EventPave`](@ref), [`ExecuteEventAxis`](@ref), [`FindObject`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBBoxCenter`](@ref), [`GetBBox`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetCrosshair`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`Hash`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsBatch`](@ref), [`IsEditable`](@ref), [`IsFolder`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBox`](@ref), [`PaintFillAreaHatches`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintGetTextNDC`](@ref), [`PaintGetText`](@ref), [`PaintHatches`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`Paint`](@ref), [`Pick`](@ref), [`PixeltoXY`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`Pop`](@ref), [`Print`](@ref), [`RangeAxis`](@ref), [`RangeChanged`](@ref), [`Range`](@ref), [`RecordLatex`](@ref), [`RecordPave`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`Resized`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttGetTextPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetBBoxCenterX`](@ref), [`SetBBoxCenterY`](@ref), [`SetBBoxCenter`](@ref), [`SetBBoxX1`](@ref), [`SetBBoxX2`](@ref), [`SetBBoxY1`](@ref), [`SetBBoxY2`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawOption`](@ref), [`SetEditable`](@ref), [`SetFillStyle`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGLDevice`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetNumber`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipGetText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StartEditing`](@ref), [`TPad!DrawColorTable`](@ref), [`TPad!GetMaxPickDistance`](@ref), [`TPad!SetMaxPickDistance`](@ref), [`TPad`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UseCurrentStyle`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XYtoAbsPixel`](@ref), [`XYtoPixel`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref), [`x3d`](@ref)
+Related functions: [`AbsCoordinates`](@ref), [`AbsPixeltoXY`](@ref), [`AbsPixeltoX`](@ref), [`AbsPixeltoY`](@ref), [`AddExec`](@ref), [`AutoExec`](@ref), [`Browse`](@ref), [`BuildLegend`](@ref), [`Clear`](@ref), [`ClipPolygon`](@ref), [`Clip`](@ref), [`ClippingCode`](@ref), [`CloseToolTip`](@ref), [`Close`](@ref), [`Closed`](@ref), [`CopyPixmap`](@ref), [`CopyPixmaps`](@ref), [`CreateToolTip`](@ref), [`DeleteExec`](@ref), [`DeleteToolTip`](@ref), [`DivideSquare`](@ref), [`Divide`](@ref), [`DrawClassObject`](@ref), [`DrawCollideGrid`](@ref), [`DrawCrosshair`](@ref), [`DrawFrame`](@ref), [`Draw`](@ref), [`EventPave`](@ref), [`ExecuteEventAxis`](@ref), [`FindObject`](@ref), [`GetAbsHNDC`](@ref), [`GetAbsWNDC`](@ref), [`GetAbsXlowNDC`](@ref), [`GetAbsYlowNDC`](@ref), [`GetAspectRatio`](@ref), [`GetBBoxCenter`](@ref), [`GetBBox`](@ref), [`GetBorderMode`](@ref), [`GetBorderSize`](@ref), [`GetCanvasID`](@ref), [`GetCanvasImp`](@ref), [`GetCanvas`](@ref), [`GetCrosshair`](@ref), [`GetEventX`](@ref), [`GetEventY`](@ref), [`GetEvent`](@ref), [`GetFrame`](@ref), [`GetGLDevice`](@ref), [`GetGridx`](@ref), [`GetGridy`](@ref), [`GetHNDC`](@ref), [`GetHighLightColor`](@ref), [`GetListOfExecs`](@ref), [`GetListOfPrimitives`](@ref), [`GetLogx`](@ref), [`GetLogy`](@ref), [`GetLogz`](@ref), [`GetMother`](@ref), [`GetName`](@ref), [`GetNumber`](@ref), [`GetPadPaint`](@ref), [`GetPadPar`](@ref), [`GetPadPointer`](@ref), [`GetPadSave`](@ref), [`GetPad`](@ref), [`GetPainter`](@ref), [`GetPhi`](@ref), [`GetPixmapID`](@ref), [`GetPrimitive`](@ref), [`GetRangeAxis`](@ref), [`GetRange`](@ref), [`GetSelectedPad`](@ref), [`GetSelected`](@ref), [`GetTheta`](@ref), [`GetTickx`](@ref), [`GetTicky`](@ref), [`GetTitle`](@ref), [`GetUxmax`](@ref), [`GetUxmin`](@ref), [`GetUymax`](@ref), [`GetUymin`](@ref), [`GetView3D`](@ref), [`GetView`](@ref), [`GetViewer3D`](@ref), [`GetVirtCanvas`](@ref), [`GetWNDC`](@ref), [`GetWh`](@ref), [`GetWw`](@ref), [`GetX1`](@ref), [`GetX2`](@ref), [`GetXlowNDC`](@ref), [`GetY1`](@ref), [`GetY2`](@ref), [`GetYlowNDC`](@ref), [`HasCrosshair`](@ref), [`HasFixedAspectRatio`](@ref), [`HasViewer3D`](@ref), [`Hash`](@ref), [`HighLight`](@ref), [`IncrementPaletteColor`](@ref), [`IsBatch`](@ref), [`IsEditable`](@ref), [`IsFolder`](@ref), [`IsModified`](@ref), [`IsRetained`](@ref), [`IsVertical`](@ref), [`IsWeb`](@ref), [`ModifiedUpdate`](@ref), [`Modified`](@ref), [`NextPaletteColor`](@ref), [`OpaqueMoving`](@ref), [`OpaqueResizing`](@ref), [`PadtoX`](@ref), [`PadtoY`](@ref), [`PaintBox`](@ref), [`PaintFillAreaHatches`](@ref), [`PaintFillAreaNDC`](@ref), [`PaintFillArea`](@ref), [`PaintHatches`](@ref), [`PaintLine3D`](@ref), [`PaintLineNDC`](@ref), [`PaintLine`](@ref), [`PaintModified`](@ref), [`PaintPadFrame`](@ref), [`PaintPolyLine3D`](@ref), [`PaintPolyLineNDC`](@ref), [`PaintPolyLine`](@ref), [`PaintPolyMarker`](@ref), [`PaintTextNDC`](@ref), [`PaintText`](@ref), [`Paint`](@ref), [`Pick`](@ref), [`PixeltoXY`](@ref), [`PixeltoX`](@ref), [`PixeltoY`](@ref), [`PlaceBox`](@ref), [`Pop`](@ref), [`Print`](@ref), [`RangeAxis`](@ref), [`RangeChanged`](@ref), [`Range`](@ref), [`RecordLatex`](@ref), [`RecordPave`](@ref), [`RecursiveRemove`](@ref), [`RedrawAxis`](@ref), [`ReleaseViewer3D`](@ref), [`ResetToolTip`](@ref), [`ResetView3D`](@ref), [`ResizePad`](@ref), [`Resized`](@ref), [`SaveAs`](@ref), [`SetAttFillPS`](@ref), [`SetAttLinePS`](@ref), [`SetAttMarkerPS`](@ref), [`SetAttTextPS`](@ref), [`SetBBoxCenterX`](@ref), [`SetBBoxCenterY`](@ref), [`SetBBoxCenter`](@ref), [`SetBBoxX1`](@ref), [`SetBBoxX2`](@ref), [`SetBBoxY1`](@ref), [`SetBBoxY2`](@ref), [`SetBorderMode`](@ref), [`SetBorderSize`](@ref), [`SetCanvasSize`](@ref), [`SetCanvas`](@ref), [`SetCopyGLDevice`](@ref), [`SetCrosshair`](@ref), [`SetCursor`](@ref), [`SetDoubleBuffer`](@ref), [`SetDrawOption`](@ref), [`SetEditable`](@ref), [`SetFillStyle`](@ref), [`SetFixedAspectRatio`](@ref), [`SetGLDevice`](@ref), [`SetGrid`](@ref), [`SetGridx`](@ref), [`SetGridy`](@ref), [`SetLogx`](@ref), [`SetLogy`](@ref), [`SetLogz`](@ref), [`SetName`](@ref), [`SetNumber`](@ref), [`SetPad`](@ref), [`SetPhi`](@ref), [`SetSelected`](@ref), [`SetTheta`](@ref), [`SetTicks`](@ref), [`SetTickx`](@ref), [`SetTicky`](@ref), [`SetTitle`](@ref), [`SetToolTipText`](@ref), [`SetVertical`](@ref), [`SetView`](@ref), [`SetViewer3D`](@ref), [`ShowGuidelines`](@ref), [`StartEditing`](@ref), [`TPad!DrawColorTable`](@ref), [`TPad!GetMaxPickDistance`](@ref), [`TPad!SetMaxPickDistance`](@ref), [`TPad`](@ref), [`UpdateAsync`](@ref), [`Update`](@ref), [`UseCurrentStyle`](@ref), [`UtoAbsPixel`](@ref), [`UtoPixel`](@ref), [`VtoAbsPixel`](@ref), [`VtoPixel`](@ref), [`WaitPrimitive`](@ref), [`XYtoAbsPixel`](@ref), [`XYtoPixel`](@ref), [`XtoAbsPixel`](@ref), [`XtoPad`](@ref), [`XtoPixel`](@ref), [`YtoAbsPixel`](@ref), [`YtoPad`](@ref), [`YtoPixel`](@ref), [`cd`](@ref), [`ls`](@ref), [`x3d`](@ref)
 """ TPad
 
 # Wrapper of TRandom
@@ -5841,7 +5841,7 @@ Extends the ROOT!Fit!Result class with a [TNamed](@ref) inheritance providing ea
 
 
 
-Related functions: [`Contour`](@ref), [`Error`](@ref), [`GetCorrelationGetMatrix`](@ref), [`GetCovarianceGetMatrix`](@ref), [`Print`](@ref), [`Scan`](@ref), [`TFitResult`](@ref)
+Related functions: [`Contour`](@ref), [`Error`](@ref), [`GetCorrelationMatrix`](@ref), [`GetCovarianceMatrix`](@ref), [`Print`](@ref), [`Scan`](@ref), [`TFitResult`](@ref)
 """ TFitResult
 
 # Wrapper of TFitResultPtr
@@ -6243,7 +6243,7 @@ Related functions: [`ApplyX`](@ref), [`Apply`](@ref), [`ComputeRange`](@ref), [`
 
 
 
-Related functions: [`GetAlign`](@ref), [`GetAngle`](@ref), [`GetColor`](@ref), [`GetFont`](@ref), [`GetGetText`](@ref), [`GetLabNum`](@ref), [`GetLabValue`](@ref), [`GetSize`](@ref), [`SetAlign`](@ref), [`SetAngle`](@ref), [`SetColor`](@ref), [`SetFont`](@ref), [`SetGetText`](@ref), [`SetLabNum`](@ref), [`SetLabValue`](@ref), [`SetSize`](@ref), [`TAxisModLab`](@ref)
+Related functions: [`GetAlign`](@ref), [`GetAngle`](@ref), [`GetColor`](@ref), [`GetFont`](@ref), [`GetLabNum`](@ref), [`GetLabValue`](@ref), [`GetSize`](@ref), [`GetText`](@ref), [`SetAlign`](@ref), [`SetAngle`](@ref), [`SetColor`](@ref), [`SetFont`](@ref), [`SetLabNum`](@ref), [`SetLabValue`](@ref), [`SetSize`](@ref), [`SetText`](@ref), [`TAxisModLab`](@ref)
 """ TAxisModLab
 
 # Wrapper of TVirtualFitter
@@ -6254,7 +6254,7 @@ Abstract Base Class for Fitting.
 
 
 
-Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceGetMatrixElement`](@ref), [`GetCovarianceGetMatrix`](@ref), [`GetErrors`](@ref), [`GetFCN`](@ref), [`GetFitOption`](@ref), [`GetMethodCall`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjectFit`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetUserFunc`](@ref), [`GetXfirst`](@ref), [`GetXlast`](@ref), [`GetYfirst`](@ref), [`GetYlast`](@ref), [`GetZfirst`](@ref), [`GetZlast`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReleaseParameter`](@ref), [`SetCache`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetFitOption`](@ref), [`SetObjectFit`](@ref), [`SetParameter`](@ref), [`SetUserFunc`](@ref), [`SetXfirst`](@ref), [`SetXlast`](@ref), [`SetYfirst`](@ref), [`SetYlast`](@ref), [`SetZfirst`](@ref), [`SetZlast`](@ref), [`TVirtualFitter!Fitter`](@ref), [`TVirtualFitter!GetDefaultFitter`](@ref), [`TVirtualFitter!GetErrorDef`](@ref), [`TVirtualFitter!GetFitter`](@ref), [`TVirtualFitter!GetMaxIterations`](@ref), [`TVirtualFitter!GetPrecision`](@ref), [`TVirtualFitter!SetDefaultFitter`](@ref), [`TVirtualFitter!SetErrorDef`](@ref), [`TVirtualFitter!SetFitter`](@ref), [`TVirtualFitter!SetMaxIterations`](@ref), [`TVirtualFitter!SetPrecision`](@ref), [`TVirtualFitter`](@ref)
+Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceMatrixElement`](@ref), [`GetCovarianceMatrix`](@ref), [`GetErrors`](@ref), [`GetFCN`](@ref), [`GetFitOption`](@ref), [`GetMethodCall`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjectFit`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetUserFunc`](@ref), [`GetXfirst`](@ref), [`GetXlast`](@ref), [`GetYfirst`](@ref), [`GetYlast`](@ref), [`GetZfirst`](@ref), [`GetZlast`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReleaseParameter`](@ref), [`SetCache`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetFitOption`](@ref), [`SetObjectFit`](@ref), [`SetParameter`](@ref), [`SetUserFunc`](@ref), [`SetXfirst`](@ref), [`SetXlast`](@ref), [`SetYfirst`](@ref), [`SetYlast`](@ref), [`SetZfirst`](@ref), [`SetZlast`](@ref), [`TVirtualFitter!Fitter`](@ref), [`TVirtualFitter!GetDefaultFitter`](@ref), [`TVirtualFitter!GetErrorDef`](@ref), [`TVirtualFitter!GetFitter`](@ref), [`TVirtualFitter!GetMaxIterations`](@ref), [`TVirtualFitter!GetPrecision`](@ref), [`TVirtualFitter!SetDefaultFitter`](@ref), [`TVirtualFitter!SetErrorDef`](@ref), [`TVirtualFitter!SetFitter`](@ref), [`TVirtualFitter!SetMaxIterations`](@ref), [`TVirtualFitter!SetPrecision`](@ref), [`TVirtualFitter`](@ref)
 """ TVirtualFitter
 
 # Wrapper of TBackCompFitter
@@ -6273,7 +6273,7 @@ Backward compatible implementation of [TVirtualFitter](@ref) using the class [RO
 
 Methods for getting the confidence level or contours are also provided. Note that after a new calls to [TH1!Fit](@ref) (or similar) the class will be deleted and all reference to the FitResult, FitConfig or minimizer will be invalid. One could eventually copying the class before issuing a new fit to avoid deleting this information.
 
-Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`Contour`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceGetMatrixElement`](@ref), [`GetCovarianceGetMatrix`](@ref), [`GetErrors`](@ref), [`GetFitConfig`](@ref), [`GetFitData`](@ref), [`GetFitResult`](@ref), [`GetMinimizer`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjFunction`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetTFitResult`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReCreateMinimizer`](@ref), [`ReleaseParameter`](@ref), [`Scan`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetMethodCall`](@ref), [`SetObjFunction`](@ref), [`SetParameter`](@ref), [`TBackCompFitter`](@ref)
+Related functions: [`Chisquare`](@ref), [`Clear`](@ref), [`Contour`](@ref), [`ExecuteCommand`](@ref), [`FixParameter`](@ref), [`GetConfidenceIntervals`](@ref), [`GetCovarianceMatrixElement`](@ref), [`GetCovarianceMatrix`](@ref), [`GetErrors`](@ref), [`GetFitConfig`](@ref), [`GetFitData`](@ref), [`GetFitResult`](@ref), [`GetMinimizer`](@ref), [`GetNumberFreeParameters`](@ref), [`GetNumberTotalParameters`](@ref), [`GetObjFunction`](@ref), [`GetParError`](@ref), [`GetParName`](@ref), [`GetParameter`](@ref), [`GetStats`](@ref), [`GetSumLog`](@ref), [`GetTFitResult`](@ref), [`IsFixed`](@ref), [`PrintResults`](@ref), [`ReCreateMinimizer`](@ref), [`ReleaseParameter`](@ref), [`Scan`](@ref), [`SetFCN`](@ref), [`SetFitMethod`](@ref), [`SetMethodCall`](@ref), [`SetObjFunction`](@ref), [`SetParameter`](@ref), [`TBackCompFitter`](@ref)
 """ TBackCompFitter
 
 # Wrapper of TBinomialEfficiencyFitter
@@ -8050,7 +8050,7 @@ Physics. Computer Physics Communications 136:198-207,2001" - e-Print Archive: he
 
 The algorithm is briefly described in (4). A binned version is also implemented to address the performance issue due to its data size dependance.
 
-Related functions: [`Draw`](@ref), [`Fill`](@ref), [`GetAdaptiveWeights`](@ref), [`GetApproximateBias`](@ref), [`GetBias`](@ref), [`GetError`](@ref), [`GetFixedWeight`](@ref), [`GetFunction`](@ref), [`GetGraphWithErrors`](@ref), [`GetLowerFunction`](@ref), [`GetMean`](@ref), [`GetRAMISE`](@ref), [`GetSigma`](@ref), [`GetUpperFunction`](@ref), [`GetValue`](@ref), [`SetBinning`](@ref), [`SetIteration`](@ref), [`SetKernelGetType`](@ref), [`SetMirror`](@ref), [`SetNBins`](@ref), [`SetRange`](@ref), [`SetTuneFactor`](@ref), [`SetUseBinsNEvents`](@ref), [`TKDE`](@ref), [`paren`](@ref)
+Related functions: [`Draw`](@ref), [`Fill`](@ref), [`GetAdaptiveWeights`](@ref), [`GetApproximateBias`](@ref), [`GetBias`](@ref), [`GetError`](@ref), [`GetFixedWeight`](@ref), [`GetFunction`](@ref), [`GetGraphWithErrors`](@ref), [`GetLowerFunction`](@ref), [`GetMean`](@ref), [`GetRAMISE`](@ref), [`GetSigma`](@ref), [`GetUpperFunction`](@ref), [`GetValue`](@ref), [`SetBinning`](@ref), [`SetIteration`](@ref), [`SetKernelType`](@ref), [`SetMirror`](@ref), [`SetNBins`](@ref), [`SetRange`](@ref), [`SetTuneFactor`](@ref), [`SetUseBinsNEvents`](@ref), [`TKDE`](@ref), [`paren`](@ref)
 """ TKDE
 
 # Wrapper of TLimit
@@ -8335,7 +8335,7 @@ Christian Holm
 - H. Wind. *Function parameterization*. Proceedings of the 1972 CERN Computing and Data Processing School, volume 72-21 of Yellow report. CERN, 1972.
 - H. Wind. 1. principal component analysis, 2. pattern recognition for track finding, 3. interpolation and functional representation. Yellow report EP/81-12, CERN, 1981.
 
-Related functions: [`AddRow`](@ref), [`AddTestRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`EvalError`](@ref), [`Eval`](@ref), [`FindParameterization`](@ref), [`Fit`](@ref), [`GetChi2`](@ref), [`GetCoefficientsRMS`](@ref), [`GetCoefficients`](@ref), [`GetCorrelationGetMatrix`](@ref), [`GetError`](@ref), [`GetFunctionCodes`](@ref), [`GetFunctions`](@ref), [`GetHistograms`](@ref), [`GetMaxAngle`](@ref), [`GetMaxFunctions`](@ref), [`GetMaxPowers`](@ref), [`GetMaxQuantity`](@ref), [`GetMaxStudy`](@ref), [`GetMaxTerms`](@ref), [`GetMaxVariables`](@ref), [`GetMeanQuantity`](@ref), [`GetMeanVariables`](@ref), [`GetMinAngle`](@ref), [`GetMinQuantity`](@ref), [`GetMinRelativeError`](@ref), [`GetMinVariables`](@ref), [`GetNCoefficients`](@ref), [`GetNVariables`](@ref), [`GetPolyGetType`](@ref), [`GetPowerIndex`](@ref), [`GetPowerLimit`](@ref), [`GetPowers`](@ref), [`GetPrecision`](@ref), [`GetQuantity`](@ref), [`GetRMS`](@ref), [`GetResidualMaxRow`](@ref), [`GetResidualMax`](@ref), [`GetResidualMinRow`](@ref), [`GetResidualMin`](@ref), [`GetResidualSumSq`](@ref), [`GetSampleSize`](@ref), [`GetSqError`](@ref), [`GetSumSqAvgQuantity`](@ref), [`GetSumSqQuantity`](@ref), [`GetTestError`](@ref), [`GetTestPrecision`](@ref), [`GetTestQuantity`](@ref), [`GetTestSampleSize`](@ref), [`GetTestSqError`](@ref), [`GetTestVariables`](@ref), [`GetVariables`](@ref), [`IsFolder`](@ref), [`MakeChi2`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethod`](@ref), [`Print`](@ref), [`SetBinVarX`](@ref), [`SetBinVarY`](@ref), [`SetMaxAngle`](@ref), [`SetMaxFunctions`](@ref), [`SetMaxPowers`](@ref), [`SetMaxStudy`](@ref), [`SetMaxTerms`](@ref), [`SetMinAngle`](@ref), [`SetMinRelativeError`](@ref), [`SetPowerLimit`](@ref), [`SetPowers`](@ref), [`TMultiDimFit!Instance`](@ref), [`TMultiDimFit`](@ref)
+Related functions: [`AddRow`](@ref), [`AddTestRow`](@ref), [`Browse`](@ref), [`Clear`](@ref), [`Draw`](@ref), [`EvalError`](@ref), [`Eval`](@ref), [`FindParameterization`](@ref), [`Fit`](@ref), [`GetChi2`](@ref), [`GetCoefficientsRMS`](@ref), [`GetCoefficients`](@ref), [`GetCorrelationMatrix`](@ref), [`GetError`](@ref), [`GetFunctionCodes`](@ref), [`GetFunctions`](@ref), [`GetHistograms`](@ref), [`GetMaxAngle`](@ref), [`GetMaxFunctions`](@ref), [`GetMaxPowers`](@ref), [`GetMaxQuantity`](@ref), [`GetMaxStudy`](@ref), [`GetMaxTerms`](@ref), [`GetMaxVariables`](@ref), [`GetMeanQuantity`](@ref), [`GetMeanVariables`](@ref), [`GetMinAngle`](@ref), [`GetMinQuantity`](@ref), [`GetMinRelativeError`](@ref), [`GetMinVariables`](@ref), [`GetNCoefficients`](@ref), [`GetNVariables`](@ref), [`GetPolyType`](@ref), [`GetPowerIndex`](@ref), [`GetPowerLimit`](@ref), [`GetPowers`](@ref), [`GetPrecision`](@ref), [`GetQuantity`](@ref), [`GetRMS`](@ref), [`GetResidualMaxRow`](@ref), [`GetResidualMax`](@ref), [`GetResidualMinRow`](@ref), [`GetResidualMin`](@ref), [`GetResidualSumSq`](@ref), [`GetSampleSize`](@ref), [`GetSqError`](@ref), [`GetSumSqAvgQuantity`](@ref), [`GetSumSqQuantity`](@ref), [`GetTestError`](@ref), [`GetTestPrecision`](@ref), [`GetTestQuantity`](@ref), [`GetTestSampleSize`](@ref), [`GetTestSqError`](@ref), [`GetTestVariables`](@ref), [`GetVariables`](@ref), [`IsFolder`](@ref), [`MakeChi2`](@ref), [`MakeCode`](@ref), [`MakeHistograms`](@ref), [`MakeMethod`](@ref), [`Print`](@ref), [`SetBinVarX`](@ref), [`SetBinVarY`](@ref), [`SetMaxAngle`](@ref), [`SetMaxFunctions`](@ref), [`SetMaxPowers`](@ref), [`SetMaxStudy`](@ref), [`SetMaxTerms`](@ref), [`SetMinAngle`](@ref), [`SetMinRelativeError`](@ref), [`SetPowerLimit`](@ref), [`SetPowers`](@ref), [`TMultiDimFit!Instance`](@ref), [`TMultiDimFit`](@ref)
 """ TMultiDimFit
 
 # Wrapper of TMatrixT
@@ -8348,7 +8348,7 @@ Template class of a general matrix in the linear algebra package
 
 See the [Matrix Linear Algebra](@ref) page for the documentation of the linear algebra package
 
-Related functions: [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetGetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`Minus`](@ref), [`MultT`](@ref), [`Mult`](@ref), [`NormByColumn`](@ref), [`NormByRow`](@ref), [`Plus`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Similarity`](@ref), [`TGetMatrixT`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
+Related functions: [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`Minus`](@ref), [`MultT`](@ref), [`Mult`](@ref), [`NormByColumn`](@ref), [`NormByRow`](@ref), [`Plus`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Similarity`](@ref), [`TMatrixT`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`fdiv!`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
 """ TMatrixT
 
 # Wrapper of TMatrixTSym
@@ -8363,7 +8363,7 @@ See the [Matrix Linear Algebra](@ref) page for the documentation of the linear a
 
 Note that in this implementation both matrix element m[i][j] and m[j][i] are updated and stored in memory. However, when making the object persistent only the upper right triangle is stored.
 
-Related functions: [`Apply`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetGetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`IsSymmetric`](@ref), [`Minus`](@ref), [`Mult`](@ref), [`Plus`](@ref), [`RandomizePD`](@ref), [`Randomize`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetGetMatrixArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SimilarityT`](@ref), [`Similarity`](@ref), [`TGetMatrixTSym`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
+Related functions: [`Apply`](@ref), [`Base.getindex`](@ref), [`Class`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`EigenVectors`](@ref), [`GetColIndexArray`](@ref), [`GetMatrixArray`](@ref), [`GetRowIndexArray`](@ref), [`GetSub`](@ref), [`InvertFast`](@ref), [`Invert`](@ref), [`IsSymmetric`](@ref), [`Minus`](@ref), [`Mult`](@ref), [`Plus`](@ref), [`RandomizePD`](@ref), [`Randomize`](@ref), [`Rank1Update`](@ref), [`ResizeTo`](@ref), [`SetColIndexArray`](@ref), [`SetMatrixArray`](@ref), [`SetRowIndexArray`](@ref), [`SetSub`](@ref), [`Shift`](@ref), [`SimilarityT`](@ref), [`Similarity`](@ref), [`TMatrixTSym`](@ref), [`TMult`](@ref), [`T`](@ref), [`Transpose`](@ref), [`Use`](@ref), [`add!`](@ref), [`assign`](@ref), [`mult!`](@ref), [`paren`](@ref), [`sub!`](@ref)
 """ TMatrixTSym
 
 # Wrapper of TPolyMarker
@@ -8555,7 +8555,7 @@ Covariance matrices on the measured spectrum (for either the total uncertainties
 
 See also the tutorial for a toy example.
 
-Related functions: [`ComputeChiSquared`](@ref), [`GetAdetCovGetMatrix`](@ref), [`GetBCov`](@ref), [`GetD`](@ref), [`GetKReg`](@ref), [`GetSV`](@ref), [`GetUnfoldCovGetMatrix`](@ref), [`GetXinv`](@ref), [`GetXtau`](@ref), [`SetNormalize`](@ref), [`TSVDUnfold`](@ref), [`Unfold`](@ref)
+Related functions: [`ComputeChiSquared`](@ref), [`GetAdetCovMatrix`](@ref), [`GetBCov`](@ref), [`GetD`](@ref), [`GetKReg`](@ref), [`GetSV`](@ref), [`GetUnfoldCovMatrix`](@ref), [`GetXinv`](@ref), [`GetXtau`](@ref), [`SetNormalize`](@ref), [`TSVDUnfold`](@ref), [`Unfold`](@ref)
 """ TSVDUnfold
 
 # Wrapper of TVirtualGraphPainter
@@ -8588,7 +8588,7 @@ This class is used in the process of reading and writing the GDML "matrix" tag.
 
 It represents a matrix with arbitrary number of rows and columns, storing elements in double precision.
 
-Related functions: [`GetCols`](@ref), [`GetGetMatrixAsGetString`](@ref), [`GetRows`](@ref), [`Get`](@ref), [`Print`](@ref), [`SetGetMatrixAsGetString`](@ref), [`Set`](@ref), [`TGDMLGetMatrix`](@ref), [`assign`](@ref)
+Related functions: [`GetCols`](@ref), [`GetMatrixAsString`](@ref), [`GetRows`](@ref), [`Get`](@ref), [`Print`](@ref), [`SetMatrixAsString`](@ref), [`Set`](@ref), [`TGDMLMatrix`](@ref), [`assign`](@ref)
 """ TGDMLMatrix
 
 # Wrapper of TGeoShape
@@ -8656,7 +8656,7 @@ Shapes can generally be divided along a given axis. Supported axis are X, Y, Z, 
 
 ![https://root.cern/doc/v636/geom_t_shape.png](https://root.cern/doc/v636/geom_t_shape.png)
 
-Related functions: [`AfterStreamer`](@ref), [`Capacity`](@ref), [`CheckShape`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetId`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetName`](@ref), [`GetNmeshVertices`](@ref), [`GetPointerName`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`InvertShapeBit`](@ref), [`IsAssembly`](@ref), [`IsComposite`](@ref), [`IsCylGetType`](@ref), [`IsReflected`](@ref), [`IsRunTimeShape`](@ref), [`IsValidBox`](@ref), [`IsValid`](@ref), [`IsVecGeom`](@ref), [`MakeBuffer3D`](@ref), [`Paint`](@ref), [`ResetShapeBit`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SetDimensions`](@ref), [`SetId`](@ref), [`SetPoints`](@ref), [`SetRuntime`](@ref), [`SetSegsAndPols`](@ref), [`SetShapeBit`](@ref), [`ShapeDistancetoPrimitive`](@ref), [`Sizeof3D`](@ref), [`TGeoShape!Big`](@ref), [`TGeoShape!ComputeEpsMch`](@ref), [`TGeoShape!DistToPhiMin`](@ref), [`TGeoShape!EpsMch`](@ref), [`TGeoShape!GetTransform`](@ref), [`TGeoShape!IsCloseToPhi`](@ref), [`TGeoShape!IsCrossingSemiplane`](@ref), [`TGeoShape!IsInPhiRange`](@ref), [`TGeoShape!IsSameWithinTolerance`](@ref), [`TGeoShape!IsSegCrossing`](@ref), [`TGeoShape!NormalPhi`](@ref), [`TGeoShape!SafetyPhi`](@ref), [`TGeoShape!SafetySeg`](@ref), [`TGeoShape!SetTransform`](@ref), [`TGeoShape!Tolerance`](@ref), [`TGeoShape`](@ref), [`TestShapeBit`](@ref), [`TestShapeBits`](@ref)
+Related functions: [`AfterStreamer`](@ref), [`Capacity`](@ref), [`CheckShape`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetId`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetName`](@ref), [`GetNmeshVertices`](@ref), [`GetPointerName`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`InvertShapeBit`](@ref), [`IsAssembly`](@ref), [`IsComposite`](@ref), [`IsCylType`](@ref), [`IsReflected`](@ref), [`IsRunTimeShape`](@ref), [`IsValidBox`](@ref), [`IsValid`](@ref), [`IsVecGeom`](@ref), [`MakeBuffer3D`](@ref), [`Paint`](@ref), [`ResetShapeBit`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SetDimensions`](@ref), [`SetId`](@ref), [`SetPoints`](@ref), [`SetRuntime`](@ref), [`SetSegsAndPols`](@ref), [`SetShapeBit`](@ref), [`ShapeDistancetoPrimitive`](@ref), [`Sizeof3D`](@ref), [`TGeoShape!Big`](@ref), [`TGeoShape!ComputeEpsMch`](@ref), [`TGeoShape!DistToPhiMin`](@ref), [`TGeoShape!EpsMch`](@ref), [`TGeoShape!GetTransform`](@ref), [`TGeoShape!IsCloseToPhi`](@ref), [`TGeoShape!IsCrossingSemiplane`](@ref), [`TGeoShape!IsInPhiRange`](@ref), [`TGeoShape!IsSameWithinTolerance`](@ref), [`TGeoShape!IsSegCrossing`](@ref), [`TGeoShape!NormalPhi`](@ref), [`TGeoShape!SafetyPhi`](@ref), [`TGeoShape!SafetySeg`](@ref), [`TGeoShape!SetTransform`](@ref), [`TGeoShape!Tolerance`](@ref), [`TGeoShape`](@ref), [`TestShapeBit`](@ref), [`TestShapeBits`](@ref)
 """ TGeoShape
 
 # Wrapper of TGeoMatrix
@@ -8824,7 +8824,7 @@ Combined transformations including a scale. Not implemented.
 
 A generic singleton matrix representing a identity transformation NOTE: identified by the global_ variable gGeoIdentity.
 
-Related functions: [`GetByteCount`](@ref), [`GetHomogenousGetMatrix`](@ref), [`GetPointerName`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsCombi`](@ref), [`IsGeneral`](@ref), [`IsIdentity`](@ref), [`IsOwned`](@ref), [`IsReflection`](@ref), [`IsRegistered`](@ref), [`IsRotAboutZ`](@ref), [`IsRotation`](@ref), [`IsScale`](@ref), [`IsShared`](@ref), [`IsTranslation`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`Print`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SetDefaultName`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetShared`](@ref), [`TGeoGetMatrix`](@ref), [`TGeoMatrix!Normalize`](@ref)
+Related functions: [`GetByteCount`](@ref), [`GetHomogenousMatrix`](@ref), [`GetPointerName`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsCombi`](@ref), [`IsGeneral`](@ref), [`IsIdentity`](@ref), [`IsOwned`](@ref), [`IsReflection`](@ref), [`IsRegistered`](@ref), [`IsRotAboutZ`](@ref), [`IsRotation`](@ref), [`IsScale`](@ref), [`IsShared`](@ref), [`IsTranslation`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`Print`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SetDefaultName`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetShared`](@ref), [`TGeoMatrix!Normalize`](@ref), [`TGeoMatrix`](@ref)
 """ TGeoMatrix
 
 # Wrapper of TGeoVolume
@@ -8922,7 +8922,7 @@ The 2 nodes that we have created inside chamber will both point to a wire_co obj
 
 The way out when volumes can be arranged according to simple patterns is the usage of divisions. We will describe them in detail later on. Let's think now at a different situation : instead of 1000 chambers of the same type, we may have several types of chambers. Let's say all chambers are cylindrical and have a wire inside, but their dimensions are different. However, we would like all to be represented by a single volume family, since they have the same properties.
 
-Related functions: [`AddNodeOffset`](@ref), [`AddNodeOverlap`](@ref), [`AddNode`](@ref), [`Browse`](@ref), [`Capacity`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckShape`](@ref), [`CheckShapes`](@ref), [`CleanAll`](@ref), [`ClearNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`CloneNodesAndConnect`](@ref), [`CloneVolume`](@ref), [`Contains`](@ref), [`CountNodes`](@ref), [`CreateThreadData`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`DrawOnly`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindGetMatrixOfDaughterVolume`](@ref), [`FindNode`](@ref), [`FindOverlaps`](@ref), [`GetByteCount`](@ref), [`GetCurrentNodeIndex`](@ref), [`GetFWExtension`](@ref), [`GetField`](@ref), [`GetFinder`](@ref), [`GetGeoManager`](@ref), [`GetIconName`](@ref), [`GetIndex`](@ref), [`GetMaterial`](@ref), [`GetMedium`](@ref), [`GetNdaughters`](@ref), [`GetNextNodeIndex`](@ref), [`GetNodeIndex`](@ref), [`GetNode`](@ref), [`GetNodes`](@ref), [`GetNtotal`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOption`](@ref), [`GetPointerName`](@ref), [`GetRefCount`](@ref), [`GetShape`](@ref), [`GetTransparency`](@ref), [`GetUserExtension`](@ref), [`GetVoxels`](@ref), [`GrabFWExtension`](@ref), [`GrabFocus`](@ref), [`GrabUserExtension`](@ref), [`Grab`](@ref), [`Gsord`](@ref), [`InspectMaterial`](@ref), [`InspectShape`](@ref), [`InvisibleAll`](@ref), [`IsActiveDaughters`](@ref), [`IsActive`](@ref), [`IsAdded`](@ref), [`IsAllInvisible`](@ref), [`IsAssembly`](@ref), [`IsCylVoxels`](@ref), [`IsFolder`](@ref), [`IsOverlappingCandidate`](@ref), [`IsRaytracing`](@ref), [`IsReplicated`](@ref), [`IsRunTime`](@ref), [`IsSelected`](@ref), [`IsStyleDefault`](@ref), [`IsTopVolume`](@ref), [`IsValid`](@ref), [`IsVisContainers`](@ref), [`IsVisLeaves`](@ref), [`IsVisOnly`](@ref), [`IsVisibleDaughters`](@ref), [`IsVisible`](@ref), [`IsVolumeMulti`](@ref), [`IsXYZVoxels`](@ref), [`LegoPlot`](@ref), [`MakeCopyNodes`](@ref), [`MakeCopyVolume`](@ref), [`MakeReflectedVolume`](@ref), [`OptimizeVoxels`](@ref), [`Paint`](@ref), [`PrintNodes`](@ref), [`PrintVoxels`](@ref), [`Print`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`Raytrace`](@ref), [`RegisterYourself`](@ref), [`Release`](@ref), [`RemoveNode`](@ref), [`ReplaceNode`](@ref), [`ReplayCreation`](@ref), [`ResetTransparency`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SelectVolume`](@ref), [`SetActiveDaughters`](@ref), [`SetActivity`](@ref), [`SetAdded`](@ref), [`SetAsTopVolume`](@ref), [`SetAttVisibility`](@ref), [`SetCurrentPoint`](@ref), [`SetCylVoxels`](@ref), [`SetFWExtension`](@ref), [`SetField`](@ref), [`SetFinder`](@ref), [`SetInvisible`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetMedium`](@ref), [`SetNodes`](@ref), [`SetNtotal`](@ref), [`SetNumber`](@ref), [`SetOption`](@ref), [`SetOverlappingCandidate`](@ref), [`SetReplicated`](@ref), [`SetShape`](@ref), [`SetTransparency`](@ref), [`SetUserExtension`](@ref), [`SetVisContainers`](@ref), [`SetVisLeaves`](@ref), [`SetVisOnly`](@ref), [`SetVisibility`](@ref), [`SetVoxelFinder`](@ref), [`SortNodes`](@ref), [`TGeoVolume!CreateDummyMedium`](@ref), [`TGeoVolume!DummyMedium`](@ref), [`TGeoVolume!Import`](@ref), [`TGeoVolume`](@ref), [`UnmarkSaved`](@ref), [`Valid`](@ref), [`VisibleDaughters`](@ref), [`Voxelize`](@ref), [`WeightA`](@ref), [`Weight`](@ref), [`cd`](@ref)
+Related functions: [`AddNodeOffset`](@ref), [`AddNodeOverlap`](@ref), [`AddNode`](@ref), [`Browse`](@ref), [`Capacity`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckShape`](@ref), [`CheckShapes`](@ref), [`CleanAll`](@ref), [`ClearNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`CloneNodesAndConnect`](@ref), [`CloneVolume`](@ref), [`Contains`](@ref), [`CountNodes`](@ref), [`CreateThreadData`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`DrawOnly`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindMatrixOfDaughterVolume`](@ref), [`FindNode`](@ref), [`FindOverlaps`](@ref), [`GetByteCount`](@ref), [`GetCurrentNodeIndex`](@ref), [`GetFWExtension`](@ref), [`GetField`](@ref), [`GetFinder`](@ref), [`GetGeoManager`](@ref), [`GetIconName`](@ref), [`GetIndex`](@ref), [`GetMaterial`](@ref), [`GetMedium`](@ref), [`GetNdaughters`](@ref), [`GetNextNodeIndex`](@ref), [`GetNodeIndex`](@ref), [`GetNode`](@ref), [`GetNodes`](@ref), [`GetNtotal`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOption`](@ref), [`GetPointerName`](@ref), [`GetRefCount`](@ref), [`GetShape`](@ref), [`GetTransparency`](@ref), [`GetUserExtension`](@ref), [`GetVoxels`](@ref), [`GrabFWExtension`](@ref), [`GrabFocus`](@ref), [`GrabUserExtension`](@ref), [`Grab`](@ref), [`Gsord`](@ref), [`InspectMaterial`](@ref), [`InspectShape`](@ref), [`InvisibleAll`](@ref), [`IsActiveDaughters`](@ref), [`IsActive`](@ref), [`IsAdded`](@ref), [`IsAllInvisible`](@ref), [`IsAssembly`](@ref), [`IsCylVoxels`](@ref), [`IsFolder`](@ref), [`IsOverlappingCandidate`](@ref), [`IsRaytracing`](@ref), [`IsReplicated`](@ref), [`IsRunTime`](@ref), [`IsSelected`](@ref), [`IsStyleDefault`](@ref), [`IsTopVolume`](@ref), [`IsValid`](@ref), [`IsVisContainers`](@ref), [`IsVisLeaves`](@ref), [`IsVisOnly`](@ref), [`IsVisibleDaughters`](@ref), [`IsVisible`](@ref), [`IsVolumeMulti`](@ref), [`IsXYZVoxels`](@ref), [`LegoPlot`](@ref), [`MakeCopyNodes`](@ref), [`MakeCopyVolume`](@ref), [`MakeReflectedVolume`](@ref), [`OptimizeVoxels`](@ref), [`Paint`](@ref), [`PrintNodes`](@ref), [`PrintVoxels`](@ref), [`Print`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`Raytrace`](@ref), [`RegisterYourself`](@ref), [`Release`](@ref), [`RemoveNode`](@ref), [`ReplaceNode`](@ref), [`ReplayCreation`](@ref), [`ResetTransparency`](@ref), [`SaveAs`](@ref), [`SavePrimitive`](@ref), [`SelectVolume`](@ref), [`SetActiveDaughters`](@ref), [`SetActivity`](@ref), [`SetAdded`](@ref), [`SetAsTopVolume`](@ref), [`SetAttVisibility`](@ref), [`SetCurrentPoint`](@ref), [`SetCylVoxels`](@ref), [`SetFWExtension`](@ref), [`SetField`](@ref), [`SetFinder`](@ref), [`SetInvisible`](@ref), [`SetLineColor`](@ref), [`SetLineStyle`](@ref), [`SetLineWidth`](@ref), [`SetMedium`](@ref), [`SetNodes`](@ref), [`SetNtotal`](@ref), [`SetNumber`](@ref), [`SetOption`](@ref), [`SetOverlappingCandidate`](@ref), [`SetReplicated`](@ref), [`SetShape`](@ref), [`SetTransparency`](@ref), [`SetUserExtension`](@ref), [`SetVisContainers`](@ref), [`SetVisLeaves`](@ref), [`SetVisOnly`](@ref), [`SetVisibility`](@ref), [`SetVoxelFinder`](@ref), [`SortNodes`](@ref), [`TGeoVolume!CreateDummyMedium`](@ref), [`TGeoVolume!DummyMedium`](@ref), [`TGeoVolume!Import`](@ref), [`TGeoVolume`](@ref), [`UnmarkSaved`](@ref), [`Valid`](@ref), [`VisibleDaughters`](@ref), [`Voxelize`](@ref), [`WeightA`](@ref), [`Weight`](@ref), [`cd`](@ref)
 """ TGeoVolume
 
 # Wrapper of TGeoBBox
@@ -8989,7 +8989,7 @@ Volumes having box shape can be divided with equal-length slices on X, Y or Z ax
 
 Both cases are supported by all shapes. See also class [TGeoShape](@ref) for utility methods provided by any particular shape.
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDX`](@ref), [`GetDY`](@ref), [`GetDZ`](@ref), [`GetFacetArea`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetOrigin`](@ref), [`GetPointsOnFacet`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`IsNullBox`](@ref), [`IsValidBox`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetBoxDimensions`](@ref), [`SetBoxPoints`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoBBox!AreOverlapping`](@ref), [`TGeoBBox!Contains`](@ref), [`TGeoBBox!DistFromInside`](@ref), [`TGeoBBox!DistFromOutside`](@ref), [`TGeoBBox`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CouldBeCrossed`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDX`](@ref), [`GetDY`](@ref), [`GetDZ`](@ref), [`GetFacetArea`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetOrigin`](@ref), [`GetPointsOnFacet`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`IsNullBox`](@ref), [`IsValidBox`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetBoxDimensions`](@ref), [`SetBoxPoints`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoBBox!AreOverlapping`](@ref), [`TGeoBBox!Contains`](@ref), [`TGeoBBox!DistFromInside`](@ref), [`TGeoBBox!DistFromOutside`](@ref), [`TGeoBBox`](@ref)
 """ TGeoBBox
 
 # Wrapper of TGeoArb8
@@ -9011,7 +9011,7 @@ Vertices have to be defined clockwise in the XY pane, both at `+dz` and `-dz`. T
 
 ![https://root.cern/doc/v636/pict1_TGeoArb8_001.png](https://root.cern/doc/v636/pict1_TGeoArb8_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`ComputeTwist`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToPlane`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetClosestEdge`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetPointsOnFacet`](@ref), [`GetTwist`](@ref), [`GetVertices`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`IsTwisted`](@ref), [`SafetyToFace`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetDz`](@ref), [`SetPlaneVertices`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoArb8!GetPlaneNormal`](@ref), [`TGeoArb8!InsidePolygon`](@ref), [`TGeoArb8!IsSamePoint`](@ref), [`TGeoArb8`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`ComputeTwist`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToPlane`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetClosestEdge`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetPointsOnFacet`](@ref), [`GetTwist`](@ref), [`GetVertices`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`IsTwisted`](@ref), [`SafetyToFace`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetDz`](@ref), [`SetPlaneVertices`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoArb8!GetPlaneNormal`](@ref), [`TGeoArb8!InsidePolygon`](@ref), [`TGeoArb8!IsSamePoint`](@ref), [`TGeoArb8`](@ref)
 """ TGeoArb8
 
 # Wrapper of TGeoTrap
@@ -9079,7 +9079,7 @@ The positioned shape components may or may not be disjoint. The specific impleme
 - [TGeoSubtraction](@ref) - representing the Boolean subtraction of two positioned shapes
 - [TGeoIntersection](@ref) - representing the Boolean intersection of two positioned shapes
 
-Related functions: [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside`](@ref), [`DistFromOutside`](@ref), [`DistanceToPrimitive`](@ref), [`GetBooleanOperator`](@ref), [`GetLeftGetMatrix`](@ref), [`GetLeftShape`](@ref), [`GetNpoints`](@ref), [`GetRightGetMatrix`](@ref), [`GetRightShape`](@ref), [`GetThreadData`](@ref), [`MakeClone`](@ref), [`Paint`](@ref), [`RegisterMatrices`](@ref), [`ReplaceGetMatrix`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSelected`](@ref), [`Sizeof3D`](@ref), [`TGeoBoolNode`](@ref)
+Related functions: [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside`](@ref), [`DistFromOutside`](@ref), [`DistanceToPrimitive`](@ref), [`GetBooleanOperator`](@ref), [`GetLeftMatrix`](@ref), [`GetLeftShape`](@ref), [`GetNpoints`](@ref), [`GetRightMatrix`](@ref), [`GetRightShape`](@ref), [`GetThreadData`](@ref), [`MakeClone`](@ref), [`Paint`](@ref), [`RegisterMatrices`](@ref), [`ReplaceMatrix`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSelected`](@ref), [`Sizeof3D`](@ref), [`TGeoBoolNode`](@ref)
 """ TGeoBoolNode
 
 # Wrapper of TGeoUnion
@@ -9123,7 +9123,7 @@ Matrix class used for computing global_ transformations Should NOT be used for n
 
 An instance of this class is generally used to pile-up local_ transformations starting from the top level physical node, down to the current node.
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`CopyFrom`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`MultiplyLeft`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetScale`](@ref), [`SetTranslation`](@ref), [`TGeoHGetMatrix`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`CopyFrom`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`MultiplyLeft`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetScale`](@ref), [`SetTranslation`](@ref), [`TGeoHMatrix`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoHMatrix
 
 # Wrapper of TGeoTranslation
@@ -9134,7 +9134,7 @@ Class describing translations.
 
 A translation is basically an array of 3 doubles matching the positions 12, 13 and 14 in the homogenous matrix description.
 
-Related functions: [`Add`](@ref), [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetTranslation`](@ref), [`Subtract`](@ref), [`TGeoTranslation`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Add`](@ref), [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetTranslation`](@ref), [`Subtract`](@ref), [`TGeoTranslation`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoTranslation
 
 # Wrapper of TGeoRotation
@@ -9145,7 +9145,7 @@ Class describing rotations.
 
 A rotation is a 3*3 array Column vectors has to be orthogonal unit vectors.
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetAngles`](@ref), [`GetInverse`](@ref), [`GetPhiRotation`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsValid`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MultiplyBy`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetAngles`](@ref), [`SetGetMatrix`](@ref), [`SetRotation`](@ref), [`TGeoRotation`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`Determinant`](@ref), [`FastRotZ`](@ref), [`GetAngles`](@ref), [`GetInverse`](@ref), [`GetPhiRotation`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`IsValid`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MultiplyBy`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetAngles`](@ref), [`SetMatrix`](@ref), [`SetRotation`](@ref), [`TGeoRotation`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoRotation
 
 # Wrapper of TGeoScale
@@ -9156,7 +9156,7 @@ Class describing scale transformations.
 
 A scale is an array of 3 doubles (sx, sy, sz) multiplying elements 0, 5 and 10 of the homogenous matrix. A scale is normalized : sx*sy*sz = 1
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`SetScale`](@ref), [`TGeoScale`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`SetScale`](@ref), [`TGeoScale`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoScale
 
 # Wrapper of TGeoCombiTrans
@@ -9167,7 +9167,7 @@ Class describing rotation + translation.
 
 Most frequently used in the description of [TGeoNode](@ref) 's
 
-Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`GetRotationGetMatrix`](@ref), [`GetRotation`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetTranslation`](@ref), [`TGeoCombiTrans`](@ref), [`assign`](@ref), [`mult!`](@ref)
+Related functions: [`Base.:(*)`](@ref), [`Base.:(==)`](@ref), [`Clear`](@ref), [`GetRotationMatrix`](@ref), [`GetRotation`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`MakeClone`](@ref), [`Multiply`](@ref), [`ReflectX`](@ref), [`ReflectY`](@ref), [`ReflectZ`](@ref), [`RegisterYourself`](@ref), [`RotateX`](@ref), [`RotateY`](@ref), [`RotateZ`](@ref), [`SavePrimitive`](@ref), [`SetDx`](@ref), [`SetDy`](@ref), [`SetDz`](@ref), [`SetRotation`](@ref), [`SetTranslation`](@ref), [`TGeoCombiTrans`](@ref), [`assign`](@ref), [`mult!`](@ref)
 """ TGeoCombiTrans
 
 # Wrapper of TGeoGenTrans
@@ -9189,7 +9189,7 @@ An identity transformation.
 
 It holds no data member and returns pointers to static null translation and identity transformations for rotation and scale
 
-Related functions: [`GetRotationGetMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`SavePrimitive`](@ref), [`TGeoIdentity`](@ref)
+Related functions: [`GetRotationMatrix`](@ref), [`GetScale`](@ref), [`GetTranslation`](@ref), [`Inverse`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeClone`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`SavePrimitive`](@ref), [`TGeoIdentity`](@ref)
 """ TGeoIdentity
 
 # Wrapper of TGeoBranchArray
@@ -9209,7 +9209,7 @@ To setup an object of this type, one should use:
 
 The navigator can be updated to reflect this path array: `array->UpdateNavigator();`
 
-Related functions: [`AddLevel`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`CleanGetMatrix`](@ref), [`Compare`](@ref), [`CopyTo`](@ref), [`DataSize`](@ref), [`DataStart`](@ref), [`GetArray`](@ref), [`GetCurrentNode`](@ref), [`GetGetMatrix`](@ref), [`GetLevel`](@ref), [`GetMaxLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`InitFromNavigator`](@ref), [`Init`](@ref), [`IsOutside`](@ref), [`IsSortable`](@ref), [`Print`](@ref), [`SizeOf`](@ref), [`TGeoBranchArray!BinarySearch`](@ref), [`TGeoBranchArray!MakeCopyAt`](@ref), [`TGeoBranchArray!MakeCopy`](@ref), [`TGeoBranchArray!MakeInstanceAt`](@ref), [`TGeoBranchArray!MakeInstance`](@ref), [`TGeoBranchArray!ReleaseInstance`](@ref), [`TGeoBranchArray!SizeOfInstance`](@ref), [`TGeoBranchArray!SizeOf`](@ref), [`TGeoBranchArray!Sort`](@ref), [`TGeoBranchArray`](@ref), [`UpdateArray`](@ref), [`UpdateNavigator`](@ref), [`assign`](@ref)
+Related functions: [`AddLevel`](@ref), [`Base.:(!=)`](@ref), [`Base.:(<)`](@ref), [`Base.:(<=)`](@ref), [`Base.:(==)`](@ref), [`Base.:(>)`](@ref), [`Base.:(>=)`](@ref), [`CleanMatrix`](@ref), [`Compare`](@ref), [`CopyTo`](@ref), [`DataSize`](@ref), [`DataStart`](@ref), [`GetArray`](@ref), [`GetCurrentNode`](@ref), [`GetLevel`](@ref), [`GetMatrix`](@ref), [`GetMaxLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`InitFromNavigator`](@ref), [`Init`](@ref), [`IsOutside`](@ref), [`IsSortable`](@ref), [`Print`](@ref), [`SizeOf`](@ref), [`TGeoBranchArray!BinarySearch`](@ref), [`TGeoBranchArray!MakeCopyAt`](@ref), [`TGeoBranchArray!MakeCopy`](@ref), [`TGeoBranchArray!MakeInstanceAt`](@ref), [`TGeoBranchArray!MakeInstance`](@ref), [`TGeoBranchArray!ReleaseInstance`](@ref), [`TGeoBranchArray!SizeOfInstance`](@ref), [`TGeoBranchArray!SizeOf`](@ref), [`TGeoBranchArray!Sort`](@ref), [`TGeoBranchArray`](@ref), [`UpdateArray`](@ref), [`UpdateNavigator`](@ref), [`assign`](@ref)
 """ TGeoBranchArray
 
 # Wrapper of TGeoNode
@@ -9242,7 +9242,7 @@ Node have visualization attributes as volume have. When undefined by users, pain
 
 ![https://root.cern/doc/v636/geom_t_node.png](https://root.cern/doc/v636/geom_t_node.png)
 
-Related functions: [`Browse`](@ref), [`CheckOverlaps`](@ref), [`CheckShapes`](@ref), [`CountDaughters`](@ref), [`DistancetoPrimitive`](@ref), [`DrawOnly`](@ref), [`DrawOverlaps`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`FillIdArray`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetColour`](@ref), [`GetDaughter`](@ref), [`GetFWExtension`](@ref), [`GetFinder`](@ref), [`GetGetMatrix`](@ref), [`GetIndex`](@ref), [`GetMedium`](@ref), [`GetMotherVolume`](@ref), [`GetNdaughters`](@ref), [`GetNodes`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOverlaps`](@ref), [`GetUserExtension`](@ref), [`GetVolume`](@ref), [`GrabFWExtension`](@ref), [`GrabUserExtension`](@ref), [`InspectNode`](@ref), [`IsCloned`](@ref), [`IsFolder`](@ref), [`IsOffset`](@ref), [`IsOnScreen`](@ref), [`IsOverlapping`](@ref), [`IsVirtual`](@ref), [`IsVisDaughters`](@ref), [`IsVisible`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeCopyNode`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MayOverlap`](@ref), [`Paint`](@ref), [`PrintCandidates`](@ref), [`PrintOverlaps`](@ref), [`Safety`](@ref), [`SaveAttributes`](@ref), [`SetAllInvisible`](@ref), [`SetCloned`](@ref), [`SetCurrentPoint`](@ref), [`SetFWExtension`](@ref), [`SetInvisible`](@ref), [`SetMotherVolume`](@ref), [`SetNumber`](@ref), [`SetOverlapping`](@ref), [`SetOverlaps`](@ref), [`SetUserExtension`](@ref), [`SetVirtual`](@ref), [`SetVisibility`](@ref), [`SetVolume`](@ref), [`TGeoNode`](@ref), [`VisibleDaughters`](@ref), [`cd`](@ref), [`ls`](@ref)
+Related functions: [`Browse`](@ref), [`CheckOverlaps`](@ref), [`CheckShapes`](@ref), [`CountDaughters`](@ref), [`DistancetoPrimitive`](@ref), [`DrawOnly`](@ref), [`DrawOverlaps`](@ref), [`Draw`](@ref), [`ExecuteEvent`](@ref), [`FillIdArray`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetColour`](@ref), [`GetDaughter`](@ref), [`GetFWExtension`](@ref), [`GetFinder`](@ref), [`GetIndex`](@ref), [`GetMatrix`](@ref), [`GetMedium`](@ref), [`GetMotherVolume`](@ref), [`GetNdaughters`](@ref), [`GetNodes`](@ref), [`GetNumber`](@ref), [`GetObjectInfo`](@ref), [`GetOptimalVoxels`](@ref), [`GetOverlaps`](@ref), [`GetUserExtension`](@ref), [`GetVolume`](@ref), [`GrabFWExtension`](@ref), [`GrabUserExtension`](@ref), [`InspectNode`](@ref), [`IsCloned`](@ref), [`IsFolder`](@ref), [`IsOffset`](@ref), [`IsOnScreen`](@ref), [`IsOverlapping`](@ref), [`IsVirtual`](@ref), [`IsVisDaughters`](@ref), [`IsVisible`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeCopyNode`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MayOverlap`](@ref), [`Paint`](@ref), [`PrintCandidates`](@ref), [`PrintOverlaps`](@ref), [`Safety`](@ref), [`SaveAttributes`](@ref), [`SetAllInvisible`](@ref), [`SetCloned`](@ref), [`SetCurrentPoint`](@ref), [`SetFWExtension`](@ref), [`SetInvisible`](@ref), [`SetMotherVolume`](@ref), [`SetNumber`](@ref), [`SetOverlapping`](@ref), [`SetOverlaps`](@ref), [`SetUserExtension`](@ref), [`SetVirtual`](@ref), [`SetVisibility`](@ref), [`SetVolume`](@ref), [`TGeoNode`](@ref), [`VisibleDaughters`](@ref), [`cd`](@ref), [`ls`](@ref)
 """ TGeoNode
 
 # Wrapper of TGeoNavigator
@@ -9265,7 +9265,7 @@ Several instances are allowed for a single geometry. A default navigator is prov
 
 (C++ version of the code)
 
-Related functions: [`BuildCache`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckPath`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentGetMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentVolume`](@ref), [`GetDivGetMatrix`](@ref), [`GetHGetMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLevel`](@ref), [`GetMotherGetMatrix`](@ref), [`GetMother`](@ref), [`GetNextDaughterIndex`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNormal`](@ref), [`GetPath`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetThreadId`](@ref), [`GetVirtualLevel`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCurrentOverlapping`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsSafeStep`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`ResetAll`](@ref), [`ResetState`](@ref), [`Safety`](@ref), [`SearchNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentPoint`](@ref), [`SetLastPoint`](@ref), [`SetLastSafetyForPoint`](@ref), [`SetOutside`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`Step`](@ref), [`TGeoNavigator`](@ref), [`TopToMaster`](@ref), [`cd`](@ref)
+Related functions: [`BuildCache`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckPath`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentVolume`](@ref), [`GetDivMatrix`](@ref), [`GetHMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLevel`](@ref), [`GetMotherMatrix`](@ref), [`GetMother`](@ref), [`GetNextDaughterIndex`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNormal`](@ref), [`GetPath`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetThreadId`](@ref), [`GetVirtualLevel`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCurrentOverlapping`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsSafeStep`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`ResetAll`](@ref), [`ResetState`](@ref), [`Safety`](@ref), [`SearchNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentPoint`](@ref), [`SetLastPoint`](@ref), [`SetLastSafetyForPoint`](@ref), [`SetOutside`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`Step`](@ref), [`TGeoNavigator`](@ref), [`TopToMaster`](@ref), [`cd`](@ref)
 """ TGeoNavigator
 
 # Wrapper of TGeoBuilder
@@ -9278,7 +9278,7 @@ Utility class for creating geometry objects.These will be associated with the cu
 
 The geometry builder is a singleton that may be used to build one or more geometries.
 
-Related functions: [`AddMaterial`](@ref), [`AddShape`](@ref), [`AddTransformation`](@ref), [`Division`](@ref), [`GetMatrix`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`Material`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`Node`](@ref), [`RegisterGetMatrix`](@ref), [`TGeoBuilder!Instance`](@ref), [`Volume`](@ref)
+Related functions: [`AddMaterial`](@ref), [`AddShape`](@ref), [`AddTransformation`](@ref), [`Division`](@ref), [`GetMatrix`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`Material`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`Node`](@ref), [`RegisterMatrix`](@ref), [`TGeoBuilder!Instance`](@ref), [`Volume`](@ref)
 """ TGeoBuilder
 
 # Wrapper of TGeoManager
@@ -9393,7 +9393,7 @@ Can be called from [TGeoVolume!RandomRays()](@ref) (context menu of volumes) and
 
 ![https://root.cern/doc/v636/geom_random2.jpg](https://root.cern/doc/v636/geom_random2.jpg)
 
-Related functions: [`AddBorderSurface`](@ref), [`AddGDMLGetMatrix`](@ref), [`AddMaterial`](@ref), [`AddNavigator`](@ref), [`AddOpticalSurface`](@ref), [`AddOverlap`](@ref), [`AddProperty`](@ref), [`AddRegion`](@ref), [`AddShape`](@ref), [`AddSkinSurface`](@ref), [`AddTrack`](@ref), [`AddTransformation`](@ref), [`AddVolume`](@ref), [`AnimateTracks`](@ref), [`BombTranslation`](@ref), [`Browse`](@ref), [`BuildDefaultMaterials`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckBoundaryErrors`](@ref), [`CheckBoundaryReference`](@ref), [`CheckGeometryFull`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckPath`](@ref), [`CheckPoint`](@ref), [`CheckShape`](@ref), [`CleanGarbage`](@ref), [`ClearAttributes`](@ref), [`ClearNavigators`](@ref), [`ClearOverlaps`](@ref), [`ClearPhysicalNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`ClearTracks`](@ref), [`CloseGeometry`](@ref), [`ConvertReflections`](@ref), [`CountLevels`](@ref), [`CountNodes`](@ref), [`CreateParallelWorld`](@ref), [`CreateThreadData`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DefaultAngles`](@ref), [`DefaultColors`](@ref), [`DisableInactiveVolumes`](@ref), [`Division`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`DrawCurrentPoint`](@ref), [`DrawPath`](@ref), [`DrawTracks`](@ref), [`Edit`](@ref), [`EnableInactiveVolumes`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindDuplicateMaterial`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`FindTrackWithId`](@ref), [`FindVolumeFast`](@ref), [`GetAlignableEntryByUID`](@ref), [`GetAlignableEntry`](@ref), [`GetBits`](@ref), [`GetBombFactors`](@ref), [`GetBombMode`](@ref), [`GetBorderSurface`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetByteCount`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetClippingShape`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentGetMatrix`](@ref), [`GetCurrentNavigator`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentTrack`](@ref), [`GetCurrentVolume`](@ref), [`GetElementTable`](@ref), [`GetGDMLGetMatrix`](@ref), [`GetGLGetMatrix`](@ref), [`GetGeomPainter`](@ref), [`GetHGetMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLastTrack`](@ref), [`GetLevel`](@ref), [`GetListOfBorderSurfaces`](@ref), [`GetListOfGDMLMatrices`](@ref), [`GetListOfGShapes`](@ref), [`GetListOfGVolumes`](@ref), [`GetListOfMaterials`](@ref), [`GetListOfMatrices`](@ref), [`GetListOfMedia`](@ref), [`GetListOfNavigators`](@ref), [`GetListOfNodes`](@ref), [`GetListOfOpticalSurfaces`](@ref), [`GetListOfOverlaps`](@ref), [`GetListOfPhysicalNodes`](@ref), [`GetListOfRegions`](@ref), [`GetListOfShapes`](@ref), [`GetListOfSkinSurfaces`](@ref), [`GetListOfTracks`](@ref), [`GetListOfUVolumes`](@ref), [`GetListOfVolumes`](@ref), [`GetMasterVolume`](@ref), [`GetMaterialIndex`](@ref), [`GetMaterial`](@ref), [`GetMatrix`](@ref), [`GetMaxLevel`](@ref), [`GetMaxThreads`](@ref), [`GetMaxVisNodes`](@ref), [`GetMedium`](@ref), [`GetMotherGetMatrix`](@ref), [`GetMother`](@ref), [`GetNAlignable`](@ref), [`GetNNodes`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetNormal`](@ref), [`GetNproperties`](@ref), [`GetNregions`](@ref), [`GetNsegments`](@ref), [`GetNtracks`](@ref), [`GetOpticalSurface`](@ref), [`GetPaintVolume`](@ref), [`GetPainter`](@ref), [`GetParallelWorld`](@ref), [`GetParentTrackOfId`](@ref), [`GetParticleName`](@ref), [`GetPath`](@ref), [`GetPdgName`](@ref), [`GetPhysicalNode`](@ref), [`GetProperty`](@ref), [`GetRTmode`](@ref), [`GetRegion`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetSkinSurface`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetTmax`](@ref), [`GetTminTmax`](@ref), [`GetTopNode`](@ref), [`GetTopVolume`](@ref), [`GetTrackIndex`](@ref), [`GetTrackOfId`](@ref), [`GetTrack`](@ref), [`GetUID`](@ref), [`GetUserPaintVolume`](@ref), [`GetVirtualLevel`](@ref), [`GetVisDensity`](@ref), [`GetVisLevel`](@ref), [`GetVisOption`](@ref), [`GetVolume`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsActivityEnabled`](@ref), [`IsAnimatingTracks`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCleaning`](@ref), [`IsClosed`](@ref), [`IsCurrentOverlapping`](@ref), [`IsDrawingExtra`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsFolder`](@ref), [`IsGetMatrixReflection`](@ref), [`IsGetMatrixTransform`](@ref), [`IsInPhiRange`](@ref), [`IsMultiThread`](@ref), [`IsNodeSelectable`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsParallelWorldNav`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`IsStreamingVoxels`](@ref), [`IsVisLeaves`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeAlignablePN`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakePhysicalNode`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrack`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`Material`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`ModifiedPad`](@ref), [`Node`](@ref), [`OptimizeVoxels`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PrintOverlaps`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`RefreshPhysicalNodes`](@ref), [`RegisterGetMatrix`](@ref), [`RemoveMaterial`](@ref), [`RemoveNavigator`](@ref), [`ReplaceVolume`](@ref), [`ResetState`](@ref), [`ResetUserData`](@ref), [`RestoreMasterVolume`](@ref), [`Safety`](@ref), [`SamplePoints`](@ref), [`SaveAttributes`](@ref), [`SearchNode`](@ref), [`SelectTrackingMedia`](@ref), [`SetAlignableEntry`](@ref), [`SetAllIndex`](@ref), [`SetAnimateTracks`](@ref), [`SetBombFactors`](@ref), [`SetCheckedNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetClippingShape`](@ref), [`SetClipping`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentNavigator`](@ref), [`SetCurrentPoint`](@ref), [`SetCurrentTrack`](@ref), [`SetDrawExtraPaths`](@ref), [`SetExplodedView`](@ref), [`SetGetMatrixReflection`](@ref), [`SetGetMatrixTransform`](@ref), [`SetLastPoint`](@ref), [`SetMaxThreads`](@ref), [`SetMaxVisNodes`](@ref), [`SetNmeshPoints`](@ref), [`SetNodeSelectable`](@ref), [`SetNsegments`](@ref), [`SetOutside`](@ref), [`SetPaintVolume`](@ref), [`SetParticleName`](@ref), [`SetPdgName`](@ref), [`SetPhiRange`](@ref), [`SetRTmode`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`SetTminTmax`](@ref), [`SetTopVisible`](@ref), [`SetTopVolume`](@ref), [`SetUseParallelWorldNav`](@ref), [`SetUserPaintVolume`](@ref), [`SetVisDensity`](@ref), [`SetVisLevel`](@ref), [`SetVisOption`](@ref), [`SetVisibility`](@ref), [`SetVolumeAttribute`](@ref), [`SizeOf`](@ref), [`SortOverlaps`](@ref), [`Step`](@ref), [`TGeoManager!ClearThreadsMap`](@ref), [`TGeoManager!GetDefaultUnits`](@ref), [`TGeoManager!GetExportPrecision`](@ref), [`TGeoManager!GetMaxDaughters`](@ref), [`TGeoManager!GetMaxLevels`](@ref), [`TGeoManager!GetMaxXtruVert`](@ref), [`TGeoManager!GetNumThreads`](@ref), [`TGeoManager!GetVerboseLevel`](@ref), [`TGeoManager!Import`](@ref), [`TGeoManager!IsLocked`](@ref), [`TGeoManager!LockDefaultUnits`](@ref), [`TGeoManager!LockGeometry`](@ref), [`TGeoManager!Parse`](@ref), [`TGeoManager!SetDefaultUnits`](@ref), [`TGeoManager!SetExportPrecision`](@ref), [`TGeoManager!SetNavigatorsLock`](@ref), [`TGeoManager!SetVerboseLevel`](@ref), [`TGeoManager!ThreadId`](@ref), [`TGeoManager!UnlockGeometry`](@ref), [`TGeoManager`](@ref), [`TestOverlaps`](@ref), [`Test`](@ref), [`TopToMaster`](@ref), [`TransformVolumeToAssembly`](@ref), [`UnbombTranslation`](@ref), [`ViewLeaves`](@ref), [`Volume`](@ref), [`Weight`](@ref), [`cd`](@ref)
+Related functions: [`AddBorderSurface`](@ref), [`AddGDMLMatrix`](@ref), [`AddMaterial`](@ref), [`AddNavigator`](@ref), [`AddOpticalSurface`](@ref), [`AddOverlap`](@ref), [`AddProperty`](@ref), [`AddRegion`](@ref), [`AddShape`](@ref), [`AddSkinSurface`](@ref), [`AddTrack`](@ref), [`AddTransformation`](@ref), [`AddVolume`](@ref), [`AnimateTracks`](@ref), [`BombTranslation`](@ref), [`Browse`](@ref), [`BuildDefaultMaterials`](@ref), [`CdDown`](@ref), [`CdNext`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`CheckBoundaryErrors`](@ref), [`CheckBoundaryReference`](@ref), [`CheckGeometryFull`](@ref), [`CheckGeometry`](@ref), [`CheckOverlaps`](@ref), [`CheckPath`](@ref), [`CheckPoint`](@ref), [`CheckShape`](@ref), [`CleanGarbage`](@ref), [`ClearAttributes`](@ref), [`ClearNavigators`](@ref), [`ClearOverlaps`](@ref), [`ClearPhysicalNodes`](@ref), [`ClearShape`](@ref), [`ClearThreadData`](@ref), [`ClearTracks`](@ref), [`CloseGeometry`](@ref), [`ConvertReflections`](@ref), [`CountLevels`](@ref), [`CountNodes`](@ref), [`CreateParallelWorld`](@ref), [`CreateThreadData`](@ref), [`CrossBoundaryAndLocate`](@ref), [`DefaultAngles`](@ref), [`DefaultColors`](@ref), [`DisableInactiveVolumes`](@ref), [`Division`](@ref), [`DoBackupState`](@ref), [`DoRestoreState`](@ref), [`DrawCurrentPoint`](@ref), [`DrawPath`](@ref), [`DrawTracks`](@ref), [`Edit`](@ref), [`EnableInactiveVolumes`](@ref), [`ExecuteEvent`](@ref), [`Export`](@ref), [`FindDuplicateMaterial`](@ref), [`FindNextBoundaryAndStep`](@ref), [`FindNextBoundary`](@ref), [`FindNextDaughterBoundary`](@ref), [`FindNode`](@ref), [`FindNormalFast`](@ref), [`FindNormal`](@ref), [`FindTrackWithId`](@ref), [`FindVolumeFast`](@ref), [`GetAlignableEntryByUID`](@ref), [`GetAlignableEntry`](@ref), [`GetBits`](@ref), [`GetBombFactors`](@ref), [`GetBombMode`](@ref), [`GetBorderSurface`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetByteCount`](@ref), [`GetCache`](@ref), [`GetCldirChecked`](@ref), [`GetCldir`](@ref), [`GetClippingShape`](@ref), [`GetCurrentDirection`](@ref), [`GetCurrentMatrix`](@ref), [`GetCurrentNavigator`](@ref), [`GetCurrentNodeId`](@ref), [`GetCurrentNode`](@ref), [`GetCurrentPoint`](@ref), [`GetCurrentTrack`](@ref), [`GetCurrentVolume`](@ref), [`GetElementTable`](@ref), [`GetGDMLMatrix`](@ref), [`GetGLMatrix`](@ref), [`GetGeomPainter`](@ref), [`GetHMatrix`](@ref), [`GetLastPoint`](@ref), [`GetLastSafety`](@ref), [`GetLastTrack`](@ref), [`GetLevel`](@ref), [`GetListOfBorderSurfaces`](@ref), [`GetListOfGDMLMatrices`](@ref), [`GetListOfGShapes`](@ref), [`GetListOfGVolumes`](@ref), [`GetListOfMaterials`](@ref), [`GetListOfMatrices`](@ref), [`GetListOfMedia`](@ref), [`GetListOfNavigators`](@ref), [`GetListOfNodes`](@ref), [`GetListOfOpticalSurfaces`](@ref), [`GetListOfOverlaps`](@ref), [`GetListOfPhysicalNodes`](@ref), [`GetListOfRegions`](@ref), [`GetListOfShapes`](@ref), [`GetListOfSkinSurfaces`](@ref), [`GetListOfTracks`](@ref), [`GetListOfUVolumes`](@ref), [`GetListOfVolumes`](@ref), [`GetMasterVolume`](@ref), [`GetMaterialIndex`](@ref), [`GetMaterial`](@ref), [`GetMatrix`](@ref), [`GetMaxLevel`](@ref), [`GetMaxThreads`](@ref), [`GetMaxVisNodes`](@ref), [`GetMedium`](@ref), [`GetMotherMatrix`](@ref), [`GetMother`](@ref), [`GetNAlignable`](@ref), [`GetNNodes`](@ref), [`GetNextNode`](@ref), [`GetNmany`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetNormal`](@ref), [`GetNproperties`](@ref), [`GetNregions`](@ref), [`GetNsegments`](@ref), [`GetNtracks`](@ref), [`GetOpticalSurface`](@ref), [`GetPaintVolume`](@ref), [`GetPainter`](@ref), [`GetParallelWorld`](@ref), [`GetParentTrackOfId`](@ref), [`GetParticleName`](@ref), [`GetPath`](@ref), [`GetPdgName`](@ref), [`GetPhysicalNode`](@ref), [`GetProperty`](@ref), [`GetRTmode`](@ref), [`GetRegion`](@ref), [`GetSafeDistance`](@ref), [`GetSafeLevel`](@ref), [`GetSkinSurface`](@ref), [`GetStackLevel`](@ref), [`GetStep`](@ref), [`GetTmax`](@ref), [`GetTminTmax`](@ref), [`GetTopNode`](@ref), [`GetTopVolume`](@ref), [`GetTrackIndex`](@ref), [`GetTrackOfId`](@ref), [`GetTrack`](@ref), [`GetUID`](@ref), [`GetUserPaintVolume`](@ref), [`GetVirtualLevel`](@ref), [`GetVisDensity`](@ref), [`GetVisLevel`](@ref), [`GetVisOption`](@ref), [`GetVolume`](@ref), [`GotoSafeLevel`](@ref), [`InitTrack`](@ref), [`InspectState`](@ref), [`IsActivityEnabled`](@ref), [`IsAnimatingTracks`](@ref), [`IsCheckingOverlaps`](@ref), [`IsCleaning`](@ref), [`IsClosed`](@ref), [`IsCurrentOverlapping`](@ref), [`IsDrawingExtra`](@ref), [`IsEntering`](@ref), [`IsExiting`](@ref), [`IsFolder`](@ref), [`IsInPhiRange`](@ref), [`IsMatrixReflection`](@ref), [`IsMatrixTransform`](@ref), [`IsMultiThread`](@ref), [`IsNodeSelectable`](@ref), [`IsNullStep`](@ref), [`IsOnBoundary`](@ref), [`IsOutside`](@ref), [`IsParallelWorldNav`](@ref), [`IsSameLocation`](@ref), [`IsSamePoint`](@ref), [`IsStartSafe`](@ref), [`IsStepEntering`](@ref), [`IsStepExiting`](@ref), [`IsStreamingVoxels`](@ref), [`IsVisLeaves`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MakeAlignablePN`](@ref), [`MakeArb8`](@ref), [`MakeBox`](@ref), [`MakeCone`](@ref), [`MakeCons`](@ref), [`MakeCtub`](@ref), [`MakeEltu`](@ref), [`MakeGtra`](@ref), [`MakeHype`](@ref), [`MakePara`](@ref), [`MakeParaboloid`](@ref), [`MakePcon`](@ref), [`MakePgon`](@ref), [`MakePhysicalNode`](@ref), [`MakeSphere`](@ref), [`MakeTorus`](@ref), [`MakeTrack`](@ref), [`MakeTrap`](@ref), [`MakeTrd1`](@ref), [`MakeTrd2`](@ref), [`MakeTube`](@ref), [`MakeTubs`](@ref), [`MakeVolumeAssembly`](@ref), [`MakeVolumeMulti`](@ref), [`MakeXtru`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`MasterToTop`](@ref), [`Material`](@ref), [`Medium`](@ref), [`Mixture`](@ref), [`ModifiedPad`](@ref), [`Node`](@ref), [`OptimizeVoxels`](@ref), [`PopDummy`](@ref), [`PopPath`](@ref), [`PopPoint`](@ref), [`PrintOverlaps`](@ref), [`PushPath`](@ref), [`PushPoint`](@ref), [`RandomPoints`](@ref), [`RandomRays`](@ref), [`RefreshPhysicalNodes`](@ref), [`RegisterMatrix`](@ref), [`RemoveMaterial`](@ref), [`RemoveNavigator`](@ref), [`ReplaceVolume`](@ref), [`ResetState`](@ref), [`ResetUserData`](@ref), [`RestoreMasterVolume`](@ref), [`Safety`](@ref), [`SamplePoints`](@ref), [`SaveAttributes`](@ref), [`SearchNode`](@ref), [`SelectTrackingMedia`](@ref), [`SetAlignableEntry`](@ref), [`SetAllIndex`](@ref), [`SetAnimateTracks`](@ref), [`SetBombFactors`](@ref), [`SetCheckedNode`](@ref), [`SetCheckingOverlaps`](@ref), [`SetCldirChecked`](@ref), [`SetClippingShape`](@ref), [`SetClipping`](@ref), [`SetCurrentDirection`](@ref), [`SetCurrentNavigator`](@ref), [`SetCurrentPoint`](@ref), [`SetCurrentTrack`](@ref), [`SetDrawExtraPaths`](@ref), [`SetExplodedView`](@ref), [`SetLastPoint`](@ref), [`SetMatrixReflection`](@ref), [`SetMatrixTransform`](@ref), [`SetMaxThreads`](@ref), [`SetMaxVisNodes`](@ref), [`SetNmeshPoints`](@ref), [`SetNodeSelectable`](@ref), [`SetNsegments`](@ref), [`SetOutside`](@ref), [`SetPaintVolume`](@ref), [`SetParticleName`](@ref), [`SetPdgName`](@ref), [`SetPhiRange`](@ref), [`SetRTmode`](@ref), [`SetStartSafe`](@ref), [`SetStep`](@ref), [`SetTminTmax`](@ref), [`SetTopVisible`](@ref), [`SetTopVolume`](@ref), [`SetUseParallelWorldNav`](@ref), [`SetUserPaintVolume`](@ref), [`SetVisDensity`](@ref), [`SetVisLevel`](@ref), [`SetVisOption`](@ref), [`SetVisibility`](@ref), [`SetVolumeAttribute`](@ref), [`SizeOf`](@ref), [`SortOverlaps`](@ref), [`Step`](@ref), [`TGeoManager!ClearThreadsMap`](@ref), [`TGeoManager!GetDefaultUnits`](@ref), [`TGeoManager!GetExportPrecision`](@ref), [`TGeoManager!GetMaxDaughters`](@ref), [`TGeoManager!GetMaxLevels`](@ref), [`TGeoManager!GetMaxXtruVert`](@ref), [`TGeoManager!GetNumThreads`](@ref), [`TGeoManager!GetVerboseLevel`](@ref), [`TGeoManager!Import`](@ref), [`TGeoManager!IsLocked`](@ref), [`TGeoManager!LockDefaultUnits`](@ref), [`TGeoManager!LockGeometry`](@ref), [`TGeoManager!Parse`](@ref), [`TGeoManager!SetDefaultUnits`](@ref), [`TGeoManager!SetExportPrecision`](@ref), [`TGeoManager!SetNavigatorsLock`](@ref), [`TGeoManager!SetVerboseLevel`](@ref), [`TGeoManager!ThreadId`](@ref), [`TGeoManager!UnlockGeometry`](@ref), [`TGeoManager`](@ref), [`TestOverlaps`](@ref), [`Test`](@ref), [`TopToMaster`](@ref), [`TransformVolumeToAssembly`](@ref), [`UnbombTranslation`](@ref), [`ViewLeaves`](@ref), [`Volume`](@ref), [`Weight`](@ref), [`cd`](@ref)
 """ TGeoManager
 
 # Wrapper of TGeoMaterial
@@ -9664,7 +9664,7 @@ A pattern is specifying a division type which applies only to a given shape type
 - [TGeoPatternSphPhi](@ref) - a spherical phi divison pattern
 - [TGeoPatternHoneycomb](@ref) - a divison pattern specialized for honeycombs
 
-Related functions: [`CdNext`](@ref), [`ClearThreadData`](@ref), [`CreateGetMatrix`](@ref), [`CreateThreadData`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetCurrent`](@ref), [`GetDivAxis`](@ref), [`GetDivIndex`](@ref), [`GetEnd`](@ref), [`GetGetMatrix`](@ref), [`GetNdiv`](@ref), [`GetNext`](@ref), [`GetNodeOffset`](@ref), [`GetStart`](@ref), [`GetStep`](@ref), [`GetThreadData`](@ref), [`GetVolume`](@ref), [`IsOnBoundary`](@ref), [`IsReflected`](@ref), [`IsSpacedOut`](@ref), [`MakeCopy`](@ref), [`Reflect`](@ref), [`SetDivIndex`](@ref), [`SetNext`](@ref), [`SetRange`](@ref), [`SetSpacedOut`](@ref), [`SetVolume`](@ref), [`TGeoPatternFinder`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CdNext`](@ref), [`ClearThreadData`](@ref), [`CreateMatrix`](@ref), [`CreateThreadData`](@ref), [`FindNode`](@ref), [`GetByteCount`](@ref), [`GetCurrent`](@ref), [`GetDivAxis`](@ref), [`GetDivIndex`](@ref), [`GetEnd`](@ref), [`GetMatrix`](@ref), [`GetNdiv`](@ref), [`GetNext`](@ref), [`GetNodeOffset`](@ref), [`GetStart`](@ref), [`GetStep`](@ref), [`GetThreadData`](@ref), [`GetVolume`](@ref), [`IsOnBoundary`](@ref), [`IsReflected`](@ref), [`IsSpacedOut`](@ref), [`MakeCopy`](@ref), [`Reflect`](@ref), [`SetDivIndex`](@ref), [`SetNext`](@ref), [`SetRange`](@ref), [`SetSpacedOut`](@ref), [`SetVolume`](@ref), [`TGeoPatternFinder`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternFinder
 
 # Wrapper of TGeoVoxelFinder
@@ -9690,7 +9690,7 @@ Related functions: [`DaughterToMother`](@ref), [`Efficiency`](@ref), [`FindOverl
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternX`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternX`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternX
 
 # Wrapper of TGeoPatternY
@@ -9701,7 +9701,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`Find
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternY`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternY`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternY
 
 # Wrapper of TGeoPatternZ
@@ -9712,7 +9712,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`Find
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternZ`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNextBoundary`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternZ`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternZ
 
 # Wrapper of TGeoPatternParaX
@@ -9723,7 +9723,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNextBoundary`](@ref), [`Find
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaX`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaX`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternParaX
 
 # Wrapper of TGeoPatternParaY
@@ -9734,7 +9734,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaY`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaY`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternParaY
 
 # Wrapper of TGeoPatternParaZ
@@ -9745,7 +9745,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaZ`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternParaZ`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternParaZ
 
 # Wrapper of TGeoPatternTrapZ
@@ -9756,7 +9756,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternTrapZ`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternTrapZ`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternTrapZ
 
 # Wrapper of TGeoPatternCylR
@@ -9767,7 +9767,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylR`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylR`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternCylR
 
 # Wrapper of TGeoPatternCylPhi
@@ -9778,7 +9778,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylPhi`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternCylPhi`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternCylPhi
 
 # Wrapper of TGeoPatternSphR
@@ -9789,7 +9789,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphR`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphR`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternSphR
 
 # Wrapper of TGeoPatternSphTheta
@@ -9800,7 +9800,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphTheta`](@ref), [`UpdateGetMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphTheta`](@ref), [`UpdateMatrix`](@ref), [`assign`](@ref), [`cd`](@ref)
 """ TGeoPatternSphTheta
 
 # Wrapper of TGeoPatternSphPhi
@@ -9811,7 +9811,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphPhi`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`](@ref), [`IsOnBoundary`](@ref), [`MakeCopy`](@ref), [`SavePrimitive`](@ref), [`TGeoPatternSphPhi`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternSphPhi
 
 # Wrapper of TGeoPatternHoneycomb
@@ -9822,7 +9822,7 @@ Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`GetDivAxis`]
 
 
 
-Related functions: [`CreateGetMatrix`](@ref), [`FindNode`](@ref), [`MakeCopy`](@ref), [`TGeoPatternHoneycomb`](@ref), [`UpdateGetMatrix`](@ref), [`cd`](@ref)
+Related functions: [`CreateMatrix`](@ref), [`FindNode`](@ref), [`MakeCopy`](@ref), [`TGeoPatternHoneycomb`](@ref), [`UpdateMatrix`](@ref), [`cd`](@ref)
 """ TGeoPatternHoneycomb
 
 # Wrapper of TGeoNodeMatrix
@@ -9833,7 +9833,7 @@ A node containing local_ transformation.
 
 
 
-Related functions: [`GetByteCount`](@ref), [`GetGetMatrix`](@ref), [`GetOptimalVoxels`](@ref), [`IsFolder`](@ref), [`MakeCopyNode`](@ref), [`SetGetMatrix`](@ref), [`TGeoNodeGetMatrix`](@ref)
+Related functions: [`GetByteCount`](@ref), [`GetMatrix`](@ref), [`GetOptimalVoxels`](@ref), [`IsFolder`](@ref), [`MakeCopyNode`](@ref), [`SetMatrix`](@ref), [`TGeoNodeMatrix`](@ref)
 """ TGeoNodeMatrix
 
 # Wrapper of TGeoNodeOffset
@@ -9844,7 +9844,7 @@ Node containing an offset.
 
 
 
-Related functions: [`GetFinder`](@ref), [`GetGetMatrix`](@ref), [`GetIndex`](@ref), [`GetOffset`](@ref), [`MakeCopyNode`](@ref), [`SetFinder`](@ref), [`TGeoNodeOffset`](@ref), [`cd`](@ref)
+Related functions: [`GetFinder`](@ref), [`GetIndex`](@ref), [`GetMatrix`](@ref), [`GetOffset`](@ref), [`MakeCopyNode`](@ref), [`SetFinder`](@ref), [`TGeoNodeOffset`](@ref), [`cd`](@ref)
 """ TGeoNodeOffset
 
 # Wrapper of TGeoIterator
@@ -9924,7 +9924,7 @@ We want to find out a volume named "MyVol" in the hierarchy of TOP volume.
 
 (C++ version of the code)
 
-Related functions: [`GetCurrentGetMatrix`](@ref), [`GetGetType`](@ref), [`GetIndex`](@ref), [`GetLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetTopVolume`](@ref), [`GetUserPlugin`](@ref), [`Next`](@ref), [`Reset`](@ref), [`SetGetType`](@ref), [`SetPluginAutoexec`](@ref), [`SetTopName`](@ref), [`SetUserPlugin`](@ref), [`Skip`](@ref), [`TGeoIterator`](@ref), [`Up`](@ref), [`assign`](@ref), [`paren`](@ref)
+Related functions: [`GetCurrentMatrix`](@ref), [`GetIndex`](@ref), [`GetLevel`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetTopVolume`](@ref), [`GetType`](@ref), [`GetUserPlugin`](@ref), [`Next`](@ref), [`Reset`](@ref), [`SetPluginAutoexec`](@ref), [`SetTopName`](@ref), [`SetType`](@ref), [`SetUserPlugin`](@ref), [`Skip`](@ref), [`TGeoIterator`](@ref), [`Up`](@ref), [`assign`](@ref), [`paren`](@ref)
 """ TGeoIterator
 
 # Wrapper of TGeoIteratorPlugin
@@ -9987,7 +9987,7 @@ Special pool of reusable nodes.
 
 
 
-Related functions: [`BuildIdArray`](@ref), [`BuildInfoBranch`](@ref), [`CdDown`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`FillIdBranch`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetBranch`](@ref), [`GetCurrentGetMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetIdBranch`](@ref), [`GetInfo`](@ref), [`GetLevel`](@ref), [`GetMakePWInfo`](@ref), [`GetMatrices`](@ref), [`GetMotherGetMatrix`](@ref), [`GetMother`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetStackLevel`](@ref), [`GetTopNode`](@ref), [`HasIdArray`](@ref), [`IsDummy`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`PopDummy`](@ref), [`PopState`](@ref), [`PushState`](@ref), [`Refresh`](@ref), [`ReleaseInfo`](@ref), [`RestoreState`](@ref), [`TGeoNodeCache`](@ref)
+Related functions: [`BuildIdArray`](@ref), [`BuildInfoBranch`](@ref), [`CdDown`](@ref), [`CdNode`](@ref), [`CdTop`](@ref), [`CdUp`](@ref), [`FillIdBranch`](@ref), [`GetBranchNames`](@ref), [`GetBranchNumbers`](@ref), [`GetBranchOnlys`](@ref), [`GetBranch`](@ref), [`GetCurrentMatrix`](@ref), [`GetCurrentNodeId`](@ref), [`GetIdBranch`](@ref), [`GetInfo`](@ref), [`GetLevel`](@ref), [`GetMakePWInfo`](@ref), [`GetMatrices`](@ref), [`GetMotherMatrix`](@ref), [`GetMother`](@ref), [`GetNodeId`](@ref), [`GetNode`](@ref), [`GetPath`](@ref), [`GetStackLevel`](@ref), [`GetTopNode`](@ref), [`HasIdArray`](@ref), [`IsDummy`](@ref), [`LocalToMasterBomb`](@ref), [`LocalToMasterVect`](@ref), [`LocalToMaster`](@ref), [`MasterToLocalBomb`](@ref), [`MasterToLocalVect`](@ref), [`MasterToLocal`](@ref), [`PopDummy`](@ref), [`PopState`](@ref), [`PushState`](@ref), [`Refresh`](@ref), [`ReleaseInfo`](@ref), [`RestoreState`](@ref), [`TGeoNodeCache`](@ref)
 """ TGeoNodeCache
 
 # Wrapper of TGeoCompositeShape
@@ -10088,7 +10088,7 @@ One should have in mind that the same shape or matrix identifiers can be used ma
 
 Composite shapes can be subsequently used for defining volumes. Moreover, these volumes contain other volumes, following the general criteria. Volumes created based on composite shapes cannot be divided.
 
-Related functions: [`Capacity`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoolNode`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsComposite`](@ref), [`IsCylGetType`](@ref), [`MakeNode`](@ref), [`PaintComposite`](@ref), [`RegisterYourself`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoCompositeShape`](@ref)
+Related functions: [`Capacity`](@ref), [`ClearThreadData`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`CreateThreadData`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoolNode`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsComposite`](@ref), [`IsCylType`](@ref), [`MakeNode`](@ref), [`PaintComposite`](@ref), [`RegisterYourself`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoCompositeShape`](@ref)
 """ TGeoCompositeShape
 
 # Wrapper of TGeoCone
@@ -10112,7 +10112,7 @@ A cone has Z-axis as its symmetry axis.
 
 ![https://root.cern/doc/v636/pict1_TGeoCone_001.png](https://root.cern/doc/v636/pict1_TGeoCone_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax1`](@ref), [`GetRmax2`](@ref), [`GetRmin1`](@ref), [`GetRmin2`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetConeDimensions`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoCone!Capacity`](@ref), [`TGeoCone!ComputeNormalS`](@ref), [`TGeoCone!DistFromInsideS`](@ref), [`TGeoCone!DistFromOutsideS`](@ref), [`TGeoCone!DistToCone`](@ref), [`TGeoCone!SafetyS`](@ref), [`TGeoCone`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax1`](@ref), [`GetRmax2`](@ref), [`GetRmin1`](@ref), [`GetRmin2`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetConeDimensions`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoCone!Capacity`](@ref), [`TGeoCone!ComputeNormalS`](@ref), [`TGeoCone!DistFromInsideS`](@ref), [`TGeoCone!DistFromOutsideS`](@ref), [`TGeoCone!DistToCone`](@ref), [`TGeoCone!SafetyS`](@ref), [`TGeoCone`](@ref)
 """ TGeoCone
 
 # Wrapper of TGeoConeSeg
@@ -10153,7 +10153,7 @@ A tube has 3 parameters :
 
 ![https://root.cern/doc/v636/pict1_TGeoTube_001.png](https://root.cern/doc/v636/pict1_TGeoTube_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`HasRmin`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTubeDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoTube!Capacity`](@ref), [`TGeoTube!ComputeNormalS`](@ref), [`TGeoTube!DistFromInsideS`](@ref), [`TGeoTube!DistFromOutsideS`](@ref), [`TGeoTube!DistToTube`](@ref), [`TGeoTube!SafetyS`](@ref), [`TGeoTube`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`HasRmin`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTubeDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoTube!Capacity`](@ref), [`TGeoTube!ComputeNormalS`](@ref), [`TGeoTube!DistFromInsideS`](@ref), [`TGeoTube!DistFromOutsideS`](@ref), [`TGeoTube!DistToTube`](@ref), [`TGeoTube!SafetyS`](@ref), [`TGeoTube`](@ref)
 """ TGeoTube
 
 # Wrapper of TGeoTubeSeg
@@ -10212,7 +10212,7 @@ It ranges from `-dZ` to `+dZ` as all other tubes:
 
 ![https://root.cern/doc/v636/pict1_TGeoEltu_001.png](https://root.cern/doc/v636/pict1_TGeoEltu_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetA`](@ref), [`GetB`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetEltuDimensions`](@ref), [`SetPoints`](@ref), [`TGeoEltu`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetA`](@ref), [`GetB`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetEltuDimensions`](@ref), [`SetPoints`](@ref), [`TGeoEltu`](@ref)
 """ TGeoEltu
 
 # Wrapper of TGeoRCExtension
@@ -10325,7 +10325,7 @@ The point lies on the plane and the normal vector points outside the half space.
 
 (C++ version of the code)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNorm`](@ref), [`GetPoint`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoHalfSpace`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNorm`](@ref), [`GetPoint`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoHalfSpace`](@ref)
 """ TGeoHalfSpace
 
 # Wrapper of TGeoHelix
@@ -10411,7 +10411,7 @@ Particular cases:
 - `rin=0, stin0:` the inner surface is conical
 - `stin=0 / stout=0:` cylindrical surface(s)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToHype`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetStIn`](@ref), [`GetStOut`](@ref), [`HasInner`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`RadiusHypeSq`](@ref), [`SafetyToHype`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetHypeDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoHype`](@ref), [`ZHypeSq`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToHype`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetStIn`](@ref), [`GetStOut`](@ref), [`HasInner`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`RadiusHypeSq`](@ref), [`SafetyToHype`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetHypeDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoHype`](@ref), [`ZHypeSq`](@ref)
 """ TGeoHype
 
 # Wrapper of TGeoNavigatorArray
@@ -10475,7 +10475,7 @@ Such a symbolic link hides the complexity of the path to the align object and re
 
 For more details please read the [misalignment section](@ref).
 
-Related functions: [`GetGetMatrixOrig`](@ref), [`GetGetMatrix`](@ref), [`GetGlobalOrig`](@ref), [`GetPath`](@ref), [`GetPhysicalNode`](@ref), [`SetGetMatrix`](@ref), [`SetPhysicalNode`](@ref), [`TGeoPNEntry`](@ref)
+Related functions: [`GetGlobalOrig`](@ref), [`GetMatrixOrig`](@ref), [`GetMatrix`](@ref), [`GetPath`](@ref), [`GetPhysicalNode`](@ref), [`SetMatrix`](@ref), [`SetPhysicalNode`](@ref), [`TGeoPNEntry`](@ref)
 """ TGeoPNEntry
 
 # Wrapper of TGeoPhysicalNode
@@ -10496,7 +10496,7 @@ Once created, a physical node can be misaligned, meaning that its position or ev
 
 (C++ version of the code)
 
-Related functions: [`Align`](@ref), [`Draw`](@ref), [`GetGetMatrix`](@ref), [`GetLevel`](@ref), [`GetMother`](@ref), [`GetNode`](@ref), [`GetOriginalGetMatrix`](@ref), [`GetShape`](@ref), [`GetVolume`](@ref), [`IsAligned`](@ref), [`IsMatchingState`](@ref), [`IsVisibleFull`](@ref), [`IsVisible`](@ref), [`IsVolAttributes`](@ref), [`Paint`](@ref), [`Print`](@ref), [`Refresh`](@ref), [`SetGetMatrixOrig`](@ref), [`SetIsVolAtt`](@ref), [`SetVisibility`](@ref), [`SetVisibleFull`](@ref), [`TGeoPhysicalNode`](@ref), [`cd`](@ref)
+Related functions: [`Align`](@ref), [`Draw`](@ref), [`GetLevel`](@ref), [`GetMatrix`](@ref), [`GetMother`](@ref), [`GetNode`](@ref), [`GetOriginalMatrix`](@ref), [`GetShape`](@ref), [`GetVolume`](@ref), [`IsAligned`](@ref), [`IsMatchingState`](@ref), [`IsVisibleFull`](@ref), [`IsVisible`](@ref), [`IsVolAttributes`](@ref), [`Paint`](@ref), [`Print`](@ref), [`Refresh`](@ref), [`SetIsVolAtt`](@ref), [`SetMatrixOrig`](@ref), [`SetVisibility`](@ref), [`SetVisibleFull`](@ref), [`TGeoPhysicalNode`](@ref), [`cd`](@ref)
 """ TGeoPhysicalNode
 
 # Wrapper of TGeoOpticalSurface
@@ -10507,7 +10507,7 @@ This is a wrapper class to G4OpticalSurface.
 
 
 
-Related functions: [`AddConstProperty`](@ref), [`AddProperty`](@ref), [`GetConstProperties`](@ref), [`GetConstPropertyRef`](@ref), [`GetConstProperty`](@ref), [`GetFinish`](@ref), [`GetGetType`](@ref), [`GetModel`](@ref), [`GetNconstProperties`](@ref), [`GetNproperties`](@ref), [`GetPolish`](@ref), [`GetProperties`](@ref), [`GetPropertyRef`](@ref), [`GetProperty`](@ref), [`GetSigmaAlpha`](@ref), [`GetValue`](@ref), [`Print`](@ref), [`SetFinish`](@ref), [`SetGetType`](@ref), [`SetModel`](@ref), [`SetPolish`](@ref), [`SetSigmaAlpha`](@ref), [`SetValue`](@ref), [`TGeoOpticalSurface!FinishToGetString`](@ref), [`TGeoOpticalSurface!GetStringToFinish`](@ref), [`TGeoOpticalSurface!GetStringToGetType`](@ref), [`TGeoOpticalSurface!GetStringToModel`](@ref), [`TGeoOpticalSurface!GetTypeToGetString`](@ref), [`TGeoOpticalSurface!ModelToGetString`](@ref), [`TGeoOpticalSurface`](@ref)
+Related functions: [`AddConstProperty`](@ref), [`AddProperty`](@ref), [`GetConstProperties`](@ref), [`GetConstPropertyRef`](@ref), [`GetConstProperty`](@ref), [`GetFinish`](@ref), [`GetModel`](@ref), [`GetNconstProperties`](@ref), [`GetNproperties`](@ref), [`GetPolish`](@ref), [`GetProperties`](@ref), [`GetPropertyRef`](@ref), [`GetProperty`](@ref), [`GetSigmaAlpha`](@ref), [`GetType`](@ref), [`GetValue`](@ref), [`Print`](@ref), [`SetFinish`](@ref), [`SetModel`](@ref), [`SetPolish`](@ref), [`SetSigmaAlpha`](@ref), [`SetType`](@ref), [`SetValue`](@ref), [`TGeoOpticalSurface!FinishToString`](@ref), [`TGeoOpticalSurface!ModelToString`](@ref), [`TGeoOpticalSurface!StringToFinish`](@ref), [`TGeoOpticalSurface!StringToModel`](@ref), [`TGeoOpticalSurface!StringToType`](@ref), [`TGeoOpticalSurface!TypeToString`](@ref), [`TGeoOpticalSurface`](@ref)
 """ TGeoOpticalSurface
 
 # Wrapper of TGeoSkinSurface
@@ -10555,7 +10555,7 @@ A box is a particular parallelepiped having the parameters: `(dX,dY,dZ,0.,0.,0.)
 
 ![https://root.cern/doc/v636/pict1_TGeoPara_001.png](https://root.cern/doc/v636/pict1_TGeoPara_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAlpha`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi`](@ref), [`GetTheta`](@ref), [`GetTxy`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`GetX`](@ref), [`GetY`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoPara`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAlpha`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi`](@ref), [`GetTheta`](@ref), [`GetTxy`](@ref), [`GetTxz`](@ref), [`GetTyz`](@ref), [`GetX`](@ref), [`GetY`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`Sizeof3D`](@ref), [`TGeoPara`](@ref)
 """ TGeoPara
 
 # Wrapper of TGeoParaboloid
@@ -10577,7 +10577,7 @@ The coefficients a and b are computed from the input values which are the radii 
 
 ![https://root.cern/doc/v636/pict1_TGeoParaboloid_001.png](https://root.cern/doc/v636/pict1_TGeoParaboloid_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToParaboloid`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRhi`](@ref), [`GetRlo`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetParaboloidDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoParaboloid`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToParaboloid`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetDz`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPointsOnSegments`](@ref), [`GetRhi`](@ref), [`GetRlo`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetParaboloidDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoParaboloid`](@ref)
 """ TGeoParaboloid
 
 # Wrapper of TGeoParallelWorld
@@ -10634,7 +10634,7 @@ Note that the last section should be defined last, since it triggers the computa
 
 ![https://root.cern/doc/v636/pict1_TGeoPcon_001.png](https://root.cern/doc/v636/pict1_TGeoPcon_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DefineSection`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSegZ`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Dphi`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNsegments`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Phi1`](@ref), [`Rmax`](@ref), [`Rmin`](@ref), [`SafetyToSegment`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoPcon`](@ref), [`Z`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DefineSection`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSegZ`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`Dphi`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNsegments`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetZ`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Phi1`](@ref), [`Rmax`](@ref), [`Rmin`](@ref), [`SafetyToSegment`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`Sizeof3D`](@ref), [`TGeoPcon`](@ref), [`Z`](@ref)
 """ TGeoPcon
 
 # Wrapper of TGeoPgon
@@ -10724,7 +10724,7 @@ A shape scaled by a [TGeoScale](@ref) transformation.
 
 ![https://root.cern/doc/v636/geom_scaledshape.png](https://root.cern/doc/v636/geom_scaledshape.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetScale`](@ref), [`GetShape`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylGetType`](@ref), [`IsReflected`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetScale`](@ref), [`SetSegsAndPols`](@ref), [`TGeoScaledShape!MakeScaledShape`](@ref), [`TGeoScaledShape`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetBuffer3D`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetScale`](@ref), [`GetShape`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylType`](@ref), [`IsReflected`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetScale`](@ref), [`SetSegsAndPols`](@ref), [`TGeoScaledShape!MakeScaledShape`](@ref), [`TGeoScaledShape`](@ref)
 """ TGeoScaledShape
 
 # Wrapper of TGeoShapeAssembly
@@ -10735,7 +10735,7 @@ The shape encapsulating an assembly (union) of volumes.
 
 Automatically created by [TGeoVolumeAssembly](@ref) class
 
-Related functions: [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylGetType`](@ref), [`NeedsBBoxRecompute`](@ref), [`RecomputeBoxLast`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`TGeoShapeAssembly`](@ref)
+Related functions: [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`InspectShape`](@ref), [`IsAssembly`](@ref), [`IsCylType`](@ref), [`NeedsBBoxRecompute`](@ref), [`RecomputeBoxLast`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`TGeoShapeAssembly`](@ref)
 """ TGeoShapeAssembly
 
 # Wrapper of TGeoSphere
@@ -10758,7 +10758,7 @@ The [TGeoSphere](@ref) class has the following constructor.
 - `theta1:` starting theta value [0, 180) in degrees
 - `theta2:` ending theta value (0, 180] in degrees (`theta1<theta2`)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSphere`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNumberOfDivisions`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPhi2`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetTheta1`](@ref), [`GetTheta2`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`IsOnBoundary`](@ref), [`IsPointInside`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetNumberOfDivisions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetSphDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoSphere`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistToSphere`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetNumberOfDivisions`](@ref), [`GetNz`](@ref), [`GetPhi1`](@ref), [`GetPhi2`](@ref), [`GetPointsOnSegments`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`GetTheta1`](@ref), [`GetTheta2`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`IsOnBoundary`](@ref), [`IsPointInside`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetNumberOfDivisions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetSphDimensions`](@ref), [`Sizeof3D`](@ref), [`TGeoSphere`](@ref)
 """ TGeoSphere
 
 # Wrapper of TGeoFacet
@@ -10804,7 +10804,7 @@ It may have a `phi`range:
 - `Phi1:` starting phi angle
 - `Dphi:` total phi range
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DDDaxis`](@ref), [`DDaxis`](@ref), [`Daxis`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetR`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTorusDimensions`](@ref), [`Sizeof3D`](@ref), [`SolveCubic`](@ref), [`SolveQuartic`](@ref), [`TGeoTorus`](@ref), [`ToBoundary`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DDDaxis`](@ref), [`DDaxis`](@ref), [`Daxis`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`DistancetoPrimitive`](@ref), [`Divide`](@ref), [`GetAxisName`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetBuffer3D`](@ref), [`GetByteCount`](@ref), [`GetDphi`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetMeshNumbers`](@ref), [`GetNmeshVertices`](@ref), [`GetPhi1`](@ref), [`GetPointsOnSegments`](@ref), [`GetR`](@ref), [`GetRmax`](@ref), [`GetRmin`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`MakeBuffer3D`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetSegsAndPols`](@ref), [`SetTorusDimensions`](@ref), [`Sizeof3D`](@ref), [`SolveCubic`](@ref), [`SolveQuartic`](@ref), [`TGeoTorus`](@ref), [`ToBoundary`](@ref)
 """ TGeoTorus
 
 # Wrapper of TGeoTrd1
@@ -10821,7 +10821,7 @@ It is defined by the half-length in Z, the half-length in X at the lowest and hi
 
 ![https://root.cern/doc/v636/pict1_TGeoTrd1_001.png](https://root.cern/doc/v636/pict1_TGeoTrd1_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd1`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd1`](@ref)
 """ TGeoTrd1
 
 # Wrapper of TGeoTrd2
@@ -10834,7 +10834,7 @@ It is defined by the half-length in Z, the half-length in X at the lowest and hi
 
 ![https://root.cern/doc/v636/pict1_TGeoTrd2_001.png](https://root.cern/doc/v636/pict1_TGeoTrd2_001.png)
 
-Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy1`](@ref), [`GetDy2`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylGetType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd2`](@ref)
+Related functions: [`Capacity`](@ref), [`ComputeBBox`](@ref), [`ComputeNormal_v`](@ref), [`ComputeNormal`](@ref), [`Contains_v`](@ref), [`Contains`](@ref), [`DistFromInside_v`](@ref), [`DistFromInside`](@ref), [`DistFromOutside_v`](@ref), [`DistFromOutside`](@ref), [`Divide`](@ref), [`GetAxisRange`](@ref), [`GetBoundingCylinder`](@ref), [`GetByteCount`](@ref), [`GetDx1`](@ref), [`GetDx2`](@ref), [`GetDy1`](@ref), [`GetDy2`](@ref), [`GetDz`](@ref), [`GetFittingBox`](@ref), [`GetMakeRuntimeShape`](@ref), [`GetOppositeCorner`](@ref), [`GetVisibleCorner`](@ref), [`InspectShape`](@ref), [`IsCylType`](@ref), [`Safety_v`](@ref), [`Safety`](@ref), [`SavePrimitive`](@ref), [`SetDimensions`](@ref), [`SetPoints`](@ref), [`SetVertex`](@ref), [`Sizeof3D`](@ref), [`TGeoTrd2`](@ref)
 """ TGeoTrd2
 
 # Wrapper of TGeoXtru
@@ -11012,10 +11012,10 @@ This method must be overridden if an object can react to graphics events.
 
 # Wrapper of Bool_t TObject::HandleTimer(TTimer *)
 @trydoc raw"""
-    HandleGetTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})::Bool
+    HandleTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})::Bool
 Execute action in response of a timer timing out.
 This method must be overridden if an object has to react to timers.
-""" HandleGetTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})
+""" HandleTimer(this::ByRef1{TObject}, timer::ByPtr1{TTimer})
 
 # Wrapper of void TObject::InvertBit(UInt_t)
 @trydoc raw"""
@@ -11276,10 +11276,10 @@ Assign the last selected object.
 
 # Wrapper of void TBrowser::SetStatusText(const char *, Int_t)
 @trydoc raw"""
-    SetStatusGetText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)::Nothing
+    SetStatusText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)::Nothing
 
 
-""" SetStatusGetText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)
+""" SetStatusText(this::ByRef1{TBrowser}, txt::ByCopy{String}, col::Int32)
 
 # Wrapper of void TBrowser::Show()
 @trydoc raw"""
@@ -11837,10 +11837,10 @@ Push a new data cache area onto the list of area to be used for temporarily stor
 
 # Wrapper of void TBuffer::ReadFastArrayString(Char_t *, Int_t)
 @trydoc raw"""
-    ReadFastArrayGetString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)::Nothing
+    ReadFastArrayString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)::Nothing
 
 
-""" ReadFastArrayGetString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)
+""" ReadFastArrayString(this::ByRef1{TBuffer}, c::ByPtr2{Int8}, n::Int32)
 
 # Wrapper of void TBuffer::ReadFastArrayWithFactor(Double_t *, Int_t, Double_t, Double_t)
 @trydoc raw"""
@@ -11998,17 +11998,17 @@ Return the current Process-ID.
 
 # Wrapper of char * TBuffer::ReadString(char *, Int_t)
 @trydoc raw"""
-    ReadGetString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)::ByCopy{Union{String, Vector{CxxChar}}}
+    ReadString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)::ByCopy{Union{String, Vector{CxxChar}}}
 
 
-""" ReadGetString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)
+""" ReadString(this::ByRef1{TBuffer}, s::ByPtr2{Int8}, max::Int32)
 
 # Wrapper of void TBuffer::ReadTString(TString &)
 @trydoc raw"""
-    ReadTGetString(this::ByRef1{TBuffer}, s::ByRef1{TString})::Nothing
+    ReadTString(this::ByRef1{TBuffer}, s::ByRef1{TString})::Nothing
 
 
-""" ReadTGetString(this::ByRef1{TBuffer}, s::ByRef1{TString})
+""" ReadTString(this::ByRef1{TBuffer}, s::ByRef1{TString})
 
 # Wrapper of void TBuffer::ReadUChar(UChar_t &)
 @trydoc raw"""
@@ -12455,10 +12455,10 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TBuffer::WriteFastArrayString(const Char_t *, Long64_t)
 @trydoc raw"""
-    WriteFastArrayGetString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)::Nothing
+    WriteFastArrayString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)::Nothing
 
 
-""" WriteFastArrayGetString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)
+""" WriteFastArrayString(this::ByRef1{TBuffer}, c::ByCopy{String}, n::Int64)
 
 # Wrapper of void TBuffer::WriteFloat(Float_t)
 @trydoc raw"""
@@ -12518,17 +12518,17 @@ Always return 0 (current processID).
 
 # Wrapper of void TBuffer::WriteString(const char *)
 @trydoc raw"""
-    WriteGetString(this::ByRef1{TBuffer}, s::ByCopy{String})::Nothing
+    WriteString(this::ByRef1{TBuffer}, s::ByCopy{String})::Nothing
 
 
-""" WriteGetString(this::ByRef1{TBuffer}, s::ByCopy{String})
+""" WriteString(this::ByRef1{TBuffer}, s::ByCopy{String})
 
 # Wrapper of void TBuffer::WriteTString(const TString &)
 @trydoc raw"""
-    WriteTGetString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})::Nothing
+    WriteTString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})::Nothing
 
 
-""" WriteTGetString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})
+""" WriteTString(this::ByRef1{TBuffer}, s::ByConstRef1{TString})
 
 # Wrapper of void TBuffer::WriteUChar(UChar_t)
 @trydoc raw"""
@@ -13860,10 +13860,10 @@ Specific [TApplication](@ref) implementations may want something different here.
 
 # Wrapper of void TApplication::HandleIdleTimer()
 @trydoc raw"""
-    HandleIdleGetTimer(this::ByRef1{TApplication})::Nothing
+    HandleIdleTimer(this::ByRef1{TApplication})::Nothing
 Handle idle timeout.
 When this timer expires the registered idle command will be executed by this routine and a signal will be emitted.
-""" HandleIdleGetTimer(this::ByRef1{TApplication})
+""" HandleIdleTimer(this::ByRef1{TApplication})
 
 # Wrapper of Bool_t TApplication::HandleTermInput()
 @trydoc raw"""
@@ -14005,9 +14005,9 @@ Return the return value of the command cast to a long.
 
 # Wrapper of void TApplication::RemoveIdleTimer()
 @trydoc raw"""
-    RemoveIdleGetTimer(this::ByRef1{TApplication})::Nothing
+    RemoveIdleTimer(this::ByRef1{TApplication})::Nothing
 Remove idle timer. Normally called via TROOT!Idle(0).
-""" RemoveIdleGetTimer(this::ByRef1{TApplication})
+""" RemoveIdleTimer(this::ByRef1{TApplication})
 
 # Wrapper of void TApplication::ReturnPressed(char *)
 @trydoc raw"""
@@ -14033,10 +14033,10 @@ Set console echo mode:
 
 # Wrapper of void TApplication::SetIdleTimer(UInt_t, const char *)
 @trydoc raw"""
-    SetIdleGetTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})::Nothing
+    SetIdleTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})::Nothing
 Set the command to be executed after the system has been idle for idleTimeInSec seconds.
 Normally called via TROOT!Idle(...).
-""" SetIdleGetTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})
+""" SetIdleTimer(this::ByRef1{TApplication}, idleTimeInSec::UInt32, command::ByCopy{String})
 
 # Wrapper of void TApplication::SetReturnFromRun(Bool_t)
 @trydoc raw"""
@@ -14787,10 +14787,10 @@ Stream an object of class [TAttPad](@ref).
 
 # Wrapper of Float_t TAttText::GetTextSizePercent(Float_t)
 @trydoc raw"""
-    GetGetTextSizePercent(this::ByRef1{TAttText}, size::Float32)::Float32
+    GetTextSizePercent(this::ByRef1{TAttText}, size::Float32)::Float32
 Return the text in percent of the pad size.
 If the font precision is greater than 2, the text size returned is the size in pixel converted into percent of the pad size, otherwise the size returned is the same as the size given as input parameter.
-""" GetGetTextSizePercent(this::ByRef1{TAttText}, size::Float32)
+""" GetTextSizePercent(this::ByRef1{TAttText}, size::Float32)
 
 # Wrapper of void TAttText::Modify()
 @trydoc raw"""
@@ -14801,42 +14801,42 @@ Change current text attributes if necessary.
 
 # Wrapper of void TAttText::ResetAttText(Option_t *)
 @trydoc raw"""
-    ResetAttGetText(this::ByRef1{TAttText}, toption::ByCopy{String})::Nothing
+    ResetAttText(this::ByRef1{TAttText}, toption::ByCopy{String})::Nothing
 Reset this text attributes to default values.
 
-""" ResetAttGetText(this::ByRef1{TAttText}, toption::ByCopy{String})
+""" ResetAttText(this::ByRef1{TAttText}, toption::ByCopy{String})
 
 # Wrapper of void TAttText::SetTextAlign(Short_t)
 @trydoc raw"""
-    SetGetTextAlign(this::ByRef1{TAttText}, align::Int16)::Nothing
+    SetTextAlign(this::ByRef1{TAttText}, align::Int16)::Nothing
 Set the text alignment.
 
-""" SetGetTextAlign(this::ByRef1{TAttText}, align::Int16)
+""" SetTextAlign(this::ByRef1{TAttText}, align::Int16)
 
 # Wrapper of void TAttText::SetTextAngle(Float_t)
 @trydoc raw"""
-    SetGetTextAngle(this::ByRef1{TAttText}, tangle::Float32)::Nothing
+    SetTextAngle(this::ByRef1{TAttText}, tangle::Float32)::Nothing
 Set the text angle.
 
-""" SetGetTextAngle(this::ByRef1{TAttText}, tangle::Float32)
+""" SetTextAngle(this::ByRef1{TAttText}, tangle::Float32)
 
 # Wrapper of void TAttText::SetTextAttributes()
 @trydoc raw"""
-    SetGetTextAttributes(this::ByRef1{TAttText})::Nothing
+    SetTextAttributes(this::ByRef1{TAttText})::Nothing
 Invoke the DialogCanvas Text attributes.
 
-""" SetGetTextAttributes(this::ByRef1{TAttText})
+""" SetTextAttributes(this::ByRef1{TAttText})
 
 # Wrapper of void TAttText::SetTextColor(Color_t)
 @trydoc raw"""
-    SetGetTextColor(this::ByRef1{TAttText}, tcolor::Int16)::Nothing
+    SetTextColor(this::ByRef1{TAttText}, tcolor::Int16)::Nothing
 Set the text color.
 
-""" SetGetTextColor(this::ByRef1{TAttText}, tcolor::Int16)
+""" SetTextColor(this::ByRef1{TAttText}, tcolor::Int16)
 
 # Wrapper of void TAttText::SetTextColorAlpha(Color_t, Float_t)
 @trydoc raw"""
-    SetGetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)::Nothing
+    SetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)::Nothing
 Set a transparent text color.
 ## Arguments
 
@@ -14850,30 +14850,30 @@ Set a transparent text color.
 ###Note
 
 talpha is ignored (treated as 1) if the TCanvas has no GL support activated.
-""" SetGetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)
+""" SetTextColorAlpha(this::ByRef1{TAttText}, tcolor::Int16, talpha::Float32)
 
 # Wrapper of void TAttText::SetTextFont(Font_t)
 @trydoc raw"""
-    SetGetTextFont(this::ByRef1{TAttText}, tfont::Int16)::Nothing
+    SetTextFont(this::ByRef1{TAttText}, tfont::Int16)::Nothing
 Set the text font.
 
-""" SetGetTextFont(this::ByRef1{TAttText}, tfont::Int16)
+""" SetTextFont(this::ByRef1{TAttText}, tfont::Int16)
 
 # Wrapper of void TAttText::SetTextSize(Float_t)
 @trydoc raw"""
-    SetGetTextSize(this::ByRef1{TAttText}, tsize::Float32)::Nothing
+    SetTextSize(this::ByRef1{TAttText}, tsize::Float32)::Nothing
 Set the text size.
 
-""" SetGetTextSize(this::ByRef1{TAttText}, tsize::Float32)
+""" SetTextSize(this::ByRef1{TAttText}, tsize::Float32)
 
 # Wrapper of void TAttText::SetTextSizePixels(Int_t)
 @trydoc raw"""
-    SetGetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)::Nothing
+    SetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)::Nothing
 Set the text size in pixel.
 Set the text size in pixels.
 
 If the font precision is greater than 2, the text size is set to npixels, otherwise the text size is computed as a percent of the pad size.
-""" SetGetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)
+""" SetTextSizePixels(this::ByRef1{TAttText}, npixels::Int32)
 
 # Wrapper of void TAttText::Streamer(TBuffer &)
 @trydoc raw"""
@@ -17860,7 +17860,7 @@ Since globals are created and deleted during execution of the program, we need t
 
 # Wrapper of TCollection * TROOT::GetListOfTypes(Bool_t)
 @trydoc raw"""
-    GetListOfGetTypes(this::ByRef1{TROOT}, load::Bool)::CxxPtr1{TCollection}
+    GetListOfTypes(this::ByRef1{TROOT}, load::Bool)::CxxPtr1{TCollection}
 Return a dynamic list giving access to all TDataTypes (typedefs) currently defined.
 The list is populated on demand. Calling 
 
@@ -17877,7 +17877,7 @@ Calling
 (C++ version of the code)
 
  list only the typedefs that have been previously accessed through the list (plus the builtins types).
-""" GetListOfGetTypes(this::ByRef1{TROOT}, load::Bool)
+""" GetListOfTypes(this::ByRef1{TROOT}, load::Bool)
 
 # Wrapper of void TROOT::Idle(UInt_t, const char *)
 @trydoc raw"""
@@ -18704,10 +18704,10 @@ The size is expressed as a percent of the pad height. axis specifies which axis 
 
 # Wrapper of void TStyle::SetLegendTextSize(Double_t)
 @trydoc raw"""
-    SetLegendGetTextSize(this::ByRef1{TStyle}, size::Float64)::Nothing
+    SetLegendTextSize(this::ByRef1{TStyle}, size::Float64)::Nothing
 
 
-""" SetLegendGetTextSize(this::ByRef1{TStyle}, size::Float64)
+""" SetLegendTextSize(this::ByRef1{TStyle}, size::Float64)
 
 # Wrapper of void TStyle::SetLegoInnerR(Float_t)
 @trydoc raw"""
@@ -18725,7 +18725,7 @@ The size is expressed as a percent of the pad height. axis specifies which axis 
 
 # Wrapper of void TStyle::SetLineStyleString(Int_t, const char *)
 @trydoc raw"""
-    SetLineStyleGetString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})::Nothing
+    SetLineStyleString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})::Nothing
 Set line style string using the PostScript convention.
 A line is a suite of segments, each segment is described by the number of pixels. The initial and alternating elements (second, fourth, and so on) are the dashes, and the others spaces between dashes.
 
@@ -18755,7 +18755,7 @@ Default fixed line styles are pre-defined as:
 - The opening and closing brackets may be omitted
 - It is recommended to use 4 as the smallest segment length and multiple of 4 for other lengths.
 - The line style 1 to 10 are predefined. 1 to 4 cannot be changed.
-""" SetLineStyleGetString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})
+""" SetLineStyleString(this::ByRef1{TStyle}, i::Int32, text::ByCopy{String})
 
 # Wrapper of void TStyle::SetNdivisions(Int_t, Option_t *)
 @trydoc raw"""
@@ -19021,10 +19021,10 @@ Example: `gStyle->SetOptStat("ne");` print only name of histogram and number of 
 
 # Wrapper of void TStyle::SetPaintTextFormat(const char *)
 @trydoc raw"""
-    SetPaintGetTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})::Nothing
+    SetPaintTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})::Nothing
 
 
-""" SetPaintGetTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})
+""" SetPaintTextFormat(this::ByRef1{TStyle}, format::ByCopy{String})
 
 # Wrapper of void TStyle::SetPalette(Int_t, Int_t *, Float_t)
 @trydoc raw"""
@@ -19106,10 +19106,10 @@ The paper size is specified in centimeters. Default is 20x26. See also [TPad!Pri
 
 # Wrapper of void TStyle::SetStatTextColor(Color_t)
 @trydoc raw"""
-    SetStatGetTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
+    SetStatTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
 
 
-""" SetStatGetTextColor(this::ByRef1{TStyle}, color::Int16)
+""" SetStatTextColor(this::ByRef1{TStyle}, color::Int16)
 
 # Wrapper of void TStyle::SetStatW(Float_t)
 @trydoc raw"""
@@ -19256,10 +19256,10 @@ if axis="xyz" set all 3 axes
 
 # Wrapper of void TStyle::SetTitleTextColor(Color_t)
 @trydoc raw"""
-    SetTitleGetTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
+    SetTitleTextColor(this::ByRef1{TStyle}, color::Int16)::Nothing
 
 
-""" SetTitleGetTextColor(this::ByRef1{TStyle}, color::Int16)
+""" SetTitleTextColor(this::ByRef1{TStyle}, color::Int16)
 
 # Wrapper of void TStyle::SetTitleW(Float_t)
 @trydoc raw"""
@@ -19683,31 +19683,31 @@ The difference between [Paint()](@ref) and [Draw()](@ref) is that when a object 
 
 # Wrapper of void TVirtualPad::PaintText(Double_t, Double_t, const char *)
 @trydoc raw"""
-    PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})::Nothing
+    PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})::Nothing
 
 
-""" PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})
+""" PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByCopy{String})
 
 # Wrapper of void TVirtualPad::PaintText(Double_t, Double_t, const wchar_t *)
 @trydoc raw"""
-    PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{wchar_t})::Nothing
+    PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{wchar_t})::Nothing
 
 
-""" PaintGetText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{wchar_t})
+""" PaintText(this::ByRef1{TVirtualPad}, x::Float64, y::Float64, text::ByConstPtr1{wchar_t})
 
 # Wrapper of void TVirtualPad::PaintTextNDC(Double_t, Double_t, const char *)
 @trydoc raw"""
-    PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})::Nothing
+    PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})::Nothing
 
 
-""" PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})
+""" PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByCopy{String})
 
 # Wrapper of void TVirtualPad::PaintTextNDC(Double_t, Double_t, const wchar_t *)
 @trydoc raw"""
-    PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{wchar_t})::Nothing
+    PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{wchar_t})::Nothing
 
 
-""" PaintGetTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{wchar_t})
+""" PaintTextNDC(this::ByRef1{TVirtualPad}, u::Float64, v::Float64, text::ByConstPtr1{wchar_t})
 
 # Wrapper of Double_t TVirtualPad::PixeltoX(Int_t)
 @trydoc raw"""
@@ -19851,10 +19851,10 @@ Typically implemented by classes that can contain multiple references to a same 
 
 # Wrapper of void TVirtualPad::SetAttTextPS(Int_t, Float_t, Color_t, Style_t, Float_t)
 @trydoc raw"""
-    SetAttGetTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)::Nothing
+    SetAttTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)::Nothing
 
 
-""" SetAttGetTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)
+""" SetAttTextPS(this::ByRef1{TVirtualPad}, align::Int32, angle::Float32, color::Int16, font::Int16, tsize::Float32)
 
 # Wrapper of void TVirtualPad::SetBatch(Bool_t)
 @trydoc raw"""
@@ -20047,10 +20047,10 @@ Typically implemented by classes that can contain multiple references to a same 
 
 # Wrapper of void TVirtualPad::SetToolTipText(const char *, Long_t)
 @trydoc raw"""
-    SetToolTipGetText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)::Nothing
+    SetToolTipText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)::Nothing
 
 
-""" SetToolTipGetText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)
+""" SetToolTipText(this::ByRef1{TVirtualPad}, text::ByCopy{String}, delayms::Int64)
 
 # Wrapper of void TVirtualPad::SetVertical(Bool_t)
 @trydoc raw"""
@@ -21462,10 +21462,10 @@ Performs undo action. Move cursor position backward in history stack.
 
 # Wrapper of Bool_t TTimer::CheckTimer(const TTime &)
 @trydoc raw"""
-    CheckGetTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})::Bool
+    CheckTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})::Bool
 Check if timer timed out.
 
-""" CheckGetTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})
+""" CheckTimer(this::ByRef1{TTimer}, now::ByConstRef1{TTime})
 
 # Wrapper of TObject * TTimer::GetObject()
 @trydoc raw"""
@@ -21476,10 +21476,10 @@ Check if timer timed out.
 
 # Wrapper of UInt_t TTimer::GetTimerID()
 @trydoc raw"""
-    GetGetTimerID(this::ByRef1{TTimer})::UInt32
+    GetTimerID(this::ByRef1{TTimer})::UInt32
 
 
-""" GetGetTimerID(this::ByRef1{TTimer})
+""" GetTimerID(this::ByRef1{TTimer})
 
 # Wrapper of Bool_t TTimer::IsRunning()
 @trydoc raw"""
@@ -21539,10 +21539,10 @@ Removes the command to be executed (if it was set).
 
 # Wrapper of void TTimer::SetTimerID(UInt_t)
 @trydoc raw"""
-    SetGetTimerID(this::ByRef1{TTimer}, id::UInt32)::Nothing
+    SetTimerID(this::ByRef1{TTimer}, id::UInt32)::Nothing
 
 
-""" SetGetTimerID(this::ByRef1{TTimer}, id::UInt32)
+""" SetTimerID(this::ByRef1{TTimer}, id::UInt32)
 
 # Wrapper of void TTimer::Start(Long_t, Bool_t)
 @trydoc raw"""
@@ -21700,10 +21700,10 @@ Only adds the handler if it is not already in the list of exception handlers.
 
 # Wrapper of void TSystem::AddTimer(TTimer *)
 @trydoc raw"""
-    AddGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::Nothing
+    AddTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::Nothing
 Add timer to list of system timers.
 
-""" AddGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
+""" AddTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
 
 # Wrapper of int TSystem::AnnounceTcpService(int, Bool_t, int, int)
 @trydoc raw"""
@@ -22424,10 +22424,10 @@ Returns the handler or 0 if the handler was not in the list of exception handler
 
 # Wrapper of TTimer * TSystem::RemoveTimer(TTimer *)
 @trydoc raw"""
-    RemoveGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::CxxPtr1{TTimer}
+    RemoveTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})::CxxPtr1{TTimer}
 Remove timer from list of system timers.
 Returns removed timer or 0 if timer was not active.
-""" RemoveGetTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
+""" RemoveTimer(this::ByRef1{TSystem}, t::ByPtr1{TTimer})
 
 # Wrapper of int TSystem::Rename(const char *, const char *)
 @trydoc raw"""
@@ -22452,10 +22452,10 @@ Reset signals handlers to previous behaviour.
 
 # Wrapper of void TSystem::ResetTimer(TTimer *)
 @trydoc raw"""
-    ResetGetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})::Nothing
+    ResetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})::Nothing
 
 
-""" ResetGetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})
+""" ResetTimer(this::ByRef1{TSystem}, ::ByPtr1{TTimer})
 
 # Wrapper of void TSystem::Run()
 @trydoc raw"""
@@ -23938,17 +23938,17 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TVirtualPadEditor::DrawText(Double_t, Double_t, const char *)
 @trydoc raw"""
-    DrawGetText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
+    DrawText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
 
 
-""" DrawGetText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
+""" DrawText(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
 
 # Wrapper of void TVirtualPadEditor::DrawTextNDC(Double_t, Double_t, const char *)
 @trydoc raw"""
-    DrawGetTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
+    DrawTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})::Nothing
 
 
-""" DrawGetTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
+""" DrawTextNDC(this::ByRef1{TVirtualPadEditor}, ::Float64, ::Float64, ::ByCopy{String})
 
 # Wrapper of void TVirtualPadEditor::FillAttributes(Int_t, Int_t)
 @trydoc raw"""
@@ -24008,10 +24008,10 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TVirtualPadEditor::TextAttributes(Int_t, Float_t, Int_t, Int_t, Float_t)
 @trydoc raw"""
-    GetTextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)::Nothing
+    TextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)::Nothing
 
 
-""" GetTextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)
+""" TextAttributes(this::ByRef1{TVirtualPadEditor}, ::Int32, ::Float32, ::Int32, ::Int32, ::Float32)
 
 # Wrapper of Bool_t TAxis::CanBeAlphanumeric()
 @trydoc raw"""
@@ -24565,10 +24565,10 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TVirtualPadPainter::DrawPixels(const unsigned char *, UInt_t, UInt_t, Int_t, Int_t, Bool_t)
 @trydoc raw"""
-    DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr2{UInt8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)::Nothing
+    DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr1{unsigned Int8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)::Nothing
 
 
-""" DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr2{UInt8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)
+""" DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr1{unsigned Int8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)
 
 # Wrapper of void TVirtualPadPainter::DrawPolyLine(Int_t, const Double_t *, const Double_t *)
 @trydoc raw"""
@@ -24677,45 +24677,45 @@ Empty definition.
 
 # Wrapper of void TVirtualPadPainter::SetTextAlign(Short_t)
 @trydoc raw"""
-    SetGetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)::Nothing
+    SetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)::Nothing
 
 
-""" SetGetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)
+""" SetTextAlign(this::ByRef1{TVirtualPadPainter}, align::Int16)
 
 # Wrapper of void TVirtualPadPainter::SetTextAngle(Float_t)
 @trydoc raw"""
-    SetGetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)::Nothing
+    SetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)::Nothing
 
 
-""" SetGetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)
+""" SetTextAngle(this::ByRef1{TVirtualPadPainter}, tangle::Float32)
 
 # Wrapper of void TVirtualPadPainter::SetTextColor(Color_t)
 @trydoc raw"""
-    SetGetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)::Nothing
+    SetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)::Nothing
 
 
-""" SetGetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)
+""" SetTextColor(this::ByRef1{TVirtualPadPainter}, tcolor::Int16)
 
 # Wrapper of void TVirtualPadPainter::SetTextFont(Font_t)
 @trydoc raw"""
-    SetGetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)::Nothing
+    SetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)::Nothing
 
 
-""" SetGetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)
+""" SetTextFont(this::ByRef1{TVirtualPadPainter}, tfont::Int16)
 
 # Wrapper of void TVirtualPadPainter::SetTextSize(Float_t)
 @trydoc raw"""
-    SetGetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)::Nothing
+    SetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)::Nothing
 
 
-""" SetGetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)
+""" SetTextSize(this::ByRef1{TVirtualPadPainter}, tsize::Float32)
 
 # Wrapper of void TVirtualPadPainter::SetTextSizePixels(Int_t)
 @trydoc raw"""
-    SetGetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)::Nothing
+    SetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)::Nothing
 
 
-""" SetGetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)
+""" SetTextSizePixels(this::ByRef1{TVirtualPadPainter}, npixels::Int32)
 
 # Wrapper of void TVirtualPadPainter::Streamer(TBuffer &)
 @trydoc raw"""
@@ -25014,10 +25014,10 @@ Returns total number of bytes read.
 
 # Wrapper of Int_t TBranch::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedGetType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedGetType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedType(this::ByRef1{TBranch}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of TFile * TBranch::GetFile(Int_t)
 @trydoc raw"""
@@ -25370,10 +25370,10 @@ Output the string str in the output buffer.
 
 # Wrapper of void TVirtualPS::SetType(Int_t)
 @trydoc raw"""
-    SetGetType(this::ByRef1{TVirtualPS}, ::Int32)::Nothing
+    SetType(this::ByRef1{TVirtualPS}, ::Int32)::Nothing
 
 
-""" SetGetType(this::ByRef1{TVirtualPS}, ::Int32)
+""" SetType(this::ByRef1{TVirtualPS}, ::Int32)
 
 # Wrapper of void TVirtualPS::Streamer(TBuffer &)
 @trydoc raw"""
@@ -25405,10 +25405,10 @@ Output the string str in the output buffer.
 
 # Wrapper of void TVirtualPS::WriteInteger(Int_t, Bool_t)
 @trydoc raw"""
-    WriteGetInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)::Nothing
+    WriteInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)::Nothing
 Write one Integer to the file.
 n: Integer to be written in the file. space: If TRUE, a space in written before the integer.
-""" WriteGetInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)
+""" WriteInteger(this::ByRef1{TVirtualPS}, i::Int32, space::Bool)
 
 # Wrapper of void TVirtualPS::WriteReal(Float_t, Bool_t)
 @trydoc raw"""
@@ -25454,10 +25454,10 @@ Write a Real number to the file.
 
 # Wrapper of const char * TVirtualTableInterface::GetValueAsString(UInt_t, UInt_t)
 @trydoc raw"""
-    GetValueAsGetString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)::ByCopy{String}
+    GetValueAsString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)::ByCopy{String}
 
 
-""" GetValueAsGetString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)
+""" GetValueAsString(this::ByRef1{TVirtualTableInterface}, row::UInt32, column::UInt32)
 
 # Wrapper of void TVirtualTableInterface::Streamer(TBuffer &)
 @trydoc raw"""
@@ -25804,7 +25804,7 @@ Creates a pixmap of the specified width and height and returns a pixmap ID that 
 
 # Wrapper of Pixmap_t TVirtualX::CreatePixmapFromData(unsigned char *, UInt_t, UInt_t)
 @trydoc raw"""
-    CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr2{UInt8}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
+    CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr1{unsigned Int8}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
 create pixmap from RGB data.
 RGB data is in format:
 
@@ -25813,7 +25813,7 @@ RGB data is in format:
 (C++ version of the code)
 
 Pixels are numbered from left to right and from top to bottom. Note that data must be 32-bit aligned
-""" CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr2{UInt8}, width::UInt32, height::UInt32)
+""" CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr1{unsigned Int8}, width::UInt32, height::UInt32)
 
 # Wrapper of Region_t TVirtualX::CreateRegion()
 @trydoc raw"""
@@ -26047,7 +26047,7 @@ GC mode-dependent components: foreground, background, tile, stipple, tile-stippl
 
 # Wrapper of void TVirtualX::DrawString(Drawable_t, GContext_t, Int_t, Int_t, const char *, Int_t)
 @trydoc raw"""
-    DrawGetString(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)::Nothing
+    DrawString(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)::Nothing
 Each character image, as defined by the font in the GC, is treated as an additional mask for a fill operation on the drawable.
 ## Arguments
 
@@ -26064,7 +26064,7 @@ Each character image, as defined by the font in the GC, is treated as an additio
     
 
 GC components in use: function, plane-mask, fill-style, font, subwindow-mode, clip-x-origin, clip-y-origin, and clip-mask. GC mode-dependent components: foreground, background, tile, stipple, tile-stipple-x-origin, and tile-stipple-y-origin. (see also the [GCValues_t](@ref) structure)
-""" DrawGetString(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)
+""" DrawString(this::ByRef1{TVirtualX}, id::ByCopy{Drawable_t}, gc::ByCopy{GContext_t}, x::Int32, y::Int32, s::ByCopy{String}, len::Int32)
 
 # Wrapper of Bool_t TVirtualX::EmptyRegion(Region_t)
 @trydoc raw"""
@@ -26164,7 +26164,7 @@ Returns character up vector.
 
 # Wrapper of unsigned char * TVirtualX::GetColorBits(Drawable_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{Drawable_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::CxxPtr2{UInt8}
+    GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{Drawable_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::CxxPtr1{unsigned Int8}
 Returns an array of pixels created from a part of drawable (defined by x, y, w, h) in format:
 b1, g1, r1, 0,  b2, g2, r2, 0 ... bn, gn, rn, 0 ..
 
@@ -26289,10 +26289,10 @@ That is the window in which, for example some text is selected.
 
 # Wrapper of Int_t TVirtualX::GetProperty(Window_t, Atom_t, Long_t, Long_t, Bool_t, Atom_t, Atom_t *, Int_t *, ULong_t *, ULong_t *, unsigned char **)
 @trydoc raw"""
-    GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr2{UInt8})::Int32
+    GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr1{unsigned Int8})::Int32
 Returns the actual type of the property; the actual format of the property; the number of 8-bit, 16-bit, or 32-bit items transferred; the number of bytes remaining to be read in the property; and a pointer to the data actually returned.
 
-""" GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr2{UInt8})
+""" GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr1{unsigned Int8})
 
 # Wrapper of void TVirtualX::GetRegionBox(Region_t, Rectangle_t *)
 @trydoc raw"""
@@ -26310,7 +26310,7 @@ Returns RGB values for color "index".
 
 # Wrapper of void TVirtualX::GetTextExtent(UInt_t &, UInt_t &, char *)
 @trydoc raw"""
-    GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})::Nothing
+    GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})::Nothing
 Returns the size of the specified character string "mess".
 ## Arguments
 
@@ -26322,11 +26322,11 @@ Returns the size of the specified character string "mess".
     
 - **`mess`** [in] 
     the string
-""" GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})
+""" GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr2{Int8})
 
 # Wrapper of void TVirtualX::GetTextExtent(UInt_t &, UInt_t &, wchar_t *)
 @trydoc raw"""
-    GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{wchar_t})::Nothing
+    GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{wchar_t})::Nothing
 Returns the size of the specified character string "mess".
 ## Arguments
 
@@ -26338,14 +26338,14 @@ Returns the size of the specified character string "mess".
     
 - **`mess`** [in] 
     the string
-""" GetGetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{wchar_t})
+""" GetTextExtent(this::ByRef1{TVirtualX}, w::ByRef2{UInt32}, h::ByRef2{UInt32}, mess::ByPtr1{wchar_t})
 
 # Wrapper of Float_t TVirtualX::GetTextMagnitude()
 @trydoc raw"""
-    GetGetTextMagnitude(this::ByRef1{TVirtualX})::Float32
+    GetTextMagnitude(this::ByRef1{TVirtualX})::Float32
 Returns the current font magnification factor.
 
-""" GetGetTextMagnitude(this::ByRef1{TVirtualX})
+""" GetTextMagnitude(this::ByRef1{TVirtualX})
 
 # Wrapper of void TVirtualX::GetWindowAttributes(Window_t, WindowAttributes_t &)
 @trydoc raw"""
@@ -26498,7 +26498,7 @@ If the font does not exist, it returns NULL.
 
 # Wrapper of void TVirtualX::LookupString(Event_t *, char *, Int_t, UInt_t &)
 @trydoc raw"""
-    LookupGetString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})::Nothing
+    LookupString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})::Nothing
 Converts the keycode from the event structure to a key symbol (according to the modifiers specified in the event structure and the current keyboard mapping).
 In "buf" a null terminated ASCII string is returned representing the string that is currently mapped to the key code.
 
@@ -26515,7 +26515,7 @@ In "buf" a null terminated ASCII string is returned representing the string that
     
 - **`keysym`** [in] 
     returns the "keysym" computed from the event if this argument is not NULL
-""" LookupGetString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})
+""" LookupString(this::ByRef1{TVirtualX}, event::ByPtr1{Event_t}, buf::ByPtr2{Int8}, buflen::Int32, keysym::ByRef2{UInt32})
 
 # Wrapper of void TVirtualX::LowerWindow(Window_t)
 @trydoc raw"""
@@ -26832,7 +26832,7 @@ else = keycode (keyboard is pressed)
 
 # Wrapper of Int_t TVirtualX::RequestString(Int_t, Int_t, char *)
 @trydoc raw"""
-    RequestGetString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})::Int32
+    RequestString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})::Int32
 Requests string: text is displayed and can be edited with Emacs-like keybinding.
 Returns termination code (0 for ESC, 1 for RETURN)
 
@@ -26842,7 +26842,7 @@ Returns termination code (0 for ESC, 1 for RETURN)
     position where text is displayed 
     . 
     displayed text (as input), edited text (as output)
-""" RequestGetString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})
+""" RequestString(this::ByRef1{TVirtualX}, x::Int32, y::Int32, text::ByPtr2{Int8})
 
 # Wrapper of void TVirtualX::RescaleWindow(Int_t, UInt_t, UInt_t)
 @trydoc raw"""
@@ -27118,7 +27118,7 @@ Sets the line style.
 
 # Wrapper of void TVirtualX::SetLineType(Int_t, Int_t *)
 @trydoc raw"""
-    SetLineGetType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})::Nothing
+    SetLineType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})::Nothing
 Sets the line type.
 ## Arguments
 
@@ -27131,7 +27131,7 @@ Sets the line type.
     
 - **`dash`** [in] 
     dash segment lengths
-""" SetLineGetType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})
+""" SetLineType(this::ByRef1{TVirtualX}, n::Int32, dash::ByPtr2{Int32})
 
 # Wrapper of void TVirtualX::SetLineWidth(Width_t)
 @trydoc raw"""
@@ -27209,7 +27209,7 @@ Changes the owner and last-change time for the specified selection.
 
 # Wrapper of void TVirtualX::SetTextAlign(Short_t)
 @trydoc raw"""
-    SetGetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)::Nothing
+    SetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)::Nothing
 Sets the text alignment.
 ## Arguments
 
@@ -27218,42 +27218,42 @@ Sets the text alignment.
     
     - talign = txalh horizontal text alignment
     - talign = txalv vertical text alignment
-""" SetGetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)
+""" SetTextAlign(this::ByRef1{TVirtualX}, talign::Int16)
 
 # Wrapper of void TVirtualX::SetTextColor(Color_t)
 @trydoc raw"""
-    SetGetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)::Nothing
+    SetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)::Nothing
 Sets the color index "cindex" for text.
 
-""" SetGetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)
+""" SetTextColor(this::ByRef1{TVirtualX}, cindex::Int16)
 
 # Wrapper of void TVirtualX::SetTextFont(Font_t)
 @trydoc raw"""
-    SetGetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)::Nothing
+    SetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)::Nothing
 Sets the current text font number.
 
-""" SetGetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)
+""" SetTextFont(this::ByRef1{TVirtualX}, fontnumber::Int16)
 
 # Wrapper of void TVirtualX::SetTextMagnitude(Float_t)
 @trydoc raw"""
-    SetGetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)::Nothing
+    SetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)::Nothing
 Sets the current text magnification factor to "mgn".
 
-""" SetGetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)
+""" SetTextMagnitude(this::ByRef1{TVirtualX}, mgn::Float32)
 
 # Wrapper of void TVirtualX::SetTextSize(Float_t)
 @trydoc raw"""
-    SetGetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)::Nothing
+    SetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)::Nothing
 Sets the current text size to "textsize".
 
-""" SetGetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)
+""" SetTextSize(this::ByRef1{TVirtualX}, textsize::Float32)
 
 # Wrapper of void TVirtualX::SetTypeList(Window_t, Atom_t, Atom_t *)
 @trydoc raw"""
-    SetGetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})::Nothing
+    SetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})::Nothing
 Add the list of drag and drop types to the Window win.
 
-""" SetGetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})
+""" SetTypeList(this::ByRef1{TVirtualX}, win::ByCopy{Window_t}, prop::ByCopy{Atom_t}, typelist::ByPtr1{Atom_t})
 
 # Wrapper of void TVirtualX::SetWindowBackground(Window_t, ULong_t)
 @trydoc raw"""
@@ -27374,10 +27374,10 @@ Set synchronisation on or off.
 
 # Wrapper of Int_t TVirtualX::TextWidth(FontStruct_t, const char *, Int_t)
 @trydoc raw"""
-    GetTextWidth(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, s::ByCopy{String}, len::Int32)::Int32
+    TextWidth(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, s::ByCopy{String}, len::Int32)::Int32
 Return length of the string "s" in pixels. Size depends on font.
 
-""" GetTextWidth(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, s::ByCopy{String}, len::Int32)
+""" TextWidth(this::ByRef1{TVirtualX}, font::ByCopy{FontStruct_t}, s::ByCopy{String}, len::Int32)
 
 # Wrapper of void TVirtualX::TranslateCoordinates(Window_t, Window_t, Int_t, Int_t, Int_t &, Int_t &, Window_t &)
 @trydoc raw"""
@@ -31454,10 +31454,10 @@ Set perf stats.
 
 # Wrapper of void TTree::SetTimerInterval(Int_t)
 @trydoc raw"""
-    SetGetTimerInterval(this::ByRef1{TTree}, msec::Int32)::Nothing
+    SetTimerInterval(this::ByRef1{TTree}, msec::Int32)::Nothing
 
 
-""" SetGetTimerInterval(this::ByRef1{TTree}, msec::Int32)
+""" SetTimerInterval(this::ByRef1{TTree}, msec::Int32)
 
 # Wrapper of void TTree::SetUpdate(Int_t)
 @trydoc raw"""
@@ -33964,10 +33964,10 @@ See IMPORTANT REMARKS in [TTree!GetEntry](@ref).
 
 # Wrapper of Int_t TBranchElement::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedGetType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedGetType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedType(this::ByRef1{TBranchElement}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of TClass * TBranchElement::GetTargetClass()
 @trydoc raw"""
@@ -34191,10 +34191,10 @@ Set the name of the class of the in-memory object into which the data will loade
 
 # Wrapper of void TBranchElement::SetType(Int_t)
 @trydoc raw"""
-    SetGetType(this::ByRef1{TBranchElement}, btype::Int32)::Nothing
+    SetType(this::ByRef1{TBranchElement}, btype::Int32)::Nothing
 
 
-""" SetGetType(this::ByRef1{TBranchElement}, btype::Int32)
+""" SetType(this::ByRef1{TBranchElement}, btype::Int32)
 
 # Wrapper of void TBranchElement::SetupAddresses()
 @trydoc raw"""
@@ -34778,10 +34778,10 @@ The function returns the number of bytes read from the input buffer.
 
 # Wrapper of Int_t TBranchObject::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedGetType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedGetType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedType(this::ByRef1{TBranchObject}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of const char * TBranchObject::GetObjClassName()
 @trydoc raw"""
@@ -34853,10 +34853,10 @@ Get entry.
 
 # Wrapper of Int_t TBranchSTL::GetExpectedType(TClass *&, EDataType &)
 @trydoc raw"""
-    GetExpectedGetType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
+    GetExpectedType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})::Int32
 Fill expectedClass and expectedType with information on the data type of the object/values contained in this branch (and thus the type of pointers expected to be passed to Set[Branch]Address return 0 in case of success and > 0 in case of failure.
 
-""" GetExpectedGetType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
+""" GetExpectedType(this::ByRef1{TBranchSTL}, clptr::ByPtr1{TClass}, type::ByRef1{EDataType})
 
 # Wrapper of void TBranchSTL::SetAddress(void *)
 @trydoc raw"""
@@ -37076,10 +37076,10 @@ Set modified label size.
 
 # Wrapper of void TAxisModLab::SetText(TString)
 @trydoc raw"""
-    SetGetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})::Nothing
+    SetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})::Nothing
 Set modified label text.
 
-""" SetGetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})
+""" SetText(this::ByRef1{TAxisModLab}, t::ByCopy{TString})
 
 # Wrapper of void TVirtualFitter::Clear(Option_t *)
 @trydoc raw"""
@@ -43700,17 +43700,17 @@ Helper routine to compute chi-squared between distributions using the computed i
 
 # Wrapper of TH2D * TSVDUnfold::GetAdetCovMatrix(Int_t, Int_t)
 @trydoc raw"""
-    GetAdetCovGetMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
+    GetAdetCovMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
 Determine covariance matrix of unfolded spectrum from finite statistics in response matrix using pseudo experiments "ntoys" - number of pseudo experiments used for the propagation "seed" - seed for pseudo experiments.
 
-""" GetAdetCovGetMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)
+""" GetAdetCovMatrix(this::ByRef1{TSVDUnfold}, ntoys::Int32, seed::Int32)
 
 # Wrapper of TH2D * TSVDUnfold::GetUnfoldCovMatrix(const TH2D *, Int_t, Int_t)
 @trydoc raw"""
-    GetUnfoldCovGetMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
+    GetUnfoldCovMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)::CxxPtr1{TH2D}
 Determine for given input error matrix covariance matrix of unfolded spectrum from toy simulation given the passed covariance matrix on measured spectrum "cov" - covariance matrix on the measured spectrum, to be propagated "ntoys" - number of pseudo experiments used for the propagation "seed" - seed for pseudo experiments Note that this covariance matrix will contain effects of forced normalisation if spectrum is normalised to unit area.
 
-""" GetUnfoldCovGetMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)
+""" GetUnfoldCovMatrix(this::ByRef1{TSVDUnfold}, cov::ByConstPtr1{TH2D}, ntoys::Int32, seed::Int32)
 
 # Wrapper of void TSVDUnfold::SetNormalize(Bool_t)
 @trydoc raw"""
@@ -43812,10 +43812,10 @@ Perform the unfolding with regularisation parameter kreg.
 
 # Wrapper of void TGDMLMatrix::SetMatrixAsString(const char *)
 @trydoc raw"""
-    SetGetMatrixAsGetString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})::Nothing
+    SetMatrixAsString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})::Nothing
 
 
-""" SetGetMatrixAsGetString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})
+""" SetMatrixAsString(this::ByRef1{TGDMLMatrix}, mat::ByCopy{String})
 
 # Wrapper of void TGeoShape::AfterStreamer()
 @trydoc raw"""
@@ -44856,10 +44856,10 @@ Register all matrices of the boolean node and descendents.
 
 # Wrapper of Bool_t TGeoBoolNode::ReplaceMatrix(TGeoMatrix *, TGeoMatrix *)
 @trydoc raw"""
-    ReplaceGetMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})::Bool
+    ReplaceMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})::Bool
 Replace one of the matrices.
 Does not work with [TGeoIdentity](@ref). Returns true if replacement was successful.
-""" ReplaceGetMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})
+""" ReplaceMatrix(this::ByRef1{TGeoBoolNode}, mat::ByPtr1{TGeoMatrix}, newmat::ByPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoBoolNode::SetSelected(Int_t)
 @trydoc raw"""
@@ -44996,10 +44996,10 @@ Perform a rotation about Z having the sine/cosine of the rotation angle.
 
 # Wrapper of Double_t * TGeoHMatrix::GetRotationMatrix()
 @trydoc raw"""
-    GetRotationGetMatrix(this::ByRef1{TGeoHMatrix})::CxxPtr2{Float64}
+    GetRotationMatrix(this::ByRef1{TGeoHMatrix})::CxxPtr2{Float64}
 
 
-""" GetRotationGetMatrix(this::ByRef1{TGeoHMatrix})
+""" GetRotationMatrix(this::ByRef1{TGeoHMatrix})
 
 # Wrapper of Double_t * TGeoHMatrix::GetScale()
 @trydoc raw"""
@@ -45347,10 +45347,10 @@ Set matrix elements in the GEANT3 way.
 
 # Wrapper of void TGeoRotation::SetMatrix(const Double_t *)
 @trydoc raw"""
-    SetGetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})::Nothing
+    SetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})::Nothing
 
 
-""" SetGetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})
+""" SetMatrix(this::ByRef1{TGeoRotation}, rot::ByConstPtr2{Float64})
 
 # Wrapper of void TGeoRotation::SetRotation(const TGeoMatrix &)
 @trydoc raw"""
@@ -45592,10 +45592,10 @@ Add and extra daughter to the current path array. No validity check performed !
 
 # Wrapper of void TGeoBranchArray::CleanMatrix()
 @trydoc raw"""
-    CleanGetMatrix(this::ByRef1{TGeoBranchArray})::Nothing
+    CleanMatrix(this::ByRef1{TGeoBranchArray})::Nothing
 Garbage collect the stored matrix.
 
-""" CleanGetMatrix(this::ByRef1{TGeoBranchArray})
+""" CleanMatrix(this::ByRef1{TGeoBranchArray})
 
 # Wrapper of void TGeoBranchArray::CopyTo(TGeoBranchArray *)
 @trydoc raw"""
@@ -45941,10 +45941,10 @@ Works only after calling FindNextBoundary.
 
 # Wrapper of TGeoHMatrix * TGeoNavigator::GetHMatrix()
 @trydoc raw"""
-    GetHGetMatrix(this::ByRef1{TGeoNavigator})::CxxPtr1{TGeoHMatrix}
+    GetHMatrix(this::ByRef1{TGeoNavigator})::CxxPtr1{TGeoHMatrix}
 Return stored current matrix (global_ matrix of the next touched node).
 
-""" GetHGetMatrix(this::ByRef1{TGeoNavigator})
+""" GetHMatrix(this::ByRef1{TGeoNavigator})
 
 # Wrapper of Int_t TGeoNavigator::GetVirtualLevel()
 @trydoc raw"""
@@ -46423,10 +46423,10 @@ The relative matrix is made of : a translation (x,y,z) and a rotation matrix nam
 
 # Wrapper of void TGeoBuilder::RegisterMatrix(TGeoMatrix *)
 @trydoc raw"""
-    RegisterGetMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})::Nothing
+    RegisterMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})::Nothing
 Register a matrix to the list of matrices.
 It will be cleaned-up at the destruction [TGeoManager](@ref).
-""" RegisterGetMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})
+""" RegisterMatrix(this::ByRef1{TGeoBuilder}, matrix::ByPtr1{TGeoMatrix})
 
 # Wrapper of TGeoVolume * TGeoBuilder::Volume(const char *, const char *, Int_t, Double_t *, Int_t)
 @trydoc raw"""
@@ -46459,10 +46459,10 @@ Add border surface;.
 
 # Wrapper of void TGeoManager::AddGDMLMatrix(TGDMLMatrix *)
 @trydoc raw"""
-    AddGDMLGetMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})::Nothing
+    AddGDMLMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})::Nothing
 Add GDML matrix;.
 
-""" AddGDMLGetMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})
+""" AddGDMLMatrix(this::ByRef1{TGeoManager}, mat::ByPtr1{TGDMLMatrix})
 
 # Wrapper of Int_t TGeoManager::AddMaterial(const TGeoMaterial *)
 @trydoc raw"""
@@ -46968,10 +46968,10 @@ Make a default painter if none present. Returns pointer to it.
 
 # Wrapper of TGeoHMatrix * TGeoManager::GetHMatrix()
 @trydoc raw"""
-    GetHGetMatrix(this::ByRef1{TGeoManager})::CxxPtr1{TGeoHMatrix}
+    GetHMatrix(this::ByRef1{TGeoManager})::CxxPtr1{TGeoHMatrix}
 Return stored current matrix (global_ matrix of the next touched node).
 
-""" GetHGetMatrix(this::ByRef1{TGeoManager})
+""" GetHMatrix(this::ByRef1{TGeoManager})
 
 # Wrapper of TVirtualGeoTrack * TGeoManager::GetLastTrack()
 @trydoc raw"""
@@ -47403,10 +47403,10 @@ Optionally locks physical nodes (default).
 
 # Wrapper of void TGeoManager::RegisterMatrix(const TGeoMatrix *)
 @trydoc raw"""
-    RegisterGetMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
+    RegisterMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
 Register a matrix to the list of matrices.
 It will be cleaned-up at the destruction [TGeoManager](@ref).
-""" RegisterGetMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})
+""" RegisterMatrix(this::ByRef1{TGeoManager}, matrix::ByConstPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoManager::RemoveMaterial(Int_t)
 @trydoc raw"""
@@ -47619,17 +47619,17 @@ Set type of exploding view (see [TGeoPainter!SetExplodedView()](@ref))
 
 # Wrapper of void TGeoManager::SetMatrixReflection(Bool_t)
 @trydoc raw"""
-    SetGetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)::Nothing
+    SetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)::Nothing
 
 
-""" SetGetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)
+""" SetMatrixReflection(this::ByRef1{TGeoManager}, flag::Bool)
 
 # Wrapper of void TGeoManager::SetMatrixTransform(Bool_t)
 @trydoc raw"""
-    SetGetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)::Nothing
+    SetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)::Nothing
 
 
-""" SetGetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)
+""" SetMatrixTransform(this::ByRef1{TGeoManager}, on::Bool)
 
 # Wrapper of void TGeoManager::SetMaxThreads(Int_t)
 @trydoc raw"""
@@ -48594,10 +48594,10 @@ Return current index.
 
 # Wrapper of TGeoMatrix * TGeoPatternFinder::GetMatrix()
 @trydoc raw"""
-    GetGetMatrix(this::ByRef1{TGeoPatternFinder})::CxxPtr1{TGeoMatrix}
+    GetMatrix(this::ByRef1{TGeoPatternFinder})::CxxPtr1{TGeoMatrix}
 Return current matrix.
 
-""" GetGetMatrix(this::ByRef1{TGeoPatternFinder})
+""" GetMatrix(this::ByRef1{TGeoPatternFinder})
 
 # Wrapper of TGeoNode * TGeoPatternFinder::GetNodeOffset(Int_t)
 @trydoc raw"""
@@ -49161,10 +49161,10 @@ find the node containing the query point
 
 # Wrapper of void TGeoNodeMatrix::SetMatrix(const TGeoMatrix *)
 @trydoc raw"""
-    SetGetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
+    SetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})::Nothing
 Matrix setter.
 
-""" SetGetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})
+""" SetMatrix(this::ByRef1{TGeoNodeMatrix}, matrix::ByConstPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoNodeOffset::SetFinder(TGeoPatternFinder *)
 @trydoc raw"""
@@ -49217,10 +49217,10 @@ Set the top name for path.
 
 # Wrapper of void TGeoIterator::SetType(Int_t)
 @trydoc raw"""
-    SetGetType(this::ByRef1{TGeoIterator}, type::Int32)::Nothing
+    SetType(this::ByRef1{TGeoIterator}, type::Int32)::Nothing
 
 
-""" SetGetType(this::ByRef1{TGeoIterator}, type::Int32)
+""" SetType(this::ByRef1{TGeoIterator}, type::Int32)
 
 # Wrapper of void TGeoIterator::SetUserPlugin(TGeoIteratorPlugin *)
 @trydoc raw"""
@@ -50619,10 +50619,10 @@ The difference between [Paint()](@ref) and [Draw()](@ref) is that when a object 
 
 # Wrapper of void TGeoPNEntry::SetMatrix(const TGeoHMatrix *)
 @trydoc raw"""
-    SetGetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})::Nothing
+    SetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})::Nothing
 Set the additional matrix for this node entry.
 The matrix will be deleted by this class unless registered by the user to gGeoManager
-""" SetGetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})
+""" SetMatrix(this::ByRef1{TGeoPNEntry}, matrix::ByConstPtr1{TGeoHMatrix})
 
 # Wrapper of void TGeoPNEntry::SetPhysicalNode(TGeoPhysicalNode *)
 @trydoc raw"""
@@ -50671,10 +50671,10 @@ Called for all registered physical nodes after an [Align()](@ref) call.
 
 # Wrapper of void TGeoPhysicalNode::SetMatrixOrig(const TGeoMatrix *)
 @trydoc raw"""
-    SetGetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})::Nothing
+    SetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})::Nothing
 Allows PN entries (or users) to preset the local_ original matrix for the last node pointed by the path.
 
-""" SetGetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})
+""" SetMatrixOrig(this::ByRef1{TGeoPhysicalNode}, local_::ByConstPtr1{TGeoMatrix})
 
 # Wrapper of void TGeoPhysicalNode::SetVisibility(Bool_t)
 @trydoc raw"""
