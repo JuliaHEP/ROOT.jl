@@ -33,7 +33,7 @@ jobs:
           arch: ${{ matrix.arch }}
       - name: Install ROOT
         run: |
-             CONDA_BINDIR="`julia .github/workflows/install_root_macos.jl | tail -n 1`"
+             CONDA_BINDIR="`sh .github/workflows/install_root_with_conda.sh | tail -n 1`"
              source "$CONDA_BINDIR/activate"
              cat >> "$GITHUB_ENV" <<EOF
              #LDFLAGS="$LDFLAGS"
