@@ -24565,10 +24565,10 @@ Stream an object of class [TObject](@ref).
 
 # Wrapper of void TVirtualPadPainter::DrawPixels(const unsigned char *, UInt_t, UInt_t, Int_t, Int_t, Bool_t)
 @trydoc raw"""
-    DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr1{unsigned Int8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)::Nothing
+    DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr2{UInt8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)::Nothing
 
 
-""" DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr1{unsigned Int8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)
+""" DrawPixels(this::ByRef1{TVirtualPadPainter}, pixelData::ByConstPtr2{UInt8}, width::UInt32, height::UInt32, dstX::Int32, dstY::Int32, enableAlphaBlending::Bool)
 
 # Wrapper of void TVirtualPadPainter::DrawPolyLine(Int_t, const Double_t *, const Double_t *)
 @trydoc raw"""
@@ -25804,7 +25804,7 @@ Creates a pixmap of the specified width and height and returns a pixmap ID that 
 
 # Wrapper of Pixmap_t TVirtualX::CreatePixmapFromData(unsigned char *, UInt_t, UInt_t)
 @trydoc raw"""
-    CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr1{unsigned Int8}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
+    CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr2{UInt8}, width::UInt32, height::UInt32)::ByCopy{Pixmap_t}
 create pixmap from RGB data.
 RGB data is in format:
 
@@ -25813,7 +25813,7 @@ RGB data is in format:
 (C++ version of the code)
 
 Pixels are numbered from left to right and from top to bottom. Note that data must be 32-bit aligned
-""" CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr1{unsigned Int8}, width::UInt32, height::UInt32)
+""" CreatePixmapFromData(this::ByRef1{TVirtualX}, bits::ByPtr2{UInt8}, width::UInt32, height::UInt32)
 
 # Wrapper of Region_t TVirtualX::CreateRegion()
 @trydoc raw"""
@@ -26164,7 +26164,7 @@ Returns character up vector.
 
 # Wrapper of unsigned char * TVirtualX::GetColorBits(Drawable_t, Int_t, Int_t, UInt_t, UInt_t)
 @trydoc raw"""
-    GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{Drawable_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::CxxPtr1{unsigned Int8}
+    GetColorBits(this::ByRef1{TVirtualX}, wid::ByCopy{Drawable_t}, x::Int32, y::Int32, w::UInt32, h::UInt32)::CxxPtr2{UInt8}
 Returns an array of pixels created from a part of drawable (defined by x, y, w, h) in format:
 b1, g1, r1, 0,  b2, g2, r2, 0 ... bn, gn, rn, 0 ..
 
@@ -26289,10 +26289,10 @@ That is the window in which, for example some text is selected.
 
 # Wrapper of Int_t TVirtualX::GetProperty(Window_t, Atom_t, Long_t, Long_t, Bool_t, Atom_t, Atom_t *, Int_t *, ULong_t *, ULong_t *, unsigned char **)
 @trydoc raw"""
-    GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr1{unsigned Int8})::Int32
+    GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr2{UInt8})::Int32
 Returns the actual type of the property; the actual format of the property; the number of 8-bit, 16-bit, or 32-bit items transferred; the number of bytes remaining to be read in the property; and a pointer to the data actually returned.
 
-""" GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr1{unsigned Int8})
+""" GetProperty(this::ByRef1{TVirtualX}, ::ByCopy{Window_t}, ::ByCopy{Atom_t}, ::Int64, ::Int64, ::Bool, ::ByCopy{Atom_t}, ::ByPtr1{Atom_t}, ::ByPtr2{Int32}, ::ByPtr2{UInt64}, ::ByPtr2{UInt64}, ::ByPtr2{UInt8})
 
 # Wrapper of void TVirtualX::GetRegionBox(Region_t, Rectangle_t *)
 @trydoc raw"""
