@@ -35,11 +35,18 @@ Value of ROOTSYS preference when this module was precompiled.
 const rootsys = ROOTprefs.get_ROOTSYS()
 
 """
+  `libroot_julia_from_jll`
+
+Flag telling if the package was precompiled with the C++ wrapper library from the jll package (true) or built for an external C++ ROOT installation (false).
+"""
+const libroot_julia_from_jll = root_jll_preferred && Internals.CxxBuild.is_jll_supported()
+
+"""
   `libroot_julia_path`
 
 Path of the shared library containing the C++ code interfacing the Julia ROOT package with the C++ ROOT libraries. This library is provided by the package ROOT_julia_jll included in the dependency, when the C++ ROOT libraries are installed by the Julia package manager from the ROOT_jll package, or built on the fly (at first ROOT module import), if they are installed by another mean. 
 """
-const libroot_julia_path =  Internals.CxxBuild.get_or_build_libroot_julia() 
+const libroot_julia_path =  Internals.CxxBuild.get_or_build_libroot_julia(nobuild=Preferences.load_preference("ROOT", "no_auto_compile", false))
 
 const _libroot_compilation_failed = if isempty(libroot_julia_path) #precompilation failed
    # trick to invalidate the precompilation cache
@@ -47,14 +54,6 @@ const _libroot_compilation_failed = if isempty(libroot_julia_path) #precompilati
    ROOTprefs._set_preference("internal_compilation_failed", true)
    ROOTprefs._load_preference("internal_compilation_failed", true)
 end
-
-
-"""
-  `libroot_julia_from_jll`
-
-Flag telling if the package was precompiled with the C++ wrapper library from the jll package (true) or built for an external C++ ROOT installation (false).
-"""
-const libroot_julia_from_jll = root_jll_preferred && Internals.CxxBuild.is_jll_supported()
 
 # Display libroot_julia_path value on precompilation
 isempty(libroot_julia_path) || (@info "ROOT wrapper library: $libroot_julia_path")
@@ -105,7 +104,7 @@ end
 function __init__()
     if !ok()
         ROOTprefs._set_preference("internal_compilation_failed", nothing)
-        @warn "The imported ROOT module is empty because of the error mentioned above. To import the module again after resolving the issue, a restart of Julia is required."
+        @warn "The imported ROOT module is empty because its c++ part is not compiled. Use ROOT.cxxcompile() to compile it. After compilation, restart of Julia is required after the compilation."
     else
         libroot_julia_from_jll && Internals.loadlibdeps()
         @initcxx

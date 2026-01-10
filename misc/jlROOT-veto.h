@@ -213,5 +213,9 @@ bool ::operator==(const std::shared_ptr<TObjLink> &, TObjOptLink *);
 TObject *& TObjArray::operator[](Int_t);
 TObject * TObjArray::operator[](Int_t);
 
+//Fail to link on ARM64 (tested under macOS)
+void ROOT::AddClass(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
+void ROOT::AddClass(const char *, Version_t, DictFuncPtr_t, Int_t)
+
 
 long double;

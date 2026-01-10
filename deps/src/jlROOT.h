@@ -1,3 +1,5 @@
+#ifndef JLROOT_H
+#define JLROOT_H
 #include "TVectorT.h"
 #include "cstdint"
 #include "Buttons.h"
@@ -301,3 +303,4 @@
 #include "TVirtualGeoPainter.h"
 #include "TVirtualGeoTrack.h"
 #include "TVirtualMagField.h"
+#endif //JLROOT_H not defined

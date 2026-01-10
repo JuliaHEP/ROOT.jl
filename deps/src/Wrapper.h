@@ -1,3 +1,5 @@
+#ifndef WRAPPER_H
+#define WRAPPER_H
 #include "jlcxx/jlcxx.hpp"
 
 struct Wrapper{
@@ -8,3 +10,4 @@ struct Wrapper{
 protected:
   jlcxx::Module& module_;
 };
+#endif //WRAPPER_H not defined

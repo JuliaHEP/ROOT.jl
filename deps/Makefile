@@ -9,7 +9,15 @@ UNAME=$(shell uname)
 ROOT_LIBS = $(shell $(ROOT_CONFIG) --libs) -lGeom
 ROOT_INC_DIR = $(shell $(ROOT_CONFIG) --incdir)
 
+JULIA = julia
+
 CPPFLAGS = -MMD -I. -I $(CXXWRAP_PREFIX)/include
+#JCXX_HAS_RANGE must be set to 0 if libcxxwrap_julia_stl.so was compiled without std::ranges support
+#JLCXX_HAS_RANGE = isdefined(CxxWrap.StdLib, :HAS_RANGES) ? 1 : 0
+#Disable dependencies on std::ranges if libcxxwrap_julis_stl.so was compiled without it
+ifeq ($(JLCXX_HAS_RANGES), 0)
+   CPPFLAGS += -DJLCXX_FORCE_RANGES_OFF
+endif
 CXXFLAGS = $(patsubst -std=gnu%,,$(shell $(JL_SHARE)/julia-config.jl --cflags))
 CXXFLAGS += $(shell $(ROOT_CONFIG) --cflags)
 CXXFLAGS += -I$(VDT_DIR)/include
@@ -19,7 +27,6 @@ CXXFLAGS += -Wno-c++20-extensions
 #CXXFLAGS += -Wall -O0 -g     #To compile with debugger infomation
 LDFLAGS = $(shell $(JL_SHARE)/julia-config.jl --ldflags)
 LDLIBS = $(shell $(JL_SHARE)/julia-config.jl --ldlibs) -L$(CXXWRAP_PREFIX)/lib -lcxxwrap_julia -lcxxwrap_julia_stl
-JULIA = julia
 
 CXX_IS_CLANG = $(shell $(CXX) -dM -E - < /dev/null | grep -c __clang__)
 
@@ -39,8 +46,10 @@ endif
 
 ifneq ($(CXX_IS_CLANG), 0)
 	CXXFLAGS += -ferror-limit=3
+	PCH_SUFFIX=.pch
 else #assuming gcc
 	CXXFLAGS += -fmax-errors=3
+	PCH_SUFFIX=.gch
 endif
 
 
@@ -94,16 +103,29 @@ JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=..
 JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/write_tree3.jl \
 && JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=.. TTree_examples/read_tree3.jl
 
-$(BUILD_DIR)/%.o: src/%.cxx
+#$(BUILD_DIR)/pch.h: 
+#	$(Q) [ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
+#	echo '#include "Wrapper.h"\n#include "jlROOT.h"\n#include "jlcxx/functions.hpp"\n#include "jlcxx/stl.hpp"\n' > $@
+#
+#$(BUILD_DIR)/%.h$(PCH_SUFFIX): $(BUILD_DIR)/%.h
+#	@echo "Precompile the header files."
+#	$(Q) $(COMPILE.cc) $(CPPFLAGS) -I src -x c++-header -o $@ $<
+
+$(BUILD_DIR)/pch.h$(PCH_SUFFIX):
+	@echo "Precompile the header files."
+	$(Q) [ -d $(BUILD_DIR)/include ] || mkdir -p $(BUILD_DIR)/include
+	$(Q)echo '#include "Wrapper.h"\n#include "jlROOT.h"\n#include "jlcxx/functions.hpp"\n#include "jlcxx/stl.hpp"\n' > $(BUILD_DIR)/include/pch.h
+	$(Q) $(COMPILE.cc) -Isrc -x c++-header -o $@ $(BUILD_DIR)/include/pch.h
+
+$(BUILD_DIR)/%.o: src/%.cxx $(BUILD_DIR)/pch.h$(PCH_SUFFIX)
 	@echo "Make $(notdir $@)"
-	$(Q) [ -d $(BUILD_DIR)/libROOT/build ] || mkdir -p $(BUILD_DIR)/libROOT/build
-	$(Q) $(COMPILE.cc) $(CPPFLAGS) -o $@ $<
+	$(Q) [ -d $(BUILD_DIR) ] || mkdir -p $(BUILD_DIR)
+	$(Q) $(COMPILE.cc) -include $(BUILD_DIR)/pch.h -o $@ $<
 
 $(BUILD_DIR)/libroot_julia$(SO_SUFFIX): $(OBJS)
 	@echo "Make $(notdir $@)"
 	$(Q) $(MAKE) check_root
 	$(Q) $(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
-
 
 echo_%:
 	@echo "$* = $(subst ",\",$($*))"
