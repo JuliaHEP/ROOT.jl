@@ -18,6 +18,7 @@ jobs:
       matrix:
         version:
           - '1.10'
+          - '1'
         os:
 #          - ubuntu-latest
           - macOS-latest
@@ -31,27 +32,33 @@ jobs:
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
+      - uses: julia-actions/cache@v2
+      - name: Cache ROOT install
+        id: cache-root-install
+        uses: actions/cache@v5
+        with:
+          path: conda_for_rootjl
+          key: ${{ runner.os }}-${{ matrix.arch }}-root-${{ hashFiles('.github/workflows/install_root_with_conda.sh')}}
       - name: Install ROOT
+        if: steps.cache-root-install.outputs.cache-hit != 'true'
         run: |
              CONDA_BINDIR="`sh .github/workflows/install_root_with_conda.sh | tail -n 1`"
              source "$CONDA_BINDIR/activate"
              cat >> "$GITHUB_ENV" <<EOF
-             #LDFLAGS="$LDFLAGS"
-             #CPPFLAGS="$CPPFLAGS"
-             #LIBTOOL="$LIBTOOL"
-             #CXXFLAGS="$CXXFLAGS"
-             #CPP="$CPP"
              PATH="$PATH"
-             #LD="$LD"
              CXX="$CXX"
-             #CFLAGS="$CFLAGS"
-             #CC="$CC"
              EOF
              echo -n "ROOT binary: " 1>&2
              which root 1>&2
       - name: Build the Julia wrapper library
         run: |
-             julia --project=@. -e 'import Pkg; Pkg.add("ROOTprefs"); using ROOTprefs; set_use_root_jll(false); set_ROOTSYS()' 1>&2
+             cd ..
+             #for some reason in auto-compile mode, the compilation logs are not displayed when run in the CI. Use explicit compile call.
+             julia --project=@. -e 'import Pkg; Pkg.add("ROOTprefs"); using ROOTprefs; ROOTprefs._set_preference("no_auto_compile", true); Pkg.add(path="./ROOT.jl"); import ROOT; ROOT.cxxcompile();' 1>&2
+             #trigger package precompilation
              julia --project=@. -e 'import ROOT' 1>&2
       #- uses: julia-actions/julia-buildpkg@latest
-      - uses: julia-actions/julia-runtest@latest
+      - name: Run package tests
+        uses: julia-actions/julia-runtest@latest
+        with:
+          annotate: true 

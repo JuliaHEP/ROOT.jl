@@ -35,7 +35,7 @@ end
 # Build the libroot_julia library for the ROOT libraries installed under rootsys directory.
 # Return the full path to libroot_julia or an empty string in case of failure.
 #
-function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
+function build_root_wrapper(rootsys=ROOTprefs.get_ROOTSYS(); nobuild=false)
 
     rootconfig = joinpath(rootsys, "bin", "root-config")
     used_root_version = readchomp(`$rootconfig --version`)
@@ -51,9 +51,10 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
     CXXWRAP_PREFIX = CxxWrap.prefix_path()
     JL_SHARE = joinpath(Sys.BINDIR, Base.DATAROOTDIR, "julia")
     JULIA = joinpath(Sys.BINDIR, "julia")
+    JLCXX_HAS_RANGES = isdefined(CxxWrap.StdLib, :HAS_RANGES) ? 1 : 0
     depsdir = joinpath(dirname(@__DIR__), "deps")
     srcdir = joinpath(depsdir, "src")
-    cmd=`make -C "$depsdir" BUILD_DIR="$buildpath" CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS) VDT_DIR="$(VDT_jll.artifact_dir)"`
+    cmd=`make -C "$depsdir" BUILD_DIR="$buildpath" CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS) VDT_DIR="$(VDT_jll.artifact_dir)" JLCXX_HAS_RANGES=$(JLCXX_HAS_RANGES)`
     extra_make_options = ROOTprefs._load_preference("extra_make_options", "")
     if !isempty(extra_make_options)
         cmd = Cmd([collect(cmd)..., extra_make_options])
@@ -80,7 +81,7 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
         end
     end
 
-    build = true
+    libready = false
     
     #Check if library is already built and up-to-date. Returns if it's the case.
     sigfile = joinpath(scratch, "sig")
@@ -90,10 +91,20 @@ function build_root_wrapper(rootsys = ROOTprefs.get_ROOTSYS())
         oldsig = readline(sigfile)
         if newsig == oldsig
             @info "Library $libpath is already up-to-date."
-            build = false
+            libready = true
         end
         t1 = time()
         @info "Time spent to check for modifications in the ROOT-julia library source code that would require a compilation: $(round(t1-t0, digits=2)) s"
+    end
+
+    build = if libready
+        false
+    elseif nobuild
+        libpath = ""
+        @info "Build skipped as required by the no_auto_compile preference setting."
+        false
+    else
+        true
     end
 
     if build
@@ -248,7 +259,7 @@ function check_rootsys()
 end
 
 
-function get_or_build_libroot_julia()
+function get_or_build_libroot_julia(;nobuild=false)
 
     if get_use_root_jll() && is_jll_supported()
         #prebuilt wrapper used, no build to perform
@@ -285,7 +296,7 @@ function get_or_build_libroot_julia()
         end
     end
 
-    libpath =  build_root_wrapper(rootsys)
+    libpath =  build_root_wrapper(rootsys, nobuild=nobuild)
    
     if !isempty(libpath) && rootsys != pref_rootsys
       #If build succeeded and ROOTSYS was modified, update LocalPreference.toml

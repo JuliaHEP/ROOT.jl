@@ -20,11 +20,6 @@ struct JlGlobal: public Wrapper {
     // defined in /home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include/Rtypes.h:120:19
     t.method("ROOT!CreateClass", [](const char * arg0, int16_t arg1, const std::type_info & arg2, TVirtualIsAProxy * arg3, const char * arg4, const char * arg5, int32_t arg6, int32_t arg7)->TClass * { return ROOT::CreateClass(arg0, (Version_t)arg1, arg2, arg3, arg4, arg5, (Int_t)arg6, (Int_t)arg7); }, jlcxx::arg("this"), jlcxx::arg("cname"), jlcxx::arg("id"), jlcxx::arg("info"), jlcxx::arg("isa"), jlcxx::arg("dfil"), jlcxx::arg("ifil"), jlcxx::arg("dl"), jlcxx::arg("il"));
 
-    DEBUG_MSG("Adding wrapper for void ::ROOT::AddClass(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void ::ROOT::AddClass(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
-    // defined in /home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include/Rtypes.h:124:16
-    t.method("ROOT!AddClass", [](const char * arg0, int16_t arg1, const std::type_info & arg2, DictFuncPtr_t arg3, int32_t arg4)->void { ROOT::AddClass(arg0, (Version_t)arg1, arg2, arg3, (Int_t)arg4); }, jlcxx::arg("this"), jlcxx::arg("cname"), jlcxx::arg("id"), jlcxx::arg("info"), jlcxx::arg("dict"), jlcxx::arg("pragmabits"));
-
     DEBUG_MSG("Adding wrapper for void ::ROOT::RemoveClass(const char *, TClass *) (" __HERE__ ")");
     // signature to use in the veto list: void ::ROOT::RemoveClass(const char *, TClass *)
     // defined in /home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include/Rtypes.h:126:16
@@ -1057,14 +1052,6 @@ struct JlGlobal: public Wrapper {
     // signature to use in the veto list: TBits ::operator^(const TBits &, const TBits &)
     // defined in /home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include/TBits.h:177:14
     t.method("xor", [](const TBits & arg0, const TBits & arg1)->TBits { return operator^(arg0, arg1); }, jlcxx::arg("this"), jlcxx::arg("lhs"), jlcxx::arg("rhs"));
-
-    module_.unset_override_module();
-
-    DEBUG_MSG("Adding wrapper for void ::ROOT::AddClass(const char *, Version_t, DictFuncPtr_t, Int_t) (" __HERE__ ")");
-    // signature to use in the veto list: void ::ROOT::AddClass(const char *, Version_t, DictFuncPtr_t, Int_t)
-    // defined in /home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include/TClassTable.h:100:16
-    t.method("ROOT!AddClass", [](const char * arg0, int16_t arg1, DictFuncPtr_t arg2, int32_t arg3)->void { ROOT::AddClass(arg0, (Version_t)arg1, arg2, (Int_t)arg3); }, jlcxx::arg("this"), jlcxx::arg("cname"), jlcxx::arg("id"), jlcxx::arg("dict"), jlcxx::arg("pragmabits"));
-    module_.set_override_module(jl_base_module);
 
     DEBUG_MSG("Adding wrapper for TBuffer & ::operator>>(TBuffer &, TArrayL *&) (" __HERE__ ")");
     // signature to use in the veto list: TBuffer & ::operator>>(TBuffer &, TArrayL *&)
