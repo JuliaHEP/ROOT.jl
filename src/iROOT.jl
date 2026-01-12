@@ -8,7 +8,7 @@ end
 
 function _init_event_loop()
     ROOT!EnableThreadSafety()
-    Delete(TCanvas())
+    TCanvas()
     SetBatch(ROOT!GetROOT(), false)
     schedule(Task(_event_loop))
     nothing
