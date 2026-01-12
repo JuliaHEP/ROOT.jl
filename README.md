@@ -91,7 +91,7 @@ Non-static methods of C++ classes are exported, the other symbols (classes, glob
 ```julia
 import ROOT
 
-ROOT.demo()
+d = ROOT.demo() #d stores references to the drawn objets to protect them from garbage collection
 ```
 
 ### Simple example
@@ -128,6 +128,32 @@ Close(f)
 ### More examples
 
 More examples can be found in the `examples` directory.
+
+## Important notes on graphics
+
+### Preventing disappearance of graphic windows
+
+In interactive mode, when instantiating a `TCanvas`, the instance must be assigned to a variable to keep the window alive. If no reference is accessible from the current scope, then the window will be closed as soon as the garbage collector reclaims the memory used by the orphaned instance. For example, we will write in REPL:
+
+```julia-repl
+c = ROOT.TCanvas()
+```
+
+and avoid
+
+```julia-repl
+ROOT.TCanvas() #The opened window will disappear after some undefined time!
+```
+
+The same applies for the objects drawn in the canvas, for which references should also be kept.
+
+This behaviour differs in two ways with respect to the C++ and Python interfaces of ROOT:
+- the closure of the window is delayed, which makes difficult figuring out the reason of the window disappearance;
+- an anonymous instance in the top scope of C++ or ROOT REPL will never be deleted, while in Julia the garbage collector will eventually delete it.
+
+### Canvas update
+
+With current ROOT.jl releases, we need click on the Canvas to refresh it, after objects are added to it.
 
 ## Supported ROOT classes
 
