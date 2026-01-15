@@ -63,7 +63,7 @@ PRODUCTS = $(BUILD_DIR)/libroot_julia$(SO_SUFFIX)
 #WRAPPER_CXX: = $(file < src/generated_cxx) Extra.cxx #does not work on MacOS
 include generated_cxx.make
 
-OBJS = $(addprefix $(BUILD_DIR)/, $(patsubst %.cxx,%.o, $(WRAPPER_CXX)))
+OBJS = $(addprefix $(BUILD_DIR)/, $(patsubst %.cxx,%.o,  CustomWrappers.cxx $(WRAPPER_CXX)))
 DEPS = $(patsubst %.o,%.d, $(OBJS))
 
 all: $(PRODUCTS)

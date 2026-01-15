@@ -217,5 +217,9 @@ TObject * TObjArray::operator[](Int_t);
 void ROOT::AddClass(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
 void ROOT::AddClass(const char *, Version_t, DictFuncPtr_t, Int_t)
 
+//defined with a private alias, which leads to generation of invalid code
+TFileMergeInfo::fIOFeatures;
 
+//not supported by CxxWrap
 long double;
+

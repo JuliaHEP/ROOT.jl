@@ -12,6 +12,7 @@ class TTree;
 #include "TTreeReaderArray.h"
 #include "TBranchPtr.h"
 #include "Rtypes.h"
+#include "ROOT/RVec.hxx"
 #include <vector>
 
 //TObject  TFileDirectory::Get(const char *namecycle) override;
@@ -59,6 +60,18 @@ template class TTreeReaderArray<Double_t>;
 //template class TTreeReaderArray<Long64_t>;
 //template class TTreeReaderArray<ULong64_t>;
 
+template class TTreeReaderArray<ROOT::RVec<Char_t>>;
+template class TTreeReaderArray<ROOT::RVec<UChar_t>>;
+template class TTreeReaderArray<ROOT::RVec<Short_t>>;
+template class TTreeReaderArray<ROOT::RVec<UShort_t>>;
+template class TTreeReaderArray<ROOT::RVec<Int_t>>;
+template class TTreeReaderArray<ROOT::RVec<UInt_t>>;
+template class TTreeReaderArray<ROOT::RVec<Long_t>>;
+template class TTreeReaderArray<ROOT::RVec<ULong_t>>;
+template class TTreeReaderArray<ROOT::RVec<Float_t>>;
+template class TTreeReaderArray<ROOT::RVec<Double_t>>;
+
+
 template<typename T>
 std::size_t GetSize(const TTreeReaderArray<T>* x){ return x->GetSize(); }
 FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Char_t>* x);
@@ -72,6 +85,16 @@ FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ULong_t>* x);
 FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Float_t>* x);
 FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Double_t>* x);
 
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Char_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<UChar_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Short_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<UShort_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Int_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<UInt_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Long_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<ULong_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Float_t>>* x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Double_t>>* x);
 
 template<typename T>
 std::size_t GetSize(const TTreeReaderArray<T>& x){ return x.GetSize(); }
@@ -86,6 +109,16 @@ FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ULong_t>& x);
 FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Float_t>& x);
 FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<Double_t>& x);
 
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Char_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<UChar_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Short_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<UShort_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Int_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<UInt_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Long_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<ULong_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Float_t>>& x);
+FCN_TEMPLATE std::size_t GetSize(const TTreeReaderArray<ROOT::RVec<Double_t>>& x);
 
 template class TBranchPtr<Char_t>;
 template class TBranchPtr<UChar_t>;
@@ -109,6 +142,27 @@ template class TBranchPtr<std::vector<ULong_t>>;
 template class TBranchPtr<std::vector<Float_t>>;
 template class TBranchPtr<std::vector<Double_t>>;
 
+template class TBranchPtr<ROOT::RVec<Char_t>>;
+template class TBranchPtr<ROOT::RVec<UChar_t>>;
+template class TBranchPtr<ROOT::RVec<Short_t>>;
+template class TBranchPtr<ROOT::RVec<UShort_t>>;
+template class TBranchPtr<ROOT::RVec<Int_t>>;
+template class TBranchPtr<ROOT::RVec<UInt_t>>;
+template class TBranchPtr<ROOT::RVec<Long_t>>;
+template class TBranchPtr<ROOT::RVec<ULong_t>>;
+template class TBranchPtr<ROOT::RVec<Float_t>>;
+template class TBranchPtr<ROOT::RVec<Double_t>>;
+
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<Char_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<UChar_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<Short_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<UShort_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<Int_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<UInt_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<Long_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<ULong_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<Float_t>>>;
+template class TBranchPtr<ROOT::RVec<ROOT::RVec<Double_t>>>;
 
 FCN_TEMPLATE TBranchPtr<Char_t>   Branch(TTree&, const char* name, Char_t&   obj, Int_t bufsize, Int_t splitlevel);
 FCN_TEMPLATE TBranchPtr<UChar_t>  Branch(TTree&, const char* name, UChar_t&  obj, Int_t bufsize, Int_t splitlevel);
@@ -132,6 +186,28 @@ FCN_TEMPLATE TBranchPtr<std::vector<ULong_t>>  Branch(TTree&, const char* name, 
 FCN_TEMPLATE TBranchPtr<std::vector<Float_t>>  Branch(TTree&, const char* name, std::vector<Float_t>& obj, Int_t bufsize, Int_t splitlevel);
 FCN_TEMPLATE TBranchPtr<std::vector<Double_t>> Branch(TTree&, const char* name, std::vector<Double_t>& obj, Int_t bufsize, Int_t splitlevel);
 
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<Char_t>>   Branch(TTree&, const char* name, ROOT::RVec<Char_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<UChar_t>>  Branch(TTree&, const char* name, ROOT::RVec<UChar_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<Short_t>>  Branch(TTree&, const char* name, ROOT::RVec<Short_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<UShort_t>> Branch(TTree&, const char* name, ROOT::RVec<UShort_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<Int_t>>    Branch(TTree&, const char* name, ROOT::RVec<Int_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<UInt_t>>   Branch(TTree&, const char* name, ROOT::RVec<UInt_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<Long_t>>   Branch(TTree&, const char* name, ROOT::RVec<Long_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ULong_t>>  Branch(TTree&, const char* name, ROOT::RVec<ULong_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<Float_t>>  Branch(TTree&, const char* name, ROOT::RVec<Float_t>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<Double_t>> Branch(TTree&, const char* name, ROOT::RVec<Double_t>& obj, Int_t bufsize, Int_t splitlevel);
+
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<Char_t>>>   Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<Char_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<UChar_t>>>  Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<UChar_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<Short_t>>>  Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<Short_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<UShort_t>>> Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<UShort_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<Int_t>>>    Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<Int_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<UInt_t>>>   Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<UInt_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<Long_t>>>   Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<Long_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<ULong_t>>>  Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<ULong_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<Float_t>>>  Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<Float_t>>& obj, Int_t bufsize, Int_t splitlevel);
+FCN_TEMPLATE TBranchPtr<ROOT::RVec<ROOT::RVec<Double_t>>> Branch(TTree&, const char* name, ROOT::RVec<ROOT::RVec<Double_t>>& obj, Int_t bufsize, Int_t splitlevel);
+
 FCN_TEMPLATE void SetAddress(TBranchPtr<Char_t>   obj, Char_t* add);
 FCN_TEMPLATE void SetAddress(TBranchPtr<UChar_t>  obj, UChar_t* add);
 FCN_TEMPLATE void SetAddress(TBranchPtr<Short_t>  obj, Short_t* add);
@@ -153,6 +229,28 @@ FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Long_t>>   obj, std::vector<L
 FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<ULong_t>>  obj, std::vector<ULong_t>& add);
 FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Float_t>>  obj, std::vector<Float_t>& add);
 FCN_TEMPLATE void SetObject(TBranchPtr<std::vector<Double_t>> obj, std::vector<Double_t>& add);
+
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<Char_t>>   obj, ROOT::RVec<Char_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<UChar_t>>  obj, ROOT::RVec<UChar_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<Short_t>>  obj, ROOT::RVec<Short_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<UShort_t>> obj, ROOT::RVec<UShort_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<Int_t>>    obj, ROOT::RVec<Int_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<UInt_t>>   obj, ROOT::RVec<UInt_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<Long_t>>   obj, ROOT::RVec<Long_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ULong_t>>  obj, ROOT::RVec<ULong_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<Float_t>>  obj, ROOT::RVec<Float_t>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<Double_t>> obj, ROOT::RVec<Double_t>& add);
+
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<Char_t>>>   obj, ROOT::RVec<ROOT::RVec<Char_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<UChar_t>>>  obj, ROOT::RVec<ROOT::RVec<UChar_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<Short_t>>>  obj, ROOT::RVec<ROOT::RVec<Short_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<UShort_t>>> obj, ROOT::RVec<ROOT::RVec<UShort_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<Int_t>>>    obj, ROOT::RVec<ROOT::RVec<Int_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<UInt_t>>>   obj, ROOT::RVec<ROOT::RVec<UInt_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<Long_t>>>   obj, ROOT::RVec<ROOT::RVec<Long_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<ULong_t>>>  obj, ROOT::RVec<ROOT::RVec<ULong_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<Float_t>>>  obj, ROOT::RVec<ROOT::RVec<Float_t>>& add);
+FCN_TEMPLATE void SetObject(TBranchPtr<ROOT::RVec<ROOT::RVec<Double_t>>> obj, ROOT::RVec<ROOT::RVec<Double_t>>& add);
 
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, Char_t*   add);
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, UChar_t*  add);
@@ -176,5 +274,51 @@ FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Float_t>**  add);
 FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, std::vector<Double_t>** add);
 
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<Char_t>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<UChar_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<Short_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<UShort_t>** add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<Int_t>**    add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<UInt_t>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<Long_t>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ULong_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<Float_t>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<Double_t>** add);
 
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<Char_t>>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<UChar_t>>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<Short_t>>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<UShort_t>>** add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<Int_t>>**    add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<UInt_t>>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<Long_t>>**   add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<ULong_t>>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<Float_t>>**  add);
+FCN_TEMPLATE Int_t SetBranchAddress(TTree& tree, const char* bname, ROOT::RVec<ROOT::RVec<Double_t>>** add);
+
+
+/*
+//ROOT::RVec
+template class ROOT::VecOps::RVec<Char_t>;
+template class ROOT::VecOps::RVec<UChar_t>;
+template class ROOT::VecOps::RVec<Short_t>;
+template class ROOT::VecOps::RVec<UShort_t>;
+template class ROOT::VecOps::RVec<Int_t>;
+template class ROOT::VecOps::RVec<UInt_t>;
+template class ROOT::VecOps::RVec<Long_t>;
+template class ROOT::VecOps::RVec<ULong_t>;
+template class ROOT::VecOps::RVec<Float_t>;
+template class ROOT::VecOps::RVec<Double_t>;
+
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<Char_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<UChar_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<Short_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<UShort_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<Int_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<UInt_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<ULong_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>>;
+template class ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>>;
+*/
 #endif //TEMPLATES_H not defined

@@ -7,6 +7,7 @@ The definition of the following types where not found. Use the extra_headers con
 The auto_veto parameter is set to true, generation of the wrappers that would have needed theses types were skipped.
 
 
+ClassInfo_t
 Iterator_t<TTreeReaderArray<T>>
 Iterator_t<const TTreeReaderArray<T>>
 ROOT::Fit::SparseData
@@ -15,20 +16,33 @@ ROOT::Math::Minimizer
 ROOT::Math::ParamFunctorTempl<double>
 ROOT::TClassAlt
 ROOT::TVirtualRWMutex::Hint_t
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<char>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<double>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<float>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<int>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<long>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<short>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<unsigned char>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<unsigned int>>
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<unsigned short>>
+ROOT::VecOps::RVec<bool>
+RVec<T>
+RVecN<T, N>
 TArchiveFile
 TBasket
 TBox
 TBranchRef
 TCanvasImp
 TClassGenerator
+TClassStreamer
 TComplex
 TContextMenu
 TCut
+TDataMember
 TEventList
 TF1::EFType
 TFileCacheRead
 TFileCacheWrite
-TFileMergeInfo
 TFrame
 TFriendElement
 TFunction
@@ -46,6 +60,7 @@ TMethod
 TMultiGraph
 TObjString
 TProtoClass
+TRealData
 TSQLResult
 TSecContext
 TSelector
@@ -58,14 +73,27 @@ TVectorT<float>
 TView
 TVirtualGeoConverter
 TVirtualIndex
+TVirtualRefProxy
 __gnu_cxx::__normal_iterator<const ROOT::Math::Delaunay2D::Triangle *,std::vector<ROOT::Math::Delaunay2D::Triangle,std::allocator<ROOT::Math::Delaunay2D::Triangle>>>
 __jmp_buf_tag[1]
+const type-parameter-0-0
 std::atomic<TDirectory *>
 std::basic_ofstream<char,std::char_traits<char>>
 std::basic_string_view<char,std::char_traits<char>>
+type-parameter-0-0
+typename SmallVectorTemplateCommon<type-parameter-0-0>::const_reference
+typename SmallVectorTemplateCommon<type-parameter-0-0>::reference
+typename SmallVectorTemplateCommon<type-parameter-0-0>::size_type
+typename SmallVectorTemplateCommon<type-parameter-0-0>::value_type
 
 Auto-vetoed functions
 ---------------------
+ROOT::Math::Minimizer * TBackCompFitter::GetMinimizer()
+ROOT::Math::IMultiGenFunction * TBackCompFitter::GetObjFunction()
+void TBackCompFitter::SetObjFunction(ROOT::Math::IMultiGenFunction *)
+TF1::TF1(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Int_t, Int_t, TF1::EAddToList)
+TF2::TF2(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
+TGraph::TGraph(const TVectorF &, const TVectorF &)
 TF3::TF3(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
 TGraphAsymmErrors::TGraphAsymmErrors(const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &, const TVectorF &)
 std::vector<ROOT::Math::Delaunay2D::Triangle>::const_iterator TGraphDelaunay2D::begin()
@@ -78,66 +106,10 @@ TH2F::TH2F(const TMatrixFBase &)
 TH2D::TH2D(const TMatrixDBase &)
 TNDArrayRef TNDArrayRef::operator[](Int_t)
 TNDArrayRef TNDArrayT::operator[](Int_t)
-Long64_t THStack::Merge(TCollection *, TFileMergeInfo *)
-TGeoRCPtr::TGeoRCPtr<T>(const TGeoRCPtr &)
-TGeoRCPtr & TGeoRCPtr::operator=(T *)
-TGeoRCPtr & TGeoRCPtr::operator=(const TGeoRCPtr &)
-bool TGeoRCPtr::operator==(const TGeoRCPtr &)
-TVirtualGeoConverter * TVirtualGeoConverter::Instance(TGeoManager *)
 ROOT::TClassAlt * ROOT::AddClassAlternate(const char *, const char *)
 void ROOT::RemoveClassAlternate(ROOT::TClassAlt *)
 void ROOT::Class_ShowMembers(TClass *, const void *, TMemberInspector &)
 void TObject::Execute(TMethod *, TObjArray *, Int_t *)
-TVectorT::TVectorT<Element>(const TVectorT &)
-TVectorT::TVectorT<Element>(const TMatrixTRow_const &)
-TVectorT::TVectorT<Element>(const TMatrixTColumn_const &)
-TVectorT::TVectorT<Element>(const TMatrixTDiag_const &)
-TVectorT & TVectorT::Shift(Int_t)
-TVectorT & TVectorT::ResizeTo(Int_t, Int_t)
-TVectorT & TVectorT::ResizeTo(Int_t)
-TVectorT & TVectorT::ResizeTo(const TVectorT &)
-TVectorT & TVectorT::Use(Int_t, Int_t, Element *)
-const TVectorT & TVectorT::Use(Int_t, Int_t, const Element *)
-TVectorT & TVectorT::Use(Int_t, Element *)
-const TVectorT & TVectorT::Use(Int_t, const Element *)
-TVectorT & TVectorT::Use(TVectorT &)
-const TVectorT & TVectorT::Use(const TVectorT &)
-TVectorT & TVectorT::GetSub(Int_t, Int_t, TVectorT &, Option_t *)
-TVectorT TVectorT::GetSub(Int_t, Int_t, Option_t *)
-TVectorT & TVectorT::SetSub(Int_t, const TVectorT &)
-TVectorT & TVectorT::Zero()
-TVectorT & TVectorT::Abs()
-TVectorT & TVectorT::Sqr()
-TVectorT & TVectorT::Sqrt()
-TVectorT & TVectorT::Invert()
-TVectorT & TVectorT::SelectNonZeros(const TVectorT &)
-TVectorT & TVectorT::operator=(const TVectorT &)
-TVectorT & TVectorT::operator=(const TMatrixTRow_const &)
-TVectorT & TVectorT::operator=(const TMatrixTColumn_const &)
-TVectorT & TVectorT::operator=(const TMatrixTDiag_const &)
-TVectorT & TVectorT::operator=(const TMatrixTSparseRow_const &)
-TVectorT & TVectorT::operator=(const TMatrixTSparseDiag_const &)
-TVectorT & TVectorT::operator=(Element)
-TVectorT & TVectorT::operator+=(Element)
-TVectorT & TVectorT::operator-=(Element)
-TVectorT & TVectorT::operator*=(Element)
-TVectorT & TVectorT::operator+=(const TVectorT &)
-TVectorT & TVectorT::operator-=(const TVectorT &)
-TVectorT & TVectorT::operator*=(const TMatrixT &)
-TVectorT & TVectorT::operator*=(const TMatrixTSym &)
-TVectorT & TVectorT::operator*=(const TMatrixTSparse &)
-Bool_t TVectorT::MatchesNonZeroPattern(const TVectorT &)
-Bool_t TVectorT::SomePositive(const TVectorT &)
-void TVectorT::AddSomeConstant(Element, const TVectorT &)
-TVectorT & TVectorT::Apply(const TElementActionT &)
-TVectorT & TVectorT::Apply(const TElementPosActionT &)
-void TVectorT::Add(const TVectorT &)
-void TVectorT::Add(const TVectorT &, const TVectorT &)
-TVectorT & TVectorT::Use(Int_t, Element *)
-const TVectorT & TVectorT::Use(Int_t, const Element *)
-TVectorT & TVectorT::Use(TVectorT &)
-const TVectorT & TVectorT::Use(const TVectorT &)
-TVectorT TVectorT::GetSub(Int_t, Int_t, Option_t *)
 std::string cling::printValue(const std::string_view *)
 ROOT::TVirtualRWMutex::Hint_t * ROOT::TVirtualRWMutex::ReadLock()
 void ROOT::TVirtualRWMutex::ReadUnLock(ROOT::TVirtualRWMutex::Hint_t *)
@@ -145,6 +117,38 @@ ROOT::TVirtualRWMutex::Hint_t * ROOT::TVirtualRWMutex::WriteLock()
 void ROOT::TVirtualRWMutex::WriteUnLock(ROOT::TVirtualRWMutex::Hint_t *)
 TIterCategory & TIterCategory::Begin()
 TIterCategory TIterCategory::End()
+TClass::TClass(ClassInfo_t *, Version_t, const char *, const char *, Int_t, Int_t, Bool_t)
+Bool_t TClass::CallShowMembers(const void *, TMemberInspector &, Bool_t)
+TMethod * TClass::GetClassMethod(const char *, const char *, Bool_t)
+TMethod * TClass::GetClassMethodWithPrototype(const char *, const char *, Bool_t, ROOT::EFunctionMatchMode)
+TDataMember * TClass::GetDataMember(const char *)
+ROOT::DelFunc_t TClass::GetDelete()
+ROOT::DesFunc_t TClass::GetDestructor()
+ROOT::DelArrFunc_t TClass::GetDeleteArray()
+ClassInfo_t * TClass::GetClassInfo()
+ROOT::DirAutoAdd_t TClass::GetDirectoryAutoAdd()
+TFunctionTemplate * TClass::GetFunctionTemplate(const char *)
+TMethod * TClass::GetMethod(const char *, const char *, Bool_t)
+TMethod * TClass::GetMethodWithPrototype(const char *, const char *, Bool_t, ROOT::EFunctionMatchMode)
+TMethod * TClass::GetMethodAny(const char *)
+TMethod * TClass::GetMethodAllAny(const char *)
+ROOT::MergeFunc_t TClass::GetMerge()
+ROOT::ResetAfterMergeFunc_t TClass::GetResetAfterMerge()
+ROOT::NewFunc_t TClass::GetNew()
+ROOT::NewArrFunc_t TClass::GetNewArray()
+TRealData * TClass::GetRealData(const char *)
+TVirtualRefProxy * TClass::GetReferenceProxy()
+ShowMembersFunc_t TClass::GetShowMembersWrapper()
+TClassStreamer * TClass::GetStreamer()
+ClassStreamerFunc_t TClass::GetStreamerFunc()
+ClassConvStreamerFunc_t TClass::GetConvStreamerFunc()
+void TClass::InterpretedShowMembers(void *, TMemberInspector &, Bool_t)
+void TClass::AdoptReferenceProxy(TVirtualRefProxy *)
+void TClass::AdoptStreamer(TClassStreamer *)
+void TClass::AdoptMemberStreamer(const char *, TMemberStreamer *)
+TClass * TClass::GetClass(ClassInfo_t *, Bool_t, Bool_t)
+DictFuncPtr_t TClass::GetDict(const char *)
+DictFuncPtr_t TClass::GetDict(const std::type_info &)
 void TBuffer::SetStreamerElementNumber(TStreamerElement *, Int_t)
 void TBuffer::ReadFloat16(Float_t *, TStreamerElement *)
 void TBuffer::WriteFloat16(Float_t *, TStreamerElement *)
@@ -175,7 +179,6 @@ TGlobal * TROOT::GetGlobal(const TObject *, Bool_t)
 TFunction * TROOT::GetGlobalFunction(const char *, const char *, Bool_t)
 TFunction * TROOT::GetGlobalFunctionWithPrototype(const char *, const char *, Bool_t)
 TObjString * TProcessUUID::FindUUID(UInt_t)
-Long64_t TQCommand::Merge(TCollection *, TFileMergeInfo *)
 TSecContext * TVirtualAuth::Authenticate(TSocket *, const char *, const char *, Option_t *)
 void TVirtualFFT::SetPointComplex(Int_t, TComplex &)
 TLegend * TVirtualPad::BuildLegend(Double_t, Double_t, Double_t, Double_t, const char *, Option_t *)
@@ -202,7 +205,6 @@ TVirtualCollectionProxy::DeleteTwoIterators_t TVirtualCollectionProxy::GetFuncti
 TContextMenu * TBrowser::GetContextMenu()
 void TBranch::AddBasket(TBasket &, bool, Long64_t)
 TBasket * TBranch::GetBasket(Int_t)
-void TBranch::ResetAfterMerge(TFileMergeInfo *)
 TFriendElement * TTree::AddFriend(const char *, const char *)
 TFriendElement * TTree::AddFriend(const char *, TFile *)
 TFriendElement * TTree::AddFriend(TTree *, const char *, bool)
@@ -219,41 +221,76 @@ TTreeFormula * TTree::GetVar1()
 TTreeFormula * TTree::GetVar2()
 TTreeFormula * TTree::GetVar3()
 TTreeFormula * TTree::GetVar4()
-Long64_t TTree::Merge(TCollection *, TFileMergeInfo *)
 Long64_t TTree::Process(TSelector *, Option_t *, Long64_t, Long64_t)
 TSQLResult * TTree::Query(const char *, const char *, Option_t *, Long64_t, Long64_t)
 void TTree::RegisterExternalFriend(TFriendElement *)
 void TTree::RemoveExternalFriend(TFriendElement *)
-void TTree::ResetAfterMerge(TFileMergeInfo *)
 void TTree::SetEventList(TEventList *)
 void TTree::SetTreeIndex(TVirtualIndex *)
 TContextMenu * TCanvas::GetContextMenu()
 TCanvasImp * TCanvas::GetCanvasImp()
 void TCanvas::SetCanvasImp(TCanvasImp *)
-void TDirectoryFile::ResetAfterMerge(TFileMergeInfo *)
 TArchiveFile * TFile::GetArchive()
 TFileCacheRead * TFile::GetCacheRead(const TObject *)
 TFileCacheWrite * TFile::GetCacheWrite()
 void TFile::SetCacheRead(TFileCacheRead *, TObject *, TFile::ECacheAction)
 void TFile::SetCacheWrite(TFileCacheWrite *)
+ROOT::VecOps::RVecN::RVecN<T, N>(std::initializer_list)
+ROOT::VecOps::RVecN::RVecN<T, N>(const ROOT::VecOps::RVecN &)
+ROOT::VecOps::RVecN & ROOT::VecOps::RVecN::operator=(const ROOT::VecOps::RVecN &)
+ROOT::VecOps::RVecN::RVecN<T, N>(ROOT::VecOps::RVecN &&)
+ROOT::VecOps::RVecN::RVecN<T, N>(const std::vector &)
+ROOT::VecOps::RVecN & ROOT::VecOps::RVecN::operator=(ROOT::VecOps::RVecN &&)
+ROOT::VecOps::RVecN & ROOT::VecOps::RVecN::operator=(std::initializer_list)
+ROOT::VecOps::RVecN::reference ROOT::VecOps::RVecN::operator[](ROOT::VecOps::RVecN::size_type)
+ROOT::VecOps::RVecN::const_reference ROOT::VecOps::RVecN::operator[](ROOT::VecOps::RVecN::size_type)
+ROOT::VecOps::RVecN::reference ROOT::VecOps::RVecN::at(ROOT::VecOps::RVecN::size_type)
+ROOT::VecOps::RVecN::const_reference ROOT::VecOps::RVecN::at(ROOT::VecOps::RVecN::size_type)
+ROOT::VecOps::RVecN::value_type ROOT::VecOps::RVecN::at(ROOT::VecOps::RVecN::size_type, ROOT::VecOps::RVecN::value_type)
+ROOT::VecOps::RVecN::value_type ROOT::VecOps::RVecN::at(ROOT::VecOps::RVecN::size_type, ROOT::VecOps::RVecN::value_type)
+std::size_t ROOT::VecOps::Sum(const ROOT::VecOps::RVec<bool> &, std::size_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Char_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Char_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UChar_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UChar_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Short_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Short_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UShort_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UShort_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Int_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Int_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UInt_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UInt_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>> &, Int_t, Int_t)
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>>> Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>> &, Int_t, Int_t)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Char_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Char_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UChar_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UChar_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Short_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Short_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UShort_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UShort_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Int_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Int_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UInt_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UInt_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>> &)
+void SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>> &)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Char_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UChar_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Short_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UShort_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Int_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<UInt_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>> **)
+Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>> **)
 TFitResultPtr ROOT::Fit::FitObject(TMultiGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
 void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const TH1 *, TF1 *)
 void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const THnBase *, TF1 *)
 void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TMultiGraph *, TF1 *)
-ROOT::Math::Minimizer * TBackCompFitter::GetMinimizer()
-ROOT::Math::IMultiGenFunction * TBackCompFitter::GetObjFunction()
-void TBackCompFitter::SetObjFunction(ROOT::Math::IMultiGenFunction *)
-TF1::TF1(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Int_t, Int_t, TF1::EAddToList)
-TF2::TF2(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Double_t, Double_t, Int_t, Int_t)
-TGraph::TGraph(const TVectorF &, const TVectorF &)
 TTreeReaderArray::iterator TTreeReaderArray::begin()
 TTreeReaderArray::iterator TTreeReaderArray::end()
 TTreeReaderArray::const_iterator TTreeReaderArray::begin()
 TTreeReaderArray::const_iterator TTreeReaderArray::end()
 TTreeReaderArray::const_iterator TTreeReaderArray::cbegin()
 TTreeReaderArray::const_iterator TTreeReaderArray::cend()
-void TBranchElement::ResetAfterMerge(TFileMergeInfo *)
-void TBranchObject::ResetAfterMerge(TFileMergeInfo *)
+TVirtualGeoConverter * TVirtualGeoConverter::Instance(TGeoManager *)
+TGeoRCPtr::TGeoRCPtr<T>(const TGeoRCPtr &)
+TGeoRCPtr & TGeoRCPtr::operator=(T *)
+TGeoRCPtr & TGeoRCPtr::operator=(const TGeoRCPtr &)
+bool TGeoRCPtr::operator==(const TGeoRCPtr &)
 
 Class(es) from vetoed_finalizer_classes configuration parameter that were not found:
 -------------------------------------------------------------------------------------
@@ -275,8 +312,6 @@ TBuffer
 std::basic_string
 CompareDesc
 CompareAsc
-TVectorT
-TVectorT
 TVectorT
 RByteSwap
 TIterator
@@ -328,7 +363,10 @@ TBuffer3DTubeSeg
 TBuffer3DCutTube
 TBuffer3DTypes
 TObjArrayIter
+TClass::ObjectPtr
 TVirtualStreamerInfo
+TVirtualCollectionProxy
+THashTable
 TVirtualArray
 TProcessID
 TRefTable
@@ -380,6 +418,7 @@ TStringToken
 TBits
 TQClass
 TQCommand
+TFileMergeInfo
 TQConnection
 TQUndoManager
 TTime
@@ -408,7 +447,6 @@ TUri
 TVirtualAuth
 TVirtualFFT
 TVirtualMapFile
-THashTable
 THashTableIter
 TPair
 TMapIter
@@ -455,18 +493,16 @@ TArrayC
 TExMap
 TExMapIter
 TArrayS
-TVirtualCollectionProxy
 TVirtualCollectionProxy::TPushPop
-TClass::ObjectPtr
 TOrdCollection
 TOrdCollectionIter
 TArrayL64
 TSortedList
 TObjectTable
+ROOT::TIOFeatures
 TBrowserImp
 TTree
 TLeaf
-ROOT::TIOFeatures
 TTree::TClusterIterator
 TStreamerInfo
 TEntryList
@@ -501,6 +537,8 @@ TPad
 TRandom
 TDirectoryFile
 TFileOpenHandle
+ROOT::VecOps::RVecN
+ROOT::VecOps::PromoteTypeImpl
 Foption_t
 TFitResultPtr
 TFitResult
@@ -718,6 +756,179 @@ TGeoXtru::ThreadData_t
 
 List of wrapped methods:
 
+TClass::TClass(const char *, Bool_t) 
+TClass::TClass(const char *, Version_t, Bool_t) 
+TClass::TClass(const char *, Version_t, TClass::EState, Bool_t) 
+TClass::TClass(const char *, Version_t, const char *, const char *, Int_t, Int_t, Bool_t) 
+TClass::TClass(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t, Bool_t) 
+void TClass::AddInstance(Bool_t) 
+void TClass::AddImplFile(const char *, int) 
+static Bool_t TClass::AddRule(const char *) 
+static Int_t TClass::ReadRules(const char *) 
+static Int_t TClass::ReadRules() 
+void TClass::Browse(TBrowser *) 
+void TClass::BuildRealData(void *, Bool_t) 
+void TClass::BuildEmulatedRealData(const char *, Longptr_t, TClass *, Bool_t) 
+void TClass::CalculateStreamerOffset()  const
+Bool_t TClass::CanSplit()  const
+Bool_t TClass::CanIgnoreTObjectStreamer() 
+Long_t TClass::ClassProperty()  const
+TObject * TClass::Clone(const char *)  const
+void TClass::CopyCollectionProxy(const TVirtualCollectionProxy &) 
+void TClass::Draw(Option_t *) 
+void TClass::Dump()  const
+void TClass::Dump(const void *, Bool_t)  const
+char * TClass::EscapeChars(const char *)  const
+TVirtualStreamerInfo * TClass::FindStreamerInfo(UInt_t, Bool_t)  const
+TVirtualStreamerInfo * TClass::GetConversionStreamerInfo(const char *, Int_t)  const
+TVirtualStreamerInfo * TClass::FindConversionStreamerInfo(const char *, UInt_t)  const
+TVirtualStreamerInfo * TClass::GetConversionStreamerInfo(const TClass *, Int_t)  const
+TVirtualStreamerInfo * TClass::FindConversionStreamerInfo(const TClass *, UInt_t)  const
+void TClass::ForceReload(TClass *) 
+Bool_t TClass::HasDataMemberInfo()  const
+Bool_t TClass::HasDefaultConstructor(Bool_t)  const
+Bool_t TClass::HasInterpreterInfoInMemory()  const
+Bool_t TClass::HasInterpreterInfo()  const
+UInt_t TClass::GetCheckSum(TClass::ECheckSum)  const
+UInt_t TClass::GetCheckSum(Bool_t &)  const
+UInt_t TClass::GetCheckSum(TClass::ECheckSum, Bool_t &)  const
+TVirtualCollectionProxy * TClass::GetCollectionProxy()  const
+TVirtualIsAProxy * TClass::GetIsAProxy()  const
+Version_t TClass::GetClassVersion()  const
+Int_t TClass::GetClassSize()  const
+Longptr_t TClass::GetDataMemberOffset(const char *)  const
+const char * TClass::GetDeclFileName()  const
+Short_t TClass::GetDeclFileLine()  const
+const char * TClass::GetContextMenuTitle()  const
+TVirtualStreamerInfo * TClass::GetCurrentStreamerInfo() 
+TVirtualStreamerInfo * TClass::GetLastReadInfo()  const
+void TClass::SetLastReadInfo(TVirtualStreamerInfo *) 
+TList * TClass::GetListOfDataMembers(Bool_t) 
+TList * TClass::GetListOfUsingDataMembers(Bool_t) 
+TList * TClass::GetListOfEnums(Bool_t) 
+TList * TClass::GetListOfFunctionTemplates(Bool_t) 
+TList * TClass::GetListOfBases() 
+TList * TClass::GetListOfMethods(Bool_t) 
+TCollection * TClass::GetListOfMethodOverloads(const char *)  const
+TList * TClass::GetListOfRealData()  const
+const TList * TClass::GetListOfAllPublicMethods(Bool_t) 
+TList * TClass::GetListOfAllPublicDataMembers(Bool_t) 
+const char * TClass::GetImplFileName()  const
+Short_t TClass::GetImplFileLine()  const
+TClass * TClass::GetActualClass(const void *)  const
+TClass * TClass::GetBaseClass(const char *) 
+TClass * TClass::GetBaseClass(const TClass *) 
+Int_t TClass::GetBaseClassOffset(const TClass *, void *, bool) 
+TClass * TClass::GetBaseDataMember(const char *) 
+ROOT::ESTLType TClass::GetCollectionType()  const
+UInt_t TClass::GetInstanceCount()  const
+UInt_t TClass::GetHeapInstanceCount()  const
+void TClass::GetMenuItems(TList *) 
+TList * TClass::GetMenuList()  const
+Int_t TClass::GetNdata() 
+Int_t TClass::GetNmethods() 
+TClass *const * TClass::GetPersistentRef()  const
+const char * TClass::GetSharedLibs() 
+TClass::EState TClass::GetState()  const
+const TObjArray * TClass::GetStreamerInfos()  const
+TVirtualStreamerInfo * TClass::GetStreamerInfo(Int_t, Bool_t)  const
+TVirtualStreamerInfo * TClass::GetStreamerInfoAbstractEmulated(Int_t)  const
+TVirtualStreamerInfo * TClass::FindStreamerInfoAbstractEmulated(UInt_t)  const
+const std::type_info * TClass::GetTypeInfo()  const
+Bool_t TClass::HasConsistentHashMember() 
+Bool_t TClass::HasCustomStreamerMember()  const
+Bool_t TClass::HasDictionary()  const
+static Bool_t TClass::HasDictionarySelection(const char *) 
+Bool_t TClass::HasLocalHashMember()  const
+void TClass::GetMissingDictionaries(THashTable &, bool) 
+void TClass::IgnoreTObjectStreamer(Bool_t) 
+Bool_t TClass::InheritsFrom(const char *)  const
+Bool_t TClass::InheritsFrom(const TClass *)  const
+Bool_t TClass::IsFolder()  const
+Bool_t TClass::IsLoaded()  const
+Bool_t TClass::IsForeign()  const
+Bool_t TClass::IsStartingWithTObject()  const
+Bool_t TClass::IsSyntheticPair()  const
+Bool_t TClass::IsVersioned()  const
+Bool_t TClass::IsTObject()  const
+static TClass * TClass::LoadClass(const char *, Bool_t) 
+void TClass::ls(Option_t *)  const
+void TClass::MakeCustomMenuList() 
+Bool_t TClass::MatchLegacyCheckSum(UInt_t)  const
+void TClass::Move(void *, void *)  const
+void * TClass::New(TClass::ENewType, Bool_t)  const
+void * TClass::New(void *, TClass::ENewType)  const
+void * TClass::NewArray(Long_t, TClass::ENewType)  const
+void * TClass::NewArray(Long_t, void *, TClass::ENewType)  const
+TClass::ObjectPtr TClass::NewObject(TClass::ENewType, Bool_t)  const
+TClass::ObjectPtr TClass::NewObject(void *, TClass::ENewType)  const
+TClass::ObjectPtr TClass::NewObjectArray(Long_t, TClass::ENewType)  const
+TClass::ObjectPtr TClass::NewObjectArray(Long_t, void *, TClass::ENewType)  const
+void TClass::PostLoadCheck() 
+Long_t TClass::Property()  const
+Int_t TClass::ReadBuffer(TBuffer &, void *, Int_t, UInt_t, UInt_t) 
+Int_t TClass::ReadBuffer(TBuffer &, void *) 
+void TClass::RegisterStreamerInfo(TVirtualStreamerInfo *) 
+void TClass::RemoveStreamerInfo(Int_t) 
+void TClass::ReplaceWith(TClass *)  const
+void TClass::ResetCaches() 
+void TClass::ResetClassInfo(Long_t) 
+void TClass::ResetClassInfo() 
+void TClass::ResetInstanceCount() 
+void TClass::ResetMenuList() 
+Int_t TClass::Size()  const
+void TClass::SetCanSplit(Int_t) 
+void TClass::SetContextMenuTitle(const char *) 
+void TClass::SetCurrentStreamerInfo(TVirtualStreamerInfo *) 
+void TClass::SetGlobalIsA(IsAGlobalFunc_t) 
+void TClass::SetDeclFile(const char *, Short_t) 
+void TClass::SetDelete(ROOT::DelFunc_t) 
+void TClass::SetDeleteArray(ROOT::DelArrFunc_t) 
+void TClass::SetDirectoryAutoAdd(ROOT::DirAutoAdd_t) 
+void TClass::SetDestructor(ROOT::DesFunc_t) 
+void TClass::SetImplFileName(const char *) 
+void TClass::SetMerge(ROOT::MergeFunc_t) 
+void TClass::SetResetAfterMerge(ROOT::ResetAfterMergeFunc_t) 
+void TClass::SetNew(ROOT::NewFunc_t) 
+void TClass::SetNewArray(ROOT::NewArrFunc_t) 
+TVirtualStreamerInfo * TClass::SetStreamerInfo(Int_t, const char *) 
+void TClass::SetUnloaded() 
+Int_t TClass::WriteBuffer(TBuffer &, void *, const char *) 
+void TClass::SetMemberStreamer(const char *, MemberStreamerFunc_t) 
+void TClass::SetStreamerFunc(ClassStreamerFunc_t) 
+void TClass::SetConvStreamerFunc(ClassConvStreamerFunc_t) 
+static void TClass::AddClass(TClass *) 
+static void TClass::AddClassToDeclIdMap(TDictionary::DeclId_t, TClass *) 
+static void TClass::RemoveClass(TClass *) 
+static void TClass::RemoveClassDeclId(TDictionary::DeclId_t) 
+static TClass * TClass::GetClass(const char *, Bool_t, Bool_t) 
+static TClass * TClass::GetClass(const char *, Bool_t, Bool_t, size_t, size_t) 
+static TClass * TClass::GetClass(const std::type_info &, Bool_t, Bool_t, size_t, size_t) 
+static Bool_t TClass::GetClass(TDictionary::DeclId_t, std::vector<TClass *> &) 
+static Int_t TClass::AutoBrowse(TObject *, TBrowser *) 
+static TClass::ENewType TClass::IsCallingNew() 
+static TClass * TClass::Load(TBuffer &) 
+void TClass::Store(TBuffer &)  const
+Int_t TClass::Browse(void *, TBrowser *)  const
+void TClass::DeleteArray(void *, Bool_t) 
+void TClass::DeleteArray(TClass::ObjectPtr, Bool_t) 
+void TClass::Destructor(void *, Bool_t) 
+void TClass::Destructor(TClass::ObjectPtr, Bool_t) 
+void * TClass::DynamicCast(const TClass *, void *, Bool_t) 
+const void * TClass::DynamicCast(const TClass *, const void *, Bool_t) 
+Bool_t TClass::IsFolder(void *)  const
+void TClass::Streamer(void *, TBuffer &, const TClass *)  const
+static Version_t TClass::Class_Version() 
+TClass * TClass::IsA()  const
+void TClass::StreamerNVirtual(TBuffer &) 
+static const char * TClass::DeclFileName() 
+static int TClass::ImplFileLine() 
+static const char * TClass::ImplFileName() 
+static const char * TClass::Class_Name() 
+static TClass * TClass::Dictionary() 
+static TClass * TClass::Class() 
+void TClass::Streamer(TBuffer &) 
+static int TClass::DeclFileLine() 
 TObject::TObject(const TObject &) 
 TObject & TObject::operator=(const TObject &) 
 void TObject::AppendPad(Option_t *) 
@@ -2156,6 +2367,76 @@ static TClass * TObjArrayIter::Dictionary()
 static TClass * TObjArrayIter::Class() 
 void TObjArrayIter::Streamer(TBuffer &) 
 static int TObjArrayIter::DeclFileLine() 
+TClass::ObjectPtr::ObjectPtr(void *, TVirtualStreamerInfo *) 
+void * TClass::ObjectPtr::GetPtr()  const
+TVirtualStreamerInfo * TClass::ObjectPtr::GetAllocator()  const
+TVirtualCollectionProxy::TVirtualCollectionProxy(TClass *) 
+TVirtualCollectionProxy * TVirtualCollectionProxy::Generate()  const
+Bool_t TVirtualCollectionProxy::Reset() 
+TClass * TVirtualCollectionProxy::GetCollectionClass()  const
+Int_t TVirtualCollectionProxy::GetCollectionType()  const
+ULong_t TVirtualCollectionProxy::GetIncrement()  const
+Int_t TVirtualCollectionProxy::GetProperties()  const
+void * TVirtualCollectionProxy::New()  const
+void * TVirtualCollectionProxy::New(void *)  const
+TClass::ObjectPtr TVirtualCollectionProxy::NewObject()  const
+TClass::ObjectPtr TVirtualCollectionProxy::NewObject(void *)  const
+void * TVirtualCollectionProxy::NewArray(Int_t)  const
+void * TVirtualCollectionProxy::NewArray(Int_t, void *)  const
+TClass::ObjectPtr TVirtualCollectionProxy::NewObjectArray(Int_t)  const
+TClass::ObjectPtr TVirtualCollectionProxy::NewObjectArray(Int_t, void *)  const
+void TVirtualCollectionProxy::Destructor(void *, Bool_t)  const
+void TVirtualCollectionProxy::DeleteArray(void *, Bool_t)  const
+UInt_t TVirtualCollectionProxy::Sizeof()  const
+void TVirtualCollectionProxy::PushProxy(void *) 
+void TVirtualCollectionProxy::PopProxy() 
+Bool_t TVirtualCollectionProxy::HasPointers()  const
+TClass * TVirtualCollectionProxy::GetValueClass()  const
+EDataType TVirtualCollectionProxy::GetType()  const
+void * TVirtualCollectionProxy::At(UInt_t) 
+void TVirtualCollectionProxy::Clear(const char *) 
+UInt_t TVirtualCollectionProxy::Size()  const
+void * TVirtualCollectionProxy::Allocate(UInt_t, Bool_t) 
+void TVirtualCollectionProxy::Commit(void *) 
+void TVirtualCollectionProxy::Insert(const void *, void *, size_t) 
+char * TVirtualCollectionProxy::operator[](UInt_t)  const
+TStreamerInfoActions::TActionSequence * TVirtualCollectionProxy::GetConversionReadMemberWiseActions(TClass *, Int_t) 
+TStreamerInfoActions::TActionSequence * TVirtualCollectionProxy::GetReadMemberWiseActions(Int_t) 
+TStreamerInfoActions::TActionSequence * TVirtualCollectionProxy::GetWriteMemberWiseActions() 
+THashTable::THashTable(Int_t, Int_t) 
+void THashTable::Add(TObject *) 
+void THashTable::AddBefore(const TObject *, TObject *) 
+void THashTable::AddAll(const TCollection *) 
+Float_t THashTable::AverageCollisions()  const
+void THashTable::Clear(Option_t *) 
+Int_t THashTable::Collisions(const char *)  const
+Int_t THashTable::Collisions(TObject *)  const
+void THashTable::Delete(Option_t *) 
+Bool_t THashTable::Empty()  const
+TObject * THashTable::FindObject(const char *)  const
+TObject * THashTable::FindObject(const TObject *)  const
+const TList * THashTable::GetListForObject(const char *)  const
+const TList * THashTable::GetListForObject(const TObject *)  const
+TObject ** THashTable::GetObjectRef(const TObject *)  const
+Int_t THashTable::GetRehashLevel()  const
+Int_t THashTable::GetSize()  const
+TIterator * THashTable::MakeIterator(Bool_t)  const
+void THashTable::Print(Option_t *, Int_t)  const
+void THashTable::Rehash(Int_t, Bool_t) 
+TObject * THashTable::Remove(TObject *) 
+TObject * THashTable::RemoveSlow(TObject *) 
+void THashTable::SetRehashLevel(Int_t) 
+static Version_t THashTable::Class_Version() 
+TClass * THashTable::IsA()  const
+void THashTable::StreamerNVirtual(TBuffer &) 
+static const char * THashTable::DeclFileName() 
+static int THashTable::ImplFileLine() 
+static const char * THashTable::ImplFileName() 
+static const char * THashTable::Class_Name() 
+static TClass * THashTable::Dictionary() 
+static TClass * THashTable::Class() 
+void THashTable::Streamer(TBuffer &) 
+static int THashTable::DeclFileLine() 
 void TProcessID::CheckInit() 
 void TProcessID::Clear(Option_t *) 
 Int_t TProcessID::DecrementCount() 
@@ -2734,6 +3015,7 @@ void TDirectoryFile::Purge(Short_t)
 void TDirectoryFile::ReadAll(Option_t *) 
 Int_t TDirectoryFile::ReadKeys(Bool_t) 
 Int_t TDirectoryFile::ReadTObject(TObject *, const char *) 
+void TDirectoryFile::ResetAfterMerge(TFileMergeInfo *) 
 void TDirectoryFile::rmdir(const char *) 
 void TDirectoryFile::Save() 
 void TDirectoryFile::SaveSelf(Bool_t) 
@@ -4429,6 +4711,111 @@ static TClass * TQClass::Dictionary()
 static TClass * TQClass::Class() 
 void TQClass::Streamer(TBuffer &) 
 static int TQClass::DeclFileLine() 
+void TQClass::AddImplFile(const char *, int) 
+void TQClass::AddInstance(Bool_t) 
+void TQClass::BuildEmulatedRealData(const char *, Longptr_t, TClass *, Bool_t) 
+void TQClass::BuildRealData(void *, Bool_t) 
+void TQClass::CalculateStreamerOffset()  const
+Bool_t TQClass::CanIgnoreTObjectStreamer() 
+Bool_t TQClass::CanSplit()  const
+Long_t TQClass::ClassProperty()  const
+TObject * TQClass::Clone(const char *)  const
+void TQClass::CopyCollectionProxy(const TVirtualCollectionProxy &) 
+void TQClass::Draw(Option_t *) 
+char * TQClass::EscapeChars(const char *)  const
+TVirtualStreamerInfo * TQClass::FindStreamerInfo(UInt_t, Bool_t)  const
+TVirtualStreamerInfo * TQClass::FindStreamerInfoAbstractEmulated(UInt_t)  const
+void TQClass::ForceReload(TClass *) 
+TClass * TQClass::GetActualClass(const void *)  const
+Int_t TQClass::GetBaseClassOffset(const TClass *, void *, bool) 
+TClass * TQClass::GetBaseDataMember(const char *) 
+Int_t TQClass::GetClassSize()  const
+Version_t TQClass::GetClassVersion()  const
+TVirtualCollectionProxy * TQClass::GetCollectionProxy()  const
+ROOT::ESTLType TQClass::GetCollectionType()  const
+const char * TQClass::GetContextMenuTitle()  const
+TVirtualStreamerInfo * TQClass::GetCurrentStreamerInfo() 
+Longptr_t TQClass::GetDataMemberOffset(const char *)  const
+Short_t TQClass::GetDeclFileLine()  const
+const char * TQClass::GetDeclFileName()  const
+UInt_t TQClass::GetHeapInstanceCount()  const
+Short_t TQClass::GetImplFileLine()  const
+const char * TQClass::GetImplFileName()  const
+UInt_t TQClass::GetInstanceCount()  const
+TVirtualIsAProxy * TQClass::GetIsAProxy()  const
+TVirtualStreamerInfo * TQClass::GetLastReadInfo()  const
+TList * TQClass::GetListOfAllPublicDataMembers(Bool_t) 
+const TList * TQClass::GetListOfAllPublicMethods(Bool_t) 
+TList * TQClass::GetListOfBases() 
+TList * TQClass::GetListOfDataMembers(Bool_t) 
+TList * TQClass::GetListOfEnums(Bool_t) 
+TList * TQClass::GetListOfFunctionTemplates(Bool_t) 
+TCollection * TQClass::GetListOfMethodOverloads(const char *)  const
+TList * TQClass::GetListOfMethods(Bool_t) 
+TList * TQClass::GetListOfRealData()  const
+TList * TQClass::GetListOfUsingDataMembers(Bool_t) 
+void TQClass::GetMenuItems(TList *) 
+TList * TQClass::GetMenuList()  const
+void TQClass::GetMissingDictionaries(THashTable &, bool) 
+Int_t TQClass::GetNdata() 
+Int_t TQClass::GetNmethods() 
+TClass *const * TQClass::GetPersistentRef()  const
+const char * TQClass::GetSharedLibs() 
+TClass::EState TQClass::GetState()  const
+TVirtualStreamerInfo * TQClass::GetStreamerInfo(Int_t, Bool_t)  const
+TVirtualStreamerInfo * TQClass::GetStreamerInfoAbstractEmulated(Int_t)  const
+const TObjArray * TQClass::GetStreamerInfos()  const
+const std::type_info * TQClass::GetTypeInfo()  const
+Bool_t TQClass::HasConsistentHashMember() 
+Bool_t TQClass::HasCustomStreamerMember()  const
+Bool_t TQClass::HasDataMemberInfo()  const
+Bool_t TQClass::HasDefaultConstructor(Bool_t)  const
+Bool_t TQClass::HasDictionary()  const
+Bool_t TQClass::HasInterpreterInfo()  const
+Bool_t TQClass::HasInterpreterInfoInMemory()  const
+Bool_t TQClass::HasLocalHashMember()  const
+void TQClass::IgnoreTObjectStreamer(Bool_t) 
+Bool_t TQClass::IsForeign()  const
+Bool_t TQClass::IsLoaded()  const
+Bool_t TQClass::IsStartingWithTObject()  const
+Bool_t TQClass::IsSyntheticPair()  const
+Bool_t TQClass::IsTObject()  const
+Bool_t TQClass::IsVersioned()  const
+void TQClass::MakeCustomMenuList() 
+Bool_t TQClass::MatchLegacyCheckSum(UInt_t)  const
+void TQClass::Move(void *, void *)  const
+void TQClass::PostLoadCheck() 
+Long_t TQClass::Property()  const
+void TQClass::RegisterStreamerInfo(TVirtualStreamerInfo *) 
+void TQClass::RemoveStreamerInfo(Int_t) 
+void TQClass::ReplaceWith(TClass *)  const
+void TQClass::ResetCaches() 
+void TQClass::ResetInstanceCount() 
+void TQClass::ResetMenuList() 
+void TQClass::SetCanSplit(Int_t) 
+void TQClass::SetContextMenuTitle(const char *) 
+void TQClass::SetConvStreamerFunc(ClassConvStreamerFunc_t) 
+void TQClass::SetCurrentStreamerInfo(TVirtualStreamerInfo *) 
+void TQClass::SetDeclFile(const char *, Short_t) 
+void TQClass::SetDelete(ROOT::DelFunc_t) 
+void TQClass::SetDeleteArray(ROOT::DelArrFunc_t) 
+void TQClass::SetDestructor(ROOT::DesFunc_t) 
+void TQClass::SetDirectoryAutoAdd(ROOT::DirAutoAdd_t) 
+void TQClass::SetGlobalIsA(IsAGlobalFunc_t) 
+void TQClass::SetImplFileName(const char *) 
+void TQClass::SetLastReadInfo(TVirtualStreamerInfo *) 
+void TQClass::SetMemberStreamer(const char *, MemberStreamerFunc_t) 
+void TQClass::SetMerge(ROOT::MergeFunc_t) 
+void TQClass::SetNew(ROOT::NewFunc_t) 
+void TQClass::SetNewArray(ROOT::NewArrFunc_t) 
+void TQClass::SetResetAfterMerge(ROOT::ResetAfterMergeFunc_t) 
+void TQClass::SetStreamerFunc(ClassStreamerFunc_t) 
+TVirtualStreamerInfo * TQClass::SetStreamerInfo(Int_t, const char *) 
+void TQClass::SetUnloaded() 
+Int_t TQClass::Size()  const
+void TQClass::Store(TBuffer &)  const
+Int_t TQClass::WriteBuffer(TBuffer &, void *, const char *) 
+void TQClass::ls(Option_t *)  const
 TQCommand::TQCommand(const char *, void *, const char *, const char *) 
 TQCommand::TQCommand(TObject *, const char *, const char *) 
 TQCommand::TQCommand(const TQCommand &) 
@@ -4439,6 +4826,7 @@ void TQCommand::SetUndoArgs(Int_t)
 void TQCommand::SetRedoArgs(Int_t) 
 Bool_t TQCommand::CanMerge(TQCommand *)  const
 void TQCommand::Merge(TQCommand *) 
+Long64_t TQCommand::Merge(TCollection *, TFileMergeInfo *) 
 Bool_t TQCommand::CanCompress(TQCommand *)  const
 void TQCommand::Compress(TQCommand *) 
 Bool_t TQCommand::IsEqual(const TObject *)  const
@@ -4498,6 +4886,19 @@ void TQCommand::LowPriority(const char *, const char *)
 void TQCommand::Message(const char *) 
 Int_t TQCommand::NumberOfConnections()  const
 Int_t TQCommand::NumberOfSignals()  const
+TFileMergeInfo::TFileMergeInfo(TDirectory *) 
+void TFileMergeInfo::Reset() 
+static Version_t TFileMergeInfo::Class_Version() 
+TClass * TFileMergeInfo::IsA()  const
+void TFileMergeInfo::StreamerNVirtual(TBuffer &) 
+static const char * TFileMergeInfo::DeclFileName() 
+static int TFileMergeInfo::ImplFileLine() 
+static const char * TFileMergeInfo::ImplFileName() 
+static const char * TFileMergeInfo::Class_Name() 
+static TClass * TFileMergeInfo::Dictionary() 
+static TClass * TFileMergeInfo::Class() 
+void TFileMergeInfo::Streamer(TBuffer &) 
+static int TFileMergeInfo::DeclFileLine() 
 TQConnection::TQConnection(TClass *, void *, const char *) 
 TQConnection::TQConnection(const char *, void *, const char *) 
 TQConnection::TQConnection(const TQConnection &) 
@@ -5173,40 +5574,6 @@ static TClass * TVirtualMapFile::Dictionary()
 static TClass * TVirtualMapFile::Class() 
 void TVirtualMapFile::Streamer(TBuffer &) 
 static int TVirtualMapFile::DeclFileLine() 
-THashTable::THashTable(Int_t, Int_t) 
-void THashTable::Add(TObject *) 
-void THashTable::AddBefore(const TObject *, TObject *) 
-void THashTable::AddAll(const TCollection *) 
-Float_t THashTable::AverageCollisions()  const
-void THashTable::Clear(Option_t *) 
-Int_t THashTable::Collisions(const char *)  const
-Int_t THashTable::Collisions(TObject *)  const
-void THashTable::Delete(Option_t *) 
-Bool_t THashTable::Empty()  const
-TObject * THashTable::FindObject(const char *)  const
-TObject * THashTable::FindObject(const TObject *)  const
-const TList * THashTable::GetListForObject(const char *)  const
-const TList * THashTable::GetListForObject(const TObject *)  const
-TObject ** THashTable::GetObjectRef(const TObject *)  const
-Int_t THashTable::GetRehashLevel()  const
-Int_t THashTable::GetSize()  const
-TIterator * THashTable::MakeIterator(Bool_t)  const
-void THashTable::Print(Option_t *, Int_t)  const
-void THashTable::Rehash(Int_t, Bool_t) 
-TObject * THashTable::Remove(TObject *) 
-TObject * THashTable::RemoveSlow(TObject *) 
-void THashTable::SetRehashLevel(Int_t) 
-static Version_t THashTable::Class_Version() 
-TClass * THashTable::IsA()  const
-void THashTable::StreamerNVirtual(TBuffer &) 
-static const char * THashTable::DeclFileName() 
-static int THashTable::ImplFileLine() 
-static const char * THashTable::ImplFileName() 
-static const char * THashTable::Class_Name() 
-static TClass * THashTable::Dictionary() 
-static TClass * THashTable::Class() 
-void THashTable::Streamer(TBuffer &) 
-static int THashTable::DeclFileLine() 
 THashTableIter::THashTableIter(const THashTable *, Bool_t) 
 THashTableIter::THashTableIter(const THashTableIter &) 
 TIterator & THashTableIter::operator=(const TIterator &) 
@@ -5950,6 +6317,7 @@ void TBranch::PrintCacheInfo()  const
 void TBranch::ReadBasket(TBuffer &) 
 void TBranch::Refresh(TBranch *) 
 void TBranch::Reset(Option_t *) 
+void TBranch::ResetAfterMerge(TFileMergeInfo *) 
 void TBranch::ResetAddress() 
 void TBranch::ResetReadEntry() 
 void TBranch::SetAddress(void *) 
@@ -6800,39 +7168,6 @@ static TClass * TArrayS::Dictionary()
 static TClass * TArrayS::Class() 
 void TArrayS::Streamer(TBuffer &) 
 static int TArrayS::DeclFileLine() 
-TVirtualCollectionProxy::TVirtualCollectionProxy(TClass *) 
-TVirtualCollectionProxy * TVirtualCollectionProxy::Generate()  const
-Bool_t TVirtualCollectionProxy::Reset() 
-TClass * TVirtualCollectionProxy::GetCollectionClass()  const
-Int_t TVirtualCollectionProxy::GetCollectionType()  const
-ULong_t TVirtualCollectionProxy::GetIncrement()  const
-Int_t TVirtualCollectionProxy::GetProperties()  const
-void * TVirtualCollectionProxy::New()  const
-void * TVirtualCollectionProxy::New(void *)  const
-TClass::ObjectPtr TVirtualCollectionProxy::NewObject()  const
-TClass::ObjectPtr TVirtualCollectionProxy::NewObject(void *)  const
-void * TVirtualCollectionProxy::NewArray(Int_t)  const
-void * TVirtualCollectionProxy::NewArray(Int_t, void *)  const
-TClass::ObjectPtr TVirtualCollectionProxy::NewObjectArray(Int_t)  const
-TClass::ObjectPtr TVirtualCollectionProxy::NewObjectArray(Int_t, void *)  const
-void TVirtualCollectionProxy::Destructor(void *, Bool_t)  const
-void TVirtualCollectionProxy::DeleteArray(void *, Bool_t)  const
-UInt_t TVirtualCollectionProxy::Sizeof()  const
-void TVirtualCollectionProxy::PushProxy(void *) 
-void TVirtualCollectionProxy::PopProxy() 
-Bool_t TVirtualCollectionProxy::HasPointers()  const
-TClass * TVirtualCollectionProxy::GetValueClass()  const
-EDataType TVirtualCollectionProxy::GetType()  const
-void * TVirtualCollectionProxy::At(UInt_t) 
-void TVirtualCollectionProxy::Clear(const char *) 
-UInt_t TVirtualCollectionProxy::Size()  const
-void * TVirtualCollectionProxy::Allocate(UInt_t, Bool_t) 
-void TVirtualCollectionProxy::Commit(void *) 
-void TVirtualCollectionProxy::Insert(const void *, void *, size_t) 
-char * TVirtualCollectionProxy::operator[](UInt_t)  const
-TStreamerInfoActions::TActionSequence * TVirtualCollectionProxy::GetConversionReadMemberWiseActions(TClass *, Int_t) 
-TStreamerInfoActions::TActionSequence * TVirtualCollectionProxy::GetReadMemberWiseActions(Int_t) 
-TStreamerInfoActions::TActionSequence * TVirtualCollectionProxy::GetWriteMemberWiseActions() 
 TVirtualCollectionProxy::TPushPop::TPushPop(TVirtualCollectionProxy *, void *) 
 TOrdCollection::TOrdCollection(Int_t) 
 void TOrdCollection::Clear(Option_t *) 
@@ -7096,6 +7431,7 @@ Int_t TTree::MakeProxy(const char *, const char *, const char *, const char *, I
 Int_t TTree::MakeSelector(const char *, Option_t *) 
 bool TTree::MemoryFull(Int_t) 
 Long64_t TTree::Merge(TCollection *, Option_t *) 
+Long64_t TTree::Merge(TCollection *, TFileMergeInfo *) 
 static TTree * TTree::MergeTrees(TList *, Option_t *) 
 bool TTree::Notify() 
 void TTree::OptimizeBaskets(ULong64_t, Float_t, Option_t *) 
@@ -7109,6 +7445,7 @@ void TTree::Refresh()
 void TTree::RemoveFriend(TTree *) 
 void TTree::RecursiveRemove(TObject *) 
 void TTree::Reset(Option_t *) 
+void TTree::ResetAfterMerge(TFileMergeInfo *) 
 void TTree::ResetBranchAddress(TBranch *) 
 void TTree::ResetBranchAddresses() 
 Long64_t TTree::Scan(const char *, const char *, Option_t *, Long64_t, Long64_t) 
@@ -7514,6 +7851,7 @@ bool TBranchElement::Notify()
 void TBranchElement::Print(Option_t *)  const
 void TBranchElement::PrintValue(Int_t)  const
 void TBranchElement::Reset(Option_t *) 
+void TBranchElement::ResetAfterMerge(TFileMergeInfo *) 
 void TBranchElement::ResetAddress() 
 void TBranchElement::ResetDeleteObject() 
 void TBranchElement::ResetInitInfo(bool) 
@@ -7804,6 +8142,7 @@ Int_t TBranchObject::GetExpectedType(TClass *&, EDataType &)
 bool TBranchObject::IsFolder()  const
 void TBranchObject::Print(Option_t *)  const
 void TBranchObject::Reset(Option_t *) 
+void TBranchObject::ResetAfterMerge(TFileMergeInfo *) 
 void TBranchObject::SetAddress(void *) 
 void TBranchObject::SetAutoDelete(bool) 
 void TBranchObject::SetBasketSize(Int_t) 
@@ -10675,6 +11014,7 @@ TAxis * THStack::GetXaxis()  const
 TAxis * THStack::GetYaxis()  const
 TAxis * THStack::GetZaxis()  const
 void THStack::ls(Option_t *)  const
+Long64_t THStack::Merge(TCollection *, TFileMergeInfo *) 
 void THStack::Modified() 
 void THStack::Paint(Option_t *) 
 void THStack::Print(Option_t *)  const
@@ -15550,6 +15890,7 @@ Bool_t ::operator!=(const char *, const TSubString &)
 std::string ::cling::printValue(const TString *) 
 std::string ::cling::printValue(const TSubString *) 
 Bool_t ::ConnectCINT(TQObject *, const char *, const char *) 
+TClass * ::ROOT::CreateClass(const char *, Version_t, const char *, const char *, Int_t, Int_t) 
 TBuffer & ::operator>>(TBuffer &, Long_t &) 
 TBuffer & ::operator>>(TBuffer &, Float_t &) 
 TBuffer & ::operator>>(TBuffer &, Double_t &) 
@@ -15640,6 +15981,10 @@ TBuffer & ::operator>>(TBuffer &, TArrayS *&)
 TBuffer & ::operator<<(TBuffer &, const TArrayS *) 
 TBuffer & ::operator>>(TBuffer &, TArrayL64 *&) 
 TBuffer & ::operator<<(TBuffer &, const TArrayL64 *) 
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<std::size_t>> ::ROOT::VecOps::Combinations(const std::size_t, const std::size_t) 
+ROOT::VecOps::RVec<std::size_t> ::ROOT::VecOps::Range(std::size_t) 
+ROOT::VecOps::RVec<std::size_t> ::ROOT::VecOps::Range(std::size_t, std::size_t) 
+ROOT::VecOps::RVec<long long> ::ROOT::VecOps::Range(long long, long long, long long) 
 TTree * ::GetTTree(TDirectoryFile &, const char *) 
 TH1 * ::GetTH1(TDirectoryFile &, const char *) 
 std::size_t ::GetSize(const TTreeReaderArray<Char_t> *) 
@@ -15652,6 +15997,16 @@ std::size_t ::GetSize(const TTreeReaderArray<Long_t> *)
 std::size_t ::GetSize(const TTreeReaderArray<ULong_t> *) 
 std::size_t ::GetSize(const TTreeReaderArray<Float_t> *) 
 std::size_t ::GetSize(const TTreeReaderArray<Double_t> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Char_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UChar_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Short_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UShort_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Int_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UInt_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Long_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<ULong_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Float_t>> *) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Double_t>> *) 
 std::size_t ::GetSize(const TTreeReaderArray<Char_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<UChar_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<Short_t> &) 
@@ -15662,6 +16017,16 @@ std::size_t ::GetSize(const TTreeReaderArray<Long_t> &)
 std::size_t ::GetSize(const TTreeReaderArray<ULong_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<Float_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<Double_t> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Char_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UChar_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Short_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UShort_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Int_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UInt_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Long_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<ULong_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Float_t>> &) 
+std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Double_t>> &) 
 TBranchPtr<Char_t> ::Branch(TTree &, const char *, Char_t &, Int_t, Int_t) 
 TBranchPtr<UChar_t> ::Branch(TTree &, const char *, UChar_t &, Int_t, Int_t) 
 TBranchPtr<Short_t> ::Branch(TTree &, const char *, Short_t &, Int_t, Int_t) 
@@ -15682,6 +16047,17 @@ TBranchPtr<std::vector<Long_t>> ::Branch(TTree &, const char *, std::vector<Long
 TBranchPtr<std::vector<ULong_t>> ::Branch(TTree &, const char *, std::vector<ULong_t> &, Int_t, Int_t) 
 TBranchPtr<std::vector<Float_t>> ::Branch(TTree &, const char *, std::vector<Float_t> &, Int_t, Int_t) 
 TBranchPtr<std::vector<Double_t>> ::Branch(TTree &, const char *, std::vector<Double_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<Char_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<Char_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<UChar_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<UChar_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<Short_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<Short_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<UShort_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<UShort_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<Int_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<Int_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<UInt_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<UInt_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<Long_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<Long_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<ULong_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<ULong_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<Float_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<Float_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<Double_t>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<Double_t> &, Int_t, Int_t) 
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<ULong_t>>> ::Branch(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<ULong_t>> &, Int_t, Int_t) 
 void ::SetAddress(TBranchPtr<Char_t>, Char_t *) 
 void ::SetAddress(TBranchPtr<UChar_t>, UChar_t *) 
 void ::SetAddress(TBranchPtr<Short_t>, Short_t *) 
@@ -15702,6 +16078,17 @@ void ::SetObject(TBranchPtr<std::vector<Long_t>>, std::vector<Long_t> &)
 void ::SetObject(TBranchPtr<std::vector<ULong_t>>, std::vector<ULong_t> &) 
 void ::SetObject(TBranchPtr<std::vector<Float_t>>, std::vector<Float_t> &) 
 void ::SetObject(TBranchPtr<std::vector<Double_t>>, std::vector<Double_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<Char_t>>, ROOT::VecOps::RVec<Char_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<UChar_t>>, ROOT::VecOps::RVec<UChar_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<Short_t>>, ROOT::VecOps::RVec<Short_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<UShort_t>>, ROOT::VecOps::RVec<UShort_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<Int_t>>, ROOT::VecOps::RVec<Int_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<UInt_t>>, ROOT::VecOps::RVec<UInt_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<Long_t>>, ROOT::VecOps::RVec<Long_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<ULong_t>>, ROOT::VecOps::RVec<ULong_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<Float_t>>, ROOT::VecOps::RVec<Float_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<Double_t>>, ROOT::VecOps::RVec<Double_t> &) 
+void ::SetObject(TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<ULong_t>>>, ROOT::VecOps::RVec<ROOT::VecOps::RVec<ULong_t>> &) 
 Int_t ::SetBranchAddress(TTree &, const char *, Char_t *) 
 Int_t ::SetBranchAddress(TTree &, const char *, UChar_t *) 
 Int_t ::SetBranchAddress(TTree &, const char *, Short_t *) 
@@ -15722,6 +16109,17 @@ Int_t ::SetBranchAddress(TTree &, const char *, std::vector<Long_t> **)
 Int_t ::SetBranchAddress(TTree &, const char *, std::vector<ULong_t> **) 
 Int_t ::SetBranchAddress(TTree &, const char *, std::vector<Float_t> **) 
 Int_t ::SetBranchAddress(TTree &, const char *, std::vector<Double_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<Char_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<UChar_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<Short_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<UShort_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<Int_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<UInt_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<Long_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ULong_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<Float_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<Double_t> **) 
+Int_t ::SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<ULong_t>> **) 
 void ::updateAllCanvas() 
 std::string ::cling::printValue(const TFitResultPtr *) 
 void ::ROOT::Fit::FitOptionsMake(ROOT::Fit::EFitObjectType, const char *, Foption_t &) 
@@ -15803,6 +16201,9 @@ List of vetoed types:
 -------------------
 
 Atom_t
+ClassConvStreamerFunc_t
+ClassInfo_t *
+ClassStreamerFunc_t
 Colormap_t
 Cursor_t
 DictFuncPtr_t
@@ -15810,6 +16211,9 @@ Display_t
 Drawable_t
 EDataType
 EEnvLevel
+Element
+Element &
+Element *
 FILE *
 FontH_t
 FontStruct_t
@@ -15817,6 +16221,9 @@ Foption_t
 GContext_t
 Handle_t
 Pixmap_t
+ROOT::DelArrFunc_t
+ROOT::DelFunc_t
+ROOT::DesFunc_t
 ROOT::Detail::TCollectionProxyInfo
 ROOT::Detail::TCollectionProxyInfo::Address
 ROOT::Detail::TCollectionProxyInfo::Environ
@@ -15831,6 +16238,9 @@ ROOT::Detail::TCollectionProxyInfo::Pushfront
 ROOT::Detail::TCollectionProxyInfo::SfinaeHelper
 ROOT::Detail::TCollectionProxyInfo::Type
 ROOT::Detail::TRangeCast
+ROOT::Detail::VecOps::RVecImpl
+ROOT::DirAutoAdd_t
+ROOT::ESTLType
 ROOT::Experimental::Internal::TBulkBranchRead
 ROOT::Fit::FitConfig &
 ROOT::Fit::Fitter *
@@ -15840,6 +16250,7 @@ ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector
 ROOT::Internal::GetFunctorType
 ROOT::Internal::TAtomicPointer
 ROOT::Internal::TCDGIILIBase
+ROOT::Internal::TClassGetClassHelper
 ROOT::Internal::TDefaultInitBehavior
 ROOT::Internal::TDirectoryAtomicAdapter
 ROOT::Internal::TF1Builder
@@ -15852,15 +16263,35 @@ ROOT::Internal::TQObjectInitBehavior
 ROOT::Internal::TStdBitsetHelper
 ROOT::Internal::TTreeReaderArrayBase
 ROOT::Internal::TTreeReaderValueBase
+ROOT::Internal::VecOps::IsRVec
+ROOT::Internal::VecOps::RVecInlineStorageSize
+ROOT::Internal::VecOps::SmallVectorAlignmentAndSize
+ROOT::Internal::VecOps::SmallVectorBase
+ROOT::Internal::VecOps::SmallVectorStorage
+ROOT::Internal::VecOps::SmallVectorTemplateBase
+ROOT::Internal::VecOps::SmallVectorTemplateCommon
 ROOT::Math::IBaseFunctionMultiDimTempl
 ROOT::Math::IMultiGenFunction *
 ROOT::Math::Minimizer *
+ROOT::MergeFunc_t
+ROOT::NewArrFunc_t
+ROOT::NewFunc_t
+ROOT::ResetAfterMergeFunc_t
 ROOT::TClassAlt *
 ROOT::TIOFeatures
 ROOT::TVirtualRWMutex *
 ROOT::TVirtualRWMutex::Hint_t *
+ROOT::VecOps::RVec &
+ROOT::VecOps::RVec<ROOT::VecOps::RVec<std::size_t>>
+ROOT::VecOps::RVec<long long>
+ROOT::VecOps::RVec<std::size_t>
+ROOT::VecOps::RVecN &
+ROOT::VecOps::RVecN::const_reference
+ROOT::VecOps::RVecN::reference
+ROOT::VecOps::RVecN::value_type
 Rectangle_t
 Region_t
+ShowMembersFunc_t
 TApplication *
 TApplication::EExitOnException
 TApplicationImp *
@@ -15899,6 +16330,26 @@ TBranchPtr<Double_t>
 TBranchPtr<Float_t>
 TBranchPtr<Int_t>
 TBranchPtr<Long_t>
+TBranchPtr<ROOT::VecOps::RVec<Char_t>>
+TBranchPtr<ROOT::VecOps::RVec<Double_t>>
+TBranchPtr<ROOT::VecOps::RVec<Float_t>>
+TBranchPtr<ROOT::VecOps::RVec<Int_t>>
+TBranchPtr<ROOT::VecOps::RVec<Long_t>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Char_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Int_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<Short_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UChar_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UInt_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<ULong_t>>>
+TBranchPtr<ROOT::VecOps::RVec<ROOT::VecOps::RVec<UShort_t>>>
+TBranchPtr<ROOT::VecOps::RVec<Short_t>>
+TBranchPtr<ROOT::VecOps::RVec<UChar_t>>
+TBranchPtr<ROOT::VecOps::RVec<UInt_t>>
+TBranchPtr<ROOT::VecOps::RVec<ULong_t>>
+TBranchPtr<ROOT::VecOps::RVec<UShort_t>>
 TBranchPtr<Short_t>
 TBranchPtr<UChar_t>
 TBranchPtr<UInt_t>
@@ -15927,7 +16378,11 @@ TBuffer3D *
 TCanvas *
 TCanvasImp *
 TClass *
+TClass *const *
+TClass::ENewType
+TClass::EState
 TClass::ObjectPtr
+TClassStreamer *
 TClonesArray &
 TCollection *
 TColor &
@@ -15936,6 +16391,7 @@ TColorGradient::ECoordinateMode
 TColorGradient::SizeType_t
 TConfidenceLevel *
 TContextMenu *
+TDataMember *
 TDataType *
 TDatime
 TDatime &
@@ -16136,6 +16592,7 @@ TMap *
 TMapIter &
 TMatrixDSym
 TMatrixTBase
+TMethod *
 TMethodCall *
 TMultiDimFit *
 TNDArray &
@@ -16172,6 +16629,7 @@ TQCommand *
 TQConnection *
 TROOT *
 TRadialGradient::EGradientType
+TRealData *
 TRef &
 TRefArray &
 TRefArrayIter &
@@ -16236,6 +16694,7 @@ TVirtualGeoTrack *
 TVirtualGraphPainter *
 TVirtualHistPainter *
 TVirtualIndex *
+TVirtualIsAProxy *
 TVirtualMagField *
 TVirtualMutex *
 TVirtualPad *
@@ -16244,6 +16703,7 @@ TVirtualPadEditor *
 TVirtualPadPainter *
 TVirtualPerfStats *
 TVirtualPerfStats *&
+TVirtualRefProxy *
 TVirtualStreamerInfo *
 TVirtualTreePlayer *
 TVirtualViewer3D *
@@ -16257,6 +16717,8 @@ char
 char &
 char *
 char **
+const Element &
+const Element *
 const ROOT::Fit::FitData &
 const ROOT::Fit::FitResult &
 const TArrayD *
@@ -16295,9 +16757,11 @@ const TVectorD *
 const TVectorT &
 const char **&
 const double &
+const std::type_info *
 const std::vector<Double_t> &
 const std::vector<double> &
 const std::vector<std::string> &
+const void *
 double
 double &
 int
@@ -16363,6 +16827,16 @@ ROOT::Detail::TCollectionProxyInfo::TCollectionProxyInfo(const std::type_info &,
 ROOT::Detail::TCollectionProxyInfo::Type::PCont_t ROOT::Detail::TCollectionProxyInfo::Type::object(void *)
 ROOT::Detail::TRangeCast::TRangeCast<T, isDynamic>(const TCollection &)
 ROOT::Detail::TRangeCast::TRangeCast<T, isDynamic>(const TCollection *)
+ROOT::Detail::TSchemaRuleSet * TClass::GetSchemaRules(Bool_t)
+ROOT::Detail::VecOps::RVecImpl & ROOT::Detail::VecOps::RVecImpl::operator=(ROOT::Detail::VecOps::RVecImpl &&)
+ROOT::Detail::VecOps::RVecImpl & ROOT::Detail::VecOps::RVecImpl::operator=(const ROOT::Detail::VecOps::RVecImpl &)
+ROOT::Detail::VecOps::RVecImpl::RVecImpl<T>(const ROOT::Detail::VecOps::RVecImpl &)
+ROOT::Detail::VecOps::RVecImpl::RVecImpl<T>(unsigned int)
+ROOT::Detail::VecOps::RVecImpl::iterator ROOT::Detail::VecOps::RVecImpl::erase(ROOT::Detail::VecOps::RVecImpl::const_iterator)
+ROOT::Detail::VecOps::RVecImpl::iterator ROOT::Detail::VecOps::RVecImpl::erase(ROOT::Detail::VecOps::RVecImpl::const_iterator, ROOT::Detail::VecOps::RVecImpl::const_iterator)
+ROOT::Detail::VecOps::RVecImpl::iterator ROOT::Detail::VecOps::RVecImpl::insert(ROOT::Detail::VecOps::RVecImpl::iterator, ROOT::Detail::VecOps::RVecImpl::size_type, const T &)
+ROOT::Detail::VecOps::RVecImpl::iterator ROOT::Detail::VecOps::RVecImpl::insert(ROOT::Detail::VecOps::RVecImpl::iterator, T &&)
+ROOT::Detail::VecOps::RVecImpl::iterator ROOT::Detail::VecOps::RVecImpl::insert(ROOT::Detail::VecOps::RVecImpl::iterator, const T &)
 ROOT::Experimental::Internal::TBulkBranchRead & TBranch::GetBulkRead()
 ROOT::Experimental::Internal::TBulkBranchRead::TBulkBranchRead(TBranch &)
 ROOT::Internal::TAtomicPointer::TAtomicPointer<T>()
@@ -16381,15 +16855,44 @@ ROOT::Internal::TTreeReaderValueBase::EReadStatus ROOT::Internal::TTreeReaderVal
 ROOT::Internal::TTreeReaderValueBase::ESetupStatus ROOT::Internal::TTreeReaderValueBase::GetSetupStatus()
 ROOT::Internal::TTreeReaderValueBase::TTreeReaderValueBase(TTreeReader *, const char *, TDictionary *)
 ROOT::Internal::TTreeReaderValueBase::TTreeReaderValueBase(const ROOT::Internal::TTreeReaderValueBase &)
+ROOT::Internal::VecOps::SmallVectorBase::SmallVectorBase()
+ROOT::Internal::VecOps::SmallVectorBase::SmallVectorBase(void *, size_t)
+ROOT::Internal::VecOps::SmallVectorTemplateBase::SmallVectorTemplateBase<T, >(size_t)
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::SmallVectorTemplateCommon<T>(size_t)
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::begin()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::cbegin()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::cend()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::end()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_pointer ROOT::Internal::VecOps::SmallVectorTemplateCommon::data()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_reference ROOT::Internal::VecOps::SmallVectorTemplateCommon::back()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_reference ROOT::Internal::VecOps::SmallVectorTemplateCommon::front()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_reverse_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::crbegin()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_reverse_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::crend()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_reverse_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::rbegin()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::const_reverse_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::rend()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::begin()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::end()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::pointer ROOT::Internal::VecOps::SmallVectorTemplateCommon::data()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::reference ROOT::Internal::VecOps::SmallVectorTemplateCommon::back()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::reference ROOT::Internal::VecOps::SmallVectorTemplateCommon::front()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::reverse_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::rbegin()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::reverse_iterator ROOT::Internal::VecOps::SmallVectorTemplateCommon::rend()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::size_type ROOT::Internal::VecOps::SmallVectorTemplateCommon::max_size()
+ROOT::Internal::VecOps::SmallVectorTemplateCommon::size_type ROOT::Internal::VecOps::SmallVectorTemplateCommon::size_in_bytes()
 ROOT::TGenericClassInfo * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::GenerateInitInstanceLocal()
+ROOT::VecOps::RVec::RVec<T>(ROOT::Detail::VecOps::RVecImpl &&)
+ROOT::VecOps::RVecN & ROOT::VecOps::RVecN::operator=(ROOT::Detail::VecOps::RVecImpl &&)
+ROOT::VecOps::RVecN::RVecN<T, N>(ROOT::Detail::VecOps::RVecImpl &&)
 ReAllocCharFun_t TBuffer::GetReAllocFunc()
 T & ROOT::Detail::TCollectionProxyInfo::Environ::iter()
+T ROOT::Detail::VecOps::RVecImpl::pop_back_val()
 T ROOT::Internal::TAtomicPointer::operator->()
 T ROOT::Internal::TAtomicPointer::operator=(const T &)
 TBranch * TTree::Branch(const char *, Longptr_t, const char *, Int_t)
 TBranch * TTree::Branch(const char *, int, const char *, Int_t)
 TClass * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Class()
 TClass * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Dictionary()
+TClass * ROOT::Internal::TClassGetClassHelper::GetClass(Bool_t, Bool_t)
 TClass * ROOT::Internal::TDefaultInitBehavior::CreateClass(const char *, Version_t, const std::type_info &, TVirtualIsAProxy *, const char *, const char *, Int_t, Int_t)
 TClass * ROOT::Internal::THnBaseBrowsable::Class()
 TClass * ROOT::Internal::THnBaseBrowsable::Dictionary()
@@ -16420,6 +16923,8 @@ bool ROOT::Internal::TDirectoryAtomicAdapter::operator==(TDirectory *)
 bool ROOT::Internal::TDirectoryAtomicAdapter::operator==(const TDirectory *)
 bool ROOT::Internal::TTreeReaderArrayBase::IsEmpty()
 bool ROOT::Internal::TTreeReaderValueBase::IsValid()
+bool ROOT::Internal::VecOps::SmallVectorBase::empty()
+const ROOT::Detail::TSchemaRuleSet * TClass::GetSchemaRules()
 const char * ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Name()
 const char * ROOT::Internal::THnBaseBrowsable::Class_Name()
 const char * ROOT::Internal::THnBaseBrowsable::DeclFileName()
@@ -16432,6 +16937,9 @@ int ROOT::Detail::TCollectionProxyInfo::Pushfront::value_offset()
 int ROOT::Internal::THnBaseBrowsable::DeclFileLine()
 int ROOT::Internal::THnBaseBrowsable::ImplFileLine()
 int TSystem::GetPathInfo(const char *, Long_t *, Long64_t *, Long_t *, Long_t *)
+size_t ROOT::Internal::VecOps::SmallVectorBase::capacity()
+size_t ROOT::Internal::VecOps::SmallVectorBase::size()
+size_t ROOT::Internal::VecOps::SmallVectorTemplateCommon::capacity_in_bytes()
 std::istream & TString::ReadFile(std::istream &)
 std::istream & TString::ReadLine(std::istream &, Bool_t)
 std::istream & TString::ReadString(std::istream &)
@@ -16468,6 +16976,17 @@ void ROOT::Detail::TCollectionProxyInfo::MapInsert::resize(void *, size_t)
 void ROOT::Detail::TCollectionProxyInfo::Pushback::resize(void *, size_t)
 void ROOT::Detail::TCollectionProxyInfo::Pushfront::resize(void *, size_t)
 void ROOT::Detail::TCollectionProxyInfo::Type::destruct(void *, size_t)
+void ROOT::Detail::VecOps::RVecImpl::append(ROOT::Detail::VecOps::RVecImpl::size_type, const T &)
+void ROOT::Detail::VecOps::RVecImpl::append(std::initializer_list)
+void ROOT::Detail::VecOps::RVecImpl::assign(ROOT::Detail::VecOps::RVecImpl::size_type, const T &)
+void ROOT::Detail::VecOps::RVecImpl::assign(std::initializer_list)
+void ROOT::Detail::VecOps::RVecImpl::clear()
+void ROOT::Detail::VecOps::RVecImpl::insert(ROOT::Detail::VecOps::RVecImpl::iterator, std::initializer_list)
+void ROOT::Detail::VecOps::RVecImpl::pop_back_n(ROOT::Detail::VecOps::RVecImpl::size_type)
+void ROOT::Detail::VecOps::RVecImpl::reserve(ROOT::Detail::VecOps::RVecImpl::size_type)
+void ROOT::Detail::VecOps::RVecImpl::resize(ROOT::Detail::VecOps::RVecImpl::size_type)
+void ROOT::Detail::VecOps::RVecImpl::resize(ROOT::Detail::VecOps::RVecImpl::size_type, const T &)
+void ROOT::Detail::VecOps::RVecImpl::swap(ROOT::Detail::VecOps::RVecImpl &)
 void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Delete(void *)
 void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::DeleteArray(void *)
 void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Destruct(void *)
@@ -16484,6 +17003,10 @@ void ROOT::Internal::THnBaseBrowsable::Streamer(TBuffer &)
 void ROOT::Internal::THnBaseBrowsable::StreamerNVirtual(TBuffer &)
 void ROOT::Internal::TInitBehavior::Register(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
 void ROOT::Internal::TInitBehavior::Unregister(const char *, TClass *)
+void ROOT::Internal::VecOps::SmallVectorBase::set_size(size_t)
+void ROOT::Internal::VecOps::SmallVectorTemplateBase::pop_back()
+void ROOT::Internal::VecOps::SmallVectorTemplateBase::push_back(T &&)
+void ROOT::Internal::VecOps::SmallVectorTemplateBase::push_back(const T &)
 void ROOT::TReadLockGuard::ShowMembers(TMemberInspector &)
 void ROOT::TVirtualRWMutex::ShowMembers(TMemberInspector &)
 void ROOT::TWriteLockGuard::ShowMembers(TMemberInspector &)
@@ -16546,6 +17069,9 @@ void TBuffer::WriteFastArray(const UChar_t *, Long64_t)
 void TBuffer::WriteFastArray(const ULong_t *, Long64_t)
 void TCanvas::SavePrimitive(std::ostream &, Option_t *)
 void TCanvas::ShowMembers(TMemberInspector &)
+void TClass::AdoptSchemaRules(ROOT::Detail::TSchemaRuleSet *)
+void TClass::SetCollectionProxy(const ROOT::Detail::TCollectionProxyInfo &)
+void TClass::ShowMembers(TMemberInspector &)
 void TClassTable::ShowMembers(TMemberInspector &)
 void TClonesArray::ShowMembers(TMemberInspector &)
 void TCollection::ShowMembers(TMemberInspector &)
@@ -16580,6 +17106,7 @@ void TFile::ShowMembers(TMemberInspector &)
 void TFileCollection::ShowMembers(TMemberInspector &)
 void TFileInfo::ShowMembers(TMemberInspector &)
 void TFileInfoMeta::ShowMembers(TMemberInspector &)
+void TFileMergeInfo::ShowMembers(TMemberInspector &)
 void TFitResult::ShowMembers(TMemberInspector &)
 void TFitResultPtr::ShowMembers(TMemberInspector &)
 void TFolder::ShowMembers(TMemberInspector &)
@@ -16958,6 +17485,7 @@ bool ROOT::Detail::HasBeenDeleted(const TObject *)
 bool ROOT::Internal::ContaineeInheritsFrom(TClass *, TClass *)
 bool ROOT::Internal::DeleteChangesMemory()
 bool ROOT::Internal::DeleteChangesMemoryImpl()
+bool ROOT::Internal::VecOps::All(const bool *, std::size_t)
 const ROOT::Internal::TInitBehavior * ROOT::Internal::DefineBehavior(void *, void *)
 const ROOT::Internal::TQObjectInitBehavior * ROOT::Internal::DefineBehavior(TQObject *, TQObject *)
 const TCollection & ROOT::Internal::EmptyCollection()
@@ -16971,6 +17499,7 @@ std::string cling::printValue(ROOT::Internal::TTreeReaderValueBase *)
 std::uint16_t ROOT::Experimental::Internal::FloatToHalf(float)
 std::uint16_t ROOT::Experimental::Internal::GetOverflowedValue(std::uint16_t)
 std::uint16_t ROOT::Experimental::Internal::GetRoundedValue(std::uint16_t, int, int)
+uint64_t ROOT::Internal::VecOps::NextPowerOf2(uint64_t)
 void ROOT::AddClass(const char *, Version_t, DictFuncPtr_t, Int_t)
 void ROOT::AddClass(const char *, Version_t, const std::type_info &, DictFuncPtr_t, Int_t)
 void ROOT::Internal::DefaultStreamer(TBuffer &, const TClass *, void *)
@@ -16992,6 +17521,7 @@ ExceptionContext_t::fBuf
 ROOT::Detail::TCollectionProxyInfo::fgIteratorArenaSize
 ROOT::Internal::gROOTLocal
 ROOT::Internal::gVersionCheck
+TFileMergeInfo::fIOFeatures
 
 List of vetoed field setters:
 ---------------------------

@@ -80,6 +80,8 @@ else
 
     libroot_julia_from_jll && Internals.loadlibdeps()
     @wrapmodule(()->libroot_julia_path)
+
+    include("type_aliases.jl")
     
     include("iROOT.jl")
     
@@ -95,6 +97,7 @@ else
     
     include("def_args.jl")
     include("move.jl")
+    include("rvec.jl")
     
     include("ROOTex.jl")
     include("demo.jl")

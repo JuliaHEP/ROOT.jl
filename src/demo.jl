@@ -13,6 +13,6 @@ function demo()
     FillRandom(h, "gaus")
     c = ROOT.TCanvas()
     Fit(h, "gaus")
-    c, h
+    c
 end
 
