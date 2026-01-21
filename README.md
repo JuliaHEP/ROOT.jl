@@ -9,11 +9,9 @@ With release 0.4.0, dereferencing a TObject reference returns an instance of the
 
 Attributes of histograms (line style, line color, etc.), and other drawables, can now be set thanks to the mapping of multiple inheritance provided by the release 1.7.0 of WrapIt: C++ ROOT code uses multiple inheritance for this, which was not mapped to Julia in previous releases.
 
-## Backend installation
+## Important note
 
-Starting from release 0.3.3, the built-in Julia package manager is used to install the C++ ROOT framework. This mechansim replace the Conda one, which was introduced as an interim solution and rapidly showed its limits. The ROOT libraries (and also also executables) are package in the `ROOT_jll` [JLL](https://docs.binarybuilder.org/stable/jll/#JLL-packages) package. 
-
-📝 Automatic installation of the ROOT libraries is currently not supported for MacOS. It was supported for a short time by the Conda mechanism, before an update of the Conda forge repository broke the dependencies. On MacOS, the C++ ROOT framework must be installed separately using one of the [method supported by ROOT](https://root.cern/install/).
+**In case you experience random segmentation faults, read the note you will find at the beginning of the section "[C++ ROOT backend installation](#backend)".**
 
 ## Introduction
 
@@ -48,19 +46,34 @@ dev https://github.com/JuliaHEP/ROOT.jl
 build ROOT
 ```
 
-## C++ ROOT backend installation
+## <a id="backend"></a>C++ ROOT backend installation
+
+⚠️  If you install the C++ ROOT backend yourself instead of using the one provided (for Linux only) by `ROOT_jll` or if a `ROOT_jll` release older than `6.32.8+2` is used, it is mandatory to disable the ROOT Unix signal handling with the line,
+
+```
+Root.ErrorHandlers 0
+```
+
+in the ROOT **`.rootrc`** file configuration: either in the `HOME` directory or in the current directory, where the Julia session is started.
+
+Without this, you can experience random segmentation fault, in particular with Julia releases 1.10 and newer.
+
+Starting from its release `6.32.8+2`, the ROOT libraries from `ROOT_jll` are compiled with a patch preventing the need to modify `.rootrc`: the ROOT Unix signal handling is always disabled except for `SIGALARM` independently of the `Root.ErrorHandlers` setting.
+
 
 ### Linux
 
 On Linux, the C++ ROOT framework used as backend is bundled in the `ROOT_jll` Julia package that is installed automatically. This is the default and recommended option on Linux.
 
-Use of C++ ROOT framework software installed outside of Julia is also possible. For this, the [`ROOTprefs.jl`](https://github.com/JuliaHEP/ROOTprefs.jl) should be used to change the default backend installation mode. This has to be done before the `ROOT` module is imported. Each `ROOT.jl` package is tight to one or few C++ ROOT versions: see the list in section [Backend versions](#versions).
+Use of C++ ROOT framework software installed outside of Julia is also possible. For this, the [`ROOTprefs.jl`](https://github.com/JuliaHEP/ROOTprefs.jl) should be used to change the default backend installation mode. This has to be done before the `ROOT` module is imported. Each `ROOT.jl` package is tight to one or few C++ ROOT versions: see the list in section [Backend versions](#versions). Don't forget to set `Root.ErrorHandlers` to 0 as explained [above](#backend).
 
 ### MacOS
 
 The `ROOT_jll` package does not include yet the libraries for MacOS ([*](#footnote1)). Therefore, the user needs to take care of installing the C++ `ROOT` framework of the proper release: see next section for the required or do `import ROOT`, which will show a message specifying the required release if not accessible yet.
 
 Once the C++ `ROOT` framework installed, first run `root-config --version` to make sure it is accessible from the shell environment and the release is correct, then start Julia and import the `ROOT` module. The library providing the Julia bindings will be compiled.
+
+ Don't forget to set `Root.ErrorHandlers` to 0 as explained [above](#backend).
 
 If after an upgrade of `ROOT.jl`, you needed to also upgrade the C++ framework installation and the installation path changed, then run `using ROOTprefs; set_ROOTSYS()` in Julia before importing the `ROOT` module in order to update the path.
 
