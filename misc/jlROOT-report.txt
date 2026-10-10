@@ -12,7 +12,7 @@ Iterator_t<TTreeReaderArray<T>>
 Iterator_t<const TTreeReaderArray<T>>
 ROOT::Fit::SparseData
 ROOT::Math::IBaseFunctionMultiDimTempl<double>
-ROOT::Math::Minimizer
+ROOT::Math::IParametricFunctionMultiDimTempl<double>
 ROOT::Math::ParamFunctorTempl<double>
 ROOT::TClassAlt
 ROOT::TVirtualRWMutex::Hint_t
@@ -88,7 +88,12 @@ typename SmallVectorTemplateCommon<type-parameter-0-0>::value_type
 
 Auto-vetoed functions
 ---------------------
-ROOT::Math::Minimizer * TBackCompFitter::GetMinimizer()
+TFitResultPtr ROOT::Fit::FitObject(TMultiGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
+void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const TH1 *, TF1 *)
+void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const THnBase *, TF1 *)
+void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TMultiGraph *, TF1 *)
+void ROOT::Fit::FitResult::FillResult(const std::shared_ptr<ROOT::Math::Minimizer> &, const ROOT::Fit::FitConfig &, const std::shared_ptr<ROOT::Fit::FitResult::IModelFunction> &, bool, unsigned int, int, const ROOT::Math::IMultiGenFunction *, unsigned int)
+const ROOT::Fit::FitResult::IModelFunction * ROOT::Fit::FitResult::FittedFunction()
 ROOT::Math::IMultiGenFunction * TBackCompFitter::GetObjFunction()
 void TBackCompFitter::SetObjFunction(ROOT::Math::IMultiGenFunction *)
 TF1::TF1(const char *, ROOT::Math::ParamFunctor, Double_t, Double_t, Int_t, Int_t, TF1::EAddToList)
@@ -106,6 +111,10 @@ TH2F::TH2F(const TMatrixFBase &)
 TH2D::TH2D(const TMatrixDBase &)
 TNDArrayRef TNDArrayRef::operator[](Int_t)
 TNDArrayRef TNDArrayT::operator[](Int_t)
+TGeoRCPtr::TGeoRCPtr<T>(const TGeoRCPtr &)
+TGeoRCPtr & TGeoRCPtr::operator=(T *)
+TGeoRCPtr & TGeoRCPtr::operator=(const TGeoRCPtr &)
+bool TGeoRCPtr::operator==(const TGeoRCPtr &)
 ROOT::TClassAlt * ROOT::AddClassAlternate(const char *, const char *)
 void ROOT::RemoveClassAlternate(ROOT::TClassAlt *)
 void ROOT::Class_ShowMembers(TClass *, const void *, TMemberInspector &)
@@ -227,6 +236,12 @@ void TTree::RegisterExternalFriend(TFriendElement *)
 void TTree::RemoveExternalFriend(TFriendElement *)
 void TTree::SetEventList(TEventList *)
 void TTree::SetTreeIndex(TVirtualIndex *)
+TTreeReaderArray::iterator TTreeReaderArray::begin()
+TTreeReaderArray::iterator TTreeReaderArray::end()
+TTreeReaderArray::const_iterator TTreeReaderArray::begin()
+TTreeReaderArray::const_iterator TTreeReaderArray::end()
+TTreeReaderArray::const_iterator TTreeReaderArray::cbegin()
+TTreeReaderArray::const_iterator TTreeReaderArray::cend()
 TContextMenu * TCanvas::GetContextMenu()
 TCanvasImp * TCanvas::GetCanvasImp()
 void TCanvas::SetCanvasImp(TCanvasImp *)
@@ -276,21 +291,7 @@ Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::R
 Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Long_t>> **)
 Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Float_t>> **)
 Int_t SetBranchAddress(TTree &, const char *, ROOT::VecOps::RVec<ROOT::VecOps::RVec<Double_t>> **)
-TFitResultPtr ROOT::Fit::FitObject(TMultiGraph *, TF1 *, Foption_t &, const ROOT::Math::MinimizerOptions &, const char *, ROOT::Fit::DataRange &)
-void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const TH1 *, TF1 *)
-void ROOT::Fit::FillData(ROOT::Fit::SparseData &, const THnBase *, TF1 *)
-void ROOT::Fit::FillData(ROOT::Fit::BinData &, const TMultiGraph *, TF1 *)
-TTreeReaderArray::iterator TTreeReaderArray::begin()
-TTreeReaderArray::iterator TTreeReaderArray::end()
-TTreeReaderArray::const_iterator TTreeReaderArray::begin()
-TTreeReaderArray::const_iterator TTreeReaderArray::end()
-TTreeReaderArray::const_iterator TTreeReaderArray::cbegin()
-TTreeReaderArray::const_iterator TTreeReaderArray::cend()
 TVirtualGeoConverter * TVirtualGeoConverter::Instance(TGeoManager *)
-TGeoRCPtr::TGeoRCPtr<T>(const TGeoRCPtr &)
-TGeoRCPtr & TGeoRCPtr::operator=(T *)
-TGeoRCPtr & TGeoRCPtr::operator=(const TGeoRCPtr &)
-bool TGeoRCPtr::operator==(const TGeoRCPtr &)
 
 Class(es) from vetoed_finalizer_classes configuration parameter that were not found:
 -------------------------------------------------------------------------------------
@@ -554,9 +555,10 @@ ROOT::Fit::FitResult
 TGraphErrors
 TAxisModLab
 TVirtualFitter
-TBackCompFitter
 ROOT::Fit::FitConfig
+TBackCompFitter
 ROOT::Fit::FitData
+ROOT::Math::Minimizer
 TBinomialEfficiencyFitter
 ROOT::Fit::Fitter
 TConfidenceLevel
@@ -8303,6 +8305,45 @@ static TClass * TFitResult::Dictionary()
 static TClass * TFitResult::Class() 
 void TFitResult::Streamer(TBuffer &) 
 static int TFitResult::DeclFileLine() 
+double TFitResult::Chi2()  const
+double TFitResult::Correlation(unsigned int, unsigned int)  const
+double TFitResult::CovMatrix(unsigned int, unsigned int)  const
+int TFitResult::CovMatrixStatus()  const
+double TFitResult::Edm()  const
+const std::vector<double> & TFitResult::Errors()  const
+const ROOT::Fit::BinData * TFitResult::FittedBinData()  const
+const double * TFitResult::GetErrors()  const
+std::string TFitResult::GetParameterName(unsigned int)  const
+const double * TFitResult::GetParams()  const
+double TFitResult::GlobalCC(unsigned int)  const
+bool TFitResult::HasMinosError(unsigned int)  const
+int TFitResult::Index(const std::string &)  const
+bool TFitResult::IsEmpty()  const
+bool TFitResult::IsParameterBound(unsigned int)  const
+bool TFitResult::IsParameterFixed(unsigned int)  const
+bool TFitResult::IsValid()  const
+double TFitResult::LowerError(unsigned int)  const
+double TFitResult::MinFcnValue()  const
+const std::string & TFitResult::MinimizerType()  const
+unsigned int TFitResult::NCalls()  const
+unsigned int TFitResult::NFreeParameters()  const
+unsigned int TFitResult::NPar()  const
+unsigned int TFitResult::NTotalParameters()  const
+unsigned int TFitResult::Ndf()  const
+void TFitResult::NormalizeErrors() 
+bool TFitResult::NormalizedErrors()  const
+double TFitResult::ParError(unsigned int)  const
+std::string TFitResult::ParName(unsigned int)  const
+double TFitResult::Parameter(unsigned int)  const
+bool TFitResult::ParameterBounds(unsigned int, double &, double &)  const
+const std::vector<double> & TFitResult::Parameters()  const
+double TFitResult::Prob()  const
+void TFitResult::SetChi2AndNdf(double, unsigned int) 
+void TFitResult::SetMinosError(unsigned int, double, double) 
+int TFitResult::Status()  const
+bool TFitResult::Update(const std::shared_ptr<ROOT::Math::Minimizer> &, const ROOT::Fit::FitConfig &, bool, unsigned int) 
+double TFitResult::UpperError(unsigned int)  const
+double TFitResult::Value(unsigned int)  const
 TF1::TF1(const char *, const char *, Double_t, Double_t, TF1::EAddToList, bool) 
 TF1::TF1(const char *, const char *, Double_t, Double_t, Option_t *) 
 TF1::TF1(const char *, Double_t, Double_t, Int_t, Int_t, TF1::EAddToList) 
@@ -8815,6 +8856,52 @@ static TClass * THnBase::Dictionary()
 static TClass * THnBase::Class() 
 void THnBase::Streamer(TBuffer &) 
 static int THnBase::DeclFileLine() 
+ROOT::Fit::FitResult::FitResult(const ROOT::Fit::FitConfig &) 
+bool ROOT::Fit::FitResult::Update(const std::shared_ptr<ROOT::Math::Minimizer> &, const ROOT::Fit::FitConfig &, bool, unsigned int) 
+const std::string & ROOT::Fit::FitResult::MinimizerType()  const
+bool ROOT::Fit::FitResult::IsValid()  const
+bool ROOT::Fit::FitResult::IsEmpty()  const
+double ROOT::Fit::FitResult::MinFcnValue()  const
+unsigned int ROOT::Fit::FitResult::NCalls()  const
+double ROOT::Fit::FitResult::Edm()  const
+unsigned int ROOT::Fit::FitResult::NTotalParameters()  const
+unsigned int ROOT::Fit::FitResult::NPar()  const
+unsigned int ROOT::Fit::FitResult::NFreeParameters()  const
+int ROOT::Fit::FitResult::Status()  const
+int ROOT::Fit::FitResult::CovMatrixStatus()  const
+const ROOT::Fit::BinData * ROOT::Fit::FitResult::FittedBinData()  const
+double ROOT::Fit::FitResult::Chi2()  const
+unsigned int ROOT::Fit::FitResult::Ndf()  const
+double ROOT::Fit::FitResult::Prob()  const
+const std::vector<double> & ROOT::Fit::FitResult::Errors()  const
+const double * ROOT::Fit::FitResult::GetErrors()  const
+const std::vector<double> & ROOT::Fit::FitResult::Parameters()  const
+const double * ROOT::Fit::FitResult::GetParams()  const
+double ROOT::Fit::FitResult::Value(unsigned int)  const
+double ROOT::Fit::FitResult::Parameter(unsigned int)  const
+double ROOT::Fit::FitResult::Error(unsigned int)  const
+double ROOT::Fit::FitResult::ParError(unsigned int)  const
+std::string ROOT::Fit::FitResult::ParName(unsigned int)  const
+void ROOT::Fit::FitResult::SetMinosError(unsigned int, double, double) 
+void ROOT::Fit::FitResult::SetChi2AndNdf(double, unsigned int) 
+bool ROOT::Fit::FitResult::HasMinosError(unsigned int)  const
+double ROOT::Fit::FitResult::LowerError(unsigned int)  const
+double ROOT::Fit::FitResult::UpperError(unsigned int)  const
+double ROOT::Fit::FitResult::GlobalCC(unsigned int)  const
+double ROOT::Fit::FitResult::CovMatrix(unsigned int, unsigned int)  const
+double ROOT::Fit::FitResult::Correlation(unsigned int, unsigned int)  const
+void ROOT::Fit::FitResult::GetConfidenceIntervals(unsigned int, unsigned int, unsigned int, const double *, double *, double, bool)  const
+void ROOT::Fit::FitResult::GetConfidenceIntervals(const ROOT::Fit::BinData &, double *, double, bool)  const
+std::vector<double> ROOT::Fit::FitResult::GetConfidenceIntervals(double, bool)  const
+bool ROOT::Fit::FitResult::Scan(unsigned int, unsigned int &, double *, double *, double, double) 
+bool ROOT::Fit::FitResult::Contour(unsigned int, unsigned int, unsigned int &, double *, double *, double) 
+int ROOT::Fit::FitResult::Index(const std::string &)  const
+void ROOT::Fit::FitResult::NormalizeErrors() 
+bool ROOT::Fit::FitResult::NormalizedErrors()  const
+bool ROOT::Fit::FitResult::IsParameterBound(unsigned int)  const
+bool ROOT::Fit::FitResult::IsParameterFixed(unsigned int)  const
+bool ROOT::Fit::FitResult::ParameterBounds(unsigned int, double &, double &)  const
+std::string ROOT::Fit::FitResult::GetParameterName(unsigned int)  const
 TGraphErrors::TGraphErrors(Int_t) 
 TGraphErrors::TGraphErrors(Int_t, const Float_t *, const Float_t *, const Float_t *, const Float_t *) 
 TGraphErrors::TGraphErrors(Int_t, const Double_t *, const Double_t *, const Double_t *, const Double_t *) 
@@ -8988,6 +9075,7 @@ ROOT::Fit::FitConfig & TBackCompFitter::GetFitConfig()
 const ROOT::Fit::FitResult & TBackCompFitter::GetFitResult()  const
 TFitResult * TBackCompFitter::GetTFitResult()  const
 const ROOT::Fit::FitData & TBackCompFitter::GetFitData()  const
+ROOT::Math::Minimizer * TBackCompFitter::GetMinimizer()  const
 bool TBackCompFitter::Scan(unsigned int, TGraph *, double, double) 
 bool TBackCompFitter::Contour(unsigned int, unsigned int, TGraph *, double) 
 void TBackCompFitter::ReCreateMinimizer() 
@@ -15997,16 +16085,6 @@ std::size_t ::GetSize(const TTreeReaderArray<Long_t> *)
 std::size_t ::GetSize(const TTreeReaderArray<ULong_t> *) 
 std::size_t ::GetSize(const TTreeReaderArray<Float_t> *) 
 std::size_t ::GetSize(const TTreeReaderArray<Double_t> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Char_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UChar_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Short_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UShort_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Int_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UInt_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Long_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<ULong_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Float_t>> *) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Double_t>> *) 
 std::size_t ::GetSize(const TTreeReaderArray<Char_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<UChar_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<Short_t> &) 
@@ -16017,16 +16095,6 @@ std::size_t ::GetSize(const TTreeReaderArray<Long_t> &)
 std::size_t ::GetSize(const TTreeReaderArray<ULong_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<Float_t> &) 
 std::size_t ::GetSize(const TTreeReaderArray<Double_t> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Char_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UChar_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Short_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UShort_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Int_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<UInt_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Long_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<ULong_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Float_t>> &) 
-std::size_t ::GetSize(const TTreeReaderArray<ROOT::VecOps::RVec<Double_t>> &) 
 TBranchPtr<Char_t> ::Branch(TTree &, const char *, Char_t &, Int_t, Int_t) 
 TBranchPtr<UChar_t> ::Branch(TTree &, const char *, UChar_t &, Int_t, Int_t) 
 TBranchPtr<Short_t> ::Branch(TTree &, const char *, Short_t &, Int_t, Int_t) 
@@ -16719,8 +16787,10 @@ char *
 char **
 const Element &
 const Element *
+const ROOT::Fit::BinData *
 const ROOT::Fit::FitData &
 const ROOT::Fit::FitResult &
+const ROOT::Fit::FitResult::IModelFunction *
 const TArrayD *
 const TArrayI &
 const TAxis *
@@ -16757,6 +16827,8 @@ const TVectorD *
 const TVectorT &
 const char **&
 const double &
+const double *
+const std::string &
 const std::type_info *
 const std::vector<Double_t> &
 const std::vector<double> &
@@ -16987,6 +17059,8 @@ void ROOT::Detail::VecOps::RVecImpl::reserve(ROOT::Detail::VecOps::RVecImpl::siz
 void ROOT::Detail::VecOps::RVecImpl::resize(ROOT::Detail::VecOps::RVecImpl::size_type)
 void ROOT::Detail::VecOps::RVecImpl::resize(ROOT::Detail::VecOps::RVecImpl::size_type, const T &)
 void ROOT::Detail::VecOps::RVecImpl::swap(ROOT::Detail::VecOps::RVecImpl &)
+void ROOT::Fit::FitResult::Print(std::ostream &, bool)
+void ROOT::Fit::FitResult::PrintCovMatrix(std::ostream &)
 void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Delete(void *)
 void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::DeleteArray(void *)
 void ROOT::Internal::ClassDefGenerateInitInstanceLocalInjector::Destruct(void *)

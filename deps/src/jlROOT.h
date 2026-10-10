@@ -2,6 +2,7 @@
 #define JLROOT_H
 #include "TVectorT.h"
 #include "cstdint"
+#include "Math/Minimizer.h"
 #include "Buttons.h"
 #include "Bytes.h"
 #include "Byteswap.h"
@@ -187,6 +188,7 @@
 #include "TF1NormSum.h"
 #include "TF2.h"
 #include "TF3.h"
+#include "Fit/FitResult.h"
 #include "TFitResult.h"
 #include "TFitResultPtr.h"
 #include "TFormula.h"

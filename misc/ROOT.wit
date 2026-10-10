@@ -76,7 +76,7 @@ input               = [
    "Foption.h", "HFitInterface.h", "TAxis.h", "TAxisModLab.h",
    "TBackCompFitter.h", "TBinomialEfficiencyFitter.h", "TConfidenceLevel.h",
    "TEfficiency.h", "TF12.h", "TF1AbsComposition.h", "TF1Convolution.h", "TF1.h",
-   "TF1NormSum.h", "TF2.h", "TF3.h", "TFitResult.h", "TFitResultPtr.h",
+   "TF1NormSum.h", "TF2.h", "TF3.h", "Fit/FitResult.h", "TFitResult.h", "TFitResultPtr.h",
    "TFormula.h", "TFractionFitter.h", "TGraph2DAsymmErrors.h",
    "TGraph2DErrors.h", "TGraph2D.h", "TGraphAsymmErrors.h", "TGraphBentErrors.h",
    "TGraphDelaunay2D.h", "TGraphDelaunay.h", "TGraphErrors.h", "TGraph.h",
@@ -110,6 +110,8 @@ input               = [
     "TVirtualGeoConverter.h", "TVirtualGeoPainter.h", "TVirtualGeoTrack.h",
     "TVirtualMagField.h",
     # <<< Geometry package
+
+ #   "TInterpreter.h"
    ]
 
 class_order_constraints = [  "TTreeReader < TTreeReaderValue", ]
@@ -117,7 +119,7 @@ class_order_constraints = [  "TTreeReader < TTreeReaderValue", ]
 #                            "ROOT::VecOps::RVec < TTreeReaderArray"
 #                          ]
 
-extra_headers       = [ "TVectorT.h", "cstdint" ]
+extra_headers       = [ "TVectorT.h", "cstdint", "Math/Minimizer.h" ]
 
 veto_list           = "src/jlROOT-veto.h"
 

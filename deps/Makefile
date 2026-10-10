@@ -4,6 +4,7 @@
 #
 BUILD_DIR = build
 ROOT_CONFIG = root-config
+ROOTCLING=$(shell $(ROOT_CONFIG) --bindir)/rootcling
 UNAME=$(shell uname)
 
 ROOT_LIBS = $(shell $(ROOT_CONFIG) --libs) -lGeom
@@ -20,6 +21,7 @@ ifeq ($(JLCXX_HAS_RANGES), 0)
 endif
 CXXFLAGS = $(patsubst -std=gnu%,,$(shell $(JL_SHARE)/julia-config.jl --cflags))
 CXXFLAGS += $(shell $(ROOT_CONFIG) --cflags)
+ROOTCLING_CPPLAGS = $(CPPFLAGS) -I$(shell $(ROOT_CONFIG) --incdir)
 CXXFLAGS += -I$(VDT_DIR)/include
 CXXFLAGS += -O2
 CXXFLAGS += -Wno-c++20-extensions
@@ -64,6 +66,7 @@ PRODUCTS = $(BUILD_DIR)/libroot_julia$(SO_SUFFIX)
 include generated_cxx.make
 
 OBJS = $(addprefix $(BUILD_DIR)/, $(patsubst %.cxx,%.o,  CustomWrappers.cxx $(WRAPPER_CXX)))
+OBJS += $(BUILD_DIR)/RVecRVecDict.o
 DEPS = $(patsubst %.o,%.d, $(OBJS))
 
 all: $(PRODUCTS)
@@ -126,6 +129,15 @@ $(BUILD_DIR)/libroot_julia$(SO_SUFFIX): $(OBJS)
 	@echo "Make $(notdir $@)"
 	$(Q) $(MAKE) check_root
 	$(Q) $(LINK.o) -o $@ --shared -fPIC $(OBJS) $(ROOT_LIBS) $(LDLIBS)
+
+$(BUILD_DIR)/RVecRVecDict.cxx: src/RVecRVecLinkDef.h
+	@echo "Make $(notdir $@)"
+	$(Q) [ -d $(BUILD_DIR) ] || mkdir -p $(BUILD_DIR)
+	$(ROOTCLING) -f $@ $(ROOTCLING_CPPFLAGS) -I /opt/root/include/ ROOT/RVec.hxx $^
+
+$(BUILD_DIR)/%Dict.o: $(BUILD_DIR)/%Dict.cxx
+	@echo "Make $(notdir $@)"
+	$(Q) $(COMPILE.cc) -o $@ $<
 
 echo_%:
 	@echo "$* = $(subst ",\",$($*))"

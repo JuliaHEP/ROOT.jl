@@ -173,6 +173,7 @@ function build_root_wrapper(rootsys=ROOTprefs.get_ROOTSYS(); nobuild=false)
             libpath = ""
         else
             mv(joinpath(buildpath, libname), libpath, force=true)
+            mv(joinpath(buildpath, "RVecRVecDict_rdict.pcm"), joinpath(scratch, "RVecRVecDict_rdict.pcm"), force=true)
             sig = libsignature(joinpath(depsdir, "src"), srcfiles, libpath)
             open(joinpath(scratch, "sig"), "w") do f
                 write(f, sig)

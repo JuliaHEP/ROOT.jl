@@ -46,7 +46,7 @@ function Fit(g::TGraph, tf1::TF1, option::String = "", goption::String = "", rxm
 end
 
 # helper function used by the Get methods
-function _GetHelper(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name; throwexcept = true)
+@cxxdereference function _GetHelper(file::TDirectoryFile, name; throwexcept = true)
     obj = Get_(file, name)               # Get object from file (TObject*)
     if obj == C_NULL
         if throwexcept
@@ -96,24 +96,87 @@ end
 
 #---- TSeqCollection juliafication --------------------------------------------------------------------
 # Iterators
-function Base.iterate(a::Union{TSeqCollection, CxxRef{<:TSeqCollection}},
-                               state=-1)
-    state += 1
-    if(state < GetEntries(a))
-        (unsafe_getindex(At(a, state)), state)
-    else
-        nothing
+function Base.iterate(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}},
+                      state=LowerBound(a))
+    @inline
+    run = true
+    #Look for first non-null entry in the array starting from the index `state`.
+    while state <= GetLast(a)
+        obj = At(a, state)
+        CxxWrap.isnull(obj) || return (unsafe_getindex(obj), state + 1)
+        state += 1
     end
+    #this point is reached if no non-null entry has found
+    #and we are at the end of collection
+    nothing
 end
                       
 Base.IteratorSize(a::Union{TList, CxxRef{<:TList},
                            TBtree, CxxRef{<:TBtree}}) = Base.SizeUnknown()
 
-# Specific to arrays
-function Base.getindex(a::Union{TObjArray, CxxRef{<:TObjArray},
-                                TRefArray, CxxRef{<:TRefArray}},
-                       i::Int)
-    p = At(a, i)
+
+Base.IndexStyle(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}) = IndexLinear()
+# eachindex support
+
+"""
+    TSparseObjIndexIter{T<:ROOT.TSeqCollection}
+
+Index iterator for sparce TSeqCollection. The
+[`eachindex(::TSeqCollection)`](@ref) function will return an object of this
+type is the collection is sparse following to an element removal (see
+[`RemoveAt()`](@ref)).
+"""
+struct TSparseObjIndexIter{T<:ROOT.TSeqCollection}
+    arr::T
+end
+
+
+function Base.iterate(iter::TSparseObjIndexIter, state = LowerBound(iter.arr))
+    @inline
+    #Look for first non-null entry in the array starting from the index `state`.
+    while state <= GetLast(iter.arr) && CxxWrap.isnull(At(iter.arr, state))
+        state += 1
+    end
+    julia_index_offset = 1
+    next_elt_offset = 1
+    state > GetLast(iter.arr) ? nothing : (state + julia_index_offset, state + next_elt_offset)
+end
+
+Base.length(iter::TSparseObjIndexIter) = length(iter.arr)
+Base.size(iter::TSparseObjIndexIter) = (length(iter),)
+
+CxxWrap.@cxxdereference function Base.eachindex(::IndexLinear, arr::TSeqCollection)
+    @inline
+    #first non-null entry in the collection:
+    lb = LowerBound(arr)
+    while lb <= GetLast(arr) && CxxWrap.isnull(At(arr, lb))
+        lb += 1
+    end
+    
+    dense_size = GetLast(arr) + 1 - lb
+    if dense_size == GetEntries(arr)
+        if lb == 0
+            return Base.OneTo(dense_size)
+        else
+            return (lb+1):(lb + dense_size)
+        end
+    else
+        return TSparseObjIndexIter(arr)
+    end
+end
+
+# Documentation for the **two** getindex methods defined below.
+"""
+    getindex(a::TSeqCollection, inds...)
+
+Julia indexing support for TSeqCollection. Returns the object at index `i` in the collection. Throws a `BoundsError` exception if the index is out of bounds or if the object at that index is null (e.g. removed from the collection).
+
+Each index argument `inds` can be single integer, a integer range, a vector of integers, or a vector of booleans. See [`Base.getindex(::AbstractArray, inds...)`](@ref) for more details on the supported indexing types.
+
+BEWARE: indexing is 1-based in Julia, while it is 0-based in ROOT. The function will automatically convert the index to 0-based before calling the underlying ROOT function. It differs from the `At()` function, which is 0-based and will return a null pointer if the index is out of bounds or if the object at that index is null.
+    """
+@cxxdereference function Base.getindex(a::TSeqCollection, i::Integer)
+    p = At(a, i - 1)
     if p == C_NULL
         throw(BoundsError(a, i))
     else
@@ -121,29 +184,54 @@ function Base.getindex(a::Union{TObjArray, CxxRef{<:TObjArray},
     end
 end
 
-Base.length(a::Union{TObjArray, CxxWrap.CxxWrapCore.CxxBaseRef{<:TObjArray},
-                     TRefArray, CxxWrap.CxxWrapCore.CxxBaseRef{<:TRefArray}}) = GetEntries(a)
+function Base.getindex(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}, i1::Integer, i2::Integer, is::Integer...)
+    @boundscheck (i2 == 1 && all(is .== 1)) || throw(BoundsError(a, i1, i2, is...))
+    Base.getindex(a, i1)
+end
 
-#following definition required as CxxWrap define the eltype as TObjArray (rep. TRefArray)
+# Since TSeqCollection does not derive from AbstractArray, we need to implement
+# ourselves the advance getindex methods, if we want to support advanced
+# indexing.
+Base.getindex(a::TSeqCollection) = throw(BoundsError(a, ()))
+function Base.getindex(a::TSeqCollection, I1, Is...)
+
+    @boundscheck all(Is .== 1) || throw(BoundsError(a, (I1, Is...)))
+
+    #convert possible boolen vector to integer indices:
+    indices = Base.to_indices(a, (I1,))[1]
+    
+    #allocate a new TObjArray with the same type as the original collection, and fill it with the objects at the specified indices:
+    arr = ROOT.TObjArray(length(indices))
+    Add.(Ref(arr), CxxPtr.(a[indices]))
+
+    arr
+end
+
+# This will provide both `key(::ROOT.TObjArray)` and `eachindex(::ROOT.TObjArray)` methods, as
+# the Base package implements `eachindex` in terms of `keys`.
+@cxxdereference Base.keys(arr::TSeqCollection) = eachindex(IndexLinear(), arr)
+
+Base.length(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}) = GetEntries(a)
+Base.size(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}) = (length(a),)
+Base.lastindex(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}) = (GetLast(a) + 1)
+
+#following definition required as CxxWrap define the eltype as TSeqCollection
 #while it needs to be the type of the elements generated by the iterator
-Base.eltype(a::Union{Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:TObjArray}},
-                     Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:TRefArray}}}) = Any
+Base.eltype(a::Union{Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}}) = Any
 
 #definition of IteratorSize required because for Ref. it defaults to HasShape{0}
-Base.IteratorSize(::Union{Type{ROOT.TObjArray},
-                          Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TObjArray}},
-                          Type{ROOT.TRefArray},
-                          Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TRefArray}}})= Base.HasLength();
+Base.IteratorSize(::Union{Type{ROOT.TSeqCollection},
+                          Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TSeqCollection}}})= Base.HasLength()
 
-Base.length(a::Union{ROOT.TTreeReaderArray,
-                     CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TTreeReaderArray}}) = GetSize(a)
-
-Base.IteratorSize(::Union{Type{ROOT.TTreeReaderArray},
-                          Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TTreeReaderArray}}}) = Base.HasLength();
-
-#following definition required as CxxWrap define the eltype as TObjArray (rep. TRefArray)
-#while it needs to be the type of the elements generated by the iterator
-Base.eltype(::Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TTreeReaderArray}}) = Any
+### Base.length(a::Union{ROOT.TTreeReaderArray,
+###                      CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TTreeReaderArray}}) = GetSize(a)
+### 
+### Base.IteratorSize(::Union{Type{ROOT.TTreeReaderArray},
+###                           Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TTreeReaderArray}}}) = Base.HasLength();
+### 
+### #following definition required as CxxWrap define the eltype as TObjArray (rep. TRefArray)
+### #while it needs to be the type of the elements generated by the iterator
+### Base.eltype(::Type{<:CxxWrap.CxxWrapCore.CxxBaseRef{<:ROOT.TTreeReaderArray}}) = Any
 
 
 #---TFile extensions-------------------------------------------------------------------------------
@@ -211,7 +299,7 @@ function TDirectory!DecodeNameCycle(name)
     cycle = zeros(Int16)
     basename_ = Base.Vector{Int8}(undef, ROOT.TDirectory!kMaxLen)
     TDirectory!DecodeNameCycle(name, basename_, cycle, ROOT.TDirectory!kMaxLen)
-    GC.@preserve basename = unsafe_string(pointer(basename_))
+    GC.@preserve basename_ basename = unsafe_string(pointer(basename_))
     (basename, cycle[])
 end
 
