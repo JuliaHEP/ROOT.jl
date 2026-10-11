@@ -58,8 +58,10 @@ end
 # Display libroot_julia_path value on precompilation
 isempty(libroot_julia_path) || (@info "ROOT wrapper library: $libroot_julia_path")
 
-export cxxcompile
+export cxxcompile, buildcmd
 
+builcmd() = Internals.CxxBuild.buildcmd()
+	
 """
   `cxxcompile() -> Bool`
 

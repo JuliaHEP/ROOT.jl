@@ -22,9 +22,9 @@ endif
 CXXFLAGS = $(patsubst -std=gnu%,,$(shell $(JL_SHARE)/julia-config.jl --cflags))
 CXXFLAGS += $(shell $(ROOT_CONFIG) --cflags)
 ROOTCLING_CPPLAGS = $(CPPFLAGS) -I$(shell $(ROOT_CONFIG) --incdir)
-CXXFLAGS += -I$(VDT_DIR)/include
+CPPFLAGS += -I$(VDT_DIR)/include
 CXXFLAGS += -O2
-CXXFLAGS += -Wno-c++20-extensions
+CXXFLAGS += -std=c++20
 #CXXFLAGS += -DVERBOSE_IMPORT #To enable the verbose mode of the libray loading
 #CXXFLAGS += -Wall -O0 -g     #To compile with debugger infomation
 LDFLAGS = $(shell $(JL_SHARE)/julia-config.jl --ldflags)
@@ -117,8 +117,8 @@ JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=..
 $(BUILD_DIR)/pch.h$(PCH_SUFFIX):
 	@echo "Precompile the header files."
 	$(Q) [ -d $(BUILD_DIR)/include ] || mkdir -p $(BUILD_DIR)/include
-	$(Q)echo '#include "Wrapper.h"\n#include "jlROOT.h"\n#include "jlcxx/functions.hpp"\n#include "jlcxx/stl.hpp"\n' > $(BUILD_DIR)/include/pch.h
-	$(Q) $(COMPILE.cc) -Isrc -x c++-header -o $@ $(BUILD_DIR)/include/pch.h
+	$(Q)echo -e '#include "Wrapper.h"\n#include "jlROOT.h"\n#include "jlcxx/functions.hpp"\n#include "jlcxx/stl.hpp"\n' > $(BUILD_DIR)/include/pch.h
+	$(Q) $(COMPILE.cc) $(CPPFLAGS) -Isrc -x c++-header -o $@ $(BUILD_DIR)/include/pch.h
 
 $(BUILD_DIR)/%.o: src/%.cxx $(BUILD_DIR)/pch.h$(PCH_SUFFIX)
 	@echo "Make $(notdir $@)"

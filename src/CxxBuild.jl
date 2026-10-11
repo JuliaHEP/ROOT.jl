@@ -18,6 +18,8 @@ import SHA
 
 using Scratch
 
+export buildcmd
+
 import ....ROOT: supported_root_versions
 
 _English_or_list(v) = join(v, ", ", " or ")
@@ -29,22 +31,26 @@ function is_jll_supported()
     length(artifacts) > 0
 end
 
-#
-# `build_root_wrapper(rootsys; recompile = false, cleanafterbuild=true)`
-#
-# Build the libroot_julia library for the ROOT libraries installed under rootsys directory.
-# Return the full path to libroot_julia or an empty string in case of failure.
-#
-function build_root_wrapper(rootsys=ROOTprefs.get_ROOTSYS(); nobuild=false)
-
+function wrapperdir(rootsys=ROOTprefs.get_ROOTSYS())
     rootconfig = joinpath(rootsys, "bin", "root-config")
     used_root_version = readchomp(`$rootconfig --version`)
     
     # Directory to store the generated library
     pkg_uuid = Base.UUID(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["uuid"])
     pkg_version = VersionNumber(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["version"])    
-    scratch = joinpath(get_scratch!(pkg_uuid, "lib"), string(pkg_version), "Julia-v" * string(Base.VERSION), "ROOT-v" * used_root_version)
-    mkpath(scratch)
+
+    joinpath(get_scratch!(pkg_uuid, "lib"), string(pkg_version), "Julia-v" * string(Base.VERSION), "ROOT-v" * used_root_version)
+end
+
+function buildcmd(rootsys=ROOTprefs.get_ROOTSYS())
+    rootconfig = joinpath(rootsys, "bin", "root-config")
+    used_root_version = readchomp(`$rootconfig --version`)
+    
+    # Directory to store the generated library
+    pkg_uuid = Base.UUID(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["uuid"])
+    pkg_version = VersionNumber(TOML.parsefile(joinpath(dirname(@__DIR__), "Project.toml"))["version"])    
+    scratch = wrapperdir()
+
     buildpath = joinpath(scratch, "build")
     
     #Command to build the library
@@ -54,7 +60,23 @@ function build_root_wrapper(rootsys=ROOTprefs.get_ROOTSYS(); nobuild=false)
     JLCXX_HAS_RANGES = isdefined(CxxWrap.StdLib, :HAS_RANGES) ? 1 : 0
     depsdir = joinpath(dirname(@__DIR__), "deps")
     srcdir = joinpath(depsdir, "src")
-    cmd=`make -C "$depsdir" BUILD_DIR="$buildpath" CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS) VDT_DIR="$(VDT_jll.artifact_dir)" JLCXX_HAS_RANGES=$(JLCXX_HAS_RANGES)`
+    `make -C "$depsdir" BUILD_DIR="$buildpath" CXXWRAP_PREFIX="$CXXWRAP_PREFIX" JL_SHARE="$JL_SHARE" JULIA="$JULIA" ROOT_CONFIG="$rootconfig" -j $(Sys.CPU_THREADS) VDT_DIR="$(VDT_jll.artifact_dir)" JLCXX_HAS_RANGES=$(JLCXX_HAS_RANGES)`
+end
+
+
+#
+# `build_root_wrapper(rootsys; recompile = false, cleanafterbuild=true)`
+#
+# Build the libroot_julia library for the ROOT libraries installed under rootsys directory.
+# Return the full path to libroot_julia or an empty string in case of failure.
+#
+function build_root_wrapper(rootsys=ROOTprefs.get_ROOTSYS(); nobuild=false)
+    scratch = wrapperdir()
+    mkpath(scratch)
+    buildpath = joinpath(scratch, "build")
+    depsdir = joinpath(dirname(@__DIR__), "deps")
+    srcdir = joinpath(depsdir, "src")
+    cmd = buildcmd()
     extra_make_options = ROOTprefs._load_preference("extra_make_options", "")
     if !isempty(extra_make_options)
         cmd = Cmd([collect(cmd)..., extra_make_options])
