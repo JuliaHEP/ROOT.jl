@@ -80,7 +80,8 @@ else
 
     include_dependency(libroot_julia_path)
 
-    libroot_julia_from_jll && Internals.loadlibdeps()
+    Internals.loadlibdeps()
+    
     @wrapmodule(()->libroot_julia_path)
 
     include("type_aliases.jl")

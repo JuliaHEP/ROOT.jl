@@ -263,9 +263,9 @@ cxx2cxx_type_map = ["UChar_t      -> uint8_t",    #Unsigned Character 1 byte (un
                     "Angle_t &      -> float &",
                     "Size_t &       -> float &",
                     
-                   #TFileMergeInfo::TIOFeatures is a private alias used to define
-                   #the public field TFileMergeInfo::fIOFeatures, resolve it to prevent
-                   #invalid genearated code
+                     #TFileMergeInfo::TIOFeatures is a private alias used to define
+                     #the public field TFileMergeInfo::fIOFeatures, resolve it to prevent
+                     #invalid generated code
                     "TFileMergeInfo::TIOFeatures -> TFileMergeInfo::ROOT::TIOFeatures"
                    ]
 

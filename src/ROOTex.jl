@@ -47,21 +47,29 @@ end
 
 # helper function used by the Get methods
 @cxxdereference function _GetHelper(file::TDirectoryFile, name; throwexcept = true)
-    obj = Get_(file, name)               # Get object from file (TObject*)
-    if obj == C_NULL
-        if throwexcept
-            fname = GetName(file)
-            throw(KeyError("No object with name $name found in file $fname"))
-        else
-            return (Nothing, C_NULL)
-        end
+    path = split(name, "/")
+    function may_throw(msg)
+        throwexcept && error(msg)
+        (Nothing, C_NULL)
     end
+
+    #using directory is required for GetKey, used afterwards, if name is a path containing directories
+    #Get_ would work directly on file and using the path
+    if length(path) > 2
+        file = GetDirectory(file, path)
+        name = path[end]
+        file == C_NULL && return may_throw("No directory $(path[1:(end-1)]) in file $GetName(file)")
+    end
+    
+    obj = Get_(file, name)               # Get object from file (TObject*)
+    obj == C_NULL && return may_throw("No object with name $name found in file $(GetName(file))")
 
     #Gets the type from the key, which works for any object including
     #for class that does not derive from a TObject.
     #Note: we used above Get_ to retrieve the object instead of ReadObj(key)
     #because it handles cases, where the object is already in memory.
     k = GetKey(file, TDirectory!DecodeNameCycle(name)...)
+    k == C_NULL && return may_throw("Object $name was not found in file $(GetName(file))")
     typename = GetClassName(k)
     type = getproperty(ROOT, Symbol(typename))
     (type, obj)
