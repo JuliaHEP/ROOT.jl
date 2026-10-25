@@ -117,7 +117,7 @@ JULIA_LOAD_PATH=`pwd`/build/ROOT/src:$(JULIA_LOAD_PATH): "$(JULIA)" --project=..
 $(BUILD_DIR)/pch.h$(PCH_SUFFIX):
 	@echo "Precompile the header files."
 	$(Q) [ -d $(BUILD_DIR)/include ] || mkdir -p $(BUILD_DIR)/include
-	$(Q)echo -e '#include "Wrapper.h"\n#include "jlROOT.h"\n#include "jlcxx/functions.hpp"\n#include "jlcxx/stl.hpp"\n' > $(BUILD_DIR)/include/pch.h
+	$(Q)printf '#include "Wrapper.h"\n#include "jlROOT.h"\n#include "jlcxx/functions.hpp"\n#include "jlcxx/stl.hpp"\n' > $(BUILD_DIR)/include/pch.h
 	$(Q) $(COMPILE.cc) $(CPPFLAGS) -Isrc -x c++-header -o $@ $(BUILD_DIR)/include/pch.h
 
 $(BUILD_DIR)/%.o: src/%.cxx $(BUILD_DIR)/pch.h$(PCH_SUFFIX)
