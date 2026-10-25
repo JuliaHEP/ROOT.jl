@@ -1,4 +1,4 @@
-######################################################################
+#I#####################################################################
 # Provides a transparent support of fit of TGraph with a Julia function.  See
 # demo_fit_with_jl_func.jl for an example of such a fit without this module.
 #
@@ -47,7 +47,6 @@ end
 
 # helper function used by the Get methods
 @cxxdereference function _GetHelper(file::TDirectoryFile, name; throwexcept = true)
-    path = split(name, "/")
     function may_throw(msg)
         throwexcept && error(msg)
         (Nothing, C_NULL)
@@ -55,9 +54,11 @@ end
 
     #using directory is required for GetKey, used afterwards, if name is a path containing directories
     #Get_ would work directly on file and using the path
-    if length(path) > 2
-        file = GetDirectory(file, path)
-        name = path[end]
+    path = rsplit(name, "/", limit=2) #split directory part and tree name
+    if length(path) > 1
+        #convert SubString to String, as wrapped ROOT functions do not accept SubString
+        name = string(path[2])
+        file = GetDirectory(file, string(path[1]))
         file == C_NULL && return may_throw("No directory $(path[1:(end-1)]) in file $GetName(file)")
     end
     
@@ -102,25 +103,12 @@ function Base.getindex(p::CxxWrap.CxxBaseRef{TObject})
 end
 #-------------------------------------------------------------------------------------------------
 
-#---- TSeqCollection juliafication --------------------------------------------------------------------
-# Iterators
-function Base.iterate(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}},
-                      state=LowerBound(a))
-    @inline
-    run = true
-    #Look for first non-null entry in the array starting from the index `state`.
-    while state <= GetLast(a)
-        obj = At(a, state)
-        CxxWrap.isnull(obj) || return (unsafe_getindex(obj), state + 1)
-        state += 1
-    end
-    #this point is reached if no non-null entry has found
-    #and we are at the end of collection
-    nothing
+@inline Base.iterate(a::TSeqCollection, state=TIter(CxxPtr(a))) = Base.iterate(CxxPtr(a), state)
+
+@inline function Base.iterate(a::CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}, state=TIter(a))
+    obj = Next(state)
+    CxxWrap.isnull(obj) ? nothing : (unsafe_getindex(obj), state)
 end
-                      
-Base.IteratorSize(a::Union{TList, CxxRef{<:TList},
-                           TBtree, CxxRef{<:TBtree}}) = Base.SizeUnknown()
 
 
 Base.IndexStyle(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}) = IndexLinear()
@@ -183,7 +171,7 @@ Each index argument `inds` can be single integer, a integer range, a vector of i
 
 BEWARE: indexing is 1-based in Julia, while it is 0-based in ROOT. The function will automatically convert the index to 0-based before calling the underlying ROOT function. It differs from the `At()` function, which is 0-based and will return a null pointer if the index is out of bounds or if the object at that index is null.
     """
-@cxxdereference function Base.getindex(a::TSeqCollection, i::Integer)
+function Base.getindex(a::TSeqCollection, i::Integer)
     p = At(a, i - 1)
     if p == C_NULL
         throw(BoundsError(a, i))
@@ -192,20 +180,21 @@ BEWARE: indexing is 1-based in Julia, while it is 0-based in ROOT. The function 
     end
 end
 
-function Base.getindex(a::Union{TSeqCollection, CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}}, i1::Integer, i2::Integer, is::Integer...)
+function Base.getindex(a::TSeqCollection, i1::Integer, i2::Integer, is::Integer...)
     @boundscheck (i2 == 1 && all(is .== 1)) || throw(BoundsError(a, i1, i2, is...))
     Base.getindex(a, i1)
 end
+Base.getindex(a::CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}, i1::Integer, i2::Integer, is::Integer...) = Base.getindex(a[], i1, i2, is...)
+
 
 # Since TSeqCollection does not derive from AbstractArray, we need to implement
-# ourselves the advance getindex methods, if we want to support advanced
-# indexing.
-Base.getindex(a::TSeqCollection) = throw(BoundsError(a, ()))
+# ourselves the advance getindex methods, if we want them to be supported.
+Base.getindex(a::TSeqCollection) = Base.getindex(a, 1)
 function Base.getindex(a::TSeqCollection, I1, Is...)
 
     @boundscheck all(Is .== 1) || throw(BoundsError(a, (I1, Is...)))
 
-    #convert possible boolen vector to integer indices:
+    #convert possible boolean vector to integer indices:
     indices = Base.to_indices(a, (I1,))[1]
     
     #allocate a new TObjArray with the same type as the original collection, and fill it with the objects at the specified indices:
@@ -214,6 +203,7 @@ function Base.getindex(a::TSeqCollection, I1, Is...)
 
     arr
 end
+Base.getindex(a::CxxWrap.CxxWrapCore.CxxBaseRef{<:TSeqCollection}, I1, Is...) = Base.getindex(a[], I1, Is...)
 
 # This will provide both `key(::ROOT.TObjArray)` and `eachindex(::ROOT.TObjArray)` methods, as
 # the Base package implements `eachindex` in terms of `keys`.
@@ -319,7 +309,22 @@ end
 
     See also [`Get(file, name)`](@ref), [`Get(file, name)`](@ref)  and [`Get(file, name, type)`](@ref)
 """
-Base.getindex(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name) = Get(file, name)
+#@inline _getindex(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, name::AbstractString) = Get(file, name)
+#@inline _getindex(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, idx::Integer) = Base.getindex(GetListOfKeys(file), idx)
+#Base.getindex(file::Union{TDirectoryFile, CxxPtr{<:TDirectoryFile}}, idx) = _getindex(file, idx)
+
+Base.getindex(file::TDirectoryFile, name::AbstractString) = Get(file, name)
+Base.getindex(file::TDirectoryFile, idx::Integer) = Base.getindex(GetListOfKeys(file), idx)
+
+Base.length(file::Union{TDirectoryFile, CxxWrap.CxxWrapCore.CxxBaseRef{<:TDirectoryFile}}) = GetNkeys(file)
+
+function Base.iterate(file::Union{TDirectoryFile, CxxWrap.CxxWrapCore.CxxBaseRef{<:TDirectoryFile}},
+                      state = TIter(GetListOfKeys(file)))
+    key = Next(state)
+    CxxWrap.isnull(key) && return nothing
+    obj = ReadObj(unsafe_getindex(key))
+    CxxWrap.isnull(obj) ? nothing : (unsafe_getindex(obj), state)
+end
 
 """
    `getproperty(file::T, sym::Symbol)
