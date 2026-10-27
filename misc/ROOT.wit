@@ -7,7 +7,7 @@ module_jl_fname     = "ROOT-generated.jl"
 lib_basename        = "$(@__DIR__)/../deps/libroot_julia"
 out_cxx_dir         = "ROOT/deps/src"
 
-include_dirs        = [ "/home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include", "src", "/home/pgras/.julia/artifacts/18df5e18057f7c98339fdbbc02a6da42d38b237e/include", "/usr/include/c++/12" ]
+include_dirs        = [ "/home/pgras/.julia/artifacts/541477a5cefd778e4ecbd314cfbc99eed20f2c4c/include", "src", "/home/pgras/.julia/artifacts/18df5e18057f7c98339fdbbc02a6da42d38b237e/include" ] #"/usr/include/c++/12" ]
 
 input               = [
    # Base package (core/base) >>>
@@ -58,7 +58,7 @@ input               = [
    # <<< Containers package
 
    "TClass.h", "TFileMergeInfo.h",
-   "TBrowser.h", "TTree.h", "TBranchPtr.h",
+   "TBrowser.h", "TTree.h", "TNtuple.h", "TNtupleD.h", "TBranchPtr.h",
    "TLeaf.h", "TLeafB.h", "TLeafC.h", "TLeafD32.h", "TLeafD.h", "TLeafElement.h", "TLeafF16.h",
    "TLeafF.h", "TLeafG.h", "TLeafI.h", "TLeafL.h", "TLeafObject.h", "TLeafO.h", "TLeafS.h", 
    "TBranch.h", "TBranchObject.h", "TBranchElement.h", "TBranchSTL.h",
@@ -145,6 +145,9 @@ fields_and_variables = true
 cxxwrap_version = "0.17"
 
 #auto_veto           = false
+
+# enable c/julia index conversion for getindex and setindex! methods ([] operator)
+index_offset         = true
 
 vetoed_copy_ctor_classes = [ "TTreeReader", "RDataFrame" ]
 

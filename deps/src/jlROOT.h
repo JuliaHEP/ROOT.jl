@@ -137,6 +137,8 @@
 #include "TFileMergeInfo.h"
 #include "TBrowser.h"
 #include "TTree.h"
+#include "TNtuple.h"
+#include "TNtupleD.h"
 #include "TBranchPtr.h"
 #include "TLeaf.h"
 #include "TLeafB.h"

@@ -1,7 +1,19 @@
+authors = ["Philippe Gras CEA/IRFU"]
 name = "ROOT"
 uuid = "1706fdcc-8426-44f1-a283-5be479e9517c"
 version = "0.4.0"
-authors = ["Philippe Gras CEA/IRFU"]
+
+[compat]
+CxxWrap = "0.17"
+Preferences = "1.4"
+ROOT_jll = "6.32.8 - 6.32.9"
+ROOT_julia_jll = "1.1"
+ROOTprefs = "1.0"
+SHA = "0.7"
+Scratch = "1.2"
+TOML = "1.0"
+VDT_jll = "0.4.6"
+julia = "1.10"
 
 [deps]
 Artifacts = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
@@ -15,18 +27,6 @@ SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
 Scratch = "6c6a2e73-6563-6170-7368-637461726353"
 TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
 VDT_jll = "474730fa-5ea9-5b8c-8629-63de62f23418"
-
-[compat]
-CxxWrap = "0.17"
-Preferences = "1.4"
-ROOT_jll = "6.32.8 - 6.32.9"
-ROOT_julia_jll = "1.1"
-ROOTprefs = "1.0"
-SHA = "0.7"
-Scratch = "1.2"
-TOML = "1.0"
-VDT_jll = "0.4.6"
-julia = "1.10"
 
 [extras]
 Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"

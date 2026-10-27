@@ -81,8 +81,8 @@ export Get3sProbability, Get5sProbability, GetA, GetAbsHNDC, GetAbsTime, GetAbsW
 export GetAclicProperties, GetActive, GetActualClass, GetAdaptiveWeights, GetAddOption, GetAddress, GetAddressBytes, GetAddresses
 export GetAdetCovMatrix, GetAfile, GetAlias, GetAliases, GetAlign, GetAlignableEntry, GetAlignableEntryByUID, GetAllocationCount
 export GetAllocator, GetAlpha, GetAlpha1, GetAlpha2, GetAmixt, GetAnchor, GetAngle, GetAngles, GetAppRemote, GetApplication
-export GetApplicationImp, GetApproximateBias, GetArchiveOffset, GetArea, GetArray, GetArrayPos, GetAspectRatio, GetAstat, GetAsymmetry
-export GetAt, GetAttDate, GetAttFill, GetAttLine, GetAuthority, GetAutoExec, GetAutoFlush, GetAutoSave, GetAverageCLs
+export GetApplicationImp, GetApproximateBias, GetArchiveOffset, GetArea, GetArgs, GetArray, GetArrayPos, GetAspectRatio, GetAstat
+export GetAsymmetry, GetAt, GetAttDate, GetAttFill, GetAttLine, GetAuthority, GetAutoExec, GetAutoFlush, GetAutoSave, GetAverageCLs
 export GetAverageCLsb, GetAxis, GetAxisColor, GetAxisMaxDigits, GetAxisName, GetAxisRange, GetB, GetBBox, GetBBoxCenter, GetBBoxOK
 export GetBCov, GetBackground, GetBarOffset, GetBarWidth, GetBaseClass, GetBaseClassOffset, GetBaseDataMember, GetBaseElement
 export GetBasketBytes, GetBasketEntry, GetBasketSeek, GetBasketSize, GetBeepDefaults, GetBench, GetBestBuffer, GetBetaAlpha
@@ -188,10 +188,10 @@ export GetNleaves, GetNlow, GetNmany, GetNmeshVertices, GetNmethods, GetNmixt, G
 export GetNodeId, GetNodeIndex, GetNodeOffset, GetNodes, GetNofKeys, GetNorm, GetNormFactor, GetNormal, GetNotify, GetNp, GetNpar
 export GetNpoints, GetNproperties, GetNpx, GetNpy, GetNpz, GetNregions, GetNsegments, GetNtotal, GetNtracks, GetNtypes
 export GetNumEvents, GetNumPIDs, GetNumber, GetNumberContours, GetNumberFitPoints, GetNumberFreeParameters, GetNumberOfBins
-export GetNumberOfColors, GetNumberOfDivisions, GetNumberOfSteps, GetNumberTotalParameters, GetNvert, GetNvertices, GetNvolumes, GetNz
-export GetObjClassName, GetObjExt, GetObject, GetObjectChecked, GetObjectFit, GetObjectInfo, GetObjectInfoHelper, GetObjectRef
-export GetObjectUnchecked, GetObjectWithID, GetObjects, GetObjlen, GetOffset, GetOnfileObject, GetOpenGLScalingFactor, GetOppositeCorner
-export GetOpt, GetOptDate, GetOptFile, GetOptFit, GetOptLogx, GetOptLogy, GetOptLogz, GetOptStat, GetOptTitle
+export GetNumberOfColors, GetNumberOfDivisions, GetNumberOfSteps, GetNumberTotalParameters, GetNvar, GetNvert, GetNvertices, GetNvolumes
+export GetNz, GetObjClassName, GetObjExt, GetObject, GetObjectChecked, GetObjectFit, GetObjectInfo, GetObjectInfoHelper
+export GetObjectRef, GetObjectUnchecked, GetObjectWithID, GetObjects, GetObjlen, GetOffset, GetOnfileObject, GetOpenGLScalingFactor
+export GetOppositeCorner, GetOpt, GetOptDate, GetOptFile, GetOptFit, GetOptLogx, GetOptLogy, GetOptLogz, GetOptStat, GetOptTitle
 export GetOpticalSurface, GetOptimalVoxels, GetOption, GetOptions, GetOrigin, GetOriginalMatrix, GetOrthoCamera, GetOverflowContent
 export GetOverlaps, GetOwner, GetPDG, GetPID, GetPTried, GetPacketSize, GetPad, GetPadBorderMode, GetPadBorderSize
 export GetPadBottomMargin, GetPadColor, GetPadGridX, GetPadGridY, GetPadLeftMargin, GetPadPaint, GetPadPar, GetPadPointer
