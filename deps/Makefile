@@ -21,7 +21,7 @@ ifeq ($(JLCXX_HAS_RANGES), 0)
 endif
 CXXFLAGS = $(patsubst -std=gnu%,,$(shell $(JL_SHARE)/julia-config.jl --cflags))
 CXXFLAGS += $(shell $(ROOT_CONFIG) --cflags)
-ROOTCLING_CPPLAGS = $(CPPFLAGS) -I$(shell $(ROOT_CONFIG) --incdir)
+ROOTCLING_CPPFLAGS = $(CPPFLAGS) -I$(shell $(ROOT_CONFIG) --incdir)
 CPPFLAGS += -I$(VDT_DIR)/include
 CXXFLAGS += -O2
 CXXFLAGS += -std=c++20
